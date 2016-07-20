@@ -1,0 +1,18 @@
+[
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.lastViralLoadTest",
+        "extensionPointId": "patientDashboard.secondColumnFragments",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "lastViralLoadTest"
+        }
+    },
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.weightGraph",
+        "extensionPointId": "patientDashboard.secondColumnFragments",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "weightGraph"
+        }
+    }
+]

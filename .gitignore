@@ -1,0 +1,10 @@
+target/
+*.iml
+.idea
+.settings
+.project
+.classpath
+.java-version
+
+api/tartget/
+omod/target/
