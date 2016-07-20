@@ -16,7 +16,6 @@ public class LastViralLoadTestFragmentController {
 		Obs lastViralLoadTest = Context.getService(IsantePlusPatientDashboardService.class)
 				.getLastViralLoadTestResultObsForPatient(patient);
 
-		System.out.println(lastViralLoadTest);
 		model.put("lastViralLoadTest", lastViralLoadTest);
 	}
 }

@@ -67,7 +67,6 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		List<Obs> viralLoadObs = new ArrayList(
 				Context.getObsService().getObservations(patient, viralLoadConcept, false));
 
-		System.out.println(viralLoadObs.toString());
 		Collections.sort(viralLoadObs, new Comparator<Obs>() {
 			public int compare(Obs o1, Obs o2) {
 				return o1.getObsDatetime().compareTo(o2.getObsDatetime());

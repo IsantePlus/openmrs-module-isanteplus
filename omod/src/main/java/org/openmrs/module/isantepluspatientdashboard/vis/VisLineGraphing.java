@@ -15,8 +15,9 @@ public class VisLineGraphing {
 		JSONObject shaded = new JSONObject();
 
 		shaded.put("enabled", true);
-		opts.put("start", startDate);
-		opts.put("end", endDate);
+		//done automatically
+		//opts.put("start", startDate);
+		//opts.put("end", endDate);
 		opts.put("shaded", shaded);
 
 		return opts;
