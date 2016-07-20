@@ -67,6 +67,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		List<Obs> viralLoadObs = new ArrayList(
 				Context.getObsService().getObservations(patient, viralLoadConcept, false));
 
+		System.out.println(viralLoadObs.toString());
 		Collections.sort(viralLoadObs, new Comparator<Obs>() {
 			public int compare(Obs o1, Obs o2) {
 				return o1.getObsDatetime().compareTo(o2.getObsDatetime());
@@ -77,10 +78,11 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 	
 	@Override
+	@SuppressWarnings({ "deprecation" })
 	public JSONArray getPatientWeights(Patient patient) {
 		// weight concept 5089
 		JSONArray weightsJson = new JSONArray();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyMMddHHmm");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
 		Integer weightConceptId = StringUtils
 				.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.weight"))
 						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.weight"))

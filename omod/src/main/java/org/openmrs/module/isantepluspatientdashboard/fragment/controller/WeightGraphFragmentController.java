@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
+import org.openmrs.module.isantepluspatientdashboard.vis.VisLineGraphing;
 import org.openmrs.ui.framework.annotation.FragmentParam;
 import org.openmrs.ui.framework.fragment.FragmentModel;
 
@@ -14,15 +15,10 @@ public class WeightGraphFragmentController {
 
 	public void controller(FragmentModel model, @FragmentParam("patientId") Patient patient) {
 		JSONArray weights = Context.getService(IsantePlusPatientDashboardService.class).getPatientWeights(patient);
-		String[] weightsLabels = new String[weights.length()];
-		Double[] weightsValues = new Double[weights.length()];
 
-		for (int i = 0; i < weights.length(); i++) {
-			weightsLabels[i] = weights.getJSONObject(i).getString("date");
-			weightsValues[i] = weights.getJSONObject(i).getDouble("weight");
-		}
-
-		model.addAttribute("weightsLabels", weightsLabels);
-		model.addAttribute("weightsValues", weightsValues);
+		model.addAttribute("items", VisLineGraphing.getWeightsGraphsItems(weights));
+		if (weights.length() > 0)
+			model.addAttribute("options", VisLineGraphing.getOptions(weights.getJSONObject(0).getString("date"),
+					weights.getJSONObject(weights.length() - 1).getString("date")));
 	}
 }

@@ -5,8 +5,8 @@
     
     <div class="info-body">
     	<% if (lastViralLoadTest != null) { %>
-    		${ ui.message("general.value") } : ${lastViralLoadTest.valueNumeric}
-    		${ ui.message("ActiveLists.date") } : ${lastViralLoadTest.obsDatetime}
+    		${ ui.message("general.value") } : <b>${lastViralLoadTest.valueNumeric}</b>,
+    		${ ui.message("ActiveLists.date") } : <b>${lastViralLoadTest.obsDatetime}</b>
     	<% } %>
     </div>
 </div>

@@ -1,4 +1,5 @@
-<% ui.includeJavascript("isantepluspatientdashboard", "Chart.min.js") %>
+<% ui.includeJavascript("isantepluspatientdashboard", "vis.min.js") %>
+<% ui.includeCss("isantepluspatientdashboard", "vis.min.css") %>
 
 <div class="info-section">
     <div class="info-header">
@@ -6,35 +7,12 @@
     </div>
     
     <div class="info-body">
-    	<canvas id="weightsChart" width="50" height="50"></canvas>
-		<script type="text/javascript">
-			var weightsValues = ${weightsValues}
-			var weightsLabels = ${weightsLabels}
-			var chartDataSchema = {
-        		labels: weightsLabels,
-        		datasets: [{
-            		label: '${ ui.message("isantepluspatientdashboard.weightGraph.toggleWeights") }',
-            		data: weightsValues,
-            		backgroundColor: '#51A351',
-            		borderColor: '#363463',
-            		borderWidth: 1
-        		}]
-    		}
-		
-			var weightsChart = new Chart(document.getElementById("weightsChart"), {
-    			type: 'line',
-    			data: chartDataSchema,
-    			options: {
-        			scales: {
-            			yAxes: [{
-                			ticks: {
-                    			beginAtZero:true
-                			}
-            			}]
-        			}
-    			}
-			});
-		</script>
-
+    	<div id="weightGraph"></div>
+    	<script type="text/javascript">
+    		var items = ${items};
+    		var options = ${options};
+  			var weightGraphContainer = document.getElementById('weightGraph');
+  			var weightGraph = new vis.Graph2d(weightGraphContainer, new vis.DataSet(items), options);
+  		</script>
     </div>
 </div>
