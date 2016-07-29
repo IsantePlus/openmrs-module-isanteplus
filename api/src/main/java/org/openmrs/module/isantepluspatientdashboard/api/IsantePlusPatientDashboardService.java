@@ -36,4 +36,6 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	Obs getLastViralLoadTestResultObsForPatient(Patient patient);
 
 	JSONArray getPatientWeights(Patient patient);
+
+	JSONArray getPatientHeights(Patient patient);
 }

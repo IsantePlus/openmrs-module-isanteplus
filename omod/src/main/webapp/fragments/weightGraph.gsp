@@ -13,6 +13,17 @@
     		var options = ${options};
   			var weightGraphContainer = document.getElementById('weightGraph');
   			var weightGraph = new vis.Graph2d(weightGraphContainer, new vis.DataSet(items), options);
+  		
+  			jQuery(function() {
+		    	jQuery(".vis-point").tooltip();
+		    	
+			    jQuery(".vis-point").hover(function(visPoint) {
+			    	var x = jQuery(visPoint.target).attr("x");
+			    	var y = jQuery(visPoint.target).attr("y");
+			    	
+			    	jQuery(visPoint.target).attr("title", x + ", " + y);
+			    });
+		    });
   		</script>
     </div>
 </div>

@@ -15,10 +15,8 @@ public class WeightGraphFragmentController {
 
 	public void controller(FragmentModel model, @FragmentParam("patientId") Patient patient) {
 		JSONArray weights = Context.getService(IsantePlusPatientDashboardService.class).getPatientWeights(patient);
-
+		
 		model.addAttribute("items", VisLineGraphing.getWeightsGraphsItems(weights));
-		if (weights.length() > 0)
-			model.addAttribute("options", VisLineGraphing.getOptions(weights.getJSONObject(0).getString("date"),
-					weights.getJSONObject(weights.length() - 1).getString("date")));
+		model.addAttribute("options", VisLineGraphing.getOptions(null, null));
 	}
 }

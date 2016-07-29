@@ -1,5 +1,8 @@
 package org.openmrs.module.isantepluspatientdashboard.vis;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -15,10 +18,12 @@ public class VisLineGraphing {
 		JSONObject shaded = new JSONObject();
 
 		shaded.put("enabled", true);
-		//done automatically
-		//opts.put("start", startDate);
-		//opts.put("end", endDate);
+		if (startDate != null)
+			opts.put("start", startDate);
+		if (endDate != null)
+			opts.put("end", endDate);
 		opts.put("shaded", shaded);
+		opts.put("clickToUse", true);
 
 		return opts;
 	}
@@ -32,11 +37,19 @@ public class VisLineGraphing {
 
 		for (int i = 0; i < weightsItems.length(); i++) {
 			JSONObject coordinate = new JSONObject();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			Date date = (Date) weightsItems.getJSONObject(i).get("measureDate");
 
-			coordinate.put("x", weightsItems.getJSONObject(i).getString("date"));
+			coordinate.put("x", date != null ? sdf.format(date) : "");
 			coordinate.put("y", weightsItems.getJSONObject(i).getLong("weight"));
 			jsonArrayItems.put(coordinate);
 		}
+
+		return jsonArrayItems;
+	}
+
+	public static JSONArray getGrowthChartsItems(JSONArray growthChartPatientRestrictedData) {
+		JSONArray jsonArrayItems = new JSONArray();
 
 		return jsonArrayItems;
 	}

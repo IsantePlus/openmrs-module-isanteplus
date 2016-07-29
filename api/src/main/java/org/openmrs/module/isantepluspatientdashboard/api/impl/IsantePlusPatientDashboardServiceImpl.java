@@ -13,11 +13,12 @@
  */
 package org.openmrs.module.isantepluspatientdashboard.api.impl;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -75,29 +76,71 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
 	}
-	
-	@Override
-	@SuppressWarnings({ "deprecation" })
-	public JSONArray getPatientWeights(Patient patient) {
-		// weight concept 5089
-		JSONArray weightsJson = new JSONArray();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
-		Integer weightConceptId = StringUtils
-				.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.weight"))
-						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.weight"))
-						: 5089;
-		Concept weight = Context.getConceptService().getConcept(weightConceptId);
 
-		for (Obs obs : Context.getObsService().getObservations(patient, weight, false)) {
+	@Override
+	public JSONArray getPatientWeights(Patient patient) {
+		JSONArray weightsJson = new JSONArray();
+
+		for (Obs obs : getWeightConceptObsForAPatient(patient)) {
 			if (obs != null) {
 				JSONObject json = new JSONObject();
 
 				json.put("weight", obs.getValueNumeric());
-				json.put("date", obs.getDateChanged() == null ? sdf.format(obs.getDateCreated())
-						: sdf.format(obs.getDateChanged()));
+				json.put("measureDate", getObservationDate(obs));
+				json.put("birthDate", patient.getBirthdate());
 				weightsJson.put(json);
 			}
 		}
 		return weightsJson;
+	}
+
+	@Override
+	public JSONArray getPatientHeights(Patient patient) {
+		JSONArray heightsJson = new JSONArray();
+
+		for (Obs obs : getHeightConceptObsForAPatient(patient)) {
+			if (obs != null) {
+				JSONObject json = new JSONObject();
+
+				json.put("height", obs.getValueNumeric());
+				json.put("measureDate", getObservationDate(obs));
+				json.put("birthDate", patient.getBirthdate());
+				heightsJson.put(json);
+			}
+		}
+		return heightsJson;
+	}
+
+	@SuppressWarnings({ "deprecation" })
+	private Set<Obs> getWeightConceptObsForAPatient(Patient patient) {
+		// weight concept 5089
+		Integer weightConceptId = StringUtils
+				.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.weight"))
+						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.weight"))
+						: 5089;
+		return Context.getObsService().getObservations(patient, Context.getConceptService().getConcept(weightConceptId),
+				false);
+	}
+
+	@SuppressWarnings({ "deprecation" })
+	private Set<Obs> getHeightConceptObsForAPatient(Patient patient) {
+		// height concept 5090
+		return Context.getObsService().getObservations(patient, Context.getConceptService().getConcept(
+				StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.height"))
+						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.height"))
+						: 5090),
+				false);
+	}
+
+	/**
+	 * @TODO Wondering whether this doesn't under-look the expected
+	 *       understanding of OpenMRS obs date!!!
+	 * @param obs
+	 * @return
+	 */
+	private Date getObservationDate(Obs obs) {
+		return obs == null ? null
+				: (obs.getObsDatetime() != null ? obs.getObsDatetime()
+						: (obs.getDateChanged() != null ? obs.getDateChanged() : obs.getDateCreated()));
 	}
 }
