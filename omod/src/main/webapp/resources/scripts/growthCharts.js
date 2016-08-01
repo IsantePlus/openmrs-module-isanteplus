@@ -8,13 +8,13 @@ var wtageinfPath = moduleResourceRootPath + "/cdc/csv/wtageinf.csv";
 var wtleninfPath = moduleResourceRootPath + "/cdc/csv/wtleninf.csv";
 var wtstatPath = moduleResourceRootPath + "/cdc/csv/wtstat.csv";
 var growthChartCurveColors = {
-	"P3" : "#5B57A6",
-	"P5" : "#EEA616",
+	"P3" : "cyan",
+	"P5" : "#5B57A6",
 	"P10" : "#363463",
 	"P25" : "#231F20",
 	"P50" : "#007fff",
 	"P75" : "#a1d030",
-	"P90" : "cyan",
+	"P90" : "#EEA616",
 	"P95" : "#009384",
 	"P97" : "red",
 	"patient" : "#F26522",
@@ -203,14 +203,14 @@ function renderPatient_ChartJS_LineGraph_LengthAgeInf(patientChartData,
 				diff97Values.push(fetchedGrowthChartData[i].Diff97);
 			}
 		}
-		var datasets = [ generate_ChartJS_dataset("P3", p3Values),
+		var datasets = [ /*generate_ChartJS_dataset("P3", p3Values),*/
 				generate_ChartJS_dataset("P5", p5Values),
 				generate_ChartJS_dataset("P10", p10Values),
 				generate_ChartJS_dataset("P25", p25Values),
 				generate_ChartJS_dataset("P50", p50Values),
 				generate_ChartJS_dataset("P75", p75Values),
 				generate_ChartJS_dataset("P90", p90Values),
-				generate_ChartJS_dataset("P95", p95Values),
+				generate_ChartJS_dataset("P95", p95Values)/*,
 				generate_ChartJS_dataset("P97", p97Values),
 				generate_ChartJS_dataset("Pub3", pub3Values),
 				generate_ChartJS_dataset("Pub5", pub5Values),
@@ -229,7 +229,7 @@ function renderPatient_ChartJS_LineGraph_LengthAgeInf(patientChartData,
 				generate_ChartJS_dataset("Diff75", diff75Values),
 				generate_ChartJS_dataset("Diff90", diff90Values),
 				generate_ChartJS_dataset("Diff95", diff95Values),
-				generate_ChartJS_dataset("Diff97", diff97Values) ];
+				generate_ChartJS_dataset("Diff97", diff97Values)*/ ];
 
 		var data = {
 			labels : labels,
@@ -269,7 +269,7 @@ function renderPatient_ChartJS_LineGraph_WeightStature(patientChartData,
 			p85Values.push(filtered_fetchedGrowthChartData[i].P85);
 		}
 
-		data.datasets.push(generate_ChartJS_dataset("P85", p85Values));
+		//data.datasets.push(generate_ChartJS_dataset("P85", p85Values));
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
@@ -290,7 +290,7 @@ function renderPatient_ChartJS_LineGraph_bmiAge(patientChartData, elementId,
 			p85Values.push(filtered_fetchedGrowthChartData[i].P85);
 		}
 
-		data.datasets.push(generate_ChartJS_dataset("P85", p85Values));
+		//data.datasets.push(generate_ChartJS_dataset("P85", p85Values));
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
@@ -340,15 +340,15 @@ function setupBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 			p97Values.push(filtered_fetchedGrowthChartData[i].P97);
 		}
 	}
-	var datasets = [ generate_ChartJS_dataset("P3", p3Values),
+	var datasets = [ /*generate_ChartJS_dataset("P3", p3Values),*/
 			generate_ChartJS_dataset("P5", p5Values),
 			generate_ChartJS_dataset("P10", p10Values),
 			generate_ChartJS_dataset("P25", p25Values),
 			generate_ChartJS_dataset("P50", p50Values),
 			generate_ChartJS_dataset("P75", p75Values),
 			generate_ChartJS_dataset("P90", p90Values),
-			generate_ChartJS_dataset("P95", p95Values),
-			generate_ChartJS_dataset("P97", p97Values) ];
+			generate_ChartJS_dataset("P95", p95Values)/*,
+			generate_ChartJS_dataset("P97", p97Values)*/ ];
 
 	return {
 		labels : labels,

@@ -37,10 +37,10 @@ public class GrowthChartsPageController {
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
 		chartAxisLabels.put("WTLENINF_y",
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
-		chartAxisLabels.put("HCAGEINF_x", Context.getMessageSourceService()
-				.getMessage("isantepluspatientdashboard.chart.label.age.months"));
-		chartAxisLabels.put("HCAGEINF_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.headCircumference"));
+		chartAxisLabels.put("HCAGEINF_x",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+		chartAxisLabels.put("HCAGEINF_y", Context.getMessageSourceService()
+				.getMessage("isantepluspatientdashboard.chart.label.headCircumference"));
 		chartAxisLabels.put("WTSTAT_x",
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.stature"));
 		chartAxisLabels.put("WTSTAT_y",
