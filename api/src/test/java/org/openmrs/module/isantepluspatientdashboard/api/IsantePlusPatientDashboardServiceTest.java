@@ -13,18 +13,49 @@
  */
 package org.openmrs.module.isantepluspatientdashboard.api;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Calendar;
+
+import org.junit.Assert;
 import org.junit.Test;
+import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.test.BaseModuleContextSensitiveTest;
 
 /**
  * Tests {@link ${IsantePlusPatientDashboardService}}.
  */
-public class  IsantePlusPatientDashboardServiceTest extends BaseModuleContextSensitiveTest {
-	
+public class IsantePlusPatientDashboardServiceTest extends BaseModuleContextSensitiveTest {
+
 	@Test
 	public void shouldSetupContext() {
 		assertNotNull(Context.getService(IsantePlusPatientDashboardService.class));
+	}
+
+	@Test
+	public void test_getPatientAgeInvocations() {
+		Patient patient = Context.getPatientService().getAllPatients().get(0);
+		Calendar birthday = Calendar.getInstance();
+
+		Assert.assertFalse(patient.getAge() < 1);
+		patient.setBirthdate(birthday.getTime());
+		Assert.assertFalse(patient.getAge() == 1);
+		Assert.assertEquals(new Integer(0), patient.getAge());
+		Assert.assertEquals(new Integer(0),
+				Context.getService(IsantePlusPatientDashboardService.class).getPatientAgeInMonths(patient));
+		Assert.assertEquals(new Integer(0),
+				Context.getService(IsantePlusPatientDashboardService.class).getPatientAgeInDays(patient));
+		birthday.add(Calendar.MONTH, -4);
+		patient.setBirthdate(birthday.getTime());
+
+		Assert.assertEquals(new Integer(4),
+				Context.getService(IsantePlusPatientDashboardService.class).getPatientAgeInMonths(patient));
+
+		birthday.add(Calendar.DAY_OF_YEAR, -31);
+		patient.setBirthdate(birthday.getTime());
+
+		Assert.assertEquals(new Integer(5),
+				Context.getService(IsantePlusPatientDashboardService.class).getPatientAgeInMonths(patient));
 	}
 }

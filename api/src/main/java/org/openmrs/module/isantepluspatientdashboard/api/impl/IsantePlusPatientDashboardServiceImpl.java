@@ -23,6 +23,9 @@ import java.util.Set;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.Months;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openmrs.Concept;
@@ -142,5 +145,25 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return obs == null ? null
 				: (obs.getObsDatetime() != null ? obs.getObsDatetime()
 						: (obs.getDateChanged() != null ? obs.getDateChanged() : obs.getDateCreated()));
+	}
+
+	@Override
+	public Integer getPatientAgeInMonths(Patient patient) {
+		if (patient.getBirthdate() == null) {
+			return null;
+		}
+		Date endDate = patient.isDead() ? patient.getDeathDate() : new Date();
+
+		return Months.monthsBetween(new DateTime(patient.getBirthdate()), new DateTime(endDate)).getMonths();
+	}
+
+	@Override
+	public Integer getPatientAgeInDays(Patient patient) {
+		if (patient.getBirthdate() == null) {
+			return null;
+		}
+		Date endDate = patient.isDead() ? patient.getDeathDate() : new Date();
+
+		return Days.daysBetween(new DateTime(patient.getBirthdate()), new DateTime(endDate)).getDays();
 	}
 }
