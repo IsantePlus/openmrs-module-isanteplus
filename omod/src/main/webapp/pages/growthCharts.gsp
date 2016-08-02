@@ -58,6 +58,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 		var lenageinfPatient;
 		var wtstatPatient;
 		var bmiAgeRevPatient;
+		var whoWeightForAgePatient;
     
     	jQuery('#WTAGEINF').trigger('click');
     	
@@ -117,5 +118,46 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     		
     		event.preventDefault();
     	});
+    	
+    	jQuery("#WFA").click(function(event) {
+    		resetChartJSCanvas("who_growth_charts");
+    		renderMoHPatient_ChartJS_LineGraph_WeightForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.WFA_x, y: chartAxisLabels.WFA_y});
+    		indentifySelectedCdcLink("WFA", "who");
+    		
+    		event.preventDefault();
+    	});
+    	
+    	jQuery("#WFL").click(function(event) {
+    		resetChartJSCanvas("who_growth_charts");
+    		renderMoHPatient_ChartJS_LineGraph_WeightForLength(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.WFL_x, y: chartAxisLabels.WFL_y});
+    		indentifySelectedCdcLink("WFL", "who");
+    		
+    		event.preventDefault();
+    	});
+    	
+    	jQuery("#BFA").click(function(event) {
+    		resetChartJSCanvas("who_growth_charts");
+    		renderMoHPatient_ChartJS_LineGraph_BMIForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.BFA_x, y: chartAxisLabels.BFA_y});
+    		indentifySelectedCdcLink("BFA", "who");
+    		
+    		event.preventDefault();
+    	});
+    	
+    	jQuery("#HCFA").click(function(event) {
+    		resetChartJSCanvas("who_growth_charts");
+    		renderMoHPatient_ChartJS_LineGraph_HeadCircumferenceForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.HCFA_x, y: chartAxisLabels.HCFA_y});
+    		indentifySelectedCdcLink("HCFA", "who");
+    		
+    		event.preventDefault();
+    	});
+    	
+    	jQuery("#LHFA").click(function(event) {
+    		resetChartJSCanvas("who_growth_charts");
+    		renderMoHPatient_ChartJS_LineGraph_LengthForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.LHFA_x, y: chartAxisLabels.LHFA_y});
+    		indentifySelectedCdcLink("LHFA", "who");
+    		
+    		event.preventDefault();
+    	});
+    	
 	});
 </script>

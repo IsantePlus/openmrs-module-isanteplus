@@ -15,7 +15,6 @@ public class GrowthChartsPageController {
 	public void controller(PageModel model, @RequestParam("patientId") Patient patient) {
 		JSONObject patientOpts = new JSONObject();
 		JSONObject patientAge = new JSONObject();
-		JSONObject chartAxisLabels = new JSONObject();
 
 		patientAge.put("years", patient.getAge());
 		patientAge.put("days",
@@ -25,6 +24,14 @@ public class GrowthChartsPageController {
 		patientOpts.put("name", patient.getPersonName().getFullName());
 		patientOpts.put("gender", "M".equals(patient.getGender()) ? 2 : ("F".equals(patient.getGender()) ? 1 : null));
 		patientOpts.put("age", patientAge);
+
+		model.addAttribute("patientPropts", patientOpts);
+		model.addAttribute("chartAxisLabels", setupAxisLabelNames());
+	}
+
+	private JSONObject setupAxisLabelNames() {
+		JSONObject chartAxisLabels = new JSONObject();
+
 		chartAxisLabels.put("WTAGEINF_x",
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
 		chartAxisLabels.put("WTAGEINF_y",
@@ -57,8 +64,27 @@ public class GrowthChartsPageController {
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.years"));
 		chartAxisLabels.put("BMIAGE_y",
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.bmi"));
+		chartAxisLabels.put("BFA_x",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+		chartAxisLabels.put("BFA_y",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.bmi"));
+		chartAxisLabels.put("HCFA_x",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+		chartAxisLabels.put("HCFA_y", Context.getMessageSourceService()
+				.getMessage("isantepluspatientdashboard.chart.label.headCircumference"));
+		chartAxisLabels.put("LHFA_x",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+		chartAxisLabels.put("LHFA_y",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
+		chartAxisLabels.put("WFA_x",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+		chartAxisLabels.put("WFA_y",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+		chartAxisLabels.put("WFL_x",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
+		chartAxisLabels.put("WFL_y",
+				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
 
-		model.addAttribute("patientPropts", patientOpts);
-		model.addAttribute("chartAxisLabels", chartAxisLabels);
+		return chartAxisLabels;
 	}
 }

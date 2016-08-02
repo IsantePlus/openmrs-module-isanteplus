@@ -17,6 +17,7 @@
   			jQuery(function() {
 		    	jQuery(".vis-point").tooltip();
 		    	
+		    	//TODO fix this hack
 			    jQuery(".vis-point").hover(function(visPoint) {
 			    	var x = jQuery(visPoint.target).attr("x");
 			    	var y = jQuery(visPoint.target).attr("y");
