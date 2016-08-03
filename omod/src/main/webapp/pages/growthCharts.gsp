@@ -31,35 +31,36 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     
     <div id="cdc">
     	${ ui.includeFragment("isantepluspatientdashboard", "cdcGrowthCharts") }
-    	<div id="cdc_growth_charts-container">
-    		<canvas id="cdc_growth_charts"></canvas>
-    	</div>
     </div>
     <div id="who">
     	${ ui.includeFragment("isantepluspatientdashboard", "whoGrowthCharts") }
-    	<div id="who_growth_charts-container">
-    		<canvas id="who_growth_charts"></canvas>
-    	</div>
     </div>
 </div>
+<br/>
 
 <script type="text/javascript">
     jQuery(function() {
     	jQuery(".standards-provider-tabs").tabs();
     	
     	var patientPropts = ${patientPropts};
-    	var chartAxisLabels = ${chartAxisLabels}
-    	//TODO support these below
-		var wtageinfPatient;
-		var hcageinfPatient;
-		var wtagePatient;
-		var statagePatient;
+    	var chartAxisLabels = ${chartAxisLabels};
+    	var patientPlottableData = ${patientPlottableData};
+    	var wtageinfPatient = patientPlottableData.wtageinfPatient;
+		var wtagePatient = patientPlottableData.wtagePatient;
+		var statagePatient = patientPlottableData.statagePatient;
+		var lenageinfPatient = patientPlottableData.lenageinfPatient;
+		var whoWeightForAgePatient = patientPlottableData.whoWeightForAgePatient;
+		var whoLengthForAgePatient = patientPlottableData.whoLengthForAgePatient;
+		//TODO support these below
 		var wtleninfPatient;
-		var lenageinfPatient;
 		var wtstatPatient;
 		var bmiAgeRevPatient;
-		var whoWeightForAgePatient;
+		var hcageinfPatient;
+		var whoWeightForLengthPatient;
+		var whoHeadCircumferenceForAgePatient;
+		var whoBMIForAgePatient;
     
+    	//TODO fix this trigger
     	jQuery('#WTAGEINF').trigger('click');
     	
     	jQuery("#WTAGEINF").click(function(event) {
@@ -121,7 +122,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     	
     	jQuery("#WFA").click(function(event) {
     		resetChartJSCanvas("who_growth_charts");
-    		renderMoHPatient_ChartJS_LineGraph_WeightForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.WFA_x, y: chartAxisLabels.WFA_y});
+    		renderWHOPatient_ChartJS_LineGraph_WeightForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.WFA_x, y: chartAxisLabels.WFA_y});
     		indentifySelectedCdcLink("WFA", "who");
     		
     		event.preventDefault();
@@ -129,7 +130,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     	
     	jQuery("#WFL").click(function(event) {
     		resetChartJSCanvas("who_growth_charts");
-    		renderMoHPatient_ChartJS_LineGraph_WeightForLength(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.WFL_x, y: chartAxisLabels.WFL_y});
+    		renderWHOPatient_ChartJS_LineGraph_WeightForLength(whoWeightForLengthPatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.WFL_x, y: chartAxisLabels.WFL_y});
     		indentifySelectedCdcLink("WFL", "who");
     		
     		event.preventDefault();
@@ -137,7 +138,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     	
     	jQuery("#BFA").click(function(event) {
     		resetChartJSCanvas("who_growth_charts");
-    		renderMoHPatient_ChartJS_LineGraph_BMIForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.BFA_x, y: chartAxisLabels.BFA_y});
+    		renderWHOPatient_ChartJS_LineGraph_BMIForAge(whoBMIForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.BFA_x, y: chartAxisLabels.BFA_y});
     		indentifySelectedCdcLink("BFA", "who");
     		
     		event.preventDefault();
@@ -145,7 +146,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     	
     	jQuery("#HCFA").click(function(event) {
     		resetChartJSCanvas("who_growth_charts");
-    		renderMoHPatient_ChartJS_LineGraph_HeadCircumferenceForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.HCFA_x, y: chartAxisLabels.HCFA_y});
+    		renderWHOPatient_ChartJS_LineGraph_HeadCircumferenceForAge(whoHeadCircumferenceForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.HCFA_x, y: chartAxisLabels.HCFA_y});
     		indentifySelectedCdcLink("HCFA", "who");
     		
     		event.preventDefault();
@@ -153,7 +154,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     	
     	jQuery("#LHFA").click(function(event) {
     		resetChartJSCanvas("who_growth_charts");
-    		renderMoHPatient_ChartJS_LineGraph_LengthForAge(whoWeightForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.LHFA_x, y: chartAxisLabels.LHFA_y});
+    		renderWHOPatient_ChartJS_LineGraph_LengthForAge(whoLengthForAgePatient,"who_growth_charts", patientPropts, {x: chartAxisLabels.LHFA_x, y: chartAxisLabels.LHFA_y});
     		indentifySelectedCdcLink("LHFA", "who");
     		
     		event.preventDefault();

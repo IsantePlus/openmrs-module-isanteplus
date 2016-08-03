@@ -15,4 +15,7 @@
 		<a id="BFA" class="growthChartWhoLink" href="#">${ ui.message("isantepluspatientdashboard.BFA") }</a>
 	</li>
 </ul>
-<br />	
+<br />
+<div id="who_growth_charts-container">
+	<canvas id="who_growth_charts"></canvas>
+</div>

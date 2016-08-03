@@ -17,6 +17,7 @@ import org.json.JSONArray;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.api.OpenmrsService;
+import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -42,4 +43,8 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	Integer getPatientAgeInMonths(Patient patient);
 
 	Integer getPatientAgeInDays(Patient patient);
+
+	JSONArray getHeightsAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis);
+
+	JSONArray getWeightsAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis);
 }

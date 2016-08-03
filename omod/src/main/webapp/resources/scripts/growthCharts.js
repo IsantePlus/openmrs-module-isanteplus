@@ -18,17 +18,17 @@ var wfa_girlsPath = moduleResourceRootPath + "/who/csv/wfa_girls_p_exp.csv"
 var wfl_boysPath = moduleResourceRootPath + "/who/csv/wfl_boys_p_exp.csv"
 var wfl_girlsPath = moduleResourceRootPath + "/who/csv/wfl_girls_p_exp.csv"
 var growthChartCurveColors = {
-	"P3" : "cyan",
+	"P3" : "#009384",
 	"P5" : "#5B57A6",
 	"P10" : "#363463",
-	"P15": "#363463",
+	"P15" : "#363463",
 	"P25" : "#231F20",
 	"P50" : "#007fff",
 	"P75" : "#a1d030",
 	"P90" : "#EEA616",
-	"P95" : "#009384",
-	"P97" : "red",
-	"patient" : "#F26522",
+	"P95" : "cyan",
+	"P97" : "#51a351",
+	"Patient" : "#F26522",
 	"Pub3" : "#808080",
 	"Pub5" : "#808080",
 	"Pub10" : "#808080",
@@ -91,7 +91,7 @@ function renderPatient_ChartJS_LineGraph_WeightAgeInf(patientChartData,
 			getFileContentFromServer(wtageinfPath), "Agemos");
 
 	drawInfantWeightOrHeightForAgeChartJSGraph(fetchedGrowthChartData,
-			patientPropts, elementId, axisLabelNames);
+			patientPropts, elementId, axisLabelNames, patientChartData);
 }
 
 function render_ChartJS_weightForAgeTwoToTwentyYears(patientChartData,
@@ -128,7 +128,7 @@ function renderPatient_ChartJS_LineGraph_HeightAgeInf(patientChartData,
 			getFileContentFromServer(hcageinfPath), "Agemos");
 
 	drawInfantWeightOrHeightForAgeChartJSGraph(fetchedGrowthChartData,
-			patientPropts, elementId, axisLabelNames);
+			patientPropts, elementId, axisLabelNames, patientChartData);
 }
 
 function renderPatient_ChartJS_LineGraph_LengthAgeInf(patientChartData,
@@ -279,7 +279,7 @@ function renderPatient_ChartJS_LineGraph_WeightLengthInf(patientChartData,
 
 	if (patientPropts.gender != undefined) {
 		var data = setupCDCBasicGrowthChatMeta(fetchedGrowthChartData,
-				patientPropts, "Length", false);
+				patientPropts, "Length", false, patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
@@ -292,7 +292,7 @@ function renderPatient_ChartJS_LineGraph_WeightStature(patientChartData,
 
 	if (patientPropts.gender != undefined) {
 		var data = setupCDCBasicGrowthChatMeta(fetchedGrowthChartData,
-				patientPropts, "Height");
+				patientPropts, "Height", false, patientChartData);
 		var p85Values = [];
 		var filtered_fetchedGrowthChartData = filterFetchedGrowthChartData(
 				fetchedGrowthChartData, patientPropts, "Height", false);
@@ -313,7 +313,7 @@ function renderPatient_ChartJS_LineGraph_bmiAge(patientChartData, elementId,
 
 	if (patientPropts.gender != undefined && patientPropts.age.years >= 2) {
 		var data = setupCDCBasicGrowthChatMeta(fetchedGrowthChartData,
-				patientPropts, "Agemos", true);
+				patientPropts, "Agemos", true, patientChartData);
 		var p85Values = [];
 		var filtered_fetchedGrowthChartData = filterFetchedGrowthChartData(
 				fetchedGrowthChartData, patientPropts, "Agemos", true);
@@ -328,17 +328,17 @@ function renderPatient_ChartJS_LineGraph_bmiAge(patientChartData, elementId,
 }
 
 function drawInfantWeightOrHeightForAgeChartJSGraph(fetchedGrowthChartData,
-		patientPropts, elementId, axisLabelNames) {
+		patientPropts, elementId, axisLabelNames, patientChartData) {
 	if (patientPropts.gender != undefined) {
 		var data = setupCDCBasicGrowthChatMeta(fetchedGrowthChartData,
-				patientPropts, "Agemos");
+				patientPropts, "Agemos", false, patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
 
 function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
-		holizontalScaler, labelsOrHolizontalIsInYears) {
+		holizontalScaler, labelsOrHolizontalIsInYears, patientChartData) {
 	var labels = [];
 	var p3Values = [];
 	var p5Values = [];
@@ -360,6 +360,8 @@ function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 						.round(filtered_fetchedGrowthChartData[i][holizontalScaler]);
 
 		if (jQuery.inArray(label, labels) < 0) {
+			var patientValue = matchAndGetPatientValueForLabel(patientChartData, label);
+
 			labels.push(label);
 			p3Values.push(filtered_fetchedGrowthChartData[i].P3);
 			p5Values.push(filtered_fetchedGrowthChartData[i].P5);
@@ -370,6 +372,8 @@ function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 			p90Values.push(filtered_fetchedGrowthChartData[i].P90);
 			p95Values.push(filtered_fetchedGrowthChartData[i].P95);
 			p97Values.push(filtered_fetchedGrowthChartData[i].P97);
+			patientValues.push(patientValue != undefined ? patientValue
+					: undefined);
 		}
 	}
 	var datasets = [ /* generate_ChartJS_dataset("P3", p3Values), */
@@ -379,11 +383,12 @@ function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 			generate_ChartJS_dataset("P50", p50Values),
 			generate_ChartJS_dataset("P75", p75Values),
 			generate_ChartJS_dataset("P90", p90Values),
-			generate_ChartJS_dataset("P95", p95Values) /*
-														 * ,
-														 * generate_ChartJS_dataset("P97",
-														 * p97Values)
-														 */];
+			generate_ChartJS_dataset("P95", p95Values),
+			generate_ChartJS_dataset("Patient", patientValues) /*
+																 * ,
+																 * generate_ChartJS_dataset("P97",
+																 * p97Values)
+																 */];
 
 	return {
 		labels : labels,
@@ -454,7 +459,7 @@ function generate_ChartJS_dataset(labelHackCode, dataValues) {
 		"label" : labelHackCode,
 		"data" : dataValues,
 		"borderColor" : growthChartCurveColors[labelHackCode],
-		"borderWidth" : ((labelHackCode == "patient") ? 2 : 1)
+		"borderWidth" : ((labelHackCode == "Patient") ? 2 : 1)
 	};
 }
 
@@ -467,7 +472,7 @@ function resetChartJSCanvas(canvasElementId) {
 function indentifySelectedCdcLink(linkElementId, who) {
 	if (who == undefined) {
 		resetChartLinkFont("growthChartCDCLink");
-	} else if(who == "who") {
+	} else if (who == "who") {
 		resetChartLinkFont("growthChartWhoLink");
 	}
 	jQuery("#" + linkElementId).css({
@@ -485,7 +490,22 @@ function resetChartLinkFont(linkClassName) {
 	});
 }
 
-function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler) {
+function matchAndGetPatientValueForLabel(patientChartData, label) {
+	var patientValue = undefined;
+
+	if (patientChartData != undefined && patientChartData.length > 0) {
+		for (j = 0; j < patientChartData.length; j++) {
+			if (patientChartData[j][label] != undefined
+					&& Object.keys(patientChartData[j]) == label) {
+				patientValue = patientChartData[j][label];
+				break;
+			}
+		}
+	}
+	return patientValue;
+}
+
+function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler, patientChartData) {
 	if (fetchedGrowthChartData != undefined) {
 		var labels = [];
 		var p3Values = [];
@@ -493,22 +513,28 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler) {
 		var p50Values = [];
 		var p85Values = [];
 		var p97Values = [];
+		var patientValues = [];
+		
 		fetchedGrowthChartData = JSON.parse(fetchedGrowthChartData);
 		for (i = 0; i < fetchedGrowthChartData.length; i++) {
 			var month = Math
 					.round(fetchedGrowthChartData[i][holizontalScaler] / 30.4375);
-			
+
 			if (month >= 0 && month <= 24) {
 				var label = holizontalScaler != "Length" ? month : Math
-					.round(fetchedGrowthChartData[i][holizontalScaler]);
+						.round(fetchedGrowthChartData[i][holizontalScaler]);
 
 				if (jQuery.inArray(label, labels) < 0) {
+					var patientValue = matchAndGetPatientValueForLabel(patientChartData, label);
+					
 					labels.push(label);
 					p3Values.push(fetchedGrowthChartData[i].P3);
 					p15Values.push(fetchedGrowthChartData[i].P15);
 					p50Values.push(fetchedGrowthChartData[i].P50);
 					p85Values.push(fetchedGrowthChartData[i].P85);
 					p97Values.push(fetchedGrowthChartData[i].P97);
+					patientValues.push(patientValue != undefined ? patientValue
+							: undefined);
 				}
 			}
 		}
@@ -516,7 +542,9 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler) {
 				generate_ChartJS_dataset("P15", p15Values),
 				generate_ChartJS_dataset("P50", p50Values),
 				generate_ChartJS_dataset("P85", p85Values),
-				generate_ChartJS_dataset("P97", p97Values) ];
+				generate_ChartJS_dataset("P97", p97Values),
+				generate_ChartJS_dataset("Patient", patientValues) ];
+		
 		return {
 			labels : labels,
 			datasets : datasets
@@ -524,64 +552,74 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler) {
 	}
 }
 
-function renderMoHPatient_ChartJS_LineGraph_WeightForAge(patientChartData,
+function renderWHOPatient_ChartJS_LineGraph_WeightForAge(patientChartData,
 		elementId, patientPropts, axisLabelNames) {
 	if (patientPropts.gender != undefined) {
 		var fetchedGrowthChartData = patientPropts.gender == 1 ? loadCSVIntoJson(
-			getFileContentFromServer(wfa_girlsPath), "Age") : (patientPropts.gender == 2 ? loadCSVIntoJson(
-					getFileContentFromServer(wfa_boysPath), "Age") : undefined);
+				getFileContentFromServer(wfa_girlsPath), "Age")
+				: (patientPropts.gender == 2 ? loadCSVIntoJson(
+						getFileContentFromServer(wfa_boysPath), "Age")
+						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age");
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age", patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
 
-function renderMoHPatient_ChartJS_LineGraph_WeightForLength(patientChartData,
+function renderWHOPatient_ChartJS_LineGraph_WeightForLength(patientChartData,
 		elementId, patientPropts, axisLabelNames) {
 	if (patientPropts.gender != undefined) {
 		var fetchedGrowthChartData = patientPropts.gender == 1 ? loadCSVIntoJson(
-			getFileContentFromServer(wfl_girlsPath), "Length") : (patientPropts.gender == 2 ? loadCSVIntoJson(
-					getFileContentFromServer(wfl_boysPath), "Length") : undefined);
+				getFileContentFromServer(wfl_girlsPath), "Length")
+				: (patientPropts.gender == 2 ? loadCSVIntoJson(
+						getFileContentFromServer(wfl_boysPath), "Length")
+						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Length");
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Length", patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
 
-function renderMoHPatient_ChartJS_LineGraph_LengthForAge(patientChartData,
+function renderWHOPatient_ChartJS_LineGraph_LengthForAge(patientChartData,
 		elementId, patientPropts, axisLabelNames) {
 	if (patientPropts.gender != undefined) {
 		var fetchedGrowthChartData = patientPropts.gender == 1 ? loadCSVIntoJson(
-			getFileContentFromServer(lhfa_girlsPath), "Day") : (patientPropts.gender == 2 ? loadCSVIntoJson(
-					getFileContentFromServer(lhfa_boysPath), "Day") : undefined);
+				getFileContentFromServer(lhfa_girlsPath), "Day")
+				: (patientPropts.gender == 2 ? loadCSVIntoJson(
+						getFileContentFromServer(lhfa_boysPath), "Day")
+						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Day");
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Day", patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
 
-function renderMoHPatient_ChartJS_LineGraph_HeadCircumferenceForAge(patientChartData,
-		elementId, patientPropts, axisLabelNames) {
+function renderWHOPatient_ChartJS_LineGraph_HeadCircumferenceForAge(
+		patientChartData, elementId, patientPropts, axisLabelNames) {
 	if (patientPropts.gender != undefined) {
 		var fetchedGrowthChartData = patientPropts.gender == 1 ? loadCSVIntoJson(
-			getFileContentFromServer(hcfa_girlsPath), "Age") : (patientPropts.gender == 2 ? loadCSVIntoJson(
-					getFileContentFromServer(hcfa_boysPath), "Age") : undefined);
+				getFileContentFromServer(hcfa_girlsPath), "Age")
+				: (patientPropts.gender == 2 ? loadCSVIntoJson(
+						getFileContentFromServer(hcfa_boysPath), "Age")
+						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age");
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age", patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
 
-function renderMoHPatient_ChartJS_LineGraph_BMIForAge(patientChartData,
+function renderWHOPatient_ChartJS_LineGraph_BMIForAge(patientChartData,
 		elementId, patientPropts, axisLabelNames) {
 	if (patientPropts.gender != undefined) {
 		var fetchedGrowthChartData = patientPropts.gender == 1 ? loadCSVIntoJson(
-			getFileContentFromServer(bfa_girlsPath), "Age") : (patientPropts.gender == 2 ? loadCSVIntoJson(
-					getFileContentFromServer(bfa_boysPath), "Age") : undefined);
+				getFileContentFromServer(bfa_girlsPath), "Age")
+				: (patientPropts.gender == 2 ? loadCSVIntoJson(
+						getFileContentFromServer(bfa_boysPath), "Age")
+						: undefined);
 
 		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age");
 

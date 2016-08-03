@@ -27,4 +27,6 @@
 	<%}%>
 </ul>
 <br />
-
+<div id="cdc_growth_charts-container">
+	<canvas id="cdc_growth_charts"></canvas>
+</div>

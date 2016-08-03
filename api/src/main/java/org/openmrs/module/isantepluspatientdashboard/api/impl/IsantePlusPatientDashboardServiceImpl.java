@@ -14,6 +14,7 @@
 package org.openmrs.module.isantepluspatientdashboard.api.impl;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -33,6 +34,8 @@ import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.api.impl.BaseOpenmrsService;
+import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
+import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusConstants;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
@@ -71,11 +74,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		List<Obs> viralLoadObs = new ArrayList(
 				Context.getObsService().getObservations(patient, viralLoadConcept, false));
 
-		Collections.sort(viralLoadObs, new Comparator<Obs>() {
-			public int compare(Obs o1, Obs o2) {
-				return o1.getObsDatetime().compareTo(o2.getObsDatetime());
-			}
-		});
+		sortObsListByObsDateTime(viralLoadObs);
 
 		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
 	}
@@ -165,5 +164,105 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		Date endDate = patient.isDead() ? patient.getDeathDate() : new Date();
 
 		return Days.daysBetween(new DateTime(patient.getBirthdate()), new DateTime(endDate)).getDays();
+	}
+
+	@Override
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public JSONArray getWeightsAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis) {
+		List<Obs> weightsObs = new ArrayList(getWeightConceptObsForAPatient(patient));
+
+		sortObsListByObsDateTime(weightsObs);
+		return getConceptObsValuesAtAGivenAgesOfPatient(weightsObs, ageAxis);
+	}
+
+	@Override
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public JSONArray getHeightsAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis) {
+		List<Obs> heightsObs = new ArrayList(getHeightConceptObsForAPatient(patient));
+
+		sortObsListByObsDateTime(heightsObs);
+		return getConceptObsValuesAtAGivenAgesOfPatient(heightsObs, ageAxis);
+	}
+
+	private void sortObsListByObsDateTime(List<Obs> obsList) {
+		Collections.sort(obsList, new Comparator<Obs>() {
+			public int compare(Obs o1, Obs o2) {
+				return o1.getObsDatetime().compareTo(o2.getObsDatetime());
+			}
+		});
+	}
+
+	private JSONArray getConceptObsValuesAtAGivenAgesOfPatient(List<Obs> conceptObsList, ChartJSAgeAxis ageAxis) {
+		JSONArray conceptObsForAges = new JSONArray();
+
+		if (conceptObsList != null && ageAxis != null) {
+			Integer[] ages = createIntegerArrayByRange(ageAxis.getStartAge(), ageAxis.getLastAge(),
+					ageAxis.getAgeDifference());
+
+			for (int i = 0; i < ages.length; i++) {
+				JSONObject conceptObsForAge = new JSONObject();
+				Double obsValueAtAge = getObsValueAtAGivenAge(conceptObsList, ageAxis.getAgeUnit(), ages[i]);
+
+				if (obsValueAtAge != null) {
+					conceptObsForAge.put(Integer.toString(ages[i]), obsValueAtAge);
+					conceptObsForAges.put(conceptObsForAge);
+				}
+
+			}
+		}
+
+		return conceptObsForAges;
+	}
+
+	private Integer[] createIntegerArrayByRange(Integer start, Integer end, Integer difference) {
+		Integer[] array = new Integer[((end - start) / difference) + 1];
+		int i = 1;
+
+		array[0] = start;
+		for (int k = start; k <= end; k = k + difference) {
+			if (i < array.length) {
+				array[i] = k + difference;
+				i++;
+			}
+		}
+		return array;
+	}
+
+	/*
+	 * Currently only supporting two AgeUnits Months and Years which are the
+	 * ones required for the isante growth charts
+	 */
+	private Double getObsValueAtAGivenAge(List<Obs> conceptObsList, AgeUnit ageUnit, Integer atAge) {
+		Double obsValueAtAge = null;
+
+		if (conceptObsList != null && conceptObsList.size() > 0 && ageUnit != null && atAge != null) {
+			Date birthDate = conceptObsList.get(0).getPerson().getBirthdate();
+			Calendar atAgeFromBirth = Calendar.getInstance(Context.getLocale());
+
+			atAgeFromBirth.setTime(birthDate);
+			if (ageUnit.equals(AgeUnit.MONTHS)) {
+				atAgeFromBirth.add(Calendar.MONTH, atAge);
+			} else if (ageUnit.equals(AgeUnit.YEARS)) {
+				atAgeFromBirth.add(Calendar.YEAR, atAge);
+			}
+
+			for (Obs obs : conceptObsList) {
+				Calendar obsDate = Calendar.getInstance(Context.getLocale());
+
+				obsDate.setTime(getObservationDate(obs));
+				Integer diffYears = obsDate.get(Calendar.YEAR) - atAgeFromBirth.get(Calendar.YEAR);
+				Integer diffMonths = diffYears * 12 + obsDate.get(Calendar.MONTH) - atAgeFromBirth.get(Calendar.MONTH);
+
+				if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
+					obsValueAtAge = obs.getValueNumeric();
+					break;
+				} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
+					obsValueAtAge = obs.getValueNumeric();
+					break;
+				}
+			}
+		}
+
+		return obsValueAtAge;
 	}
 }

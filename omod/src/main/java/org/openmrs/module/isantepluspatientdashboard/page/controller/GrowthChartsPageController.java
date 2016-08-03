@@ -5,6 +5,8 @@ import org.apache.commons.logging.LogFactory;
 import org.json.JSONObject;
 import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
+import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,6 +29,7 @@ public class GrowthChartsPageController {
 
 		model.addAttribute("patientPropts", patientOpts);
 		model.addAttribute("chartAxisLabels", setupAxisLabelNames());
+		model.addAttribute("patientPlottableData", getPatientPlottableData(patient));
 	}
 
 	private JSONObject setupAxisLabelNames() {
@@ -86,5 +89,27 @@ public class GrowthChartsPageController {
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
 
 		return chartAxisLabels;
+	}
+
+	private JSONObject getPatientPlottableData(Patient patient) {
+		ChartJSAgeAxis birthTo36Months = new ChartJSAgeAxis(0, 36, 1, AgeUnit.MONTHS);
+		ChartJSAgeAxis birthTo24Months = new ChartJSAgeAxis(0, 24, 1, AgeUnit.MONTHS);
+		ChartJSAgeAxis twoTo20Years = new ChartJSAgeAxis(2, 20, 1, AgeUnit.YEARS);
+		JSONObject patientPlottableData = new JSONObject();
+
+		patientPlottableData.put("wtageinfPatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getWeightsAtGivenPatientAges(patient, birthTo36Months));
+		patientPlottableData.put("lenageinfPatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getHeightsAtGivenPatientAges(patient, birthTo36Months));
+		patientPlottableData.put("wtagePatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getWeightsAtGivenPatientAges(patient, twoTo20Years));
+		patientPlottableData.put("statagePatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getHeightsAtGivenPatientAges(patient, twoTo20Years));
+		patientPlottableData.put("whoWeightForAgePatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getWeightsAtGivenPatientAges(patient, birthTo24Months));
+		patientPlottableData.put("whoLengthForAgePatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getHeightsAtGivenPatientAges(patient, birthTo24Months));
+
+		return patientPlottableData;
 	}
 }
