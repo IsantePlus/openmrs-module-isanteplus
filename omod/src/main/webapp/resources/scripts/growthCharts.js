@@ -7,16 +7,16 @@ var wtagePath = moduleResourceRootPath + "/cdc/csv/wtage.csv";
 var wtageinfPath = moduleResourceRootPath + "/cdc/csv/wtageinf.csv";
 var wtleninfPath = moduleResourceRootPath + "/cdc/csv/wtleninf.csv";
 var wtstatPath = moduleResourceRootPath + "/cdc/csv/wtstat.csv";
-var bfa_boysPath = moduleResourceRootPath + "/who/csv/bfa_boys_p_exp.csv"
-var bfa_girlsPath = moduleResourceRootPath + "/who/csv/bfa_girls_p_exp.csv"
-var hcfa_boysPath = moduleResourceRootPath + "/who/csv/hcfa_boys_p_exp.csv"
-var hcfa_girlsPath = moduleResourceRootPath + "/who/csv/hcfa_girls_p_exp.csv"
-var lhfa_boysPath = moduleResourceRootPath + "/who/csv/lhfa_boys_p_exp.csv"
-var lhfa_girlsPath = moduleResourceRootPath + "/who/csv/lhfa_girls_p_exp.csv"
-var wfa_boysPath = moduleResourceRootPath + "/who/csv/wfa_boys_p_exp.csv"
-var wfa_girlsPath = moduleResourceRootPath + "/who/csv/wfa_girls_p_exp.csv"
-var wfl_boysPath = moduleResourceRootPath + "/who/csv/wfl_boys_p_exp.csv"
-var wfl_girlsPath = moduleResourceRootPath + "/who/csv/wfl_girls_p_exp.csv"
+var bfa_boysPath = moduleResourceRootPath + "/who/csv/bfa_boys_p_exp.csv";
+var bfa_girlsPath = moduleResourceRootPath + "/who/csv/bfa_girls_p_exp.csv";
+var hcfa_boysPath = moduleResourceRootPath + "/who/csv/hcfa_boys_p_exp.csv";
+var hcfa_girlsPath = moduleResourceRootPath + "/who/csv/hcfa_girls_p_exp.csv";
+var lhfa_boysPath = moduleResourceRootPath + "/who/csv/lhfa_boys_p_exp.csv";
+var lhfa_girlsPath = moduleResourceRootPath + "/who/csv/lhfa_girls_p_exp.csv";
+var wfa_boysPath = moduleResourceRootPath + "/who/csv/wfa_boys_p_exp.csv";
+var wfa_girlsPath = moduleResourceRootPath + "/who/csv/wfa_girls_p_exp.csv";
+var wfl_boysPath = moduleResourceRootPath + "/who/csv/wfl_boys_p_exp.csv";
+var wfl_girlsPath = moduleResourceRootPath + "/who/csv/wfl_girls_p_exp.csv";
 var growthChartCurveColors = {
 	"P3" : "#009384",
 	"P5" : "#5B57A6",
@@ -100,7 +100,7 @@ function render_ChartJS_weightForAgeTwoToTwentyYears(patientChartData,
 			getFileContentFromServer(wtagePath), "Agemos");
 
 	drawTwoToTwentyWeightOrHeightForAgeChartJSGraph(patientPropts,
-			fetchedGrowthChartData, elementId, axisLabelNames);
+			fetchedGrowthChartData, elementId, axisLabelNames, patientChartData);
 }
 
 function render_ChartJS_statureForAgeTwoToTwentyYears(patientChartData,
@@ -109,14 +109,14 @@ function render_ChartJS_statureForAgeTwoToTwentyYears(patientChartData,
 			getFileContentFromServer(statagePath), "Agemos");
 
 	drawTwoToTwentyWeightOrHeightForAgeChartJSGraph(patientPropts,
-			fetchedGrowthChartData, elementId, axisLabelNames);
+			fetchedGrowthChartData, elementId, axisLabelNames, patientChartData);
 }
 
 function drawTwoToTwentyWeightOrHeightForAgeChartJSGraph(patientPropts,
-		fetchedGrowthChartData, elementId, axisLabelNames) {
+		fetchedGrowthChartData, elementId, axisLabelNames, patientChartData) {
 	if (patientPropts.gender != undefined && patientPropts.age.years >= 2) {
 		var data = setupCDCBasicGrowthChatMeta(fetchedGrowthChartData,
-				patientPropts, "Agemos", true);
+				patientPropts, "Agemos", true, patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
