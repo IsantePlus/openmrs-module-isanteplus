@@ -109,6 +109,10 @@ public class GrowthChartsPageController {
 				.getWeightsAtGivenPatientAges(patient, birthTo24Months));
 		patientPlottableData.put("whoLengthForAgePatient", Context.getService(IsantePlusPatientDashboardService.class)
 				.getHeightsAtGivenPatientAges(patient, birthTo24Months));
+		patientPlottableData.put("hcageinfPatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getHeadCircumferenceAtGivenPatientAges(patient, birthTo36Months));
+		patientPlottableData.put("whoHeadCircumferenceForAgePatient", Context.getService(IsantePlusPatientDashboardService.class)
+				.getHeadCircumferenceAtGivenPatientAges(patient, twoTo20Years));
 
 		return patientPlottableData;
 	}

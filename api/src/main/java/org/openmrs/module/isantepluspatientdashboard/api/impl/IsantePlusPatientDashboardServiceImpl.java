@@ -113,6 +113,26 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return heightsJson;
 	}
 
+	@Override
+	public JSONArray getPatientHeadCircumferences(Patient patient) {
+		JSONArray headCircumference = new JSONArray();
+		Set<Obs> headCircumferenceConceptObsForAPatient = getHeadCircumferenceConceptObsForAPatient(patient);
+
+		if (headCircumferenceConceptObsForAPatient != null) {
+			for (Obs obs : headCircumferenceConceptObsForAPatient) {
+				if (obs != null) {
+					JSONObject json = new JSONObject();
+
+					json.put("headCircumference", obs.getValueNumeric());
+					json.put("measureDate", getObservationDate(obs));
+					json.put("birthDate", patient.getBirthdate());
+					headCircumference.put(json);
+				}
+			}
+		}
+		return headCircumference;
+	}
+
 	@SuppressWarnings({ "deprecation" })
 	private Set<Obs> getWeightConceptObsForAPatient(Patient patient) {
 		// weight concept 5089
@@ -122,6 +142,13 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 						: 5089;
 		return Context.getObsService().getObservations(patient, Context.getConceptService().getConcept(weightConceptId),
 				false);
+	}
+
+	@SuppressWarnings({ "deprecation" })
+	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
+		Concept headCircumferenceConcept = IsantePlusConstants.HEAD_CIRCUMFERENC_CONCEPT;
+		return headCircumferenceConcept != null
+				? Context.getObsService().getObservations(patient, headCircumferenceConcept, false) : null;
 	}
 
 	@SuppressWarnings({ "deprecation" })
@@ -182,6 +209,19 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 		sortObsListByObsDateTime(heightsObs);
 		return getConceptObsValuesAtAGivenAgesOfPatient(heightsObs, ageAxis);
+	}
+
+	@Override
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public JSONArray getHeadCircumferenceAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis) {
+		Set<Obs> headCircumferenceConceptObsForAPatient = getHeadCircumferenceConceptObsForAPatient(patient);
+
+		if (headCircumferenceConceptObsForAPatient != null) {
+			List<Obs> headCircumferenceObs = new ArrayList(headCircumferenceConceptObsForAPatient);
+			sortObsListByObsDateTime(headCircumferenceObs);
+			return getConceptObsValuesAtAGivenAgesOfPatient(headCircumferenceObs, ageAxis);
+		} else
+			return null;
 	}
 
 	private void sortObsListByObsDateTime(List<Obs> obsList) {

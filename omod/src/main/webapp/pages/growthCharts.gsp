@@ -51,13 +51,13 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 		var lenageinfPatient = patientPlottableData.lenageinfPatient;
 		var whoWeightForAgePatient = patientPlottableData.whoWeightForAgePatient;
 		var whoLengthForAgePatient = patientPlottableData.whoLengthForAgePatient;
+		var hcageinfPatient = patientPlottableData.hcageinfPatient;
+		var whoHeadCircumferenceForAgePatient = patientPlottableData.whoHeadCircumferenceForAgePatient;
 		//TODO support these below
 		var wtleninfPatient;
 		var wtstatPatient;
 		var bmiAgeRevPatient;
-		var hcageinfPatient;
 		var whoWeightForLengthPatient;
-		var whoHeadCircumferenceForAgePatient;
 		var whoBMIForAgePatient;
     
     	//TODO fix this trigger

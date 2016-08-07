@@ -52,6 +52,10 @@
 		<defaultValue>856</defaultValue>
 		<description>HIV VIRAL LOAD concept id</description>
 	</globalProperty>
-
+	<globalProperty>
+		<property>isantepluspatientdashboard.headCircumferenceConceptId</property>
+		<defaultValue>5314</defaultValue>
+		<description>Head Circumference Concept Id</description>
+	</globalProperty>
 </module>
 

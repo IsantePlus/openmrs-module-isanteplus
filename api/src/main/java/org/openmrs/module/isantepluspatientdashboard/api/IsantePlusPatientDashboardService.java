@@ -47,4 +47,8 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	JSONArray getHeightsAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis);
 
 	JSONArray getWeightsAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis);
+
+	JSONArray getPatientHeadCircumferences(Patient patient);
+
+	JSONArray getHeadCircumferenceAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis);
 }

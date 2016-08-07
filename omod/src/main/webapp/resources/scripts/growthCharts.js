@@ -373,7 +373,7 @@ function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 			p95Values.push(filtered_fetchedGrowthChartData[i].P95);
 			p97Values.push(filtered_fetchedGrowthChartData[i].P97);
 			patientValues.push(patientValue != undefined ? patientValue
-					: undefined);
+					: null);
 		}
 	}
 	var datasets = [ /* generate_ChartJS_dataset("P3", p3Values), */
@@ -456,10 +456,11 @@ function drawLineChartJSGraph(elementId, data, axisLabelNames) {
 
 function generate_ChartJS_dataset(labelHackCode, dataValues) {
 	return {
-		"label" : labelHackCode,
-		"data" : dataValues,
-		"borderColor" : growthChartCurveColors[labelHackCode],
-		"borderWidth" : ((labelHackCode == "Patient") ? 2 : 1)
+		label : labelHackCode,
+		data : dataValues,
+		borderColor : growthChartCurveColors[labelHackCode],
+		borderWidth : ((labelHackCode == "Patient") ? 2 : 1),
+		spanGaps: true
 	};
 }
 
@@ -534,7 +535,7 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler, p
 					p85Values.push(fetchedGrowthChartData[i].P85);
 					p97Values.push(fetchedGrowthChartData[i].P97);
 					patientValues.push(patientValue != undefined ? patientValue
-							: undefined);
+							: null);
 				}
 			}
 		}
