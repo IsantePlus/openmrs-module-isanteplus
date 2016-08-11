@@ -23,5 +23,15 @@
         "url": "${project.parent.artifactId}/growthCharts.page?patientId={{patient.uuid}}",
         "icon": "icon-bar-chart",
         "order": 4
+    },
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.formsHistory",
+        "extensionPointId": "patientDashboard.tabs",
+        "type": "link",
+        "label": "${project.parent.artifactId}.formsHistory",
+        "extensionParams": {
+            "provider": "isantepluspatientdashboard",
+            "fragment": "formsHistoryTab"
+        }
     }
 ]

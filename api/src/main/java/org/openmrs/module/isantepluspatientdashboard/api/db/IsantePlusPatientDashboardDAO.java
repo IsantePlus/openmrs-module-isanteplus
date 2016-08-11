@@ -13,14 +13,23 @@
  */
 package org.openmrs.module.isantepluspatientdashboard.api.db;
 
+import java.util.List;
+
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
+import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
 /**
- *  Database methods for {@link IsantePlusPatientDashboardService}.
+ * Database methods for {@link IsantePlusPatientDashboardService}.
  */
 public interface IsantePlusPatientDashboardDAO {
-	
-	/*
-	 * Add DAO methods here
-	 */
+
+	FormHistory getFormHistory(Integer formHistoryId);
+
+	FormHistory getFormHistoryByUuid(String formHistoryUuid);
+
+	void deleteFormHistory(FormHistory formHistory);
+
+	List<FormHistory> getAllFormHistory();
+
+	FormHistory saveFormHistory(FormHistory formHistory);
 }

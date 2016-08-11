@@ -13,11 +13,15 @@
  */
 package org.openmrs.module.isantepluspatientdashboard.api;
 
+import java.util.List;
+
 import org.json.JSONArray;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.api.OpenmrsService;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
+import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
+import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -51,4 +55,21 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	JSONArray getPatientHeadCircumferences(Patient patient);
 
 	JSONArray getHeadCircumferenceAtGivenPatientAges(Patient patient, ChartJSAgeAxis ageAxis);
+
+	/**
+	 * Should only be run by {@link InitialiseFormsHistory}
+	 */
+	void runInitialHistoryCreatorAgainstDB();
+
+	FormHistory getFormHistory(Integer formHistoryId);
+
+	FormHistory getFormHistoryByUuid(String formHistoryUuid);
+
+	void deleteFormHistory(FormHistory formHistory);
+
+	List<FormHistory> getAllFormHistory();
+
+	FormHistory saveFormHistory(FormHistory formHistory);
+
+	boolean formHistoryExist(FormHistory formHistory, List<FormHistory> formHistoryLookup);
 }

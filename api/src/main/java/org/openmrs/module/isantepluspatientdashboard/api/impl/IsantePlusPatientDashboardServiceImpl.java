@@ -18,6 +18,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -30,8 +31,10 @@ import org.joda.time.Months;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openmrs.Concept;
+import org.openmrs.Encounter;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
+import org.openmrs.Visit;
 import org.openmrs.api.context.Context;
 import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
@@ -39,6 +42,8 @@ import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusConstants;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
+import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
+import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
 /**
  * It is a default implementation of {@link IsantePlusPatientDashboardService}.
@@ -304,5 +309,138 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 
 		return obsValueAtAge;
+	}
+
+	/**
+	 * @TODO; use visit paramter to patient to match passed in patient and visit
+	 * patient <br />
+	 * Get all the encounters for the passed in visit<br />
+	 * Each of those encounters has a form's property, sort them bassed on the
+	 * forms and encounter dates<br />
+	 * Handle FormHistory TODOs to make sure each formHistory entry is actually
+	 * manageable and deletable separately and that then write this whole list
+	 * to be returned<br />
+	 * Use AOP to update forms history table every time a visit is updated<br />
+	 * Loading form history page should be handled by htmlformentryui module
+	 * which this module should require
+	 * 
+	 * @param visit
+	 * @return
+	 */
+	public List<FormHistory> getFormsHistory(Visit visit, Patient patient) {
+
+		return null;
+
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private Visit sortVisitUsingEncounterDateForItsEncounters(Visit visit) {
+		Visit sortedVisit = null;
+		Set<Encounter> sortedEncounters = null;
+
+		if (visit != null && visit.getPatient() != null && visit.getPatient().getPerson() != null) {
+			Set<Encounter> encounters = visit.getEncounters();
+
+			if (encounters != null && encounters.size() > 0) {
+				List<Encounter> encountersList = new ArrayList(visit.getEncounters());
+
+				sortEncountersByDateUpdatedOrCreated(encountersList);
+				sortedEncounters = new HashSet<Encounter>(encountersList);
+				sortedVisit = visit;
+				sortedVisit.setEncounters(sortedEncounters);
+			}
+		}
+
+		return sortedVisit;
+	}
+
+	private void sortEncountersByDateUpdatedOrCreated(List<Encounter> encounterList) {
+		Collections.sort(encounterList, new Comparator<Encounter>() {
+			public int compare(Encounter e1, Encounter e2) {
+				if (e1.getDateChanged() != null && e2.getDateChanged() != null)
+					return e1.getDateChanged().compareTo(e2.getDateChanged());
+				else
+					return e1.getDateCreated().compareTo(e2.getDateCreated());
+			}
+		});
+	}
+
+	/**
+	 * Should only be run by {@link InitialiseFormsHistory}
+	 */
+	public void runInitialHistoryCreatorAgainstDB() {
+		List<Visit> visits = Context.getVisitService().getAllVisits();
+
+		for (Visit visit : visits) {
+			visit = sortVisitUsingEncounterDateForItsEncounters(visit);
+			for (Encounter encounter : visit.getEncounters()) {
+				List<FormHistory> finishedFormHistories = new ArrayList<FormHistory>();
+
+				if (encounter != null && encounter.getForm() != null) {
+					FormHistory formHistory = createBasicFormHistoryObject(visit, encounter);
+
+					if (formHistoryExist(formHistory, finishedFormHistories)) {
+						formHistory = saveFormHistory(formHistory);
+						finishedFormHistories.add(formHistory);
+						log.info(
+								"Successfully saved: " + formHistory + " for Encounter: " + formHistory.getEncounter());
+					}
+				}
+			}
+		}
+	}
+
+	@Override
+	public boolean formHistoryExist(FormHistory formHistory, List<FormHistory> formHistoryLookup) {
+		List<FormHistory> fHistoryLookup = formHistoryLookup != null ? formHistoryLookup : getAllFormHistory();
+
+		for (FormHistory fh : fHistoryLookup) {
+			if (fh != null && formHistory != null && fh.getEncounter() != null && formHistory.getEncounter() != null
+					&& fh.getEncounter().getUuid().equals(formHistory.getEncounter().getUuid())
+					&& fh.getEncounter().getPatient().equals(formHistory.getEncounter().getPatient()))
+				return true;
+		}
+		return false;
+	}
+
+	private FormHistory createBasicFormHistoryObject(Visit visit, Encounter encounter) {
+		FormHistory formHistory = null;
+
+		if (visit != null && encounter != null) {
+			formHistory = new FormHistory();
+			formHistory.setCreator(Context.getAuthenticatedUser());
+			formHistory.setDateCreated(new Date());
+
+			formHistory.setVisit(visit);
+		}
+		return formHistory;
+	}
+
+	@Override
+	public FormHistory getFormHistory(Integer formHistoryId) {
+		return dao.getFormHistory(formHistoryId);
+	}
+
+	@Override
+	public FormHistory getFormHistoryByUuid(String formHistoryUuid) {
+		return dao.getFormHistoryByUuid(formHistoryUuid);
+	}
+
+	@Override
+	public void deleteFormHistory(FormHistory formHistory) {
+		dao.deleteFormHistory(formHistory);
+	}
+
+	@Override
+	public List<FormHistory> getAllFormHistory() {
+		return dao.getAllFormHistory();
+	}
+
+	/**
+	 * TODO each form should have one history entry implying unique visit
+	 */
+	@Override
+	public FormHistory saveFormHistory(FormHistory formHistory) {
+		return dao.saveFormHistory(formHistory);
 	}
 }
