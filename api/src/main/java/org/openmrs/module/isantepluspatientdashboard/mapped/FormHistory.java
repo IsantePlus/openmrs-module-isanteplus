@@ -7,12 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.openmrs.BaseOpenmrsData;
 import org.openmrs.Encounter;
-import org.openmrs.Form;
 import org.openmrs.Visit;
 
 /**
@@ -37,23 +37,18 @@ public class FormHistory extends BaseOpenmrsData implements Serializable {
 	private Integer formHistoryId;
 
 	@ManyToOne
-	@Column(name = "visit_id")
+	@JoinColumn(name = "visit_id")
 	private Visit visit;
-
-	/**
-	 * A form may be listed more than once in the history
-	 */
-	@ManyToOne
-	@Column(name = "form_id")
-	private Form form;
 
 	/**
 	 * Encounter is the required field here, since a visit can contain a list of
 	 * encounters which actually are entered each through a form
 	 */
 	@ManyToOne
-	@Column(name = "encounter_id", nullable = false)
+	@JoinColumn(name = "encounter_id", nullable = false)
 	private Encounter encounter;
+	
+	//TODO add formStatus and formLastModification and use form attributes to add form tags to each form to unify iSante forms from all the rest of the forms
 
 	public Integer getFormHistoryId() {
 		return formHistoryId;

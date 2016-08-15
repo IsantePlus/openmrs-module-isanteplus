@@ -13,6 +13,7 @@
  */
 package org.openmrs.module.isantepluspatientdashboard.api;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -23,6 +24,9 @@ import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 import org.springframework.transaction.annotation.Transactional;
+
+import liquibase.database.jvm.JdbcConnection;
+import liquibase.exception.DatabaseException;
 
 /**
  * This service exposes module's core functionality. It is a Spring managed bean
@@ -58,8 +62,10 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 
 	/**
 	 * Should only be run by {@link InitialiseFormsHistory}
+	 * @throws SQLException 
+	 * @throws DatabaseException 
 	 */
-	void runInitialHistoryCreatorAgainstDB();
+	void runInitialHistoryCreatorAgainstDB(JdbcConnection connection) throws DatabaseException, SQLException;
 
 	FormHistory getFormHistory(Integer formHistoryId);
 

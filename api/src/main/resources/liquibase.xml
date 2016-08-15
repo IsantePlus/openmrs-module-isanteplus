@@ -17,15 +17,12 @@
 			Create form history table
 		</comment>
 		<createTable tableName="isantepluspatientdashboard_form_history">
-			<column name="form_history_type_id" type="int" autoIncrement="true">
+			<column name="form_history_id" type="int" autoIncrement="true">
 				<constraints primaryKey="true" nullable="false" />
 			</column>
 			<column name="visit_id" type="int" />
 			<column name="encounter_id" type="int">
 				<constraints nullable="false" unique="true" />
-			</column>
-			<column name="form_id" type="int">
-				<constraints nullable="false" />
 			</column>
 			<column name="creator" type="int">
 				<constraints nullable="false" />
@@ -54,10 +51,6 @@
 			baseTableName="isantepluspatientdashboard_form_history"
 			baseColumnNames="encounter_id" referencedTableName="encounter"
 			referencedColumnNames="encounter_id" />
-		<addForeignKeyConstraint constraintName="form_history_form_fk"
-			baseTableName="isantepluspatientdashboard_form_history"
-			baseColumnNames="form_id" referencedTableName="form"
-			referencedColumnNames="form_id" />
 		<addForeignKeyConstraint constraintName="form_history_creator_fk"
 			baseTableName="isantepluspatientdashboard_form_history"
 			baseColumnNames="creator" referencedTableName="users"

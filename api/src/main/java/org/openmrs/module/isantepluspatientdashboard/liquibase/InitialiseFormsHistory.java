@@ -1,11 +1,14 @@
 package org.openmrs.module.isantepluspatientdashboard.liquibase;
 
-import org.openmrs.api.context.Context;
-import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
+import java.sql.SQLException;
+
+import org.openmrs.module.isantepluspatientdashboard.api.impl.IsantePlusPatientDashboardServiceImpl;
 
 import liquibase.change.custom.CustomTaskChange;
 import liquibase.database.Database;
+import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.CustomChangeException;
+import liquibase.exception.DatabaseException;
 import liquibase.exception.SetupException;
 import liquibase.exception.ValidationErrors;
 import liquibase.resource.ResourceAccessor;
@@ -41,8 +44,18 @@ public class InitialiseFormsHistory implements CustomTaskChange {
 	}
 
 	@Override
-	public void execute(Database arg0) throws CustomChangeException {
-		Context.getService(IsantePlusPatientDashboardService.class).runInitialHistoryCreatorAgainstDB();
+	public void execute(Database database) throws CustomChangeException {
+		JdbcConnection connection = (JdbcConnection) database.getConnection();
+
+		// Hacking service, looks like at this stage module's services are not
+		// yet ready
+		try {
+			new IsantePlusPatientDashboardServiceImpl().runInitialHistoryCreatorAgainstDB(connection);
+		} catch (DatabaseException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

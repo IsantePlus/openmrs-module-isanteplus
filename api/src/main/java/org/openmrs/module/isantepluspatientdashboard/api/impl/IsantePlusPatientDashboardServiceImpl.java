@@ -13,6 +13,9 @@
  */
 package org.openmrs.module.isantepluspatientdashboard.api.impl;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -45,6 +48,9 @@ import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDas
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
+import liquibase.database.jvm.JdbcConnection;
+import liquibase.exception.DatabaseException;
+
 /**
  * It is a default implementation of {@link IsantePlusPatientDashboardService}.
  */
@@ -52,6 +58,8 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		implements IsantePlusPatientDashboardService {
 
 	protected final Log log = LogFactory.getLog(this.getClass());
+
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	private IsantePlusPatientDashboardDAO dao;
 
@@ -367,27 +375,65 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 	/**
 	 * Should only be run by {@link InitialiseFormsHistory}
+	 * 
+	 * @param connection,
+	 *            this should only be passed on from
+	 *            {@link InitialiseFormsHistory}
+	 * @throws SQLException
+	 * @throws DatabaseException
 	 */
-	public void runInitialHistoryCreatorAgainstDB() {
+	public void runInitialHistoryCreatorAgainstDB(JdbcConnection connection) throws DatabaseException, SQLException {
 		List<Visit> visits = Context.getVisitService().getAllVisits();
+		String daemonUserSelectSQL = "SELECT user_id FROM users WHERE uuid = 'A4F30A1B-5EB9-11DF-A648-37A07F9C90FB'";
+		ResultSet rs = connection.createStatement().executeQuery(daemonUserSelectSQL);
+		String userId = null;
+
+		if (rs.next()) {
+			userId = rs.getString("user_id");
+		}
 
 		for (Visit visit : visits) {
 			visit = sortVisitUsingEncounterDateForItsEncounters(visit);
-			for (Encounter encounter : visit.getEncounters()) {
-				List<FormHistory> finishedFormHistories = new ArrayList<FormHistory>();
+			if (visit != null) {
+				for (Encounter encounter : visit.getEncounters()) {
+					List<FormHistory> finishedFormHistories = new ArrayList<FormHistory>();
 
-				if (encounter != null && encounter.getForm() != null) {
-					FormHistory formHistory = createBasicFormHistoryObject(visit, encounter);
+					if (encounter != null && encounter.getForm() != null) {
+						FormHistory formHistory = createBasicFormHistoryObject(visit, encounter);
 
-					if (formHistoryExist(formHistory, finishedFormHistories)) {
-						formHistory = saveFormHistory(formHistory);
-						finishedFormHistories.add(formHistory);
-						log.info(
-								"Successfully saved: " + formHistory + " for Encounter: " + formHistory.getEncounter());
+						if (!formHistoryExist(formHistory, finishedFormHistories)) {
+							String sql = createSQLInsertQueryFromFormHistory(formHistory,
+									StringUtils.isNotBlank(userId) ? Integer.parseInt(userId) : 1);
+
+							if (connection != null && StringUtils.isNotBlank(sql)) {
+								connection.createStatement().executeUpdate(sql);
+							} else {
+								formHistory = saveFormHistory(formHistory);
+							}
+							finishedFormHistories.add(formHistory);
+							log.info("Successfully saved: " + formHistory + " for Encounter: "
+									+ formHistory.getEncounter());
+						}
 					}
 				}
 			}
 		}
+	}
+
+	private String createSQLInsertQueryFromFormHistory(FormHistory formHistory, Integer userId) {
+		String sql = null;
+
+		if (formHistory != null && userId != null) {
+			sql = "INSERT INTO isantepluspatientdashboard_form_history ("
+					+ (formHistory.getVisit() != null ? "visit_id ," : "")
+					+ "encounter_id, creator, date_created, voided, uuid) VALUES("
+					+ (formHistory.getVisit() != null ? formHistory.getVisit().getVisitId() + "," : "")
+					+ formHistory.getEncounter().getEncounterId() + ", " + userId + ", '"
+					+ sdf.format(formHistory.getDateCreated()) + "', " + (formHistory.isVoided() ? 1 : 0) + ", '"
+					+ formHistory.getUuid() + "')";
+		}
+
+		return sql;
 	}
 
 	@Override
@@ -408,10 +454,12 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 		if (visit != null && encounter != null) {
 			formHistory = new FormHistory();
-			formHistory.setCreator(Context.getAuthenticatedUser());
-			formHistory.setDateCreated(new Date());
 
+			formHistory.setEncounter(encounter);
+			// formHistory.setCreator(Context.getAuthenticatedUser());
+			formHistory.setDateCreated(new Date());
 			formHistory.setVisit(visit);
+			formHistory.setVoided(false);
 		}
 		return formHistory;
 	}
