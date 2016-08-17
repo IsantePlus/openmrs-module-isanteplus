@@ -14,4 +14,18 @@ public class IsantePlusConstants {
 	 */
 	public static Concept HEAD_CIRCUMFERENC_CONCEPT = Context.getConceptService().getConcept(Context
 			.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.HEAD_CIRCUMFERENCE_CONCEPTID));
+
+	public static Concept FORMNEEDSREVIEW_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(Context
+			.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.FORMNEEDSREVIEW_CONCEPTID)));
+	public static Concept FORMSTATUS_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
+			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.FORMSTATUS_CONCEPTID)));
+	public static Concept YES_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
+			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.YES_CONCEPTID)));
+	public static Concept NO_CONCEPT = Context.getConceptService().getConcept(Integer
+			.parseInt(Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.NO_CONCEPTID)));
+	public static Concept COMPLETED_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
+			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.COMPLETED_CONCEPTID)));
+	public static Concept INCOMPLETE_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
+			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.INCOMPLETE_CONCEPTID)));
+
 }

@@ -453,9 +453,8 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		FormHistory formHistory = null;
 
 		if (visit != null && encounter != null) {
-			formHistory = new FormHistory();
+			formHistory = new FormHistory(encounter);
 
-			formHistory.setEncounter(encounter);
 			// formHistory.setCreator(Context.getAuthenticatedUser());
 			formHistory.setDateCreated(new Date());
 			formHistory.setVisit(visit);
@@ -490,5 +489,54 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	@Override
 	public FormHistory saveFormHistory(FormHistory formHistory) {
 		return dao.saveFormHistory(formHistory);
+	}
+
+	/**
+	 * Excludes all default reference application forms and probably only
+	 * returns iSante forms
+	 * 
+	 * Assumes that default form names are not renamed
+	 * 
+	 * TODO: Is this really what iSantePlus intends to only be listed?
+	 */
+	@Override
+	public List<FormHistory> getOnlyIsanteFormHistories() {
+		List<FormHistory> allFormhistories = getAllFormHistory();
+		List<FormHistory> iSanteFormHistories = new ArrayList<FormHistory>();
+
+		if (allFormhistories != null && allFormhistories.size() > 0) {
+			for (FormHistory history : allFormhistories) {
+				if (!"Vitals".equals(history.getEncounter().getForm().getName())
+						&& !"Visit Note".equals(history.getEncounter().getForm().getName())
+						&& !"Admission (Simple)".equals(history.getEncounter().getForm().getName())
+						&& !"Discharge (Simple)".equals(history.getEncounter().getForm().getName())
+						&& !"Transfer Within Hospital (Simple)".equals(history.getEncounter().getForm().getName())) {
+					iSanteFormHistories.add(history);
+				}
+			}
+		}
+
+		return iSanteFormHistories;
+	}
+
+	@Override
+	public List<FormHistory> getOnlyIsanteFormHistories(Visit visit) {
+		return filterHistoriesByVisit(getOnlyIsanteFormHistories(), visit);
+	}
+
+	private List<FormHistory> filterHistoriesByVisit(List<FormHistory> history, Visit visit) {
+		List<FormHistory> histories = new ArrayList<FormHistory>();
+
+		for (FormHistory h : history) {
+			if (h.getVisit() != null && visit != null && h.getVisit().getVisitId().equals(visit.getVisitId())) {
+				histories.add(h);
+			}
+		}
+		return histories;
+	}
+
+	@Override
+	public List<FormHistory> getAllFormHistory(Visit visit) {
+		return filterHistoriesByVisit(getAllFormHistory(), visit);
 	}
 }

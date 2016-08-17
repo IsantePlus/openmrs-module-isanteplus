@@ -58,5 +58,35 @@
 		<defaultValue>5314</defaultValue>
 		<description>Head Circumference Concept Id</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.formNeedsReviewConceptId</property>
+		<defaultValue>163341</defaultValue>
+		<description>Form needs review concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.formStatusConceptId</property>
+		<defaultValue>163340</defaultValue>
+		<description>Form status concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.yesConceptId</property>
+		<defaultValue>1066</defaultValue>
+		<description>Yes Concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.noConceptId</property>
+		<defaultValue>1065</defaultValue>
+		<description>No Concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.incompleteConceptId</property>
+		<defaultValue>163339</defaultValue>
+		<description>Incomplete Concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.completedConceptId</property>
+		<defaultValue>1267</defaultValue>
+		<description>COMPLETED Concept id</description>
+	</globalProperty>
 </module>
 

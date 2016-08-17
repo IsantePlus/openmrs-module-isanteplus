@@ -19,6 +19,7 @@ import java.util.List;
 import org.json.JSONArray;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
+import org.openmrs.Visit;
 import org.openmrs.api.OpenmrsService;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
@@ -78,4 +79,10 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	FormHistory saveFormHistory(FormHistory formHistory);
 
 	boolean formHistoryExist(FormHistory formHistory, List<FormHistory> formHistoryLookup);
+
+	List<FormHistory> getOnlyIsanteFormHistories();
+
+	List<FormHistory> getOnlyIsanteFormHistories(Visit visit);
+
+	List<FormHistory> getAllFormHistory(Visit visit);
 }

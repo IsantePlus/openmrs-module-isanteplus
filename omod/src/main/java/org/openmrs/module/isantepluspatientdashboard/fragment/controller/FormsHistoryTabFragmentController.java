@@ -17,8 +17,30 @@ public class FormsHistoryTabFragmentController {
 
 	public void controller(PageModel model, @RequestParam("patientId") Patient patient,
 			@RequestParam("visitId") Visit visit) {
-		List<FormHistory> allFormHistory = Context.getService(IsantePlusPatientDashboardService.class)
-				.getAllFormHistory();
-		model.addAttribute("allFormHistory", allFormHistory);
+		if (patient != null && visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
+			List<FormHistory> nonDefaultFormHistory = Context.getService(IsantePlusPatientDashboardService.class)
+					.getOnlyIsanteFormHistories(visit);
+			model.addAttribute("allFormHistory", nonDefaultFormHistory);
+		}
+	}
+
+	public void includeNonIsanteForms(PageModel model, @RequestParam("patientId") Patient patient,
+			@RequestParam("visitId") Visit visit) {
+		if (patient != null && visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
+			List<FormHistory> allFormHistory = Context.getService(IsantePlusPatientDashboardService.class)
+					.getAllFormHistory(visit);
+			model.addAttribute("allFormHistory", allFormHistory);
+		}
+	}
+
+	public void deleteSelectedFormHistory(@RequestParam("selectedFormHistory[]") String[] uuids) {
+		if (uuids != null && uuids.length > 0) {
+			for (int i = 0; i < uuids.length; i++) {
+				FormHistory history = Context.getService(IsantePlusPatientDashboardService.class)
+						.getFormHistoryByUuid(uuids[i]);
+
+				Context.getService(IsantePlusPatientDashboardService.class).deleteFormHistory(history);
+			}
+		}
 	}
 }
