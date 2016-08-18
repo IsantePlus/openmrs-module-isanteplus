@@ -7,6 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openmrs.Patient;
 import org.openmrs.Visit;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 import org.openmrs.ui.framework.page.PageModel;
@@ -18,18 +19,10 @@ public class FormsHistoryTabFragmentController {
 	public void controller(PageModel model, @RequestParam("patientId") Patient patient,
 			@RequestParam("visitId") Visit visit) {
 		if (patient != null && visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
-			List<FormHistory> nonDefaultFormHistory = Context.getService(IsantePlusPatientDashboardService.class)
-					.getOnlyIsanteFormHistories(visit);
-			model.addAttribute("allFormHistory", nonDefaultFormHistory);
-		}
-	}
-
-	public void includeNonIsanteForms(PageModel model, @RequestParam("patientId") Patient patient,
-			@RequestParam("visitId") Visit visit) {
-		if (patient != null && visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
-			List<FormHistory> allFormHistory = Context.getService(IsantePlusPatientDashboardService.class)
-					.getAllFormHistory(visit);
-			model.addAttribute("allFormHistory", allFormHistory);
+			List<FormHistory> formHistory = new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
+					? Context.getService(IsantePlusPatientDashboardService.class).getOnlyIsanteFormHistories(visit)
+					: Context.getService(IsantePlusPatientDashboardService.class).getAllFormHistory();
+			model.addAttribute("allFormHistory", formHistory);
 		}
 	}
 

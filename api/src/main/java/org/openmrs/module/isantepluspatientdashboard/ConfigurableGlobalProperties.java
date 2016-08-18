@@ -1,7 +1,6 @@
 package org.openmrs.module.isantepluspatientdashboard;
 
 public class ConfigurableGlobalProperties {
-
 	public static String VIRALLOAD_CONCEPTID = "isantepluspatientdashboard.viralLoadConceptId";
 
 	public static String HEAD_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.headCircumferenceConceptId";
@@ -17,4 +16,6 @@ public class ConfigurableGlobalProperties {
 	public static String INCOMPLETE_CONCEPTID = "isantepluspatientdashboard.incompleteConceptId";
 
 	public static String COMPLETED_CONCEPTID = "isantepluspatientdashboard.completedConceptId";
+
+	public static String EXCLUDE_DEFAULT_OPENMRS_FORMHISTORY = "isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory";
 }

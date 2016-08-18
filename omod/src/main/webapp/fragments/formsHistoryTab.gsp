@@ -18,28 +18,20 @@
     }
     	
     jQuery(function() {
-    	jQuery("#include_non_isante_forms").click(function(event) {
-    		jQuery.ajax({
-				type: "POST",
-				url: "${ ui.actionLink('includeNonIsanteForms') }",
-				data: {},
-				dataType: "json",
-				success: function() {
-				
-				}
-			});
-    	});
-    	
     	jQuery("#delete_selected_formHistory").click(function(event) {
-    		jQuery.ajax({
-				type: "POST",
-				url: "${ ui.actionLink('deleteSelectedFormHistory') }",
-				data: {selectedFormHistory: returnuuidsOfSeletedHistory()},
-				dataType: "json",
-				success: function() {
-					location.reload();
-				}
-    		});
+    		var selectedHistory = returnuuidsOfSeletedHistory();
+    		
+    		if(selectedHistory.length > 0) {
+	    		jQuery.ajax({
+					type: "POST",
+					url: "${ ui.actionLink('deleteSelectedFormHistory') }",
+					data: {selectedFormHistory: selectedHistory},
+					dataType: "json",
+					success: function(data) {
+						location.reload();
+					}
+	    		});
+    		}
     	});
     });
 </script>
@@ -69,7 +61,6 @@
 				</tr>
 			<% } %>
 		</table>
-		<input type="hidden" id="include_non_isante_forms"/>
 		<input type="button" id="delete_selected_formHistory" value="${ ui.message("isantepluspatientdashboard.formsHistory.deleteSelected") }" />
 	</div>
 </div>

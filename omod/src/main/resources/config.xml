@@ -88,5 +88,10 @@
 		<defaultValue>1267</defaultValue>
 		<description>COMPLETED Concept id</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory</property>
+		<defaultValue>true</defaultValue>
+		<description>Set to true/false to list default OpenMRS form history</description>
+	</globalProperty>
 </module>
 

@@ -42,7 +42,7 @@ import org.openmrs.api.context.Context;
 import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
-import org.openmrs.module.isantepluspatientdashboard.IsantePlusConstants;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
@@ -81,9 +81,10 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes", "deprecation" })
 	public Obs getLastViralLoadTestResultObsForPatient(Patient patient) {
-		Concept viralLoadConcept = IsantePlusConstants.VIRAL_LOAD_CONCEPT == null
+		IsantePlusGlobalProps isantePlusConstants = new IsantePlusGlobalProps();
+		Concept viralLoadConcept = isantePlusConstants.VIRAL_LOAD_CONCEPT == null
 				? Context.getConceptService().getConceptByName("HIV VIRAL LOAD")
-				: IsantePlusConstants.VIRAL_LOAD_CONCEPT;
+				: isantePlusConstants.VIRAL_LOAD_CONCEPT;
 		List<Obs> viralLoadObs = new ArrayList(
 				Context.getObsService().getObservations(patient, viralLoadConcept, false));
 
@@ -159,7 +160,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 	@SuppressWarnings({ "deprecation" })
 	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
-		Concept headCircumferenceConcept = IsantePlusConstants.HEAD_CIRCUMFERENC_CONCEPT;
+		Concept headCircumferenceConcept = new IsantePlusGlobalProps().HEAD_CIRCUMFERENC_CONCEPT;
 		return headCircumferenceConcept != null
 				? Context.getObsService().getObservations(patient, headCircumferenceConcept, false) : null;
 	}

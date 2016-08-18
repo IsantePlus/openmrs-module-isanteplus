@@ -22,7 +22,7 @@ import org.openmrs.User;
 import org.openmrs.Visit;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.isantepluspatientdashboard.BaseOpenmrsDataObject;
-import org.openmrs.module.isantepluspatientdashboard.IsantePlusConstants;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
 
 /**
  * 
@@ -88,18 +88,19 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 	public String getEnteredBy() {
 		User entrant = encounter.getChangedBy() != null ? encounter.getChangedBy() : encounter.getCreator();
 
-		return StringUtils.isBlank(entrant.getDisplayString()) ? encounter.getForm().getCreator().getDisplayString()
-				: entrant.getDisplayString();
+		return StringUtils.isBlank(entrant.getDisplayString()) || "(null)".equals(entrant.getDisplayString())
+				? encounter.getForm().getCreator().getDisplayString() : entrant.getDisplayString();
 	}
 
 	private String generateFormHistoryStatus(Encounter encounter) {
+		IsantePlusGlobalProps isantePlusConstants = new IsantePlusGlobalProps();
 		String status = "";
 		Set<Obs> obs = encounter.getObs();
-		Concept formNeedsReview = IsantePlusConstants.FORMNEEDSREVIEW_CONCEPT;
-		Concept formStatus = IsantePlusConstants.FORMSTATUS_CONCEPT;
-		Concept yes = IsantePlusConstants.YES_CONCEPT;
-		Concept completed = IsantePlusConstants.COMPLETED_CONCEPT;
-		Concept incomplete = IsantePlusConstants.INCOMPLETE_CONCEPT;
+		Concept formNeedsReview = isantePlusConstants.FORMNEEDSREVIEW_CONCEPT;
+		Concept formStatus = isantePlusConstants.FORMSTATUS_CONCEPT;
+		Concept yes = isantePlusConstants.YES_CONCEPT;
+		Concept completed = isantePlusConstants.COMPLETED_CONCEPT;
+		Concept incomplete = isantePlusConstants.INCOMPLETE_CONCEPT;
 
 		if (encounter.getForm() != null && Context.getFormService().getForm(encounter.getForm().getFormId()) != null) {
 			for (Obs o : obs) {
