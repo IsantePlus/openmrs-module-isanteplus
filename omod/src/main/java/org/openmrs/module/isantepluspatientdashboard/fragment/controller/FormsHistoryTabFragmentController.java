@@ -22,7 +22,7 @@ public class FormsHistoryTabFragmentController {
 		if (patient != null && visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
 			List<FormHistory> formHistory = new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
 					? Context.getService(IsantePlusPatientDashboardService.class).getOnlyIsanteFormHistories(visit)
-					: Context.getService(IsantePlusPatientDashboardService.class).getAllFormHistory();
+					: Context.getService(IsantePlusPatientDashboardService.class).getAllFormHistory(visit);
 
 			Collections.reverse(formHistory);
 			model.addAttribute("allFormHistory", formHistory);
