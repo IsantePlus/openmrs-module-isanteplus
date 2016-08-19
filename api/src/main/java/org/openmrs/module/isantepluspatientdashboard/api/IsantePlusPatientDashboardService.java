@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.openmrs.Encounter;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.Visit;
@@ -85,4 +86,6 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	List<FormHistory> getOnlyIsanteFormHistories(Visit visit);
 
 	List<FormHistory> getAllFormHistory(Visit visit);
+
+	FormHistory createBasicFormHistoryObject(Encounter encounter, boolean contextUp);
 }

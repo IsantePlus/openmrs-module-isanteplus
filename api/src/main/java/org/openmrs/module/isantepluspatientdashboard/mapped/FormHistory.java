@@ -78,7 +78,7 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 
 	public String getProvider() {
 		return encounter.getProvider() != null
-				? encounter.getProvider().getFamilyName() + " " + encounter.getProvider().getGivenName() : "";
+				? encounter.getProvider().getGivenName() + " " + encounter.getProvider().getFamilyName() : "";
 	}
 
 	public Date getDate() {
@@ -88,8 +88,11 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 	public String getEnteredBy() {
 		User entrant = encounter.getChangedBy() != null ? encounter.getChangedBy() : encounter.getCreator();
 
-		return StringUtils.isBlank(entrant.getDisplayString()) || "(null)".equals(entrant.getDisplayString())
-				? encounter.getForm().getCreator().getDisplayString() : entrant.getDisplayString();
+		return entrant.getPerson() == null || StringUtils.isBlank(entrant.getPerson().getGivenName())
+				|| StringUtils.isBlank(entrant.getPerson().getFamilyName())
+						? encounter.getForm().getCreator().getPerson().getGivenName() + " "
+								+ encounter.getForm().getCreator().getPerson().getFamilyName()
+						: entrant.getPerson().getGivenName() + " " + entrant.getPerson().getFamilyName();
 	}
 
 	private String generateFormHistoryStatus(Encounter encounter) {

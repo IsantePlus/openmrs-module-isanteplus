@@ -1,5 +1,6 @@
 package org.openmrs.module.isantepluspatientdashboard.fragment.controller;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -22,6 +23,8 @@ public class FormsHistoryTabFragmentController {
 			List<FormHistory> formHistory = new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
 					? Context.getService(IsantePlusPatientDashboardService.class).getOnlyIsanteFormHistories(visit)
 					: Context.getService(IsantePlusPatientDashboardService.class).getAllFormHistory();
+
+			Collections.reverse(formHistory);
 			model.addAttribute("allFormHistory", formHistory);
 		}
 	}

@@ -26,6 +26,11 @@
 	<!-- Module Activator -->
 	<activator>${project.parent.groupId}.${project.parent.artifactId}.iSantePlusPatientDashboardActivator</activator>
 	
+	<!-- AOP Support to save form history at every encounter persistence -->
+	<advice>
+		<point>org.openmrs.api.EncounterService</point>
+		<class>org.openmrs.module.isantepluspatientdashboard.aop.SaveFormHistoryAfterEncounterSaveAdvice</class>
+	</advice>
 	
 	<!-- Maps hibernate file's, if present -->
 	<mappingFiles>	

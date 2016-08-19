@@ -399,8 +399,9 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 				for (Encounter encounter : visit.getEncounters()) {
 					List<FormHistory> finishedFormHistories = new ArrayList<FormHistory>();
 
-					if (encounter != null && encounter.getForm() != null) {
-						FormHistory formHistory = createBasicFormHistoryObject(visit, encounter);
+					if (encounter != null && encounter.getForm() != null
+							&& visit.getVisitId().equals(encounter.getVisit().getVisitId())) {
+						FormHistory formHistory = createBasicFormHistoryObject(encounter, false);
 
 						if (!formHistoryExist(formHistory, finishedFormHistories)) {
 							String sql = createSQLInsertQueryFromFormHistory(formHistory,
@@ -450,15 +451,26 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return false;
 	}
 
-	private FormHistory createBasicFormHistoryObject(Visit visit, Encounter encounter) {
+	/**
+	 * 
+	 * @param encounter,
+	 *            required for every form history since a every encounter is
+	 *            submitted through a form
+	 * @param contextUp,
+	 *            defines whether the OpenMRS {@link Context} is accessible
+	 * @return the created formHistory object
+	 */
+	@Override
+	public FormHistory createBasicFormHistoryObject(Encounter encounter, boolean contextUp) {
 		FormHistory formHistory = null;
 
-		if (visit != null && encounter != null) {
+		if (encounter != null) {
 			formHistory = new FormHistory(encounter);
 
-			// formHistory.setCreator(Context.getAuthenticatedUser());
+			if (contextUp)
+				formHistory.setCreator(Context.getAuthenticatedUser());
 			formHistory.setDateCreated(new Date());
-			formHistory.setVisit(visit);
+			formHistory.setVisit(encounter.getVisit());
 			formHistory.setVoided(false);
 		}
 		return formHistory;

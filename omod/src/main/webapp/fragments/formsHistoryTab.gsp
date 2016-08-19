@@ -33,6 +33,11 @@
 	    		});
     		}
     	});
+    	
+    	jQuery("#select_all_form_history").change(function(event) {
+    		jQuery(".delete_form_history").prop("checked", jQuery("#select_all_form_history").is(":checked"));
+    		event.preventDefault();
+    	});
     });
 </script>
 
@@ -47,7 +52,7 @@
 				<th>${ ui.message("isantepluspatientdashboard.formsHistory.provider") }</th>
 				<th>${ ui.message("isantepluspatientdashboard.formsHistory.lastModification") }</th>
 				<th>${ ui.message("isantepluspatientdashboard.formsHistory.dataEntry") }</th>
-				<th>${ ui.message("general.remove") }</th>
+				<th>${ ui.message("general.remove") } <input type="checkbox" id="select_all_form_history" /></th>
 			</tr>
 			<% allFormHistory.each { %>
 				<tr>
