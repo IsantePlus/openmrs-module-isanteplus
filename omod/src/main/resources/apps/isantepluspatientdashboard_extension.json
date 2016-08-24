@@ -31,7 +31,16 @@
         "label": "${project.parent.artifactId}.formsHistory",
         "extensionParams": {
             "provider": "isantepluspatientdashboard",
-            "fragment": "formsHistoryTab"
+            "fragment": "formsHistory"
         }
+    },
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.formHistory",
+        "extensionPointId": "patientDashboard.overallActions",
+        "type": "link",
+        "label": "isantepluspatientdashboard.formsHistory",
+        "url": "${project.parent.artifactId}/patientFormsHistory.page?patientId={{patient.uuid}}&all=1",
+        "icon": "icon-list-alt",
+        "order": 5
     }
 ]

@@ -11,18 +11,32 @@ import org.openmrs.api.context.Context;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
+import org.openmrs.module.isantepluspatientdashboard.shared.SharedControllerStuff;
 import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
-public class FormsHistoryTabFragmentController {
+public class FormsHistoryFragmentController {
 	protected final Log log = LogFactory.getLog(getClass());
+	SharedControllerStuff shared = new SharedControllerStuff();
 
 	public void controller(PageModel model, @RequestParam("patientId") Patient patient,
-			@RequestParam("visitId") Visit visit) {
-		if (patient != null && visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
-			List<FormHistory> formHistory = new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
-					? Context.getService(IsantePlusPatientDashboardService.class).getOnlyIsanteFormHistories(visit)
-					: Context.getService(IsantePlusPatientDashboardService.class).getAllFormHistory(visit);
+			@RequestParam(value = "visitId", required = false) Visit visit,
+			@RequestParam(value = "all", required = false) Integer allPatientForms) {
+		List<FormHistory> formHistory = null;
+
+		if (patient != null) {
+			if (allPatientForms != null && allPatientForms == 1) {
+				formHistory = Context.getService(IsantePlusPatientDashboardService.class)
+						.getAllFormHistoryForAPatient(patient);
+			} else {
+				if (visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
+					formHistory = new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
+							? Context.getService(IsantePlusPatientDashboardService.class)
+									.getOnlyIsanteFormHistoriesByVisit(visit)
+							: Context.getService(IsantePlusPatientDashboardService.class)
+									.getAllFormHistoryByVisit(visit);
+				}
+			}
 
 			Collections.reverse(formHistory);
 			model.addAttribute("allFormHistory", formHistory);

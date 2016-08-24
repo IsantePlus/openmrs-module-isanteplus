@@ -83,9 +83,11 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 
 	List<FormHistory> getOnlyIsanteFormHistories();
 
-	List<FormHistory> getOnlyIsanteFormHistories(Visit visit);
+	List<FormHistory> getOnlyIsanteFormHistoriesByVisit(Visit visit);
 
-	List<FormHistory> getAllFormHistory(Visit visit);
+	List<FormHistory> getAllFormHistoryByVisit(Visit visit);
 
 	FormHistory createBasicFormHistoryObject(Encounter encounter, boolean contextUp);
+
+	List<FormHistory> getAllFormHistoryForAPatient(Patient patient);
 }

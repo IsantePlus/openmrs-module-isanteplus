@@ -382,6 +382,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	 *            {@link InitialiseFormsHistory}
 	 * @throws SQLException
 	 * @throws DatabaseException
+	 * TODO this should instead loop through encounters instead of visits
 	 */
 	public void runInitialHistoryCreatorAgainstDB(JdbcConnection connection) throws DatabaseException, SQLException {
 		List<Visit> visits = Context.getVisitService().getAllVisits();
@@ -533,7 +534,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	@Override
-	public List<FormHistory> getOnlyIsanteFormHistories(Visit visit) {
+	public List<FormHistory> getOnlyIsanteFormHistoriesByVisit(Visit visit) {
 		return filterHistoriesByVisit(getOnlyIsanteFormHistories(), visit);
 	}
 
@@ -549,7 +550,20 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	@Override
-	public List<FormHistory> getAllFormHistory(Visit visit) {
+	public List<FormHistory> getAllFormHistoryForAPatient(Patient patient) {
+		List<FormHistory> histories = new ArrayList<FormHistory>();
+
+		for (FormHistory h : getAllFormHistory()) {
+			if (patient != null && h.getEncounter() != null && h.getEncounter().getPatient() != null
+					&& h.getEncounter().getPatient().getPatientId().equals(patient.getPatientId())) {
+				histories.add(h);
+			}
+		}
+		return histories;
+	}
+
+	@Override
+	public List<FormHistory> getAllFormHistoryByVisit(Visit visit) {
 		return filterHistoriesByVisit(getAllFormHistory(), visit);
 	}
 }
