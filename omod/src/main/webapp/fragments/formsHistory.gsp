@@ -57,7 +57,7 @@
 			<% allFormHistory.each { %>
 				<tr>
 					<td>${ ui.format(it.date) }</td>
-					<td><a href="../../htmlformentryui/htmlform/viewEncounterWithHtmlForm.page?patientId=${ ui.format(it.encounter.patient.uuid) }&visitId=${ ui.format(it.visit.visitId) }&encounter=${ ui.format(it.encounter.uuid) }" target="_blank">${ ui.format(it.encounter.form.name) }</a></td>
+					<td><a href="/${appName}/htmlformentryui/htmlform/viewEncounterWithHtmlForm.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounter=${ ui.format(it.encounter.uuid) }" target="_blank">${ ui.format(it.encounter.form.name) }</a></td>
 					<td>${ ui.format(it.formStatus) }</td>
 					<td>${ ui.format(it.provider) }</td>
 					<td>${ ui.format(it.encounter.encounterDatetime) }</td>

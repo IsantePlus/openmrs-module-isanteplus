@@ -15,6 +15,7 @@ package org.openmrs.module.isantepluspatientdashboard.api.db;
 
 import java.util.List;
 
+import org.openmrs.Encounter;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
@@ -32,4 +33,6 @@ public interface IsantePlusPatientDashboardDAO {
 	List<FormHistory> getAllFormHistory();
 
 	FormHistory saveFormHistory(FormHistory formHistory);
+
+	List<Encounter> getAllEncounters();
 }

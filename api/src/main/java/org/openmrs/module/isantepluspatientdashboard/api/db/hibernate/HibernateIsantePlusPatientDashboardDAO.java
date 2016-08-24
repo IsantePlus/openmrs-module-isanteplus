@@ -18,6 +18,7 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
+import org.openmrs.Encounter;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
@@ -65,6 +66,12 @@ public class HibernateIsantePlusPatientDashboardDAO implements IsantePlusPatient
 	@SuppressWarnings("unchecked")
 	public List<FormHistory> getAllFormHistory() {
 		return getSessionFactory().getCurrentSession().createCriteria(FormHistory.class).list();
+	}
+	
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<Encounter> getAllEncounters() {
+		return getSessionFactory().getCurrentSession().createCriteria(Encounter.class).list();
 	}
 
 	@Override

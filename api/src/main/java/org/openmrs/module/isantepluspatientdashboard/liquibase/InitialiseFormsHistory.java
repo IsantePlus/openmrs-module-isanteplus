@@ -17,8 +17,6 @@ import liquibase.resource.ResourceAccessor;
  * This liquibase custom change class executes as the module is installed once
  * and goes through the current database visits and persists form history out of
  * it. <br />
- * TODO, for future form history from now this mmodule should use AOP to write a
- * solution thereof
  * 
  * @author k-joseph
  *

@@ -342,7 +342,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "rawtypes", "unchecked", "unused" })
 	private Visit sortVisitUsingEncounterDateForItsEncounters(Visit visit) {
 		Visit sortedVisit = null;
 		Set<Encounter> sortedEncounters = null;
@@ -375,48 +375,48 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	/**
-	 * Should only be run by {@link InitialiseFormsHistory}
+	 * Should only be run by {@link InitialiseFormsHistory}, This has evolve
+	 * from looping through encounters instead of visits
 	 * 
 	 * @param connection,
 	 *            this should only be passed on from
 	 *            {@link InitialiseFormsHistory}
 	 * @throws SQLException
 	 * @throws DatabaseException
-	 * TODO this should instead loop through encounters instead of visits
+	 * 
 	 */
 	public void runInitialHistoryCreatorAgainstDB(JdbcConnection connection) throws DatabaseException, SQLException {
-		List<Visit> visits = Context.getVisitService().getAllVisits();
 		String daemonUserSelectSQL = "SELECT user_id FROM users WHERE uuid = 'A4F30A1B-5EB9-11DF-A648-37A07F9C90FB'";
+		String encounterSelectSQL = "SELECT encounter_id FROM encounter WHERE form_id  IS NOT NULL";
+
 		ResultSet rs = connection.createStatement().executeQuery(daemonUserSelectSQL);
 		String userId = null;
+		ResultSet encounteRs = connection.createStatement().executeQuery(encounterSelectSQL);
 
 		if (rs.next()) {
 			userId = rs.getString("user_id");
 		}
 
-		for (Visit visit : visits) {
-			visit = sortVisitUsingEncounterDateForItsEncounters(visit);
-			if (visit != null) {
-				for (Encounter encounter : visit.getEncounters()) {
-					List<FormHistory> finishedFormHistories = new ArrayList<FormHistory>();
+		while (encounteRs.next()) {
+			if (StringUtils.isNotBlank(encounteRs.getString("encounter_id"))) {
+				List<FormHistory> finishedFormHistories = new ArrayList<FormHistory>();
+				Integer encounterId = Integer.parseInt(encounteRs.getString("encounter_id"));
 
-					if (encounter != null && encounter.getForm() != null
-							&& visit.getVisitId().equals(encounter.getVisit().getVisitId())) {
-						FormHistory formHistory = createBasicFormHistoryObject(encounter, false);
+				if (encounterId != null) {
 
-						if (!formHistoryExist(formHistory, finishedFormHistories)) {
-							String sql = createSQLInsertQueryFromFormHistory(formHistory,
-									StringUtils.isNotBlank(userId) ? Integer.parseInt(userId) : 1);
+					FormHistory formHistory = createBasicFormHistoryObject(
+							Context.getEncounterService().getEncounter(encounterId), false);
 
-							if (connection != null && StringUtils.isNotBlank(sql)) {
-								connection.createStatement().executeUpdate(sql);
-							} else {
-								formHistory = saveFormHistory(formHistory);
-							}
-							finishedFormHistories.add(formHistory);
-							log.info("Successfully saved: " + formHistory + " for Encounter: "
-									+ formHistory.getEncounter());
+					if (!formHistoryExist(formHistory, finishedFormHistories)) {
+						String sql = createSQLInsertQueryFromFormHistory(formHistory,
+								StringUtils.isNotBlank(userId) ? Integer.parseInt(userId) : 1);
+
+						if (connection != null && StringUtils.isNotBlank(sql)) {
+							connection.createStatement().executeUpdate(sql);
 						}
+						finishedFormHistories.add(formHistory);
+						log.info(
+								"Successfully saved: " + formHistory + " for Encounter: " + formHistory.getEncounter());
 					}
 				}
 			}
@@ -497,9 +497,6 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return dao.getAllFormHistory();
 	}
 
-	/**
-	 * TODO each form should have one history entry implying unique visit
-	 */
 	@Override
 	public FormHistory saveFormHistory(FormHistory formHistory) {
 		return dao.saveFormHistory(formHistory);

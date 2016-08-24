@@ -12,6 +12,7 @@ import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 import org.openmrs.module.isantepluspatientdashboard.shared.SharedControllerStuff;
+import org.openmrs.ui.framework.WebConstants;
 import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -41,6 +42,8 @@ public class FormsHistoryFragmentController {
 			Collections.reverse(formHistory);
 			model.addAttribute("allFormHistory", formHistory);
 		}
+
+		model.addAttribute("appName", WebConstants.WEBAPP_NAME);
 	}
 
 	public void deleteSelectedFormHistory(@RequestParam("selectedFormHistory[]") String[] uuids) {

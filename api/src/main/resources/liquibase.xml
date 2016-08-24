@@ -64,8 +64,15 @@
 			baseColumnNames="changed_by" referencedTableName="users"
 			referencedColumnNames="user_id" />
 	</changeSet>
-	<changeSet id="20160811-0316" author="k-joseph">
-		<comment>Creates initial FormHistory for existing visits</comment>
+	<changeSet id="20160824-0728" author="k-joseph" dbms="mysql">
+		<comment>Clearing up liquibase would be issues where module was installed before today</comment>
+		<sql>
+			delete from liquibasechangelog where id='20160811-0316';
+			TRUNCATE isantepluspatientdashboard_form_history;
+		</sql>
+	</changeSet>
+	<changeSet id="20160824-0740" author="k-joseph">
+		<comment>Creates initial FormHistory for existing encounters</comment>
 		<customChange
 			class="org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory" />
 	</changeSet>
