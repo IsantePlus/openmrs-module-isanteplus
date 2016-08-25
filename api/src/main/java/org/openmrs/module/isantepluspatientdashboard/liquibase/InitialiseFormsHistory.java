@@ -44,7 +44,7 @@ public class InitialiseFormsHistory implements CustomTaskChange {
 	@Override
 	public void execute(Database database) throws CustomChangeException {
 		JdbcConnection connection = (JdbcConnection) database.getConnection();
-
+		
 		// Hacking service, looks like at this stage module's services are not
 		// yet ready
 		try {

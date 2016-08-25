@@ -550,7 +550,8 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	public List<FormHistory> getAllFormHistoryForAPatient(Patient patient) {
 		List<FormHistory> histories = new ArrayList<FormHistory>();
 
-		for (FormHistory h : getAllFormHistory()) {
+		for (FormHistory h : new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
+				? getOnlyIsanteFormHistories() : getAllFormHistory()) {
 			if (patient != null && h.getEncounter() != null && h.getEncounter().getPatient() != null
 					&& h.getEncounter().getPatient().getPatientId().equals(patient.getPatientId())) {
 				histories.add(h);
