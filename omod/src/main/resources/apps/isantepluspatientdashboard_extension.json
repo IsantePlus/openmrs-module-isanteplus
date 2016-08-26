@@ -42,5 +42,15 @@
         "url": "${project.parent.artifactId}/patientFormsHistory.page?patientId={{patient.uuid}}&all=1",
         "icon": "icon-list-alt",
         "order": 5
+    },
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.isanteForms",
+        "extensionPointId": "patientDashboard.secondColumnFragments",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "isanteForms"
+        },
+         "order": 1,
+         "icon": "icon-list-alt"
     }
 ]
