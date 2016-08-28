@@ -564,4 +564,26 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	public List<FormHistory> getAllFormHistoryByVisit(Visit visit) {
 		return filterHistoriesByVisit(getAllFormHistory(), visit);
 	}
+	
+	@Override
+	public List<Obs> getLabsHistory(Patient patient) {
+		// TESTS ORDERED = 1271
+				List<Obs> labHistory = new ArrayList<Obs>();
+				Integer labConceptId = 1271;
+				Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
+
+				for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
+					if (obs != null) {
+						Integer result=Integer.parseInt(obs.getValueCoded().toString());
+						Concept resultTest = Context.getConceptService().getConcept(result);
+						
+						for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
+							
+							labHistory.add(obs1);
+						
+						}
+					}
+				}
+				return labHistory;
+	}
 }
