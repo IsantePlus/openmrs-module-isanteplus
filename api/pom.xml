@@ -39,6 +39,13 @@
 		</dependency>
 		<!-- End OpenMRS core -->
 		
+		<!-- Begin OpenMRS modules -->
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>appframework-api</artifactId>
+			</dependency>
+			<!-- End OpenMRS modules -->
+		
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>

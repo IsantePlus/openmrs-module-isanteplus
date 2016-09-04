@@ -17,11 +17,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 import org.openmrs.Encounter;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.Visit;
 import org.openmrs.api.OpenmrsService;
+import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
@@ -64,8 +66,9 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 
 	/**
 	 * Should only be run by {@link InitialiseFormsHistory}
-	 * @throws SQLException 
-	 * @throws DatabaseException 
+	 * 
+	 * @throws SQLException
+	 * @throws DatabaseException
 	 */
 	void runInitialHistoryCreatorAgainstDB(JdbcConnection connection) throws DatabaseException, SQLException;
 
@@ -92,4 +95,10 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	List<FormHistory> getAllFormHistoryForAPatient(Patient patient);
 
 	List<Obs> getLabsHistory(Patient patient);
+
+	ComponentState getAppframeworkComponentState(String componentSateId);
+
+	void updateComponentStates(JSONObject extensions);
+
+	ComponentState saveOrUpdateComponentState(ComponentState componentState);
 }

@@ -8,7 +8,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>iSantePlus Patient Dashboard Module</name>
-	<description>iSantePlus's customisation of the reference app's patient dashboard, adds growth charts, treatment history etc</description>
+	<description>iSantePlus's customization of the reference app's patient dashboard, adds growth charts, treatment history etc</description>
 	<url>https://wiki.openmrs.org/display/docs/iSantePlus+Patient+Dashboard+Module+Module</url>
 
 	<developers>

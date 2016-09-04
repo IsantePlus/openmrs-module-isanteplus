@@ -11,3 +11,5 @@
         { label: "${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard') }"}
     ];
 </script>
+
+${ ui.includeFragment("isantepluspatientdashboard", "isantePlusPatientDashboardManager") }

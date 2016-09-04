@@ -40,6 +40,7 @@ import org.openmrs.Patient;
 import org.openmrs.Visit;
 import org.openmrs.api.context.Context;
 import org.openmrs.api.impl.BaseOpenmrsService;
+import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
@@ -564,26 +565,41 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	public List<FormHistory> getAllFormHistoryByVisit(Visit visit) {
 		return filterHistoriesByVisit(getAllFormHistory(), visit);
 	}
-	
+
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<Obs> getLabsHistory(Patient patient) {
 		// TESTS ORDERED = 1271
-				List<Obs> labHistory = new ArrayList<Obs>();
-				Integer labConceptId = 1271;
-				Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
+		List<Obs> labHistory = new ArrayList<Obs>();
+		Integer labConceptId = 1271;
+		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
 
-				for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
-					if (obs != null) {
-						Integer result=Integer.parseInt(obs.getValueCoded().toString());
-						Concept resultTest = Context.getConceptService().getConcept(result);
-						
-						for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
-							
-							labHistory.add(obs1);
-						
-						}
-					}
+		for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
+			if (obs != null) {
+				Integer result = Integer.parseInt(obs.getValueCoded().toString());
+				Concept resultTest = Context.getConceptService().getConcept(result);
+
+				for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
+					labHistory.add(obs1);
 				}
-				return labHistory;
+			}
+		}
+		return labHistory;
 	}
+
+	@Override
+	public ComponentState getAppframeworkComponentState(String componentSateId) {
+		return dao.getAppframeworkComponentState(componentSateId);
+	}
+
+	@Override
+	public void updateComponentStates(JSONObject extensions) {
+		dao.updateComponentStates(extensions);
+	}
+
+	@Override
+	public ComponentState saveOrUpdateComponentState(ComponentState componentState) {
+		return dao.saveOrUpdateComponentState(componentState);
+	}
+
 }

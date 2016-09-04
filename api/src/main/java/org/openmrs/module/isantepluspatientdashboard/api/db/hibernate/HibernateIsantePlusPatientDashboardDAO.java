@@ -18,7 +18,10 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
+import org.json.JSONObject;
 import org.openmrs.Encounter;
+import org.openmrs.module.appframework.domain.ComponentState;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardManager;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
@@ -67,7 +70,7 @@ public class HibernateIsantePlusPatientDashboardDAO implements IsantePlusPatient
 	public List<FormHistory> getAllFormHistory() {
 		return getSessionFactory().getCurrentSession().createCriteria(FormHistory.class).list();
 	}
-	
+
 	@Override
 	@SuppressWarnings("unchecked")
 	public List<Encounter> getAllEncounters() {
@@ -78,5 +81,65 @@ public class HibernateIsantePlusPatientDashboardDAO implements IsantePlusPatient
 	public FormHistory saveFormHistory(FormHistory formHistory) {
 		sessionFactory.getCurrentSession().saveOrUpdate(formHistory);
 		return formHistory;
+	}
+
+	@Override
+	public ComponentState getAppframeworkComponentState(String componentSateId) {
+		ComponentState componentSate = (ComponentState) getSessionFactory().getCurrentSession()
+				.createQuery("from ComponentState cs where cs.componentId = :component_id")
+				.setString("component_id", componentSateId).uniqueResult();
+
+		return componentSate;
+	}
+
+	/**
+	 * 
+	 * @param extensions,
+	 *            of format {extensionId: true/false}
+	 */
+	@Override
+	public void updateComponentStates(JSONObject extensions) {
+		IsantePlusPatientDashboardManager manager = new IsantePlusPatientDashboardManager();
+
+		if (extensions != null && extensions.length() > 0) {
+			ComponentState growthCharts = getAppframeworkComponentState(manager.getGrowthChartsExtensionId());
+			ComponentState LabHistory = getAppframeworkComponentState(manager.getLabHistoryExtensionId());
+			ComponentState lastViralLoad = getAppframeworkComponentState(manager.getLastViralLoadTestExtensionId());
+			ComponentState patientFormHistory = getAppframeworkComponentState(
+					manager.getPatientFormHistoryExtensionId());
+			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
+			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
+
+			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
+				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
+				saveOrUpdateComponentState(growthCharts);
+			}
+			if (LabHistory != null && extensions.has(manager.getLabHistoryExtensionId())) {
+				LabHistory.setEnabled(extensions.getBoolean(manager.getLabHistoryExtensionId()));
+				saveOrUpdateComponentState(LabHistory);
+			}
+			if (lastViralLoad != null && extensions.has(manager.getLastViralLoadTestExtensionId())) {
+				lastViralLoad.setEnabled(extensions.getBoolean(manager.getLastViralLoadTestExtensionId()));
+				saveOrUpdateComponentState(lastViralLoad);
+			}
+			if (patientFormHistory != null && extensions.has(manager.getPatientFormHistoryExtensionId())) {
+				patientFormHistory.setEnabled(extensions.getBoolean(manager.getPatientFormHistoryExtensionId()));
+				saveOrUpdateComponentState(patientFormHistory);
+			}
+			if (visitFormHistory != null && extensions.has(manager.getVisitFormHistoryExtensionId())) {
+				visitFormHistory.setEnabled(extensions.getBoolean(manager.getVisitFormHistoryExtensionId()));
+				saveOrUpdateComponentState(visitFormHistory);
+			}
+			if (weightsGraph != null && extensions.has(manager.getWeightsGraphExtensionId())) {
+				weightsGraph.setEnabled(extensions.getBoolean(manager.getWeightsGraphExtensionId()));
+				saveOrUpdateComponentState(weightsGraph);
+			}
+		}
+	}
+
+	@Override
+	public ComponentState saveOrUpdateComponentState(ComponentState componentState) {
+		sessionFactory.getCurrentSession().saveOrUpdate(componentState);
+		return componentState;
 	}
 }

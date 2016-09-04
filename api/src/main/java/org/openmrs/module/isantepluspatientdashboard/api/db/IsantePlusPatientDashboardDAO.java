@@ -15,7 +15,9 @@ package org.openmrs.module.isantepluspatientdashboard.api.db;
 
 import java.util.List;
 
+import org.json.JSONObject;
 import org.openmrs.Encounter;
+import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
@@ -35,4 +37,10 @@ public interface IsantePlusPatientDashboardDAO {
 	FormHistory saveFormHistory(FormHistory formHistory);
 
 	List<Encounter> getAllEncounters();
+
+	ComponentState getAppframeworkComponentState(String componentSateId);
+
+	void updateComponentStates(JSONObject extensions);
+
+	ComponentState saveOrUpdateComponentState(ComponentState componentState);
 }
