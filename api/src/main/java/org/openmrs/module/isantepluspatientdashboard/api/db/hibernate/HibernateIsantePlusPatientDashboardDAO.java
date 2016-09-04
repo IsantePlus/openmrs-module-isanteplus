@@ -18,10 +18,8 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
-import org.json.JSONObject;
 import org.openmrs.Encounter;
 import org.openmrs.module.appframework.domain.ComponentState;
-import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardManager;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 
@@ -90,56 +88,6 @@ public class HibernateIsantePlusPatientDashboardDAO implements IsantePlusPatient
 				.setString("component_id", componentSateId).uniqueResult();
 
 		return componentSate;
-	}
-
-	/**
-	 * 
-	 * @param extensions,
-	 *            of format {extensionId: true/false}
-	 */
-	@Override
-	public void updateComponentStates(JSONObject extensions) {
-		IsantePlusPatientDashboardManager manager = new IsantePlusPatientDashboardManager();
-
-		if (extensions != null && extensions.length() > 0) {
-			ComponentState growthCharts = getAppframeworkComponentState(manager.getGrowthChartsExtensionId());
-			ComponentState LabHistory = getAppframeworkComponentState(manager.getLabHistoryExtensionId());
-			ComponentState lastViralLoad = getAppframeworkComponentState(manager.getLastViralLoadTestExtensionId());
-			ComponentState patientFormHistory = getAppframeworkComponentState(
-					manager.getPatientFormHistoryExtensionId());
-			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
-			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
-			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
-
-			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
-				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
-				saveOrUpdateComponentState(growthCharts);
-			}
-			if (LabHistory != null && extensions.has(manager.getLabHistoryExtensionId())) {
-				LabHistory.setEnabled(extensions.getBoolean(manager.getLabHistoryExtensionId()));
-				saveOrUpdateComponentState(LabHistory);
-			}
-			if (lastViralLoad != null && extensions.has(manager.getLastViralLoadTestExtensionId())) {
-				lastViralLoad.setEnabled(extensions.getBoolean(manager.getLastViralLoadTestExtensionId()));
-				saveOrUpdateComponentState(lastViralLoad);
-			}
-			if (patientFormHistory != null && extensions.has(manager.getPatientFormHistoryExtensionId())) {
-				patientFormHistory.setEnabled(extensions.getBoolean(manager.getPatientFormHistoryExtensionId()));
-				saveOrUpdateComponentState(patientFormHistory);
-			}
-			if (visitFormHistory != null && extensions.has(manager.getVisitFormHistoryExtensionId())) {
-				visitFormHistory.setEnabled(extensions.getBoolean(manager.getVisitFormHistoryExtensionId()));
-				saveOrUpdateComponentState(visitFormHistory);
-			}
-			if (weightsGraph != null && extensions.has(manager.getWeightsGraphExtensionId())) {
-				weightsGraph.setEnabled(extensions.getBoolean(manager.getWeightsGraphExtensionId()));
-				saveOrUpdateComponentState(weightsGraph);
-			}
-			if (isantePlusForms != null && extensions.has(manager.getIsantePlusFormsExtensionId())) {
-				isantePlusForms.setEnabled(extensions.getBoolean(manager.getIsantePlusFormsExtensionId()));
-				saveOrUpdateComponentState(isantePlusForms);
-			}
-		}
 	}
 
 	@Override

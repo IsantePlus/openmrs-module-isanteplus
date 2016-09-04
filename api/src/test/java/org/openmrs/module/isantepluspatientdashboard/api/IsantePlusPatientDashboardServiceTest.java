@@ -18,10 +18,8 @@ import static org.junit.Assert.assertNotNull;
 import java.util.Calendar;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openmrs.Patient;
-import org.openmrs.Visit;
 import org.openmrs.api.context.Context;
 import org.openmrs.test.BaseModuleContextSensitiveTest;
 
@@ -59,14 +57,5 @@ public class IsantePlusPatientDashboardServiceTest extends BaseModuleContextSens
 
 		Assert.assertEquals(new Integer(5),
 				Context.getService(IsantePlusPatientDashboardService.class).getPatientAgeInMonths(patient));
-	}
-
-	@Test
-	public void test_getFormsHistory() {
-		Visit visit = Context.getVisitService().getAllVisits().get(0);
-		Patient patient = visit.getPatient();
-
-		Assert.assertNotNull(visit);
-		Assert.assertNotNull(patient);
 	}
 }

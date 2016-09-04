@@ -96,9 +96,9 @@
 		<description>COMPLETED Concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory</property>
-		<defaultValue>true</defaultValue>
-		<description>Set to true/false to list default OpenMRS form history</description>
+		<property>isantepluspatientdashboard.formIdsToExcludeFromHistory</property>
+		<defaultValue>1,2,3,4,5</defaultValue>
+		<description>Forms IDs whose forms to exclude from History</description>
 	</globalProperty>
+	
 </module>
-

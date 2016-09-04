@@ -18,4 +18,6 @@ public class ConfigurableGlobalProperties {
 	public static String COMPLETED_CONCEPTID = "isantepluspatientdashboard.completedConceptId";
 
 	public static String EXCLUDE_DEFAULT_OPENMRS_FORMHISTORY = "isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory";
+	
+	public static String FORMIDS_WHOSE_HISTORY_TOBEEXCLUDED = "isantepluspatientdashboard.formIdsToExcludeFromHistory";
 }

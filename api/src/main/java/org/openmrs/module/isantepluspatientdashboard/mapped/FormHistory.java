@@ -76,6 +76,7 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 		setEncounter(encounter);
 	}
 
+	@SuppressWarnings("deprecation")
 	public String getProvider() {
 		return encounter.getProvider() != null
 				? encounter.getProvider().getGivenName() + " " + encounter.getProvider().getFamilyName() : "";

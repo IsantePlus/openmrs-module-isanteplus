@@ -17,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
@@ -43,7 +44,9 @@ import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
+import org.openmrs.module.isantepluspatientdashboard.ConfigurableGlobalProperties;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardManager;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
@@ -509,20 +512,24 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	 * 
 	 * Assumes that default form names are not renamed
 	 * 
-	 * TODO: Is this really what iSantePlus intends to only be listed?
 	 */
 	@Override
 	public List<FormHistory> getOnlyIsanteFormHistories() {
 		List<FormHistory> allFormhistories = getAllFormHistory();
 		List<FormHistory> iSanteFormHistories = new ArrayList<FormHistory>();
+		String excludableFormIds = Context.getAdministrationService()
+				.getGlobalProperty(ConfigurableGlobalProperties.FORMIDS_WHOSE_HISTORY_TOBEEXCLUDED);
+		List<String> formIdsToBeMissed = StringUtils.isNotBlank(excludableFormIds)
+				? Arrays.asList(excludableFormIds.replaceAll("\\s", "").split(",")) : null;
+		List<Integer> formIdsToBeExcluded = new ArrayList<Integer>();
 
+		if (formIdsToBeMissed != null && formIdsToBeMissed.size() > 0) {
+			for (String s : formIdsToBeMissed)
+				formIdsToBeExcluded.add(Integer.valueOf(s));
+		}
 		if (allFormhistories != null && allFormhistories.size() > 0) {
 			for (FormHistory history : allFormhistories) {
-				if (!"Vitals".equals(history.getEncounter().getForm().getName())
-						&& !"Visit Note".equals(history.getEncounter().getForm().getName())
-						&& !"Admission (Simple)".equals(history.getEncounter().getForm().getName())
-						&& !"Discharge (Simple)".equals(history.getEncounter().getForm().getName())
-						&& !"Transfer Within Hospital (Simple)".equals(history.getEncounter().getForm().getName())) {
+				if (!formIdsToBeExcluded.contains(history.getEncounter().getForm().getFormId())) {
 					iSanteFormHistories.add(history);
 				}
 			}
@@ -592,9 +599,54 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return dao.getAppframeworkComponentState(componentSateId);
 	}
 
+	/**
+	 * 
+	 * @param extensions,
+	 *            of format {extensionId: true/false}
+	 */
 	@Override
 	public void updateComponentStates(JSONObject extensions) {
-		dao.updateComponentStates(extensions);
+		IsantePlusPatientDashboardManager manager = new IsantePlusPatientDashboardManager();
+
+		if (extensions != null && extensions.length() > 0) {
+			ComponentState growthCharts = getAppframeworkComponentState(manager.getGrowthChartsExtensionId());
+			ComponentState LabHistory = getAppframeworkComponentState(manager.getLabHistoryExtensionId());
+			ComponentState lastViralLoad = getAppframeworkComponentState(manager.getLastViralLoadTestExtensionId());
+			ComponentState patientFormHistory = getAppframeworkComponentState(
+					manager.getPatientFormHistoryExtensionId());
+			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
+			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
+			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
+
+			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
+				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
+				saveOrUpdateComponentState(growthCharts);
+			}
+			if (LabHistory != null && extensions.has(manager.getLabHistoryExtensionId())) {
+				LabHistory.setEnabled(extensions.getBoolean(manager.getLabHistoryExtensionId()));
+				saveOrUpdateComponentState(LabHistory);
+			}
+			if (lastViralLoad != null && extensions.has(manager.getLastViralLoadTestExtensionId())) {
+				lastViralLoad.setEnabled(extensions.getBoolean(manager.getLastViralLoadTestExtensionId()));
+				saveOrUpdateComponentState(lastViralLoad);
+			}
+			if (patientFormHistory != null && extensions.has(manager.getPatientFormHistoryExtensionId())) {
+				patientFormHistory.setEnabled(extensions.getBoolean(manager.getPatientFormHistoryExtensionId()));
+				saveOrUpdateComponentState(patientFormHistory);
+			}
+			if (visitFormHistory != null && extensions.has(manager.getVisitFormHistoryExtensionId())) {
+				visitFormHistory.setEnabled(extensions.getBoolean(manager.getVisitFormHistoryExtensionId()));
+				saveOrUpdateComponentState(visitFormHistory);
+			}
+			if (weightsGraph != null && extensions.has(manager.getWeightsGraphExtensionId())) {
+				weightsGraph.setEnabled(extensions.getBoolean(manager.getWeightsGraphExtensionId()));
+				saveOrUpdateComponentState(weightsGraph);
+			}
+			if (isantePlusForms != null && extensions.has(manager.getIsantePlusFormsExtensionId())) {
+				isantePlusForms.setEnabled(extensions.getBoolean(manager.getIsantePlusFormsExtensionId()));
+				saveOrUpdateComponentState(isantePlusForms);
+			}
+		}
 	}
 
 	@Override
