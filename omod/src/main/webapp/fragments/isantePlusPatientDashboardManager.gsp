@@ -4,6 +4,7 @@
 <input type="checkbox" class="managerOption" id="${manager.lastViralLoadTestExtensionId}" ${manager.lastViralLoadTestExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableLastViralLoadTest') }<br />
 <input type="checkbox" class="managerOption" id="${manager.weightsGraphExtensionId}" ${manager.weightsGraphExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableWeightsGraph') }<br />
 <input type="checkbox" class="managerOption" id="${manager.labHistoryExtensionId}" ${manager.labHistoryExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableLabHistory') }<br />
+<input type="checkbox" class="managerOption" id="${manager.isantePlusFormsExtensionId}" ${manager.isantePlusFormsExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableIsantePlusForms') }<br />
 	
 <input type="button" id="submitIsantePlusPatientDashboardManagerForm" value="${ ui.message('general.save') }">
 
@@ -26,8 +27,4 @@
 			});
 	 	});
 	 });
-	 
-	 function initializeExtensionsState() {
-	 	
-	 }
 </script>

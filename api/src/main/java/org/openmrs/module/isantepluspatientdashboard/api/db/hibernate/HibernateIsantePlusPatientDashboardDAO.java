@@ -109,6 +109,7 @@ public class HibernateIsantePlusPatientDashboardDAO implements IsantePlusPatient
 					manager.getPatientFormHistoryExtensionId());
 			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
 			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
+			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
 
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
@@ -133,6 +134,10 @@ public class HibernateIsantePlusPatientDashboardDAO implements IsantePlusPatient
 			if (weightsGraph != null && extensions.has(manager.getWeightsGraphExtensionId())) {
 				weightsGraph.setEnabled(extensions.getBoolean(manager.getWeightsGraphExtensionId()));
 				saveOrUpdateComponentState(weightsGraph);
+			}
+			if (isantePlusForms != null && extensions.has(manager.getIsantePlusFormsExtensionId())) {
+				isantePlusForms.setEnabled(extensions.getBoolean(manager.getIsantePlusFormsExtensionId()));
+				saveOrUpdateComponentState(isantePlusForms);
 			}
 		}
 	}

@@ -41,9 +41,11 @@
     });
 </script>
 
+${ ui.includeFragment("isantepluspatientdashboard", "isantePlusForms") }
+<br />
 <div id="forms_history_section">
 	<div id="">
-		<h3>${ ui.message("isantepluspatientdashboard.formsHistory.filled") }</h3>
+		<h3>${ ui.message("isantepluspatientdashboard.formsHistory") } (${ ui.message("isantepluspatientdashboard.formsHistory.filled") })</h3>
 		<table>
 			<tr>
 				<th>${ ui.message("isantepluspatientdashboard.formsHistory.creationDate") }</th>

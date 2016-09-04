@@ -28,7 +28,7 @@
         "id": "${project.parent.groupId}.${project.parent.artifactId}.formHistory",
         "extensionPointId": "patientDashboard.tabs",
         "type": "link",
-        "label": "${project.parent.artifactId}.formsHistory",
+        "label": "${project.parent.artifactId}.forms",
         "extensionParams": {
             "provider": "isantepluspatientdashboard",
             "fragment": "formsHistory"
@@ -51,5 +51,14 @@
         "url": "${project.parent.artifactId}/labHistory.page?patientId={{patient.uuid}}",
         "icon": "icon-bar-chart",
         "order": 5
+    },
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.firstColumnFragments.isantePlusForms",
+        "extensionPointId": "patientDashboard.firstColumnFragments",
+        "icon": "icon-list-alt",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "isantePlusForms"
+        }
     }
 ]

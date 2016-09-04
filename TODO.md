@@ -5,3 +5,4 @@ TODOS
 [ ] Graph patient data on its curve as the percentiles
 [ ] Move Default Forms which are excludable into a gp
 [ ] Successfuly form history deletion after page reload on deletion
+[ ] Fix bug in weight's graph points titles
