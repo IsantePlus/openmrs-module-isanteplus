@@ -6,3 +6,4 @@ TODOS
 [ ] Move Default Forms which are excludable into a gp
 [ ] Successfuly form history deletion after page reload on deletion
 [ ] Fix bug in weight's graph points titles
+[ ] Go through the code and update TODO's, fix all of them and even these here

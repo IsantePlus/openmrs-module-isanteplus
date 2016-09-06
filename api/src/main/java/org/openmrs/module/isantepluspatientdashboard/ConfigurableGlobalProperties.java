@@ -18,6 +18,16 @@ public class ConfigurableGlobalProperties {
 	public static String COMPLETED_CONCEPTID = "isantepluspatientdashboard.completedConceptId";
 
 	public static String EXCLUDE_DEFAULT_OPENMRS_FORMHISTORY = "isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory";
-	
+
 	public static String FORMIDS_WHOSE_HISTORY_TOBEEXCLUDED = "isantepluspatientdashboard.formIdsToExcludeFromHistory";
+
+	public static String TEMPERATURE_CONCEPTID = "isantepluspatientdashboard.temperatureConceptId";
+
+	public static String PULSE_CONCEPTID = "isantepluspatientdashboard.pulseConceptId";
+
+	public static String RESPIRATORYRATE_CONCEPTID = "isantepluspatientdashboard.respiratoryRateConceptId";
+
+	public static String BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.bloodPressureConceptId";
+
+	public static String BLOODOXYGENSATURATION_CONCEPTID = "isantepluspatientdashboard.bloodOxygenSaturationConceptId";
 }

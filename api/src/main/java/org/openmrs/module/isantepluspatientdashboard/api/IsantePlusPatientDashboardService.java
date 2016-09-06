@@ -101,4 +101,20 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	void updateComponentStates(JSONObject extensions);
 
 	ComponentState saveOrUpdateComponentState(ComponentState componentState);
+
+	Obs getLatestHeightForPatient(Patient patient);
+
+	Obs getLatestWeightForPatient(Patient patient);
+
+	Obs getLatestPulseForPatient(Patient patient);
+
+	Obs getLatestRespiratoryRateForPatient(Patient patient);
+
+	Obs getLatestBloodPressureForPatient(Patient patient);
+
+	Obs getLatestBloodOxygenSaturationForPatient(Patient patient);
+
+	Obs getLatestTemperatureForPatient(Patient patient);
+
+	double roundAbout(double value, int places);
 }

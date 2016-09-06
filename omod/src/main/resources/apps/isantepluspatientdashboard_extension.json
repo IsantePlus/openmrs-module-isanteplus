@@ -53,6 +53,15 @@
         "order": 5
     },
     {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.firstColumnFragments.mostRecentVitals",
+        "extensionPointId": "patientDashboard.firstColumnFragments",
+        "icon": "icon-vitals",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "isantePlusMostRecentVitals"
+        }
+    },
+    {
         "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.firstColumnFragments.isantePlusForms",
         "extensionPointId": "patientDashboard.firstColumnFragments",
         "icon": "icon-list-alt",

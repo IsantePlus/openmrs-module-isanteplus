@@ -100,5 +100,29 @@
 		<defaultValue>1,2,3,4,5</defaultValue>
 		<description>Forms IDs whose forms to exclude from History</description>
 	</globalProperty>
-	
+	<globalProperty>
+		<property>isantepluspatientdashboard.temperatureConceptId</property>
+		<defaultValue>5088</defaultValue>
+		<description>Temperature concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.pulseConceptId</property>
+		<defaultValue>5087</defaultValue>
+		<description>Pulse concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.respiratoryRateConceptId</property>
+		<defaultValue>5242</defaultValue>
+		<description>Respiratory rate concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.bloodPressureConceptId</property>
+		<defaultValue>5086</defaultValue>
+		<description>Blood Pressure rate concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.bloodOxygenSaturationConceptId</property>
+		<defaultValue>5092</defaultValue>
+		<description>Blood Oxygen Saturation concept id</description>
+	</globalProperty>
 </module>

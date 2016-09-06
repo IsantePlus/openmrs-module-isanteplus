@@ -46,6 +46,7 @@ import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.ConfigurableGlobalProperties;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardConstants;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardManager;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
@@ -151,15 +152,8 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return headCircumference;
 	}
 
-	@SuppressWarnings({ "deprecation" })
 	private Set<Obs> getWeightConceptObsForAPatient(Patient patient) {
-		// weight concept 5089
-		Integer weightConceptId = StringUtils
-				.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.weight"))
-						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.weight"))
-						: 5089;
-		return Context.getObsService().getObservations(patient, Context.getConceptService().getConcept(weightConceptId),
-				false);
+		return getObsFromConceptForPatient(patient, "concept.weight", 5089);
 	}
 
 	@SuppressWarnings({ "deprecation" })
@@ -169,14 +163,94 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 				? Context.getObsService().getObservations(patient, headCircumferenceConcept, false) : null;
 	}
 
-	@SuppressWarnings({ "deprecation" })
 	private Set<Obs> getHeightConceptObsForAPatient(Patient patient) {
-		// height concept 5090
-		return Context.getObsService().getObservations(patient, Context.getConceptService().getConcept(
-				StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.height"))
-						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.height"))
-						: 5090),
+		return getObsFromConceptForPatient(patient, "concept.height", 5090);
+	}
+
+	private Set<Obs> getTemperatureConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.TEMPERATURE_CONCEPTID, 5088);
+	}
+
+	private Set<Obs> getPulseConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.PULSE_CONCEPTID, 5087);
+	}
+
+	private Set<Obs> getRespiratoryRateConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.RESPIRATORYRATE_CONCEPTID, 5242);
+	}
+
+	private Set<Obs> getBloodPressureConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.BLOODPRESSURE_CONCEPTID, 5086);
+	}
+
+	private Set<Obs> getBloodOxygenSaturationConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.BLOODOXYGENSATURATION_CONCEPTID, 5092);
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private Obs getRecentObsFromSet(Set<Obs> obsSet) {
+		List<Obs> obsList = new ArrayList(obsSet);
+
+		sortObsListByObsDateTime(obsList);
+
+		return obsList != null && obsList.size() > 0 ? obsList.get(obsList.size() - 1) : null;
+	}
+
+	@Override
+	public Obs getLatestHeightForPatient(Patient patient) {
+		return getRecentObsFromSet(getHeightConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestWeightForPatient(Patient patient) {
+		return getRecentObsFromSet(getWeightConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestPulseForPatient(Patient patient) {
+		return getRecentObsFromSet(getPulseConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestRespiratoryRateForPatient(Patient patient) {
+		return getRecentObsFromSet(getRespiratoryRateConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestBloodPressureForPatient(Patient patient) {
+		return getRecentObsFromSet(getBloodPressureConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestBloodOxygenSaturationForPatient(Patient patient) {
+		return getRecentObsFromSet(getBloodOxygenSaturationConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestTemperatureForPatient(Patient patient) {
+		return getRecentObsFromSet(getTemperatureConceptObsForAPatient(patient));
+	}
+
+	@SuppressWarnings("deprecation")
+	private Set<Obs> getObsFromConceptForPatient(Patient patient, String gpCodeForConcept, Integer conceptId) {
+		return Context.getObsService().getObservations(patient,
+				Context.getConceptService().getConcept(
+						StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
+								? Integer.parseInt(
+										Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
+								: conceptId),
 				false);
+	}
+
+	@Override
+	public double roundAbout(double value, int places) {
+		if (places < 0)
+			throw new IllegalArgumentException();
+
+		long factor = (long) Math.pow(10, places);
+		value = value * factor;
+		long tmp = Math.round(value);
+		return (double) tmp / factor;
 	}
 
 	/**
@@ -617,6 +691,9 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
 			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
+			ComponentState mostRecentVitals = getAppframeworkComponentState(manager.getMostRecentVitalsExtensionId());
+			ComponentState coreAppsMostRecentVitals = getAppframeworkComponentState(
+					IsantePlusPatientDashboardConstants.DEFAULT_MOSTRECENTVITALS_EXTENSIONPOINT_ID);
 
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
@@ -645,6 +722,14 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			if (isantePlusForms != null && extensions.has(manager.getIsantePlusFormsExtensionId())) {
 				isantePlusForms.setEnabled(extensions.getBoolean(manager.getIsantePlusFormsExtensionId()));
 				saveOrUpdateComponentState(isantePlusForms);
+			}
+			// enabling mostRecentVitals should disable coreAppsMostRecentVitals
+			// and vice-versa
+			if (mostRecentVitals != null && extensions.has(manager.getMostRecentVitalsExtensionId())) {
+				mostRecentVitals.setEnabled(extensions.getBoolean(manager.getMostRecentVitalsExtensionId()));
+				coreAppsMostRecentVitals.setEnabled(!mostRecentVitals.getEnabled());
+				saveOrUpdateComponentState(isantePlusForms);
+				saveOrUpdateComponentState(coreAppsMostRecentVitals);
 			}
 		}
 	}
