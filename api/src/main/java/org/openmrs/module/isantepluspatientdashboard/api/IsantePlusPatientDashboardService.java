@@ -110,11 +110,13 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 
 	Obs getLatestRespiratoryRateForPatient(Patient patient);
 
-	Obs getLatestBloodPressureForPatient(Patient patient);
+	Obs getLatestDiastolicBloodPressureForPatient(Patient patient);
 
 	Obs getLatestBloodOxygenSaturationForPatient(Patient patient);
 
 	Obs getLatestTemperatureForPatient(Patient patient);
 
 	double roundAbout(double value, int places);
+
+	Obs getLatestSystolicBloodPressureForPatient(Patient patient);
 }

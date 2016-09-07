@@ -1,6 +1,7 @@
 package org.openmrs.module.isantepluspatientdashboard;
 
 public class ConfigurableGlobalProperties {
+
 	public static String VIRALLOAD_CONCEPTID = "isantepluspatientdashboard.viralLoadConceptId";
 
 	public static String HEAD_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.headCircumferenceConceptId";
@@ -27,7 +28,10 @@ public class ConfigurableGlobalProperties {
 
 	public static String RESPIRATORYRATE_CONCEPTID = "isantepluspatientdashboard.respiratoryRateConceptId";
 
-	public static String BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.bloodPressureConceptId";
+	public static String DIASTOLIC_BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.diastolicBloodPressureConceptId";
 
 	public static String BLOODOXYGENSATURATION_CONCEPTID = "isantepluspatientdashboard.bloodOxygenSaturationConceptId";
+	
+
+	public static final String SYSTOLIC_BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.systolicBloodPressureConceptId";;
 }

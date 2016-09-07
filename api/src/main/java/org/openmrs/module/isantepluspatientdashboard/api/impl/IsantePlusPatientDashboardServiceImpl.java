@@ -179,8 +179,12 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.RESPIRATORYRATE_CONCEPTID, 5242);
 	}
 
-	private Set<Obs> getBloodPressureConceptObsForAPatient(Patient patient) {
-		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.BLOODPRESSURE_CONCEPTID, 5086);
+	private Set<Obs> getDiastolicBloodPressureConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.DIASTOLIC_BLOODPRESSURE_CONCEPTID, 5086);
+	}
+	
+	private Set<Obs> getSystolicBloodPressureConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.SYSTOLIC_BLOODPRESSURE_CONCEPTID, 5086);
 	}
 
 	private Set<Obs> getBloodOxygenSaturationConceptObsForAPatient(Patient patient) {
@@ -217,8 +221,13 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	@Override
-	public Obs getLatestBloodPressureForPatient(Patient patient) {
-		return getRecentObsFromSet(getBloodPressureConceptObsForAPatient(patient));
+	public Obs getLatestDiastolicBloodPressureForPatient(Patient patient) {
+		return getRecentObsFromSet(getDiastolicBloodPressureConceptObsForAPatient(patient));
+	}
+	
+	@Override
+	public Obs getLatestSystolicBloodPressureForPatient(Patient patient) {
+		return getRecentObsFromSet(getSystolicBloodPressureConceptObsForAPatient(patient));
 	}
 
 	@Override
@@ -693,7 +702,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
 			ComponentState mostRecentVitals = getAppframeworkComponentState(manager.getMostRecentVitalsExtensionId());
 			ComponentState coreAppsMostRecentVitals = getAppframeworkComponentState(
-					IsantePlusPatientDashboardConstants.DEFAULT_MOSTRECENTVITALS_EXTENSIONPOINT_ID);
+					IsantePlusPatientDashboardConstants.DEFAULT_MOSTRECENTVITALS_APP_EXTENSIONPOINT_ID);
 
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));

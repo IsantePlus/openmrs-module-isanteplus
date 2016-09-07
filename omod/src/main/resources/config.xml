@@ -116,13 +116,18 @@
 		<description>Respiratory rate concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.bloodPressureConceptId</property>
+		<property>isantepluspatientdashboard.diastolicBloodPressureConceptId</property>
 		<defaultValue>5086</defaultValue>
-		<description>Blood Pressure rate concept id</description>
+		<description>DiastolicBlood Pressure rate concept id</description>
 	</globalProperty>
 	<globalProperty>
 		<property>isantepluspatientdashboard.bloodOxygenSaturationConceptId</property>
 		<defaultValue>5092</defaultValue>
 		<description>Blood Oxygen Saturation concept id</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.systolicBloodPressureConceptId</property>
+		<defaultValue>5085</defaultValue>
+		<description>Systolic Blood Pressure rate concept id</description>
 	</globalProperty>
 </module>

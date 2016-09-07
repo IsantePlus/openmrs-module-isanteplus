@@ -24,7 +24,7 @@ public class IsantePlusPatientDashboardConstants {
 
 	public static String ISANTEFORMS_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.isantePlusForms";
 
-	public static String DEFAULT_MOSTRECENTVITALS_EXTENSIONPOINT_ID = "coreapps.mostRecentVitals";
+	public static String DEFAULT_MOSTRECENTVITALS_APP_EXTENSIONPOINT_ID = "coreapps.mostRecentVitals";
 	
 	public static String MOSTRECENTVITALS_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.mostRecentVitals";
 }

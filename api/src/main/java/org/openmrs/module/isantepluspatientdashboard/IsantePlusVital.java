@@ -16,13 +16,19 @@ public class IsantePlusVital {
 
 	public IsantePlusVital(String label, Obs obs, String unit) {
 		setLabel(label);
-		setValue(obs != null ? String.valueOf(obs.getValueNumeric()) : "N/A");
+		setValue(obs != null ? String.valueOf(obs.getValueNumeric()) : "____");
 		setUnit(unit);
 	}
 
 	public IsantePlusVital(String label, Double value, String unit) {
 		setLabel(StringUtils.isNotBlank(label) ? label : "");
-		setValue(value != null ? String.valueOf(value) : "N/A");
+		setValue(value != null ? String.valueOf(value) : "____");
+		setUnit(StringUtils.isNotBlank(unit) ? unit : "");
+	}
+
+	public IsantePlusVital(String label, String value, String unit) {
+		setLabel(StringUtils.isNotBlank(label) ? label : "");
+		setValue(StringUtils.isNotBlank(value) ? value : "____");
 		setUnit(StringUtils.isNotBlank(unit) ? unit : "");
 	}
 

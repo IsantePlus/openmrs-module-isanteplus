@@ -57,7 +57,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 						.getMessage("isantepluspatientdashboard.vitals.bloodOxygenSaturation.unit"));
 		IsantePlusVital bloodPressure = new IsantePlusVital(
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bloodPressure.label"),
-				Context.getService(IsantePlusPatientDashboardService.class).getLatestBloodPressureForPatient(patient),
+				getBloodPressure(patient),
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bloodPressure.unit"));
 		List<IsantePlusVital> vitals = new ArrayList<IsantePlusVital>();
 		IsantePlusVital bmi = new IsantePlusVital(
@@ -75,5 +75,19 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		vitals.add(bloodOxygenSaturation);
 
 		model.put("vitals", vitals);
+	}
+
+	private String getBloodPressure(Patient patient) {
+		String bp = "";
+		Obs dBP = Context.getService(IsantePlusPatientDashboardService.class)
+				.getLatestDiastolicBloodPressureForPatient(patient);
+		Obs sBP = Context.getService(IsantePlusPatientDashboardService.class)
+				.getLatestSystolicBloodPressureForPatient(patient);
+
+		if (dBP != null && sBP != null) {
+			bp = String.valueOf(dBP.getValueNumeric()) + "/" + String.valueOf(sBP.getValueNumeric());
+		}
+
+		return bp;
 	}
 }
