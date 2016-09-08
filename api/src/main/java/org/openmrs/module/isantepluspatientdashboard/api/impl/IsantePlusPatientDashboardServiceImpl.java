@@ -180,15 +180,22 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	private Set<Obs> getDiastolicBloodPressureConceptObsForAPatient(Patient patient) {
-		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.DIASTOLIC_BLOODPRESSURE_CONCEPTID, 5086);
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.DIASTOLIC_BLOODPRESSURE_CONCEPTID,
+				5086);
 	}
-	
+
 	private Set<Obs> getSystolicBloodPressureConceptObsForAPatient(Patient patient) {
-		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.SYSTOLIC_BLOODPRESSURE_CONCEPTID, 5086);
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.SYSTOLIC_BLOODPRESSURE_CONCEPTID,
+				5086);
 	}
 
 	private Set<Obs> getBloodOxygenSaturationConceptObsForAPatient(Patient patient) {
 		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.BLOODOXYGENSATURATION_CONCEPTID, 5092);
+	}
+
+	private Set<Obs> getMidUpperArmCircumferenceConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.MIDUPPER_ARM_CIRCUMFERENCE_CONCEPTID,
+				1343);
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -224,7 +231,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	public Obs getLatestDiastolicBloodPressureForPatient(Patient patient) {
 		return getRecentObsFromSet(getDiastolicBloodPressureConceptObsForAPatient(patient));
 	}
-	
+
 	@Override
 	public Obs getLatestSystolicBloodPressureForPatient(Patient patient) {
 		return getRecentObsFromSet(getSystolicBloodPressureConceptObsForAPatient(patient));
@@ -233,6 +240,11 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	@Override
 	public Obs getLatestBloodOxygenSaturationForPatient(Patient patient) {
 		return getRecentObsFromSet(getBloodOxygenSaturationConceptObsForAPatient(patient));
+	}
+
+	@Override
+	public Obs getLatestMidUpperArmCircumferenceForPatient(Patient patient) {
+		return getRecentObsFromSet(getMidUpperArmCircumferenceConceptObsForAPatient(patient));
 	}
 
 	@Override
@@ -700,9 +712,6 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
 			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
-			ComponentState mostRecentVitals = getAppframeworkComponentState(manager.getMostRecentVitalsExtensionId());
-			ComponentState coreAppsMostRecentVitals = getAppframeworkComponentState(
-					IsantePlusPatientDashboardConstants.DEFAULT_MOSTRECENTVITALS_APP_EXTENSIONPOINT_ID);
 
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
@@ -734,18 +743,31 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			}
 			// enabling mostRecentVitals should disable coreAppsMostRecentVitals
 			// and vice-versa
-			if (mostRecentVitals != null && extensions.has(manager.getMostRecentVitalsExtensionId())) {
-				mostRecentVitals.setEnabled(extensions.getBoolean(manager.getMostRecentVitalsExtensionId()));
-				coreAppsMostRecentVitals.setEnabled(!mostRecentVitals.getEnabled());
-				saveOrUpdateComponentState(isantePlusForms);
-				saveOrUpdateComponentState(coreAppsMostRecentVitals);
+			if (extensions.has(manager.getMostRecentVitalsExtensionId())) {
+				toggleRecentVitalsSection(extensions.getBoolean(manager.getMostRecentVitalsExtensionId()));
 			}
 		}
+	}
+
+	@Override
+	public void toggleRecentVitalsSection(Boolean enableIsanteVitals) {
+		IsantePlusPatientDashboardManager manager = new IsantePlusPatientDashboardManager();
+		ComponentState mostRecentVitals = getAppframeworkComponentState(manager.getMostRecentVitalsExtensionId());
+		ComponentState coreAppsMostRecentVitals = getAppframeworkComponentState(
+				IsantePlusPatientDashboardConstants.DEFAULT_MOSTRECENTVITALS_APP_EXTENSIONPOINT_ID);
+		
+		if (enableIsanteVitals == null) {
+			coreAppsMostRecentVitals.setEnabled(true);
+		} else {
+			mostRecentVitals.setEnabled(enableIsanteVitals);
+			coreAppsMostRecentVitals.setEnabled(!enableIsanteVitals);
+			saveOrUpdateComponentState(mostRecentVitals);
+		}
+		saveOrUpdateComponentState(coreAppsMostRecentVitals);
 	}
 
 	@Override
 	public ComponentState saveOrUpdateComponentState(ComponentState componentState) {
 		return dao.saveOrUpdateComponentState(componentState);
 	}
-
 }

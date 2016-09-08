@@ -4,7 +4,7 @@ public class ConfigurableGlobalProperties {
 
 	public static String VIRALLOAD_CONCEPTID = "isantepluspatientdashboard.viralLoadConceptId";
 
-	public static String HEAD_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.headCircumferenceConceptId";
+	public static String MIDUPPER_ARM_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.headCircumferenceConceptId";
 
 	public static String FORMNEEDSREVIEW_CONCEPTID = "isantepluspatientdashboard.formNeedsReviewConceptId";
 
@@ -31,7 +31,8 @@ public class ConfigurableGlobalProperties {
 	public static String DIASTOLIC_BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.diastolicBloodPressureConceptId";
 
 	public static String BLOODOXYGENSATURATION_CONCEPTID = "isantepluspatientdashboard.bloodOxygenSaturationConceptId";
-	
 
-	public static final String SYSTOLIC_BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.systolicBloodPressureConceptId";;
+	public static final String SYSTOLIC_BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.systolicBloodPressureConceptId";
+
+	public static final String MIDUPPERARM_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.midUpperArmCircumferenceConceptId";
 }

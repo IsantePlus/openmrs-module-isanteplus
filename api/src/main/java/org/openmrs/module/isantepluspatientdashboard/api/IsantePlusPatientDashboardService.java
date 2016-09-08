@@ -119,4 +119,8 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	double roundAbout(double value, int places);
 
 	Obs getLatestSystolicBloodPressureForPatient(Patient patient);
+
+	Obs getLatestMidUpperArmCircumferenceForPatient(Patient patient);
+
+	void toggleRecentVitalsSection(Boolean enableIsanteVitals);
 }

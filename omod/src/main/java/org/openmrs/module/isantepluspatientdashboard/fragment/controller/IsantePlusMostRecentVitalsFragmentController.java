@@ -64,6 +64,14 @@ public class IsantePlusMostRecentVitalsFragmentController {
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bmi.label"),
 				calculateLatestBMI(patient),
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bmi.unit"));
+		IsantePlusVital midUpperArmCircumference = new IsantePlusVital(
+				Context.getMessageSourceService()
+						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.label"),
+				Context.getService(IsantePlusPatientDashboardService.class)
+						.getLatestMidUpperArmCircumferenceForPatient(patient),
+				Context.getMessageSourceService()
+						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.unit"));
+		Integer patientAge = patient.getAge();//TODO OPENMRS; how comes this returns null
 
 		vitals.add(height);
 		vitals.add(weight);
@@ -73,7 +81,8 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		vitals.add(respiratoryRate);
 		vitals.add(bloodPressure);
 		vitals.add(bloodOxygenSaturation);
-
+		if (patientAge != null && patientAge < 13)
+			vitals.add(midUpperArmCircumference);
 		model.put("vitals", vitals);
 	}
 

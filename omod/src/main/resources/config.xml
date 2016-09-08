@@ -130,4 +130,9 @@
 		<defaultValue>5085</defaultValue>
 		<description>Systolic Blood Pressure rate concept id</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.midUpperArmCircumferenceConceptId</property>
+		<defaultValue>1343</defaultValue>
+		<description>Mid Upper Arm Circumference concept id</description>
+	</globalProperty>
 </module>

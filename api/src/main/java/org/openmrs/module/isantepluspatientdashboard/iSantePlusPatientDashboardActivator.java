@@ -13,58 +13,64 @@
  */
 package org.openmrs.module.isantepluspatientdashboard;
 
-
-import org.apache.commons.logging.Log; 
+import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.ModuleActivator;
+import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 
 /**
- * This class contains the logic that is run every time this module is either started or stopped.
+ * This class contains the logic that is run every time this module is either
+ * started or stopped.
  */
 public class iSantePlusPatientDashboardActivator implements ModuleActivator {
-	
+
 	protected Log log = LogFactory.getLog(getClass());
-		
+
 	/**
 	 * @see ModuleActivator#willRefreshContext()
 	 */
 	public void willRefreshContext() {
 		log.info("Refreshing iSantePlus Patient Dashboard Module");
 	}
-	
+
 	/**
 	 * @see ModuleActivator#contextRefreshed()
 	 */
 	public void contextRefreshed() {
 		log.info("iSantePlus Patient Dashboard Module refreshed");
 	}
-	
+
 	/**
 	 * @see ModuleActivator#willStart()
 	 */
 	public void willStart() {
 		log.info("Starting iSantePlus Patient Dashboard Module");
 	}
-	
+
 	/**
 	 * @see ModuleActivator#started()
 	 */
 	public void started() {
+		Context.getService(IsantePlusPatientDashboardService.class).toggleRecentVitalsSection(
+				new IsantePlusPatientDashboardManager().getToogleMostRecentVitalsExtension());
 		log.info("iSantePlus Patient Dashboard Module started");
 	}
-	
+
 	/**
 	 * @see ModuleActivator#willStop()
 	 */
 	public void willStop() {
+		Context.getService(IsantePlusPatientDashboardService.class).toggleRecentVitalsSection(null);
+
 		log.info("Stopping iSantePlus Patient Dashboard Module");
 	}
-	
+
 	/**
 	 * @see ModuleActivator#stopped()
 	 */
 	public void stopped() {
 		log.info("iSantePlus Patient Dashboard Module stopped");
 	}
-		
+
 }

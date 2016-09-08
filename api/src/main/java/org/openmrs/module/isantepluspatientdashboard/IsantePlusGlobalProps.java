@@ -13,7 +13,7 @@ public class IsantePlusGlobalProps {
 	 * http://www.maternalconceptlab.com/search.php?q=id:5314&source=openmrs
 	 */
 	public Concept HEAD_CIRCUMFERENC_CONCEPT = Context.getConceptService().getConcept(Context.getAdministrationService()
-			.getGlobalProperty(ConfigurableGlobalProperties.HEAD_CIRCUMFERENCE_CONCEPTID));
+			.getGlobalProperty(ConfigurableGlobalProperties.MIDUPPER_ARM_CIRCUMFERENCE_CONCEPTID));
 
 	public Concept FORMNEEDSREVIEW_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(Context
 			.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.FORMNEEDSREVIEW_CONCEPTID)));
