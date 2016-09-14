@@ -13,17 +13,23 @@
  */
 package org.openmrs.module.isantepluspatientdashboard;
 
+import java.io.IOException;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.api.FormService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.ModuleActivator;
+import org.openmrs.module.htmlformentry.HtmlFormEntryService;
+import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
+import org.openmrs.ui.framework.resource.ResourceFactory;
 
 /**
  * This class contains the logic that is run every time this module is either
  * started or stopped.
  */
-public class iSantePlusPatientDashboardActivator implements ModuleActivator {
+public class ISantePlusPatientDashboardActivator implements ModuleActivator {
 
 	protected Log log = LogFactory.getLog(getClass());
 
@@ -54,7 +60,35 @@ public class iSantePlusPatientDashboardActivator implements ModuleActivator {
 	public void started() {
 		Context.getService(IsantePlusPatientDashboardService.class).toggleRecentVitalsSection(
 				new IsantePlusPatientDashboardManager().getToogleMostRecentVitalsExtension());
+		try {
+			setupHtmlForms();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		log.info("iSantePlus Patient Dashboard Module started");
+	}
+
+	private void setupHtmlForms() throws Exception {
+		try {
+			loadIsanteForms();
+		} catch (Exception e) {
+			if (ResourceFactory.getInstance().getResourceProviders() == null) {
+				log.error("Unable to load HTML forms--this error is expected when running component tests");
+			} else {
+				throw e;
+			}
+		}
+	}
+
+	private void loadIsanteForms() throws IOException {
+		ResourceFactory resourceFactory = ResourceFactory.getInstance();
+		FormService formService = Context.getFormService();
+
+		for (String fileName : IsantePlusPatientDashboardConstants.ISANTEPLUS_FORMFILE_NAMES) {
+			HtmlFormUtil.getHtmlFormFromUiResource(resourceFactory, formService,
+					Context.getService(HtmlFormEntryService.class), "isantepluspatientdashboard:htmlforms/" + fileName);
+		}
 	}
 
 	/**

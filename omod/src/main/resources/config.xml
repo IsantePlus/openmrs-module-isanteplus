@@ -22,11 +22,13 @@
 		<require_module version="${emrapiVersion}">org.openmrs.module.emrapi</require_module>
 		<require_module version="${coreappsVersion}">org.openmrs.module.coreapps</require_module>
 		<require_module version="${appframeworkVersion}">org.openmrs.module.appframework</require_module>
+		<require_module>org.openmrs.module.htmlformentry</require_module>
+		<require_module>org.openmrs.module.htmlformentryui</require_module>
 	</require_modules>
 	<!-- / Required Modules -->
 	
 	<!-- Module Activator -->
-	<activator>${project.parent.groupId}.${project.parent.artifactId}.iSantePlusPatientDashboardActivator</activator>
+	<activator>${project.parent.groupId}.${project.parent.artifactId}.ISantePlusPatientDashboardActivator</activator>
 	
 	<!-- AOP Support to save form history at every encounter persistence -->
 	<advice>

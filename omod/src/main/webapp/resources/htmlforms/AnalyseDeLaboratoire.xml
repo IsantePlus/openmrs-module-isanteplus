@@ -1,0 +1,3000 @@
+<htmlform formUuid="56cf5b28-c0b5-4d57-8dde-a43e93e269d2"
+ formName="Analyse de laboratoire"
+ formVersion="1.0"	
+ formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formDescription="Analyse de laboratoire;Analyse de laboratoire"
+ > 
+	<macros>
+		paperFormId = (Fill this in)
+		<!--headerColor =#009d8e-->
+		headerColor =#000000
+		fontOnHeaderColor = white
+	</macros>
+	<style>
+		.section {
+			border: 1px solid $headerColor;
+			padding: 1px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+		.section_b {
+			background-color: #2F4F4F;
+			color:#FFFFFF;
+			padding: 2px;
+			text-align: center;
+			margin-bottom: 1em;
+		}
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 1px;
+			font-weight: bold;
+		}
+		.lienvisible#first{display: block}
+		.lienvisible{
+			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			width:100%";
+		}
+		.contener
+		{
+			width:100%;
+			height:100%;
+			border:1px solid;
+			margin:0px;
+			padding:0px;
+			background:#87CEEB; border:1px solid #FFFFFF;
+		}
+		.hide{
+			margin:0px;
+			padding:0px;
+		}
+		a:link 
+		{ 
+		 text-decoration:none; 
+		}
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+		#sauvegarde
+		{
+			background:#81BEF7;
+			position:relative;
+			bottom:0px;
+			width:100%;
+			margin:0px;
+			padding-top:0px;
+			padding-bottom:5px;
+			padding-left:0px;
+			padding-right:0px;
+			height:50px;
+		}
+		#dateVisite{
+			background:#81BEF7;
+			top:0px;
+			width:100%;
+			padding-top:5px;
+			z-index: 10;
+		}
+		#scroll{
+			width: 99%;
+			margin-right:1%;
+			margin-left:0px;
+			margin-bottom:0px;
+			height:450px;
+			/*overflow: scroll;*/
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			/*z-index: 7;*/
+		}
+		#contenerGeneral
+		{
+			height:100%;
+			width:100%;
+			margin:0px;
+			padding:0px;
+			bottom:0px;
+		}
+		
+		#onglets{
+			display: none;
+		}
+		#onglets li{
+			position: relative;
+			float: left;
+			list-style: none;
+			padding: 1px 4px 6px;
+			margin-right: 5px;
+			margin-left:0px;
+			width:auto;
+			font-family:"times new roman", times, serif;
+			border-top: 1px solid #1175AE;
+			border-left: 1px solid #1175AE;
+			border-right: 1px solid #1175AE;
+			cursor: pointer;
+			/*background-color: #EEEEEE;*/
+			color: #0D5995;
+			/*z-index: 1;*/
+		}
+		
+		#onglets .actif{
+			border-bottom: none;
+			font-weight: bold;
+			z-index: 4;
+		}
+		
+		#contenu{
+			clear: both;
+			position: relative;
+			margin: 0px;
+			padding: 5px;
+			word-spacing: 1px;
+			border: 1px solid #0D5995;
+			top: -6px;
+			width: 99%;
+			height:390px;
+			font-family:"times new roman", times, serif;
+			font-style: normal;
+			overflow: scroll;
+			border-radius: 15px;
+		}
+	</style>
+	<script type="text/javascript">
+		jQuery(function() {
+			jQuery('#onglets').css('display', 'block');
+			jQuery('#onglets').click(function(event) {
+				var actuel = event.target;
+				if (!/li/i.test(actuel.nodeName) || actuel.className.indexOf('actif') > -1) {
+					alert(actuel.nodeName)
+					return;
+				}
+				jQuery(actuel).addClass('actif').siblings().removeClass('actif');
+				setDisplay();
+			});
+			function setDisplay() {
+				var modeAffichage;
+				jQuery('#onglets li').each(function(rang) {
+					modeAffichage = jQuery(this).hasClass('actif') ? '' : 'none';
+					jQuery('.item').eq(rang).css('display', modeAffichage);
+				});
+			}
+			setDisplay();
+		});
+	</script>
+	<script type="text/javascript">
+   jQuery(function() {
+        jQuery( '.titre' ).on( 'change', function() {
+		jQuery( this.getAttribute( 'ch-target' ) ).toggle( 'slow' );
+        });
+    });
+	</script> 
+	<script type="text/javascript">
+	jQuery(function() {
+	jQuery('#cd4panel').on( 'change', function() {
+		if((getValue('cd4panel.value') == '657'))
+		{
+			jQuery("#cd41").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#cd41").find("input[type$='checkbox']").change();
+			jQuery("#cd42").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#cd42").find("input[type$='checkbox']").change();
+		}
+		else{
+			jQuery("#cd41").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#cd41").find("input[type$='checkbox']").change();
+			jQuery("#cd42").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#cd42").find("input[type$='checkbox']").change();
+		}
+		
+	});
+	jQuery('#coagulationpanel').on( 'change', function() {
+		if((getValue('coagulationpanel.value') == '163436'))
+		{
+			jQuery("#coagulationinr").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#coagulationinr").find("input[type$='checkbox']").change();
+			jQuery("#coagulationcephaline").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#coagulationcephaline").find("input[type$='checkbox']").change();
+		}
+		else{
+			jQuery("#coagulationinr").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#coagulationinr").find("input[type$='checkbox']").change();
+			jQuery("#coagulationcephaline").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#coagulationcephaline").find("input[type$='checkbox']").change();
+		}
+	});
+	jQuery('#groupesanpanel').on( 'change', function() {
+		if((getValue('groupesanpanel.value') == '161473'))
+		{
+			jQuery("#groupesanguinabo").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#groupesanguinabo").find("input[type$='checkbox']").change();
+			jQuery("#groupesanguinresus").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#groupesanguinresus").find("input[type$='checkbox']").change();
+		}
+		else{
+			jQuery("#groupesanguinabo").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#groupesanguinabo").find("input[type$='checkbox']").change();
+			jQuery("#groupesanguinresus").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#groupesanguinresus").find("input[type$='checkbox']").change();
+		}
+	});
+	 jQuery('#hemogrammep').on( 'change', function() {
+		//var checked = jQuery('#hemogrammep').attr("checked");
+		//getValue('hemogrammep.value') == '1019')
+		if((getValue('hemogrammep.value') == '163700'))
+		{
+			jQuery("#hemogrammeccmh").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammeccmh").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammecbla").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammecbla").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammecrouge").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammecrouge").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammehematocrite").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammehematocrite").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammehemoglobine").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammehemoglobine").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammelymphocite").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammelymphocite").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammemixte").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammemixte").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammeneutrophyle").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammeneutrophyle").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammeplaquette").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammeplaquette").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammetcmh").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammetcmh").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammevgm").find("input[type$='checkbox']").attr("checked",true);
+			jQuery("#hemogrammevgm").find("input[type$='checkbox']").change();
+			
+		}
+		else{
+			
+			jQuery("#hemogrammeccmh").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammeccmh").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammecbla").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammecbla").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammecrouge").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammecrouge").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammehematocrite").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammehematocrite").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammehemoglobine").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammehemoglobine").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammelymphocite").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammelymphocite").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammemixte").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammemixte").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammeneutrophyle").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammeneutrophyle").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammeplaquette").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammeplaquette").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammetcmh").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammetcmh").find("input[type$='checkbox']").change();
+			jQuery("#hemogrammevgm").find("input[type$='checkbox']").attr("checked",false);
+			jQuery("#hemogrammevgm").find("input[type$='checkbox']").change();
+		}
+		});
+		jQuery('#tspanel').on( 'change', function() {
+			if((getValue('tspanel.value') == '163702'))
+			{
+				jQuery("#tstsaignement").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#tstsaignement").find("input[type$='checkbox']").change();
+				jQuery("#tstcoagulation").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#tstcoagulation").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#tstsaignement").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#tstsaignement").find("input[type$='checkbox']").change();
+				jQuery("#tstcoagulation").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#tstcoagulation").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#barra').on( 'change', function() {
+			if((getValue('barra.value') == '163677'))
+			{
+				jQuery("#barrb").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#barrb").find("input[type$='checkbox']").change();
+				jQuery("#barrc").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#barrc").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#barrb").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#barrb").find("input[type$='checkbox']").change();
+				jQuery("#barrc").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#barrc").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#barrd').on( 'change', function() {
+			if((getValue('barrd.value') == '307'))
+			{
+				jQuery("#barre").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#barre").find("input[type$='checkbox']").change();
+				jQuery("#barrf").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#barrf").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#barre").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#barre").find("input[type$='checkbox']").change();
+				jQuery("#barrf").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#barrf").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#cdvpanel').on( 'change', function() {
+			if((getValue('cdvpanel.value') == '163628'))
+			{
+				jQuery("#cdvdeterminevih").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#cdvdeterminevih").find("input[type$='checkbox']").change();
+				jQuery("#cdvsyphilis").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#cdvsyphilis").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#cdvdeterminevih").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#cdvdeterminevih").find("input[type$='checkbox']").change();
+				jQuery("#cdvsyphilis").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#cdvsyphilis").find("input[type$='checkbox']").change();
+			}
+		});
+		
+		jQuery('#panelbilanhep').on( 'change', function() {
+			if((getValue('panelbilanhep.value') == '953'))
+			{
+				jQuery("#bilsgot").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#bilsgot").find("input[type$='checkbox']").change();
+				jQuery("#bilsgpt").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#bilsgpt").find("input[type$='checkbox']").change();
+				jQuery("#bebilirubine").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#bebilirubine").find("input[type$='checkbox']").change();
+				
+			}
+			else{
+				jQuery("#bilsgot").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#bilsgot").find("input[type$='checkbox']").change();
+				jQuery("#bilsgpt").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#bilsgpt").find("input[type$='checkbox']").change();
+				jQuery("#bebilirubine").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#bebilirubine").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelchlcr').on( 'change', function() {
+			if((getValue('panelchlcr.value') == '159645'))
+			{
+				jQuery("#lcrproteines").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#lcrproteines").find("input[type$='checkbox']").change();
+				jQuery("#lcrchlore").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#lcrchlore").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#lcrproteines").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#lcrproteines").find("input[type$='checkbox']").change();
+				jQuery("#lcrchlore").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#lcrchlore").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelchsanguine').on( 'change', function() {
+			if((getValue('panelchsanguine.value') == '161488'))
+			{
+				jQuery("#chsanguine").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#chsanguine").find("input[type$='checkbox']").change();
+				jQuery("#chscreat").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#chscreat").find("input[type$='checkbox']").change();
+				jQuery("#chazote").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#chazote").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#chsanguine").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#chsanguine").find("input[type$='checkbox']").change();
+				jQuery("#chscreat").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#chscreat").find("input[type$='checkbox']").change();
+				jQuery("#chazote").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#chazote").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelchsanga').on( 'change', function() {
+			if((getValue('panelchsanga.value') == '163602'))
+			{
+				jQuery("#gazbe").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gazbe").find("input[type$='checkbox']").change();
+				jQuery("#gazhco3").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gazhco3").find("input[type$='checkbox']").change();
+				jQuery("#gazpaco2").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gazpaco2").find("input[type$='checkbox']").change();
+				jQuery("#gazo2s").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gazo2s").find("input[type$='checkbox']").change();
+				jQuery("#gazpao2").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gazpao2").find("input[type$='checkbox']").change();
+				
+			}
+			else{
+				jQuery("#gazbe").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gazbe").find("input[type$='checkbox']").change();
+				jQuery("#gazhco3").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gazhco3").find("input[type$='checkbox']").change();
+				jQuery("#gazpaco2").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gazpaco2").find("input[type$='checkbox']").change();
+				jQuery("#gazo2s").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gazo2s").find("input[type$='checkbox']").change();
+				jQuery("#gazpao2").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gazpao2").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelionogramme').on( 'change', function() {
+			if((getValue('panelionogramme.value') == '5473'))
+			{
+				jQuery("#ionogrammePota").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#ionogrammePota").find("input[type$='checkbox']").change();
+				jQuery("#ionogrammebi").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#ionogrammebi").find("input[type$='checkbox']").change();
+				jQuery("#ionogrammecalcium").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#ionogrammecalcium").find("input[type$='checkbox']").change();
+				jQuery("#ionogrammesodium").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#ionogrammesodium").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#ionogrammePota").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#ionogrammePota").find("input[type$='checkbox']").change();
+				jQuery("#ionogrammebi").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#ionogrammebi").find("input[type$='checkbox']").change();
+				jQuery("#ionogrammecalcium").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#ionogrammecalcium").find("input[type$='checkbox']").change();
+				jQuery("#ionogrammesodium").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#ionogrammesodium").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelprofillipid').on( 'change', function() {
+			if((getValue('panelprofillipid.value') == '1010'))
+			{
+				jQuery("#profillhdl").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#profillhdl").find("input[type$='checkbox']").change();
+				jQuery("#profillipchol").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#profillipchol").find("input[type$='checkbox']").change();
+				jQuery("#profillldl").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#profillldl").find("input[type$='checkbox']").change();
+				jQuery("#profilltrig").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#profilltrig").find("input[type$='checkbox']").change();
+				jQuery("#profillvldl").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#profillvldl").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#profillhdl").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#profillhdl").find("input[type$='checkbox']").change();
+				jQuery("#profillipchol").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#profillipchol").find("input[type$='checkbox']").change();
+				jQuery("#profillldl").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#profillldl").find("input[type$='checkbox']").change();
+				jQuery("#profilltrig").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#profilltrig").find("input[type$='checkbox']").change();
+				jQuery("#profillvldl").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#profillvldl").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelgouttependantef').on( 'change', function() {
+			if((getValue('panelgouttependantef.value') == '161458'))
+			{
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelgouttependantem').on( 'change', function() {
+			if((getValue('panelgouttependantem.value') == '163652'))
+			{
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantebacteries").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantefrot").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantegblanc").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantegrouge").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantelevb").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantelevs").find("input[type$='checkbox']").change();
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#gouttependantetrich").find("input[type$='checkbox']").change();
+			}
+		});
+		jQuery('#panelspermogramme').on( 'change', function() {
+			if((getValue('panelspermogramme.value') == '161468'))
+			{
+				jQuery("#spermogrammecolgram").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammecolgram").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammecomptesperme").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammecomptesperme").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammecouleur").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammecouleur").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammefnormales").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammefnormales").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammefructose").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammefructose").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammeliquef").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammeliquef").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammeph").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammeph").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammevolume").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#spermogrammevolume").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#spermogrammecolgram").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammecolgram").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammecomptesperme").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammecomptesperme").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammecouleur").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammecouleur").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammefnormales").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammefnormales").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammefructose").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammefructose").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammeliquef").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammeliquef").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammeph").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammeph").find("input[type$='checkbox']").change();
+				jQuery("#spermogrammevolume").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#spermogrammevolume").find("input[type$='checkbox']").change();
+			}
+		});
+		
+		jQuery('#panelculbac').on( 'change', function() {
+			if((getValue('panelculbac.value') == '161486'))
+			{
+				jQuery("#culbachemoc").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#culbachemoc").find("input[type$='checkbox']").change();
+				jQuery("#cultbacuroculture").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#cultbacuroculture").find("input[type$='checkbox']").change();
+				jQuery("#coprocult").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#coprocult").find("input[type$='checkbox']").change();
+				jQuery("#culturepus").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#culturepus").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#culbachemoc").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#culbachemoc").find("input[type$='checkbox']").change();
+				jQuery("#cultbacuroculture").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#cultbacuroculture").find("input[type$='checkbox']").change();
+				jQuery("#coprocult").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#coprocult").find("input[type$='checkbox']").change();
+				jQuery("#culturepus").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#culturepus").find("input[type$='checkbox']").change();
+			}
+		});
+		
+		/*jQuery('#panelantibiogramme').on( 'change', function() {
+			if((getValue('panelantibiogramme.value') == '163679'))
+			{
+				jQuery("#antibcat").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcat").find("input[type$='checkbox']").change();
+				jQuery("#antibcmpt").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcmpt").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibcolauramine").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcolauramine").find("input[type$='checkbox']").change();
+				jQuery("#antibcolgram").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcolgram").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibcolib").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcolib").find("input[type$='checkbox']").change();
+				jQuery("#antibcolkiny").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcolkiny").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibcolorange").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcolorange").find("input[type$='checkbox']").change();
+				jQuery("#antibcolorziehl").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibcolorziehl").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibdnase").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibdnase").find("input[type$='checkbox']").change();
+				jQuery("#antibhydrolyse").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibhydrolyse").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibmobilite").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibmobilite").find("input[type$='checkbox']").change();
+				jQuery("#antibonpg").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibonpg").find("input[type$='checkbox']").change();
+				
+				jQuery("#antiboxydase").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antiboxydase").find("input[type$='checkbox']").change();
+				jQuery("#antibreaction").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibreaction").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibtechniques").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibtechniques").find("input[type$='checkbox']").change();
+				jQuery("#antibtestporphyrique").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibtestporphyrique").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibureetrypt").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#antibureetrypt").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#antibcat").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcat").find("input[type$='checkbox']").change();
+				jQuery("#antibcmpt").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcmpt").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibcolauramine").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcolauramine").find("input[type$='checkbox']").change();
+				jQuery("#antibcolgram").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcolgram").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibcolib").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcolib").find("input[type$='checkbox']").change();
+				jQuery("#antibcolkiny").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcolkiny").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibcolorange").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcolorange").find("input[type$='checkbox']").change();
+				jQuery("#antibcolorziehl").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibcolorziehl").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibdnase").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibdnase").find("input[type$='checkbox']").change();
+				jQuery("#antibhydrolyse").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibhydrolyse").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibmobilite").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibmobilite").find("input[type$='checkbox']").change();
+				jQuery("#antibonpg").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibonpg").find("input[type$='checkbox']").change();
+				
+				jQuery("#antiboxydase").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antiboxydase").find("input[type$='checkbox']").change();
+				jQuery("#antibreaction").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibreaction").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibtechniques").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibtechniques").find("input[type$='checkbox']").change();
+				jQuery("#antibtestporphyrique").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibtestporphyrique").find("input[type$='checkbox']").change();
+				
+				jQuery("#antibureetrypt").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#antibureetrypt").find("input[type$='checkbox']").change();
+				
+			}
+		});*/
+		jQuery('#firsttestvih').on( 'change', function() {
+			if((getValue('firsttestvih.value') == '703'))
+			{
+				jQuery("#secondtestvih").find("input[type$='checkbox']").attr("checked",true);
+				//jQuery("#secondtestvih").find("input[type$='checkbox']").change();
+				jQuery('#colloidal').show();
+			}
+			else{
+				jQuery("#secondtestvih").find("input[type$='checkbox']").attr("checked",false);
+				jQuery('#colloidal').hide();
+			}
+			
+		});
+		
+		jQuery('#panelmacro').on( 'change', function() {
+			if((getValue('panelmacro.value') == '161446'))
+			{
+				jQuery("#macroacideascorbique").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macroacideascorbique").find("input[type$='checkbox']").change();
+				jQuery("#macroaspect").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macroaspect").find("input[type$='checkbox']").change();
+				jQuery("#macrocetones").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macrocetones").find("input[type$='checkbox']").change();
+				jQuery("#macrocouleur").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macrocouleur").find("input[type$='checkbox']").change();
+				jQuery("#macrodensite").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macrodensite").find("input[type$='checkbox']").change();
+				jQuery("#macroglucose").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macroglucose").find("input[type$='checkbox']").change();
+				jQuery("#macroleucocytes").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macroleucocytes").find("input[type$='checkbox']").change();
+				jQuery("#macronitrites").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macronitrites").find("input[type$='checkbox']").change();
+				jQuery("#macroph").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macroph").find("input[type$='checkbox']").change();
+				jQuery("#macroproteines").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macroproteines").find("input[type$='checkbox']").change();
+				jQuery("#macrosang").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#macrosang").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#macroacideascorbique").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macroacideascorbique").find("input[type$='checkbox']").change();
+				jQuery("#macroaspect").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macroaspect").find("input[type$='checkbox']").change();
+				jQuery("#macrocetones").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macrocetones").find("input[type$='checkbox']").change();
+				jQuery("#macrocouleur").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macrocouleur").find("input[type$='checkbox']").change();
+				jQuery("#macrodensite").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macrodensite").find("input[type$='checkbox']").change();
+				jQuery("#macroglucose").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macroglucose").find("input[type$='checkbox']").change();
+				jQuery("#macroleucocytes").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macroleucocytes").find("input[type$='checkbox']").change();
+				jQuery("#macronitrites").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macronitrites").find("input[type$='checkbox']").change();
+				jQuery("#macroph").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macroph").find("input[type$='checkbox']").change();
+				jQuery("#macroproteines").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macroproteines").find("input[type$='checkbox']").change();
+				jQuery("#macrosang").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#macrosang").find("input[type$='checkbox']").change();
+			}
+			
+		});
+		
+		jQuery('#panelmicro').on( 'change', function() {
+			if((getValue('panelmicro.value') == '163697'))
+			{
+				jQuery("#microbacteries").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microbacteries").find("input[type$='checkbox']").change();
+				jQuery("#microcelepitheriale").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microcelepitheriale").find("input[type$='checkbox']").change();
+				jQuery("#microcristaux").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microcristaux").find("input[type$='checkbox']").change();
+				jQuery("#microcylindres").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microcylindres").find("input[type$='checkbox']").change();
+				jQuery("#microfilamentsmyceliens").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microfilamentsmyceliens").find("input[type$='checkbox']").change();
+				jQuery("#microhematies").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microhematies").find("input[type$='checkbox']").change();
+				jQuery("#microlevures").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microlevures").find("input[type$='checkbox']").change();
+				jQuery("#microspores").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microspores").find("input[type$='checkbox']").change();
+				jQuery("#microtrichomonas").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microtrichomonas").find("input[type$='checkbox']").change();
+				jQuery("#microurobilinogene").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#microurobilinogene").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#microbacteries").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microbacteries").find("input[type$='checkbox']").change();
+				jQuery("#microcelepitheriale").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microcelepitheriale").find("input[type$='checkbox']").change();
+				jQuery("#microcristaux").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microcristaux").find("input[type$='checkbox']").change();
+				jQuery("#microcylindres").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microcylindres").find("input[type$='checkbox']").change();
+				jQuery("#microfilamentsmyceliens").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microfilamentsmyceliens").find("input[type$='checkbox']").change();
+				jQuery("#microhematies").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microhematies").find("input[type$='checkbox']").change();
+				jQuery("#microlevures").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microlevures").find("input[type$='checkbox']").change();
+				jQuery("#microspores").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microspores").find("input[type$='checkbox']").change();
+				jQuery("#microtrichomonas").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microtrichomonas").find("input[type$='checkbox']").change();
+				jQuery("#microurobilinogene").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#microurobilinogene").find("input[type$='checkbox']").change();
+			}	
+		});
+		jQuery('#panelppd').on( 'change', function() {
+			if((getValue('panelppd.value') == '163631'))
+			{
+				jQuery("#ppdqualitatif").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#ppdqualitatif").find("input[type$='checkbox']").change();
+				jQuery("#ppdquantitatif").find("input[type$='checkbox']").attr("checked",true);
+				jQuery("#ppdquantitatif").find("input[type$='checkbox']").change();
+			}
+			else{
+				jQuery("#ppdqualitatif").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#ppdqualitatif").find("input[type$='checkbox']").change();
+				jQuery("#ppdquantitatif").find("input[type$='checkbox']").attr("checked",false);
+				jQuery("#ppdquantitatif").find("input[type$='checkbox']").change();
+			}			
+		});
+		
+		
+	  });
+	</script>
+	<div id="contenerGeneral">
+		<div id="dateVisite">
+			<b><center>Analyses de laboratoire</center></b><br/>
+			<table>
+				<tr>
+					<td>Date visite:</td>
+					<td><encounterDate default="today"/><br/>
+					<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+					</td>
+					<td>
+						<submit submitClass="confirm right" submitCode="general.save"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div id="scroll">		
+		<div>	
+		<ul id="onglets">
+			<li class="actif">Hematologie</li>
+			<li>Biochimie</li>
+			<li>Cytobacteriologie</li>
+			<li>Bacteriologie</li>
+			<li>ECBU</li>
+			<li>Parasitologie</li>
+			<li>Immuno-Virologie</li>
+			<li>Mycobacteriologie</li>
+			<li>Endocrinologie</li>
+			<li>Liquides Biologique</li>
+			<li>Serologie</li>
+			<li>CDV</li>
+			<li>Autres Tests</li>
+			<li>Biologie Moleculaire</li>
+		</ul>
+		<div id="contenu">
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<obs conceptId="CIEL:1271" id="cd4panel" answerConceptId="CIEL:657" answerLabel="P : CD4"/><br/>
+										<obs conceptId="CIEL:1271" id="coagulationpanel" answerConceptId="CIEL:163436" answerLabel="P : Coagulation"/><br/>
+										<obs conceptId="CIEL:1271" id="groupesanpanel" answerConceptId="CIEL:161473" answerLabel="P : Groupe Sanguin"/><br/>
+										<obs conceptId="CIEL:1271" answerConceptId="CIEL:163700" id="hemogrammep" answerLabel="P : Hemogramme - Auto" style="checkbox"/><br/>
+										<obs conceptId="CIEL:1271" id="hmanualpanel" answerConceptId="CIEL:163701" answerLabel="P : Hemogramme - Manual"/><br/>
+										<obs conceptId="CIEL:1271" id="tspanel" answerConceptId="CIEL:163702" answerLabel="P : TS / TC"/><br/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#antithroma"><obs conceptId="CIEL:1271" class="master" answerConceptId="CIEL:163432" answerLabel="Anti-Thrombine III (Activite)" style="checkbox"/></span><br/>
+										<span id="antithroma" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:163432" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										
+										<span class="titre" ch-target="#antithromb"><obs conceptId="CIEL:1271" class="master" answerConceptId="CIEL:163431" answerLabel="Anti-Thrombine III (Dosage)" style="checkbox"/></span><br/>
+										<span id="antithromb" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:163431" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+								</td>
+								</tr>
+										
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span3"><obs conceptId="CIEL:1271" class="master" answerConceptId="CIEL:1341" answerLabel="Basophiles" style="checkbox"/></span><br/>
+										<span id="span3" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:1341" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span4"><obs conceptId="CIEL:1271" id="hemogrammeccmh" answerConceptId="CIEL:1017" answerLabel="CCMH"/></span><br/>
+										<span id="span4" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1017" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span5"><obs conceptId="CIEL:1271" id="cd41" answerConceptId="CIEL:5497" answerLabel="CD4 Compte Absolu"/></span><br/>
+										<span id="span5" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="657"><obs conceptId="CIEL:5497" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>	
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span6"><obs conceptId="CIEL:1271" id="cd42" answerConceptId="CIEL:730" answerLabel="CD4 Compte en %"/></span><br/>
+										<span id="span6" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="657"><obs conceptId="CIEL:730" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span7"><obs conceptId="CIEL:1271" id="hemogrammecbla" answerConceptId="CIEL:678" answerLabel="Compte des Globules Blancs"/></span><br/>
+										<span id="span7" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="163700"><obs conceptId="CIEL:678" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>	
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span8"><obs conceptId="CIEL:1271" id="hemogrammecrouge" answerConceptId="CIEL:679" answerLabel="Compte des Globules Rouges"/></span><br/>
+										<span id="span8" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="163700"><obs conceptId="CIEL:679" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span9"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159607" answerLabel="Coombs Test Direct"/></span><br/>
+										<span id="span9" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159607" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Nég,Pos" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span10"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159606" answerLabel="Coombs Test Indirect"/></span><br/>
+										<span id="span10" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159606" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Nég,Pos" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+									<tr>
+											<td>
+												<span class="titre" ch-target="#span11"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161421" answerLabel="Electrophorese de l’hemoglobine"/></span><br/>
+												<span id="span11" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161421" row="1" cols="3" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="titre" ch-target="#span12">
+												<obs conceptId="CIEL:1271" answerConceptId="CIEL:1340" answerLabel="Eosinophiles"/></span><br/>
+												<span id="span12" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend>
+												<obs conceptId="CIEL:1340" row="1" cols="3" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+												</fieldset>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="titre" ch-target="#facteur1">
+												<obs conceptId="CIEL:1271" answerConceptId="CIEL:163429" answerLabel="Facteur IX"/></span><br/>
+												<span id="facteur1" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend>
+												<obs conceptId="CIEL:163429" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+												</fieldset>
+												</span>
+										    </td>
+										</tr>
+										<tr>
+											<td>
+												<span class="titre" ch-target="#facteur2">
+												<obs conceptId="CIEL:1271" answerConceptId="CIEL:163428" answerLabel="Facteur VIII"/></span><br/>
+												<span id="facteur2" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend>
+												<obs conceptId="CIEL:163428" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+												</fieldset>
+												</span>
+											</td>
+										</tr> 
+										<tr>
+											<td>
+												<span class="titre" ch-target="#span13"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161511" answerLabel="Ferritine sérique"/></span><br/>
+												<span id="span13" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161511" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="titre" ch-target="#gsabo"><obs conceptId="CIEL:1271" id="groupesanguinabo" answerConceptId="CIEL:300" answerLabel="Groupe Sanguin - ABO"/></span><br/>
+												<span id="gsabo" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend>
+												  <obsgroup groupingConceptId="161473"><obs conceptId="CIEL:300" answerConceptIds="CIEL:690,CIEL:692,CIEL:694,CIEL:696,CIEL:699,CIEL:701,CIEL:1230,CIEL:1231" answerLabels="A+,A-,B+,B-,O+,O-,AB+,AB-" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+												</fieldset>
+												</span>
+											</td>
+										</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<!--<tr><th>Test</th><th>Résultat et date</th></tr>-->
+								<tr>
+									<td>
+										<span class="titre" ch-target="#groupesrhesus"><obs conceptId="CIEL:1271" id="groupesanguinresus" answerConceptId="CIEL:160232" answerLabel="Groupe Sanguin - Rhesus"/></span><br/>
+										<span id="groupesrhesus" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:161473"><obs conceptId="CIEL:160232" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span15"><obs conceptId="CIEL:1271" id="hemogrammehematocrite" answerConceptId="CIEL:1015" answerLabel="Hematocrite"/></span><br/>
+										<span id="span15" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1015" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span16"><obs conceptId="CIEL:1271" id="hemogrammehemoglobine" answerConceptId="CIEL:21" answerLabel="Hemoglobine"/></span><br/>
+										<span id="span16" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:21" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#heparinemie"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163430" answerLabel="Heparinemie"/></span><br/>
+										<span id="heparinemie" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163430" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span17"><obs conceptId="CIEL:1271" id="coagulationinr" answerConceptId="CIEL:161482" answerLabel="INR"/></span><br/>
+										<span id="span17" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:163436"><obs conceptId="CIEL:161482" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span18"><obs conceptId="CIEL:1271" id="hemogrammelymphocite" answerConceptId="CIEL:1338" answerLabel="Lymphocytes"/></span><br/>
+										<span id="span18" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1338" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#mixtes"><obs conceptId="CIEL:1271" id="hemogrammemixte" answerConceptId="CIEL:163426" answerLabel="Mixtes"/></span><br/>
+										<span id="mixtes" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:163426" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span19"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1339" answerLabel="Monocytes"/></span><br/>
+										<span id="span19" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:1339" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span20"><obs conceptId="CIEL:1271" id="hemogrammeneutrophyle" answerConceptId="CIEL:1336" answerLabel="Neutrophiles"/></span><br/>
+										<span id="span20" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1336" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span21"><obs conceptId="CIEL:1271" id="hemogrammeplaquette" answerConceptId="CIEL:729" answerLabel="Plaquettes"/></span><br/>
+										<span id="span21" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:729" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span22"><obs conceptId="CIEL:1271" answerConceptId="CIEL:160225" answerLabel="Sickling Test"/></span><br/>
+										<span id="span22" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160225" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Nég,Pos" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span23"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1327" answerLabel="Taux reticulocytes - Auto"/></span><br/>
+										<span id="span23" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1327" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+							<!--<tr><th>Test</th><th>Résultat et date</th></tr>-->
+								<tr>
+									<tr>
+										<td>
+											<span class="titre" ch-target="#span24"><obs conceptId="CIEL:1271" id="hemogrammetcmh" answerConceptId="CIEL:1018" answerLabel="TCMH"/></span><br/>
+											<span id="span24" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1018" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+											</fieldset>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="titre" ch-target="#span25"><obs conceptId="CIEL:1271" id="coagulationcephaline" answerConceptId="CIEL:161153" answerLabel="Temps de cephaline Activé(TCA)"/></span><br/>
+											<span id="span25" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend>
+											<obsgroup groupingConceptId="CIEL:163436"><obs conceptId="CIEL:161153" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="titre" ch-target="#coagulationtime"><obs conceptId="CIEL:1271" id="tstcoagulation" answerConceptId="CIEL:161435" answerLabel="Temps de Coagulation"/></span><br/>
+											<span id="coagulationtime" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend>
+											<obsgroup groupingConceptId="CIEL:163702"><obs conceptId="CIEL:161435" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="titre" ch-target="#coagulationtimetube"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163427" answerLabel="Temps de Coagulation en tube"/></span><br/>
+											<span id="coagulationtimetube" class="togglable" style="display: none;">
+												<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163427" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+										<span class="titre" ch-target="#span26"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161481" answerLabel="Temps de Prothrombine"/></span><br/>
+										<span id="span26" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+											<obs conceptId="CIEL:161481" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset>
+										</span>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="titre" ch-target="#span27"><obs conceptId="CIEL:1271" id="tstsaignement" answerConceptId="CIEL:161433" answerLabel="Temps de saignement"/></span><br/>
+										<span id="span27" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163702"><obs conceptId="CIEL:161433" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+										</td>
+									</tr>
+									<tr><td>
+										<span class="titre" ch-target="#testdecompa"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161233" answerLabel="Test de comptabilite"/></span><br/>
+										<span id="testdecompa" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161233" answerConceptIds="CIEL:163433,CIEL:163434" answerLabels="Sang compatible,Sang incompatible" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
+									</td></tr>
+									<tr><td><span class="titre" ch-target="#span28"><obs conceptId="CIEL:1271" id="hemogrammevgm" answerConceptId="CIEL:851" answerLabel="VGM"/></span><br/>
+										<span id="span28" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:851" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset>
+										</span>
+									</td></tr>
+									<tr>
+										<td>
+											<span class="titre" ch-target="#vitamineb12"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163435" answerLabel="Vitamine B12"/></span><br/>
+											<span id="vitamineb12" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163435" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset>
+											</span>
+										</td>
+									</tr>
+									<tr><td><span class="titre" ch-target="#span29"><obs conceptId="CIEL:1271" answerConceptId="CIEL:855" answerLabel="Vitesse de Sedimentation"/></span><br/>
+									<span id="span29" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:855" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			<div class="item">
+				<table width="100%">
+				<tr>
+				<td valign="TOP">
+					<table>
+						<tr><td><obs conceptId="CIEL:1271" id="panelbilanhep" answerConceptId="CIEL:953" answerLabel="P : Bilan Hepatique"/><br/>
+						<obs conceptId="CIEL:1271" id="panelchlcr" answerConceptId="CIEL:159645" answerLabel="P : Chimie LCR"/><br/>
+						<obs conceptId="CIEL:1271" id="panelchsanguine" answerConceptId="CIEL:161488" answerLabel="P : Chimie Sanguine"/><br/>
+						<obs conceptId="CIEL:1271" id="panelchsanga" answerConceptId="CIEL:163602" answerLabel="P : Gaz du Sang Arteriel"/><br/>
+						<obs conceptId="CIEL:1271" id="panelglyprov" answerConceptId="CIEL:163708" answerLabel="P : Glycemie Provoquee"/><br/>
+						<obs conceptId="CIEL:1271" id="panelionogramme" answerConceptId="CIEL:5473" answerLabel="P : Ionogramme"/><br/>
+						<obs conceptId="CIEL:1271" id="panelprofillipid" answerConceptId="CIEL:1010" answerLabel="P : Profil Lipidique"/><br/>
+						</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span30"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159825" answerLabel="Acide urique"/></span><br/>
+						<span id="span30" class="togglable" style="display: none;">
+						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159825" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+						<tr><td><span class="titre" ch-target="#span31"><obs conceptId="CIEL:1271" answerConceptId="CIEL:848" answerLabel="Albumine"/></span>
+						<span id="span31" class="togglable" style="display: none;">
+						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:848" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+						</fieldset></span>
+						</td></tr>
+					</table>
+				</td>
+				<td valign="TOP">
+					<table>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#span32"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1299" answerLabel="Amylase"/></span><br/>
+								<span id="span32" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1299" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#span33"><obs conceptId="CIEL:1271" id="chazote" answerConceptId="CIEL:857" answerLabel="Azote de l’Uree"/></span><br/>
+								<span id="span33" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:857" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								<span class="titre" ch-target="#be"><obs conceptId="CIEL:1271" id="gazbe" answerConceptId="CIEL:163599" answerLabel="BE"/></span><br/>
+								<span id="be" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163599" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#bicarbonates"><obs conceptId="CIEL:1271" id="ionogrammebi" answerConceptId="CIEL:1135" answerLabel="Bicarbonates"/></span><br/>
+								<span id="bicarbonates" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1135" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td><!-- nest pas dans le group 953 -->
+								<span class="titre" ch-target="#span34"><obs conceptId="CIEL:1271" id="bibilirubinedirect" answerConceptId="CIEL:1297" answerLabel="Bilirubine direct"/></span><br/>
+								<span id="span34" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1297" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr><!-- nest pas dans le group 953 -->
+							<td><span class="titre" ch-target="#span35"><obs conceptId="CIEL:1271" id="bilbiliindirect" answerConceptId="CIEL:163001" answerLabel="Bilirubine indirect"/></span><br/>
+								<span id="span35" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163001" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#span36"><obs conceptId="CIEL:1271" id="bebilirubine" answerConceptId="CIEL:655" answerLabel="Bilirubine totale"/></span><br/>
+								<span id="span36" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:655" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#c3complement"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163600" answerLabel="C3 complement"/></span><br/>
+								<span id="c3complement" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163600" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#c4complement"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163601" answerLabel="C4 complement"/></span><br/>
+								<span id="c4complement" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163601" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#span37"><obs conceptId="CIEL:1271" id="ionogrammecalcium" answerConceptId="CIEL:159497" answerLabel="Calcium"/></span><br/>
+								<span id="span37" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:159497" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="TOP">
+					<table>
+						<tr><td> 
+							<span class="titre" ch-target="#chlore"><obs conceptId="CIEL:1271" id="lcrchlore" answerConceptId="CIEL:1134" answerLabel="Chlore"/></span><br/>
+								<span id="chlore" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:159645"><obs conceptId="CIEL:1134" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+						</td></tr>
+						<tr><td>
+							<span class="titre" ch-target="#cholesterol"><obs conceptId="CIEL:1271" id="profillipchol" answerConceptId="CIEL:1006" answerLabel="Cholestérol total"/></span><br/>
+								<span id="cholesterol" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1006" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#span60"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1011" answerLabel="CPK MB"/></span><br/>
+								<span id="span60" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1011" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span61"><obs conceptId="CIEL:1271" id="chscreat" answerConceptId="CIEL:790" answerLabel="Créatinine"/></span><br/>
+						<span id="span61" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:790" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span62"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161500" answerLabel="CRP Quantitatif"/></span><br/>
+							<span id="span62" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="161501"><obs conceptId="CIEL:161500" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>	
+						</td></tr>
+						<tr><td>
+							<span class="titre" ch-target="#span63"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161470" answerLabel="Facteur Rhumatoide"/></span><br/>
+							<span id="span63" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend>
+							<obsgroup groupingConceptId="161479">
+							<obs conceptId="CIEL:161470" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Nég,Pos" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</obsgroup></fieldset></span>
+						</td></tr>
+						<tr>
+							<td><span class="titre" ch-target="#span64"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159828" answerLabel="Fer Serique"/></span><br/>
+							<span id="span64" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend>
+							<obs conceptId="CIEL:159828" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="titre" ch-target="#span65"><obs conceptId="CIEL:1271" answerConceptId="CIEL:887" answerLabel="Glycemie"/></span><br/>
+							<span id="span65" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend>
+							<obs conceptId="CIEL:887" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span66"><obs conceptId="CIEL:1271" answerConceptId="CIEL:160914" answerLabel="Glycemie Postprandiale"/></span><br/>
+						<span id="span66" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160914" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+					</table>
+					</td>
+					<td valign="TOP">
+					<table>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#glypro"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163594" answerLabel="Glycémie provoquée"/></span><br/>
+								<span id="glypro" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:163594" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td> <!-- A verifier numero du concept -->
+							
+								<span class="titre" ch-target="#glypro12"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163703" answerLabel="Glycémie provoquée 1/2 hre"/></span><br/>
+								<span id="glypro12" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:163703" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+									<span class="titre" ch-target="#glypro1"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163704" answerLabel="Glycémie provoquée 1hre"/></span><br/>
+								<span id="glypro1" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:163704" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#glypro2"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163705" answerLabel="Glycémie provoquée 2hres"/></span><br/>
+								<span id="glypro2" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:163705" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#glypro3"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163706" answerLabel="Glycémie provoquée 3hres"/></span><br/>
+								<span id="glypro3" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:163706" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#glypro4"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163707" answerLabel="Glycémie provoquée 4hres"/></span><br/>
+								<span id="glypro4" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:163707" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							
+							</td>
+						</tr>
+						<tr>
+							<td><!--n'est pas dans le group 159645-->
+								<span class="titre" ch-target="#glyprofasting"><obs conceptId="CIEL:1271" id="lcrglycemie" answerConceptId="CIEL:160912" answerLabel="Glycemie Provoquée Fasting"/></span><br/>
+								<span id="glyprofasting" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend>
+								<obs conceptId="CIEL:160912" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr><td>
+							<span class="titre" ch-target="#hco3"><obs conceptId="CIEL:1271" id="gazhco3" answerConceptId="CIEL:163596" answerLabel="HCO3"/></span><br/>
+							<span id="hco3" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163596" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>
+						</td></tr>
+						<tr><td><span class="titre" ch-target="#span75"><obs conceptId="CIEL:1271" id="profillhdl" answerConceptId="CIEL:1007" answerLabel="HDL"/></span><br/>
+						<span id="span75" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend>
+						<obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1007" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+						</fieldset></span></td></tr>
+						<!--<tr>
+							<td>
+							<span class="titre" ch-target="#hdlchol"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1007" answerLabel="HDL-cholestérol"/></span><br/>
+							<span id="hdlchol" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1007" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>-->
+						<tr>
+							<td><span class="titre" ch-target="#span77"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159644" answerLabel="Hémoglobine glycolisee"/></span><br/>
+							<span id="span77" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159644" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span78"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1299" answerLabel="La porphyrineVLDL – cholesterol (calculée)"/></span><br/>
+						<span id="span78" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1299" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+						
+					</table>
+					</td>
+				<td valign="TOP">
+					<table>	
+						<tr>
+							<td>
+								<span class="titre" ch-target="#ldh"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1014" answerLabel="LDH"/></span><br/>
+								<span id="ldh" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1014" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								</span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span79"><obs conceptId="CIEL:1271" id="profillldl" answerConceptId="CIEL:1008" answerLabel="LDL"/></span><br/>
+							<span id="span79" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="1010"><obs conceptId="CIEL:1008" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+							</span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span80"><obs conceptId="CIEL:1271" answerConceptId="CIEL:101" answerLabel="Lipase"/></span><br/>
+							<span id="span80" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:101" answerConceptIds="CIEL:1115,CIEL:1116" answerLabels="Normal,Anormal" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td><!-- n'est pas dans le groupe 5473 -->
+								<span class="titre" ch-target="#lithium"><obs conceptId="CIEL:1271" id="ionogrammelit" answerConceptId="CIEL:163592" answerLabel="Lithium"/></span><br/>
+								<span id="lithium" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163592" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								</span>
+							</td>
+						</tr>
+							<!-- n'est pas dans le groupe 5473 -->
+						<tr><td><span class="titre" ch-target="#span81"><obs conceptId="CIEL:1271" id="ionogrammemagnes" answerConceptId="CIEL:159643" answerLabel="magnésium"/></span><br/>
+							<span id="span81" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159643" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+						</td></tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#mbg"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163593" answerLabel="MBG"/></span><br/>
+								<span id="mbg" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163593" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								</span>
+							</td>
+						</tr>
+						<tr><td>
+							<span class="titre" ch-target="#o2saturation"><obs conceptId="CIEL:1271" id="gazo2s" answerConceptId="CIEL:163597" answerLabel="O2 Saturation"/></span><br/>
+								<span id="o2saturation" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163597" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+								</span>
+						</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#paco2"><obs conceptId="CIEL:1271" id="gazpaco2" answerConceptId="CIEL:163595" answerLabel="PaCO2"/></span><br/>
+								<span id="paco2" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163595" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#pao2"><obs conceptId="CIEL:1271" id="gazpao2" answerConceptId="CIEL:163598" answerLabel="PaO2"/></span><br/>
+								<span id="pao2" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163598" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#ph"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161455" answerLabel="Ph"/></span><br/>
+								<span id="ph" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161455" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								</span>
+							</td>
+						</tr>
+						
+					</table>
+				</td>
+				<td valign="TOP">
+					<table>	
+						<tr>
+							<td>
+								<span class="titre" ch-target="#phosphatageacide"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163443" answerLabel="Phosphatase Acide"/></span><br/>
+							<span id="phosphatageacide" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163443" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!--A discuter for Panel --></fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span82"><obs conceptId="CIEL:1271" answerConceptId="CIEL:785" answerLabel="Phosphatase Alcaline"/></span><br/>
+							<span id="span82" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:785" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!--A discuter for Panel --></fieldset></span>
+							</td></tr>
+						<tr>
+							<td> <!-- n'est pas dans le groupe 5473 -->
+								<span class="titre" ch-target="#phosphore"><obs conceptId="CIEL:1271" id="ionogrammePhosp" answerConceptId="CIEL:161154" answerLabel="Phosphore"/></span><br/>
+							<span id="phosphore" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161154" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span83"><obs conceptId="CIEL:1271" id="ionogrammePota" answerConceptId="CIEL:1133" answerLabel="Potassium"/></span><br/>
+						<span id="span83" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1133" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							</td></tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#proteines"><obs conceptId="CIEL:1271" id="lcrproteines" answerConceptId="CIEL:159646" answerLabel="Proteines"/></span><br/>
+								<span id="proteines" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:159645"><obs conceptId="CIEL:159646" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#span84"><obs conceptId="CIEL:1271" answerConceptId="CIEL:717" answerLabel="Protéines totales"/></span><br/>
+								<span id="span84" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:717" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span85"><obs conceptId="CIEL:1271" id="bilsgot" answerConceptId="CIEL:653" answerLabel="SGOT (AST)"/></span><br/>
+							<span id="span85" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:653" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							</fieldset></span>
+						</td></tr>
+						<tr><td><span class="titre" ch-target="#span88"><obs conceptId="CIEL:1271" id="bilsgpt" answerConceptId="CIEL:654" answerLabel="SGPT (ALT)"/></span><br/>
+						<span id="span88" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:654" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup><!--A discuter for Panel -->
+							</fieldset></span>
+						</td></tr>
+						
+					</table>
+				</td>
+				<td valign="TOP">
+					<table>	
+						<tr><td><span class="titre" ch-target="#span91"><obs conceptId="CIEL:1271" id="ionogrammesodium" answerConceptId="CIEL:1132" answerLabel="Sodium"/></span><br/>
+						<span id="span91" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1132" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							</fieldset></span>
+							</td></tr>
+						<tr>
+							<td>TIBC
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span93"><obs conceptId="CIEL:1271" id="profilltrig" answerConceptId="CIEL:1009" answerLabel="Triglycéride"/></span><br/>
+						<span id="span93" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1009" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							</fieldset></span></td></tr>
+						<tr>
+							<td><span class="titre" ch-target="#span94"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159654" answerLabel="Triponine I"/></span><br/>
+							<span id="span94" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159654" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#ureecalcul"><obs conceptId="CIEL:1271" id="chsanguine" answerConceptId="CIEL:163699" answerLabel="Urée (calculée)"/></span><br/>
+							<span id="ureecalcul" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:163699" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							</td>
+						</tr>
+						<tr><td><span class="titre" ch-target="#span97"><obs conceptId="CIEL:1271" id="profillvldl" answerConceptId="CIEL:1298" answerLabel="VLDL"/></span><br/>
+							<span id="span97" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1298" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							</fieldset></span>
+							</td></tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#a1grobuline"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163437" answerLabel="α1 globuline"/></span><br/>
+							<span id="a1grobuline" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163437" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#a2grobuline"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163438" answerLabel="α2 globuline"/></span><br/>
+							<span id="a2grobuline" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163438" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="titre" ch-target="#bgrobuline"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163439" answerLabel="β globuline"/></span><br/>
+							<span id="bgrobuline" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163439" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<span class="titre" ch-target="#ygrobuline"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163442" answerLabel="ϒ globuline"/></span><br/>
+							<span id="ygrobuline" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163442" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							</td>
+						</tr>
+					</table>
+				</td>
+				</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<includeIf velocityTest="($patient.person.gender=='F')">
+											<obs conceptId="CIEL:1271" id="panelgouttependantef" answerConceptId="CIEL:161458" answerLabel="P : Goutte pendante"/>
+										</includeIf>
+										<includeIf velocityTest="($patient.person.gender=='M')">
+											<obs conceptId="CIEL:1271" id="panelgouttependantem" answerConceptId="CIEL:163652" answerLabel="P : Goutte pendante"/>
+										</includeIf>
+									</td>
+								</tr>
+								<tr><td><obs conceptId="CIEL:1271" id="panelspermogramme" answerConceptId="CIEL:161468" answerLabel="P : Spermogramme"/></td></tr>
+								<tr>
+									<td>
+										<includeIf velocityTest="($patient.person.gender=='F')">
+										<span class="titre" ch-target="#bacteries"><obs conceptId="CIEL:1271" id="gouttependantebacteries" answerConceptId="CIEL:163645" answerLabel="Bacteries"/></span><br/>
+										<span id="bacteries" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:163645" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+										<includeIf velocityTest="($patient.person.gender=='M')">
+										<span class="titre" ch-target="#bacteries"><obs conceptId="CIEL:1271" id="gouttependantebacteries" answerConceptId="CIEL:163645" answerLabel="Bacteries"/></span><br/>
+										<span id="bacteries" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163652"><obs conceptId="CIEL:163645" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cellulesepit"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163650" answerLabel="Cellules Epitheliales"/></span><br/>
+										<span id="cellulesepit" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163650" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#choleratestrap"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163442" answerLabel="Cholera Test rapide"/></span><br/>
+										<span id="choleratestrap" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163442" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td><span class="titre" ch-target="#span108"><obs conceptId="CIEL:1271" id="spermogrammecolgram" answerConceptId="CIEL:161454" answerLabel="Coloration de Gram"/></span><br/>
+									<span id="span108" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161454" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+								</td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#comptesperme"><obs conceptId="CIEL:1271" id="spermogrammecomptesperme" answerConceptId="CIEL:163661" answerLabel="Compte de spermes"/></span><br/>
+									<span id="comptesperme" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163661" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#couleur"><obs conceptId="CIEL:1271" id="spermogrammecouleur" answerConceptId="CIEL:163657" answerLabel="Couleur"/></span><br/>
+										<span id="couleur" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163657" answerConceptIds="CIEL:163656,CIEL:163655,CIEL:160910,CIEL:127778,CIEL:162097,CIEL:162097,CIEL:162098,CIEL:162100" answerLabels="Orange,blanc jaunâtre,Jaune,Rouge,Jaune clair,Jaune foncé,Marron" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#filamentsmyceliens"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163649" answerLabel="Filaments Myceliens"/></span><br/>
+										<span id="filamentsmyceliens" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163649" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#formesanormales"><obs conceptId="CIEL:1271" id="spermogrammefnormales" answerConceptId="CIEL:163662" answerLabel="Formes anormales"/></span><br/>
+										<span id="formesanormales" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163662" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<includeIf velocityTest="($patient.person.gender=='M')">
+								<tr>
+									<td>
+										<span class="titre" ch-target="#frottisuretral"><obs conceptId="CIEL:1271" id="gouttependantefrot" answerConceptId="CIEL:161454" answerLabel="Frottis Uretral/Gram"/></span><br/>
+										<span id="frottisuretral" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:161454" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								</includeIf>
+								<includeIf velocityTest="($patient.person.gender=='F')">
+								<tr>
+									<td>
+										<span class="titre" ch-target="#frottisvaginal"><obs conceptId="CIEL:1271" id="gouttependantefrot" answerConceptId="CIEL:161454" answerLabel="Frottis Vaginal/Gram"/></span><br/>
+										<span id="frottisvaginal" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:161454" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								</includeIf>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#fructose"><obs conceptId="CIEL:1271" id="spermogrammefructose" answerConceptId="CIEL:163659" answerLabel="Fructose"/></span><br/>
+										<span id="fructose" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163659" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<includeIf velocityTest="($patient.person.gender=='F')">
+										<span class="titre" ch-target="#globulesblancs"><obs conceptId="CIEL:1271" id="gouttependantegblanc" answerConceptId="CIEL:163605" answerLabel="Globules Blancs"/></span><br/>
+										<span id="globulesblancs" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:163605" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+										<includeIf velocityTest="($patient.person.gender=='M')">
+										<span class="titre" ch-target="#globulesblancs"><obs conceptId="CIEL:1271" id="gouttependantegblanc" answerConceptId="CIEL:163605" answerLabel="Globules Blancs"/></span><br/>
+										<span id="globulesblancs" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163652"><obs conceptId="CIEL:163605" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<includeIf velocityTest="($patient.person.gender=='F')">
+											<span class="titre" ch-target="#globulesrouges"><obs conceptId="CIEL:1271" id="gouttependantegrouge" answerConceptId="CIEL:163604" answerLabel="Globules Rouges"/></span><br/>
+											<span id="globulesrouges" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:163604" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+											</fieldset></span>
+										</includeIf>
+										<includeIf velocityTest="($patient.person.gender=='M')">
+											<span class="titre" ch-target="#globulesrouges"><obs conceptId="CIEL:1271" id="gouttependantegrouge" answerConceptId="CIEL:163604" answerLabel="Globules Rouges"/></span><br/>
+											<span id="globulesrouges" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163652"><obs conceptId="CIEL:163604" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+											</fieldset></span>
+										</includeIf>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#koh"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161453" answerLabel="KOH"/></span><br/>
+										<span id="koh" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161453" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<includeIf velocityTest="($patient.person.gender=='F')">
+										<span class="titre" ch-target="#levuresbourgeonantes"><obs conceptId="CIEL:1271" id="gouttependantelevs" answerConceptId="CIEL:163647" answerLabel="Levures Bourgeonantes"/></span><br/>
+										<span id="levuresbourgeonantes" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:163647" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+										<includeIf velocityTest="($patient.person.gender=='M')">
+										<span class="titre" ch-target="#levuresbourgeonantes"><obs conceptId="CIEL:1271" id="gouttependantelevs" answerConceptId="CIEL:163647" answerLabel="Levures Bourgeonantes"/></span><br/>
+										<span id="levuresbourgeonantes" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163652"><obs conceptId="CIEL:163647" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<includeIf velocityTest="($patient.person.gender=='F')">
+										<span class="titre" ch-target="#levuressimples"><obs conceptId="CIEL:1271" id="gouttependantelevb" answerConceptId="CIEL:163646" answerLabel="Levures Simples"/></span><br/>
+										<span id="levuressimples" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:163646" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+										<includeIf velocityTest="($patient.person.gender=='M')">
+										<span class="titre" ch-target="#levuressimples"><obs conceptId="CIEL:1271" id="gouttependantelevb" answerConceptId="CIEL:163646" answerLabel="Levures Simples"/></span><br/>
+										<span id="levuressimples" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163652"><obs conceptId="CIEL:163646" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+										</includeIf>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#liquefaction"><obs conceptId="CIEL:1271" id="spermogrammeliquef" answerConceptId="CIEL:163658" answerLabel="Liquefaction"/></span><br/>
+										<span id="liquefaction" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163658" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#motilite1heure"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163663" answerLabel="Motilite 1 heure"/></span><br/>
+										<span id="motilite1heure" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163663" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td>Motilite 3 heures</td></tr>
+								<tr><td>Motilite STAT</td></tr>
+								<tr><td><span class="titre" ch-target="#span130"><obs conceptId="CIEL:1271" id="spermogrammeph" answerConceptId="CIEL:161455" answerLabel="pH"/></span><br/>
+									<span id="span130" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161455" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+									</td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#testrivalta"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163653" answerLabel="Test de Rivalta"/><!-- A verifier --></span><br/>
+										<span id="testrivalta" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163653" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<includeIf velocityTest="($patient.person.gender=='M')">
+									<tr>
+										<td>
+											<span class="titre" ch-target="#trichomonashom"><obs conceptId="CIEL:1271" id="gouttependantetrich" answerConceptId="CIEL:163651" answerLabel="Trichomonas hominis"/></span><br/>
+											<span id="trichomonashom" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163652"><obs conceptId="CIEL:163651" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+											</fieldset></span>
+										</td>
+									</tr>
+								</includeIf>
+								<includeIf velocityTest="($patient.person.gender=='F')">
+									<tr>
+										<td>
+											<span class="titre" ch-target="#trichomonasvag"><obs conceptId="CIEL:1271" id="gouttependantetrich" answerConceptId="CIEL:163648" answerLabel="Trichomonas vaginalis"/></span><br/>
+											<span id="trichomonasvag" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161458"><obs conceptId="CIEL:163648" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+											</fieldset></span>
+										</td>
+									</tr>
+								</includeIf>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#volume"><obs conceptId="CIEL:1271" id="spermogrammevolume" answerConceptId="CIEL:163660" answerLabel="Volume"/></span><br/>
+									<span id="volume" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163660" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								
+								
+								<tr><td><obs conceptId="CIEL:1271" id="panelculbac" answerConceptId="CIEL:161486" answerLabel="P : Culture/Antibiogramme"/></td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#camptest"><obs conceptId="CIEL:1271" id="antibcmpt" answerConceptId="CIEL:163675" answerLabel="Camp-test"/></span><br/>
+										<span id="camptest" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163675" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#catalase"><obs conceptId="CIEL:1271" id="antibcat" answerConceptId="CIEL:163664" answerLabel="Catalase"/></span><br/>
+										<span id="catalase" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163664" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#coagulaselibre"><obs conceptId="CIEL:1271" id="antibcolib" answerConceptId="CIEL:163666" answerLabel="Coagulase libre"/></span><br/>
+										<span id="coagulaselibre" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163666" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#colacriline"><obs conceptId="CIEL:1271" id="antibcolorange" answerConceptId="CIEL:163678" answerLabel="Coloration à l’acridine orange"/></span><br/>
+										<span id="colacriline" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163678" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#colauramine"><obs conceptId="CIEL:1271" id="antibcolauramine" answerConceptId="CIEL:163677" answerLabel="Coloration à l’auramine"/></span><br/>
+										<span id="colauramine" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163677" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#colgrame"><obs conceptId="CIEL:1271" id="antibcolgram" answerConceptId="CIEL:161454" answerLabel="Coloration de Gram"/></span><br/>
+										<span id="colgrame" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:161454" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#colkinyoun"><obs conceptId="CIEL:1271" id="antibcolkiny" answerConceptId="CIEL:161448" answerLabel="Coloration de Kinyoun"/></span><br/>
+										<span id="colkinyoun" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:161448" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#colziehl"><obs conceptId="CIEL:1271" id="antibcolorziehl" answerConceptId="CIEL:307" answerLabel="Coloration de Ziehl-Neelsen"/></span><br/>
+										<span id="colziehl" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:307" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<!--<tr><td>Culture Bacterienne</td></tr>-->
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span150"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159648" answerLabel="Culture LCR"/></span><br/>
+										<span id="span150" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159648" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#dnase"><obs conceptId="CIEL:1271" id="antibdnase" answerConceptId="CIEL:163667" answerLabel="DNAse"/></span><br/>
+										<span id="dnase" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163667" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								
+								<tr>
+									<td>
+										<span class="titre" ch-target="#hemoculture"><obs conceptId="CIEL:1271" id="culbachemoc" answerConceptId="CIEL:161155" answerLabel="Hemoculture"/></span><br/>
+										<span id="hemoculture" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161486"><obs conceptId="CIEL:161155" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#hydroliseesc"><obs conceptId="CIEL:1271" id="antibhydrolyse" answerConceptId="CIEL:163668" answerLabel="Hydrolyse de l’esculine"/></span><br/>
+										<span id="hydroliseesc" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163668" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#mobilite"><obs conceptId="CIEL:1271" id="antibmobilite" answerConceptId="CIEL:163670" answerLabel="Mobilité"/></span><br/>
+										<span id="mobilite" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163670" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#onpg"><obs conceptId="CIEL:1271" id="antibonpg" answerConceptId="CIEL:163672" answerLabel="ONPG"/></span><br/>
+										<span id="onpg" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163672" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#oxydase"><obs conceptId="CIEL:1271" id="antiboxydase" answerConceptId="CIEL:163665" answerLabel="Oxydase"/></span><br/>
+										<span id="oxydase" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163665" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#reactionvoges"><obs conceptId="CIEL:1271" id="antibreaction" answerConceptId="CIEL:163674" answerLabel="Réaction de Voges-Proskauer"/></span><br/>
+										<span id="reactionvoges" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163674" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#techniquesag"><obs conceptId="CIEL:1271" id="antibtechniques" answerConceptId="CIEL:163676" answerLabel="Techniques d’agglutination"/></span><br/>
+										<span id="techniquesag" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163676" answerConceptIds="CIEL:664,CIEL:703,1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#testporphy"><obs conceptId="CIEL:1271" id="antibtestporphyrique" answerConceptId="CIEL:163671" answerLabel="Test à la porphyrine"/></span><br/>
+										<span id="testporphy" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163671" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#testpotasse"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161456" answerLabel="Test à la potasse"/></span><br/>
+										<span id="testpotasse" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161456" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#ureetryp"><obs conceptId="CIEL:1271" id="antibureetrypt" answerConceptId="CIEL:163669" answerLabel="Urée-tryptophane"/></span><br/>
+										<span id="ureetryp" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:163669" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#uroculture"><obs conceptId="CIEL:1271" id="cultbacuroculture" answerConceptId="CIEL:161156" answerLabel="Uroculture"/></span><br/>
+										<span id="uroculture" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161486"><obs conceptId="CIEL:161156" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>	
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#coproculture"><obs conceptId="CIEL:1271" id="coprocult" answerConceptId="CIEL:163603" answerLabel="Coproculture"/></span><br/>
+										<span id="coproculture" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161486"><obs conceptId="CIEL:163603" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#culturepus11"><obs conceptId="CIEL:1271" id="culturepus" answerConceptId="CIEL:161484" answerLabel="Culture de pus"/></span><br/>
+										<span id="culturepus11" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161486"><obs conceptId="CIEL:161484" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<obs conceptId="CIEL:1271" id="panelmacro" answerConceptId="CIEL:161446" answerLabel="P : Urine Macro"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<obs conceptId="CIEL:1271" id="panelmicro" answerConceptId="CIEL:163697" answerLabel="P : Urine Micro"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#acideascorbique"><obs conceptId="CIEL:1271" id="macroacideascorbique" answerConceptId="CIEL:163681" answerLabel="Acide ascorbique"/></span><br/>
+										<span id="acideascorbique" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163681" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1874" answerLabels="Négatif,1+,2+,3+,Trace" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#aspectmacro"><obs conceptId="CIEL:1271" id="macroaspect" answerConceptId="CIEL:162101" answerLabel="Aspect"/></span><br/>
+										<span id="aspectmacro" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:162101" answerConceptIds="CIEL:162102,CIEL:162103,CIEL:162104" answerLabels="Urine clair,Urine trouble,Urine turbine" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								
+								<tr><td><span class="titre" ch-target="#bacteriesmm"><obs conceptId="CIEL:1271" id="microbacteries" answerConceptId="CIEL:160735" answerLabel="Bacteries"/><!-- A verifier --></span><br/>
+								<span id="bacteriesmm" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:160735" answerConceptIds="CIEL:703,CIEL:664" answerLabels="Positif,Négatif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									</fieldset></span>
+									</td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cellulesepiturine"><obs conceptId="CIEL:1271" id="microcelepitheriale" answerConceptId="CIEL:163685" answerLabel="cellules epitheliales"/></span><br/>
+										<span id="cellulesepiturine" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163685" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:159416" answerLabels="Négatif,1+,2+,3+,Rarement" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span203"><obs conceptId="CIEL:1271" id="macrocetones" answerConceptId="CIEL:161442" answerLabel="Cetones"/></span><br/>
+										<span id="span203" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161442" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365" answerLabels="Négatif,1+,2+,3+,4+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span205"><obs conceptId="CIEL:1271" id="macrocouleur" answerConceptId="CIEL:162106" answerLabel="Couleur"/></span><br/>
+										<span id="span205" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:162106" answerConceptIds="CIEL:162099,CIEL:127778,CIEL:162097,CIEL:162105,CIEL:162098,CIEL:162098,CIEL:162100" answerLabels="Incolore,Rouge,Jaune clair,Jaune-vert,Jaune foncé,Marron" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cristaux"><obs conceptId="CIEL:1271" id="microcristaux" answerConceptId="CIEL:163695" answerLabel="Cristaux"/></span><br/>
+										<span id="cristaux" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163695" answerConceptIds="CIEL:1160,CIEL:1499,CIEL:1408,CIEL:79241,CIEL:72703,CIEL:163644,CIEL:163643,CIEL:163642,CIEL:725,CIEL:123505,CIEL:74167,CIEL:722,CIEL:1107" answerLabels="Peu,Modéré,Élevé,Phosphate de Mg,Sulfate de Ca,Triple phosphate,Urates Amorphes,Urate d'Ammonium,Oxalate de Calcium,Acide Urique,Cystine,Cristaux de phosphate amorphes,Aucun" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cylindres"><obs conceptId="CIEL:1271" id="microcylindres" answerConceptId="CIEL:163696" answerLabel="Cylindres"/></span><br/>
+										<span id="cylindres" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163696" answerConceptIds="CIEL:1160,CIEL:1499,CIEL:1408,CIEL:163690,CIEL:163691,CIEL:163692,CIEL:163693,CIEL:163694,CIEL:1107" answerLabels="Peu,Modéré,Élevé,Granuleux,Graisseux,Epitheliales,Leucocytaires,Cireux,Aucun" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span210"><obs conceptId="CIEL:1271" id="macrodensite" answerConceptId="CIEL:161439" answerLabel="Densité"/></span><br/>
+										<span id="span210" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161439" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#filamentsmyceliensmm"><obs conceptId="CIEL:1271" id="microfilamentsmyceliens" answerConceptId="CIEL:163687" answerLabel="Filaments myceliens"/></span><br/>
+										<span id="filamentsmyceliensmm" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163687" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,Positif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span215"><obs conceptId="CIEL:1271" id="macroglucose" answerConceptId="CIEL:159733" answerLabel="Glucose"/></span><br/>
+										<span id="span215" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:159733" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span217"><obs conceptId="CIEL:1271" id="microhematies" answerConceptId="CIEL:163683" answerLabel="Hematies"/></span><br/>
+										<span id="span217" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163683" answerConceptIds="CIEL:1499,CIEL:1408,CIEL:1107" answerLabels="Modéré,Élevé,Aucun" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#macroleucocyte"><obs conceptId="CIEL:1271" id="macroleucocytes" answerConceptId="CIEL:161441" answerLabel="Leucocytes"/><!-- A verifier --></span><br/>
+										<span id="macroleucocyte" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161441" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#levures"><obs conceptId="CIEL:1271" id="microlevures" answerConceptId="CIEL:163686" answerLabel="Levures"/></span><br/>
+										<span id="levures" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163686" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span219"><obs conceptId="CIEL:1271" id="macronitrites" answerConceptId="CIEL:161440" answerLabel="Nitrites"/></span><br/>
+										<span id="span219" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161440" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#phmacros"><obs conceptId="CIEL:1271" id="macroph" answerConceptId="CIEL:161438" answerLabel="pH"/></span><br/>
+										<span id="phmacros" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161438" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<!--<tr>
+									<td>
+										<span class="titre" ch-target="#span221"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161438" answerLabel="Glucose"/></span><br/>
+										<span id="span221" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161438" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>-->
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span223"><obs conceptId="CIEL:1271" id="macroproteines" answerConceptId="CIEL:1875" answerLabel="Proteines"/></span><br/>
+										<span id="span223" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:1875" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365" answerLabels="Négatif,Positif,1+,2+,3+,4+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#sang"><obs conceptId="CIEL:1271" id="macrosang" answerConceptId="CIEL:162096" answerLabel="Sang"/></span><br/>
+										<span id="sang" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:162096" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<span class="titre" ch-target="#spores"><obs conceptId="CIEL:1271" id="microspores" answerConceptId="CIEL:163688" answerLabel="Spores"/></span><br/>
+										<span id="spores" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163688" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,1+,2+,3+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#trichomonas"><obs conceptId="CIEL:1271" id="microtrichomonas" answerConceptId="CIEL:163689" answerLabel="Trichomonas"/></span><br/>
+										<span id="trichomonas" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163689" answerConceptIds="CIEL:1160,CIEL:1499,CIEL:1408,CIEL:1107" answerLabels="Peu,Modéré,Élevé,Aucun" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#urobilinogenemm"><obs conceptId="CIEL:1271" id="microurobilinogene" answerConceptId="CIEL:163682" answerLabel="Urobilinogene"/></span><br/>
+										<span id="urobilinogenemm" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163682" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1874" answerLabels="Négatif,1+,2+,3+,Trace" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#bilirubinetes"><obs conceptId="CIEL:1271" id="bilirubintest" answerConceptId="CIEL:163680" answerLabel="Bilirubine"/></span><br/>
+										<span id="bilirubinetes" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163680" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1874" answerLabels="Négatif,1+,2+,3+,Trace" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP" width="48%">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#aspect"><obs conceptId="CIEL:1271" answerConceptId="CIEL:162101" answerLabel="Aspect"/></span><br/>
+										<span id="aspect" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:162101" answerConceptIds="CIEL:162102,CIEL:162103" answerLabels="Urine Clair,Urine Pas clair" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#bleumethylene"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163634" answerLabel="Bleu de Methylene"/></span><br/>
+										<span id="bleumethylene" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163634" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#couleurstool"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163641" answerLabel="Couleur"/></span><br/>
+										<span id="couleurstool" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163641" answerConceptIds="CIEL:162065,CIEL:160910,CIEL:162100,CIEL:160909,CIEL:1077,CIEL:5622" answerLabels="Couleur noire,Couleur jaune,Marron,Couleur verte,Sanglant,Autre" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span250"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161447" answerLabel="Examen Microscopique apres concentration"/></span><br/>
+										<span id="span250" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161447" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td><span class="titre" ch-target="#span251"><obs conceptId="CIEL:1271" answerConceptId="CIEL:304" answerLabel="Examen Microscopique direct"/><!-- A verifier --></span><br/>
+									<span id="span251" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:304" answerConceptIds="CIEL:120759,CIEL:137504" answerLabels="Cestode infection,Infection par larves d'ascarides" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+								</td></tr>
+							</table>
+						</td>
+						<td valign="TOP" width="48%">
+							<table>
+								<tr><td><span class="titre" ch-target="#span252"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1366" answerLabel="Malaria"/></span><br/><!-- A verifier -->
+								<span id="span252" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1366" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365" answerLabels="Négatif,1+,2+,3+,4+" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+								</td></tr>
+								<tr><td><span class="titre" ch-target="#span253"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1643" answerLabel="Malaria Test Rapide"/></span><br/><!-- A verifier -->
+								<span id="span253" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1643" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+								</td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#rechmicrofilaire"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161427" answerLabel="Recherche de microfilaire"/></span><br/>
+										<span id="rechmicrofilaire" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161427" answerConceptIds="CIEL:664,CIEL:161565,CIEL:114412" answerLabels="Négatif,Filariose bancroftienne,Infection au Mansonella ozzardi" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#rechcrypt"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163633" answerLabel="Recherche de cryptosporidium et Oocyste"/></span><br/>
+										<span id="rechcrypt" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163633" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span255"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159362" answerLabel="Sang Occulte"/></span><br/><!-- A verifier -->
+										<span id="span255" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159362" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>	
+			</div>
+			<div class="item">
+				<table>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#dengue"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163632" answerLabel="Dengue"/></span><br/>
+							<span id="dengue" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163632" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#hepatitebag"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1322" answerLabel="Hépatite B Ag"/></span><br/>
+								<span id="hepatitebag" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1322" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304" answerLabels="Négatif,Positif,Indéterminé,Echatillon de pauvre qualité" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#hepatitecigm"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1325" answerLabel="Hépatite C IgM"/></span><br/>
+							<span id="hepatitecigm" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1325" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304" answerLabels="Négatif,Positif,Indéterminé,Echatillon de pauvre qualité" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#span260"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1042" answerLabel="VIH Elisa"/><!-- A verifier --></span><br/>
+							<span id="span260" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1042" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304" answerLabels="Négatif,Positif,Indéterminé,ECHANTILLON DE PAUVRE QUALITÉ" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#span261"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1042" answerLabel="VIH test rapide"/></span><br/>
+							<span id="span261" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1042" answerConceptIds="CIEL:664,CIEL:703,CIEL:1304" answerLabels="Négatif,Positif,ECHANTILLON DE PAUVRE QUALITÉ" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								<tr><td><obs conceptId="CIEL:1271" id="panelppd" answerConceptId="CIEL:163631" answerLabel="P : PPD"/></td></tr>
+								<tr><td>P : Recherche de BARR (Verifier change datatype concept)</td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#culttuber"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159982" answerLabel="Culture de M. tuberculosis"/></span><br/>
+										<span id="culttuber" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159982" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:160008," answerLabels="Négatif,Positif,1+,2+,3+,specimen contaminé," showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#ppdq"><obs conceptId="CIEL:1271" id="ppdqualitatif" answerConceptId="CIEL:163630" answerLabel="PPD Qualitatif"/></span><br/>
+										<span id="ppdq" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163631"><obs conceptId="CIEL:163630" answerConceptIds="CIEL:1228,CIEL:1229" answerLabels="Réactif,Non Réactif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td><span class="titre" ch-target="#span270"><obs conceptId="CIEL:1271" id="ppdquantitatif" answerConceptId="CIEL:5475" answerLabel="PPD Quantitatif"/></span><br/>
+								<span id="span270" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163631"><obs conceptId="CIEL:5475" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								</fieldset></span>
+								</td></tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#barr1"><obs conceptId="CIEL:1271" id="barra" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 1"/></span><br/>
+										<span id="barr1" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#barr2"><obs conceptId="CIEL:1271" id="barrb" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 2"/></span><br/>
+										<span id="barr2" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#barr3"><obs conceptId="CIEL:1271" id="barrc" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 3"/></span><br/>
+										<span id="barr3" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										
+										<span class="titre" ch-target="#barr4"><obs conceptId="CIEL:1271" id="barrd" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 1"/></span><br/>
+										<span id="barr4" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										
+										<span class="titre" ch-target="#barr5"><obs conceptId="CIEL:1271" id="barre" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 2"/></span><br/>
+										<span id="barr5" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+	
+								<tr>
+									<td>
+										<span class="titre" ch-target="#barr6"><obs conceptId="CIEL:1271" id="barrf" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 3"/><!-- A verifier --></span><br/>
+										<span id="barr6" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span281"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1945" answerLabel="B-HCG"/></span><br/><!-- A verifier -->
+										<span id="span281" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1945" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#fsh"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161489" answerLabel="FSH"/></span><br/>
+										<span id="fsh" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161489" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td><span class="titre" ch-target="#span283"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161490" answerLabel="LH"/></span><br/>
+									<span id="span283" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161490" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#oestrogene"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163629" answerLabel="Oestrogene"/></span><br/>
+										<span id="oestrogene" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163629" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#progesterone"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161159" answerLabel="Progesterone"/></span><br/>
+										<span id="progesterone" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161159" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span286"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161516" answerLabel="Prolactine"/></span><br/>
+										<span id="span286" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:161516" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#t3"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161503" answerLabel="T3"/></span><br/>
+										<span id="t3" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:161503" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#t4"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161504" answerLabel="T4"/></span><br/>
+										<span id="t4" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:161504" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span289"><obs conceptId="CIEL:1271" answerConceptId="CIEL:45" answerLabel="Test de Grossesse"/><!-- A verifier --></span><br/>
+										<span id="span289" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:45" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304" answerLabels="Négatif,Positif,Indéterminé,ECHANTILLON DE PAUVRE QUALITÉ" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#tsh"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161505" answerLabel="TSH"/></span><br/>
+										<span id="tsh" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:161505" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+			<table>
+					<tr><td><span class="titre" ch-target="#span300"><obs conceptId="CIEL:1271" answerConceptId="161454" answerLabel="LCR GRAM"/></span><br/>
+					<span id="span300" class="togglable" style="display: none;">
+						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161454" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+						</fieldset></span>
+					</td></tr>
+					<tr><td><span class="titre" ch-target="#span301"><obs conceptId="CIEL:1271" answerConceptId="161466" answerLabel="LCR ZIELH NIELSEN"/></span><br/>
+					<span id="span301" class="togglable" style="display: none;">
+						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161466" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365" answerLabels="Négatif,+,++,+++,++++" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+						</fieldset></span>
+						<!-- A verifier --></td></tr>
+			</table>
+			</div>
+			<div class="item">
+				<!-- En cours  -->
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								
+								<tr><td>Ac anti HBc (hépatite B)</td></tr>
+								<tr><td>Ac anti hépatite A (IgM et IgG)</td></tr>
+								<tr><td>Ac AntiH HBs (hépatite B)</td></tr>
+								<tr><td>Anticorps anti-ADN Natif</td></tr>
+								<tr><td>Anticorps antinucléaire (ANA)</td></tr>
+								<tr>
+								<td>
+									<span class="titre" ch-target="#aso"><obs conceptId="CIEL:1271" answerConceptId="161469" answerLabel="ASO"/></span><br/>
+									<span id="aso" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161478"><obs conceptId="CIEL:161469" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									</fieldset></span>
+								</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#chlamydia"><obs conceptId="CIEL:1271" answerConceptId="163618" answerLabel="Chlamydia Ab"/></span><br/>
+										<span id="chlamydia" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163618" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#chlamydiaag"><obs conceptId="CIEL:1271" answerConceptId="163619" answerLabel="Chlamydia Ag"/></span><br/>
+										<span id="chlamydiaag" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163619" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#clostridium"><obs conceptId="CIEL:1271" answerConceptId="163612" answerLabel="Clostridium Difficile Toxin A &amp; B"/></span><br/>
+										<span id="clostridium" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163612" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cmviga"><obs conceptId="CIEL:1271" answerConceptId="161527" answerLabel="CMV Ig A"/></span><br/>
+										<span id="cmviga" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161527" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cmvigg"><obs conceptId="CIEL:1271" answerConceptId="161526" answerLabel="CMV Ig G"/></span><br/>
+										<span id="cmvigg" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161526" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td><span class="titre" ch-target="#span320"><obs conceptId="CIEL:1271" answerConceptId="161500" answerLabel="CRP"/></span><br/>
+								<span id="span320" class="togglable" style="display: none;">
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161500" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset></span>
+								</td></tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#cryptoant"><obs conceptId="CIEL:1271" answerConceptId="163613" answerLabel="Cryptococcus Antigene dipstick"/></span><br/>
+										<span id="cryptoant" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163613" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#dengueiga"><obs conceptId="CIEL:1271" answerConceptId="163617" answerLabel="Dengue Ig A"/></span><br/>
+										<span id="dengueiga" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163617" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#dengueigg"><obs conceptId="CIEL:1271" answerConceptId="163616" answerLabel="Dengue Ig G"/></span><br/>
+										<span id="dengueigg" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163616" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td><span class="titre" ch-target="#span330"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163620" answerLabel="Helicobacter Pilori"/></span><br/>
+								
+									<span id="span330" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163620" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#herpessimp"><obs conceptId="CIEL:1271" answerConceptId="CIEL:908" answerLabel="Herpes Simplex"/></span><br/>
+										<span id="herpessimp" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:908" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304,CIEL:1300" answerLabels="Négatif,Positif,Indéterminé,échantillon de pauvre qualité,équivoque" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#htlv"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163627" answerLabel="HTLV I et II"/></span><br/>
+										<span id="htlv" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163627" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#lecell"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163615" answerLabel="LE Cell"/></span><br/>
+											<span id="lecell" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163615" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset>
+											</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span335"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1643" answerLabel="Malaria Test Rapide"/><!-- A verifier --></span><br/>
+										<span id="span335" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1643" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304,CIEL:1300" answerLabels="Négatif,Positif,Indéterminé,échantillon de pauvre qualité,équivoque" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#monotest"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163614" answerLabel="Mono Test"/></span><br/>
+										<span id="monotest" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163614" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span337"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1619" answerLabel="Syphilis RPR"/><!-- A verifier --></span><br/>
+										<span id="span337" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1619" answerConceptIds="CIEL:664,CIEL:703,CIEL:703" answerLabels="Négatif,Positif,Inconnu" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span337"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163626" answerLabel="Syphilis Test Rapide"/></span><br/>
+										<span id="span337" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163626" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr><td>
+									<span class="titre" ch-target="#syphilistpha"><obs conceptId="CIEL:1271" answerConceptId="CIEL:1031" answerLabel="Syphilis TPHA"/></span><br/>
+									<span id="syphilistpha" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1031" answerConceptIds="CIEL:1311,CIEL:1312,CIEL:1313,CIEL:1314,CIEL:1315,CIEL:1316,CIEL:1317,CIEL:163621,CIEL:163622,CIEL:163623,CIEL:163624" answerLabels="&lt;1:2,1:2,1:4,1:8,1:16,1:32,&gt;1:32,1:64,1:128,1:256,&gt;1:572" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+								</td></tr>
+								<!--<tr><td>Test de Widal Ag H</td></tr>-->
+								<tr>
+									<td>
+										<span class="titre" ch-target="#testwidal"><obs conceptId="CIEL:1271" answerConceptId="CIEL:306" answerLabel="Test de Widal Ag O/H"/></span><br/>
+										<span id="testwidal" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:306" answerConceptIds="CIEL:1228,CIEL:1229" answerLabels="Réactif, Non réactif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#toxigmac"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161523" answerLabel="TOXOPLASMOSE GONDII Ig M Ac"/></span><br/>
+										<span id="toxigmac" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161523" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#toxigac"><obs conceptId="CIEL:1271" answerConceptId="CIEL:161522" answerLabel="TOXOPLASMOSE GONDII IgG Ac"/></span><br/>
+										<span id="toxigac" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161522" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table>
+					<tr><td><obs conceptId="CIEL:1271" id="cdvpanel" answerConceptId="CIEL:163628" answerLabel="P : CDV"/></td></tr>
+					<tr>
+						<td>
+							
+							<span class="titre" ch-target="#determinevih"><obs conceptId="CIEL:1271" id="cdvdeterminevih" answerConceptId="1040" answerLabel="Determine VIH"/></span><br/>
+							<span id="determinevih" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163628"><obs conceptId="CIEL:1040" id="firsttestvih" answerConceptIds="CIEL:703,CIEL:664" answerLabels="Positif,Négatif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td><!--2eme Test VIH-->
+							<span class="titre" ch-target="#colloidal"><obs conceptId="CIEL:1271" id="secondtestvih" answerConceptId="1326" answerLabel="Colloidal Gold"/></span><br/>
+							<span id="colloidal" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1326" answerConceptIds="CIEL:703,CIEL:664" answerLabels="Positif,Négatif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#syphilistestr"><obs conceptId="CIEL:1271" id="cdvsyphilis" answerConceptId="163626" answerLabel="Syphilis test rapide"/></span><br/>
+							<span id="syphilistestr" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163628"><obs conceptId="CIEL:163626" answerConceptIds="CIEL:703,CIEL:664" answerLabels="Positif,Négatif" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							</fieldset></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#span350"><obs conceptId="CIEL:1271" answerConceptId="160913" answerLabel="PSA"/></span><br/>
+							<span id="span350" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160913" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#testpap"><obs conceptId="CIEL:1271" answerConceptId="885" answerLabel="PAP Test"/></span><br/>
+							<span id="testpap" class="togglable" style="display: none;">
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:885" answerConceptIds="CIEL:1115,CIEL:1116" answerLabels="Normal,Anormal" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="100%">
+					<tr>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span400"><obs conceptId="CIEL:1271" answerConceptId="1305" answerLabel="Charge virale qualitative"/></span><br/>
+										<span id="span400" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:1305" answerConceptIds="CIEL:1301,CIEL:1306" answerLabels="Détectable,Indétectable" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#span380"><obs conceptId="CIEL:1271" answerConceptId="856" answerLabel="Charge virale quantitative"/></span><br/>
+										<span id="span380" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:856" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										
+										<span class="titre" ch-target="#pcr"><obs conceptId="CIEL:1271" answerConceptId="844" answerLabel="PCR"/></span><br/>
+										<span id="pcr" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:844" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1300,CIEL:1304" answerLabels="Détectable,Indétectable,Equivoque,Echatillon de pauvre qualité" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="TOP">
+							<table>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#testresistance"><obs conceptId="CIEL:1271" answerConceptId="CIEL:159984" answerLabel="Test de resistance TB"/></span><br/>
+										<span id="testresistance" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obsgroup groupingConceptId="159983">
+										<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159956,CIEL:767,CIEL:78280,CIEL:159958,CIEL:163611" answerLabels="Résistantes aux médicaments anti-tuberculose,Rifampicine,ISONIAZID,Sensibles aux médicaments antituberculeux,Invalide" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</obsgroup></fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 
+										<span class="titre" ch-target="#testresistancevih"><obs conceptId="CIEL:1271" answerConceptId="CIEL:163610" answerLabel="Test de resistance VIH"/></span><br/>
+										<span id="testresistancevih" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:163610" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			
+		</div>
+		</div>	
+	</div>
+	</div>
+	<br/>
+	<br/>
+	<div id="datePr">
+	Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
+	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/> <br/><br/>
+	<encounterProvider type="autocomplete"/>
+	</div>
+	
+	<div id="sauvegarde">
+		<center><submit submitClass="confirm right" submitCode="general.save"/><br/>
+		</center>
+	</div>
+</htmlform>

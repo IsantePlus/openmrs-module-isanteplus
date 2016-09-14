@@ -1,0 +1,1580 @@
+<htmlform formUuid="66207cc7-35ad-436a-8740-0810b92f17fb" formName="Fiche de Première Consultation OB-GYN" formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc" formVersion="1.0" formDescription="Fiche de Première Consultation OB-GYN;Fiche de Première Consultation OB-GYN">  
+	<style>
+		.section {
+			border: 1px solid $headerColor;
+			padding: 1px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+		.section_b {
+			background-color: #2F4F4F;
+			color:#FFFFFF;
+			padding: 2px;
+			text-align: center;
+			margin-bottom: 1em;
+		}
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 1px;
+			font-weight: bold;
+		}
+		.toggle-button{
+			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			width:100%";
+		}
+		
+		.contener
+		{
+			width:100%;
+			height:100%;
+			border:1px solid;
+			margin:0px;
+			padding:0px;
+			background:#87CEEB; border:1px solid #FFFFFF;
+		}
+		.hide{
+			margin:0px;
+			padding:0px;
+		}
+		a:link 
+		{ 
+		 text-decoration:none; 
+		}
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+		#sauvegarde
+		{
+			background:#81BEF7;
+			position:relative;
+			bottom:0px;
+			width:100%;
+			margin:0px;
+			padding-top:0px;
+			padding-bottom:5px;
+			padding-left:0px;
+			padding-right:0px;
+			height:50px;
+		}
+		#dateVisite{
+			background:#81BEF7;
+			top:0px;
+			width:100%;
+			padding-top:5px;
+		}
+		#scroll{
+			width: 100%;
+			height: 500px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}
+		#contenerGeneral
+		{
+			height:100%;
+			width:100%;
+			margin:0px;
+			padding:0px;
+		}
+	</style>
+	<script type="text/javascript">
+   jQuery(function() {
+        jQuery( '.toggle-button' ).on( 'click', function() {
+            // À décommenter si tu veux masquer toutes les autres div
+            jQuery( '.togglable' ).not( this.getAttribute( 'data-target' ) ).hide( 'slow' );
+             
+            jQuery( this.getAttribute( 'data-target' ) ).toggle( 'slow' );
+        });
+    });
+	</script> 
+	<script type="text/javascript">
+   jQuery(function() {
+       jQuery( '.titre' ).on( 'change', function() {
+		jQuery( this.getAttribute( 'ch-target' ) ).show();
+			
+        });
+    });
+	
+	  beforeSubmit.push(function() {
+	  
+	if ((getValue('asthme1.value') != '970') &amp;&amp; (getValue('asthme2.value') != '971') &amp;&amp; (getValue('asthme3.value') != '972')) {
+       setValue('asthme.value', '');
+    } else {
+	    setValue('asthme.value', '140234');
+    }
+	if ((getValue('cancer1.value') != '970') &amp;&amp; (getValue('cancer2.value') != '971') &amp;&amp; (getValue('cancer3.value') != '972')) {
+       setValue('cancer.value', '');
+    } else {
+	    setValue('cancer.value', '151521');
+    }
+	if ((getValue('cardiopathie1.value') != '970') &amp;&amp; (getValue('cardiopathie2.value') != '971') &amp;&amp; (getValue('cardiopathie3.value') != '972')) {
+       setValue('cardiopathie.value', '');
+    } else {
+	    setValue('cardiopathie.value', '163114');
+    }
+	if ((getValue('diabete1.value') != '970') &amp;&amp; (getValue('diabete2.value') != '971') &amp;&amp; (getValue('diabete3.value') != '972')) {
+       setValue('diabete.value', '');
+    } else {
+	    setValue('diabete.value', '140228');
+    }
+	if ((getValue('epilepsie1.value') != '970') &amp;&amp; (getValue('epilepsie2.value') != '971') &amp;&amp; (getValue('epilepsie3.value') != '972')) {
+       setValue('epilepsie.value', '');
+    } else {
+	    setValue('epilepsie.value', '152450');
+    }
+	if ((getValue('hta1.value') != '970') &amp;&amp; (getValue('hta2.value') != '971') &amp;&amp; (getValue('hta3.value') != '972')) {
+       setValue('hta.value', '');
+    } else {
+	    setValue('hta.value', '151927');
+    }
+	if ((getValue('tuberculose1.value') != '970') &amp;&amp; (getValue('tuberculose2.value') != '971') &amp;&amp; (getValue('tuberculose3.value') != '972')) {
+       setValue('tuberculose.value', '');
+    } else {
+	    setValue('tuberculose.value', '152460');
+    }
+	if ((getValue('mdr1.value') != '970') &amp;&amp; (getValue('mdr2.value') != '971') &amp;&amp; (getValue('mdr3.value') != '972')) {
+       setValue('mdr.value', '');
+    } else {
+	    setValue('mdr.value', '139071');
+    }
+	//Debut bacilloscopie
+	if ((getValue('bacidate1.value') == '') &amp;&amp; (getValue('bacipoids1.value') == '') &amp;&amp; (getValue('bacilloscopie1.value') != '703') &amp;&amp; (getValue('bacilloscopie1.value') != '664')) {
+       setValue('bacimois1.value', '');
+    } else {
+	    setValue('bacimois1.value', '0');
+    }
+	if ((getValue('bacidate2.value') == '') &amp;&amp; (getValue('bacipoids2.value') == '') &amp;&amp; (getValue('bacilloscopie2.value') != '703') &amp;&amp; (getValue('bacilloscopie2.value') != '664')) {
+       setValue('bacimois2.value', '');
+    } else {
+	    setValue('bacimois2.value', '2');
+    }
+	if ((getValue('bacidate3.value') == '') &amp;&amp; (getValue('bacipoids3.value') == '') &amp;&amp; (getValue('bacilloscopie3.value') != '703') &amp;&amp; (getValue('bacilloscopie3.value') != '664')) {
+       setValue('bacimois3.value', '');
+    } else {
+	    setValue('bacimois3.value', '3');
+    }
+	if ((getValue('bacidate4.value') == '') &amp;&amp; (getValue('bacipoids4.value') == '') &amp;&amp; (getValue('bacilloscopie4.value') != '703') &amp;&amp; (getValue('bacilloscopie4.value') != '664')) {
+       setValue('bacimois4.value', '');
+    } else {
+	    setValue('bacimois4.value', '5');
+    }
+	if ((getValue('bacidate5.value') == '') &amp;&amp; (getValue('bacipoids5.value') == '') &amp;&amp; (getValue('bacilloscopie5.value') != '703') &amp;&amp; (getValue('bacilloscopie5.value') != '664')) {
+       setValue('bacimois5.value', '');
+    } else {
+	    setValue('bacimois5.value', 'Fin de rx');
+    }
+	//Fin bacilloscopie
+	if((getValue('indication2result.value') == '') &amp;&amp; (getValue('indication2date.value') == ''))
+	{
+		setValue('indication2.value', '');
+	}
+	else{
+		setValue('indication2.value', '1171');
+	}
+	
+	if((getValue('hepatiteb_date1.value') == '') &amp;&amp; (getValue('hepatiteb_date2.value') == '') &amp;&amp; (getValue('hepatiteb_date3.value') == '') &amp;&amp; (getValue('hepatiteb_recu.value') != '1065') &amp;&amp; (getValue('hepatiteb_jamais.value') != '1066'))
+	{
+		setValue('hepatiteb.value', '');
+	}
+	else{
+		setValue('hepatiteb.value', '782');
+	}
+	
+	if((getValue('texoide_date1.value') == '') &amp;&amp; (getValue('texoide_date2.value') == '') &amp;&amp; (getValue('texoide_date3.value') == '') &amp;&amp; (getValue('texoide_recu.value') != '1065') &amp;&amp; (getValue('texoide_jamais.value') != '1066'))
+	{
+		setValue('texoide.value', '');
+	}
+	else{
+		setValue('texoide.value', '84879');
+	}
+	
+	if((getValue('pneumocoque_date1.value') == '') &amp;&amp; (getValue('pneumocoque_date2.value') == '') &amp;&amp; (getValue('pneumocoque_date3.value') == '') &amp;&amp; (getValue('pneumocoque_recu.value') != '1065') &amp;&amp; (getValue('pneumocoque_jamais.value') != '1066'))
+	{
+		setValue('pneumocoque.value', '');
+	}
+	else{
+		setValue('pneumocoque.value', '82215');
+	}
+	
+	if((getValue('autre_vacc_date1.value') == '') &amp;&amp; (getValue('autre_vacc_date2.value') == '') &amp;&amp; (getValue('autre_vacc_date3.value') == '') &amp;&amp; (getValue('autre_vacc_recu.value') != '1065') &amp;&amp; (getValue('autre_vacc_jamais.value') != '1066'))
+	{
+		setValue('autre_vacc.value', '');
+	}
+	else{
+		setValue('autre_vacc.value', '5622');
+	}
+	
+	 return true;
+	});
+	</script> 
+	<div id="contenerGeneral">
+		<div id="dateVisite">
+			<b>Fiche de Première Consultation OB-GYN</b><br/>
+			<table>
+				<tr>
+					<td>Date visite:</td>
+					<td><encounterDate default="today"/><br/>
+					<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+					</td>
+					<td>
+						<center><submit submitClass="confirm right" submitCode="general.save"/></center>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div id="scroll">
+		<div width="100%">
+			<a href="#read"><div href="#read" class="toggle-button" data-target="#div1">INFORMATION GÉNÉRALE</div></a>
+			<div id="div1" class="togglable">
+				<fieldset>
+					<table class="baseline-aligned">
+						<tr><td>Age: <lookup class="value" expression="patient.age"/></td><td>Groupe sanguin : <obs conceptId="CIEL:300" answerConceptIds="CIEL:690,CIEL:692,CIEL:694,CIEL:696,CIEL:699,CIEL:701,CIEL:1230,CIEL:1231,CIEL:1107" answerLabels="A+,A-,B+,B-,O+,O-,AB+,AB-,Inconnu" style="radio"/></td></tr>
+						<tr><td colspan="2">Patiente vue pour Consultation : <obs conceptId="CIEL:160288" answerConceptIds="CIEL:160456,CIEL:1622,CIEL:1623,CIEL:5483" answerLabels="Gynécologique,Prénatale,Postnatale,Planification familiale" style="radio"/></td></tr>
+						<tr><td colspan="2">Source de référence :
+							<obs conceptId="CIEL:159936" answerConceptId="CIEL:5485" answerLabel="Hôpital"/>&#160;&#160;
+							<obs conceptId="CIEL:159936" answerConceptId="CIEL:160542" answerLabel="Clinique Externe" style="checkbox"/>&#160;&#160;
+							<obs conceptId="CIEL:159936" answerConceptId="CIEL:159940" answerLabel="Centres CDV intégrés" style="checkbox"/>&#160;&#160;
+							<obs conceptId="CIEL:159936" answerConceptId="CIEL:159938" answerLabel="Programmes communautaires" style="checkbox"/>
+						</td></tr>
+						<tr>
+							<td colspan="2">
+								Niveau d’étude : <obs conceptId="CIEL:1712" answerConceptIds="CIEL:1713,CIEL:1714,CIEL:159785" answerLabels="Primaire,Secondaire,Universitaire" style="radio"/>
+								<obs conceptId="CIEL:159400" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Alphabétisée,Non Alphabétisée" style="radio"/>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>	
+		</div>
+		<div>
+			<a href="#read" class="lien"><div class="toggle-button" data-target="#div2">ANTECEDENTS HEREDO-COLLATERAUX</div></a>
+			<div id="div2" class="togglable" style="display:none;">
+				<fieldset>
+					   
+					<obs conceptId="CIEL:163607" answerConceptIds="CIEL:163729,CIEL:163728" answerLabels="Aucune, Inconnu" style="radio"/>
+					<table width="80%">
+						<tr>
+							<td valign="TOP">
+								<table>
+									<tr>
+										<td></td><td>Mère&#160;&#160;</td><td>Père&#160;&#160;</td><td>Frère/Sœur</td>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>Asthme 	<span style="display: none"> <obs conceptId="CIEL:160592" id="asthme" answerConceptId="CIEL:140234" defaultValue="CIEL:140234" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="asthme1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="asthme2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="asthme3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>Cancer <span style="display: none"><obs conceptId="CIEL:160592" id="cancer" answerConceptId="CIEL:151521" defaultValue="CIEL:151521" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="cancer1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="cancer2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="cancer3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>Cardiopathie <span style="display: none"><obs conceptId="CIEL:160592" id="cardiopathie" answerConceptId="CIEL:163114" defaultValue="CIEL:163114" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="cardiopathie1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="cardiopathie2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="cardiopathie3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+								</table>
+							</td>
+							<td valign="TOP">
+								<table>
+									<tr>
+										<td></td><td>Mère&#160;&#160;</td><td>Père&#160;&#160;</td><td>Frère/Sœur</td>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>Diabète <span style="display: none"><obs conceptId="CIEL:160592" id="diabete" answerConceptId="CIEL:140228" defaultValue="CIEL:140228" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="diabete1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="diabete2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="diabete3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>Epilepsie <span style="display: none"><obs conceptId="CIEL:160592" id="epilepsie" answerConceptId="CIEL:152450" defaultValue="CIEL:152450" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="epilepsie1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="epilepsie2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="epilepsie3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>HTA <span style="display: none"><obs conceptId="CIEL:160592" id="hta" answerConceptId="CIEL:151927" defaultValue="CIEL:151927" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="hta1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="hta2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="hta3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>Tuberculose <span style="display: none"><obs conceptId="CIEL:160592" id="tuberculose" answerConceptId="CIEL:152460" defaultValue="CIEL:152460" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="tuberculose1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="tuberculose2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="tuberculose3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+									<tr>
+										<obsgroup groupingConceptId="160593">
+											<td>MDR TB (waiting for New concept) <span style="display: none"><obs conceptId="CIEL:160592" id="mdr" answerConceptId="CIEL:139071" defaultValue="CIEL:139071" answerLabel=""/></span>&#160;&#160;</td>
+											<td><obs conceptId="CIEL:1560" id="mdr1" answerConceptId="CIEL:970" answerLabel="" style="checkbox"/></td>
+											<td><obs conceptId="CIEL:1560" id="mdr2" answerConceptId="CIEL:971" answerLabel="" style="checkbox" /></td>
+											<td><obs conceptId="CIEL:1560" id="mdr3" answerConceptId="CIEL:972" answerLabel="" style="checkbox"/></td>
+										</obsgroup>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<br/>
+					Autres: <obs conceptId="CIEL:162148" rows="1" cols="50"/>
+				</fieldset>
+			</div>	
+		</div>	
+		<!--<section headerLabel="ANTECEDENTS HEREDO-COLLATERAUX">	
+		</section>-->
+		<div>
+			<!--<div class="lienvisible"><a href="#read">ANTECEDENTS PERSONNELS/HABITUDES</a></div>-->
+			<a href="#read" class="lien"><div class="toggle-button" data-target="#div3">ANTECEDENTS PERSONNELS/HABITUDES</div></a>
+			<div id="div3" class="togglable" style="display:none;">
+				<fieldset>
+					<obs conceptId="CIEL:163730" answerConceptIds="CIEL:163608,CIEL:163609" answerLabels="Aucune, Inconnu" style="radio"/>
+					<table class="baseline-aligned" width="100%">
+						<tr>
+							<td valign="TOP">
+								<table>
+									<tr>
+										<td>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:152512" answerLabel="Accident cérébro-vasculaire"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:110247" answerLabel="Allergies, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:139212" answerLabel="Asthme"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:151286" answerLabel="Cancer, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:156660" answerLabel="IST, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:122432" answerLabel="Cardiopathie"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163521" answerLabel="Chirurgie, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup>
+											<br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163520" answerLabel="Trauma, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td valign="TOP">
+								<table>
+									<tr>
+										<td>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:1625" answerLabel="Epilepsie"/></obsgroup><br/>
+											<!--NEW CONCEPT ADDED--><obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163583" answerLabel="Hémoglobinopathie, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:156639" answerLabel="HTA"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:156633" answerLabel="Hyperchoestérolémie"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:159449" answerLabel="Alcool"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:162556" answerLabel="Drogue, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+										<!--NEW CONCEPT ADDED--><obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163731" answerLabel="Tabac"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:156630" answerLabel="Diabète"/></obsgroup><br/>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td valign="TOP">
+								<table>
+									<tr>
+										<td>
+											<!--NEW CONCEPT ADDED--><obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163584" answerLabel="Malnutrition"/></obsgroup><br/>
+											<!--NEW CONCEPT ADDED--><obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163585" answerLabel="Perte de poids"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:151632" answerLabel="Tuberculose"/></obsgroup><br/>
+											<!--NEW CONCEPT ADDED--><obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:163586" answerLabel="MDR TB"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633"><obs conceptId="CIEL:1628" answerConceptId="CIEL:151282" answerLabel="Troubles psychiatriques, précisez:"/><br/><obs conceptId="CIEL:160221"/></obsgroup><br/>
+											<obsgroup groupingConceptId="1633">Autres, précisez :
+											  <!-- <obs conceptId="CIEL:1628" style="autocomplete" answerClasses="Diagnosis" showCommentField="true" commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;"/><br/>-->
+											   <obs conceptId="CIEL:160221"/>
+											</obsgroup>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr><td colspan="3">Statut VIH <obs conceptId="CIEL:1169" answerConceptIds="CIEL:1067,CIEL:664,CIEL:703" answerLabels="Non testé,Négatif,Positif" style="radio"/> &#160;&#160;&#160;&#160;&#160;Date<obs conceptId="CIEL:160554"/></td></tr>
+						<tr><td></td><td colspan="2">Si positif, enrôlée en soins :<obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/> &#160;&#160;&#160;&#160;&#160;CD4 <obs conceptId="CIEL:159375"/>cellules/mm3  &#160;&#160;&#160;&#160;&#160;Date <obs conceptId="CIEL:159376"/></td></tr>
+						<tr><td><obs conceptId="CIEL:160117" answerConceptId="CIEL:160119" answerLabel="ARV"/></td><td colspan="2">Si oui, médicaments :<obs conceptId="CIEL:163322"/></td></tr>
+						<tr><td>Date de début :<obs conceptId="CIEL:1190"/></td></tr>
+						<tr><td colspan="3">Prophylaxie :<obs conceptId="CIEL:1109" answerConceptId="CIEL:105281" answerLabel="Cotrimoxazole"/>
+						<obs conceptId="CIEL:1110" answerConceptId="CIEL:71780" answerLabel="Azythromycine"/>
+						<obs conceptId="CIEL:1109" answerConceptId="CIEL:76488" answerLabel="Fluconazole"/>
+						<obs conceptId="CIEL:1110" answerConceptId="CIEL:1679" answerLabel="INH"/>
+						</td>
+						</tr>
+						<tr><td colspan="3">Médicaments actuels: &#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:159367" answerConceptIds="CIEL:1065,CIEL:1066" style="radio" answerLabels="Oui,Non" showCommentField="true" commentFieldLabel=""/></td></tr>
+						<tr><td colspan="3">Remarque: &#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:161011" rows="1" cols="50"/></td></tr>
+					</table>
+				</fieldset>
+			</div>	
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div4">ANTECEDENTS OBSTETRICO-GYNECOLOGIQUES</div></a>
+			<div id="div4" class="togglable" style="display:none;">
+				<fieldset>
+					<!--<section headerLabel="ANTECEDENTS OBSTETRICO-GYNECOLOGIQUES">-->
+			<table>
+				<tr><td>Age des Ménarches  <obs conceptId="CIEL:160598"/></td><td>Age des premières relations sexuelles <obs conceptId="CIEL:163587"/></td><td>Nombre cumulé de partenaires sexuels<obs conceptId="CIEL:5570"/></td></tr> 
+				<tr><td>Durée des Règles <obs conceptId="CIEL:163732"/> jours </td><td>Durée des Cycles <obs conceptId="CIEL:160597"/> jours</td><td>DDR <obs conceptId="CIEL:1427"/> DPA <obs conceptId="CIEL:5596"/></td></tr>
+				<tr>
+					<td>Dysménorrhée : <obs conceptId="CIEL:1628" answerConceptId="158306" answerLabel=""/></td>
+					<td>Si oui,<obs conceptId="CIEL:1628" answerConceptIds="CIEL:129135,CIEL:152336" answerLabels="Primaire OU, Secondaire" style="radio"/></td>
+					<td>Infertilité :<obs conceptId="CIEL:1628" answerConceptId="158308" answerLabel=""/></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+					G <obs conceptId="CIEL:5624"/> P <obs conceptId="CIEL:1053"/> A <obs conceptId="CIEL:1823"/> EV <obs conceptId="CIEL:1825"/>
+					<obs conceptId="CIEL:1628" answerConceptIds="CIEL:115491,CIEL:113006,CIEL:117612" answerLabels="Grossesse multiple,Pré éclampsie sévère,Hémorragie de la grossesse/post-partum" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Grossesse 1 &#160;&#160;&#160;&#160;&#160;Date <obs conceptId="CIEL:160602"/> &#160;&#160;&#160;&#160;&#160;Suivi :<obs conceptId="1622" style="yes_no" yesLabel="Oui" noLabel="Non"/>&#160;&#160;&#160;&#160;&#160;
+						Accouchement: <obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589" answerLabels="Domicile, Institution" style="radio"/>&#160;&#160;&#160;&#160;&#160;
+						Naissance vivante : <obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872" answerLabels="Oui,Non" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Grossesse 2 &#160;&#160;&#160;&#160;&#160;Date <obs conceptId="CIEL:160602"/> &#160;&#160;&#160;&#160;&#160;Suivi :<obs conceptId="1622" style="yes_no" yesLabel="Oui" noLabel="Non"/>&#160;&#160;&#160;&#160;&#160;
+						Accouchement: <obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589" answerLabels="Domicile, Institution" style="radio"/>&#160;&#160;&#160;&#160;&#160;
+						Naissance vivante : <obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872" answerLabels="Oui,Non" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Grossesse 3 &#160;&#160;&#160;&#160;&#160;Date <obs conceptId="CIEL:160602"/> &#160;&#160;&#160;&#160;&#160;Suivi :<obs conceptId="1622" style="yes_no" yesLabel="Oui" noLabel="Non"/>&#160;&#160;&#160;&#160;&#160;
+						Accouchement: <obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589" answerLabels="Domicile, Institution" style="radio"/>&#160;&#160;&#160;&#160;&#160;
+						Naissance vivante : <obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872" answerLabels="Oui,Non" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<obsgroup groupingConceptId="160714">
+						<obs conceptId="CIEL:1651" answerConceptId="CIEL:1171" answerLabel="ATCD de Césarienne"/><br/>
+						Si oui, Indication1 <obs conceptId="CIEL:160716"/>  Date 1 <obs conceptId="CIEL:160715" allowTime="false"/>  
+						</obsgroup>
+						<obsgroup groupingConceptId="160714">
+							<span style="display:none"><obs conceptId="CIEL:1651" id="indication2" answerConceptId="CIEL:1171" answerLabel="ATCD de Césarienne" defaultValue="CIEL:1171"/><br/></span>
+						  Indication2 <obs conceptId="CIEL:160716" id="indication2result"/> Date 2 <obs conceptId="CIEL:160715" id="indication2date" allowTime="false"/>
+						</obsgroup>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Date du dernier dépistage du cancer du Col :<obs conceptId="CIEL:163267"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<!--use ifmode -->Méthode utilisée : <obs conceptId="CIEL:163589" showCommentField="true" commentFieldLabel="si autre, préciser"/> Résultat :<obs conceptId="CIEL:885" answerConceptIds="CIEL:1115,CIEL:1116,CIEL:1118" answerLabels="Normal,Anormal,Jamais réalisé" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Palpation mensuelle des Seins <obs conceptId="CIEL:163590" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Mammographie (âge &gt; 35ans) : <obs conceptId="CIEL:163591" answerConceptIds="CIEL:1267,CIEL:1118" answerLabels="Oui,Non" style="radio"/> Si oui, <obs conceptId="CIEL:163591" answerConceptIds="CIEL:1115,CIEL:1116" answerLabels="Normal,Anormal" style="radio"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Planification familiale :<obs conceptId="5271" style="yes_no" yesLabel="Oui" noLabel="Non"/>  Si oui, méthode :<obs conceptId="374" showCommentField="true" commentFieldLabel=""/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Ménopause :<obs conceptId="CIEL:1628" answerConceptId="CIEL:134346" answerLabel=""/> Si oui, âge :<obs conceptId="CIEL:160599"/>
+					</td>
+				</tr>
+			</table>
+			</fieldset>
+			</div>
+			</div>
+		
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div5">VACCINS</div></a>
+		<div id="div5" class="togglable" style="display:none;">
+		<fieldset>
+			<table border="1" width="100%">
+				<tr>
+					<th>Type</th><th>Date Reçu</th><th>Date Reçu</th><th>Date Reçu</th><th>Reçu, Date Inconnu</th><th>Jamais Reçu</th>
+				</tr>
+				<repeat>
+					<template>
+						<obsgroup groupingConceptId="1441">
+						<tr>
+							
+							<td>{drugname} <span class="vacc" style="display: none"><obs conceptId="CIEL:984" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel=""/></span></td>
+							<td><obs conceptId="CIEL:1410" id="{id}_date1"/></td><td><obs conceptId="CIEL:1410" id="{id}_date2"/></td><td><obs conceptId="CIEL:1410" id="{id}_date3"/></td>
+							<td><obs conceptId="CIEL:163100" id="{id}_recu" answerConceptId="CIEL:1065" answerLabel=""/></td>
+							<td><obs conceptId="CIEL:163100" id="{id}_jamais" answerConceptId="CIEL:1066" answerLabel=""/></td>
+						</tr>
+						</obsgroup>
+					</template>
+						<render concept="CIEL:782" drugname="Hépatite B" id="hepatiteb" color="#D8D8D8"/>
+						<render concept="CIEL:84879" drugname="Tétanos Texoïde" id="texoide" color="#FFFFFF"/>
+						<render concept="CIEL:82215" drugname="Pneumocoque" id="pneumocoque" color="#D8D8D8"/>
+				</repeat>
+				<repeat>
+					<template>
+						<obsgroup groupingConceptId="1441">
+						<tr>
+							<td>{drugname} <span class="vacc" style="display: none"><obs conceptId="CIEL:984" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel=""/></span>
+							<obs conceptId="CIEL:984" style="autocomplete" showCommentField="true" commentFieldLabel=""/>
+							</td>
+							<td><obs conceptId="CIEL:1410" id="{id}_date1"/></td><td><obs conceptId="CIEL:1410" id="{id}_date2"/></td><td><obs conceptId="CIEL:1410" id="{id}_date3"/></td>
+							<td><obs conceptId="CIEL:163100" id="{id}_recu" answerConceptId="CIEL:1065" answerLabel=""/></td>
+							<td><obs conceptId="CIEL:163100" id="{id}_jamais" answerConceptId="CIEL:1066" answerLabel=""/></td>
+						</tr>
+						</obsgroup>
+					</template>
+						<render concept="CIEL:5622" drugname="Autre :" id="autre_vacc" color="#FFFFFF"/>
+				</repeat>
+			</table>
+		</fieldset>
+		</div>
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div12">SIGNES VITAUX/ANTHROPOMETRIE</div></a>
+			<div id="div12" class="togglable" style="display:none;">
+			<fieldset>
+			<table width="100%">
+				<tr>
+					<td>Pds <obs conceptId="CIEL:5089"/> kg</td><td>Taille <obs conceptId="CIEL:5090"/>cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> cm</td>
+				</tr>	
+				<tr>
+					<td>Temp <obs conceptId="CIEL:5088"/>°C</td><td>Pouls <obs conceptId="CIEL:5087"/></td><td>FR <obs conceptId="CIEL:5242"/></td><td>IMC Pds kg/T² m</td><td>PB cm</td>
+				</tr>
+				<tr>
+					<td colspan="5"><!-- A verifier with James -->
+					Nom et Prénom du Prestataire :<obs conceptId="CIEL:1473"/></td>
+				</tr>
+			</table>
+			</fieldset>
+			</div>
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div13">MOTIFS DE CONSULTATION</div></a>
+		<div id="div13" class="togglable" style="display:none;">
+		<fieldset>
+			<!--New Concept added-->Agression Sexuelle :<obs conceptId="CIEL:163737" answerConceptIds="CIEL:163733,CIEL:163734,CIEL:163735,CIEL:163736" answerLabels="&lt;72h,72-120h,120h-2sem,&gt;2sem" style="radio"/>
+			<table width="100%">
+				<tr>
+					<td width="30%"><obs conceptId="CIEL:159614" answerConceptId="CIEL:148989" answerLabel="Aménorrhée, précisez"/></td>
+					<td width="30%"><obs conceptId="CIEL:159614" answerConceptId="CIEL:163740" answerLabel="Fièvre &lt; 2 semaines"/> <!-- NEW CONCEPT ADDED --></td>
+					<td width="30%"><obs conceptId="CIEL:159614" answerConceptId="CIEL:965" answerLabel="Planification Familiale"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:135367" answerLabel="Asthénie"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:162260" answerLabel="Fièvre ≥ 2 semaines"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:137593" answerLabel="Pollakiurie"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:139084" answerLabel="Céphalée"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:871" answerLabel="Frissons"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:162" answerLabel="Poly ménorrhée"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:113377" answerLabel="Changement dans la fréquence et/ou &lt;br/&gt; intensité des mouvements foetaux"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:138905" answerLabel="Hémoptysie"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:128310" answerLabel="Prurit Vulvaire"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:206" answerLabel="Convulsions"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:138043" answerLabel="Hypoménorrhée"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:159937" answerLabel="PTME"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:150167" answerLabel="Courbatures"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:134345" answerLabel="Hyperménorrhée"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:147232" answerLabel="Saignement Vaginal"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:142412" answerLabel="Diarrhée"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:6031" answerLabel="Inappétence"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:140941" answerLabel="Sueurs profuses face/doigts"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:151" answerLabel="Douleurs Abdominales"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:123396" answerLabel="Leucorrhée"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:163739" answerLabel="Toux &lt; 2 semaines"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:141128" answerLabel="Douleurs Épigastriques en barre"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:130641" answerLabel="Masse Hypogastrique"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:159799" answerLabel="Toux ≥ 2 semaines"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:131034" answerLabel="Douleurs Hypogastriques"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:134345" answerLabel="Ménorragie"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:118938" answerLabel="Troubles Visuels"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:159361" answerLabel="Douleurs précordiales"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:163738" answerLabel="Métrorragie"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:122983" answerLabel="Vomissement"/></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:120749" answerLabel="Douleurs thoraciques"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:460" answerLabel="Œdème"/></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:120749" answerLabel="Dyspnée"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:114997" answerLabel="Oligo ménorrhée"/></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:122496" answerLabel="Dysurie"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:148968" answerLabel="Passage de liquide par le vagin"/></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:113224" answerLabel="Ecoulement nasal"/></td>
+					<td><obs conceptId="CIEL:159614" answerConceptId="CIEL:832" answerLabel="Perte de poids"/></td>
+					<td></td>
+				</tr>
+			</table>
+			</fieldset>
+		</div>
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div6">EXAMEN PHYSIQUE</div></a>
+		<div id="div6" class="togglable" style="display:none;">
+		<fieldset>
+		<table width="100%">
+				<tr>
+				<td valign="TOP">
+				Marquer si l'examen clinique n'est pas conduit.
+				<table width="70%" class="tg">
+					<tr>
+					   <th></th>
+					   <th class="tg-5cem">Normal</th>
+					   <th class="tg-5cem">Anormal</th>
+					   <th class="tg-5cem">Non Effectué</th>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Général</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:159438" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:163293" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Tête</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1122" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1122" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1122" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Cou + Thyroïde</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163388" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163388" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163388" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Poumons</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1123" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1123" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1123" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Coeur</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1124" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1124" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1124" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Seins</td>
+						<td><span id="normal1"><obs conceptId="CIEL:159780" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:159780" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:159780" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Abdomen</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1125" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1125" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1125" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Utérus</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163742" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163742" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163742" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Organes génitaux Externes</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163743" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163743" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163743" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Vagin</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163744" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163744" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163744" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Col</td>
+						<td><span id="normal1"><obs conceptId="CIEL:160704" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:160704" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:160704" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+						
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Annexes</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163745" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163745" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163745" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+						
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Toucher Rectal</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163746" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163746" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163746" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Membres</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1127" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1127" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1127" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Reflexes Ostéo-Tendineux</td>
+						<td><span id="normal1"><obs conceptId="CIEL:160623" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:160623" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:160623" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>Peau</td>
+						<td><span id="normal1"><obs conceptId="CIEL:1120" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1120" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1120" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>Lymphadenopathy</td>
+						<td><span id="normal1">Absent</span></td>
+						<td><span id="anormal1">Présent</span></td>
+						<td><span id="pasconduit1">Non Effectué</span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>-Cervicale</td>
+						<td><span id="normal1"><obs conceptId="CIEL:145802" answerConceptId="CIEL:163747" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:145802" answerConceptId="CIEL:163748" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:145802" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8" class="checkboxGroup">
+						<td>-Supraclaviculaire</td>
+						<td><span id="normal1"><obs conceptId="CIEL:159003" answerConceptId="CIEL:163747" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:159003" answerConceptId="CIEL:163748" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:159003" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr class="checkboxGroup">
+						<td>-Axillaire</td>
+						<td><span id="normal1"><obs conceptId="CIEL:148058" answerConceptId="CIEL:163747" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:148058" answerConceptId="CIEL:163748" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:148058" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+					<tr bgcolor="#D8D8D8"  class="checkboxGroup">
+						<td>-Inguinale</td>
+						<td><span id="normal1"><obs conceptId="CIEL:163950" answerConceptId="CIEL:163747" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:163950" answerConceptId="CIEL:163748" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:163950" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>
+				<!--<tr class="checkboxGroup">
+						<td>Autres :<obs conceptId="CIEL:1119" showCommentField="true" commentFieldLabel=""/></td>
+						<td><span id="normal1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:163747" answerLabel=""/></span></td>
+						<td><span id="anormal1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:163748" answerLabel=""/></span></td>
+						<td><span id="pasconduit1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
+					</tr>-->
+				
+				  </table>
+				  </td>
+				  
+				  <td style="padding-left:5px" valign="TOP">
+					<br/>
+					 <table>
+						<tr><td>Description des conclusions anormales</td></tr>
+						<tr>
+							<td>
+								<obs conceptId="CIEL:1391" rows="28" cols="45"/>
+							</td>
+						</tr>
+					 </table>
+				  </td>
+				  </tr>
+				  <tr>
+					<td>Rythme cardiaque fœtal <obs conceptId="CIEL:1440"/> /min</td>
+					<td>Hauteur utérine <obs conceptId="CIEL:1439"/> cm</td>
+					<td>Œdème <obs conceptId="CIEL:460" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/></td>
+				  </tr>
+				  <tr>
+					<td>Présentation : <obs conceptId="CIEL:160090" answerConceptIds="CIEL:160001,CIEL:139814,CIEL:112259" answerLabels="Céphalique (C),Siège (S),Transversale (T)" style="radio"/></td>
+					<td>Position <obs conceptId="CIEL:163749" answerConceptIds="CIEL:5141,CIEL:5139" answerLabels="D,G" style="radio"/></td>
+					<td>Contraction utérine <obs conceptId="CIEL:163750" answerConceptIds="CIEL:163748,CIEL:163747" answerLabels="Oui,Non" style="radio"/></td>
+				  </tr>
+				</table>
+				</fieldset>
+		</div>
+		</div>
+		<div>
+			<a href="#read"><div class="toggle-button" data-target="#div7">IMPRESSIONS CLINIQUES/DIAGNOSTIQUES</div></a>
+			<div id="div7" class="togglable" style="display:none;">
+				<fieldset>
+			<table width="100%">
+				<tr><th>Pathologies [Code CIM 10]</th><th>Pathologies [Code CIM 10]</th><th>Pathologies [Code CIM 10]</th></tr>
+				<tr>
+					<td valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher1"><obs conceptId="CIEL:1284" answerConceptId="CIEL:152370" answerLabel="Agression sexuelle [T74.21XA]"/></span><br/>
+									<span id="cacher1" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher2"><obs conceptId="CIEL:1284" answerConceptId="CIEL:147635" answerLabel="Adénofibrome (ADF) du sein [N60.39]"/></span><br/>
+									<span id="cacher2" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher4"><obs conceptId="CIEL:1284" answerConceptId="CIEL:121629" answerLabel="Anémie"/></span><br/>
+									<span id="cacher4" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher5"><obs conceptId="CIEL:1284" answerConceptId="CIEL:50" answerLabel="Avortement [O03.9]," showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher5" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+									<!--<obs conceptId="CIEL:160850" textLabel="précisez :" showCommentField="true" commentFieldLabel="&lt;br/&gt;si autre précisez"/><br/>-->
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher6"><obs conceptId="CIEL:1284" answerConceptId="CIEL:128983" answerLabel="Cancer de l’endomètre [C54.1]"/></span><br/>
+									<span id="cacher6" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher7"><obs conceptId="CIEL:1284" answerConceptId="CIEL:133318" answerLabel="Cancer de l’ovaire [C56.9]"/></span><br/>
+									<span id="cacher7" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher8"><obs conceptId="CIEL:1284" answerConceptId="CIEL:133354" answerLabel="Cancer de sein [C50.919], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher8" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher9"><obs conceptId="CIEL:1284" answerConceptId="CIEL:139071" answerLabel="Cardiopathie [I51.9], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher9" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher10"><obs conceptId="CIEL:1284" answerConceptId="CIEL:145548" answerLabel="Chorioamniotite [O41.129]"/></span><br/>
+									<span id="cacher10" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher11"><obs conceptId="CIEL:1284" answerConceptId="CIEL:1449" answerLabel="Diabète + grossesse [O99.810], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher11" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+								<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher12"><obs conceptId="CIEL:1284" answerConceptId="CIEL:115178" answerLabel="Dystrophie ovarienne [N83.8]" showCommentField="true" commentFieldLabel=", précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher12" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher13"> <obs conceptId="CIEL:1284" answerConceptId="CIEL:112335" answerLabel="Eclampsie [O15.9]"/></span><br/>
+									<span id="cacher13" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher14"><obs conceptId="CIEL:1284" answerConceptId="CIEL:118629" answerLabel="Endométriose [N80.9], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher14" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher15"><obs conceptId="CIEL:1284" answerConceptId="CIEL:123455" answerLabel="Fibrome utérin [D26.9], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher15" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher16"><obs conceptId="CIEL:1284" answerConceptId="CIEL:46" answerLabel="Grossesse ectopique [O0.00], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher16" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher17"><obs conceptId="CIEL:1284" answerConceptId="CIEL:132678" answerLabel="Grossesse intra utérine [Z33.1]"/></span><br/>
+									<span id="cacher17" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher18"><obs conceptId="CIEL:1284" answerConceptId="CIEL:47" answerLabel="HTA + grossesse [O16.9]" showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher18" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher19"><obs conceptId="CIEL:1284" answerConceptId="CIEL:163751" answerLabel="Hémorragie troisième trimestre [O46.90]" showCommentField="true" commentFieldLabel=", précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher19" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher20"><obs conceptId="CIEL:1284" answerConceptId="CIEL:490" answerLabel="Hyperémèse gravidique [O21.0]"/></span><br/>
+									<span id="cacher20" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher21"><obs conceptId="CIEL:1284" answerConceptId="CIEL:116988" answerLabel="Infection génito-urinaire (IGU) [N73.9]"/></span><br/>
+									<span id="cacher21" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher22"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112992" answerLabel="IST, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher22" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher23"><obs conceptId="CIEL:1284" answerConceptId="CIEL:119702" answerLabel="Kyste de l’ovaire [N83.29], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher23" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher24"><obs conceptId="CIEL:1284" answerConceptId="CIEL:157480" answerLabel="Lésion cervicale [D26.0], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher24" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher25"><obs conceptId="CIEL:1284" answerConceptId="CIEL:902" answerLabel="Maladie inflammatoire pelvienne [N73.9]"/></span><br/>
+									<span id="cacher25" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher26"><obs conceptId="CIEL:159394" answerConceptId="CIEL:116128" answerLabel="Malaria (paludisme) [B52.9]*"/></span><br/>
+									<span id="cacher26" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher27"><obs conceptId="CIEL:1284" answerConceptId="CIEL:158489" answerLabel="Menace d’accouchement prématurée [O42.00]"/></span><br/>
+									<span id="cacher27" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher28"><obs conceptId="CIEL:1284" answerConceptId="CIEL:140399" answerLabel="Mort fœtale [O36.4XX0]"/></span><br/>
+									<span id="cacher28" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher29"><obs conceptId="CIEL:1284" answerConceptId="CIEL:132425" answerLabel="Oligoamnios [O41.00X0]"/></span><br/>
+									<span id="cacher29" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher30"><obs conceptId="CIEL:1284" answerConceptId="CIEL:6033" answerLabel="Pathologie rénale, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher30" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher31"><obs conceptId="CIEL:1284" answerConceptId="CIEL:129251" answerLabel="Pré éclampsie [O14.90], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span id="cacher31" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher32"><obs conceptId="CIEL:1284" answerConceptId="CIEL:118245" answerLabel="Retard croissance Intrautérin [P05.9]"/></span><br/>
+									<span id="cacher32" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher33"><obs conceptId="CIEL:1284" answerConceptId="CIEL:129211" answerLabel="Rupture prématurée des membranes [O42.00]"/></span><br/>
+									<span id="cacher33" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher34"><obs conceptId="CIEL:1284" answerConceptId="CIEL:141631" answerLabel="Saignement utérin anormal [N93.8]"/></span><br/>
+									<span id="cacher34" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher35"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112493" answerLabel="Syphilis [A53.9]"/></span><br/>
+									<span id="cacher35" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher36"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112406" answerLabel="Thrombopénie [D69.6]"/></span><br/>
+									<span id="cacher36" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher37"><obs conceptId="CIEL:1284" answerConceptId="CIEL:124772" answerLabel="Thromboses"/></span><br/>
+									<span id="cacher37" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher38"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112141" answerLabel="Tuberculose [A15.0] remplir la section Tuberculose ci-dessous"/></span><br/>
+									<span id="cacher38" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher39"><obs conceptId="CIEL:1284" answerConceptId="CIEL:159345" answerLabel="MDR TB remplir la section Tuberculose ci-dessous [Z16.24]"/></span><br/>
+									<span id="cacher39" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher40"><obs conceptId="CIEL:1284" answerConceptId="CIEL:162938" answerLabel="Travail, Latent"/></span><br/>
+									<span id="cacher40" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher41"><obs conceptId="CIEL:1284" answerConceptId="CIEL:162194" answerLabel="Travail, Actif"/></span><br/>
+									<span id="cacher41" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher42"><obs conceptId="CIEL:1284" answerConceptId="CIEL:149197" answerLabel="VIH/SIDA [B20]"/></span><br/>
+									<span id="cacher42" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher43"><obs conceptId="CIEL:1284" answerConceptId="CIEL:123380" answerLabel="Vulvo vaginite [N76.0]"/></span><br/>
+									<span id="cacher43" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159947">
+									<span class="titre" ch-target="#cacher44"><b>Autres</b><br/><obs conceptId="CIEL:1284" style="autocomplete" answerClasses="Diagnosis" showCommentField="true" commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;"/></span><br/>
+									<span id="cacher44" class="cacher" style="display:none">
+									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
+									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">Remarque:  <obs conceptId="CIEL:159395" rows="1" cols="90"/></td>
+				</tr>
+			</table><br/>
+			* Notifiez le Ministère de la Santé pour le registre de surveillance épidémiologique.
+		</fieldset>
+		</div>
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div8">TURBERCULOSE</div></a>
+		<div id="div8" class="togglable" style="display:none;">
+		<fieldset>
+			<table width="100%">
+				<tr><td><obs conceptId="CIEL:1659" answerConceptIds="CIEL:160567,CIEL:1662" answerLabels="Nouveau diagnostic,Suivi" style="radio"/></td></tr>
+				<tr>
+					<td>
+						No. d’enregistrement TB :<patient field="identifier" identifierTypeId="76a86a29-1f4e-45fe-91bf-7fc2740b4b35" required="false"/>
+						Date d’enregistrement :<obs conceptId="CIEL:161552"/>               
+						Etablissement :<obs conceptId="CIEL:162724"/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Type de Malade <obs conceptId="CIEL:159871" answerConceptId="CIEL:160567" answerLabel="Nouveau"/> 	
+						<obs conceptId="CIEL:159871" answerConceptId="CIEL:163057" answerLabel="Traitement après interruption"/>
+						<obs conceptId="CIEL:159871" answerConceptId="CIEL:159874" answerLabel="Echec"/>
+						<obs conceptId="CIEL:159871" answerConceptId="CIEL:160033" answerLabel="Rechute"/>
+						<obs conceptId="CIEL:159871" answerConceptId="CIEL:159872" answerLabel="Transféré"/>
+						<obs conceptId="CIEL:159871" answerConceptId="CIEL:159345" answerLabel="MDR TB"/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Classification de la maladie <obs conceptId="CIEL:160040" answerConceptId="CIEL:42" answerLabel="Pulmonaire"/> 	
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:5042" answerLabel="Extra-pulmonaire"/><i>marquer ci-dessous :</i>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:111967" answerLabel="Méningite"/> 	
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:159167" answerLabel="Génitale"/>
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:111946" answerLabel="Pleurale"/> 	
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:115753" answerLabel="Miliaire"/>
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:111873" answerLabel="Ganglionnaire"/> 	
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:161355" answerLabel="Intestinale"/>
+						<obs conceptId="CIEL:160040" answerConceptId="CIEL:5622" answerLabel="Autre" showCommentField="true" commentFieldLabel=""/>
+						
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						
+						Diagnostic basé sur : <obs conceptId="CIEL:163752" answerConceptId="CIEL:307" answerLabel="Crachat"/>
+						<obs conceptId="CIEL:163752" answerConceptId="CIEL:12" answerLabel="X-Ray"/>
+						<obs conceptId="CIEL:163752" answerConceptId="CIEL:1690" answerLabel="Impression Clinique"/>
+						
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Date début traitement <obs conceptId="CIEL:1113"/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Régime et posologie prescrits   <obs conceptId="CIEL:1111" answerConceptId="CIEL:75948" answerLabel="E"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:160093" answerLabel="4RH"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:160096" answerLabel="5RHE"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:160095" answerLabel="1RHEZ"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:160092" answerLabel="2RHEZ"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:84360" answerLabel="S"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:163753" answerLabel="2S"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:160094" answerLabel="2SRHEZ"/>
+						<obs conceptId="CIEL:1111" answerConceptId="CIEL:82900" answerLabel="Z"/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						S: Streptomycine R: Rifampicine H: Isoniazide E: Ethambutol Z: Pyrizinamide
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Cas Contact (TPM+) <obs conceptId="CIEL:124068" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
+						Nombre de contacts :<obs conceptId="CIEL:163754"/>
+						No de référence du cas index :<obs conceptId="CIEL:163755"/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Accompagnateur <obs conceptId="CIEL:160112" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio" showCommentField="true" commentFieldLabel="Nom et Prénom :"/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						Supplémentation Alimentaire <obs conceptId="CIEL:161542" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio" showCommentField="true" commentFieldLabel=""/>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						<obs conceptId="CIEL:1193" answerConceptId="CIEL:86341" answerLabel="Supplémentation en vitamine B"/>
+					</td>	
+				</tr>
+				
+			</table>
+		</fieldset>
+		</div>
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div9">SURVEILLANCE DU TRAITEMENT(TB)</div></a>
+		<div id="div9" class="togglable" style="display:none;">
+		<fieldset>
+			RESULTATS DE L’EXPECTORATION
+			<table>
+				<tr><th>Mois</th><th>Date</th><th>Bacilloscopie</th><th>Poids (kg)</th></tr>
+				<tr><obsgroup groupingConceptId="159960"><td>0<span style="display:none"><obs conceptId="CIEL:163756" id="bacimois1" defaultValue="0"/></span></td><td><obs conceptId="CIEL:159964" id="bacidate1" allowTime="false"/></td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664" id="bacilloscopie1" answerLabels="Pos,Neg" style="radio"/></td><td><obs conceptId="CIEL:5089" id="bacipoids1"/></td></obsgroup></tr>
+				<tr><obsgroup groupingConceptId="159960"><td>2<span style="display:none"><obs conceptId="CIEL:163756" id="bacimois2" defaultValue="2"/></span></td><td><obs conceptId="CIEL:159964" id="bacidate2" allowTime="false"/></td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664" id="bacilloscopie2" answerLabels="Pos,Neg" style="radio"/></td><td><obs conceptId="CIEL:5089" id="bacipoids2"/></td></obsgroup></tr>
+				<tr><obsgroup groupingConceptId="159960"><td>3<span style="display:none"><obs conceptId="CIEL:163756" id="bacimois3" defaultValue="3"/></span></td><td><obs conceptId="CIEL:159964" id="bacidate3" allowTime="false"/></td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664" id="bacilloscopie3" answerLabels="Pos,Neg" style="radio"/></td><td><obs conceptId="CIEL:5089" id="bacipoids3"/></td></obsgroup></tr>
+				<tr><obsgroup groupingConceptId="159960"><td>5<span style="display:none"><obs conceptId="CIEL:163756" id="bacimois4" defaultValue="5"/></span></td><td><obs conceptId="CIEL:159964" id="bacidate4" allowTime="false"/></td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664" id="bacilloscopie4" answerLabels="Pos,Neg" style="radio"/></td><td><obs conceptId="CIEL:5089" id="bacipoids4"/></td></obsgroup></tr>
+				<tr><obsgroup groupingConceptId="159960"><td>Fin de rx<span style="display:none"><obs conceptId="CIEL:163756" id="bacimois5" defaultValue="Fin de rx"/></span></td><td><obs conceptId="CIEL:159964" id="bacidate5" allowTime="false"/></td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664" id="bacilloscopie5" answerLabels="Pos,Neg" style="radio"/></td><td><obs conceptId="CIEL:5089" id="bacipoids5"/></td></obsgroup></tr>
+			</table>
+		</fieldset>
+		</div>
+		</div>
+		<div>
+			<a href="#read"><div class="toggle-button" data-target="#div14">RESULTAT DU TRAITEMENT(TB)</div></a>
+			<div id="div14" class="togglable" style="display:none;">
+			<fieldset>
+		Date d’arret du traitement :<obs conceptId="CIEL:159431"/><br/>
+		<obs conceptId="CIEL:159786" answerConceptIds="CIEL:159791,CIEL:160035,CIEL:159874,CIEL:160031,CIEL:160034" answerLabels="Guéri,Traitement Terminé,Abandon,Transféré,Décédé" style="radio"/>
+		</fieldset>
+		</div>
+		</div>
+		<div>
+			<a href="#read"><div class="toggle-button" data-target="#div10">CONDUITE A TENIR</div></a>
+			<div id="div10" class="togglable" style="display:none;">
+			<fieldset>
+			<fieldset><legend>Planification familiale</legend>
+				<obs conceptId="CIEL:1382" answerConceptId="CIEL:1065" answerLabel="Counseling effectué"/><br/>
+				Date début :<obs conceptId="CIEL:163757"/> Date d’arrêt :<obs conceptId="CIEL:163758"/> <obs conceptId="CIEL:160653" answerConceptId="965"  answerLabel="Utilisation Courante"/>
+				<table>
+					<tr>
+						<td>Méthode PF administrée</td>
+						<td><obs conceptId="CIEL:374" answerConceptId="190"  answerLabel="Condom"/></td>
+						<td><obs conceptId="CIEL:374" answerConceptId="1472"  answerLabel="Ligature des trompes"/></td>
+						<td><obs conceptId="CIEL:374" answerConceptId="780"  answerLabel="Pilule: Combiné"/></td>
+						<td><obs conceptId="CIEL:374" answerConceptId="82624"  answerLabel="Pilule: Progestatif seule"/></td>
+						<td><obs conceptId="CIEL:374" answerConceptId="1359"  answerLabel="Implant"/></td>
+					</tr>
+					<tr>
+						<td><obs conceptId="CIEL:374" answerConceptId="5275"  answerLabel="Stérilet"/></td>
+						<td><obs conceptId="CIEL:374" answerConceptId="5279"  answerLabel="Injectable"/></td>
+						<td><obs conceptId="CIEL:374" answerConceptId="163759"  answerLabel="Collier, jour fixe" showDate="true"/></td>
+						<td colspan="3"><obs conceptId="CIEL:374" answerConceptId="5622"  answerLabel="Autre:" showCommentField="true" commentFieldLabel=""/></td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset><legend><b>Vaccination</b></legend>
+				<obsgroup groupingConceptId="CIEL:1421">
+					<obs conceptId="CIEL:984" answerConceptId="17"  answerLabel="DT/Tétanos toxoïde"/>
+					<obs conceptId="CIEL:984" answerConceptId="782"  answerLabel="Hépatite B"/>
+					<obs conceptId="CIEL:984" answerConceptId="5622"  answerLabel="Autre" showCommentField="true" commentFieldLabel=""/>
+				</obsgroup>
+			</fieldset>
+			<fieldset><legend><b>Medicaments prescrits / Posologie</b></legend>
+				<table><!-- use ifmode -->
+					<tr><obsgroup groupingConceptId="CIEL:1442"><td>1</td><td><obs conceptId="CIEL:1282" answerConceptId="CIEL:5622" answerLabel="Autre" showCommentField="true" commentFieldLabel=""/></td></obsgroup></tr>
+					<tr><obsgroup groupingConceptId="CIEL:1442"><td>2</td><td><obs conceptId="CIEL:1282" answerConceptId="CIEL:5622" answerLabel="Autre" showCommentField="true" commentFieldLabel=""/></td></obsgroup></tr>
+					<tr><obsgroup groupingConceptId="CIEL:1442"><td>3</td><td><obs conceptId="CIEL:1282" answerConceptId="CIEL:5622" answerLabel="Autre" showCommentField="true" commentFieldLabel=""/></td></obsgroup></tr>
+					<tr><obsgroup groupingConceptId="CIEL:1442"><td>4</td><td><obs conceptId="CIEL:1282" answerConceptId="CIEL:5622" answerLabel="Autre" showCommentField="true" commentFieldLabel=""/></td></obsgroup></tr>
+					<tr><obsgroup groupingConceptId="CIEL:1442"><td>5</td><td><obs conceptId="CIEL:1282" answerConceptId="CIEL:5622" answerLabel="Autre" showCommentField="true" commentFieldLabel=""/></td></obsgroup></tr>
+					
+				</table>
+			</fieldset>
+			<fieldset><legend><b>Suivi et planification</b></legend>
+				Semaine de Gestation:<obs conceptId="CIEL:1438"/><br/>
+				<table width="100%" style="border-bottom:solid 2px">
+					<tr>
+						<td>Facteur de risque:</td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:1107" answerLabel="Aucune"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:145777" answerLabel="Ancienne césarisée"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:148834" answerLabel="Anémie"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:119476" answerLabel="Diabète"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:460" answerLabel="Œdème"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:1053" answerLabel="Grande parité"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:163119" answerLabel="&lt;18"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:163120" answerLabel="&gt;35"/></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:115491" answerLabel="Grossesse multiple"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:228" answerLabel="Hémorragie antépartum"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:113858" answerLabel="Hypertension"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:136784" answerLabel="Poids stationnaire"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:163210" answerLabel="VIH"/></td>
+						<td><obs conceptId="CIEL:160079" answerConceptId="CIEL:162589" answerLabel="Taille&lt;150cm"/></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				<br/>
+				<div width="100%" style="border-bottom:2px solid">
+				<b>VIH counseling/test:</b> <obs conceptId="CIEL:163760" answerConceptId="CIEL:1065" answerLabel="Counseling prétest et Date" showDate="true"/>
+				<obs conceptId="CIEL:159382" answerConceptId="CIEL:1065" answerLabel="Counseling post test Date" showDate="true"/>
+				<br/>
+				Référence partenaire : <obs conceptId="CIEL:161557" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
+				Référence partenaire : <obs conceptId="CIEL:1436" answerConceptIds="CIEL:703,CIEL:664,CIEL:1067" answerLabels="Positif,Négatif,Indéterminé" style="radio"/>
+				<br/>
+				Motif de dépistage <obs conceptId="CIEL:163761" rows="1" cols="30"/>
+				</div>
+				<br/>
+				<b>VIH Positif:</b> Stade OMS <obs conceptId="CIEL:5356" answerConceptIds="CIEL:1204,CIEL:1205,CIEL:1206,CIEL:1207,CIEL:1067" answerLabels="Stade I,Stade II,Stade III,Stade IV,Stade inconnu" style="radio"/>
+				Numération ou taux de CD4:<obs conceptId="CIEL:5497"/>
+			</fieldset>
+			<fieldset><legend><b>Référence</b></legend>
+				<table width="100%">
+					<tr>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:5490" answerLabel="Psychologue"/></td>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:5484" answerLabel="Programme de nutrition"/></td>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:5483" answerLabel="Planification familiale"/></td>
+						<td>
+							<span style="display:none"> <obs conceptId="CIEL:1272" answerConceptId="CIEL:5622" answerLabel=""/></span>
+							Autre établissement / clinique : <obs conceptId="CIEL:161562"/>
+						</td>
+					</tr>
+					<tr>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:1371" answerLabel="Salle de Travail et d’Accouchement (STA)"/></td>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:5485" answerLabel="Hospitalisation"/></td>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:1555" answerLabel="Structure Communautaire"/></td>
+						<td><obs conceptId="CIEL:1272" answerConceptId="CIEL:163762" answerLabel="Fiches de référence remplie"/></td>
+						
+					</tr>
+					
+				</table>
+			</fieldset>
+			</fieldset>
+		</div>
+		</div>
+		<div>
+		<a href="#read"><div class="toggle-button" data-target="#div11">AUTRE PLAN</div></a>
+		<div id="div11" class="togglable" style="display:none;">
+		<fieldset>
+			<fieldset><legend><b>Plan d'accouchement</b></legend>
+				Date de prochaine visite :<obs conceptId="CIEL:5096"/>
+				<table width="100%">
+					<tr><td>Suivi Prénatal</td><td>Dispensation ARV</td><td>Education <br/>Individuelle</td><td>Education des<br/> Accompagnateurs</td><td>Visite Domiciliaire</td><td>Club des Mères /<br/> Groupe de Support</td><td>Conseils sur <br/>l’allaitement maternel</td></tr>
+					<tr>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:1622" answerLabel=""/></td>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:5576" answerLabel=""/></td>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:163106" answerLabel=""/></td>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:163763" answerLabel=""/></td>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:162186" answerLabel=""/></td>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:5486" answerLabel=""/></td>
+						<td><obs conceptId="CIEL:1592" answerConceptId="CIEL:1910" answerLabel=""/></td>
+					</tr>
+				</table>
+			</fieldset><br/>
+			<fieldset>
+				Date Probable d’accouchement <obs conceptId="CIEL:5596"/> Lieu : <obs conceptId="CIEL:159758" answerConceptIds="CIEL:1536,CIEL:1589" answerLabels="Domicile,Hôpital - précisez :" style="radio" showCommentField="true" commentFieldLabel=""/>
+				<br/>
+				Si domicile et femme VIH positif : est-ce qu’il y a une planification faite pour la prophylaxie ARV de l’enfant : <obs conceptId="CIEL:163764" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio" showCommentField="true" commentFieldLabel="&lt;br/&gt;Si oui, précisez :"/><br/>
+				
+				Si domicile : Planification pour la présence d’une matrone :
+				<obs conceptId="CIEL:161007" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio" showCommentField="true" commentFieldLabel="&lt;br/&gt;Si oui, nom de la matrone :"/>
+				<br/>
+				Planification pour un Accompagnateur :<obs conceptId="CIEL:160112" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
+				<br/>
+				Planification pour transition dans une Maison de Naissance : <obs conceptId="CIEL:163765" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
+				<br/>
+				Inscrite dans un Club des Mères :<obs conceptId="CIEL:163766" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
+			</fieldset>
+			
+		Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
+		<table width="100%">
+			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+			<br/>
+			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+		</table>
+		</fieldset>
+			</div>
+		</div>
+	</div>	
+	<br/>
+	<br/>
+	<div id="sauvegarde">
+		<center><submit submitClass="confirm right" submitCode="general.save"/><br/>
+		MSPP Fiche de Première Consultation OB-GYN (Décembre 2012)</center>
+	</div>
+	</div>
+</htmlform>

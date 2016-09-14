@@ -34,7 +34,7 @@
 	</modules>
 
 	<properties>
-		<openMRSVersion>1.11.0</openMRSVersion>
+		<openMRSVersion>1.11.2</openMRSVersion>
 		<uiframeworkVersion>3.2</uiframeworkVersion>
 		<jsonVersion>20160212</jsonVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -43,6 +43,10 @@
 		<coreappsVersion>1.6</coreappsVersion>
 		<appuiVersion>1.3</appuiVersion>
 		<appframeworkVersion>2.3</appframeworkVersion>
+		<metadatadeployVersion>1.2</metadatadeployVersion>
+		<htmlformentryVersion>2.5</htmlformentryVersion>
+		<formentryappVersion>1.2</formentryappVersion>
+		<htmlformentryuiVersion>1.2</htmlformentryuiVersion>
 	</properties>
 
 	<dependencyManagement>
@@ -53,6 +57,7 @@
 				<artifactId>uiframework-api</artifactId>
 				<version>${uiframeworkVersion}</version>
 				<scope>provided</scope>
+				<type>jar</type>
 			</dependency>
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
@@ -88,6 +93,43 @@
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>appframework-api</artifactId>
 				<version>${appframeworkVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>htmlformentry-api-1.10</artifactId>
+				<version>${htmlformentryVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>formentryapp-api</artifactId>
+				<version>${formentryappVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>formentryapp-omod</artifactId>
+				<version>${formentryappVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>htmlformentryui-api</artifactId>
+				<version>${htmlformentryuiVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+	            <groupId>org.openmrs.web</groupId>
+	            <artifactId>openmrs-web</artifactId>
+	            <version>${openMRSVersion}</version>
+	            <type>jar</type>
+	            <scope>provided</scope>
+	        </dependency>
+	        <dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>metadatadeploy-api</artifactId>
+				<version>${metadatadeployVersion}</version>
 				<scope>provided</scope>
 			</dependency>
 			<!-- End OpenMRS modules -->
