@@ -13,8 +13,6 @@
  */
 package org.openmrs.module.isantepluspatientdashboard;
 
-import java.io.IOException;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.api.FormService;
@@ -61,7 +59,7 @@ public class ISantePlusPatientDashboardActivator implements ModuleActivator {
 		Context.getService(IsantePlusPatientDashboardService.class).toggleRecentVitalsSection(
 				new IsantePlusPatientDashboardManager().getToogleMostRecentVitalsExtension());
 		try {
-			setupHtmlForms();
+			loadIsantePlusHtmlForms();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -69,25 +67,22 @@ public class ISantePlusPatientDashboardActivator implements ModuleActivator {
 		log.info("iSantePlus Patient Dashboard Module started");
 	}
 
-	private void setupHtmlForms() throws Exception {
+	private void loadIsantePlusHtmlForms() throws Exception {
 		try {
-			loadIsanteForms();
+			ResourceFactory resourceFactory = ResourceFactory.getInstance();
+			FormService formService = Context.getFormService();
+
+			for (String fileName : IsantePlusPatientDashboardConstants.ISANTEPLUS_FORMFILE_NAMES) {
+				HtmlFormUtil.getHtmlFormFromUiResource(resourceFactory, formService,
+						Context.getService(HtmlFormEntryService.class),
+						"isantepluspatientdashboard:htmlforms/" + fileName);
+			}
 		} catch (Exception e) {
 			if (ResourceFactory.getInstance().getResourceProviders() == null) {
 				log.error("Unable to load HTML forms--this error is expected when running component tests");
 			} else {
 				throw e;
 			}
-		}
-	}
-
-	private void loadIsanteForms() throws IOException {
-		ResourceFactory resourceFactory = ResourceFactory.getInstance();
-		FormService formService = Context.getFormService();
-
-		for (String fileName : IsantePlusPatientDashboardConstants.ISANTEPLUS_FORMFILE_NAMES) {
-			HtmlFormUtil.getHtmlFormFromUiResource(resourceFactory, formService,
-					Context.getService(HtmlFormEntryService.class), "isantepluspatientdashboard:htmlforms/" + fileName);
 		}
 	}
 

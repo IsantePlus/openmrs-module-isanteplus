@@ -3,6 +3,7 @@ package org.openmrs.module.isantepluspatientdashboard.fragment.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Location;
 import org.openmrs.Patient;
 import org.openmrs.api.FormService;
@@ -32,7 +33,6 @@ public class IsantePlusFormsFragmentController {
 
 		activeVisit = adtService.getActiveVisit(patient, visitLocation);
 		model.put("patientHasAnActiveVisit", activeVisit != null ? true : false);
-
 		if (activeVisit != null) {
 			IsantePlusHtmlForm adherence = new IsantePlusHtmlForm("Adherence.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, activeVisit.getVisit());
@@ -40,6 +40,9 @@ public class IsantePlusFormsFragmentController {
 					resourceFactory, formService, htmlFormEntryService, patient, activeVisit.getVisit());
 			IsantePlusHtmlForm ficheDeConsultationOBGYN = new IsantePlusHtmlForm("FicheDeConsultationOBGYN.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, activeVisit.getVisit());
+			IsantePlusHtmlForm ficheDePremiereConsultationOBGYN = new IsantePlusHtmlForm(
+					"FicheDePremiereConsultationOBGYN.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					activeVisit.getVisit());
 			IsantePlusHtmlForm ficheDeTravailEtDaccouchement = new IsantePlusHtmlForm(
 					"FicheDeTravailEtDaccouchement.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					activeVisit.getVisit());
@@ -69,7 +72,7 @@ public class IsantePlusFormsFragmentController {
 			IsantePlusHtmlForm soinsDeSantePrimairePremiereConsultationPediatrique = new IsantePlusHtmlForm(
 					"SoinsDeSantePrimairePremiereConsultationPediatrique.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, activeVisit.getVisit());
-			IsantePlusHtmlForm soinsDeSanteSrimaireConsultation = new IsantePlusHtmlForm(
+			IsantePlusHtmlForm soinsDeSantePrimaireConsultation = new IsantePlusHtmlForm(
 					"SoinsDeSanteSrimaireConsultation.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					activeVisit.getVisit());
 			IsantePlusHtmlForm vaccination = new IsantePlusHtmlForm("Vaccination.xml", resourceFactory, formService,
@@ -84,19 +87,69 @@ public class IsantePlusFormsFragmentController {
 			List<IsantePlusHtmlForm> hivCareForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> psychoSocialForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> otherForms = new ArrayList<IsantePlusHtmlForm>();
+			Integer patientAge = patient.getAge();
+			String patientSex = patient.getGender();
 
-			primaryCareForms.add(saisiePremiereVisiteAdult);
-			primaryCareForms.add(saisiePremiereVisitePediatrique);
-			primaryCareForms.add(fichePsychosocialeAdulte);
-			primaryCareForms.add(fichePsychosocialePediatrique);
+			primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
+			primaryCareForms.add(soinsDeSantePrimaireConsultation);
+			if (patientAge != null && patientAge > 14) {
+				// exclude forms
+			} else {
+				primaryCareForms.add(soinsDeSantePrimairePremiereConsultationPediatrique);
+				primaryCareForms.add(soinsDeSantePrimaireConsultationPediatrique);
+			}
+
 			labForms.add(analyseDeLaboratoire);
-			psychoSocialForms.add(visiteDeSuivi);
-			psychoSocialForms.add(visiteDeSuiviPediatrique);
-			model.put("primaryCare", primaryCareForms);
+			labForms.add(ordonnanceMedicale);
+			if (patientAge != null && patientAge > 14) {
+				// exclude forms
+			} else {
+				labForms.add(ordonnancepediatrique);
+			}
+
+			if (StringUtils.isNotBlank(patientSex) && patientAge != null && "M".equals(patientSex)
+					&& (patientAge > 14 || patientAge < 14)) {
+				// exclude obgyn forms
+			} else {
+				obygnForms.add(ficheDePremiereConsultationOBGYN);
+				obygnForms.add(ficheDeConsultationOBGYN);
+			}
+			obygnForms.add(ficheDeTravailEtDaccouchement);
+
+			if (patientAge != null && patientAge < 14) {
+				// exclude forms
+			} else {
+				hivCareForms.add(saisiePremiereVisiteAdult);
+			}
+			hivCareForms.add(visiteDeSuivi);
+			if (patientAge != null && patientAge > 14) {
+				// exclude forms
+			} else {
+				hivCareForms.add(saisiePremiereVisitePediatrique);
+				hivCareForms.add(visiteDeSuiviPediatrique);
+			}
+			hivCareForms.add(adherence);
+
+			if (patientAge != null && patientAge < 14) {
+				// exclude forms
+			} else {
+				psychoSocialForms.add(fichePsychosocialeAdulte);
+			}
+			if (patientAge != null && patientAge > 14) {
+				// exclude forms
+			} else {
+				psychoSocialForms.add(fichePsychosocialePediatrique);
+			}
+
+			otherForms.add(vaccination);
+			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
+
+			model.put("primaryCareForms", primaryCareForms);
 			model.put("labForms", labForms);
 			model.put("obygnForms", obygnForms);
 			model.put("hivCareForms", hivCareForms);
 			model.put("psychoSocialForms", psychoSocialForms);
+			model.put("otherForms", otherForms);
 		}
 	}
 }

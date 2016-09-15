@@ -10,8 +10,8 @@ import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusVital;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
-import org.openmrs.ui.framework.annotation.FragmentParam;
 import org.openmrs.ui.framework.fragment.FragmentModel;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public class IsantePlusMostRecentVitalsFragmentController {
 	protected final Log log = LogFactory.getLog(getClass());
@@ -27,7 +27,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		return null;
 	}
 
-	public void controller(FragmentModel model, @FragmentParam("patientId") Patient patient) {
+	public void controller(FragmentModel model, @RequestParam("patientId") Patient patient) {
 		IsantePlusVital height = new IsantePlusVital(
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.height.label"),
 				Context.getService(IsantePlusPatientDashboardService.class).getLatestHeightForPatient(patient),
@@ -71,7 +71,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 						.getLatestMidUpperArmCircumferenceForPatient(patient),
 				Context.getMessageSourceService()
 						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.unit"));
-		Integer patientAge = patient.getAge();//TODO OPENMRS; how comes this returns null
+		Integer patientAge = patient.getAge();
 
 		vitals.add(height);
 		vitals.add(weight);
