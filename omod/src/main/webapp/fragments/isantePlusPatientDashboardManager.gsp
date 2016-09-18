@@ -6,6 +6,7 @@
 <input type="checkbox" class="managerOption" id="${manager.labHistoryExtensionId}" ${manager.labHistoryExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableLabHistory') }<br />
 <input type="checkbox" class="managerOption" id="${manager.isantePlusFormsExtensionId}" ${manager.isantePlusFormsExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableIsantePlusForms') }<br />
 <input type="checkbox" class="managerOption" id="${manager.mostRecentVitalsExtensionId}" ${manager.mostRecentVitalsExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableMostRecentVitals') }<br />
+<input type="checkbox" class="managerOption" id="${manager.drugsHistoryExtensionId}" ${manager.drugsHistoryExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableDrugsHistory') }<br />
 	
 <input type="button" id="submitIsantePlusPatientDashboardManagerForm" value="${ ui.message('general.save') }">
 

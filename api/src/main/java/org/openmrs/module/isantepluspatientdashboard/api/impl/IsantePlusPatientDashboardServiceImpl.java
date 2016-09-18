@@ -712,6 +712,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
 			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
+			ComponentState drugsHistory = getAppframeworkComponentState(manager.getDrugsHistoryExtensionId());
 
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
@@ -745,6 +746,11 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			// and vice-versa
 			if (extensions.has(manager.getMostRecentVitalsExtensionId())) {
 				toggleRecentVitalsSection(extensions.getBoolean(manager.getMostRecentVitalsExtensionId()));
+			}
+
+			if (drugsHistory != null && extensions.has(manager.getDrugsHistoryExtensionId())) {
+				drugsHistory.setEnabled(extensions.getBoolean(manager.getDrugsHistoryExtensionId()));
+				saveOrUpdateComponentState(drugsHistory);
 			}
 		}
 	}

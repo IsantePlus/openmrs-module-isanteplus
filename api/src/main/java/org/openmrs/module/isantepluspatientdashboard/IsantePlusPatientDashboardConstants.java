@@ -35,4 +35,6 @@ public class IsantePlusPatientDashboardConstants {
 	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adherence.xml,AnalyseDeLaboratoire.xml,FicheDeConsultationOBGYN.xml,FicheDePremiereConsultationOBGYN.xml,FicheDeTravailEtDaccouchement.xml,FichePsychosocialeAdulte.xml,FichePsychosocialePediatrique.xml,OrdonnanceMedicale.xml,Ordonnancepediatrique.xml,RapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA.xml,SaisiePremiereVisiteAdult.xml,SaisiePremiereVisitePediatrique.xml,SoinsDeSantePrimaireConsultationPediatrique.xml,SoinsDeSantePrimairePremiereConsultation.xml,SoinsDeSantePrimairePremiereConsultationPediatrique.xml,SoinsDeSanteSrimaireConsultation.xml,Vaccination.xml,VisiteDeSuivi.xml,VisiteDeSuiviPediatrique.xml";
 
 	public static String[] ISANTEPLUS_FORMFILE_NAMES = ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS.split(",");
+
+	public static final String DRUGSHISTORY_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.drugsHistory";
 }
