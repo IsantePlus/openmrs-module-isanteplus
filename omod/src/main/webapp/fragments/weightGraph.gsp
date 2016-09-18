@@ -15,16 +15,17 @@
   			var weightGraph = new vis.Graph2d(weightGraphContainer, new vis.DataSet(items), options);
   		
   			jQuery(function() {
-		    	jQuery(".vis-point").tooltip();
-		    	
-		    	//TODO fix this hack
-			    jQuery(".vis-point").hover(function(visPoint) {
-			    	var x = jQuery(visPoint.target).attr("x");
-			    	var y = jQuery(visPoint.target).attr("y");
-			    	
-			    	jQuery(visPoint.target).attr("title", x + ", " + y);
-			    });
+  				jQuery(".vis-point").tooltip();
+			    weightGraphContainer.addEventListener('mouseover', onMouseover);
 		    });
+		    
+		    function onMouseover (event) {
+			  	var properties = weightGraph.getEventProperties(event);
+			  	
+				if(jQuery(event.target).is("rect")) {
+			  		jQuery(event.target).attr("title", "Weight: " + properties.value[0] + "kg At: " + properties.time);
+			  	}
+			}
   		</script>
     </div>
 </div>
