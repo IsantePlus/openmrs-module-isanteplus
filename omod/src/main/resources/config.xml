@@ -137,4 +137,9 @@
 		<defaultValue>1343</defaultValue>
 		<description>Mid Upper Arm Circumference concept id</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.adultStartingAge</property>
+		<defaultValue>14</defaultValue>
+		<description>Adult starting age in years, OpenMRS uses 13, Haiti 14</description>
+	</globalProperty>
 </module>

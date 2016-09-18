@@ -35,4 +35,6 @@ public class ConfigurableGlobalProperties {
 	public static final String SYSTOLIC_BLOODPRESSURE_CONCEPTID = "isantepluspatientdashboard.systolicBloodPressureConceptId";
 
 	public static final String MIDUPPERARM_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.midUpperArmCircumferenceConceptId";
+
+	public static final String ADULTSTARTINGAGE = "isantepluspatientdashboard.adultStartingAge";
 }

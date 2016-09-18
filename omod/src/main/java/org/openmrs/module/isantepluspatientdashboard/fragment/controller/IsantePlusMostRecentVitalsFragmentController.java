@@ -8,6 +8,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.isantepluspatientdashboard.ConfigurableGlobalProperties;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusVital;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.ui.framework.fragment.FragmentModel;
@@ -72,6 +73,8 @@ public class IsantePlusMostRecentVitalsFragmentController {
 				Context.getMessageSourceService()
 						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.unit"));
 		Integer patientAge = patient.getAge();
+		Integer adultStartingAge = Integer.parseInt(
+				Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
 
 		vitals.add(height);
 		vitals.add(weight);
@@ -81,7 +84,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		vitals.add(respiratoryRate);
 		vitals.add(bloodPressure);
 		vitals.add(bloodOxygenSaturation);
-		if (patientAge != null && patientAge < 13)
+		if (patientAge != null && patientAge < adultStartingAge)
 			vitals.add(midUpperArmCircumference);
 		model.put("vitals", vitals);
 	}

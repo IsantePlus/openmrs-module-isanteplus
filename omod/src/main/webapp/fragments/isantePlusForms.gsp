@@ -19,12 +19,14 @@
 			 	<% } %>
 			</ul>
 		 	
-		 	<h4 id="toggleObygnForms" style="cursor:pointer;">${ ui.message("isantepluspatientdashboard.isanteForms.categories.obygn") }</h4>
-	    	<ul id="obygnForms">
-			    <% obygnForms.each { %>
-			    	<li><a href="${ ui.format(it.url) }">${ ui.format(it.name) }</a></li>
-				 <% } %>
-			</ul>
+		 	<%  if (showObygnForms) {  %>
+			 	<h4 id="toggleObygnForms" style="cursor:pointer;">${ ui.message("isantepluspatientdashboard.isanteForms.categories.obygn") }</h4>
+		    	<ul id="obygnForms">
+				    <% obygnForms.each { %>
+				    	<li><a href="${ ui.format(it.url) }">${ ui.format(it.name) }</a></li>
+					 <% } %>
+				</ul>
+			<% } %>
 		 	
 		 	<h4 id="toggleHivCareForms" style="cursor:pointer;">${ ui.message("isantepluspatientdashboard.isanteForms.categories.hivCare") }</h4>
 	    	<ul id="hivCareForms">

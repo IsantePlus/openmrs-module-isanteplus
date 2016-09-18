@@ -7,11 +7,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Location;
 import org.openmrs.Patient;
 import org.openmrs.api.FormService;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.appui.UiSessionContext;
 import org.openmrs.module.emrapi.adt.AdtService;
 import org.openmrs.module.emrapi.patient.PatientDomainWrapper;
 import org.openmrs.module.emrapi.visit.VisitDomainWrapper;
 import org.openmrs.module.htmlformentry.HtmlFormEntryService;
+import org.openmrs.module.isantepluspatientdashboard.ConfigurableGlobalProperties;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusHtmlForm;
 import org.openmrs.ui.framework.annotation.InjectBeans;
 import org.openmrs.ui.framework.annotation.SpringBean;
@@ -30,9 +32,12 @@ public class IsantePlusFormsFragmentController {
 			@SpringBean("formService") FormService formService) {
 		VisitDomainWrapper activeVisit = (VisitDomainWrapper) config.getAttribute("activeVisit");
 		Location visitLocation = adtService.getLocationThatSupportsVisits(sessionContext.getSessionLocation());
+		Integer patientAge = patient.getAge();
+		String patientSex = patient.getGender();
 
 		activeVisit = adtService.getActiveVisit(patient, visitLocation);
 		model.put("patientHasAnActiveVisit", activeVisit != null ? true : false);
+		model.put("showObygnForms", StringUtils.isNotBlank(patientSex) && patientSex.equals("F"));
 		if (activeVisit != null) {
 			IsantePlusHtmlForm adherence = new IsantePlusHtmlForm("Adherence.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, activeVisit.getVisit());
@@ -87,59 +92,43 @@ public class IsantePlusFormsFragmentController {
 			List<IsantePlusHtmlForm> hivCareForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> psychoSocialForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> otherForms = new ArrayList<IsantePlusHtmlForm>();
-			Integer patientAge = patient.getAge();
-			String patientSex = patient.getGender();
+			Integer adultStartingAge = Integer.parseInt(
+					Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
 
-			primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
-			primaryCareForms.add(soinsDeSantePrimaireConsultation);
-			if (patientAge != null && patientAge > 14) {
-				// exclude forms
-			} else {
+			if (patientAge != null && patientAge > adultStartingAge) {
+				primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
+				primaryCareForms.add(soinsDeSantePrimaireConsultation);
+			}
+			if (patientAge != null && patientAge < adultStartingAge) {
 				primaryCareForms.add(soinsDeSantePrimairePremiereConsultationPediatrique);
 				primaryCareForms.add(soinsDeSantePrimaireConsultationPediatrique);
 			}
 
 			labForms.add(analyseDeLaboratoire);
 			labForms.add(ordonnanceMedicale);
-			if (patientAge != null && patientAge > 14) {
-				// exclude forms
-			} else {
+			if (patientAge != null && patientAge < adultStartingAge)
 				labForms.add(ordonnancepediatrique);
-			}
 
-			if (StringUtils.isNotBlank(patientSex) && patientAge != null && "M".equals(patientSex)
-					&& (patientAge > 14 || patientAge < 14)) {
-				// exclude obgyn forms
-			} else {
+			if (StringUtils.isNotBlank(patientSex) && patientAge != null && "F".equals(patientSex)) {
 				obygnForms.add(ficheDePremiereConsultationOBGYN);
 				obygnForms.add(ficheDeConsultationOBGYN);
+				if (patientAge > adultStartingAge)
+					obygnForms.add(ficheDeTravailEtDaccouchement);
 			}
-			obygnForms.add(ficheDeTravailEtDaccouchement);
 
-			if (patientAge != null && patientAge < 14) {
-				// exclude forms
-			} else {
+			if (patientAge != null && patientAge > adultStartingAge)
 				hivCareForms.add(saisiePremiereVisiteAdult);
-			}
 			hivCareForms.add(visiteDeSuivi);
-			if (patientAge != null && patientAge > 14) {
-				// exclude forms
-			} else {
+			if (patientAge != null && patientAge < adultStartingAge) {
 				hivCareForms.add(saisiePremiereVisitePediatrique);
 				hivCareForms.add(visiteDeSuiviPediatrique);
 			}
 			hivCareForms.add(adherence);
 
-			if (patientAge != null && patientAge < 14) {
-				// exclude forms
-			} else {
+			if (patientAge != null && patientAge > adultStartingAge)
 				psychoSocialForms.add(fichePsychosocialeAdulte);
-			}
-			if (patientAge != null && patientAge > 14) {
-				// exclude forms
-			} else {
+			if (patientAge != null && patientAge < adultStartingAge)
 				psychoSocialForms.add(fichePsychosocialePediatrique);
-			}
 
 			otherForms.add(vaccination);
 			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
