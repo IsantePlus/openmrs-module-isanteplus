@@ -50,7 +50,7 @@
         "label": "isantepluspatientdashboard.labHistory",
         "url": "${project.parent.artifactId}/labHistory.page?patientId={{patient.uuid}}",
         "icon": "icon-bar-chart",
-        "order": 5
+        "order": 6
     },
     {
         "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.firstColumnFragments.mostRecentVitals",
@@ -69,5 +69,14 @@
             "provider": "${project.parent.artifactId}",
             "fragment": "isantePlusForms"
         }
+    },
+    {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.drugsHistory",
+        "extensionPointId": "patientDashboard.overallActions",
+        "type": "link",
+        "label": "${project.parent.artifactId}.drugsHistory",
+        "url": "${project.parent.artifactId}/drugsHistory.page?patientId={{patient.uuid}}",
+        "icon": "icon-bar-chart",
+        "order": 7
     }
 ]

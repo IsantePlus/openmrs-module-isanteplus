@@ -123,4 +123,6 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	Obs getLatestMidUpperArmCircumferenceForPatient(Patient patient);
 
 	void toggleRecentVitalsSection(Boolean enableIsanteVitals);
+
+	List<Obs> getDrugsHistory(Patient patient);
 }

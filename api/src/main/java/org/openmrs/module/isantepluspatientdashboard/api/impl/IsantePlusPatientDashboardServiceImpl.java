@@ -755,7 +755,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		ComponentState mostRecentVitals = getAppframeworkComponentState(manager.getMostRecentVitalsExtensionId());
 		ComponentState coreAppsMostRecentVitals = getAppframeworkComponentState(
 				IsantePlusPatientDashboardConstants.DEFAULT_MOSTRECENTVITALS_APP_EXTENSIONPOINT_ID);
-		
+
 		if (enableIsanteVitals == null) {
 			coreAppsMostRecentVitals.setEnabled(true);
 		} else {
@@ -769,5 +769,46 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	@Override
 	public ComponentState saveOrUpdateComponentState(ComponentState componentState) {
 		return dao.saveOrUpdateComponentState(componentState);
+	}
+
+	@Override
+	public List<Obs> getDrugsHistory(Patient patient) {
+		List<Obs> drugsHistory = new ArrayList<Obs>();
+		Integer drugsConceptId = 1282;
+		Integer dateDrugsConceptId = 1276;
+		Concept drugsDispensed = Context.getConceptService().getConcept(drugsConceptId);
+		Concept dateDispensed = Context.getConceptService().getConcept(dateDrugsConceptId);
+		List<Concept> conceptList = new ArrayList<Concept>();
+		List<Encounter> encounterList = new ArrayList<Encounter>();
+
+		for (Obs obs0 : Context.getObsService().getObservations(patient, drugsDispensed, false)) {
+			Obs obs = Obs.newInstance(obs0);
+			if (obs0 != null) {
+				for (Obs obs1 : Context.getObsService().getObservations(patient, dateDispensed, false)) {
+					if (obs1 != null) {
+						if (obs0.getObsGroupId() == obs1.getObsGroupId()) {
+							// je capture dans obs la date de dispensation du
+							// medicament
+							obs.setObsDatetime(obs1.getObsDatetime());
+							conceptList.add(obs0.getValueCoded());
+							encounterList.add(obs0.getEncounter());
+							// j'ajoute la date de dispensation
+							drugsHistory.add(obs);
+						} else if (conceptList.contains(obs0.getValueCoded())
+								&& encounterList.contains(obs0.getEncounter()))
+							;
+						else {
+							conceptList.add(obs0.getValueCoded());
+							encounterList.add(obs0.getEncounter());
+							// j'ajoute la date de prescription si la date de
+							// dispensation n'est pas disponible
+							drugsHistory.add(obs);
+						}
+					}
+				}
+			}
+
+		}
+		return drugsHistory;
 	}
 }
