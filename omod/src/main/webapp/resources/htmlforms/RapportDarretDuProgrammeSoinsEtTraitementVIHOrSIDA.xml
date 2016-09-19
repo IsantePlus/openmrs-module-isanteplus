@@ -160,6 +160,10 @@
 			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1067" answerLabel="Raison d'arrêt inconnue"/><br/>
 		</div>
 		<br/>
+		<section headerLabel="REMARQUES">
+			<obs conceptId="CIEL:161011" rows="5" cols="50"/>
+		</section>
+		<br/>
 		<br/>
 		SIGNATURE DU CONSEILLER:<encounterProviderAndRole encounterRole="2" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
 		SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="4" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>

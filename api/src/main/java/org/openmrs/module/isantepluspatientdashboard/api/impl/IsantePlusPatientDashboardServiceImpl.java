@@ -682,7 +682,9 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 				Concept resultTest = Context.getConceptService().getConcept(result);
 
 				for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
-					labHistory.add(obs1);
+					
+						labHistory.add(obs1);
+					
 				}
 			}
 		}
@@ -817,4 +819,54 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 		return drugsHistory;
 	}
+	
+	
+	private Obs getLastHeightForAPatient(Patient patient) {
+		// TODO Auto-generated method stub
+		// weight concept 5089
+		 Obs latestHeight = null;
+		Integer heightConceptId = StringUtils
+				.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.height"))
+						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.height"))
+						: 5090;
+		Concept height = Context.getConceptService().getConcept(heightConceptId);
+
+		for (Obs obs : Context.getObsService().getObservations(patient, height, false)) {
+			if (obs != null) {
+				 if (latestHeight == null 
+		                  || obs.getObsDatetime().compareTo(latestHeight.getObsDatetime()) > 0) 
+		           latestHeight = obs; 
+		         }
+				
+			}
+		
+		
+		return latestHeight;
+	}
+
+	@Override
+	public JSONArray getPatientBmi(Patient patient) {
+		
+		Obs obsH = getLastHeightForAPatient(patient);
+		JSONArray bmiJson = new JSONArray();
+		if(obsH != null)
+		{
+			Double ht = obsH.getValueNumeric();
+			if(ht>0)
+			{
+				for (Obs obs : getWeightConceptObsForAPatient(patient)) {
+					if (obs != null) {
+						JSONObject json = new JSONObject();
+						Double weight=obs.getValueNumeric();
+						Double bmivalues = weight / ((ht/100) * (ht/100));
+						json.put("bmivalues", bmivalues);
+						json.put("measureDate", getObservationDate(obs));
+						bmiJson.put(json);
+					}
+				}
+			}
+		}
+		return bmiJson;
+	}
+	
 }
