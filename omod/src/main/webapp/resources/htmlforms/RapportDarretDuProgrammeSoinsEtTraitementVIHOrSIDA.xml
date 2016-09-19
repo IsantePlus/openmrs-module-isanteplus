@@ -1,5 +1,6 @@
 <htmlform formUuid="0c3ca345-f834-46d1-a620-6d0f20f217f2"
  formName="Rapport d'arrêt du programme soins et traitement VIH/SIDA"
+  formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
  formVersion="1.0"
  formDescription="ordonnance  médicale adulte"
  > 
