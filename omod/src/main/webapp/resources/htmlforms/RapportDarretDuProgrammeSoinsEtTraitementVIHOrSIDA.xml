@@ -93,6 +93,14 @@
 			padding:0px;
 			bottom:0px;
 		}
+		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
+			float: none;
+		    display: inline-block;
+		}
+		
+		form label, .form label {
+			display: inline-block;
+		}
 	</style>
 	<script type="text/javascript">
 	jQuery.fn.cleanWhitespace = function() {

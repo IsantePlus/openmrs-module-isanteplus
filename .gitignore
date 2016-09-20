@@ -8,3 +8,5 @@ target/
 
 api/tartget/
 omod/target/
+api/bin/
+omod/bin/
