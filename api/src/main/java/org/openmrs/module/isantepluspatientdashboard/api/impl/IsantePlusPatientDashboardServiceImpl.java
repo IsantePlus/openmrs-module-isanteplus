@@ -820,34 +820,10 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return drugsHistory;
 	}
 	
-	
-	private Obs getLastHeightForAPatient(Patient patient) {
-		// TODO Auto-generated method stub
-		// weight concept 5089
-		 Obs latestHeight = null;
-		Integer heightConceptId = StringUtils
-				.isNotBlank(Context.getAdministrationService().getGlobalProperty("concept.height"))
-						? Integer.parseInt(Context.getAdministrationService().getGlobalProperty("concept.height"))
-						: 5090;
-		Concept height = Context.getConceptService().getConcept(heightConceptId);
-
-		for (Obs obs : Context.getObsService().getObservations(patient, height, false)) {
-			if (obs != null) {
-				 if (latestHeight == null 
-		                  || obs.getObsDatetime().compareTo(latestHeight.getObsDatetime()) > 0) 
-		           latestHeight = obs; 
-		         }
-				
-			}
-		
-		
-		return latestHeight;
-	}
-
 	@Override
 	public JSONArray getPatientBmi(Patient patient) {
 		
-		Obs obsH = getLastHeightForAPatient(patient);
+		Obs obsH = getLatestHeightForPatient(patient);
 		JSONArray bmiJson = new JSONArray();
 		if(obsH != null)
 		{

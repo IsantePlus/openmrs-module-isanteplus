@@ -520,7 +520,7 @@
 	<br/>
 	<br/>
 	Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
-	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="3" autocompleteProvider="true" default="currentUser"/><br/><br/>
+	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/><br/><br/>
 	<div id="sauvegarde">
 		<center><submit submitClass="confirm right" submitCode="general.save"/><br/>
 		</center>
