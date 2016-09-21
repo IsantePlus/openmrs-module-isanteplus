@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+	<!-- See http://www.liquibase.org/manual/home#available_database_refactorings 
+		for a list of supported elements and attributes -->
+
+	<changeSet id="20160811-0513" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="isantepluspatientdashboard_form_history" />
+			</not>
+		</preConditions>
+		<comment>
+			Create form history table
+		</comment>
+		<createTable tableName="isantepluspatientdashboard_form_history">
+			<column name="form_history_id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="visit_id" type="int" />
+			<column name="encounter_id" type="int">
+				<constraints nullable="false" unique="true" />
+			</column>
+			<column name="creator" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="date_created" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="changed_by" type="int" />
+			<column name="date_changed" type="datetime" />
+			<column name="voided" type="smallint" defaultValueNumeric="0">
+				<constraints nullable="false" />
+			</column>
+			<column name="voided_by" type="int" />
+			<column name="date_voided" type="datetime" />
+			<column name="void_reason" type="varchar(255)" />
+			<column name="uuid" type="char(38)">
+				<constraints nullable="false" unique="true" />
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint constraintName="form_history_visit_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="visit_id" referencedTableName="visit"
+			referencedColumnNames="visit_id" />
+		<addForeignKeyConstraint constraintName="form_history_encounter_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="encounter_id" referencedTableName="encounter"
+			referencedColumnNames="encounter_id" />
+		<addForeignKeyConstraint constraintName="form_history_creator_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="creator" referencedTableName="users"
+			referencedColumnNames="user_id" />
+		<addForeignKeyConstraint constraintName="form_history_voided_by_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="voided_by" referencedTableName="users"
+			referencedColumnNames="user_id" />
+		<addForeignKeyConstraint constraintName="form_history_changed_by_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="changed_by" referencedTableName="users"
+			referencedColumnNames="user_id" />
+	</changeSet>
+	<changeSet id="20160824-0728" author="k-joseph" dbms="mysql">
+		<comment>Clearing up liquibase would be issues where module was installed before today</comment>
+		<sql>
+			delete from liquibasechangelog where id='20160811-0316';
+			TRUNCATE isantepluspatientdashboard_form_history;
+		</sql>
+	</changeSet>
+	<changeSet id="20160824-0740" author="k-joseph">
+		<comment>Creates initial FormHistory for existing encounters</comment>
+		<customChange
+			class="org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory" />
+	</changeSet>
+	<changeSet id="2016Sept02-1519" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.formHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.formHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cf364-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1526" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.labHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.labHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cf710-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1527" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.formsHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.formsHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cf8dc-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1528" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.growthCharts';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.growthCharts" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="3804126a-7111-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1529" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.weightGraph';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.weightGraph" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cfbb6-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1530" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.lastViralLoadTest';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.lastViralLoadTest" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cfa4e-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept03-1904" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.isantePlusForms';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.isantePlusForms" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="cd7a2ae4-72c1-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept05-2136" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM appframework_component_state WHERE component_id = 'coreapps.mostRecentVitals';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id" value="coreapps.mostRecentVitals" />
+			<column name="enabled" value="0" />
+			<column name="component_type" value="APP" />
+			<column name="uuid" value="42996aea-73a0-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept05-2137" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.mostRecentVitals';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.mostRecentVitals" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="8a1159be-73a0-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept18-2125" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.drugsHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.drugsHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="d075e7a0-7dd0-11e6-ae22-56b6b6499611" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

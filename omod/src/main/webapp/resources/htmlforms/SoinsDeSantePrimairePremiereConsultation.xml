@@ -490,7 +490,7 @@
 					<fieldset>
 						<table width="100%">
 							<tr>
-								<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText=" / "/> cm</td>
+								<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText=" / "/> mmHg</td>
 							</tr>	
 							<tr>
 								<td>Temp <obs conceptId="CIEL:5088"/> °C</td><td>Pouls <obs conceptId="CIEL:5087"/></td><td>FR <obs conceptId="CIEL:5242"/></td>

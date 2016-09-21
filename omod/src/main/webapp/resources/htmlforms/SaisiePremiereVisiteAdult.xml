@@ -526,7 +526,7 @@
 										<td>Temp</td><td><obs conceptId="CIEL:5088"/> Celcius</td>
 									</tr>
 									<tr>			
-										<td>TA</td><td><obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> cm</td>
+										<td>TA</td><td><obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> mmHg</td>
 									</tr>
 									 <tr>			
 										<td>Pouls</td><td><obs conceptId="CIEL:5087"/></td><td>Poids</td><td><obs conceptId="CIEL:5089"/> kg</td>

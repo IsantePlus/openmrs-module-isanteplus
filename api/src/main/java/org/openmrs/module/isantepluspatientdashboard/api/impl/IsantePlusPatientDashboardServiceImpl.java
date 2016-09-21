@@ -678,15 +678,18 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 		for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
 			if (obs != null) {
-				Integer result = Integer.parseInt(obs.getValueCoded().toString());
-				Concept resultTest = Context.getConceptService().getConcept(result);
-
-				for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
-					
-						labHistory.add(obs1);
-					
-				}
-			}
+				
+					Integer result = Integer.parseInt(obs.getValueCoded().toString());
+					Concept resultTest = Context.getConceptService().getConcept(result);
+	
+					for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
+						if(obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId())
+						{
+							labHistory.add(obs1);
+						
+						}
+				    }
+			 }
 		}
 		return labHistory;
 	}

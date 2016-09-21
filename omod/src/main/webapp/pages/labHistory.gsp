@@ -23,7 +23,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     		<tr>
 	    		<td>${ui.format(it.concept)}</td>
 	    		<td>${ui.format(it.obsDatetime)}</td>
-	    		<td>${ui.format(it.valueNumeric)} ${ui.format(it.valueCoded)} ${ui.format(it.valueText)}</td>
+	    		<td>${ui.format(it.valueNumeric)} ${ui.format(it.valueCoded)} ${ui.format(it.valueText)} ${ui.format(it.concept.getUnits())}</td>
     		</tr>
     	<% } %>
     </div>

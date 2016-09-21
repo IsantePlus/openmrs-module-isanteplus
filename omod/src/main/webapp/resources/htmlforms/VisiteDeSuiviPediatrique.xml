@@ -450,7 +450,6 @@
 		}
 		else{
 			group.find("#disabled1").find("input").attr("disabled",true);
-			setValue('date_eligibilite_arv.value', '');
 			group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
 			group.find("#disabled1").find("input[type$='checkbox']").change();
 		}

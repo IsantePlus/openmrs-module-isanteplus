@@ -116,9 +116,7 @@
 		<obs conceptId="CIEL:162929" answerConceptIds="CIEL:162930,CIEL:162931,CIEL:162932,CIEL:162933,CIEL:162934,CIEL:162935,CIEL:162936,CIEL:163098,CIEL:163125,CIEL:163124"
 		answerLabels="Vaudou,Catholique,Baptiste,Musulman,Pentecôtiste,Adventiste,Témoin de Jéhovah,Bouddhisme,Christianisme (non-catholique),Hindouisme" style="radio"/>
 	</section>
-	<section headerLabel="ÉTAT CIVIL">
-		<obs conceptId="CIEL:1054" answerConceptIds="CIEL:1056,CIEL:1057,CIEL:1058,CIEL:1059,CIEL:1060,CIEL:5555,CIEL:135704" answerLabels="SÉPARÉ,JAMAIS MARIÉ(E) (CÉLIBATAIRE),Divorcé,Veuf/veuve,Vit maritalement,Marié, Vit seul" style="radio"/>
-	</section>
+	
 	<section headerLabel="CONDITIONS DE VIE SOCIAL">
 		<obs conceptId="CIEL:163466" answerConceptId="CIEL:135704" answerLabel="Vit seul"/><br/>
 		<obs conceptId="CIEL:163466" answerConceptId="CIEL:1060" answerLabel="Vit maritalement/Vivre avec partenaire"/><br/>
