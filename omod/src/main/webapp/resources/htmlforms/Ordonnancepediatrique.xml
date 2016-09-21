@@ -1,5 +1,5 @@
 <htmlform formUuid="b1a372de-2961-4468-8e7a-33b7e2048d71"
- formName="ordonnancepediatrique"
+ formName="ordonnance médicale pédiatrique"
  formVersion="1.0"	
  formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
  formDescription="ordonnance médicale pédiatrique"
@@ -27,6 +27,15 @@
 		}
 		table.baseline-aligned td {
 			vertical-align: baseline;
+		}
+		
+		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
+			float: none;
+		    display: inline-block;
+		}
+		
+		form label, .form label {
+			display: inline-block;
 		}
 	</style>
 <script type="text/javascript">

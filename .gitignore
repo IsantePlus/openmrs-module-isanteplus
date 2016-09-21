@@ -8,4 +8,9 @@ target/
 
 api/tartget/
 omod/target/
+<<<<<<< HEAD
 api/bin/pom.xml 
+=======
+api/bin/
+omod/bin/
+>>>>>>> d730ab2bc8c21f1e29dda90e90c6afd2de300162

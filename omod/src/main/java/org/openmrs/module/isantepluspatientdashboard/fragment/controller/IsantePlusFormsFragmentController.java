@@ -92,8 +92,8 @@ public class IsantePlusFormsFragmentController {
 			List<IsantePlusHtmlForm> hivCareForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> psychoSocialForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> otherForms = new ArrayList<IsantePlusHtmlForm>();
-			Integer adultStartingAge = Integer.parseInt(
-					Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
+			Integer adultStartingAge = Integer.parseInt(Context.getAdministrationService()
+					.getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
 
 			if (patientAge != null && patientAge > adultStartingAge) {
 				primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
@@ -116,9 +116,10 @@ public class IsantePlusFormsFragmentController {
 					obygnForms.add(ficheDeTravailEtDaccouchement);
 			}
 
-			if (patientAge != null && patientAge > adultStartingAge)
+			if (patientAge != null && patientAge > adultStartingAge) {
 				hivCareForms.add(saisiePremiereVisiteAdult);
-			hivCareForms.add(visiteDeSuivi);
+				hivCareForms.add(visiteDeSuivi);
+			}
 			if (patientAge != null && patientAge < adultStartingAge) {
 				hivCareForms.add(saisiePremiereVisitePediatrique);
 				hivCareForms.add(visiteDeSuiviPediatrique);
