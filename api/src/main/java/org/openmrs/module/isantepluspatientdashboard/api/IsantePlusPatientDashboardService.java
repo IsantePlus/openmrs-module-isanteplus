@@ -28,6 +28,7 @@ import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 import org.springframework.transaction.annotation.Transactional;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.DatabaseException;
@@ -94,7 +95,7 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 
 	List<FormHistory> getAllFormHistoryForAPatient(Patient patient);
 
-	List<Obs> getLabsHistory(Patient patient);
+	List<IsantePlusObs> getLabsHistory(Patient patient);
 
 	ComponentState getAppframeworkComponentState(String componentSateId);
 

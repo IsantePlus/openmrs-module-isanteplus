@@ -52,6 +52,7 @@ import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashbo
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.DatabaseException;
@@ -670,9 +671,9 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 	@SuppressWarnings("deprecation")
 	@Override
-	public List<Obs> getLabsHistory(Patient patient) {
+	public List<IsantePlusObs> getLabsHistory(Patient patient) {
 		// TESTS ORDERED = 1271
-		List<Obs> labHistory = new ArrayList<Obs>();
+		List<IsantePlusObs> labHistory = new ArrayList<IsantePlusObs>();
 		Integer labConceptId = 1271;
 		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
 
@@ -685,7 +686,8 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 					for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
 						if(obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId())
 						{
-							labHistory.add(obs1);
+							IsantePlusObs obsres = new IsantePlusObs(obs1);
+							labHistory.add(obsres);
 						
 						}
 				    }
