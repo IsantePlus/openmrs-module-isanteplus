@@ -97,7 +97,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 				.getLatestSystolicBloodPressureForPatient(patient);
 
 		if (dBP != null && sBP != null) {
-			bp = String.valueOf(dBP.getValueNumeric()) + "/" + String.valueOf(sBP.getValueNumeric());
+			bp = String.valueOf(sBP.getValueNumeric()) + "/" + String.valueOf(dBP.getValueNumeric());
 		}
 
 		return bp;
