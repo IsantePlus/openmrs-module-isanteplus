@@ -2999,7 +2999,7 @@
 	<div id="datePr">
 	Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
 	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/> <br/><br/>
-	<encounterProvider/>
+
 	</div>
 	
 	<div id="sauvegarde">
