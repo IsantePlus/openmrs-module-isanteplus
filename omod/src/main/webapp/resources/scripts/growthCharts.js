@@ -214,54 +214,13 @@ function renderPatient_ChartJS_LineGraph_LengthAgeInf(patientChartData,
 				diff97Values.push(fetchedGrowthChartData[i].Diff97);
 			}
 		}
-		var datasets = [ /* generate_ChartJS_dataset("P3", p3Values), */
-		generate_ChartJS_dataset("P5", p5Values),
+		var datasets = [ generate_ChartJS_dataset("P5", p5Values),
 				generate_ChartJS_dataset("P10", p10Values),
 				generate_ChartJS_dataset("P25", p25Values),
 				generate_ChartJS_dataset("P50", p50Values),
 				generate_ChartJS_dataset("P75", p75Values),
 				generate_ChartJS_dataset("P90", p90Values),
-				generate_ChartJS_dataset("P95", p95Values) /*
-															 * ,
-															 * generate_ChartJS_dataset("P97",
-															 * p97Values),
-															 * generate_ChartJS_dataset("Pub3",
-															 * pub3Values),
-															 * generate_ChartJS_dataset("Pub5",
-															 * pub5Values),
-															 * generate_ChartJS_dataset("Pub10",
-															 * pub10Values),
-															 * generate_ChartJS_dataset("Pub25",
-															 * pub25Values),
-															 * generate_ChartJS_dataset("Pub50",
-															 * pub50Values),
-															 * generate_ChartJS_dataset("Pub75",
-															 * pub75Values),
-															 * generate_ChartJS_dataset("Pub90",
-															 * pub90Values),
-															 * generate_ChartJS_dataset("Pub95",
-															 * pub95Values),
-															 * generate_ChartJS_dataset("Pub97",
-															 * pub97Values),
-															 * generate_ChartJS_dataset("Diff3",
-															 * diff3Values),
-															 * generate_ChartJS_dataset("Diff5",
-															 * diff5Values),
-															 * generate_ChartJS_dataset("Diff10",
-															 * diff10Values),
-															 * generate_ChartJS_dataset("Diff25",
-															 * diff25Values),
-															 * generate_ChartJS_dataset("Diff50",
-															 * diff50Values),
-															 * generate_ChartJS_dataset("Diff75",
-															 * diff75Values),
-															 * generate_ChartJS_dataset("Diff90",
-															 * diff90Values),
-															 * generate_ChartJS_dataset("Diff95",
-															 * diff95Values),
-															 * generate_ChartJS_dataset("Diff97",
-															 * diff97Values)
-															 */];
+				generate_ChartJS_dataset("P95", p95Values) ];
 
 		var data = {
 			labels : labels,
@@ -301,7 +260,6 @@ function renderPatient_ChartJS_LineGraph_WeightStature(patientChartData,
 			p85Values.push(filtered_fetchedGrowthChartData[i].P85);
 		}
 
-		// data.datasets.push(generate_ChartJS_dataset("P85", p85Values));
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
@@ -322,7 +280,6 @@ function renderPatient_ChartJS_LineGraph_bmiAge(patientChartData, elementId,
 			p85Values.push(filtered_fetchedGrowthChartData[i].P85);
 		}
 
-		// data.datasets.push(generate_ChartJS_dataset("P85", p85Values));
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
 }
@@ -360,7 +317,8 @@ function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 						.round(filtered_fetchedGrowthChartData[i][holizontalScaler]);
 
 		if (jQuery.inArray(label, labels) < 0) {
-			var patientValue = matchAndGetPatientValueForLabel(patientChartData, label);
+			var patientValue = matchAndGetPatientValueForLabel(
+					patientChartData, label);
 
 			labels.push(label);
 			p3Values.push(filtered_fetchedGrowthChartData[i].P3);
@@ -372,23 +330,17 @@ function setupCDCBasicGrowthChatMeta(fetchedGrowthChartData, patientPropts,
 			p90Values.push(filtered_fetchedGrowthChartData[i].P90);
 			p95Values.push(filtered_fetchedGrowthChartData[i].P95);
 			p97Values.push(filtered_fetchedGrowthChartData[i].P97);
-			patientValues.push(patientValue != undefined ? patientValue
-					: null);
+			patientValues.push(patientValue != undefined ? patientValue : null);
 		}
 	}
-	var datasets = [ /* generate_ChartJS_dataset("P3", p3Values), */
-	generate_ChartJS_dataset("P5", p5Values),
+	var datasets = [ generate_ChartJS_dataset("P5", p5Values),
 			generate_ChartJS_dataset("P10", p10Values),
 			generate_ChartJS_dataset("P25", p25Values),
 			generate_ChartJS_dataset("P50", p50Values),
 			generate_ChartJS_dataset("P75", p75Values),
 			generate_ChartJS_dataset("P90", p90Values),
 			generate_ChartJS_dataset("P95", p95Values),
-			generate_ChartJS_dataset("Patient", patientValues) /*
-																 * ,
-																 * generate_ChartJS_dataset("P97",
-																 * p97Values)
-																 */];
+			generate_ChartJS_dataset("Patient", patientValues) ];
 
 	return {
 		labels : labels,
@@ -437,7 +389,7 @@ function drawLineChartJSGraph(elementId, data, axisLabelNames) {
 				xAxes : [ {
 					scaleLabel : {
 						display : true,
-						labelString : axisLabelNames.x
+						labelString : $.parseHTML(axisLabelNames.x)[0].textContent
 					}
 				} ],
 				yAxes : [ {
@@ -446,7 +398,7 @@ function drawLineChartJSGraph(elementId, data, axisLabelNames) {
 					},
 					scaleLabel : {
 						display : true,
-						labelString : axisLabelNames.y
+						labelString : $.parseHTML(axisLabelNames.y)[0].textContent
 					}
 				} ]
 			}
@@ -460,7 +412,7 @@ function generate_ChartJS_dataset(labelHackCode, dataValues) {
 		data : dataValues,
 		borderColor : growthChartCurveColors[labelHackCode],
 		borderWidth : ((labelHackCode == "Patient") ? 2 : 1),
-		spanGaps: true
+		spanGaps : true
 	};
 }
 
@@ -506,7 +458,8 @@ function matchAndGetPatientValueForLabel(patientChartData, label) {
 	return patientValue;
 }
 
-function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler, patientChartData) {
+function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler,
+		patientChartData) {
 	if (fetchedGrowthChartData != undefined) {
 		var labels = [];
 		var p3Values = [];
@@ -515,7 +468,7 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler, p
 		var p85Values = [];
 		var p97Values = [];
 		var patientValues = [];
-		
+
 		fetchedGrowthChartData = JSON.parse(fetchedGrowthChartData);
 		for (i = 0; i < fetchedGrowthChartData.length; i++) {
 			var month = Math
@@ -526,8 +479,9 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler, p
 						.round(fetchedGrowthChartData[i][holizontalScaler]);
 
 				if (jQuery.inArray(label, labels) < 0) {
-					var patientValue = matchAndGetPatientValueForLabel(patientChartData, label);
-					
+					var patientValue = matchAndGetPatientValueForLabel(
+							patientChartData, label);
+
 					labels.push(label);
 					p3Values.push(fetchedGrowthChartData[i].P3);
 					p15Values.push(fetchedGrowthChartData[i].P15);
@@ -545,7 +499,7 @@ function setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, holizontalScaler, p
 				generate_ChartJS_dataset("P85", p85Values),
 				generate_ChartJS_dataset("P97", p97Values),
 				generate_ChartJS_dataset("Patient", patientValues) ];
-		
+
 		return {
 			labels : labels,
 			datasets : datasets
@@ -562,7 +516,8 @@ function renderWHOPatient_ChartJS_LineGraph_WeightForAge(patientChartData,
 						getFileContentFromServer(wfa_boysPath), "Age")
 						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age", patientChartData);
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age",
+				patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
@@ -577,7 +532,8 @@ function renderWHOPatient_ChartJS_LineGraph_WeightForLength(patientChartData,
 						getFileContentFromServer(wfl_boysPath), "Length")
 						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Length", patientChartData);
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData,
+				"Length", patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
@@ -592,7 +548,8 @@ function renderWHOPatient_ChartJS_LineGraph_LengthForAge(patientChartData,
 						getFileContentFromServer(lhfa_boysPath), "Day")
 						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Day", patientChartData);
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Day",
+				patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
@@ -607,7 +564,8 @@ function renderWHOPatient_ChartJS_LineGraph_HeadCircumferenceForAge(
 						getFileContentFromServer(hcfa_boysPath), "Age")
 						: undefined);
 
-		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age", patientChartData);
+		var data = setupWHOBasicGrowthChatMeta(fetchedGrowthChartData, "Age",
+				patientChartData);
 
 		drawLineChartJSGraph(elementId, data, axisLabelNames);
 	}
