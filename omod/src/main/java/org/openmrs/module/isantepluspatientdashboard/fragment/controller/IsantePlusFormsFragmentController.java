@@ -99,14 +99,15 @@ public class IsantePlusFormsFragmentController {
 				primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
 				primaryCareForms.add(soinsDeSantePrimaireConsultation);
 			}
-			if (patientAge != null && patientAge < adultStartingAge) {
+			if (patientAge != null && patientAge <= adultStartingAge) {
 				primaryCareForms.add(soinsDeSantePrimairePremiereConsultationPediatrique);
 				primaryCareForms.add(soinsDeSantePrimaireConsultationPediatrique);
 			}
 
 			labForms.add(analyseDeLaboratoire);
-			labForms.add(ordonnanceMedicale);
-			if (patientAge != null && patientAge < adultStartingAge)
+			if (patientAge != null && patientAge > adultStartingAge)
+				labForms.add(ordonnanceMedicale);
+			if (patientAge != null && patientAge <= adultStartingAge)
 				labForms.add(ordonnancepediatrique);
 
 			if (StringUtils.isNotBlank(patientSex) && patientAge != null && "F".equals(patientSex)) {
@@ -120,7 +121,7 @@ public class IsantePlusFormsFragmentController {
 				hivCareForms.add(saisiePremiereVisiteAdult);
 				hivCareForms.add(visiteDeSuivi);
 			}
-			if (patientAge != null && patientAge < adultStartingAge) {
+			if (patientAge != null && patientAge <= adultStartingAge) {
 				hivCareForms.add(saisiePremiereVisitePediatrique);
 				hivCareForms.add(visiteDeSuiviPediatrique);
 			}
@@ -128,7 +129,7 @@ public class IsantePlusFormsFragmentController {
 
 			if (patientAge != null && patientAge > adultStartingAge)
 				psychoSocialForms.add(fichePsychosocialeAdulte);
-			if (patientAge != null && patientAge < adultStartingAge)
+			if (patientAge != null && patientAge <= adultStartingAge)
 				psychoSocialForms.add(fichePsychosocialePediatrique);
 
 			otherForms.add(vaccination);

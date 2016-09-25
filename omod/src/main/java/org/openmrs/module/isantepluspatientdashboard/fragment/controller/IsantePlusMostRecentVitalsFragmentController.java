@@ -73,7 +73,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 				Context.getMessageSourceService()
 						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.unit"));
 		Integer patientAge = patient.getAge();
-		Integer adultStartingAge = Integer.parseInt(
+		Integer enfantEndingAge = Integer.parseInt(
 				Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
 
 		vitals.add(height);
@@ -84,7 +84,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		vitals.add(respiratoryRate);
 		vitals.add(bloodPressure);
 		vitals.add(bloodOxygenSaturation);
-		if (patientAge != null && patientAge < adultStartingAge)
+		if (patientAge != null && patientAge <= enfantEndingAge)
 			vitals.add(midUpperArmCircumference);
 		model.put("vitals", vitals);
 	}
