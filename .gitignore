@@ -6,11 +6,6 @@ target/
 .classpath
 .java-version
 
-api/tartget/
+api/target/
 omod/target/
-<<<<<<< HEAD
-api/bin/pom.xml 
-=======
-api/bin/
-omod/bin/
->>>>>>> d730ab2bc8c21f1e29dda90e90c6afd2de300162
+api/bin/pom.xml
