@@ -243,7 +243,7 @@
 			<column name="uuid" value="d075e7a0-7dd0-11e6-ae22-56b6b6499611" />
 		</insert>
 	</changeSet>
-	<changeSet id="2016Sept26-2126" author="k-joseph">
+	<changeSet id="2016Sept26-2126" author="jamesfeshner">
 		<preConditions onFail="MARK_RAN">
 			<sqlCheck expectedResult="0">
 				SELECT COUNT(*) FROM
