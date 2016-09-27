@@ -194,7 +194,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	private Set<Obs> getMidUpperArmCircumferenceConceptObsForAPatient(Patient patient) {
-		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.MIDUPPER_ARM_CIRCUMFERENCE_CONCEPTID,
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.MIDUPPERARM_CIRCUMFERENCE_CONCEPTID,
 				1343);
 	}
 
@@ -417,6 +417,56 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 
 		return obsValueAtAge;
+	}
+
+	@Override
+	public JSONArray getPatientBMIsAcrossAnAgeDifference(Patient patient, ChartJSAgeAxis ageAxis) {
+		Date birthDate = patient.getBirthdate();
+		Calendar atAgeFromBirth = Calendar.getInstance(Context.getLocale());
+		AgeUnit ageUnit = ageAxis.getAgeUnit();
+		Integer[] ages = createIntegerArrayByRange(ageAxis.getStartAge(), ageAxis.getLastAge(),
+				ageAxis.getAgeDifference());
+		JSONArray bmis = new JSONArray();
+
+		for (int atAge : ages) {
+			atAgeFromBirth.setTime(birthDate);
+			if (ageUnit.equals(AgeUnit.MONTHS)) {
+				atAgeFromBirth.add(Calendar.MONTH, atAge);
+			} else if (ageUnit.equals(AgeUnit.YEARS)) {
+				atAgeFromBirth.add(Calendar.YEAR, atAge);
+			}
+			for (Obs o : getWeightConceptObsForAPatient(patient)) {
+				if (o.getValueNumeric() != null) {
+					Calendar obsDate = Calendar.getInstance(Context.getLocale());
+
+					obsDate.setTime(getObservationDate(o));
+
+					Integer diffYears = obsDate.get(Calendar.YEAR) - atAgeFromBirth.get(Calendar.YEAR);
+					Integer diffMonths = diffYears * 12 + obsDate.get(Calendar.MONTH)
+							- atAgeFromBirth.get(Calendar.MONTH);
+					Obs latestHeightForPatient = getLatestHeightForPatient(patient);
+					Double bmi = null;
+					JSONObject bmiJson = new JSONObject();
+
+					if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
+						bmi = roundAbout(
+								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
+								1);
+					} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
+						bmi = roundAbout(
+								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
+								1);
+					}
+
+					if (bmi != null) {
+						bmiJson.put(Integer.toString(atAge), bmi);
+						bmis.put(bmiJson);
+					}
+				}
+			}
+		}
+
+		return bmis;
 	}
 
 	/**

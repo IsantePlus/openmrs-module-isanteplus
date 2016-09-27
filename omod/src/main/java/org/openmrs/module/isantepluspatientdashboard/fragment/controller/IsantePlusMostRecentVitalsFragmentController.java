@@ -28,6 +28,15 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		return null;
 	}
 
+	/**
+	 * TODO the instead of defining units in messages, use concept units using
+	 * something like;
+	 * Context.getConceptService().getConceptNumeric(concept.getConceptId()).getUnits(
+	 * )
+	 * 
+	 * @param model
+	 * @param patient
+	 */
 	public void controller(FragmentModel model, @RequestParam("patientId") Patient patient) {
 		IsantePlusVital height = new IsantePlusVital(
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.height.label"),
