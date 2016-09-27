@@ -720,7 +720,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
 			ComponentState drugsHistory = getAppframeworkComponentState(manager.getDrugsHistoryExtensionId());
-
+			ComponentState bmiGraph = getAppframeworkComponentState(manager.getBmiGraphExtensionId());
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
 				saveOrUpdateComponentState(growthCharts);
@@ -758,6 +758,10 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			if (drugsHistory != null && extensions.has(manager.getDrugsHistoryExtensionId())) {
 				drugsHistory.setEnabled(extensions.getBoolean(manager.getDrugsHistoryExtensionId()));
 				saveOrUpdateComponentState(drugsHistory);
+			}
+			if (bmiGraph != null && extensions.has(manager.getBmiGraphExtensionId())) {
+				bmiGraph.setEnabled(extensions.getBoolean(manager.getBmiGraphExtensionId()));
+				saveOrUpdateComponentState(bmiGraph);
 			}
 		}
 	}

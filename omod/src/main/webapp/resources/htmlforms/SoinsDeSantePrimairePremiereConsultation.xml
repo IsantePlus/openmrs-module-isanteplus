@@ -32,7 +32,8 @@
 		}
 		.lienvisible#first{display: block}
 		.toggle-button{
-			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			height:auto; background:#132959; border:1px solid #FFFFFF;
+			color:#FFFAF4;
 			width:100%";
 		}
 		.contener

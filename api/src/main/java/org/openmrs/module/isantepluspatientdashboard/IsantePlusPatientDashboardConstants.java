@@ -37,4 +37,5 @@ public class IsantePlusPatientDashboardConstants {
 	public static String[] ISANTEPLUS_FORMFILE_NAMES = ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS.split(",");
 
 	public static final String DRUGSHISTORY_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.drugsHistory";
+	public static String BMIGRAPH_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.bmiGraph";
 }

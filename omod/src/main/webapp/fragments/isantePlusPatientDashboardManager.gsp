@@ -7,6 +7,7 @@
 <input type="checkbox" class="managerOption" id="${manager.isantePlusFormsExtensionId}" ${manager.isantePlusFormsExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableIsantePlusForms') }<br />
 <input type="checkbox" class="managerOption" id="${manager.mostRecentVitalsExtensionId}" ${manager.mostRecentVitalsExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableMostRecentVitals') }<br />
 <input type="checkbox" class="managerOption" id="${manager.drugsHistoryExtensionId}" ${manager.drugsHistoryExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableDrugsHistory') }<br />
+<input type="checkbox" class="managerOption" id="${manager.bmiGraphExtensionId}" ${manager.bmiGraphExtensionChecked}> ${ ui.message('isantepluspatientdashboard.manageIsantePlusPatientDashboard.enableBmiGraph') }<br />
 	
 <input type="button" id="submitIsantePlusPatientDashboardManagerForm" value="${ ui.message('general.save') }">
 
