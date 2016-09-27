@@ -101,36 +101,6 @@ hide.hidden {
 	#end
 #end "/>
 </ifMode>
-
-<!--&lt;span id="encounter" value="$encounter.form.formId"&gt;&lt;&#47;span&gt;
-window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/openmrs/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.uuid&quot;;
-
-Final code - I am using the OPENMRS_CONTENT_PATH variable to enable it to be portable across environments
-<ifMode mode="EDIT" include="false">
-   <lookup complexExpression="
- #set( $encounter = 0 )
- #set( $encounter = $fn.latestEncounter('8d5b27bc-c2cc-11de-8d13-0010c6dffd0f'))
- #if( $encounter != 0 )
- &lt;script type=&quot;text/javascript&quot;>
-
- // check that the HTML form is not being edited via the edit HTML form admin page
-
- if (window.location.href.indexOf('/module/htmlformentry/htmlForm.form?id=3') == -1) {
-
- window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ OPENMRS_CONTEXT_PATH + &quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patientId&amp;visitId=$encounter.visit.visitId&amp;formUuid=52653a60-8300-4c13-be4d-4b746da06fee&amp;encounterId=$encounter.encounterId&amp;returnUrl=%2F&quot; + OPENMRS_CONTEXT_PATH + &quot;%2Fcoreapps%2Fclinicianfacing%2Fpatient.page%3FpatientId%3D$encounter.patientId&quot;;
- }
- &lt;/script>
- #end"/>
-</ifMode>
-
-//if (window.location.href != &quot;http://localhost:8081/openmrs-standalone/module/htmlformentry/htmlForm.form?id=37&quot;)
-			//window.location.href=&quot;http://localhost:8081/openmrs-standalone/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;encounterId=$encounter.encounterId&quot;;
-			//window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ OPENMRS_CONTEXT_PATH + &quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.form.uuid&amp;returnUrl=%2F&quot; + OPENMRS_CONTEXT_PATH + &quot;%2Fcoreapps%2Fclinicianfacing%2Fpatient.page%3FpatientId%3D$encounter.patient.uuid&quot;;
-
--->
-
-
-
 <hide class="hidden">
    <encounterDate default="today" disallowMultipleEncountersOnDate ="block" />
    <encounterLocation id="encounterLocation" default="SessionAttribute:emrContext.sessionLocationId"/>
