@@ -28,6 +28,15 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		return null;
 	}
 
+	/**
+	 * TODO the instead of defining units in messages, use concept units using
+	 * something like;
+	 * Context.getConceptService().getConceptNumeric(concept.getConceptId()).getUnits(
+	 * )
+	 * 
+	 * @param model
+	 * @param patient
+	 */
 	public void controller(FragmentModel model, @RequestParam("patientId") Patient patient) {
 		IsantePlusVital height = new IsantePlusVital(
 				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.height.label"),
@@ -73,7 +82,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 				Context.getMessageSourceService()
 						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.unit"));
 		Integer patientAge = patient.getAge();
-		Integer adultStartingAge = Integer.parseInt(
+		Integer enfantEndingAge = Integer.parseInt(
 				Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
 
 		vitals.add(height);
@@ -84,7 +93,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		vitals.add(respiratoryRate);
 		vitals.add(bloodPressure);
 		vitals.add(bloodOxygenSaturation);
-		if (patientAge != null && patientAge < adultStartingAge)
+		if (patientAge != null && patientAge <= enfantEndingAge)
 			vitals.add(midUpperArmCircumference);
 		model.put("vitals", vitals);
 	}
@@ -97,7 +106,7 @@ public class IsantePlusMostRecentVitalsFragmentController {
 				.getLatestSystolicBloodPressureForPatient(patient);
 
 		if (dBP != null && sBP != null) {
-			bp = String.valueOf(dBP.getValueNumeric()) + "/" + String.valueOf(sBP.getValueNumeric());
+			bp = String.valueOf(sBP.getValueNumeric()) + "/" + String.valueOf(dBP.getValueNumeric());
 		}
 
 		return bp;
