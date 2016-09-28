@@ -1,5 +1,5 @@
 <htmlform formUuid="2eb5f8f8-9bb4-4aae-92cc-1706eca22e6a"
- formName="ordonnance médicale adulte"
+ formName="Ordonnance médicale"
  formVersion="1.0"	
  formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
  formDescription="ordonnance  médicale adulte"
@@ -27,15 +27,6 @@
 		}
 		table.baseline-aligned td {
 			vertical-align: baseline;
-		}
-		
-		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
-			float: none;
-		    display: inline-block;
-		}
-		
-		form label, .form label {
-			display: inline-block;
 		}
 	</style>
 <script type="text/javascript">
@@ -212,10 +203,10 @@
                         </th><th width ="16%">
                         </th><th width="30%">
                         </th><th><b>Posologie journalière</b>
-                        </th><th><b>Posologie journalière alternative, préciser</b>
+                        </th><th width="10%"><b>Posologie journalière alternative, préciser</b>
                         </th><th><b>Nombre de jours</b>
                         </th><th width="40%"><b>Médicaments dispensés Date dispensé</b>
-                        </th><th><b>Posologie alternative dispensée, préciser</b>
+                        </th><th width="10%"><b>Posologie alternative dispensée, préciser</b>
                         </th><th width="15%"><b>Nombre de jours alternatifs dispensés, préciser</b>
                         </th><th><b>Nombre de pillules distribuées</b>
                         </th></tr>

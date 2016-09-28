@@ -194,7 +194,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 
 	private Set<Obs> getMidUpperArmCircumferenceConceptObsForAPatient(Patient patient) {
-		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.MIDUPPERARM_CIRCUMFERENCE_CONCEPTID,
+		return getObsFromConceptForPatient(patient, ConfigurableGlobalProperties.MIDUPPER_ARM_CIRCUMFERENCE_CONCEPTID,
 				1343);
 	}
 
@@ -417,56 +417,6 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 
 		return obsValueAtAge;
-	}
-
-	@Override
-	public JSONArray getPatientBMIsAcrossAnAgeDifference(Patient patient, ChartJSAgeAxis ageAxis) {
-		Date birthDate = patient.getBirthdate();
-		Calendar atAgeFromBirth = Calendar.getInstance(Context.getLocale());
-		AgeUnit ageUnit = ageAxis.getAgeUnit();
-		Integer[] ages = createIntegerArrayByRange(ageAxis.getStartAge(), ageAxis.getLastAge(),
-				ageAxis.getAgeDifference());
-		JSONArray bmis = new JSONArray();
-
-		for (int atAge : ages) {
-			atAgeFromBirth.setTime(birthDate);
-			if (ageUnit.equals(AgeUnit.MONTHS)) {
-				atAgeFromBirth.add(Calendar.MONTH, atAge);
-			} else if (ageUnit.equals(AgeUnit.YEARS)) {
-				atAgeFromBirth.add(Calendar.YEAR, atAge);
-			}
-			for (Obs o : getWeightConceptObsForAPatient(patient)) {
-				if (o.getValueNumeric() != null) {
-					Calendar obsDate = Calendar.getInstance(Context.getLocale());
-
-					obsDate.setTime(getObservationDate(o));
-
-					Integer diffYears = obsDate.get(Calendar.YEAR) - atAgeFromBirth.get(Calendar.YEAR);
-					Integer diffMonths = diffYears * 12 + obsDate.get(Calendar.MONTH)
-							- atAgeFromBirth.get(Calendar.MONTH);
-					Obs latestHeightForPatient = getLatestHeightForPatient(patient);
-					Double bmi = null;
-					JSONObject bmiJson = new JSONObject();
-
-					if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
-						bmi = roundAbout(
-								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
-								1);
-					} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
-						bmi = roundAbout(
-								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
-								1);
-					}
-
-					if (bmi != null) {
-						bmiJson.put(Integer.toString(atAge), bmi);
-						bmis.put(bmiJson);
-					}
-				}
-			}
-		}
-
-		return bmis;
 	}
 
 	/**
@@ -757,6 +707,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState growthCharts = getAppframeworkComponentState(manager.getGrowthChartsExtensionId());
 			ComponentState LabHistory = getAppframeworkComponentState(manager.getLabHistoryExtensionId());
 			ComponentState lastViralLoad = getAppframeworkComponentState(manager.getLastViralLoadTestExtensionId());
+			ComponentState lastDrugs = getAppframeworkComponentState(manager.getLastDrugsExtensionId());
 			ComponentState patientFormHistory = getAppframeworkComponentState(
 					manager.getPatientFormHistoryExtensionId());
 			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
@@ -775,6 +726,10 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			if (lastViralLoad != null && extensions.has(manager.getLastViralLoadTestExtensionId())) {
 				lastViralLoad.setEnabled(extensions.getBoolean(manager.getLastViralLoadTestExtensionId()));
 				saveOrUpdateComponentState(lastViralLoad);
+			}
+			if (lastDrugs != null && extensions.has(manager.getLastDrugsExtensionId())) {
+				lastDrugs.setEnabled(extensions.getBoolean(manager.getLastDrugsExtensionId()));
+				saveOrUpdateComponentState(lastDrugs);
 			}
 			if (patientFormHistory != null && extensions.has(manager.getPatientFormHistoryExtensionId())) {
 				patientFormHistory.setEnabled(extensions.getBoolean(manager.getPatientFormHistoryExtensionId()));
@@ -867,4 +822,32 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 		return drugsHistory;
 	}
+	
+	public List<Obs> getLastDrugsObsForPatient(Patient patient) {
+		List<Obs> drugsObs = getDrugsHistory(patient);
+		sortObsListByObsDateTime(drugsObs);
+		List<Obs> lastdrugsObs=new ArrayList<Obs>();
+		Encounter lastEncounter=new Encounter();
+		if(drugsObs.size() >0)
+		lastEncounter=drugsObs.get(drugsObs.size() - 1).getEncounter();
+
+		//return drugsObs != null && drugsObs.size() > 0 ? drugsObs.get(drugsObs.size() - 1) : null;
+		while(drugsObs != null && drugsObs.size() > 0 && drugsObs.get(drugsObs.size() - 1).getEncounter()==lastEncounter ) {
+			//if(drugsObs.get(drugsObs.size()-1).getObsDatetime()==lastDate){
+				Obs o=drugsObs.get(drugsObs.size() - 1);
+				lastdrugsObs.add(o);
+				drugsObs.remove(o);
+			/*} else {
+				Obs o=drugsObs.get(drugsObs.size() - 1);
+				drugsObs.remove(o);
+			}*/
+			
+			
+			sortObsListByObsDateTime(drugsObs);
+			
+		}
+						
+		return lastdrugsObs;
+	}
 }
+
