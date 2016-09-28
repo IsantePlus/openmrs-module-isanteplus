@@ -21,8 +21,6 @@ public class IsantePlusPatientDashboardConstants {
 	public static String WEIGHTSGRAPH_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.weightGraph";
 
 	public static String LASTVIRALLOADTEST_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.lastViralLoadTest";
-	
-	public static String LASTDRUGS_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.lastDrugs";
 
 	public static String ISANTEFORMS_EXTENSIONPOINT_ID = "org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.isantePlusForms";
 

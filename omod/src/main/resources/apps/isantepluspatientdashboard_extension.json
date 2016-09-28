@@ -8,14 +8,6 @@
         }
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.lastDrugs",
-        "extensionPointId": "patientDashboard.secondColumnFragments",
-        "extensionParams": {
-            "provider": "${project.parent.artifactId}",
-            "fragment": "lastDrugs"
-        }
-    },
-    {
         "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.weightGraph",
         "extensionPointId": "patientDashboard.secondColumnFragments",
         "extensionParams": {
