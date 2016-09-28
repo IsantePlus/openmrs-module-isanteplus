@@ -53,12 +53,12 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 		var whoLengthForAgePatient = patientPlottableData.whoLengthForAgePatient;
 		var hcageinfPatient = patientPlottableData.hcageinfPatient;
 		var whoHeadCircumferenceForAgePatient = patientPlottableData.whoHeadCircumferenceForAgePatient;
-		var bmiAgeRevPatient = patientPlottableData.bmiAgeRevPatient;
-		var whoBMIForAgePatient = patientPlottableData.whoBMIForAgePatient;
 		//TODO support these below
 		var wtleninfPatient;
 		var wtstatPatient;
+		var bmiAgeRevPatient;
 		var whoWeightForLengthPatient;
+		var whoBMIForAgePatient;
     
     	//TODO fix this trigger
     	jQuery('#WTAGEINF').trigger('click');

@@ -15,6 +15,8 @@ public class IsantePlusPatientDashboardManager {
 	private String growthChartsExtensionId;
 
 	private String lastViralLoadTestExtensionId;
+	
+	private String lastDrugsExtensionId;
 
 	private String weightsGraphExtensionId;
 
@@ -31,6 +33,8 @@ public class IsantePlusPatientDashboardManager {
 	private boolean toggleGrowthChartsExtension;
 
 	private boolean toggleLastViralLoadTestExtension;
+	
+	private boolean toggleLastDrugsExtension;
 
 	private boolean toggleWeightsGraphExtension;
 
@@ -47,6 +51,8 @@ public class IsantePlusPatientDashboardManager {
 	private String growthChartsExtensionChecked;
 
 	private String lastViralLoadTestExtensionChecked;
+	
+	private String lastDrugsExtensionChecked;
 
 	private String weightsGraphExtensionChecked;
 
@@ -70,6 +76,7 @@ public class IsantePlusPatientDashboardManager {
 		patientFormHistoryExtensionId = IsantePlusPatientDashboardConstants.FORMHISTORY_EXTENSIONPOINT_ID;
 		growthChartsExtensionId = IsantePlusPatientDashboardConstants.GROWTHCHARTS_EXTENSIONPOINT_ID;
 		lastViralLoadTestExtensionId = IsantePlusPatientDashboardConstants.LASTVIRALLOADTEST_EXTENSIONPOINT_ID;
+		lastDrugsExtensionId = IsantePlusPatientDashboardConstants.LASTDRUGS_EXTENSIONPOINT_ID;
 		weightsGraphExtensionId = IsantePlusPatientDashboardConstants.WEIGHTSGRAPH_EXTENSIONPOINT_ID;
 		isantePlusFormsExtensionId = IsantePlusPatientDashboardConstants.ISANTEFORMS_EXTENSIONPOINT_ID;
 		mostRecentVitalsExtensionId = IsantePlusPatientDashboardConstants.MOSTRECENTVITALS_EXTENSIONPOINT_ID;
@@ -80,6 +87,7 @@ public class IsantePlusPatientDashboardManager {
 		togglePatientFormHistoryExtension = getComponentStateStateEnabled((getPatientFormHistoryExtensionId()));
 		toggleGrowthChartsExtension = getComponentStateStateEnabled(getGrowthChartsExtensionId());
 		toggleLastViralLoadTestExtension = getComponentStateStateEnabled(getLastViralLoadTestExtensionId());
+		toggleLastDrugsExtension = getComponentStateStateEnabled(getLastDrugsExtensionId());
 		toggleWeightsGraphExtension = getComponentStateStateEnabled(getWeightsGraphExtensionId());
 		toggleIsantePlusFormsExtension = getComponentStateStateEnabled(getIsantePlusFormsExtensionId());
 		toogleMostRecentVitalsExtension = getComponentStateStateEnabled(getMostRecentVitalsExtensionId());
@@ -90,6 +98,7 @@ public class IsantePlusPatientDashboardManager {
 		patientFormHistoryExtensionChecked = getTogglePatientFormHistoryExtension() ? "checked" : "";
 		growthChartsExtensionChecked = getToggleGrowthChartsExtension() ? "checked" : "";
 		lastViralLoadTestExtensionChecked = getToggleLastViralLoadTestExtension() ? "checked" : "";
+		lastDrugsExtensionChecked = getToggleLastDrugsExtension() ? "checked" : "";
 		weightsGraphExtensionChecked = getToggleWeightsGraphExtension() ? "checked" : "";
 		isantePlusFormsExtensionChecked = getToggleIsantePlusFormsExtension() ? "checked" : "";
 		mostRecentVitalsExtensionChecked = getToogleMostRecentVitalsExtension() ? "checked" : "";
@@ -116,6 +125,10 @@ public class IsantePlusPatientDashboardManager {
 	public String getLastViralLoadTestExtensionId() {
 		return lastViralLoadTestExtensionId;
 	}
+	
+	public String getLastDrugsExtensionId() {
+		return lastDrugsExtensionId;
+	}
 
 	public String getWeightsGraphExtensionId() {
 		return weightsGraphExtensionId;
@@ -140,6 +153,10 @@ public class IsantePlusPatientDashboardManager {
 	public boolean getToggleLastViralLoadTestExtension() {
 		return toggleLastViralLoadTestExtension;
 	}
+	
+	public boolean getToggleLastDrugsExtension() {
+		return toggleLastDrugsExtension;
+	}
 
 	public boolean getToggleWeightsGraphExtension() {
 		return toggleWeightsGraphExtension;
@@ -163,6 +180,10 @@ public class IsantePlusPatientDashboardManager {
 
 	public String getLastViralLoadTestExtensionChecked() {
 		return lastViralLoadTestExtensionChecked;
+	}
+	
+	public String getLastDrugsExtensionChecked() {
+		return lastDrugsExtensionChecked;
 	}
 
 	public String getWeightsGraphExtensionChecked() {

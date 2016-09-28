@@ -1,5 +1,5 @@
 <htmlform formUuid="b1a372de-2961-4468-8e7a-33b7e2048d71"
- formName="ordonnance médicale pédiatrique"
+ formName="ordonnancepediatrique"
  formVersion="1.0"	
  formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
  formDescription="ordonnance médicale pédiatrique"
@@ -27,15 +27,6 @@
 		}
 		table.baseline-aligned td {
 			vertical-align: baseline;
-		}
-		
-		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
-			float: none;
-		    display: inline-block;
-		}
-		
-		form label, .form label {
-			display: inline-block;
 		}
 	</style>
 <script type="text/javascript">
@@ -196,7 +187,7 @@
                         
                         <tr><th>
                         </th><th width ="16%">
-                        </th><th width="30%">
+                        </th><th width="20%">
                         </th><th width="16%"><b>Présentation</b>
                         </th><th><b>Posologie (en fonction du poids)</b>
                         </th><th><b>Nombre de jours</b>
