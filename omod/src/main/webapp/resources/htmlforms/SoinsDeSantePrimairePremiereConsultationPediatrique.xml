@@ -27,7 +27,8 @@
 		}
 		.lienvisible#first{display: block}
 		.toggle-button{
-			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			height:auto; background:#132959; border:1px solid #FFFFFF;
+			color:#FFFAF4;
 			width:100%";
 		}
 		.contener
@@ -637,7 +638,7 @@
 						<fieldset>
 							<table width="100%">
 								<tr>
-									<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> cm</td>
+									<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> mmHg</td>
 								</tr>
                                 <tr>
 									<td>PC <obs conceptId="CIEL:5314" id="pc"/> cm (âge &lt; 3 ans)</td><td>PB <obs conceptId="CIEL:1343" id="pb"/> cm</td>

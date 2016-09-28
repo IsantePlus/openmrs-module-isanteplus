@@ -86,5 +86,15 @@
         "url": "${project.parent.artifactId}/drugsHistory.page?patientId={{patient.uuid}}",
         "icon": "icon-bar-chart",
         "order": 7
+    },
+     {
+        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.bmiGraph",
+        "extensionPointId": "patientDashboard.secondColumnFragments",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "bmiGraph"
+        },
+         "order": 10,
+         "icon": "icon-list-alt"
     }
 ]

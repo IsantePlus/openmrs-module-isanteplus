@@ -52,6 +52,7 @@ import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashbo
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.DatabaseException;
@@ -670,21 +671,27 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 	@SuppressWarnings("deprecation")
 	@Override
-	public List<Obs> getLabsHistory(Patient patient) {
+	public List<IsantePlusObs> getLabsHistory(Patient patient) {
 		// TESTS ORDERED = 1271
-		List<Obs> labHistory = new ArrayList<Obs>();
+		List<IsantePlusObs> labHistory = new ArrayList<IsantePlusObs>();
 		Integer labConceptId = 1271;
 		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
 
 		for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
 			if (obs != null) {
-				Integer result = Integer.parseInt(obs.getValueCoded().toString());
-				Concept resultTest = Context.getConceptService().getConcept(result);
-
-				for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
-					labHistory.add(obs1);
-				}
-			}
+				
+					Integer result = Integer.parseInt(obs.getValueCoded().toString());
+					Concept resultTest = Context.getConceptService().getConcept(result);
+	
+					for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
+						if(obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId())
+						{
+							IsantePlusObs obsres = new IsantePlusObs(obs1);
+							labHistory.add(obsres);
+						
+						}
+				    }
+			 }
 		}
 		return labHistory;
 	}
@@ -714,7 +721,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			ComponentState weightsGraph = getAppframeworkComponentState(manager.getWeightsGraphExtensionId());
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
 			ComponentState drugsHistory = getAppframeworkComponentState(manager.getDrugsHistoryExtensionId());
-
+			ComponentState bmiGraph = getAppframeworkComponentState(manager.getBmiGraphExtensionId());
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
 				saveOrUpdateComponentState(growthCharts);
@@ -756,6 +763,10 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 			if (drugsHistory != null && extensions.has(manager.getDrugsHistoryExtensionId())) {
 				drugsHistory.setEnabled(extensions.getBoolean(manager.getDrugsHistoryExtensionId()));
 				saveOrUpdateComponentState(drugsHistory);
+			}
+			if (bmiGraph != null && extensions.has(manager.getBmiGraphExtensionId())) {
+				bmiGraph.setEnabled(extensions.getBoolean(manager.getBmiGraphExtensionId()));
+				saveOrUpdateComponentState(bmiGraph);
 			}
 		}
 	}
@@ -823,6 +834,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return drugsHistory;
 	}
 	
+<<<<<<< HEAD
 	public List<Obs> getLastDrugsObsForPatient(Patient patient) {
 		List<Obs> drugsObs = getDrugsHistory(patient);
 		sortObsListByObsDateTime(drugsObs);
@@ -851,3 +863,31 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 	}
 }
 
+=======
+	@Override
+	public JSONArray getPatientBmi(Patient patient) {
+		
+		Obs obsH = getLatestHeightForPatient(patient);
+		JSONArray bmiJson = new JSONArray();
+		if(obsH != null)
+		{
+			Double ht = obsH.getValueNumeric();
+			if(ht>0)
+			{
+				for (Obs obs : getWeightConceptObsForAPatient(patient)) {
+					if (obs != null) {
+						JSONObject json = new JSONObject();
+						Double weight=obs.getValueNumeric();
+						Double bmivalues = weight / ((ht/100) * (ht/100));
+						json.put("bmivalues", bmivalues);
+						json.put("measureDate", getObservationDate(obs));
+						bmiJson.put(json);
+					}
+				}
+			}
+		}
+		return bmiJson;
+	}
+	
+}
+>>>>>>> refs/remotes/origin/master

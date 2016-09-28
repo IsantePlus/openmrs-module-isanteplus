@@ -260,4 +260,21 @@
 			<column name="uuid" value="d075e7a0-7dd0-11e6-ae22-56b6b6499611" />
 		</insert>
 	</changeSet>
+	<changeSet id="2016Sept26-2126" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.bmiGraph';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.bmiGraph" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="24cf6487-5ba7-4fda-9341-c15349e379e1" />
+		</insert>
+	</changeSet>
 </databaseChangeLog>

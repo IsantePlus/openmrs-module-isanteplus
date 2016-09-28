@@ -31,7 +31,6 @@
 		}
 		#dateVisite{
 			background:#81BEF7;
-			position:relative;
 			top:0px;
 			width:100%;
 			padding-top:5px;

@@ -65,6 +65,10 @@ public class IsantePlusPatientDashboardManager {
 	private String drugsHistoryExtensionChecked;
 
 	public boolean toogleDrugsHistoryExtension;
+	
+	private String bmiGraphExtensionId;
+	private String bmiGraphExtensionChecked;
+	private boolean toogleBmiGraphExtension;
 
 	public IsantePlusPatientDashboardManager() {
 		visitFormHistoryExtensionId = IsantePlusPatientDashboardConstants.VISITFORMHISTORY_EXTENSIONPOINT_ID;
@@ -77,6 +81,7 @@ public class IsantePlusPatientDashboardManager {
 		isantePlusFormsExtensionId = IsantePlusPatientDashboardConstants.ISANTEFORMS_EXTENSIONPOINT_ID;
 		mostRecentVitalsExtensionId = IsantePlusPatientDashboardConstants.MOSTRECENTVITALS_EXTENSIONPOINT_ID;
 		drugsHistoryExtensionId = IsantePlusPatientDashboardConstants.DRUGSHISTORY_EXTENSIONPOINT_ID;
+		bmiGraphExtensionId = IsantePlusPatientDashboardConstants.BMIGRAPH_EXTENSIONPOINT_ID;
 		toggleVisitFormHistoryExtension = getComponentStateStateEnabled(getVisitFormHistoryExtensionId());
 		toggleLabHistoryExtension = getComponentStateStateEnabled((getLabHistoryExtensionId()));
 		togglePatientFormHistoryExtension = getComponentStateStateEnabled((getPatientFormHistoryExtensionId()));
@@ -87,6 +92,7 @@ public class IsantePlusPatientDashboardManager {
 		toggleIsantePlusFormsExtension = getComponentStateStateEnabled(getIsantePlusFormsExtensionId());
 		toogleMostRecentVitalsExtension = getComponentStateStateEnabled(getMostRecentVitalsExtensionId());
 		toogleDrugsHistoryExtension = getComponentStateStateEnabled(getDrugsHistoryExtensionId());
+		toogleBmiGraphExtension = getComponentStateStateEnabled(getBmiGraphExtensionId());
 		visitFormHistoryExtensionChecked = getToggleVisitFormHistoryExtension() ? "checked" : "";
 		labHistoryExtensionChecked = getToggleLabHistoryExtension() ? "checked" : "";
 		patientFormHistoryExtensionChecked = getTogglePatientFormHistoryExtension() ? "checked" : "";
@@ -97,6 +103,7 @@ public class IsantePlusPatientDashboardManager {
 		isantePlusFormsExtensionChecked = getToggleIsantePlusFormsExtension() ? "checked" : "";
 		mostRecentVitalsExtensionChecked = getToogleMostRecentVitalsExtension() ? "checked" : "";
 		drugsHistoryExtensionChecked = getToogleDrugsHistoryExtension() ? "checked" : "";
+		bmiGraphExtensionChecked = getToogleBmiGraphExtension() ? "checked" : "";
 	}
 
 	public String getVisitFormHistoryExtensionId() {
@@ -126,7 +133,7 @@ public class IsantePlusPatientDashboardManager {
 	public String getWeightsGraphExtensionId() {
 		return weightsGraphExtensionId;
 	}
-
+	
 	public boolean getToggleVisitFormHistoryExtension() {
 		return toggleVisitFormHistoryExtension;
 	}
@@ -226,4 +233,15 @@ public class IsantePlusPatientDashboardManager {
 	public String getDrugsHistoryExtensionChecked() {
 		return drugsHistoryExtensionChecked;
 	}
+	public boolean getToogleBmiGraphExtension() {
+		return toogleBmiGraphExtension;
+	}
+	public String getBmiGraphExtensionId()
+	{
+		return bmiGraphExtensionId;
+	}
+	public String getBmiGraphExtensionChecked() {
+		return bmiGraphExtensionChecked;
+	}
+	
 }

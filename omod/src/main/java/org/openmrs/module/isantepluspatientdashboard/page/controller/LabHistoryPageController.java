@@ -8,6 +8,7 @@ import org.openmrs.api.context.Context;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 
 public class LabHistoryPageController {
 	
@@ -15,7 +16,7 @@ public class LabHistoryPageController {
 		JSONObject patientOpts = new JSONObject();
 		patientOpts.put("name", patient.getPersonName().getFullName());
 		model.addAttribute("patientPropts", patientOpts);
-		List<Obs> labresult = Context.getService(IsantePlusPatientDashboardService.class).getLabsHistory(patient);
+		List<IsantePlusObs> labresult = Context.getService(IsantePlusPatientDashboardService.class).getLabsHistory(patient);
 		model.addAttribute("labresult", labresult);
 	}
 

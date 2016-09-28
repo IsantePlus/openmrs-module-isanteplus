@@ -1,7 +1,8 @@
 <htmlform formUuid="0c3ca345-f834-46d1-a620-6d0f20f217f2"
  formName="Rapport d'arrêt du programme soins et traitement VIH/SIDA"
+ formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
  formVersion="1.0"
- formDescription="ordonnance  médicale adulte"
+ formDescription="Rapport d'arrêt au soins VIH"
  > 
 	<macros>
 		paperFormId = (Fill this in)
@@ -159,6 +160,10 @@
 		    &#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622" answerLabel="Autre raison, préciser" showCommentField="true" commentFieldLabel=""/><br/>
 			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1067" answerLabel="Raison d'arrêt inconnue"/><br/>
 		</div>
+		<br/>
+		<section headerLabel="REMARQUES">
+			<obs conceptId="CIEL:161011" rows="5" cols="50"/>
+		</section>
 		<br/>
 		<br/>
 		SIGNATURE DU CONSEILLER:<encounterProviderAndRole encounterRole="2" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
