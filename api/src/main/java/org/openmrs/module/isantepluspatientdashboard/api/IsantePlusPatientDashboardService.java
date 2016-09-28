@@ -25,6 +25,7 @@ import org.openmrs.Visit;
 import org.openmrs.api.OpenmrsService;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
 import org.springframework.transaction.annotation.Transactional;
@@ -94,7 +95,7 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 
 	List<FormHistory> getAllFormHistoryForAPatient(Patient patient);
 
-	List<Obs> getLabsHistory(Patient patient);
+	List<IsantePlusObs> getLabsHistory(Patient patient);
 
 	ComponentState getAppframeworkComponentState(String componentSateId);
 
@@ -125,6 +126,8 @@ public interface IsantePlusPatientDashboardService extends OpenmrsService {
 	void toggleRecentVitalsSection(Boolean enableIsanteVitals);
 
 	List<Obs> getDrugsHistory(Patient patient);
+
+	JSONArray getPatientBmi(Patient patient);
 
 	JSONArray getPatientBMIsAcrossAnAgeDifference(Patient patient, ChartJSAgeAxis ageAxis);
 }

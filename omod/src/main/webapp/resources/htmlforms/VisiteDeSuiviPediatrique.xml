@@ -31,7 +31,6 @@
 		}
 		#dateVisite{
 			background:#81BEF7;
-			position:relative;
 			top:0px;
 			width:100%;
 			padding-top:5px;
@@ -458,7 +457,6 @@
 		}
 		else{
 			group.find("#disabled1").find("input").attr("disabled",true);
-			setValue('date_eligibilite_arv.value', '');
 			group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
 			group.find("#disabled1").find("input[type$='checkbox']").change();
 		}
@@ -712,6 +710,28 @@
     } else {
        setValue('acyclovir.value', '70245');
     }
+    
+    if ((getValue('azythromycin_start.value') == '') &amp;&amp; (getValue('azythromycin_end.value') == '') &amp;&amp; (getValue('azythromycin_current.value') != '159367')) {
+       setValue('azythromycin.value', ''); 
+    } else {
+       setValue('azythromycin.value', '71780');
+    }
+	if ((getValue('clarythromycin_start.value') == '') &amp;&amp; (getValue('clarythromycin_end.value') == '') &amp;&amp; (getValue('clarythromycin_current.value') != '159367')) {
+       setValue('clarythromycin.value', ''); 
+    } else {
+       setValue('clarythromycin.value', '73498');
+    }
+	if ((getValue('cotrimoxazole_ind_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_ind_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_ind_current.value') != '159367')) {
+       setValue('cotrimoxazole_ind.value', ''); 
+    } else {
+       setValue('cotrimoxazole_ind.value', '882');
+    }
+	if ((getValue('cotrimoxazole_autre_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_autre_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_autre_current.value') != '159367')) {
+       setValue('cotrimoxazole_autre.value', ''); 
+    } else {
+       setValue('cotrimoxazole_autre.value', '5622');
+    }
+    
 	if ((getValue('cotrimoxazole_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_current.value') != '159367')) {
        setValue('cotrimoxazole.value', ''); 
     } else {

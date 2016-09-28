@@ -14,7 +14,10 @@ public class IsantePlusObs {
 		Integer conceptId = getObs().getConcept() != null ? getObs().getConcept().getConceptId() : null;
 
 		if (conceptId != null)
+		{
+			
 			setConceptNumeric(Context.getConceptService().getConceptNumeric(conceptId));
+		}
 	}
 
 	public ConceptNumeric getConceptNumeric() {

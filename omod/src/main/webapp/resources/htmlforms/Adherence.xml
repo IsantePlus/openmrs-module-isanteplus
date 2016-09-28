@@ -76,7 +76,6 @@ formName="Adhérence" formVersion="1.0"
 		}
 		#dateVisite{
 			background:#1E7FCB;
-			position:relative;
 			top:0px;
 			width:100%;
 			padding-top:5px;

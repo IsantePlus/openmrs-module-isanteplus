@@ -32,7 +32,8 @@
 		}
 		.lienvisible#first{display: block}
 		.toggle-button{
-			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			height:auto; background:#132959; border:1px solid #FFFFFF;
+			color:#FFFAF4;
 			width:100%";
 		}
 		.contener
@@ -498,7 +499,7 @@
 					<fieldset>
 						<table width="100%">
 							<tr>
-								<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText=" / "/> cm</td>
+								<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText=" / "/> mmHg</td>
 							</tr>	
 							<tr>
 								<td>Temp <obs conceptId="CIEL:5088"/> °C</td><td>Pouls <obs conceptId="CIEL:5087"/></td><td>FR <obs conceptId="CIEL:5242"/></td>
@@ -1597,9 +1598,9 @@
 			<br/><br/>
 			Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 			<table width="100%">
-				<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="3" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true"/></td></tr>
+				<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
 				<br/>
-				<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true"/></td></tr>
+				<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
 			</table>
 		</fieldset>
 			</div>

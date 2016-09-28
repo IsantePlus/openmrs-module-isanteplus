@@ -31,7 +31,6 @@
 		}
 		#dateVisite{
 			background:#81BEF7;
-			position:relative;
 			top:0px;
 			width:100%;
 			padding-top:5px;
@@ -459,7 +458,6 @@
 		}
 		else{
 			group.find("#disabled1").find("input").attr("disabled",true);
-			setValue('date_eligibilite_arv.value', '');
 			group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
 			group.find("#disabled1").find("input[type$='checkbox']").change();
 		}
@@ -713,6 +711,29 @@
     } else {
        setValue('acyclovir.value', '70245');
     }
+    
+    if ((getValue('azythromycin_start.value') == '') &amp;&amp; (getValue('azythromycin_end.value') == '') &amp;&amp; (getValue('azythromycin_current.value') != '159367')) {
+       setValue('azythromycin.value', ''); 
+    } else {
+       setValue('azythromycin.value', '71780');
+    }
+	if ((getValue('clarythromycin_start.value') == '') &amp;&amp; (getValue('clarythromycin_end.value') == '') &amp;&amp; (getValue('clarythromycin_current.value') != '159367')) {
+       setValue('clarythromycin.value', ''); 
+    } else {
+       setValue('clarythromycin.value', '73498');
+    }
+	if ((getValue('cotrimoxazole_ind_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_ind_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_ind_current.value') != '159367')) {
+       setValue('cotrimoxazole_ind.value', ''); 
+    } else {
+       setValue('cotrimoxazole_ind.value', '882');
+    }
+	if ((getValue('cotrimoxazole_autre_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_autre_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_autre_current.value') != '159367')) {
+       setValue('cotrimoxazole_autre.value', ''); 
+    } else {
+       setValue('cotrimoxazole_autre.value', '5622');
+    }
+    
+    
 	if ((getValue('cotrimoxazole_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_current.value') != '159367')) {
        setValue('cotrimoxazole.value', ''); 
     } else {
@@ -1256,7 +1277,7 @@
 	<section headerLabel="SIGNES VITAUX ET ANTHROPOMÉTRIE ACTUELS">
 		<table width="100%">
 			<tr><td>Température <obs conceptId="CIEL:5088"/></td><td>Pouls <obs conceptId="CIEL:5087"/></td></tr>
-			<tr><td>TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> cm</td><td>FR <obs conceptId="CIEL:5242"/></td></tr>
+			<tr><td>TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> mmHg</td><td>FR <obs conceptId="CIEL:5242"/></td></tr>
 			<tr><td>Poids <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/>cm</td></tr>
 			<tr>
 				<td></td>
@@ -1694,7 +1715,7 @@
 									<td>{drugname}</td>
 								</tr>
 							</template>
-							<render concept="CIEL:163713" drugname="Diarrhée &gt; 14 jours (NEW CONCEPT)" id="diarrhee" color="#D8D8D8"/><!-- NEW CONCEPT ADDED-->
+							<render concept="CIEL:163713" drugname="Diarrhée &gt; 14 jours" id="diarrhee" color="#D8D8D8"/><!-- NEW CONCEPT ADDED-->
 							<render concept="CIEL:5027" drugname="Fièvre inexpliquée &gt; 1 mois" id="fievre" color="#FFFFFF"/>
 							<render concept="CIEL:159912" drugname="Aphtes buccaux récidivants" id="Aphtes" color="#D8D8D8"/>
 							<render concept="CIEL:1249" drugname="Éruptions papulaires prurigineuses" id="eruptions" color="#FFFFFF"/>
@@ -2152,9 +2173,6 @@
 		Utiliser la section Antécédents Médicaux pour indiquer tous les diagnostics. Utiliser la fiche Ordonnance Médicale pour prescrire les médicaments, et la fiche d'Analyses de Laboratoire pour prescrire les analyses de laboratoire.<br/>
 		<obs conceptId="CIEL:159395" rows="10" cols="80"/>
 	</section>
-	Analyses de laboratoire nécessaires<br/>
-	Ordonnance Médicale<br/>
-	Intervalle recommandé pour la prochaine visite clinique
 	<br/>
 	<br/>
 	<br/>

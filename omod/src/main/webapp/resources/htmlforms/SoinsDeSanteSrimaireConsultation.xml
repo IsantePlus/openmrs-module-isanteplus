@@ -27,7 +27,8 @@
 		}
 		.lienvisible#first{display: block}
 		.toggle-button{
-			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			height:auto; background:#132959; border:1px solid #FFFFFF;
+			color:#FFFAF4;
 			width:100%";
 		}
 		.contener
@@ -1376,9 +1377,9 @@
 		<br/><br/>
 			Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 		<table width="100%">
-			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true"/></td></tr>
+			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
 			<br/>
-			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true"/></td></tr>
+			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
 		</table>
 		</fieldset>
 			</div>

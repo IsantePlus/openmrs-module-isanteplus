@@ -6,7 +6,6 @@ target/
 .classpath
 .java-version
 
-api/tartget/
+api/target/
 omod/target/
-api/bin/
-omod/bin/
+api/bin/pom.xml

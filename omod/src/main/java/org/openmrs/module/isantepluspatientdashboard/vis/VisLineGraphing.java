@@ -53,4 +53,20 @@ public class VisLineGraphing {
 
 		return jsonArrayItems;
 	}
+	
+	public static JSONArray getBmisGraphsItems(JSONArray bmisItems) {
+		JSONArray jsonArrayItems = new JSONArray();
+
+		for (int i = 0; i < bmisItems.length(); i++) {
+			JSONObject coordinate = new JSONObject();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			Date date = (Date) bmisItems.getJSONObject(i).get("measureDate");
+
+			coordinate.put("x", date != null ? sdf.format(date) : "");
+			coordinate.put("y", bmisItems.getJSONObject(i).getLong("bmivalues"));
+			jsonArrayItems.put(coordinate);
+		}
+
+		return jsonArrayItems;
+	}
 }
