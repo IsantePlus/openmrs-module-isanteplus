@@ -105,10 +105,6 @@ public class GrowthChartsPageController {
 		patientPlottableData.put("whoHeadCircumferenceForAgePatient",
 				Context.getService(IsantePlusPatientDashboardService.class)
 						.getHeadCircumferenceAtGivenPatientAges(patient, twoTo20Years));
-		patientPlottableData.put("whoBMIForAgePatient", Context.getService(IsantePlusPatientDashboardService.class)
-				.getPatientBMIsAcrossAnAgeDifference(patient, birthTo24Months));
-		patientPlottableData.put("bmiAgeRevPatient", Context.getService(IsantePlusPatientDashboardService.class)
-				.getPatientBMIsAcrossAnAgeDifference(patient, twoTo20Years));
 
 		return patientPlottableData;
 	}
