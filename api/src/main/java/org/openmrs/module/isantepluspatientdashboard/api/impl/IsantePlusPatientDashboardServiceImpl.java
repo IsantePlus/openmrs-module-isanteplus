@@ -46,13 +46,13 @@ import org.openmrs.module.isantepluspatientdashboard.AgeUnit;
 import org.openmrs.module.isantepluspatientdashboard.ChartJSAgeAxis;
 import org.openmrs.module.isantepluspatientdashboard.ConfigurableGlobalProperties;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusGlobalProps;
+import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardConstants;
 import org.openmrs.module.isantepluspatientdashboard.IsantePlusPatientDashboardManager;
 import org.openmrs.module.isantepluspatientdashboard.api.IsantePlusPatientDashboardService;
 import org.openmrs.module.isantepluspatientdashboard.api.db.IsantePlusPatientDashboardDAO;
 import org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isantepluspatientdashboard.mapped.FormHistory;
-import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.DatabaseException;
@@ -729,19 +729,18 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 
 		for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
 			if (obs != null) {
-				
-					Integer result = Integer.parseInt(obs.getValueCoded().toString());
-					Concept resultTest = Context.getConceptService().getConcept(result);
-	
-					for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
-						if(obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId())
-						{
-							IsantePlusObs obsres = new IsantePlusObs(obs1);
-							labHistory.add(obsres);
-						
-						}
-				    }
-			 }
+
+				Integer result = Integer.parseInt(obs.getValueCoded().toString());
+				Concept resultTest = Context.getConceptService().getConcept(result);
+
+				for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
+					if (obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId()) {
+						IsantePlusObs obsres = new IsantePlusObs(obs1);
+						labHistory.add(obsres);
+
+					}
+				}
+			}
 		}
 		return labHistory;
 	}
@@ -838,6 +837,7 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		return dao.saveOrUpdateComponentState(componentState);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public List<Obs> getDrugsHistory(Patient patient) {
 		List<Obs> drugsHistory = new ArrayList<Obs>();
@@ -878,22 +878,20 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 		return drugsHistory;
 	}
-	
+
 	@Override
 	public JSONArray getPatientBmi(Patient patient) {
-		
+
 		Obs obsH = getLatestHeightForPatient(patient);
 		JSONArray bmiJson = new JSONArray();
-		if(obsH != null)
-		{
+		if (obsH != null) {
 			Double ht = obsH.getValueNumeric();
-			if(ht>0)
-			{
+			if (ht > 0) {
 				for (Obs obs : getWeightConceptObsForAPatient(patient)) {
 					if (obs != null) {
 						JSONObject json = new JSONObject();
-						Double weight=obs.getValueNumeric();
-						Double bmivalues = weight / ((ht/100) * (ht/100));
+						Double weight = obs.getValueNumeric();
+						Double bmivalues = weight / ((ht / 100) * (ht / 100));
 						json.put("bmivalues", bmivalues);
 						json.put("measureDate", getObservationDate(obs));
 						bmiJson.put(json);
@@ -903,5 +901,5 @@ public class IsantePlusPatientDashboardServiceImpl extends BaseOpenmrsService
 		}
 		return bmiJson;
 	}
-	
+
 }

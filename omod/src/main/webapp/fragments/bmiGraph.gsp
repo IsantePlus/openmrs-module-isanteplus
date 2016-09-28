@@ -13,18 +13,6 @@
     		var options = ${options};
   			var bmiGraphContainer = document.getElementById('bmiGraph');
   			var bmiGraph = new vis.Graph2d(bmiGraphContainer, new vis.DataSet(items), options);
-  		
-  			jQuery(function() {
-		    	jQuery(".vis-point").tooltip();
-		    	
-		    	//TODO fix this hack
-			    jQuery(".vis-point").hover(function(visPoint) {
-			    	var x = jQuery(visPoint.target).attr("x");
-			    	var y = jQuery(visPoint.target).attr("y");
-			    	
-			    	jQuery(visPoint.target).attr("title", x + ", " + y);
-			    });
-		    });
   		</script>
     </div>
 </div>

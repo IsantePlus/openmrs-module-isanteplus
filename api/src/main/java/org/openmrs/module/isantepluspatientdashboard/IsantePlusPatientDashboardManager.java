@@ -59,9 +59,11 @@ public class IsantePlusPatientDashboardManager {
 	private String drugsHistoryExtensionChecked;
 
 	public boolean toogleDrugsHistoryExtension;
-	
+
 	private String bmiGraphExtensionId;
+
 	private String bmiGraphExtensionChecked;
+
 	private boolean toogleBmiGraphExtension;
 
 	public IsantePlusPatientDashboardManager() {
@@ -120,7 +122,7 @@ public class IsantePlusPatientDashboardManager {
 	public String getWeightsGraphExtensionId() {
 		return weightsGraphExtensionId;
 	}
-	
+
 	public boolean getToggleVisitFormHistoryExtension() {
 		return toggleVisitFormHistoryExtension;
 	}
@@ -212,15 +214,16 @@ public class IsantePlusPatientDashboardManager {
 	public String getDrugsHistoryExtensionChecked() {
 		return drugsHistoryExtensionChecked;
 	}
+
 	public boolean getToogleBmiGraphExtension() {
 		return toogleBmiGraphExtension;
 	}
-	public String getBmiGraphExtensionId()
-	{
+
+	public String getBmiGraphExtensionId() {
 		return bmiGraphExtensionId;
 	}
+
 	public String getBmiGraphExtensionChecked() {
 		return bmiGraphExtensionChecked;
 	}
-	
 }
