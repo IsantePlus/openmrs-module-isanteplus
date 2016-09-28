@@ -21,7 +21,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.isantepluspatientdashboard.IsantePlusObs;
 import org.openmrs.test.BaseModuleContextSensitiveTest;
 
 /**
@@ -58,18 +57,5 @@ public class IsantePlusPatientDashboardServiceTest extends BaseModuleContextSens
 
 		Assert.assertEquals(new Integer(5),
 				Context.getService(IsantePlusPatientDashboardService.class).getPatientAgeInMonths(patient));
-	}
-
-	@Test
-	public void test_gettingObsAnswerUnitsAndRangeForeaxampleForLabHistory() {
-		IsantePlusObs o = new IsantePlusObs(Context.getService(IsantePlusPatientDashboardService.class)
-				.getLatestWeightForPatient(Context.getPatientService().getPatient(7)));
-
-		Assert.assertEquals("kg", o.getConceptNumeric().getUnits());
-		// HiAbsolute and LowAbsolute NOT Set for test data
-		// Assert.assertEquals(Double.valueOf(250.0),
-		// o.getConceptNumeric().getHiAbsolute());
-		// Assert.assertEquals(Double.valueOf(0.0),
-		// o.getConceptNumeric().getLowAbsolute());
 	}
 }

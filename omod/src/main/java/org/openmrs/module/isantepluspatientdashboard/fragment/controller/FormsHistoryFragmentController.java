@@ -1,6 +1,5 @@
 package org.openmrs.module.isantepluspatientdashboard.fragment.controller;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -40,10 +39,7 @@ public class FormsHistoryFragmentController {
 				}
 			}
 
-			if (formHistory != null)
-				Collections.reverse(formHistory);
-			else 
-				formHistory = new ArrayList<FormHistory>();
+			Collections.reverse(formHistory);
 			model.addAttribute("allFormHistory", formHistory);
 		}
 
