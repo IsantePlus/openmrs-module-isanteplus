@@ -44,7 +44,7 @@
         <script type="text/javascript">
         //validation des donnees
         beforeSubmit.push(function() {
-          if((getValue('presentation.value') == '138405') || (getValue('presentation.value') == '163768')) { alert('Salut'); setValue('abacavir.value',70056);setValue('abacavir1.value',70056); }
+          if((getValue('presentation.value') == '138405') || (getValue('presentation.value') == '163768')) { setValue('abacavir.value',70056);setValue('abacavir1.value',70056); }
             
 		   
           if((getValue('presentation1.value') == '138405') || (getValue('presentation1.value') == '163768')) { setValue('combivir.value',630);setValue('combivir1.value',630);}
