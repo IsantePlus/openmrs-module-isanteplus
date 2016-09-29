@@ -763,6 +763,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService
 			ComponentState growthCharts = getAppframeworkComponentState(manager.getGrowthChartsExtensionId());
 			ComponentState LabHistory = getAppframeworkComponentState(manager.getLabHistoryExtensionId());
 			ComponentState lastViralLoad = getAppframeworkComponentState(manager.getLastViralLoadTestExtensionId());
+			ComponentState lastDrugs = getAppframeworkComponentState(manager.getLastDrugsExtensionId());
 			ComponentState patientFormHistory = getAppframeworkComponentState(
 					manager.getPatientFormHistoryExtensionId());
 			ComponentState visitFormHistory = getAppframeworkComponentState(manager.getVisitFormHistoryExtensionId());
@@ -781,6 +782,10 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService
 			if (lastViralLoad != null && extensions.has(manager.getLastViralLoadTestExtensionId())) {
 				lastViralLoad.setEnabled(extensions.getBoolean(manager.getLastViralLoadTestExtensionId()));
 				saveOrUpdateComponentState(lastViralLoad);
+			}
+			if (lastDrugs != null && extensions.has(manager.getLastDrugsExtensionId())) {
+				lastDrugs.setEnabled(extensions.getBoolean(manager.getLastDrugsExtensionId()));
+				saveOrUpdateComponentState(lastDrugs);
 			}
 			if (patientFormHistory != null && extensions.has(manager.getPatientFormHistoryExtensionId())) {
 				patientFormHistory.setEnabled(extensions.getBoolean(manager.getPatientFormHistoryExtensionId()));
@@ -877,6 +882,33 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService
 
 		}
 		return drugsHistory;
+	}
+	
+	public List<Obs> getLastDrugsObsForPatient(Patient patient) {
+		List<Obs> drugsObs = getDrugsHistory(patient);
+		sortObsListByObsDateTime(drugsObs);
+		List<Obs> lastdrugsObs=new ArrayList<Obs>();
+		Encounter lastEncounter=new Encounter();
+		if(drugsObs.size() >0)
+		lastEncounter=drugsObs.get(drugsObs.size() - 1).getEncounter();
+
+		//return drugsObs != null && drugsObs.size() > 0 ? drugsObs.get(drugsObs.size() - 1) : null;
+		while(drugsObs != null && drugsObs.size() > 0 && drugsObs.get(drugsObs.size() - 1).getEncounter()==lastEncounter ) {
+			//if(drugsObs.get(drugsObs.size()-1).getObsDatetime()==lastDate){
+				Obs o=drugsObs.get(drugsObs.size() - 1);
+				lastdrugsObs.add(o);
+				drugsObs.remove(o);
+			/*} else {
+				Obs o=drugsObs.get(drugsObs.size() - 1);
+				drugsObs.remove(o);
+			}*/
+			
+			
+			sortObsListByObsDateTime(drugsObs);
+			
+		}
+						
+		return lastdrugsObs;
 	}
 
 	@Override

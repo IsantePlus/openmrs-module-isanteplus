@@ -3,6 +3,7 @@ package org.openmrs.module.isanteplus;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
+import org.openmrs.module.isanteplus.IsantePlusConstants;
 
 public class IsantePlusManager {
 
@@ -15,6 +16,8 @@ public class IsantePlusManager {
 	private String growthChartsExtensionId;
 
 	private String lastViralLoadTestExtensionId;
+	
+	private String lastDrugsExtensionId;
 
 	private String weightsGraphExtensionId;
 
@@ -31,6 +34,8 @@ public class IsantePlusManager {
 	private boolean toggleGrowthChartsExtension;
 
 	private boolean toggleLastViralLoadTestExtension;
+	
+	private boolean toggleLastDrugsExtension;
 
 	private boolean toggleWeightsGraphExtension;
 
@@ -47,6 +52,8 @@ public class IsantePlusManager {
 	private String growthChartsExtensionChecked;
 
 	private String lastViralLoadTestExtensionChecked;
+	
+	private String lastDrugsExtensionChecked;
 
 	private String weightsGraphExtensionChecked;
 
@@ -72,6 +79,7 @@ public class IsantePlusManager {
 		patientFormHistoryExtensionId = IsantePlusConstants.FORMHISTORY_EXTENSIONPOINT_ID;
 		growthChartsExtensionId = IsantePlusConstants.GROWTHCHARTS_EXTENSIONPOINT_ID;
 		lastViralLoadTestExtensionId = IsantePlusConstants.LASTVIRALLOADTEST_EXTENSIONPOINT_ID;
+		lastDrugsExtensionId = IsantePlusConstants.LASTDRUGS_EXTENSIONPOINT_ID;
 		weightsGraphExtensionId = IsantePlusConstants.WEIGHTSGRAPH_EXTENSIONPOINT_ID;
 		isantePlusFormsExtensionId = IsantePlusConstants.ISANTEFORMS_EXTENSIONPOINT_ID;
 		mostRecentVitalsExtensionId = IsantePlusConstants.MOSTRECENTVITALS_EXTENSIONPOINT_ID;
@@ -82,6 +90,7 @@ public class IsantePlusManager {
 		togglePatientFormHistoryExtension = getComponentStateStateEnabled((getPatientFormHistoryExtensionId()));
 		toggleGrowthChartsExtension = getComponentStateStateEnabled(getGrowthChartsExtensionId());
 		toggleLastViralLoadTestExtension = getComponentStateStateEnabled(getLastViralLoadTestExtensionId());
+		toggleLastDrugsExtension = getComponentStateStateEnabled(getLastDrugsExtensionId());
 		toggleWeightsGraphExtension = getComponentStateStateEnabled(getWeightsGraphExtensionId());
 		toggleIsantePlusFormsExtension = getComponentStateStateEnabled(getIsantePlusFormsExtensionId());
 		toogleMostRecentVitalsExtension = getComponentStateStateEnabled(getMostRecentVitalsExtensionId());
@@ -92,6 +101,7 @@ public class IsantePlusManager {
 		patientFormHistoryExtensionChecked = getTogglePatientFormHistoryExtension() ? "checked" : "";
 		growthChartsExtensionChecked = getToggleGrowthChartsExtension() ? "checked" : "";
 		lastViralLoadTestExtensionChecked = getToggleLastViralLoadTestExtension() ? "checked" : "";
+		lastDrugsExtensionChecked = getToggleLastDrugsExtension() ? "checked" : "";
 		weightsGraphExtensionChecked = getToggleWeightsGraphExtension() ? "checked" : "";
 		isantePlusFormsExtensionChecked = getToggleIsantePlusFormsExtension() ? "checked" : "";
 		mostRecentVitalsExtensionChecked = getToogleMostRecentVitalsExtension() ? "checked" : "";
@@ -118,6 +128,10 @@ public class IsantePlusManager {
 	public String getLastViralLoadTestExtensionId() {
 		return lastViralLoadTestExtensionId;
 	}
+	
+	public String getLastDrugsExtensionId() {
+		return lastDrugsExtensionId;
+	}
 
 	public String getWeightsGraphExtensionId() {
 		return weightsGraphExtensionId;
@@ -142,6 +156,10 @@ public class IsantePlusManager {
 	public boolean getToggleLastViralLoadTestExtension() {
 		return toggleLastViralLoadTestExtension;
 	}
+	
+	public boolean getToggleLastDrugsExtension() {
+		return toggleLastDrugsExtension;
+	}
 
 	public boolean getToggleWeightsGraphExtension() {
 		return toggleWeightsGraphExtension;
@@ -165,6 +183,10 @@ public class IsantePlusManager {
 
 	public String getLastViralLoadTestExtensionChecked() {
 		return lastViralLoadTestExtensionChecked;
+	}
+	
+	public String getLastDrugsExtensionChecked() {
+		return lastDrugsExtensionChecked;
 	}
 
 	public String getWeightsGraphExtensionChecked() {

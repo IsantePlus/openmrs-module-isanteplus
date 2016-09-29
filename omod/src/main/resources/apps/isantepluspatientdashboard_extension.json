@@ -8,6 +8,14 @@
         }
     },
     {
+        "id": "isanteplus.patientDashboard.secondColumnFragments.lastDrugs",
+        "extensionPointId": "patientDashboard.secondColumnFragments",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "lastDrugs"
+        }
+    },
+    {
         "id": "isanteplus.patientDashboard.secondColumnFragments.weightGraph",
         "extensionPointId": "patientDashboard.secondColumnFragments",
         "extensionParams": {

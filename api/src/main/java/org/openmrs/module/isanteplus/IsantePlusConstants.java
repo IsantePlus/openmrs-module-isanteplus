@@ -21,6 +21,8 @@ public class IsantePlusConstants {
 	public static String WEIGHTSGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.weightGraph";
 
 	public static String LASTVIRALLOADTEST_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.lastViralLoadTest";
+	
+	public static String LASTDRUGS_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.lastDrugs";
 
 	public static String ISANTEFORMS_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.firstColumnFragments.isantePlusForms";
 

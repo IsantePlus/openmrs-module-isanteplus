@@ -126,6 +126,8 @@ public interface IsantePlusService extends OpenmrsService {
 	void toggleRecentVitalsSection(Boolean enableIsanteVitals);
 
 	List<Obs> getDrugsHistory(Patient patient);
+	
+	List<Obs> getLastDrugsObsForPatient(Patient patient);
 
 	JSONArray getPatientBmi(Patient patient);
 
