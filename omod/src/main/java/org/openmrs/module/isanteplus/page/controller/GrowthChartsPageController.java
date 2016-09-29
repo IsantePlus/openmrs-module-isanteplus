@@ -27,57 +27,57 @@ public class GrowthChartsPageController {
 		JSONObject chartAxisLabels = new JSONObject();
 
 		chartAxisLabels.put("WTAGEINF_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("WTAGEINF_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.weight"));
 		chartAxisLabels.put("LENAGEINF_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("LENAGEINF_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.length"));
 		chartAxisLabels.put("WTLENINF_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.length"));
 		chartAxisLabels.put("WTLENINF_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.weight"));
 		chartAxisLabels.put("HCAGEINF_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("HCAGEINF_y", Context.getMessageSourceService()
-				.getMessage("isantepluspatientdashboard.chart.label.headCircumference"));
+				.getMessage("isanteplus.chart.label.headCircumference"));
 		chartAxisLabels.put("WTSTAT_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.stature"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.stature"));
 		chartAxisLabels.put("WTSTAT_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.weight"));
 		chartAxisLabels.put("WTAGE_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.years"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.years"));
 		chartAxisLabels.put("WTAGE_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.weight"));
 		chartAxisLabels.put("STATAGE_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.years"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.years"));
 		chartAxisLabels.put("STATAGE_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.stature"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.stature"));
 		chartAxisLabels.put("BMIAGE_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.years"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.years"));
 		chartAxisLabels.put("BMIAGE_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.bmi"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.bmi"));
 		chartAxisLabels.put("BFA_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("BFA_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.bmi"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.bmi"));
 		chartAxisLabels.put("HCFA_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("HCFA_y", Context.getMessageSourceService()
-				.getMessage("isantepluspatientdashboard.chart.label.headCircumference"));
+				.getMessage("isanteplus.chart.label.headCircumference"));
 		chartAxisLabels.put("LHFA_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("LHFA_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.length"));
 		chartAxisLabels.put("WFA_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.age.months"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.age.months"));
 		chartAxisLabels.put("WFA_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.weight"));
 		chartAxisLabels.put("WFL_x",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.length"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.length"));
 		chartAxisLabels.put("WFL_y",
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.chart.label.weight"));
+				Context.getMessageSourceService().getMessage("isanteplus.chart.label.weight"));
 
 		return chartAxisLabels;
 	}

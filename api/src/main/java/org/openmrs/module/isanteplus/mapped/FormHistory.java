@@ -113,11 +113,11 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 					if (completed != null && o.getValueCoded() != null
 							&& o.getValueCoded().getConceptId().equals(completed.getConceptId())) {
 						status += Context.getMessageSourceService()
-								.getMessage("isantepluspatientdashboard.formsHistory.formStatus.complete");
+								.getMessage("isanteplus.formsHistory.formStatus.complete");
 					} else if (incomplete != null && o.getValueCoded() != null
 							&& o.getValueCoded().getConceptId().equals(incomplete.getConceptId())) {
 						status += Context.getMessageSourceService()
-								.getMessage("isantepluspatientdashboard.formsHistory.formStatus.incomplete");
+								.getMessage("isanteplus.formsHistory.formStatus.incomplete");
 					}
 				}
 				if (formNeedsReview != null && o.getConcept() != null
@@ -126,20 +126,20 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 							&& o.getValueCoded().getConceptId().equals(yes.getConceptId())) {
 						status += StringUtils.isNotBlank(status)
 								? ", " + Context.getMessageSourceService()
-										.getMessage("isantepluspatientdashboard.formsHistory.formStatus.review")
+										.getMessage("isanteplus.formsHistory.formStatus.review")
 								: Context.getMessageSourceService()
-										.getMessage("isantepluspatientdashboard.formsHistory.formStatus.review");
+										.getMessage("isanteplus.formsHistory.formStatus.review");
 					}
 				}
 			}
 		} else {
 			status = Context.getMessageSourceService()
-					.getMessage("isantepluspatientdashboard.formsHistory.formStatus.deleted");
+					.getMessage("isanteplus.formsHistory.formStatus.deleted");
 		}
 
 		if (StringUtils.isBlank(status)) {
 			status = Context.getMessageSourceService()
-					.getMessage("isantepluspatientdashboard.formsHistory.formStatus.unkown");
+					.getMessage("isanteplus.formsHistory.formStatus.unkown");
 		}
 
 		return status;
