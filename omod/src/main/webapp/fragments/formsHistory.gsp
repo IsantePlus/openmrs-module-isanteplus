@@ -41,19 +41,19 @@
     });
 </script>
 
-${ ui.includeFragment("isantepluspatientdashboard", "isantePlusForms") }
+${ ui.includeFragment("isanteplus", "isantePlusForms") }
 <br />
 <div id="forms_history_section">
 	<div id="">
-		<h3>${ ui.message("isantepluspatientdashboard.formsHistory") } (${ ui.message("isantepluspatientdashboard.formsHistory.filled") })</h3>
+		<h3>${ ui.message("isanteplus.formsHistory") } (${ ui.message("isanteplus.formsHistory.filled") })</h3>
 		<table>
 			<tr>
-				<th>${ ui.message("isantepluspatientdashboard.formsHistory.creationDate") }</th>
-				<th>${ ui.message("isantepluspatientdashboard.formName") }</th>
-				<th>${ ui.message("isantepluspatientdashboard.formsHistory.formStatus") }</th>
-				<th>${ ui.message("isantepluspatientdashboard.formsHistory.provider") }</th>
-				<th>${ ui.message("isantepluspatientdashboard.formsHistory.lastModification") }</th>
-				<th>${ ui.message("isantepluspatientdashboard.formsHistory.dataEntry") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.creationDate") }</th>
+				<th>${ ui.message("isanteplus.formName") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.formStatus") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.provider") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.lastModification") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.dataEntry") }</th>
 				<th>${ ui.message("general.remove") } <input type="checkbox" id="select_all_form_history" /></th>
 			</tr>
 			<% allFormHistory.each { %>
@@ -68,6 +68,6 @@ ${ ui.includeFragment("isantepluspatientdashboard", "isantePlusForms") }
 				</tr>
 			<% } %>
 		</table>
-		<input type="button" id="delete_selected_formHistory" value="${ ui.message("isantepluspatientdashboard.formsHistory.deleteSelected") }" />
+		<input type="button" id="delete_selected_formHistory" value="${ ui.message("isanteplus.formsHistory.deleteSelected") }" />
 	</div>
 </div>

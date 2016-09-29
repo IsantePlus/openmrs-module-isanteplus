@@ -4,14 +4,14 @@
 
 	<parent>
 		<groupId>org.openmrs.module</groupId>
-		<artifactId>isantepluspatientdashboard</artifactId>
+		<artifactId>isanteplus</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>isantepluspatientdashboard-api</artifactId>
+	<artifactId>isanteplus-api</artifactId>
 	<packaging>jar</packaging>
-	<name>iSantePlus Patient Dashboard Module API</name>
-	<description>API project for iSantePlusPatientDashboard</description>
+	<name>iSantePlus Module API</name>
+	<description>API project for iSantePlus</description>
 
 	<dependencies>
 		<!-- Begin OpenMRS modules -->

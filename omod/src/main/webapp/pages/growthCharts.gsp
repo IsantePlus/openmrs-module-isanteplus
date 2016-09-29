@@ -1,15 +1,15 @@
 <%
-    ui.decorateWith("appui", "standardEmrPage", [ title: ui.message("isantepluspatientdashboard.growthCharts") ])
+    ui.decorateWith("appui", "standardEmrPage", [ title: ui.message("isanteplus.growthCharts") ])
 %>
 
-<% ui.includeJavascript("isantepluspatientdashboard", "Chart.min.js") %>
-<% ui.includeJavascript("isantepluspatientdashboard", "growthCharts.js") %>
+<% ui.includeJavascript("isanteplus", "Chart.min.js") %>
+<% ui.includeJavascript("isanteplus", "growthCharts.js") %>
 
 <script type="text/javascript">
 	var breadcrumbs = [
         { icon: "icon-home", link: '/' + OPENMRS_CONTEXT_PATH + '/index.htm' },
         { label: "${patientPropts.name}", link: "/" + OPENMRS_CONTEXT_PATH + "/coreapps/clinicianfacing/patient.page?patientId=${patient.uuid}"},
-        { label: "${ ui.message('isantepluspatientdashboard.growthCharts') }"}
+        { label: "${ ui.message('isanteplus.growthCharts') }"}
     ];
 </script>
 
@@ -19,21 +19,21 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 	<ul>
 	    <li>
 	        <a href="#cdc" >
-	             ${ ui.message("isantepluspatientdashboard.cdc") }
+	             ${ ui.message("isanteplus.cdc") }
 	        </a>
 	    </li>
 	    <li>
 	    	<a href="#who">
-	        	${ ui.message("isantepluspatientdashboard.who") }
+	        	${ ui.message("isanteplus.who") }
 	        </a>
 	    </li>
     </ul>
     
     <div id="cdc">
-    	${ ui.includeFragment("isantepluspatientdashboard", "cdcGrowthCharts") }
+    	${ ui.includeFragment("isanteplus", "cdcGrowthCharts") }
     </div>
     <div id="who">
-    	${ ui.includeFragment("isantepluspatientdashboard", "whoGrowthCharts") }
+    	${ ui.includeFragment("isanteplus", "whoGrowthCharts") }
     </div>
 </div>
 <br/>

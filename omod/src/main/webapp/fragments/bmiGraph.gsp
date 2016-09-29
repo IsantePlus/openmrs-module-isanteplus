@@ -1,9 +1,9 @@
-<% ui.includeJavascript("isantepluspatientdashboard", "vis.min.js") %>
-<% ui.includeCss("isantepluspatientdashboard", "vis.min.css") %>
+<% ui.includeJavascript("isanteplus", "vis.min.js") %>
+<% ui.includeCss("isanteplus", "vis.min.css") %>
 
 <div class="info-section">
     <div class="info-header">
-        <h3>${ ui.message("isantepluspatientdashboard.bmiGraph") }</h3>
+        <h3>${ ui.message("isanteplus.bmiGraph") }</h3>
     </div>
     
     <div class="info-body">

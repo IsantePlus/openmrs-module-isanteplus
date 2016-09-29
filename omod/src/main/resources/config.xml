@@ -28,19 +28,19 @@
 	<!-- / Required Modules -->
 	
 	<!-- Module Activator -->
-	<activator>${project.parent.groupId}.${project.parent.artifactId}.ISantePlusPatientDashboardActivator</activator>
+	<activator>${project.parent.groupId}.${project.parent.artifactId}.ISantePlusActivator</activator>
 	
 	<!-- AOP Support to save form history at every encounter persistence -->
 	<advice>
 		<point>org.openmrs.api.EncounterService</point>
-		<class>org.openmrs.module.isantepluspatientdashboard.aop.SaveFormHistoryAfterEncounterSaveAdvice</class>
+		<class>org.openmrs.module.isanteplus.aop.SaveFormHistoryAfterEncounterSaveAdvice</class>
 	</advice>
 	
 	<!-- Maps hibernate file's, if present -->
 	<mappingFiles>	
-		IsantePlusPatientDashboard.hbm.xml			
+		IsantePlus.hbm.xml			
 	</mappingFiles>
-	<packagesWithMappedClasses>org.openmrs.module.isantepluspatientdashboard.mapped</packagesWithMappedClasses>
+	<packagesWithMappedClasses>org.openmrs.module.isanteplus.mapped</packagesWithMappedClasses>
 
 	<!-- Internationalization -->
 	<!-- All message codes should start with ${project.parent.artifactId}. -->

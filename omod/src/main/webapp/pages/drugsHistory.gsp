@@ -14,7 +14,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 
 <div class="info-section">
     <div class="info-header">
-        <h3>${ ui.message("isantepluspatientdashboard.drugsHistory") }</h3>
+        <h3>${ ui.message("isanteplus.drugsHistory") }</h3>
     </div>
     <table>
     	<tr><th>${ ui.message("Medicaments") }</th><th>${ ui.message("Date") }</th></tr>

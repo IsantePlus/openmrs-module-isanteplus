@@ -1,18 +1,18 @@
 <ul class="navList">
 	<li>
-		<a id="WFA" class="growthChartWhoLink" href="#">${ ui.message("isantepluspatientdashboard.WFA") }</a>
+		<a id="WFA" class="growthChartWhoLink" href="#">${ ui.message("isanteplus.WFA") }</a>
 	</li>
 	<li>
-		<a id="LHFA" class="growthChartWhoLink" href="#">${ ui.message("isantepluspatientdashboard.LHFA") }</a>
+		<a id="LHFA" class="growthChartWhoLink" href="#">${ ui.message("isanteplus.LHFA") }</a>
 	</li>
 	<li>
-		<a id="WFL" class="growthChartWhoLink" href="#">${ ui.message("isantepluspatientdashboard.WFL") }</a>
+		<a id="WFL" class="growthChartWhoLink" href="#">${ ui.message("isanteplus.WFL") }</a>
 	</li>
 	<li>
-		<a id="HCFA" class="growthChartWhoLink" href="#">${ ui.message("isantepluspatientdashboard.HCFA") }</a>
+		<a id="HCFA" class="growthChartWhoLink" href="#">${ ui.message("isanteplus.HCFA") }</a>
 	</li>
 	<li>
-		<a id="BFA" class="growthChartWhoLink" href="#">${ ui.message("isantepluspatientdashboard.BFA") }</a>
+		<a id="BFA" class="growthChartWhoLink" href="#">${ ui.message("isanteplus.BFA") }</a>
 	</li>
 </ul>
 <br />

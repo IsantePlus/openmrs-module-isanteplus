@@ -1,6 +1,6 @@
 <div class="info-section">
     <div class="info-header">
-        <h3>${ ui.message("isantepluspatientdashboard.lastViralLoadTest") } </h3>
+        <h3>${ ui.message("isanteplus.lastViralLoadTest") } </h3>
     </div>
     
     <div class="info-body">

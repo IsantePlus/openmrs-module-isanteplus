@@ -72,9 +72,10 @@
 		</sql>
 	</changeSet>
 	<changeSet id="20160824-0740" author="k-joseph">
+		<validCheckSum>3:b3020495fbd9a2504a3a1ae6b535a4f5</validCheckSum>
 		<comment>Creates initial FormHistory for existing encounters</comment>
 		<customChange
-			class="org.openmrs.module.isantepluspatientdashboard.liquibase.InitialiseFormsHistory" />
+			class="org.openmrs.module.isanteplus.liquibase.InitialiseFormsHistory" />
 	</changeSet>
 	<changeSet id="2016Sept02-1519" author="k-joseph">
 		<preConditions onFail="MARK_RAN">
@@ -259,5 +260,16 @@
 			<column name="component_type" value="EXTENSION" />
 			<column name="uuid" value="24cf6487-5ba7-4fda-9341-c15349e379e1" />
 		</insert>
+	</changeSet>
+	<changeSet author="k-joseph" id="2016Sept290939" dbms="mysql">
+		<preConditions>
+			<not>
+				<sqlCheck expectedResult="0">SELECT COUNT(*) FROM appframework_component_state WHERE component_id LIKE 'org.openmrs.module.isantepluspatientdashboard.%';</sqlCheck>
+			</not>
+		</preConditions>
+		<comment>Rename isanteplus extension points</comment>
+		<sql>
+			UPDATE appframework_component_state SET component_id = REPLACE(component_id, 'org.openmrs.module.isantepluspatientdashboard.', 'isanteplus.');
+		</sql>
 	</changeSet>
 </databaseChangeLog>

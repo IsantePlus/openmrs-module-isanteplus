@@ -1,6 +1,6 @@
 [
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.lastViralLoadTest",
+        "id": "isanteplus.patientDashboard.secondColumnFragments.lastViralLoadTest",
         "extensionPointId": "patientDashboard.secondColumnFragments",
         "extensionParams": {
             "provider": "${project.parent.artifactId}",
@@ -8,7 +8,7 @@
         }
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.weightGraph",
+        "id": "isanteplus.patientDashboard.secondColumnFragments.weightGraph",
         "extensionPointId": "patientDashboard.secondColumnFragments",
         "extensionParams": {
             "provider": "${project.parent.artifactId}",
@@ -16,16 +16,16 @@
         }
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.growthCharts",
+        "id": "isanteplus.growthCharts",
         "extensionPointId": "patientDashboard.overallActions",
         "type": "link",
-        "label": "isantepluspatientdashboard.growthCharts",
+        "label": "${project.parent.artifactId}.growthCharts",
         "url": "${project.parent.artifactId}/growthCharts.page?patientId={{patient.uuid}}",
         "icon": "icon-bar-chart",
         "order": 4
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.formHistory",
+        "id": "isanteplus.formHistory",
         "extensionPointId": "patientDashboard.tabs",
         "type": "link",
         "label": "${project.parent.artifactId}.forms",
@@ -35,7 +35,7 @@
         }
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.formsHistory",
+        "id": "isanteplus.formsHistory",
         "extensionPointId": "patientDashboard.overallActions",
         "type": "link",
         "label": "${project.parent.artifactId}.forms",
@@ -44,16 +44,16 @@
         "order": 5
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.labHistory",
+        "id": "isanteplus.labHistory",
         "extensionPointId": "patientDashboard.overallActions",
         "type": "link",
-        "label": "isantepluspatientdashboard.labHistory",
+        "label": "${project.parent.artifactId}.labHistory",
         "url": "${project.parent.artifactId}/labHistory.page?patientId={{patient.uuid}}",
         "icon": "icon-bar-chart",
         "order": 6
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.firstColumnFragments.mostRecentVitals",
+        "id": "isanteplus.patientDashboard.firstColumnFragments.mostRecentVitals",
         "extensionPointId": "patientDashboard.firstColumnFragments",
         "icon": "icon-vitals",
         "extensionParams": {
@@ -62,7 +62,7 @@
         }
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.firstColumnFragments.isantePlusForms",
+        "id": "isanteplus.patientDashboard.firstColumnFragments.isantePlusForms",
         "extensionPointId": "patientDashboard.firstColumnFragments",
         "icon": "icon-list-alt",
         "extensionParams": {
@@ -71,7 +71,7 @@
         }
     },
     {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.drugsHistory",
+        "id": "isanteplus.drugsHistory",
         "extensionPointId": "patientDashboard.overallActions",
         "type": "link",
         "label": "${project.parent.artifactId}.drugsHistory",
@@ -80,7 +80,7 @@
         "order": 7
     },
      {
-        "id": "${project.parent.groupId}.${project.parent.artifactId}.patientDashboard.secondColumnFragments.bmiGraph",
+        "id": "isanteplus.patientDashboard.secondColumnFragments.bmiGraph",
         "extensionPointId": "patientDashboard.secondColumnFragments",
         "extensionParams": {
             "provider": "${project.parent.artifactId}",

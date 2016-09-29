@@ -1,12 +1,12 @@
 <%
-    ui.decorateWith("appui", "standardEmrPage", [ title: ui.message("isantepluspatientdashboard.labHistory") ])
+    ui.decorateWith("appui", "standardEmrPage", [ title: ui.message("isanteplus.labHistory") ])
 %>
 
 <script type="text/javascript">
 	var breadcrumbs = [
         { icon: "icon-home", link: '/' + OPENMRS_CONTEXT_PATH + '/index.htm' },
         { label: "${patientPropts.name}", link: "/" + OPENMRS_CONTEXT_PATH + "/coreapps/clinicianfacing/patient.page?patientId=${patient.uuid}"},
-        { label: "${ ui.message('isantepluspatientdashboard.labHistory') }"}
+        { label: "${ ui.message('isanteplus.labHistory') }"}
     ];
 </script>
 
@@ -14,10 +14,10 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 
 <div class="info-section">
     <div class="info-header">
-        <h3>${ ui.message("isantepluspatientdashboard.labHistory") }</h3>
+        <h3>${ ui.message("isanteplus.labHistory") }</h3>
     </div>
     <table>
-    	<tr><th>${ ui.message("isantepluspatientdashboard.testName") }</th><th>Date</th><th>${ ui.message("isantepluspatientdashboard.testResult") }</th><th>${ ui.message("isantepluspatientdashboard.minimumValue") }</th><th>${ ui.message("isantepluspatientdashboard.maximumValue") }</th></tr>
+    	<tr><th>${ ui.message("isanteplus.testName") }</th><th>Date</th><th>${ ui.message("isanteplus.testResult") }</th><th>${ ui.message("isanteplus.minimumValue") }</th><th>${ ui.message("isanteplus.maximumValue") }</th></tr>
     <div class="info-body">
     	<% labresult.each { %>
     		<tr>

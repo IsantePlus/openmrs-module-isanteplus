@@ -1,6 +1,6 @@
 [
     {
-        "id": "${project.parent.artifactId}.manageIsantePlusPatientDashboard",
+        "id": "isanteplus.manageIsantePlusPatientDashboard",
         "description": "${project.parent.artifactId}.description",
         "order": 10,
         "extensions": [
@@ -9,8 +9,8 @@
                 "extensionPointId": "systemAdministration.apps",
                 "type": "link",
                 "order": 5,
-                "label": "${project.parent.artifactId}.manageIsantePlusPatientDashboard",
-                "url": "${project.parent.artifactId}/manageIsantePlusPatientDashboard.page",
+                "label": "${project.parent.artifactId}.manageIsantePlus",
+                "url": "${project.parent.artifactId}/manageIsantePlus.page",
                 "icon": "icon-dashboard"
             }
         ]

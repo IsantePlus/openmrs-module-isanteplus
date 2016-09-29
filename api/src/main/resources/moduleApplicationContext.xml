@@ -24,16 +24,16 @@
 	<bean parent="serviceContext">
 		<property name="moduleService">
 			<list>
-				<value>${project.parent.groupId}.${project.parent.artifactId}.api.IsantePlusPatientDashboardService</value>
+				<value>${project.parent.groupId}.${project.parent.artifactId}.api.IsantePlusService</value>
 				<bean
 					class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
 					<property name="transactionManager">
 						<ref bean="transactionManager" />
 					</property>
 					<property name="target">
-						<bean class="${project.parent.groupId}.${project.parent.artifactId}.api.impl.IsantePlusPatientDashboardServiceImpl">
+						<bean class="${project.parent.groupId}.${project.parent.artifactId}.api.impl.IsantePlusServiceImpl">
 							<property name="dao">
-								<bean class="${project.parent.groupId}.${project.parent.artifactId}.api.db.hibernate.HibernateIsantePlusPatientDashboardDAO">
+								<bean class="${project.parent.groupId}.${project.parent.artifactId}.api.db.hibernate.HibernateIsantePlusDAO">
 									<property name="sessionFactory">
 										<ref bean="sessionFactory" />
 									</property>
