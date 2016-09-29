@@ -272,4 +272,11 @@
 			UPDATE appframework_component_state SET component_id = REPLACE(component_id, 'org.openmrs.module.isantepluspatientdashboard.', 'isanteplus.');
 		</sql>
 	</changeSet>
+	<changeSet author="k-joseph" id="2016Sept292235">
+		<preConditions onFail="MARK_RAN">
+			<tableExists tableName="isantepluspatientdashboard_form_history" />
+		</preConditions>
+		<comment>Renaming isantepluspatientdashboard_form_history table to isanteplus_form_history</comment>
+		<renameTable oldTableName="isantepluspatientdashboard_form_history" newTableName="isanteplus_form_history"/>
+	</changeSet>
 </databaseChangeLog>

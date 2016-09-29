@@ -577,7 +577,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService
 		String sql = null;
 
 		if (formHistory != null && userId != null) {
-			sql = "INSERT INTO isantepluspatientdashboard_form_history ("
+			sql = "INSERT INTO isanteplus_form_history ("
 					+ (formHistory.getVisit() != null ? "visit_id ," : "")
 					+ "encounter_id, creator, date_created, voided, uuid) VALUES("
 					+ (formHistory.getVisit() != null ? formHistory.getVisit().getVisitId() + "," : "")

@@ -36,7 +36,7 @@ import org.openmrs.module.isanteplus.IsantePlusGlobalProps;
  *
  */
 @Entity
-@Table(name = "isantepluspatientdashboard_form_history")
+@Table(name = "isanteplus_form_history")
 public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 	private static final long serialVersionUID = 1L;
 

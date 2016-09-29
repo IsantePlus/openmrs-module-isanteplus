@@ -16,7 +16,7 @@ public class IsantePlusManagerFragmentController {
 		model.addAttribute("manager", new IsantePlusManager());
 	}
 
-	public void submitIsantePlusPatientDashboardManagerForm(@RequestParam("extensions") String exts) {
+	public void submitIsantePlusManagerForm(@RequestParam("extensions") String exts) {
 		Context.getService(IsantePlusService.class).updateComponentStates(new JSONObject(exts));
 	}
 }
