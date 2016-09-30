@@ -40,4 +40,6 @@ public interface IsantePlusDAO {
 	ComponentState getAppframeworkComponentState(String componentSateId);
 
 	ComponentState saveOrUpdateComponentState(ComponentState componentState);
+
+	List<FormHistory> getFormHistoryByEncounterId(Integer encounterId);
 }

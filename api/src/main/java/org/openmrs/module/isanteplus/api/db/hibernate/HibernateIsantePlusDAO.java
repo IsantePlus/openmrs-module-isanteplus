@@ -17,7 +17,9 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.openmrs.Encounter;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.api.db.IsantePlusDAO;
@@ -94,5 +96,14 @@ public class HibernateIsantePlusDAO implements IsantePlusDAO {
 	public ComponentState saveOrUpdateComponentState(ComponentState componentState) {
 		sessionFactory.getCurrentSession().saveOrUpdate(componentState);
 		return componentState;
+	}
+
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<FormHistory> getFormHistoryByEncounterId(Integer encounterId) {
+		Criteria crit = sessionFactory.getCurrentSession().createCriteria(FormHistory.class)
+				.createAlias("encounter", "e").add(Restrictions.eq("e.encounterId", encounterId));
+
+		return crit.list();
 	}
 }
