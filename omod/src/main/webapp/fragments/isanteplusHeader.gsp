@@ -1,3 +1,5 @@
+<link href="/${contextPath}/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
+	
 <%
     def addContextPath = {
         if (!it)
@@ -7,7 +9,7 @@
         }
         return it
     }
-    def logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("uicommons", "images/logo/openmrs-with-title-small.png")
+    def logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo.png")
     def logoLinkUrl = addContextPath(configSettings?."logo-link-url") ?: "/${ org.openmrs.ui.framework.WebConstants.CONTEXT_PATH }"
 
     def multipleLoginLocations = (loginLocations.size > 1);
