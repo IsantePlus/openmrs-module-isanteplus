@@ -46,6 +46,7 @@
 		<htmlformentryVersion>2.5</htmlformentryVersion>
 		<formentryappVersion>1.2</formentryappVersion>
 		<htmlformentryuiVersion>1.2</htmlformentryuiVersion>
+		<referenceapplicationVersion>2.5-SNAPSHOT</referenceapplicationVersion>
 	</properties>
 
 	<dependencyManagement>
@@ -129,6 +130,12 @@
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>metadatadeploy-api</artifactId>
 				<version>${metadatadeployVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>referenceapplication-omod</artifactId>
+				<version>${referenceapplicationVersion}</version>
 				<scope>provided</scope>
 			</dependency>
 			<!-- End OpenMRS modules -->

@@ -1,14 +1,14 @@
-iSantePlus Module
+iSantePlus OpenMRS Module
 =====================================
 
 Overview
---------
-IsantePlus is a Migration from the Haitian isante EMR to OpenMRS, this is an OpenMRS that is customised to meet Hait national EMR needs
+-------------------------------------
+IsantePlus is a Migration from the Haitian isante EMR to OpenMRS, this is an OpenMRS that is customised to meet Haiti national EMR needs
 
 
-Includes
---------
-- [x] iSantePlus UI customizations
+Configurable Included Features
+-------------------------------------
+- [x] iSantePlus UI customisations
 - [x] IsantePlus Forms
 - [x] Visit's Form History
 - [x] Patient's Form History
@@ -21,8 +21,8 @@ Includes
 - [x] BMI Graph
 - [x] Among others
 
-Installation requirements
-------------
+Installation Requirements & Guide
+-------------------------------------
 - Download OpenMRS Reference Application 2.3.1 modules
 - Download OpenMRS Platform 1.11.5 or 1.11.6
 - Replace some Extracted downloaded 2.3.1 modules with uiframework-3.6 and appui-1.4 and leave the rest of the modules
