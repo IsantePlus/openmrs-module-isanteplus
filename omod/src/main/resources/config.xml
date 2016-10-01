@@ -142,4 +142,9 @@
 		<defaultValue>14</defaultValue>
 		<description>Adult starting age in years, OpenMRS uses 13, Haiti 14</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory</property>
+		<defaultValue>true</defaultValue>
+		<description>Set to false to include default OpenMRS into form history</description>
+	</globalProperty>
 </module>
