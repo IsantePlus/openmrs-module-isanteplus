@@ -1,3 +1,4 @@
+<!-- isantePlus added the next line (css styling) and 13th line (changes logo) -->
 <link href="/${contextPath}/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
 	
 <%

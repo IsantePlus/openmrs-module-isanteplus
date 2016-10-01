@@ -901,17 +901,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	}
 
 	@Override
-	public List<Integer> getAllEncounterIdsAlreadyIncludedInFormHistory() {
-		List<Integer> encIds = new ArrayList<Integer>();
-
-		for (FormHistory fh : getAllFormHistory()) {
-			encIds.add(fh.getEncounter().getEncounterId());
-		}
-
-		return encIds;
-	}
-
-	@Override
 	public List<FormHistory> getFormHistoryByEncounterId(Integer encounterId) {
 		return dao.getFormHistoryByEncounterId(encounterId);
 	}

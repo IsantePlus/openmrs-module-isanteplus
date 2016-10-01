@@ -2,6 +2,7 @@ package org.openmrs.module.isanteplus.aop;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.List;
 
 import org.openmrs.Encounter;
 import org.openmrs.api.context.Context;
@@ -27,12 +28,11 @@ public class SaveFormHistoryAfterEncounterSaveAdvice implements AfterReturningAd
 			if (encounterJustSaved != null && encounterJustSaved.getForm() != null) {
 				IsantePlusService isanteService = Context.getService(IsantePlusService.class);
 				FormHistory formHistory = isanteService.createBasicFormHistoryObject(encounterJustSaved, true);
-				FormHistory existingFormHistory = Context.getService(IsantePlusService.class)
-						.getFormHistoryByEncounterId(encounterJustSaved.getEncounterId()).get(0);
+				List<FormHistory> existingFormHistory = Context.getService(IsantePlusService.class)
+						.getFormHistoryByEncounterId(encounterJustSaved.getEncounterId());
 
-				if (Context.getService(IsantePlusService.class).getAllEncounterIdsAlreadyIncludedInFormHistory()
-						.contains(encounterJustSaved.getEncounterId()) && existingFormHistory != null) {
-					formHistory = existingFormHistory;
+				if (existingFormHistory.size() > 0) {
+					formHistory = existingFormHistory.get(0);
 					formHistory.setChangedBy(Context.getAuthenticatedUser());
 					formHistory.setDateChanged(new Date());
 				}

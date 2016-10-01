@@ -60,11 +60,18 @@ ${ ui.includeFragment("referenceapplication", "infoAndErrorMessages") }
     });
 </script>
 
+<!-- isantePlus added the next 6 lines to re-style ui -->
 <link href="/${ ui.contextPath() }/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
+<style>
+	form, .form {
+		text-align: center;
+	}
+</style>
 
 <header>
     <div class="logo">
         <a href="${ui.pageLink("referenceapplication", "home")}">
+        	<!-- isantePlus changed logo in the next line -->
             <img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo.png")}"/>
         </a>
     </div>
