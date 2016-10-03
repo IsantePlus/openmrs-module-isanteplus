@@ -29,7 +29,7 @@ public class IsantePlusHtmlForm {
 		}
 
 		if (patient != null && visit != null) {
-			setUrl("../../htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=" + patient.getUuid()
+			setUrl("../htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=" + patient.getUuid()
 					+ "&visitId=" + visit.getVisitId() + "&definitionUiResource=isanteplus:htmlforms/"
 					+ definitionUiResource);
 		}
