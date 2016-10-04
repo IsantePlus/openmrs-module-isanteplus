@@ -10,7 +10,7 @@
         }
         return it
     }
-    def logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo.png")
+    def logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo_120x42.png")
     def logoLinkUrl = addContextPath(configSettings?."logo-link-url") ?: "/${ org.openmrs.ui.framework.WebConstants.CONTEXT_PATH }"
 
     def multipleLoginLocations = (loginLocations.size > 1);
@@ -96,6 +96,9 @@
             <img src="${ logoIconUrl }"/>
         </a>
     </div>
+    <!--iSantePlus changing the favicon files-->
+    <link rel="shortcut icon" type="image/ico" href="${ui.resourceLink("isanteplus", "images/favicon.ico")}"/>
+    <link rel="icon" type="image/png\" href="${ui.resourceLink("isanteplus", "images/favicon.png")}"/>
     <% if (context.authenticated) { %>
     <ul class="user-options">
         <li class="identifier">

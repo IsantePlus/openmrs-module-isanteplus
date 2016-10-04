@@ -7,8 +7,6 @@
 <html>
 <head>
     <title>${ ui.message("referenceapplication.login.title") }</title>
-    <link rel="shortcut icon" type="image/ico" href="/${ ui.contextPath() }/images/openmrs-favicon.ico"/>
-    <link rel="icon" type="image/png\" href="/${ ui.contextPath() }/images/openmrs-favicon.png"/>
     ${ ui.resourceLinks() }
 </head>
 <body>
@@ -72,9 +70,11 @@ ${ ui.includeFragment("referenceapplication", "infoAndErrorMessages") }
     <div class="logo">
         <a href="${ui.pageLink("referenceapplication", "home")}">
         	<!-- isantePlus changed logo in the next line -->
-            <img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo.png")}"/>
+            <img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo_120x42.png")}"/>
         </a>
     </div>
+    <link rel="shortcut icon" type="image/ico" href="${ui.resourceLink("isanteplus", "images/favicon.ico")}"/>
+    <link rel="icon" type="image/png\" href="${ui.resourceLink("isanteplus", "images/favicon.png")}"/>
 </header>
 
 <div id="body-wrapper">
