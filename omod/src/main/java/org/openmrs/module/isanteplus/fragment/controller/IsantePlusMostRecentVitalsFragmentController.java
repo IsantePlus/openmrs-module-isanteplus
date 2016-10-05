@@ -39,48 +39,48 @@ public class IsantePlusMostRecentVitalsFragmentController {
 	 */
 	public void controller(FragmentModel model, @RequestParam("patientId") Patient patient) {
 		IsantePlusVital height = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.height.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.height.label"),
 				Context.getService(IsantePlusService.class).getLatestHeightForPatient(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.height.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.height.unit"));
 		IsantePlusVital weight = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.weight.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.weight.label"),
 				Context.getService(IsantePlusService.class).getLatestWeightForPatient(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.weight.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.weight.unit"));
 		IsantePlusVital temperature = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.temperature.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.temperature.label"),
 				Context.getService(IsantePlusService.class).getLatestTemperatureForPatient(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.temperature.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.temperature.unit"));
 		IsantePlusVital pulse = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.pulse.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.pulse.label"),
 				Context.getService(IsantePlusService.class).getLatestPulseForPatient(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.pulse.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.pulse.unit"));
 		IsantePlusVital respiratoryRate = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.respiratoryRate.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.respiratoryRate.label"),
 				Context.getService(IsantePlusService.class).getLatestRespiratoryRateForPatient(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.respiratoryRate.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.respiratoryRate.unit"));
 		IsantePlusVital bloodOxygenSaturation = new IsantePlusVital(
 				Context.getMessageSourceService()
-						.getMessage("isantepluspatientdashboard.vitals.bloodOxygenSaturation.label"),
+						.getMessage("isanteplus.vitals.bloodOxygenSaturation.label"),
 				Context.getService(IsantePlusService.class)
 						.getLatestBloodOxygenSaturationForPatient(patient),
 				Context.getMessageSourceService()
-						.getMessage("isantepluspatientdashboard.vitals.bloodOxygenSaturation.unit"));
+						.getMessage("isanteplus.vitals.bloodOxygenSaturation.unit"));
 		IsantePlusVital bloodPressure = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bloodPressure.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.bloodPressure.label"),
 				getBloodPressure(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bloodPressure.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.bloodPressure.unit"));
 		List<IsantePlusVital> vitals = new ArrayList<IsantePlusVital>();
 		IsantePlusVital bmi = new IsantePlusVital(
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bmi.label"),
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.bmi.label"),
 				calculateLatestBMI(patient),
-				Context.getMessageSourceService().getMessage("isantepluspatientdashboard.vitals.bmi.unit"));
+				Context.getMessageSourceService().getMessage("isanteplus.vitals.bmi.unit"));
 		IsantePlusVital midUpperArmCircumference = new IsantePlusVital(
 				Context.getMessageSourceService()
-						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.label"),
+						.getMessage("isanteplus.vitals.midUpperArmCircumference.label"),
 				Context.getService(IsantePlusService.class)
 						.getLatestMidUpperArmCircumferenceForPatient(patient),
 				Context.getMessageSourceService()
-						.getMessage("isantepluspatientdashboard.vitals.midUpperArmCircumference.unit"));
+						.getMessage("isanteplus.vitals.midUpperArmCircumference.unit"));
 		Integer patientAge = patient.getAge();
 		Integer enfantEndingAge = Integer.parseInt(
 				Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));

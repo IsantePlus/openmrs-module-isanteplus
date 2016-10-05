@@ -38,7 +38,7 @@
         "type": "link",
         "label": "${project.parent.artifactId}.forms",
         "extensionParams": {
-            "provider": "isantepluspatientdashboard",
+            "provider": "${project.parent.artifactId}",
             "fragment": "formsHistory"
         }
     },

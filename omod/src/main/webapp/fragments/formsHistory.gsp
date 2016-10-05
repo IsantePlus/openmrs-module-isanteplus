@@ -58,11 +58,11 @@ ${ ui.includeFragment("isanteplus", "isantePlusForms") }
 			</tr>
 			<% allFormHistory.each { %>
 				<tr>
-					<td>${ ui.format(it.date) }</td>
+					<td>${ ui.format(it.dateCreated) }</td>
 					<td><a href="/${appName}/htmlformentryui/htmlform/viewEncounterWithHtmlForm.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounter=${ ui.format(it.encounter.uuid) }" target="_blank">${ ui.format(it.encounter.form.name) }</a></td>
 					<td>${ ui.format(it.formStatus) }</td>
 					<td>${ ui.format(it.provider) }</td>
-					<td>${ ui.format(it.encounter.encounterDatetime) }</td>
+					<td>${ ui.format(it.dateChanged) }</td>
 					<td>${ ui.format(it.enteredBy) }</td>
 					<td><input type="checkbox" class="delete_form_history" id="${ ui.format(it.uuid) }"></td>
 				</tr>

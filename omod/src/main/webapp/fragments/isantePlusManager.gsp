@@ -10,11 +10,11 @@
 <input type="checkbox" class="managerOption" id="${manager.drugsHistoryExtensionId}" ${manager.drugsHistoryExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableDrugsHistory') }<br />
 <input type="checkbox" class="managerOption" id="${manager.bmiGraphExtensionId}" ${manager.bmiGraphExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableBmiGraph') }<br />
 	
-<input type="button" id="submitIsantePlusPatientDashboardManagerForm" value="${ ui.message('general.save') }">
+<input type="button" id="submitIsantePlusManagerForm" value="${ ui.message('general.save') }">
 
 <script type="text/javascript">
 	 jQuery(function() {
-	 	jQuery("#submitIsantePlusPatientDashboardManagerForm").click(function(event) {
+	 	jQuery("#submitIsantePlusManagerForm").click(function(event) {
 	 		var data = {};
 	 		
 	 		jQuery('.managerOption').each(function() {
@@ -24,7 +24,7 @@
 	 		jQuery.ajax({
 				type : "POST",
 				data: {"extensions": JSON.stringify(data)},
-				url : "${ ui.actionLink('submitIsantePlusPatientDashboardManagerForm') }",
+				url : "${ ui.actionLink('submitIsantePlusManagerForm') }",
 				success : function() {
 					location.reload();
 				}

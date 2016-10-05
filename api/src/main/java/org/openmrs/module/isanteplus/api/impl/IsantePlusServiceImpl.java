@@ -45,10 +45,10 @@ import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.AgeUnit;
 import org.openmrs.module.isanteplus.ChartJSAgeAxis;
 import org.openmrs.module.isanteplus.ConfigurableGlobalProperties;
-import org.openmrs.module.isanteplus.IsantePlusGlobalProps;
-import org.openmrs.module.isanteplus.IsantePlusObs;
 import org.openmrs.module.isanteplus.IsantePlusConstants;
+import org.openmrs.module.isanteplus.IsantePlusGlobalProps;
 import org.openmrs.module.isanteplus.IsantePlusManager;
+import org.openmrs.module.isanteplus.IsantePlusObs;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.api.db.IsantePlusDAO;
 import org.openmrs.module.isanteplus.liquibase.InitialiseFormsHistory;
@@ -60,8 +60,7 @@ import liquibase.exception.DatabaseException;
 /**
  * It is a default implementation of {@link IsantePlusService}.
  */
-public class IsantePlusServiceImpl extends BaseOpenmrsService
-		implements IsantePlusService {
+public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsantePlusService {
 
 	protected final Log log = LogFactory.getLog(this.getClass());
 
@@ -577,8 +576,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService
 		String sql = null;
 
 		if (formHistory != null && userId != null) {
-			sql = "INSERT INTO isantepluspatientdashboard_form_history ("
-					+ (formHistory.getVisit() != null ? "visit_id ," : "")
+			sql = "INSERT INTO isanteplus_form_history (" + (formHistory.getVisit() != null ? "visit_id ," : "")
 					+ "encounter_id, creator, date_created, voided, uuid) VALUES("
 					+ (formHistory.getVisit() != null ? formHistory.getVisit().getVisitId() + "," : "")
 					+ formHistory.getEncounter().getEncounterId() + ", " + userId + ", '"
@@ -932,6 +930,11 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService
 			}
 		}
 		return bmiJson;
+	}
+
+	@Override
+	public List<FormHistory> getFormHistoryByEncounterId(Integer encounterId) {
+		return dao.getFormHistoryByEncounterId(encounterId);
 	}
 
 }

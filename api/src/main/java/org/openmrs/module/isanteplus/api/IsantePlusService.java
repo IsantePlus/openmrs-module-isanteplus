@@ -132,4 +132,6 @@ public interface IsantePlusService extends OpenmrsService {
 	JSONArray getPatientBmi(Patient patient);
 
 	JSONArray getPatientBMIsAcrossAnAgeDifference(Patient patient, ChartJSAgeAxis ageAxis);
+
+	List<FormHistory> getFormHistoryByEncounterId(Integer encounterId);
 }
