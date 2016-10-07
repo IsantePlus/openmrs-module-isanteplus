@@ -845,7 +845,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Concept dateDispensed = Context.getConceptService().getConcept(dateDrugsConceptId);
 		List<Concept> conceptList = new ArrayList<Concept>();
 		List<Encounter> encounterList = new ArrayList<Encounter>();
-
 		for (Obs obs0 : Context.getObsService().getObservations(patient, drugsDispensed, false)) {
 			Obs obs = Obs.newInstance(obs0);
 			if (obs0 != null) {
@@ -871,9 +870,11 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 						}
 					}
 				}
+			  
+			}
+			
 			}
 
-		}
 		return drugsHistory;
 	}
 

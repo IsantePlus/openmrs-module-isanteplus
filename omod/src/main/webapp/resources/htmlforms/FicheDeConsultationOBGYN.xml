@@ -1221,9 +1221,9 @@
 			
 			Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 			<table width="100%">
-				<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+				<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="3" autocompleteProvider="true"/></td></tr>
 				<br/>
-				<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+				<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="4" autocompleteProvider="true"/></td></tr>
 			</table>
 		</fieldset>
 			</div>

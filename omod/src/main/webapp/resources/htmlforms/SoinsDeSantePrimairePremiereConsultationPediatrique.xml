@@ -324,6 +324,34 @@
 	    setValue('bacimois5.value', 'Fin de rx');
     }
 	//Fin bacilloscopie
+	//Debut supplementation en vitamine A
+	if ((getValue('vitaminea_1.value') == '') &amp;&amp; (getValue('vitaminea_2.value') == '') &amp;&amp; (getValue('vitaminea_3.value') == '') &amp;&amp; (getValue('vitaminea_4.value') == '') &amp;&amp; (getValue('vitaminea_5.value') == '') &amp;&amp; (getValue('vitaminea_6.value') == '') &amp;&amp; (getValue('vitaminea_7.value') == '')) {
+       setValue('vitaminea.value', '');
+    } else {
+	    setValue('vitaminea.value', '86339');
+    }
+	if ((getValue('fer_1.value') == '') &amp;&amp; (getValue('fer_2.value') == '') &amp;&amp; (getValue('fer_3.value') == '') &amp;&amp; (getValue('fer_4.value') == '') &amp;&amp; (getValue('fer_5.value') == '') &amp;&amp; (getValue('fer_6.value') == '') &amp;&amp; (getValue('fer_7.value') == '')) {
+       setValue('fer.value', '');
+    } else {
+	    setValue('fer.value', '5843');
+    }
+	if ((getValue('iode_1.value') == '') &amp;&amp; (getValue('iode_2.value') == '') &amp;&amp; (getValue('iode_3.value') == '') &amp;&amp; (getValue('iode_4.value') == '') &amp;&amp; (getValue('iode_5.value') == '') &amp;&amp; (getValue('iode_6.value') == '') &amp;&amp; (getValue('iode_7.value') == '')) {
+       setValue('iode.value', '');
+    } else {
+	    setValue('iode.value', '78130');
+    }
+	if ((getValue('deparasitage_1.value') == '') &amp;&amp; (getValue('deparasitage_2.value') == '') &amp;&amp; (getValue('deparasitage_3.value') == '') &amp;&amp; (getValue('deparasitage_4.value') == '') &amp;&amp; (getValue('deparasitage_5.value') == '') &amp;&amp; (getValue('deparasitage_6.value') == '') &amp;&amp; (getValue('deparasitage_7.value') == '')) {
+       setValue('deparasitage.value', '');
+    } else {
+	    setValue('deparasitage.value', '163395');
+    }
+	if ((getValue('zinc_1.value') == '') &amp;&amp; (getValue('zinc_2.value') == '') &amp;&amp; (getValue('zinc_3.value') == '') &amp;&amp; (getValue('zinc_4.value') == '') &amp;&amp; (getValue('zinc_5.value') == '') &amp;&amp; (getValue('zinc_6.value') == '') &amp;&amp; (getValue('zinc_7.value') == '')) {
+       setValue('zinc.value', '');
+    } else {
+	    setValue('zinc.value', '86672');
+    }
+	
+	// Fin supplementation en vitamine A
 	 return true;
 	});
 		
@@ -619,14 +647,14 @@
 								<template>
 									<obsgroup groupingConceptId="160741">
 										<tr bgcolor="{color}">
-											<td>{drugname}<span class="arv1_div" style="display: none"><obs conceptId="CIEL:1282" answerConceptId="{concept}" answerLabel="{drugname}" defaultValue="{concept}"/></span></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
+											<td>{drugname}<span class="arv1_div" style="display: none"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" answerLabel="{drugname}" defaultValue="{concept}"/></span></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_1"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_2"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_3"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_4"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_5"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_6"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_7"/></td>
 										</tr>
 									</obsgroup>
 								</template>
@@ -1991,9 +2019,9 @@
 		<br/><br/>
 			Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 		<table width="100%">
-			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="3" autocompleteProvider="true"/></td></tr>
 			<br/>
-			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="4" autocompleteProvider="true"/></td></tr>
 		</table>
 		</fieldset>
 			</div>

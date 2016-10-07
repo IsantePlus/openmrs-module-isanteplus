@@ -291,6 +291,34 @@
     }
 	//Fin bacilloscopie
 	
+	//Debut supplementation en vitamine A
+	if ((getValue('vitaminea_1.value') == '')) {
+       setValue('vitaminea.value', '');
+    } else {
+	    setValue('vitaminea.value', '86339');
+    }
+	if ((getValue('fer_1.value') == '')) {
+       setValue('fer.value', '');
+    } else {
+	    setValue('fer.value', '5843');
+    }
+	if ((getValue('iode_1.value') == '')) {
+       setValue('iode.value', '');
+    } else {
+	    setValue('iode.value', '78130');
+    }
+	if ((getValue('deparasitage_1.value') == '')) {
+       setValue('deparasitage.value', '');
+    } else {
+	    setValue('deparasitage.value', '163395');
+    }
+	if ((getValue('zinc_1.value') == '')) {
+       setValue('zinc.value', '');
+    } else {
+	    setValue('zinc.value', '86672');
+    }
+	
+	// Fin supplementation en vitamine A
 	
 	
 	 return true;
@@ -352,8 +380,8 @@
 								<template>
 									<obsgroup groupingConceptId="160741">
 										<tr bgcolor="{color}">
-											<td>{drugname}<span class="arv1_div" style="display: none"><obs conceptId="CIEL:1282" answerConceptId="{concept}" answerLabel="{drugname}" defaultValue="{concept}"/></span></td>
-											<td><obs conceptId="CIEL:1190"/></td>
+											<td>{drugname}<span class="arv1_div" style="display: none"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" answerLabel="{drugname}" defaultValue="{concept}"/></span></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_1"/></td>
 										</tr>
 									</obsgroup>
 								</template>
@@ -375,7 +403,7 @@
 						<fieldset>
 							<table width="100%">
 								<tr>
-									<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> mmHg</td>
+									<td>Pds <obs conceptId="CIEL:5089" id="weight"/> kg</td><td>Taille <obs conceptId="CIEL:5090" id="height"/> cm</td><td colspan="3">TA <obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> cm</td>
 								</tr>
                                 <tr>
 									<td>PC <obs conceptId="CIEL:5314" id="pc"/> cm (âge &lt; 3 ans)</td><td>PB <obs conceptId="CIEL:1343" id="pb"/> cm</td>
