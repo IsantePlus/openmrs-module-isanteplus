@@ -60,19 +60,26 @@ ${ ui.includeFragment("referenceapplication", "infoAndErrorMessages") }
     });
 </script>
 
-<!-- isantePlus added the next 6 lines to re-style ui -->
-<link href="/${ ui.contextPath() }/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
-<style>
-	form, .form {
-		text-align: center;
-	}
-</style>
-
+<%  if (enableIsantePlusUI) {  %>
+	<!-- isantePlus added the next 6 lines to re-style ui -->
+	<link href="/${ ui.contextPath() }/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" type="image/ico" href="${ui.resourceLink("isanteplus", "images/favicon.ico")}"/>
+    <link rel="icon" type="image/png\" href="${ui.resourceLink("isanteplus", "images/favicon.png")}"/>
+	<style>
+		form, .form {
+			text-align: center;
+		}
+	</style>
+<% } %>
 <header>
     <div class="logo">
         <a href="${ui.pageLink("referenceapplication", "home")}">
-        	<!-- isantePlus changed logo in the next line -->
-            <img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo.png")}"/>
+		<%  if (enableIsantePlusUI) {  %>
+        		<!-- isantePlus changed logo in the next line -->
+            	<img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo_120x42.png")}"/>
+            <% } else { %>
+            	<img src="${ui.resourceLink("referenceapplication", "images/openMrsLogo.png")}"/>
+            <% } %>	
         </a>
     </div>
 </header>

@@ -6,9 +6,9 @@ Overview
 IsantePlus is a Migration from the Haitian isante EMR to OpenMRS, this is an OpenMRS that is customised to meet Haiti national EMR needs
 
 
-Configurable Included Features
+Included Configurable Features
 -------------------------------------
-- [x] iSantePlus UI customisations
+- [x] Configurable iSantePlus UI customisations
 - [x] IsantePlus Forms
 - [x] Visit's Form History
 - [x] Patient's Form History
@@ -21,10 +21,21 @@ Configurable Included Features
 - [x] BMI Graph
 - [x] Among others
 
+
 Installation Requirements & Guide
 -------------------------------------
-- Download OpenMRS Reference Application 2.3.1 modules
+- Download OpenMRS Reference Application 2.3.1 modules from: https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_2.3.1/openmrs-2.3.1-modules.zip/download
 - Download OpenMRS Platform 1.11.5 or 1.11.6
 - Replace some Extracted downloaded 2.3.1 modules with uiframework-3.6 and appui-1.4 and leave the rest of the modules
 - Download and install this module to intergrate with the above mentioned packages
 - Run the integrated package as a normal OpenMRS reference Application using https://wiki.openmrs.org/x/BANGBQ as a sample guide
+
+
+Configurable Global Properties for non IsantePlus Implementations
+-------------------------------------
+| Name  | Default Value | Description |
+| ------------- | ------------- | ------------- |
+| isanteplus.enabledIsantePlusUI | true | Set to false to disable iSantePlus custom user interface |
+| isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory | true | Set to false to include default OpenMRS into form history |
+| isantepluspatientdashboard.adultStartingAge | 14 | Adult starting age in years, OpenMRS uses 13, Haiti 14 |
+| isantepluspatientdashboard.formIdsToExcludeFromHistory | 1,2,3,4,5 | Forms IDs whose forms to exclude from History |

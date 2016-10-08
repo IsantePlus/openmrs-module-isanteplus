@@ -17,18 +17,25 @@ public class IsantePlusGlobalProps {
 
 	public Concept FORMNEEDSREVIEW_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(Context
 			.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.FORMNEEDSREVIEW_CONCEPTID)));
+
 	public Concept FORMSTATUS_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.FORMSTATUS_CONCEPTID)));
+
 	public Concept YES_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.YES_CONCEPTID)));
+
 	public Concept NO_CONCEPT = Context.getConceptService().getConcept(Integer
 			.parseInt(Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.NO_CONCEPTID)));
+
 	public Concept COMPLETED_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.COMPLETED_CONCEPTID)));
+
 	public Concept INCOMPLETE_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.INCOMPLETE_CONCEPTID)));
 
 	public boolean EXCLUDE_DEFAULT_OPENMRSFORMHISTORY = "true".equals(Context.getAdministrationService()
 			.getGlobalProperty(ConfigurableGlobalProperties.EXCLUDE_DEFAULT_OPENMRS_FORMHISTORY));
 
+	public boolean ENABLE_ISANTEPLUS_UI = "true".equals(
+			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ENABLE_ISANTEPLUS_UI));
 }

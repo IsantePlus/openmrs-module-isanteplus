@@ -147,4 +147,9 @@
 		<defaultValue>true</defaultValue>
 		<description>Set to false to include default OpenMRS into form history</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isanteplus.enabledIsantePlusUI</property>
+		<defaultValue>true</defaultValue>
+		<description>Set to false to disable iSantePlus custom user interface</description>
+	</globalProperty>
 </module>

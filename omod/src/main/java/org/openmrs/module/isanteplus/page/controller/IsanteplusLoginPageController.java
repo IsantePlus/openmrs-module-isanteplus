@@ -17,6 +17,7 @@ import org.openmrs.api.context.ContextAuthenticationException;
 import org.openmrs.module.appframework.service.AppFrameworkService;
 import org.openmrs.module.appui.UiSessionContext;
 import org.openmrs.module.emrapi.utils.GeneralUtils;
+import org.openmrs.module.isanteplus.ConfigurableGlobalProperties;
 import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.annotation.SpringBean;
 import org.openmrs.ui.framework.page.PageModel;
@@ -26,7 +27,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 
 public class IsanteplusLoginPageController {
+	@SuppressWarnings("unused")
 	private static final String GET_LOCATIONS = "Get Locations";
+	@SuppressWarnings("unused")
 	private static final String VIEW_LOCATIONS = "View Locations";
 	protected final Log log = LogFactory.getLog(this.getClass());
 
@@ -34,6 +37,8 @@ public class IsanteplusLoginPageController {
 			@CookieValue(value = "referenceapplication.lastSessionLocation", required = false) String lastSessionLocationId,
 			@SpringBean("locationService") LocationService locationService,
 			@SpringBean("appFrameworkService") AppFrameworkService appFrameworkService) {
+		boolean enableIsantePlusUI = false;
+
 		if (Context.isAuthenticated()) {
 			return "redirect:" + ui.pageLink("referenceapplication", "home");
 		} else {
@@ -57,16 +62,24 @@ public class IsanteplusLoginPageController {
 			try {
 				Context.addProxyPrivilege("View Locations");
 				Context.addProxyPrivilege("Get Locations");
+				Context.addProxyPrivilege("View Global Properties");
+				Context.addProxyPrivilege("Get Global Properties");
 				model.addAttribute("locations", appFrameworkService.getLoginLocations());
 				lastSessionLocation = locationService.getLocation(Integer.valueOf(lastSessionLocationId));
+				enableIsantePlusUI = "true".equals(Context.getAdministrationService()
+						.getGlobalProperty(ConfigurableGlobalProperties.ENABLE_ISANTEPLUS_UI));
 			} catch (NumberFormatException var13) {
 				;
 			} finally {
 				Context.removeProxyPrivilege("View Locations");
 				Context.removeProxyPrivilege("Get Locations");
+				Context.removeProxyPrivilege("View Global Properties");
+				Context.removeProxyPrivilege("Get Global Properties");
 			}
 
 			model.addAttribute("lastSessionLocation", lastSessionLocation);
+			model.put("enableIsantePlusUI", enableIsantePlusUI);
+
 			return null;
 		}
 	}

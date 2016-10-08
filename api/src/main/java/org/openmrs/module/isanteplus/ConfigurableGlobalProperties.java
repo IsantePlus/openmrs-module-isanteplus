@@ -37,4 +37,6 @@ public class ConfigurableGlobalProperties {
 	public static final String MIDUPPERARM_CIRCUMFERENCE_CONCEPTID = "isantepluspatientdashboard.midUpperArmCircumferenceConceptId";
 
 	public static final String ADULTSTARTINGAGE = "isantepluspatientdashboard.adultStartingAge";
+	
+	public static final String ENABLE_ISANTEPLUS_UI = "isanteplus.enabledIsantePlusUI";
 }

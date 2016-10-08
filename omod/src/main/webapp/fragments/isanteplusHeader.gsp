@@ -1,6 +1,10 @@
-<!-- isantePlus added the next line (css styling) and 13th line (changes logo) -->
-<link href="/${contextPath}/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
-	
+<%  if (enableIsantePlusUI) {  %>
+	<!-- isantePlus added the next line (css styling) and 13th line (changes logo) -->
+	<link href="/${contextPath}/ms/uiframework/resource/isanteplus/styles/isanteplus.css"  rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" type="image/ico" href="${ui.resourceLink("isanteplus", "images/favicon.ico")}"/>
+    <link rel="icon" type="image/png\" href="${ui.resourceLink("isanteplus", "images/favicon.png")}"/>
+<% } %>
+
 <%
     def addContextPath = {
         if (!it)
@@ -10,7 +14,12 @@
         }
         return it
     }
-    def logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo.png")
+    def logoIconUrl;
+    if (enableIsantePlusUI) {
+    	logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo_120x42.png")
+    } else {
+    	logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("referenceapplication", "images/openMrsLogo.png")
+    }
     def logoLinkUrl = addContextPath(configSettings?."logo-link-url") ?: "/${ org.openmrs.ui.framework.WebConstants.CONTEXT_PATH }"
 
     def multipleLoginLocations = (loginLocations.size > 1);

@@ -7,6 +7,7 @@ import org.openmrs.api.context.Context;
 import org.openmrs.module.appframework.domain.Extension;
 import org.openmrs.module.appframework.service.AppFrameworkService;
 import org.openmrs.module.appui.AppUiExtensions;
+import org.openmrs.module.isanteplus.IsantePlusGlobalProps;
 import org.openmrs.ui.framework.WebConstants;
 import org.openmrs.ui.framework.annotation.SpringBean;
 import org.openmrs.ui.framework.fragment.FragmentModel;
@@ -33,6 +34,7 @@ public class IsanteplusHeaderFragmentController {
 			Context.removeProxyPrivilege(GET_LOCATIONS);
 			Context.removeProxyPrivilege(VIEW_LOCATIONS);
 		}
+		fragmentModel.put("enableIsantePlusUI", new IsantePlusGlobalProps().ENABLE_ISANTEPLUS_UI);
 		fragmentModel.put("contextPath", WebConstants.CONTEXT_PATH);
 	}
 }
