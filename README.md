@@ -3,7 +3,7 @@ iSantePlus OpenMRS Module
 
 Overview
 -------------------------------------
-IsantePlus is a Migration from the Haitian isante EMR to OpenMRS, this is an OpenMRS that is customised to meet Haiti national EMR needs
+IsantePlus is a Migration from the Haitian isante EMR to OpenMRS, this is an OpenMRS instance that is customised to meet Haiti national EMR needs
 
 
 Included Configurable Features
@@ -35,7 +35,7 @@ Configurable Global Properties for non IsantePlus Implementations
 -------------------------------------
 | Name  | Default Value | Description |
 | ------------- | ------------- | ------------- |
-| isanteplus.enabledIsantePlusUI | true | Set to false to disable iSantePlus custom user interface |
-| isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory | true | Set to false to include default OpenMRS into form history |
+| isanteplus.enabledIsantePlusUI | true | Set to 'false' to disable iSantePlus custom user interface |
+| isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory | true | Set to 'false' to include default OpenMRS form history |
 | isantepluspatientdashboard.adultStartingAge | 14 | Adult starting age in years, OpenMRS uses 13, Haiti 14 |
-| isantepluspatientdashboard.formIdsToExcludeFromHistory | 1,2,3,4,5 | Forms IDs whose forms to exclude from History |
+| isantepluspatientdashboard.formIdsToExcludeFromHistory | 1,2,3,4,5 | Forms IDs to exclude from form History |
