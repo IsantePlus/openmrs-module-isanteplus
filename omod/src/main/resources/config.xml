@@ -58,94 +58,89 @@
 	</messages>
 	<!-- /Internationalization -->
 	<globalProperty>
-		<property>isantepluspatientdashboard.viralLoadConceptId</property>
+		<property>isanteplus.viralLoadConceptId</property>
 		<defaultValue>856</defaultValue>
 		<description>HIV VIRAL LOAD concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.headCircumferenceConceptId</property>
+		<property>isanteplus.headCircumferenceConceptId</property>
 		<defaultValue>5314</defaultValue>
 		<description>Head Circumference Concept Id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.formNeedsReviewConceptId</property>
+		<property>isanteplus.formNeedsReviewConceptId</property>
 		<defaultValue>163341</defaultValue>
 		<description>Form needs review concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.formStatusConceptId</property>
+		<property>isanteplus.formStatusConceptId</property>
 		<defaultValue>163340</defaultValue>
 		<description>Form status concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.yesConceptId</property>
+		<property>isanteplus.yesConceptId</property>
 		<defaultValue>1066</defaultValue>
 		<description>Yes Concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.noConceptId</property>
+		<property>isanteplus.noConceptId</property>
 		<defaultValue>1065</defaultValue>
 		<description>No Concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.incompleteConceptId</property>
+		<property>isanteplus.incompleteConceptId</property>
 		<defaultValue>163339</defaultValue>
 		<description>Incomplete Concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.completedConceptId</property>
+		<property>isanteplus.completedConceptId</property>
 		<defaultValue>1267</defaultValue>
 		<description>COMPLETED Concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.formIdsToExcludeFromHistory</property>
+		<property>isanteplus.formIdsToExcludeFromHistory</property>
 		<defaultValue>1,2,3,4,5</defaultValue>
-		<description>Forms IDs whose forms to exclude from History</description>
+		<description>Forms IDs to exclude from form History</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.temperatureConceptId</property>
+		<property>isanteplus.temperatureConceptId</property>
 		<defaultValue>5088</defaultValue>
 		<description>Temperature concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.pulseConceptId</property>
+		<property>isanteplus.pulseConceptId</property>
 		<defaultValue>5087</defaultValue>
 		<description>Pulse concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.respiratoryRateConceptId</property>
+		<property>isanteplus.respiratoryRateConceptId</property>
 		<defaultValue>5242</defaultValue>
 		<description>Respiratory rate concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.diastolicBloodPressureConceptId</property>
+		<property>isanteplus.diastolicBloodPressureConceptId</property>
 		<defaultValue>5086</defaultValue>
 		<description>DiastolicBlood Pressure rate concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.bloodOxygenSaturationConceptId</property>
+		<property>isanteplus.bloodOxygenSaturationConceptId</property>
 		<defaultValue>5092</defaultValue>
 		<description>Blood Oxygen Saturation concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.systolicBloodPressureConceptId</property>
+		<property>isanteplus.systolicBloodPressureConceptId</property>
 		<defaultValue>5085</defaultValue>
 		<description>Systolic Blood Pressure rate concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.midUpperArmCircumferenceConceptId</property>
+		<property>isanteplus.midUpperArmCircumferenceConceptId</property>
 		<defaultValue>1343</defaultValue>
 		<description>Mid Upper Arm Circumference concept id</description>
 	</globalProperty>
 	<globalProperty>
-		<property>isantepluspatientdashboard.adultStartingAge</property>
+		<property>isanteplus.adultStartingAge</property>
 		<defaultValue>14</defaultValue>
-		<description>Adult starting age in years, OpenMRS uses 13, Haiti 14</description>
-	</globalProperty>
-	<globalProperty>
-		<property>isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory</property>
-		<defaultValue>true</defaultValue>
-		<description>Set to false to include default OpenMRS into form history</description>
+		<description>Adult starting age in years, OpenMRS uses 13, Haiti uses 14</description>
 	</globalProperty>
 	<globalProperty>
 		<property>isanteplus.enabledIsantePlusUI</property>

@@ -1,5 +1,6 @@
 package org.openmrs.module.isanteplus;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Concept;
 import org.openmrs.api.context.Context;
 
@@ -33,8 +34,8 @@ public class IsantePlusGlobalProps {
 	public Concept INCOMPLETE_CONCEPT = Context.getConceptService().getConcept(Integer.parseInt(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.INCOMPLETE_CONCEPTID)));
 
-	public boolean EXCLUDE_DEFAULT_OPENMRSFORMHISTORY = "true".equals(Context.getAdministrationService()
-			.getGlobalProperty(ConfigurableGlobalProperties.EXCLUDE_DEFAULT_OPENMRS_FORMHISTORY));
+	public boolean EXCLUDE_DEFAULT_OPENMRSFORMHISTORY = StringUtils.isNotBlank(Context.getAdministrationService()
+			.getGlobalProperty(ConfigurableGlobalProperties.FORMIDS_WHOSE_HISTORY_TOBEEXCLUDED));
 
 	public boolean ENABLE_ISANTEPLUS_UI = "true".equals(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ENABLE_ISANTEPLUS_UI));

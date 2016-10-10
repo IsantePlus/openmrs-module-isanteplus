@@ -8,6 +8,7 @@ import org.openmrs.api.FormService;
 import org.openmrs.module.htmlformentry.HtmlForm;
 import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
+import org.openmrs.ui.framework.WebConstants;
 import org.openmrs.ui.framework.resource.ResourceFactory;
 
 public class IsantePlusHtmlForm {
@@ -29,7 +30,8 @@ public class IsantePlusHtmlForm {
 		}
 
 		if (patient != null && visit != null) {
-			setUrl("../../htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=" + patient.getUuid()
+			setUrl("/" + WebConstants.WEBAPP_NAME
+					+ "/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=" + patient.getUuid()
 					+ "&visitId=" + visit.getVisitId() + "&definitionUiResource=isanteplus:htmlforms/"
 					+ definitionUiResource);
 		}

@@ -35,7 +35,6 @@ Configurable Global Properties for non IsantePlus Implementations
 -------------------------------------
 | Name  | Default Value | Description |
 | ------------- | ------------- | ------------- |
+| isanteplus.adultStartingAge | 14 | Adult starting age in years, OpenMRS uses 13, Haiti uses 14 |
 | isanteplus.enabledIsantePlusUI | true | Set to 'false' to disable iSantePlus custom user interface |
-| isantepluspatientdashboard.excludeDefaultOpenMRSFormHistory | true | Set to 'false' to include default OpenMRS form history |
-| isantepluspatientdashboard.adultStartingAge | 14 | Adult starting age in years, OpenMRS uses 13, Haiti 14 |
-| isantepluspatientdashboard.formIdsToExcludeFromHistory | 1,2,3,4,5 | Forms IDs to exclude from form History |
+| isanteplus.formIdsToExcludeFromHistory | 1,2,3,4,5 | Forms IDs to exclude from form History |

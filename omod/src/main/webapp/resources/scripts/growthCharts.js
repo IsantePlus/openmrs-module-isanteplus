@@ -1,4 +1,4 @@
-var moduleResourceRootPath = "../ms/uiframework/resource/isantepluspatientdashboard";
+var moduleResourceRootPath = "../ms/uiframework/resource/isanteplus";
 var bmiAgeRevPath = moduleResourceRootPath + "/cdc/csv/bmiagerev.csv";
 var hcageinfPath = moduleResourceRootPath + "/cdc/csv/hcageinf.csv";
 var lenageinfPath = moduleResourceRootPath + "/cdc/csv/lenageinf.csv";
