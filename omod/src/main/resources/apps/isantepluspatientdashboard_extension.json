@@ -49,7 +49,7 @@
         "type": "link",
         "label": "${project.parent.artifactId}.labHistory",
         "url": "${project.parent.artifactId}/labHistory.page?patientId={{patient.uuid}}",
-        "icon": "icon-bar-chart",
+        "icon": "icon-beaker",
         "order": 6
     },
     {
