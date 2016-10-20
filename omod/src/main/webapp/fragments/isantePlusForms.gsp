@@ -1,4 +1,4 @@
-<%  if (patientHasAnActiveVisit) {  %>
+<%  if (isActiveVisit) {  %>
 	<div class="info-section">
 	    <div class="info-header">
 	        <h3>${ ui.message("isanteplus.iSantePlusForms") } </h3>
