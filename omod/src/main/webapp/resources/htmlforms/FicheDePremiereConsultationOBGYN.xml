@@ -104,7 +104,6 @@
    jQuery(function() {
        jQuery( '.titre' ).on( 'change', function() {
 		jQuery( this.getAttribute( 'ch-target' ) ).show();
-			
         });
     });
 	
