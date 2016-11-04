@@ -845,35 +845,47 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Concept dateDispensed = Context.getConceptService().getConcept(dateDrugsConceptId);
 		List<Concept> conceptList = new ArrayList<Concept>();
 		List<Encounter> encounterList = new ArrayList<Encounter>();
-
 		for (Obs obs0 : Context.getObsService().getObservations(patient, drugsDispensed, false)) {
 			Obs obs = Obs.newInstance(obs0);
+			Obs secondObs = null;
 			if (obs0 != null) {
 				for (Obs obs1 : Context.getObsService().getObservations(patient, dateDispensed, false)) {
 					if (obs1 != null) {
-						if (obs0.getObsGroupId() == obs1.getObsGroupId()) {
 							// je capture dans obs la date de dispensation du
 							// medicament
-							obs.setObsDatetime(obs1.getObsDatetime());
-							conceptList.add(obs0.getValueCoded());
-							encounterList.add(obs0.getEncounter());
-							// j'ajoute la date de dispensation
-							drugsHistory.add(obs);
-						} else if (conceptList.contains(obs0.getValueCoded())
-								&& encounterList.contains(obs0.getEncounter()))
-							;
-						else {
-							conceptList.add(obs0.getValueCoded());
-							encounterList.add(obs0.getEncounter());
-							// j'ajoute la date de prescription si la date de
-							// dispensation n'est pas disponible
-							drugsHistory.add(obs);
+					 if (!conceptList.contains(obs0.getValueCoded())
+									|| !encounterList.contains(obs0.getEncounter()))
+					 {
+						 		if (obs0.getObsGroupId() == obs1.getObsGroupId()) {
+						 				
+										obs.setObsDatetime(obs1.getObsDatetime());
+										conceptList.add(obs0.getValueCoded());
+										encounterList.add(obs0.getEncounter());
+										// j'ajoute la date de dispensation
+										secondObs=obs1;
+										drugsHistory.add(obs);
+						 		}
+						 		
 						}
+						
+					}
+					
+				}
+				if(secondObs==null)
+				{
+					if (!conceptList.contains(obs0.getValueCoded())
+							|| !encounterList.contains(obs0.getEncounter()))
+					{
+						conceptList.add(obs0.getValueCoded());
+						encounterList.add(obs0.getEncounter());
+						drugsHistory.add(obs0);
 					}
 				}
+				  
+			}
+			
 			}
 
-		}
 		return drugsHistory;
 	}
 

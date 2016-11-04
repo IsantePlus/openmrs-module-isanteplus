@@ -53,7 +53,7 @@
         <script type="text/javascript">
         //validation des donnees
         beforeSubmit.push(function() {
-          if((getValue('presentation.value') == '138405') || (getValue('presentation.value') == '163768')) { alert('Salut'); setValue('abacavir.value',70056);setValue('abacavir1.value',70056); }
+          if((getValue('presentation.value') == '138405') || (getValue('presentation.value') == '163768')) { setValue('abacavir.value',70056);setValue('abacavir1.value',70056);}
             
 		   
           if((getValue('presentation1.value') == '138405') || (getValue('presentation1.value') == '163768')) { setValue('combivir.value',630);setValue('combivir1.value',630);}
@@ -192,10 +192,6 @@
 				<td><encounterDate default="today"/><br/>
 				<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
 				</td>
-			</tr>
-			<tr>
-				<td>Provider:</td>
-				<td><encounterProvider/></td>
 			</tr>
 		</table>
 	</section>
@@ -1697,9 +1693,24 @@
 			</tr>                                                     
               </table>
       </section>
+	 <section headerLabel="COLLECTE DES MEDICAMENTS/PROCHAINE VISITE">
+       Informations sur la personne prenant les médicaments.<br/>
+  <td>Nom : <obs conceptId="CIEL:163258"/><tr></tr><tr></tr><tr></tr>
+                Relation avec le patient : <obs conceptId="CIEL:160540"/></td><br/><br/>
+  Date de prochaine dispensation de médicament &#32;&#32;&#32;&#32;&#32; <obs conceptId="CIEL:162549" allowFutureDates="true"/><br/>
 
+                SIGNATURE DU PRESTATAIRE:<encounterProviderAndRole encounterRole="3" providerRoles="3" id="prestataire" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
+ SIGNATURE DU PHARMACIEN/DISPENSATEUR:<encounterProviderAndRole encounterRole="4" providerRoles="1" id="pharmacien" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
+ 
+ <br/><br/>
+ Statut de la fiche<br/>
+ &#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
+ <br/>
+ &#160;<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065" answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données."/> <br/><br/>
+      </section>
 
-	<submit/>
+ <br/>
+ <submit submitClass="confirm right" submitCode="general.save"/>
 
 <!-- END OF FORM
 

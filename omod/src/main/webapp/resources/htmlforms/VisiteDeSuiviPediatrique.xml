@@ -549,102 +549,102 @@
 }
 //Valition des donnees
 
-   beforeSubmit.push(function() {
+ beforeSubmit.push(function() {
   // DEBUT ARV : TRAITEMENTS PRÉCÉDENTS
   
   // =============================
-	if ((getValue('abacavir_start.value') == '') &amp;&amp; (getValue('abacavir_end.value') == '') &amp;&amp; (getValue('abacavir_current.value') != '1065')) {
+	if ((getValue('abacavir_end.value') == '') &amp;&amp; (getValue('abacavir_current.value') != '1065')) {
        setValue('abacavir.value', '');
 	   setValue('abacavir_hiv.value', '');
     } else {
 	    setValue('abacavir.value', '70056');
 		setValue('abacavir_hiv.value', '138405');
     }
-	if ((getValue('combivir_start.value') == '') &amp;&amp; (getValue('combivir_end.value') == '') &amp;&amp; (getValue('combivir_current.value') != '1065')) {
+	if ((getValue('combivir_end.value') == '') &amp;&amp; (getValue('combivir_current.value') != '1065')) {
 	   setValue('combivir.value', '');
 	   setValue('combivir_hiv.value', '');
     } else {
 	    setValue('combivir.value', '630');
 		setValue('combivir_hiv.value', '138405');
     }
-	if ((getValue('didanosine_start.value') == '') &amp;&amp; (getValue('didanosine_end.value') == '') &amp;&amp; (getValue('didanosine_current.value') != '1065')) {
+	if ((getValue('didanosine_end.value') == '') &amp;&amp; (getValue('didanosine_current.value') != '1065')) {
         setValue('didanosine.value', '');
 		setValue('didanosine_hiv.value', '');
     } else {
       setValue('didanosine.value', '74807'); 
 	  setValue('didanosine_hiv.value', '138405');
     }
-	if ((getValue('emtricitabine_start.value') == '') &amp;&amp; (getValue('emtricitabine_end.value') == '') &amp;&amp; (getValue('emtricitabine_current.value') != '1065')){
+	if ((getValue('emtricitabine_end.value') == '') &amp;&amp; (getValue('emtricitabine_current.value') != '1065')){
       setValue('emtricitabine.value', ''); 
 	  setValue('emtricitabine_hiv.value', '');
     } else {
       setValue('emtricitabine.value', '75628');
 	  setValue('emtricitabine_hiv.value', '138405');
     }
-	if ((getValue('lamivudine_start.value') == '') &amp;&amp; (getValue('lamivudine_end.value') == '') &amp;&amp; (getValue('lamivudine_current.value') != '1065')) {
+	if ((getValue('lamivudine_end.value') == '') &amp;&amp; (getValue('lamivudine_current.value') != '1065')) {
        setValue('lamivudine.value', ''); 
 	   setValue('lamivudine_hiv.value', '');
     } else {
        setValue('lamivudine.value', '78643');
 	   setValue('lamivudine_hiv.value', '138405');
     }
-	if ((getValue('stavudine_start.value') == '') &amp;&amp; (getValue('stavudine_end.value') == '') &amp;&amp; (getValue('stavudine_current.value') != '1065')) {
+	if ((getValue('stavudine_end.value') == '') &amp;&amp; (getValue('stavudine_current.value') != '1065')) {
        setValue('stavudine.value', '');
 	   setValue('stavudine_hiv.value', '');
     } else {
         setValue('stavudine.value', '84309');
 		setValue('stavudine_hiv.value', '138405');
     }
-	if ((getValue('tenofovir_start.value') == '') &amp;&amp; (getValue('tenofovir_end.value') == '') &amp;&amp; (getValue('tenofovir_current.value') != '1065')) {
+	if ((getValue('tenofovir_end.value') == '') &amp;&amp; (getValue('tenofovir_current.value') != '1065')) {
         setValue('tenofovir.value', ''); 
 		setValue('tenofovir_hiv.value', '');
     } else {
       setValue('tenofovir.value', '84795');
 	   setValue('tenofovir_hiv.value', '138405');
     }
-	if ((getValue('trizivir_start.value') == '') &amp;&amp; (getValue('trizivir_end.value') == '') &amp;&amp; (getValue('trizivir_current.value') != '1065')) {
+	if ((getValue('trizivir_end.value') == '') &amp;&amp; (getValue('trizivir_current.value') != '1065')) {
        setValue('trizivir.value', ''); 
 	   setValue('trizivir_hiv.value', '');
     } else {
        setValue('trizivir.value', '817');
 	   setValue('trizivir_hiv.value', '138405');
     }
-	if ((getValue('zidovudine_start.value') == '') &amp;&amp; (getValue('zidovudine_end.value') == '') &amp;&amp; (getValue('zidovudine_current.value') != '1065')) {
+	if ((getValue('zidovudine_end.value') == '') &amp;&amp; (getValue('zidovudine_current.value') != '1065')) {
        setValue('zidovudine.value', ''); 
 	   setValue('zidovudine_hiv.value', '');
     } else {
        setValue('zidovudine.value', '86663');
 	   setValue('zidovudine_hiv.value', '138405');
     }
-  if ((getValue('efavirenz_start.value') == '') &amp;&amp; (getValue('efavirenz_end.value') == '') &amp;&amp; (getValue('efavirenz_current.value') != '1065')) {
+  if ((getValue('efavirenz_end.value') == '') &amp;&amp; (getValue('efavirenz_current.value') != '1065')) {
       setValue('efavirenz.value', ''); 
 	  setValue('efavirenz_hiv.value', '');
     } else {
        setValue('efavirenz.value', '75523');
 	   setValue('efavirenz_hiv.value', '138405');
     }
-	if ((getValue('nevirapine_start.value') == '') &amp;&amp; (getValue('nevirapine_end.value') == '') &amp;&amp; (getValue('nevirapine_current.value') != '1065')) {
+	if ((getValue('nevirapine_end.value') == '') &amp;&amp; (getValue('nevirapine_current.value') != '1065')) {
         setValue('nevirapine.value', ''); 
 		 setValue('nevirapine_hiv.value', '');
     } else {
       setValue('nevirapine.value', '80586');
 	  setValue('nevirapine_hiv.value', '138405');
     }
-	if ((getValue('atazanavir_start.value') == '') &amp;&amp; (getValue('atazanavir_end.value') == '') &amp;&amp; (getValue('atazanavir_current.value') != '1065')) {
+	if ((getValue('atazanavir_end.value') == '') &amp;&amp; (getValue('atazanavir_current.value') != '1065')) {
      setValue('atazanavir.value', ''); 
 	 setValue('atazanavir_hiv.value', '');
     } else {
        setValue('atazanavir.value', '71647');
 	   setValue('atazanavir_hiv.value', '138405');
     }
-	if ((getValue('atazanavir_bost_start.value') == '') &amp;&amp; (getValue('atazanavir_bost_end.value') == '') &amp;&amp; (getValue('atazanavir_bost_current.value') != '1065')) {
+	if ((getValue('atazanavir_bost_end.value') == '') &amp;&amp; (getValue('atazanavir_bost_current.value') != '1065')) {
         setValue('atazanavir_bost.value', '');
 		setValue('atazanavir_bost_hiv.value', '');		
     } else {
       setValue('atazanavir_bost.value', '159809');
 	  setValue('atazanavir_bost_hiv.value', '138405');
     }
-    if ((getValue('indinavir_start.value') == '') &amp;&amp; (getValue('indinavir_end.value') == '') &amp;&amp; (getValue('indinavir_current.value') != '1065')) {
+    if ((getValue('indinavir_end.value') == '') &amp;&amp; (getValue('indinavir_current.value') != '1065')) {
        setValue('indinavir.value', ''); 
 	   setValue('indinavir_hiv.value', '');	
     } else {
@@ -652,25 +652,23 @@
 	   setValue('indinavir_hiv.value', '138405');	
     }
 
-	if ((getValue('lopinavir_bost_start.value') == '') &amp;&amp; (getValue('lopinavir_bost_end.value') == '') &amp;&amp; (getValue('lopinavir_bost_current.value') != '1065')) {
+	if ((getValue('lopinavir_bost_end.value') == '') &amp;&amp; (getValue('lopinavir_bost_current.value') != '1065')) {
        setValue('lopinavir_bost.value', ''); 
 	   setValue('lopinavir_bost_hiv.value', '');	
     } else {
        setValue('lopinavir_bost.value', '794');
 	   setValue('lopinavir_bost_hiv.value', '138405');
     }
-	if ((getValue('autre_arv_a_start.value') == '') &amp;&amp; (getValue('autre_arv_a_end.value') == '') &amp;&amp; (getValue('autre_arv_a_current.value') != '1065')) {
+	if ((getValue('autre_arv_a_end.value') == '') &amp;&amp; (getValue('autre_arv_a_current.value') != '1065')) {
        setValue('autre_arv_a.value', ''); 
 	   setValue('autre_arv_a_hiv.value', '');	
     } else {
-       setValue('autre_arv_a.value', '5424');
 	   setValue('autre_arv_a_hiv.value', '138405');
     }
-	 if ((getValue('autre_arv_b_start.value') == '') &amp;&amp; (getValue('autre_arv_b_end.value') == '') &amp;&amp; (getValue('autre_arv_b_current.value') != '1065')) {
+	 if ((getValue('autre_arv_b_end.value') == '') &amp;&amp; (getValue('autre_arv_b_current.value') != '1065')) {
        setValue('autre_arv_b.value', ''); 
 	   setValue('autre_arv_b_hiv.value', '');	
     } else {
-       setValue('autre_arv_b.value', '5424');
 	   setValue('autre_arv_b_hiv.value', '138405');
     }
 	
@@ -678,92 +676,64 @@
  // FIN ARV : TRAITEMENTS PRÉCÉDENT
  
 //AUTRES TRAITEMENTS PRÉCÉDENTS
-	if ((getValue('ethambutol_start.value') == '') &amp;&amp; (getValue('ethambutol_end.value') == '') &amp;&amp; (getValue('ethambutol_current.value') != '159367')){
+	if ((getValue('ethambutol_end.value') == '') &amp;&amp; (getValue('ethambutol_current.value') != '159367')){
        setValue('ethambutol.value', '');
     } else {
       setValue('ethambutol.value', '75948');
     }
 
-	if ((getValue('isoniazide_start.value') == '') &amp;&amp; (getValue('isoniazide_end.value') == '') &amp;&amp; (getValue('isoniazide_current.value') != '159367')) {
+	if ((getValue('isoniazide_end.value') == '') &amp;&amp; (getValue('isoniazide_current.value') != '159367')) {
         setValue('isoniazide.value', '');
     } else {
 		setValue('isoniazide.value', '78280');
     }
-	if ((getValue('pyrazinamide_start.value') == '') &amp;&amp; (getValue('pyrazinamide_end.value') == '') &amp;&amp; (getValue('pyrazinamide_current.value') != '159367')) {
+	if ((getValue('pyrazinamide_end.value') == '') &amp;&amp; (getValue('pyrazinamide_current.value') != '159367')) {
        setValue('pyrazinamide.value', '');
     } else {
         setValue('pyrazinamide.value', '82900');
     }
-	if ((getValue('rifampicine_start.value') == '') &amp;&amp; (getValue('rifampicine_end.value') == '') &amp;&amp; (getValue('rifampicine.value') != '159367')) {
+	if ((getValue('rifampicine_end.value') == '') &amp;&amp; (getValue('rifampicine.value') != '159367')) {
        setValue('rifampicine.value', '');
     } else {
         setValue('rifampicine.value', '767');
     }
-	if ((getValue('streptomycine_start.value') == '') &amp;&amp; (getValue('streptomycine_end.value') == '') &amp;&amp; (getValue('streptomycine_current.value') != '159367')) {
+	if ((getValue('streptomycine_end.value') == '') &amp;&amp; (getValue('streptomycine_current.value') != '159367')) {
        setValue('streptomycine.value', '');
     } else {
         setValue('streptomycine.value', '84360');
     }
 	/* Autres traitements */
-	if ((getValue('acyclovir_start.value') == '') &amp;&amp; (getValue('acyclovir_end.value') == '') &amp;&amp; (getValue('acyclovir_current.value') != '159367')) {
+	if ((getValue('acyclovir_end.value') == '') &amp;&amp; (getValue('acyclovir_current.value') != '159367')) {
        setValue('acyclovir.value', ''); 
     } else {
        setValue('acyclovir.value', '70245');
     }
-    
-    if ((getValue('azythromycin_start.value') == '') &amp;&amp; (getValue('azythromycin_end.value') == '') &amp;&amp; (getValue('azythromycin_current.value') != '159367')) {
-       setValue('azythromycin.value', ''); 
-    } else {
-       setValue('azythromycin.value', '71780');
-    }
-	if ((getValue('clarythromycin_start.value') == '') &amp;&amp; (getValue('clarythromycin_end.value') == '') &amp;&amp; (getValue('clarythromycin_current.value') != '159367')) {
-       setValue('clarythromycin.value', ''); 
-    } else {
-       setValue('clarythromycin.value', '73498');
-    }
-	if ((getValue('cotrimoxazole_ind_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_ind_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_ind_current.value') != '159367')) {
-       setValue('cotrimoxazole_ind.value', ''); 
-    } else {
-       setValue('cotrimoxazole_ind.value', '882');
-    }
-	if ((getValue('cotrimoxazole_autre_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_autre_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_autre_current.value') != '159367')) {
-       setValue('cotrimoxazole_autre.value', ''); 
-    } else {
-       setValue('cotrimoxazole_autre.value', '5622');
-    }
-    
-	if ((getValue('cotrimoxazole_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_current.value') != '159367')) {
+	if ((getValue('cotrimoxazole_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_current.value') != '159367')) {
        setValue('cotrimoxazole.value', ''); 
     } else {
        setValue('cotrimoxazole.value', '105281');
     }
-	if ((getValue('fluconazole_start.value') == '') &amp;&amp; (getValue('fluconazole_end.value') == '') &amp;&amp; (getValue('fluconazole_current.value') != '159367')) {
+	if ((getValue('fluconazole_end.value') == '') &amp;&amp; (getValue('fluconazole_current.value') != '159367')) {
        setValue('fluconazole.value', ''); 
     } else {
       setValue('fluconazole.value', '76488');  
     }
-	if ((getValue('ketaconazole_start.value') == '') &amp;&amp; (getValue('ketaconazole_end.value') == '') &amp;&amp; (getValue('ketaconazole_current.value') != '159367')) {
+	if ((getValue('ketaconazole_end.value') == '') &amp;&amp; (getValue('ketaconazole_current.value') != '159367')) {
         setValue('ketaconazole.value', ''); 
     } else {
       setValue('ketaconazole.value', '78476');
     }
-	if ((getValue('traitement_trad_start.value') == '') &amp;&amp; (getValue('traitement_trad_end.value') == '') &amp;&amp; (getValue('traitement_trad_current.value') != '159367')) {
+	if ((getValue('traitement_trad_end.value') == '') &amp;&amp; (getValue('traitement_trad_current.value') != '159367')) {
         setValue('traitement_trad.value', ''); 
     } else {
       setValue('traitement_trad.value', '5841');
     }
-	if ((getValue('traitement_trad_start.value') == '') &amp;&amp; (getValue('traitement_trad_end.value') == '') &amp;&amp; (getValue('autres_traitement_arv_current.value') != '159367')) {
+	if ((getValue('traitement_trad_end.value') == '') &amp;&amp; (getValue('autres_traitement_arv_current.value') != '159367')) {
         setValue('autres_traitement_arv.value', '');	   
     } else {
        setValue('autres_traitement_arv.value', '5622');
     }
-  /*	if ((getValue('acyclovir.value') == '') &#38;&#38; (getValue('cotrimoxazole.value') == '') &#38;&#38; (getValue('fluconazole.value') == '') &#38;&#38; (getValue('ketaconazole.value') == '') &#38;&#38; (getValue('traitement_trad.value') == '')) {
-   
-		setValue('autreTraitement.value', '');
-	}
-	else{
-		setValue('autreTraitement.value', '5622');
-	}*/
+  
 	/*Fin autres traitements*/
   return true;
  });
@@ -1551,7 +1521,7 @@
 				</repeat>
 				<tr>
 					<td colspan="3"><b>Autres traitements</b>
-					<span class="arv1_div" style="display: none"><obs conceptId="CIEL:160742" id="autre_traitement" answerConceptId="CIEL:5622" defaultValue="5622" answerLabel=""/></span></td>
+					</td>
 				</tr>
 	
 				<repeat>

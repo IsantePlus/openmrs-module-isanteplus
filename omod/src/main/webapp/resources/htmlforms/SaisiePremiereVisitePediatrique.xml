@@ -838,6 +838,28 @@
   return true;
  });
 </script>
+<ifMode mode="ENTER">
+<lookup complexExpression="#foreach($encounter in $fn.allEncounters(null))
+	#if($form == $encounter.form.formId)
+	 &lt;script type=&quot;text/javascript&quot;>
+		jQuery(function() {
+			var url = window.location.search;
+			var idurl=url.substring(url.lastIndexOf(&quot;=&quot;)+1);
+			var res='/module/htmlformentry/htmlForm.form?id='+idurl;
+			if (window.location.href.indexOf(res) == -1)
+			{
+				var cheminComplet = document.location.href;
+				var longueur = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;;
+				var souschaine=cheminComplet.substring(longueur.length,cheminComplet.indexOf(&quot;/&quot;,longueur.length));
+				window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ souschaine +&quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.uuid&quot;;
+				
+			}
+			});
+	   &lt;/script> 
+	#end
+#end "/>
+</ifMode>
+
 	<div id="dateVisite">
 			<b>FICHE DE SAISIE POUR LA PREMIÈRE VISITE : PÉDIATRIQUE; ENFANTS EXPOSÉS AU VIH OU INFECTÉS AU VIH</b><br/><br/>
 			<table>

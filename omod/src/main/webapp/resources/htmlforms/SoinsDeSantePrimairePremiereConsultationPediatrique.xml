@@ -324,6 +324,34 @@
 	    setValue('bacimois5.value', 'Fin de rx');
     }
 	//Fin bacilloscopie
+	//Debut supplementation en vitamine A
+	if ((getValue('vitaminea_1.value') == '') &amp;&amp; (getValue('vitaminea_2.value') == '') &amp;&amp; (getValue('vitaminea_3.value') == '') &amp;&amp; (getValue('vitaminea_4.value') == '') &amp;&amp; (getValue('vitaminea_5.value') == '') &amp;&amp; (getValue('vitaminea_6.value') == '') &amp;&amp; (getValue('vitaminea_7.value') == '')) {
+       setValue('vitaminea.value', '');
+    } else {
+	    setValue('vitaminea.value', '86339');
+    }
+	if ((getValue('fer_1.value') == '') &amp;&amp; (getValue('fer_2.value') == '') &amp;&amp; (getValue('fer_3.value') == '') &amp;&amp; (getValue('fer_4.value') == '') &amp;&amp; (getValue('fer_5.value') == '') &amp;&amp; (getValue('fer_6.value') == '') &amp;&amp; (getValue('fer_7.value') == '')) {
+       setValue('fer.value', '');
+    } else {
+	    setValue('fer.value', '5843');
+    }
+	if ((getValue('iode_1.value') == '') &amp;&amp; (getValue('iode_2.value') == '') &amp;&amp; (getValue('iode_3.value') == '') &amp;&amp; (getValue('iode_4.value') == '') &amp;&amp; (getValue('iode_5.value') == '') &amp;&amp; (getValue('iode_6.value') == '') &amp;&amp; (getValue('iode_7.value') == '')) {
+       setValue('iode.value', '');
+    } else {
+	    setValue('iode.value', '78130');
+    }
+	if ((getValue('deparasitage_1.value') == '') &amp;&amp; (getValue('deparasitage_2.value') == '') &amp;&amp; (getValue('deparasitage_3.value') == '') &amp;&amp; (getValue('deparasitage_4.value') == '') &amp;&amp; (getValue('deparasitage_5.value') == '') &amp;&amp; (getValue('deparasitage_6.value') == '') &amp;&amp; (getValue('deparasitage_7.value') == '')) {
+       setValue('deparasitage.value', '');
+    } else {
+	    setValue('deparasitage.value', '163395');
+    }
+	if ((getValue('zinc_1.value') == '') &amp;&amp; (getValue('zinc_2.value') == '') &amp;&amp; (getValue('zinc_3.value') == '') &amp;&amp; (getValue('zinc_4.value') == '') &amp;&amp; (getValue('zinc_5.value') == '') &amp;&amp; (getValue('zinc_6.value') == '') &amp;&amp; (getValue('zinc_7.value') == '')) {
+       setValue('zinc.value', '');
+    } else {
+	    setValue('zinc.value', '86672');
+    }
+	
+	// Fin supplementation en vitamine A
 	 return true;
 	});
 		
@@ -404,7 +432,44 @@
 		
 		
 </script>
-	
+
+ <script type="text/javascript">
+	   jQuery(function() {
+				jQuery('.titre').each(function() {
+					var m =jQuery(this).find(".master").attr("id");
+				if(getValue(''+m+'.value')&gt;0)
+				{
+					jQuery( this.getAttribute( 'ch-target' ) ).show();
+				}
+				else{
+					jQuery( this.getAttribute( 'ch-target' ) ).hide();
+				}
+			});
+			
+		});
+		
+ </script>
+	<ifMode mode="ENTER">
+	<lookup complexExpression="#foreach($encounter in $fn.allEncounters(null))
+		#if($form == $encounter.form.formId)
+		 &lt;script type=&quot;text/javascript&quot;>
+			jQuery(function() {
+				var url = window.location.search;
+				var idurl=url.substring(url.lastIndexOf(&quot;=&quot;)+1);
+				var res='/module/htmlformentry/htmlForm.form?id='+idurl;
+				if (window.location.href.indexOf(res) == -1)
+				{
+					var cheminComplet = document.location.href;
+					var longueur = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;;
+					var souschaine=cheminComplet.substring(longueur.length,cheminComplet.indexOf(&quot;/&quot;,longueur.length));
+					window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ souschaine +&quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.uuid&quot;;
+					
+				}
+				});
+		   &lt;/script> 
+		#end
+	#end "/>
+	</ifMode>
 	
 	
 	
@@ -619,14 +684,14 @@
 								<template>
 									<obsgroup groupingConceptId="160741">
 										<tr bgcolor="{color}">
-											<td>{drugname}<span class="arv1_div" style="display: none"><obs conceptId="CIEL:1282" answerConceptId="{concept}" answerLabel="{drugname}" defaultValue="{concept}"/></span></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
-											<td><obs conceptId="CIEL:1190"/></td>
+											<td>{drugname}<span class="arv1_div" style="display: none"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" answerLabel="{drugname}" defaultValue="{concept}"/></span></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_1"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_2"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_3"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_4"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_5"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_6"/></td>
+											<td><obs conceptId="CIEL:1190" id="{id}_7"/></td>
 										</tr>
 									</obsgroup>
 								</template>
@@ -991,7 +1056,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span id="id1" class="titre" ch-target="#cacher1"><obs conceptId="CIEL:1284" answerConceptId="CIEL:1226" answerLabel="Anémie Carentielle [281.0]"/></span><br/>
+									<span id="id1" class="titre" ch-target="#cacher1"><obs conceptId="CIEL:1284" class="master" id="id1" answerConceptId="CIEL:1226" answerLabel="Anémie Carentielle [281.0]"/></span><br/>
 									<span id="cacher1" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1001,7 +1066,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span id="id2" class="titre" ch-target="#cacher2"><obs conceptId="CIEL:1284" answerConceptId="CIEL:117703" answerLabel="Anémie Falciforme [282.6]"/></span><br/>
+									<span id="id2" class="titre" ch-target="#cacher2"><obs conceptId="CIEL:1284" class="master" id="id2" answerConceptId="CIEL:117703" answerLabel="Anémie Falciforme [282.6]"/></span><br/>
 									<span id="cacher2" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1011,7 +1076,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span id="id3" class="titre" ch-target="#cacher3"><obs conceptId="CIEL:1284" answerConceptId="CIEL:121375" answerLabel="Asthme [J45]"/></span><br/>
+									<span id="id3" class="titre" ch-target="#cacher3"><obs conceptId="CIEL:1284" class="master" id="id3" answerConceptId="CIEL:121375" answerLabel="Asthme [J45]"/></span><br/>
 									<span id="cacher3" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1021,7 +1086,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher4"><obs conceptId="CIEL:1284" answerConceptId="CIEL:47" answerLabel="Bronchite [490]"/></span><br/>
+									<span class="titre" ch-target="#cacher4"><obs conceptId="CIEL:1284" class="master" id="id3" answerConceptId="CIEL:47" answerLabel="Bronchite [490]"/></span><br/>
 									<span id="cacher4" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1031,7 +1096,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher5"><obs conceptId="CIEL:1284" answerConceptId="CIEL:119270" answerLabel="Cardiopathie [I51.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher5"><obs conceptId="CIEL:1284" class="master" id="id4" answerConceptId="CIEL:119270" answerLabel="Cardiopathie [I51.9]"/></span><br/>
 									<span id="cacher5" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1041,7 +1106,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher6"><obs conceptId="CIEL:1284" answerConceptId="CIEL:140485" answerLabel="Crises convulsives fébriles [780.31]"/></span><br/>
+									<span class="titre" ch-target="#cacher6"><obs conceptId="CIEL:1284" class="master" id="id5" answerConceptId="CIEL:140485" answerLabel="Crises convulsives fébriles [780.31]"/></span><br/>
 									<span id="cacher6" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1051,7 +1116,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher7"><obs conceptId="CIEL:1284" answerConceptId="CIEL:134723" answerLabel="Malnutrition aigue légère [263.1]"/></span><br/>
+									<span class="titre" ch-target="#cacher7"><obs conceptId="CIEL:1284" class="master" id="id6" answerConceptId="CIEL:134723" answerLabel="Malnutrition aigue légère [263.1]"/></span><br/>
 									<span id="cacher7" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1061,7 +1126,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher8"> <obs conceptId="CIEL:1284" answerConceptId="CIEL:134722" answerLabel="Malnutrition aigue modérée [263]"/></span><br/>
+									<span class="titre" ch-target="#cacher8"> <obs conceptId="CIEL:1284" class="master" id="id7" answerConceptId="CIEL:134722" answerLabel="Malnutrition aigue modérée [263]"/></span><br/>
 									<span id="cacher8" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1071,7 +1136,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher9"><obs conceptId="CIEL:1284" answerConceptId="CIEL:126598" answerLabel="Malnutrition aigue sévère [261] (compl.)"/></span><br/>
+									<span class="titre" ch-target="#cacher9"><obs conceptId="CIEL:1284" class="master" id="id8" answerConceptId="CIEL:126598" answerLabel="Malnutrition aigue sévère [261] (compl.)"/></span><br/>
 									<span id="cacher9" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1081,7 +1146,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher10"><obs conceptId="CIEL:1284" answerConceptId="CIEL:121348" answerLabel="Dermatite atopique [691]"/></span><br/>
+									<span class="titre" ch-target="#cacher10"><obs conceptId="CIEL:1284" class="master" id="id9" answerConceptId="CIEL:121348" answerLabel="Dermatite atopique [691]"/></span><br/>
 									<span id="cacher10" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1091,7 +1156,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher11"><obs conceptId="CIEL:1284" answerConceptId="CIEL:142474" answerLabel="Diabète Type 1 [E10.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher11"><obs conceptId="CIEL:1284" class="master" id="id10" answerConceptId="CIEL:142474" answerLabel="Diabète Type 1 [E10.9]"/></span><br/>
 									<span id="cacher11" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1101,7 +1166,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher12"><obs conceptId="CIEL:1284" answerConceptId="CIEL:161887" answerLabel="Diarrhée aigue aqueuse [R19.7]*"/></span><br/>
+									<span class="titre" ch-target="#cacher12"><obs conceptId="CIEL:1284" class="master" id="id11" answerConceptId="CIEL:161887" answerLabel="Diarrhée aigue aqueuse [R19.7]*"/></span><br/>
 									<span id="cacher12" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1111,7 +1176,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher13"><obs conceptId="CIEL:1284" answerConceptId="CIEL:138868" answerLabel="Diarrhée aigue sanguinolente [R19.7]*"/></span><br/>
+									<span class="titre" ch-target="#cacher13"><obs conceptId="CIEL:1284" class="master" id="id12" answerConceptId="CIEL:138868" answerLabel="Diarrhée aigue sanguinolente [R19.7]*"/></span><br/>
 									<span id="cacher13" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1121,7 +1186,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher14"><obs conceptId="CIEL:1284" answerConceptId="CIEL:145443" answerLabel="Diarrhée cause indéterminée [R19.7]"/></span><br/>
+									<span class="titre" ch-target="#cacher14"><obs conceptId="CIEL:1284" class="master" id="id13" answerConceptId="CIEL:145443" answerLabel="Diarrhée cause indéterminée [R19.7]"/></span><br/>
 									<span id="cacher14" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1131,7 +1196,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher15"><obs conceptId="CIEL:1284" answerConceptId="CIEL:126513" answerLabel="Drépanocytose : SS/SC [D57.1]"/></span><br/>
+									<span class="titre" ch-target="#cacher15"><obs conceptId="CIEL:1284" class="master" id="id14" answerConceptId="CIEL:126513" answerLabel="Drépanocytose : SS/SC [D57.1]"/></span><br/>
 									<span id="cacher15" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1141,7 +1206,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher16"><obs conceptId="CIEL:1284" answerConceptId="CIEL:155" answerLabel="Epilepsie [G40.901]"/></span><br/>
+									<span class="titre" ch-target="#cacher16"><obs conceptId="CIEL:1284" class="master" id="id15" answerConceptId="CIEL:155" answerLabel="Epilepsie [G40.901]"/></span><br/>
 									<span id="cacher16" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1151,7 +1216,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher17"><obs conceptId="CIEL:1284" answerConceptId="CIEL:127990" answerLabel="Fièvre, cause indéterminée [R50.9]*"/></span><br/>
+									<span class="titre" ch-target="#cacher17"><obs conceptId="CIEL:1284" class="master" id="id16" answerConceptId="CIEL:127990" answerLabel="Fièvre, cause indéterminée [R50.9]*"/></span><br/>
 									<span id="cacher17" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1161,7 +1226,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher18"><obs conceptId="CIEL:1284" answerConceptId="CIEL:117889" answerLabel="Gastro-entérite [558.9] avec:"/></span><br/>
+									<span class="titre" ch-target="#cacher18"><obs conceptId="CIEL:1284" class="master" id="id17" answerConceptId="CIEL:117889" answerLabel="Gastro-entérite [558.9] avec:"/></span><br/>
 									<span id="cacher18" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1171,7 +1236,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher19"><obs conceptId="CIEL:1284" answerConceptId="CIEL:154017" answerLabel="déshydratation légère"/></span><br/>
+									<span class="titre" ch-target="#cacher19"><obs conceptId="CIEL:1284" class="master" id="id18" answerConceptId="CIEL:154017" answerLabel="déshydratation légère"/></span><br/>
 									<span id="cacher19" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1181,7 +1246,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher20"><obs conceptId="CIEL:1284" answerConceptId="CIEL:154016" answerLabel="déshydratation modérée"/></span><br/>
+									<span class="titre" ch-target="#cacher20"><obs conceptId="CIEL:1284" class="master" id="id19" answerConceptId="CIEL:154016" answerLabel="déshydratation modérée"/></span><br/>
 									<span id="cacher20" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1191,7 +1256,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher21"><obs conceptId="CIEL:1284" answerConceptId="CIEL:154015" answerLabel="déshydratation sévère"/></span><br/>
+									<span class="titre" ch-target="#cacher21"><obs conceptId="CIEL:1284" class="master" id="id20" answerConceptId="CIEL:154015" answerLabel="déshydratation sévère"/></span><br/>
 									<span id="cacher21" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1201,7 +1266,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher22"><obs conceptId="CIEL:1284" answerConceptId="CIEL:1434" answerLabel="Grossesse [Z33.1]"/></span><br/>
+									<span class="titre" ch-target="#cacher22"><obs conceptId="CIEL:1284" class="master" id="id21" answerConceptId="CIEL:1434" answerLabel="Grossesse [Z33.1]"/></span><br/>
 									<span id="cacher22" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1211,7 +1276,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher23"><obs conceptId="CIEL:1284" answerConceptId="CIEL:115115" answerLabel="Obésité [278.00]"/></span><br/>
+									<span class="titre" ch-target="#cacher23"><obs conceptId="CIEL:1284" class="master" id="id22" answerConceptId="CIEL:115115" answerLabel="Obésité [278.00]"/></span><br/>
 									<span id="cacher23" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1221,7 +1286,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher24"><obs conceptId="CIEL:1284" answerConceptId="CIEL:127447" answerLabel="Rhumatisme articulaire aigu [714.30]"/></span><br/>
+									<span class="titre" ch-target="#cacher24"><obs conceptId="CIEL:1284" class="master" id="id23" answerConceptId="CIEL:127447" answerLabel="Rhumatisme articulaire aigu [714.30]"/></span><br/>
 									<span id="cacher24" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1231,7 +1296,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher25"> <obs conceptId="CIEL:1284" answerConceptId="CIEL:113119" answerLabel="Rhinite allergique [477]"/></span><br/>
+									<span class="titre" ch-target="#cacher25"> <obs conceptId="CIEL:1284" class="master" id="id23" answerConceptId="CIEL:113119" answerLabel="Rhinite allergique [477]"/></span><br/>
 									<span id="cacher25" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1241,7 +1306,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher26"><obs conceptId="CIEL:1284" answerConceptId="CIEL:1293" answerLabel="Reflux gastro-œsophagien [530.81]"/></span><br/>
+									<span class="titre" ch-target="#cacher26"><obs conceptId="CIEL:1284" class="master" id="id24" answerConceptId="CIEL:1293" answerLabel="Reflux gastro-œsophagien [530.81]"/></span><br/>
 									<span id="cacher26" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1251,7 +1316,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher27"><obs conceptId="CIEL:1284" answerConceptId="CIEL:115303" answerLabel="Syndrome néphrotique [581]"/></span><br/>
+									<span class="titre" ch-target="#cacher27"><obs conceptId="CIEL:1284" class="master" id="id25" answerConceptId="CIEL:115303" answerLabel="Syndrome néphrotique [581]"/></span><br/>
 									<span id="cacher27" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1261,7 +1326,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher28"><obs conceptId="CIEL:1284" answerConceptId="CIEL:159619" answerLabel="Urgence Chirurgicale, précisez:&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher28"><obs conceptId="CIEL:1284" class="master" id="id26" answerConceptId="CIEL:159619" answerLabel="Urgence Chirurgicale, précisez:&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher28" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1271,7 +1336,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher29"><obs conceptId="CIEL:1284" answerConceptId="CIEL:1855" answerLabel="Bonne Sante Apparente [Z00.129]"/></span><br/>
+									<span class="titre" ch-target="#cacher29"><obs conceptId="CIEL:1284" class="master" id="id27" answerConceptId="CIEL:1855" answerLabel="Bonne Sante Apparente [Z00.129]"/></span><br/>
 									<span id="cacher29" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1286,7 +1351,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher30"><obs conceptId="CIEL:1284" answerConceptId="CIEL:111145" answerLabel="Abcès [682.9], précisez:&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher30"><obs conceptId="CIEL:1284" class="master" id="id28" answerConceptId="CIEL:111145" answerLabel="Abcès [682.9], précisez:&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher30" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1296,7 +1361,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher31"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112" answerLabel="Amygdalite [J03.90]"/></span><br/>
+									<span class="titre" ch-target="#cacher31"><obs conceptId="CIEL:1284" class="master" id="id29" answerConceptId="CIEL:112" answerLabel="Amygdalite [J03.90]"/></span><br/>
 									<span id="cacher31" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1306,7 +1371,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher32"><obs conceptId="CIEL:1284" answerConceptId="CIEL:121555" answerLabel="Charbon [A22.9]*, précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher32"><obs conceptId="CIEL:1284" class="master" id="id30" answerConceptId="CIEL:121555" answerLabel="Charbon [A22.9]*, précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher32" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1316,7 +1381,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher33"><obs conceptId="CIEL:1284" answerConceptId="CIEL:122604" answerLabel="Choléra [A00.9]*"/></span><br/>
+									<span class="titre" ch-target="#cacher33"><obs conceptId="CIEL:1284" class="master" id="id31" answerConceptId="CIEL:122604" answerLabel="Choléra [A00.9]*"/></span><br/>
 									<span id="cacher33" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1326,7 +1391,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher34"><obs conceptId="CIEL:1284" answerConceptId="CIEL:122604" answerLabel="Conjonctivite [H10.9], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher34"><obs conceptId="CIEL:1284" class="master" id="id32" answerConceptId="CIEL:122604" answerLabel="Conjonctivite [H10.9], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher34" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1336,7 +1401,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher35"><obs conceptId="CIEL:1284" answerConceptId="CIEL:114190" answerLabel="Coqueluche [A37.90]*"/></span><br/>
+									<span class="titre" ch-target="#cacher35"><obs conceptId="CIEL:1284" class="master" id="id33" answerConceptId="CIEL:114190" answerLabel="Coqueluche [A37.90]*"/></span><br/>
 									<span id="cacher35" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1346,7 +1411,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher36"><obs conceptId="CIEL:1284" answerConceptId="CIEL:142592" answerLabel="Dengue [A90]*, précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher36"><obs conceptId="CIEL:1284" class="master" id="id34" answerConceptId="CIEL:142592" answerLabel="Dengue [A90]*, précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher36" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1356,7 +1421,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher37"><obs conceptId="CIEL:1284" answerConceptId="CIEL:119399" answerLabel="Diphtérie [A36]*"/></span><br/>
+									<span class="titre" ch-target="#cacher37"><obs conceptId="CIEL:1284" class="master" id="id35" answerConceptId="CIEL:119399" answerLabel="Diphtérie [A36]*"/></span><br/>
 									<span id="cacher37" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1366,7 +1431,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher38"><obs conceptId="CIEL:1284" answerConceptId="CIEL:163392" answerLabel="Fièvre hémorragique aiguë [N/A]"/></span><br/>
+									<span class="titre" ch-target="#cacher38"><obs conceptId="CIEL:1284" class="master" id="id36" answerConceptId="CIEL:163392" answerLabel="Fièvre hémorragique aiguë [N/A]"/></span><br/>
 									<span id="cacher38" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1376,7 +1441,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher39"><obs conceptId="CIEL:1284" answerConceptId="CIEL:141" answerLabel="Fièvre Typhoïde * confirmé [Z22.0]*"/></span><br/>
+									<span class="titre" ch-target="#cacher39"><obs conceptId="CIEL:1284" class="master" id="id37" answerConceptId="CIEL:141" answerLabel="Fièvre Typhoïde * confirmé [Z22.0]*"/></span><br/>
 									<span id="cacher39" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1386,7 +1451,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher40"><obs conceptId="CIEL:1284" answerConceptId="CIEL:119354" answerLabel="Filariose lymphatique [B74.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher40"><obs conceptId="CIEL:1284" class="master" id="id38" answerConceptId="CIEL:119354" answerLabel="Filariose lymphatique [B74.9]"/></span><br/>
 									<span id="cacher40" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1396,7 +1461,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher41"><obs conceptId="CIEL:1284" answerConceptId="CIEL:140" answerLabel="Gale [B86]"/></span><br/>
+									<span class="titre" ch-target="#cacher41"><obs conceptId="CIEL:1284" class="master" id="id39" answerConceptId="CIEL:140" answerLabel="Gale [B86]"/></span><br/>
 									<span id="cacher41" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1406,7 +1471,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher42"><obs conceptId="CIEL:1284" answerConceptId="CIEL:122041" answerLabel="Glomérulonéphrite aiguë [580.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher42"><obs conceptId="CIEL:1284" class="master" id="id40" answerConceptId="CIEL:122041" answerLabel="Glomérulonéphrite aiguë [580.9]"/></span><br/>
 									<span id="cacher42" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1416,7 +1481,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher43"><obs conceptId="CIEL:1284" answerConceptId="CIEL:137693" answerLabel="Impétigo [684]"/></span><br/>
+									<span class="titre" ch-target="#cacher43"><obs conceptId="CIEL:1284" class="master" id="id41" answerConceptId="CIEL:137693" answerLabel="Impétigo [684]"/></span><br/>
 									<span id="cacher43" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1426,7 +1491,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher44"><obs conceptId="CIEL:1284" answerConceptId="CIEL:111633" answerLabel="Infection génito-urinaire"/></span><br/>
+									<span class="titre" ch-target="#cacher44"><obs conceptId="CIEL:1284" class="master" id="id42" answerConceptId="CIEL:111633" answerLabel="Infection génito-urinaire"/></span><br/>
 									<span id="cacher44" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1436,7 +1501,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher45"> <obs conceptId="CIEL:1284" answerConceptId="CIEL:154983" answerLabel="Infection respiratoire aiguë [J06.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher45"> <obs conceptId="CIEL:1284" class="master" id="id43" answerConceptId="CIEL:154983" answerLabel="Infection respiratoire aiguë [J06.9]"/></span><br/>
 									<span id="cacher45" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1446,7 +1511,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher46"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112992" answerLabel="IST, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span class="titre" ch-target="#cacher46"><obs conceptId="CIEL:1284" class="master" id="id44" answerConceptId="CIEL:112992" answerLabel="IST, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
 									<span id="cacher46" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1456,7 +1521,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher47"><obs conceptId="CIEL:1284" answerConceptId="CIEL:116344" answerLabel="Lèpre [A30]"/></span><br/>
+									<span class="titre" ch-target="#cacher47"><obs conceptId="CIEL:1284" class="master" id="id45" answerConceptId="CIEL:116344" answerLabel="Lèpre [A30]"/></span><br/>
 									<span id="cacher47" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1466,7 +1531,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher48"><obs conceptId="CIEL:159394" answerConceptId="CIEL:116128" answerLabel="Malaria (paludisme) [B52.9]*"/></span><br/>
+									<span class="titre" ch-target="#cacher48"><obs conceptId="CIEL:1284" class="master" id="id46" answerConceptId="CIEL:116128" answerLabel="Malaria (paludisme) [B52.9]*"/></span><br/>
 									<span id="cacher48" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1477,7 +1542,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher50"> <obs conceptId="CIEL:1284" answerConceptId="CIEL:115835" answerLabel="Méningites [G03.9]*, précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher50"> <obs conceptId="CIEL:1284" class="master" id="id47" answerConceptId="CIEL:115835" answerLabel="Méningites [G03.9]*, précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									
 									<span id="cacher50" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1488,7 +1553,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher51"><obs conceptId="CIEL:1284" answerConceptId="CIEL:131115" answerLabel="Otite, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span class="titre" ch-target="#cacher51"><obs conceptId="CIEL:1284" class="master" id="id48" answerConceptId="CIEL:131115" answerLabel="Otite, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
 									
 									<span id="cacher51" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1499,7 +1564,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher52"><obs conceptId="CIEL:1284" answerConceptId="CIEL:119525" answerLabel="Mycose cutanée [111.9], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span class="titre" ch-target="#cacher52"><obs conceptId="CIEL:1284" class="master" id="id49" answerConceptId="CIEL:119525" answerLabel="Mycose cutanée [111.9], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
 									
 									<span id="cacher52" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1510,7 +1575,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher53"><obs conceptId="CIEL:1284" answerConceptId="CIEL:119387" answerLabel="Parasitose [B89]"/></span><br/>
+									<span class="titre" ch-target="#cacher53"><obs conceptId="CIEL:1284" class="master" id="id50" answerConceptId="CIEL:119387" answerLabel="Parasitose [B89]"/></span><br/>
 									
 									<span id="cacher53" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1526,7 +1591,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher54"><obs conceptId="CIEL:1284" answerConceptId="CIEL:114100" answerLabel="Pneumonie [J18.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher54"><obs conceptId="CIEL:1284" class="master" id="id51" answerConceptId="CIEL:114100" answerLabel="Pneumonie [J18.9]"/></span><br/>
 									
 									<span id="cacher54" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1538,7 +1603,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher55"><obs conceptId="CIEL:1284" answerConceptId="CIEL:5258" answerLabel="Poliomyélite [A80.9]*"/></span><br/>
+									<span class="titre" ch-target="#cacher55"><obs conceptId="CIEL:1284" class="master" id="id52" answerConceptId="CIEL:5258" answerLabel="Poliomyélite [A80.9]*"/></span><br/>
 									<span id="cacher55" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1548,7 +1613,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher56"><obs conceptId="CIEL:1284" answerConceptId="CIEL:160146" answerLabel="Rage [A82.9]*"/></span><br/>
+									<span class="titre" ch-target="#cacher56"><obs conceptId="CIEL:1284" class="master" id="id53" answerConceptId="CIEL:160146" answerLabel="Rage [A82.9]*"/></span><br/>
 									<span id="cacher56" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1558,7 +1623,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher57"><obs conceptId="CIEL:1284" answerConceptId="CIEL:134561" answerLabel="Rougeole [B05.89]*"/></span><br/>
+									<span class="titre" ch-target="#cacher57"><obs conceptId="CIEL:1284" class="master" id="id54" answerConceptId="CIEL:134561" answerLabel="Rougeole [B05.89]*"/></span><br/>
 									
 									<span id="cacher57" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1569,7 +1634,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher58"><obs conceptId="CIEL:1284" answerConceptId="CIEL:113205" answerLabel="Rubéole [B06.89]"/></span><br/>
+									<span class="titre" ch-target="#cacher58"><obs conceptId="CIEL:1284" class="master" id="id55" answerConceptId="CIEL:113205" answerLabel="Rubéole [B06.89]"/></span><br/>
 									
 									<span id="cacher58" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1580,7 +1645,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher59"><obs conceptId="CIEL:1284" answerConceptId="CIEL:163402" answerLabel="Syndrome ictérique fébrile [B15.9]*"/></span><br/>
+									<span class="titre" ch-target="#cacher59"><obs conceptId="CIEL:1284" class="master" id="id56" answerConceptId="CIEL:163402" answerLabel="Syndrome ictérique fébrile [B15.9]*"/></span><br/>
 									
 									<span id="cacher59" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1591,7 +1656,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher60"><obs conceptId="CIEL:159394" answerConceptId="CIEL:159108" answerLabel="Teigne [B35.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher60"><obs conceptId="CIEL:1284" class="master" id="id57" answerConceptId="CIEL:119508" answerLabel="Teigne [B35.9]"/></span><br/>
 									
 									<span id="cacher60" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1602,7 +1667,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher61"><obs conceptId="CIEL:159394" answerConceptId="CIEL:124957" answerLabel="Tétanos [A35]*"/></span><br/>
+									<span class="titre" ch-target="#cacher61"><obs conceptId="CIEL:1284" class="master" id="id58" answerConceptId="CIEL:124957" answerLabel="Tétanos [A35]*"/></span><br/>
 									
 									<span id="cacher61" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1613,7 +1678,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher62"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112141" answerLabel="Tuberculose [A15.0] remplir la section Tuberculose ci-dessous"/></span><br/>
+									<span class="titre" ch-target="#cacher62"><obs conceptId="CIEL:1284" class="master" id="id59" answerConceptId="CIEL:112141" answerLabel="Tuberculose [A15.0] remplir la section Tuberculose ci-dessous"/></span><br/>
 									
 									<span id="cacher62" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1624,7 +1689,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher63"><obs conceptId="CIEL:1284" answerConceptId="CIEL:159345" answerLabel="MDR TB remplir la section Tuberculose ci-dessous [Z16.24]"/></span><br/>
+									<span class="titre" ch-target="#cacher63"><obs conceptId="CIEL:1284" class="master" id="id60" answerConceptId="CIEL:159345" answerLabel="MDR TB remplir la section Tuberculose ci-dessous [Z16.24]"/></span><br/>
 									<span id="cacher63" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1634,7 +1699,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher64"><obs conceptId="CIEL:1284" answerConceptId="CIEL:892" answerLabel="Varicelle [B01.9]"/></span><br/>
+									<span class="titre" ch-target="#cacher64"><obs conceptId="CIEL:1284" class="master" id="id61" answerConceptId="CIEL:892" answerLabel="Varicelle [B01.9]"/></span><br/>
 									<span id="cacher64" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1644,7 +1709,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher65"><obs conceptId="CIEL:1284" answerConceptId="CIEL:149197" answerLabel="VIH/SIDA [B20]"/></span><br/>
+									<span class="titre" ch-target="#cacher65"><obs conceptId="CIEL:1284" class="master" id="id62" answerConceptId="CIEL:149197" answerLabel="VIH/SIDA [B20]"/></span><br/>
 									
 									<span id="cacher65" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
@@ -1656,7 +1721,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher66"> <obs conceptId="CIEL:1284" answerConceptId="CIEL:131715" answerLabel="Trouble psychiatrique d’étiologie à investiguer [F99]"/></span><br/>
+									<span class="titre" ch-target="#cacher66"> <obs conceptId="CIEL:1284" class="master" id="id63" answerConceptId="CIEL:131715" answerLabel="Trouble psychiatrique d’étiologie à investiguer [F99]"/></span><br/>
 									<span id="cacher66" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1666,7 +1731,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher67"><obs conceptId="CIEL:1284" answerConceptId="CIEL:113881" answerLabel="Stress post traumatique [F43.10]"/></span><br/>
+									<span class="titre" ch-target="#cacher67"><obs conceptId="CIEL:1284" class="master" id="id64" answerConceptId="CIEL:113881" answerLabel="Stress post traumatique [F43.10]"/></span><br/>
 									<span id="cacher67" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1678,7 +1743,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher68"><obs conceptId="CIEL:1284" answerConceptId="CIEL:126582" answerLabel="Agression sexuelle [T74.21XA]"/></span><br/>
+									<span class="titre" ch-target="#cacher68"><obs conceptId="CIEL:1284" class="master" id="id65" answerConceptId="CIEL:126582" answerLabel="Agression sexuelle [T74.21XA]"/></span><br/>
 									<span id="cacher68" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1688,7 +1753,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher69"><obs conceptId="CIEL:1284" answerConceptId="CIEL:146623" answerLabel="Brûlure [T30.0], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span class="titre" ch-target="#cacher69"><obs conceptId="CIEL:1284" class="master" id="id66" answerConceptId="CIEL:146623" answerLabel="Brûlure [T30.0], " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
 									<span id="cacher69" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1698,7 +1763,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher70"><obs conceptId="CIEL:1284" answerConceptId="CIEL:112770" answerLabel="Entorse [848.9], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher70"><obs conceptId="CIEL:1284" class="master" id="id67" answerConceptId="CIEL:112770" answerLabel="Entorse [848.9], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher70" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1708,7 +1773,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher71"><obs conceptId="CIEL:1284" answerConceptId="CIEL:177" answerLabel="Fracture osseuse [T14.8], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher71"><obs conceptId="CIEL:1284" class="master" id="id68" answerConceptId="CIEL:177" answerLabel="Fracture osseuse [T14.8], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher71" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1718,7 +1783,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher72"><obs conceptId="CIEL:1284" answerConceptId="CIEL:481" answerLabel="Luxation [839.8], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
+									<span class="titre" ch-target="#cacher72"><obs conceptId="CIEL:1284" class="master" id="id69" answerConceptId="CIEL:481" answerLabel="Luxation [839.8], précisez :&lt;br/&gt;" showCommentField="true" commentFieldLabel=""/></span><br/>
 									<span id="cacher72" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1728,7 +1793,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher73"><obs conceptId="CIEL:1284" answerConceptId="CIEL:159328" answerLabel="Plaie, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
+									<span class="titre" ch-target="#cacher73"><obs conceptId="CIEL:1284" class="master" id="id70" answerConceptId="CIEL:159328" answerLabel="Plaie, " showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;"/></span><br/>
 									<span id="cacher73" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1738,7 +1803,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher74"><obs conceptId="CIEL:1284" answerConceptId="CIEL:116838" answerLabel="Trauma crânien [S09.90XA]"/></span><br/>
+									<span class="titre" ch-target="#cacher74"><obs conceptId="CIEL:1284" class="master" id="id71" answerConceptId="CIEL:116838" answerLabel="Trauma crânien [S09.90XA]"/></span><br/>
 									<span id="cacher74" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1749,7 +1814,7 @@
 							<tr>
 								<td>
 									<obsgroup groupingConceptId="CIEL:159947">
-									<span class="titre" ch-target="#cacher75"><obs conceptId="CIEL:1284" style="autocomplete" answerClasses="Diagnosis" showCommentField="true" commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;"/></span><br/>
+									<span class="titre" ch-target="#cacher75"><obs conceptId="CIEL:1284" class="master" id="id72" style="autocomplete" answerClasses="Diagnosis" showCommentField="true" commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;"/></span><br/>
 									<span id="cacher75" class="cacher" style="display:none">
 									<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393" answerLabels="Confirmé,Suspecté" style="radio"/><br/>
 									<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944" answerLabels="Primaire,Secondaire" style="radio"/></span>
@@ -1991,9 +2056,9 @@
 		<br/><br/>
 			Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 		<table width="100%">
-			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="3" autocompleteProvider="true"/></td></tr>
 			<br/>
-			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole autocompleteProvider="true"/></td></tr>
+			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="4" autocompleteProvider="true"/></td></tr>
 		</table>
 		</fieldset>
 			</div>
