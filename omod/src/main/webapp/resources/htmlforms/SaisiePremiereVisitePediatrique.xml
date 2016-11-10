@@ -1,4 +1,8 @@
-<htmlform formUuid="ef15c91f-734f-4e08-b6fa-d148b8ecbfc0" formName="Saisie première visite pédiatrique" formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc" formVersion="1.0" formDescription="Saisie première visite pédiatrique;Première visite pédiatrique VIH"> 
+<htmlform formUuid="ef15c91f-734f-4e08-b6fa-d148b8ecbfc0" 
+formName="Saisie première visite pédiatrique" 
+formEncounterType="349ae0b4-65c1-4122-aa06-480f186c8350" 
+formVersion="1.0" 
+formDescription="Saisie première visite pédiatrique;Première visite pédiatrique VIH"> 
 	<macros>
 		paperFormId = (Fill this in)
 		<!--headerColor =#009d8e-->
@@ -2201,7 +2205,7 @@
 	Date de prochaine visite <obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 	<br/><br/>
 	<!--Nom d'auteur de la fiche :<encounterProvider type="autocompleteProvider" providerMatchMode="ANYWHERE"/>-->
-	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/>
+	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/>
 	<br/><br/>
 	Statut de la fiche<br/>
 	&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
