@@ -46,7 +46,7 @@
 		<htmlformentryVersion>2.5</htmlformentryVersion>
 		<formentryappVersion>1.2</formentryappVersion>
 		<htmlformentryuiVersion>1.2</htmlformentryuiVersion>
-		<referenceapplicationVersion>2.5-SNAPSHOT</referenceapplicationVersion>
+		<referenceapplicationVersion>2.4</referenceapplicationVersion>
 	</properties>
 
 	<dependencyManagement>
