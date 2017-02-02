@@ -90,8 +90,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Concept viralLoadConcept = isantePlusConstants.VIRAL_LOAD_CONCEPT == null
 				? Context.getConceptService().getConceptByName("HIV VIRAL LOAD")
 				: isantePlusConstants.VIRAL_LOAD_CONCEPT;
-		List<Obs> viralLoadObs = new ArrayList(
-				Context.getObsService().getObservations(patient, viralLoadConcept, false));
+		List<Obs> viralLoadObs = new ArrayList(Context.getObsService().getObservationsByPersonAndConcept(patient, viralLoadConcept));
 
 		sortObsListByObsDateTime(viralLoadObs);
 
@@ -156,11 +155,10 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return getObsFromConceptForPatient(patient, "concept.weight", 5089);
 	}
 
-	@SuppressWarnings({ "deprecation" })
+	@SuppressWarnings({ "deprecation", "unchecked" })
 	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
 		Concept headCircumferenceConcept = new IsantePlusGlobalProps().HEAD_CIRCUMFERENC_CONCEPT;
-		return headCircumferenceConcept != null
-				? Context.getObsService().getObservations(patient, headCircumferenceConcept, false) : null;
+		return (Set<Obs>) (headCircumferenceConcept != null	? Context.getObsService().getObservationsByPersonAndConcept(patient, headCircumferenceConcept) : null);
 	}
 
 	private Set<Obs> getHeightConceptObsForAPatient(Patient patient) {
@@ -252,15 +250,14 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return getRecentObsFromSet(getTemperatureConceptObsForAPatient(patient));
 	}
 
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings({ "deprecation", "unchecked" })
 	private Set<Obs> getObsFromConceptForPatient(Patient patient, String gpCodeForConcept, Integer conceptId) {
-		return Context.getObsService().getObservations(patient,
+		return (Set<Obs>) Context.getObsService().getObservationsByPersonAndConcept(patient,
 				Context.getConceptService().getConcept(
 						StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
 								? Integer.parseInt(
 										Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
-								: conceptId),
-				false);
+								: conceptId));
 	}
 
 	@Override
@@ -725,13 +722,13 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Integer labConceptId = 1271;
 		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
 
-		for (Obs obs : Context.getObsService().getObservations(patient, testsOrdered, false)) {
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient, testsOrdered)) {
 			if (obs != null) {
 
 				Integer result = Integer.parseInt(obs.getValueCoded().toString());
 				Concept resultTest = Context.getConceptService().getConcept(result);
 
-				for (Obs obs1 : Context.getObsService().getObservations(patient, resultTest, false)) {
+				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient, resultTest)) {
 					if (obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId()) {
 						IsantePlusObs obsres = new IsantePlusObs(obs1);
 						labHistory.add(obsres);
@@ -845,18 +842,18 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Concept dateDispensed = Context.getConceptService().getConcept(dateDrugsConceptId);
 		List<Concept> conceptList = new ArrayList<Concept>();
 		List<Encounter> encounterList = new ArrayList<Encounter>();
-		for (Obs obs0 : Context.getObsService().getObservations(patient, drugsDispensed, false)) {
+		for (Obs obs0 : Context.getObsService().getObservationsByPersonAndConcept(patient, drugsDispensed)) {
 			Obs obs = Obs.newInstance(obs0);
 			Obs secondObs = null;
 			if (obs0 != null) {
-				for (Obs obs1 : Context.getObsService().getObservations(patient, dateDispensed, false)) {
+				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient, dateDispensed)) {
 					if (obs1 != null) {
 							// je capture dans obs la date de dispensation du
 							// medicament
 					 if (!conceptList.contains(obs0.getValueCoded())
 									|| !encounterList.contains(obs0.getEncounter()))
 					 {
-						 		if (obs0.getObsGroupId() == obs1.getObsGroupId()) {
+						 		if (obs0.getObsGroup() == obs1.getObsGroup()) {
 						 				
 										obs.setObsDatetime(obs1.getObsDatetime());
 										conceptList.add(obs0.getValueCoded());

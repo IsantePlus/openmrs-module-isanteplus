@@ -17,6 +17,7 @@ import javax.persistence.Transient;
 import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Concept;
 import org.openmrs.Encounter;
+import org.openmrs.EncounterRole;
 import org.openmrs.Obs;
 import org.openmrs.User;
 import org.openmrs.Visit;
@@ -76,12 +77,15 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 		setEncounter(encounter);
 	}
 
+
 	@SuppressWarnings("deprecation")
-	public String getProvider() {
-		return encounter.getProvider() != null
-				? encounter.getProvider().getGivenName() + " " + encounter.getProvider().getFamilyName() : "";
+	public String getProvider(EncounterRole role) {
+		
+		return encounter.getProvidersByRole(role)!= null
+				? encounter.getProvidersByRole(role).iterator().next().getPerson().getGivenName() + " " + encounter.getProvidersByRole(role).iterator().next().getPerson().getFamilyName() : "";
 	}
 
+	
 	public Date getDate() {
 		return encounter.getDateCreated();
 	}
