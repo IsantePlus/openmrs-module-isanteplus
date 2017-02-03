@@ -158,7 +158,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
 		Concept headCircumferenceConcept = new IsantePlusGlobalProps().HEAD_CIRCUMFERENC_CONCEPT;
-		return (Set<Obs>) (headCircumferenceConcept != null	? Context.getObsService().getObservationsByPersonAndConcept(patient, headCircumferenceConcept) : null);
+		return (Set<Obs>) (headCircumferenceConcept != null	? new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient, headCircumferenceConcept)) : null);
 	}
 
 	private Set<Obs> getHeightConceptObsForAPatient(Patient patient) {
@@ -252,12 +252,12 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	private Set<Obs> getObsFromConceptForPatient(Patient patient, String gpCodeForConcept, Integer conceptId) {
-		return (Set<Obs>) Context.getObsService().getObservationsByPersonAndConcept(patient,
+		return (Set<Obs>) new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient,
 				Context.getConceptService().getConcept(
 						StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
 								? Integer.parseInt(
 										Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
-								: conceptId));
+								: conceptId)));
 	}
 
 	@Override
