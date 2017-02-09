@@ -1,4 +1,8 @@
-<htmlform formUuid="f73c1969-49c4-4ef5-8943-e8838547a275" formName="Saisie première visite adult" formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc" formVersion="1.0" formDescription="Saisie première visite adult;Première visite adulte VIH"> 
+<htmlform formUuid="f73c1969-49c4-4ef5-8943-e8838547a275" 
+	formName="Saisie première visite adult" 
+	formEncounterType="17536ba6-dd7c-4f58-8014-08c7cb798ac7"
+	formVersion="1.0" 
+	formDescription="Saisie première visite adult;Première visite adulte VIH"> 
 	<macros>
 		paperFormId = (Fill this in)
 		<!--headerColor =#009d8e-->
@@ -46,6 +50,7 @@
 		}
 	</style>
 	<script type="text/javascript">
+	//ca3aed11-1aa4-42a1-b85c-8332fc8001fc
 		if(jQuery){
 	 jQuery(document).ready(function(){
 		if ( jQuery.browser.msie ) {
@@ -512,8 +517,29 @@
   return true;
  });
   
-
 </script>
+<ifMode mode="ENTER">
+<lookup complexExpression="#foreach($encounter in $fn.allEncounters(null))
+	#if($form == $encounter.form.formId)
+	 &lt;script type=&quot;text/javascript&quot;>
+		jQuery(function() {
+			var url = window.location.search;
+			var idurl=url.substring(url.lastIndexOf(&quot;=&quot;)+1);
+			var res='/module/htmlformentry/htmlForm.form?id='+idurl;
+			if (window.location.href.indexOf(res) == -1)
+			{
+				var cheminComplet = document.location.href;
+				var longueur = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;;
+				var souschaine=cheminComplet.substring(longueur.length,cheminComplet.indexOf(&quot;/&quot;,longueur.length));
+				window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ souschaine +&quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.uuid&quot;;
+				
+			}
+			});
+	   &lt;/script> 
+	#end
+#end "/>
+</ifMode>
+
 <div width="100%" id="conteneur">
 	<div id="dateVisite">
 			<b>FICHE DE SAISIE POUR LA PREMIERE VISITE ADULTE VIH+</b><br/><br/>
@@ -1973,8 +1999,8 @@
 		<obs conceptId="CIEL:159395" rows="5" cols="90"/>
 	</section>
 	
-	SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="3" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
-	SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="4" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
+	SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
+	SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
 	
 	<br/><br/>
 	Statut de la fiche<br/>

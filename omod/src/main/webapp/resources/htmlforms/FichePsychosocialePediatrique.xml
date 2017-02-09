@@ -1,7 +1,7 @@
 <htmlform formUuid="4317fcc3-eb69-44b6-8c95-aaa5af4c5e57"
  formName="Fiche Psychosociale pédiatrique"
  formVersion="1.0"	
- formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formEncounterType="51df75f7-a3de-4f82-a9df-c0bedaf5a2dd"
  formDescription="Fiche Psychosociale pédiatrique;Fiche Psychosociale pédiatrique"
  > 
 	<macros>
@@ -531,7 +531,7 @@
 	<br/>
 	<br/>
 	Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
-	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/><br/><br/>
+	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd" autocompleteProvider="true" default="currentUser"/><br/><br/>
 	<div id="sauvegarde">
 		<center><submit submitClass="confirm right" submitCode="general.save"/><br/>
 		</center>

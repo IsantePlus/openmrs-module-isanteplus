@@ -9,10 +9,19 @@
     <div class="info-body">
     	<div id="bmiGraph"></div>
     	<script type="text/javascript">
-    		var items = ${items};
-    		var options = ${options};
+    		var result = ${items};
+    		var dat = ${options};
   			var bmiGraphContainer = document.getElementById('bmiGraph');
-  			var bmiGraph = new vis.Graph2d(bmiGraphContainer, new vis.DataSet(items), options);
+  			var bmiGraph = new vis.Graph2d(bmiGraphContainer, new vis.DataSet(result), dat);
+  			
+  			jQuery(function() {
+  				if(result == undefined || result.length <= 0) {
+  					jQuery("#bmiGraph").hide();
+  				} else {
+  					jQuery("#bmiGraph").show();
+  				}
+  				
+		    });
   		</script>
     </div>
 </div>
