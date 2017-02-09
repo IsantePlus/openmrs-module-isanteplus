@@ -1,7 +1,7 @@
 <htmlform formUuid="3c7f88b0-b844-47ba-b4da-4b5dee2b8b0a"
  formName="Soins de santé primaire--consultation"
  formVersion="1.0"	
- formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formEncounterType="a5600919-4dde-4eb8-a45b-05c204af8284"
  formDescription="Soins de santé primaire--consultation;Consultation de suivie adulte SSP"
  > 
 	<style>
@@ -260,6 +260,47 @@
 			
 		});
 		
+	</script>
+	<script type="text/javascript">
+		if(jQuery){
+		 jQuery(document).ready(function(){
+			if ( jQuery.browser.msie ) {
+				jQuery(":checkbox").click(function(){
+					 jQuery(this).change();
+			 });
+			}
+		jQuery(".checkboxGroup").each(function(){
+				 var group = jQuery(this);
+				 var uncheckAll = function(){
+					 group.find("input[type$='checkbox']").attr("checked",false);
+					 group.find("input[type$='checkbox']").change();
+				 }
+			
+			//Debut checkbox examen Clinique
+			group.find("#normal1").find("input[type$='checkbox']").click(function(){
+					group.find("#anormal1").find("input[type$='checkbox']").attr("checked",false);
+					group.find("#anormal1").find("input[type$='checkbox']").change();
+					group.find("#pasconduit1").find("input[type$='checkbox']").attr("checked",false);
+					group.find("#pasconduit1").find("input[type$='checkbox']").change();
+				 }
+			);
+			group.find("#anormal1").find("input[type$='checkbox']").click(function(){
+					group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
+					group.find("#normal1").find("input[type$='checkbox']").change();
+					group.find("#pasconduit1").find("input[type$='checkbox']").attr("checked",false);
+					group.find("#pasconduit1").find("input[type$='checkbox']").change();
+				 }
+			);
+			group.find("#pasconduit1").find("input[type$='checkbox']").click(function(){
+					group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
+					group.find("#normal1").find("input[type$='checkbox']").change();
+					group.find("#anormal1").find("input[type$='checkbox']").attr("checked",false);
+					group.find("#anormal1").find("input[type$='checkbox']").change();
+				 }
+			);
+		});
+	});
+  }
 	</script>
 	<div id="contenerGeneral">
 		<div id="dateVisite">
@@ -1393,9 +1434,9 @@
 		<br/><br/>
 			Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
 		<table width="100%">
-			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="3" autocompleteProvider="true"/></td></tr>
+			<tr><td>Nom et Prénom 1 <encounterProviderAndRole encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1" autocompleteProvider="true" default="currentUser"/></td><td>Nom et Prénom 2 <encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true"/></td></tr>
 			<br/>
-			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="4" autocompleteProvider="true"/></td></tr>
+			<tr><td colspan="2"><br/>Nom et Prénom 3 <encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd" autocompleteProvider="true"/></td></tr>
 		</table>
 		</fieldset>
 			</div>

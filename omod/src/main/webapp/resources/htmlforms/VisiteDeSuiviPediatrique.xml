@@ -1,4 +1,8 @@
-<htmlform formUuid="f55d3760-1bf1-4e42-a7f9-0a901fa49cf0" formName="Visite de suivi pédiatrique" formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc" formVersion="1.0" formDescription="Visite de suivi pédiatrique;Visite de pédiatrique VIH"> 
+<htmlform formUuid="f55d3760-1bf1-4e42-a7f9-0a901fa49cf0" 
+formName="Visite de suivi pédiatrique" 
+formEncounterType="33491314-c352-42d0-bd5d-a9d0bffc9bf1" 
+formVersion="1.0" 
+formDescription="Visite de suivi pédiatrique;Visite de pédiatrique VIH"> 
 	<macros>
 		paperFormId = (Fill this in)
 		<!--headerColor =#009d8e-->
@@ -1611,7 +1615,7 @@
 		Utiliser la section Antécédants Médicaux pour indiquer tous les diagnostics. Utiliser cette section pour décrire le plan de traitement et de soin.<br/>
 		<obs conceptId="CIEL:159395" rows="5" cols="90"/>
 	</section>
-	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/>
+	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/>
 	<br/><br/>
 	Statut de la fiche<br/>
 	&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>

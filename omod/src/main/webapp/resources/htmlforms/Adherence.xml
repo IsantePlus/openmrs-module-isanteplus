@@ -6,7 +6,7 @@ formName="Adhérence" formVersion="1.0"
  formIcon="icon-medkit"
  formShowIf=""
  formDisplayStyle="Standard"
- formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formEncounterType="c45d7299-ad08-4cb5-8e5d-e0ce40532939"
  formDescription="Adhérence;Adhérence"
  >
 	<macros>
@@ -243,7 +243,7 @@ formName="Adhérence" formVersion="1.0"
 		<obs conceptId="CIEL:161011" rows="5" cols="60"/>
 		</section>
 		SIGNATURE DU BÉNÉFICIAIRE: <lookup class="value" expression="patient.personName"/><br/><br/>
-		<span style="display:none"><encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/></span>
+		<span style="display:none"><encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd" autocompleteProvider="true" default="currentUser"/></span>
 		Statut de la fiche<br/>
 	&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
 	<br/>

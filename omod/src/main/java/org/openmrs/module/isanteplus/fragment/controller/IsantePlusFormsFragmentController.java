@@ -90,6 +90,8 @@ public class IsantePlusFormsFragmentController {
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm vaccination = new IsantePlusHtmlForm("Vaccination.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
+			IsantePlusHtmlForm imagerie = new IsantePlusHtmlForm("ImagerieEtAutres.xml", resourceFactory, formService,
+					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm visiteDeSuivi = new IsantePlusHtmlForm("VisiteDeSuivi.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm visiteDeSuiviPediatrique = new IsantePlusHtmlForm("VisiteDeSuiviPediatrique.xml",
@@ -143,7 +145,7 @@ public class IsantePlusFormsFragmentController {
 
 			otherForms.add(vaccination);
 			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
-
+			otherForms.add(imagerie);
 			model.put("primaryCareForms", primaryCareForms);
 			model.put("labForms", labForms);
 			model.put("obygnForms", obygnForms);

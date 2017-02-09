@@ -1,7 +1,7 @@
 <htmlform formUuid="56cf5b28-c0b5-4d57-8dde-a43e93e269d2"
  formName="Analyse de laboratoire"
  formVersion="1.0"	
- formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formEncounterType="f037e97b-471e-4898-a07c-b8e169e0ddc4"
  formDescription="Analyse de laboratoire;Analyse de laboratoire"
  > 
 	<macros>
@@ -3021,7 +3021,7 @@
 	<br/>
 	<div id="datePr">
 	Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
-	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="2" autocompleteProvider="true" default="currentUser"/> <br/><br/>
+	Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/><br/>
 	</div>
 	
 	<div id="sauvegarde">

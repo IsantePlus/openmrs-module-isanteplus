@@ -1,6 +1,6 @@
 <htmlform formUuid="0c3ca345-f834-46d1-a620-6d0f20f217f2"
  formName="Rapport d'arrêt du programme soins et traitement VIH/SIDA"
- formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formEncounterType="9d0113c6-f23a-4461-8428-7e9a7344f2ba"
  formVersion="1.0"
  formDescription="Rapport d'arrêt au soins VIH"
  > 
@@ -174,8 +174,8 @@
 		</section>
 		<br/>
 		<br/>
-		SIGNATURE DU CONSEILLER:<encounterProviderAndRole encounterRole="2" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
-		SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="4" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
+		SIGNATURE DU CONSEILLER:<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
+		SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
 		<br/><br/>
 		Statut de la fiche<br/>
 		&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
