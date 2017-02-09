@@ -585,6 +585,7 @@
 			<column name="uuid" value="fdb5b14f-555f-4282-b4c1-9286addf0aae" />
 		</insert>
 	</changeSet>
+<<<<<<< HEAD
 	<changeSet id="2017Fev02-0336" author="jamesfeshner">
 		<preConditions onFail="MARK_RAN">
 			<sqlCheck expectedResult="0">
