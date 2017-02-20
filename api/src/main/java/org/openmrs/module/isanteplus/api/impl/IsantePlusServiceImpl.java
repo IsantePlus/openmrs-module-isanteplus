@@ -90,7 +90,8 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Concept viralLoadConcept = isantePlusConstants.VIRAL_LOAD_CONCEPT == null
 				? Context.getConceptService().getConceptByName("HIV VIRAL LOAD")
 				: isantePlusConstants.VIRAL_LOAD_CONCEPT;
-		List<Obs> viralLoadObs = new ArrayList(Context.getObsService().getObservationsByPersonAndConcept(patient, viralLoadConcept));
+		List<Obs> viralLoadObs = new ArrayList(
+				Context.getObsService().getObservationsByPersonAndConcept(patient, viralLoadConcept));
 
 		sortObsListByObsDateTime(viralLoadObs);
 
@@ -155,10 +156,11 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return getObsFromConceptForPatient(patient, "concept.weight", 5089);
 	}
 
-	@SuppressWarnings({ "deprecation", "unchecked" })
+	@SuppressWarnings({ "deprecation" })
 	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
 		Concept headCircumferenceConcept = new IsantePlusGlobalProps().HEAD_CIRCUMFERENC_CONCEPT;
-		return (Set<Obs>) (headCircumferenceConcept != null	? new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient, headCircumferenceConcept)) : null);
+		return new HashSet<Obs>(headCircumferenceConcept != null
+				? Context.getObsService().getObservationsByPersonAndConcept(patient, headCircumferenceConcept) : null);
 	}
 
 	private Set<Obs> getHeightConceptObsForAPatient(Patient patient) {
@@ -250,9 +252,9 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return getRecentObsFromSet(getTemperatureConceptObsForAPatient(patient));
 	}
 
-	@SuppressWarnings({ "deprecation", "unchecked" })
+	@SuppressWarnings("deprecation")
 	private Set<Obs> getObsFromConceptForPatient(Patient patient, String gpCodeForConcept, Integer conceptId) {
-		return (Set<Obs>) new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient,
+		return new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient,
 				Context.getConceptService().getConcept(
 						StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
 								? Integer.parseInt(
@@ -842,47 +844,35 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Concept dateDispensed = Context.getConceptService().getConcept(dateDrugsConceptId);
 		List<Concept> conceptList = new ArrayList<Concept>();
 		List<Encounter> encounterList = new ArrayList<Encounter>();
+
 		for (Obs obs0 : Context.getObsService().getObservationsByPersonAndConcept(patient, drugsDispensed)) {
 			Obs obs = Obs.newInstance(obs0);
-			Obs secondObs = null;
 			if (obs0 != null) {
 				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient, dateDispensed)) {
 					if (obs1 != null) {
+						if (obs0.getObsGroup() == obs1.getObsGroup()) {
 							// je capture dans obs la date de dispensation du
 							// medicament
-					 if (!conceptList.contains(obs0.getValueCoded())
-									|| !encounterList.contains(obs0.getEncounter()))
-					 {
-						 		if (obs0.getObsGroup() == obs1.getObsGroup()) {
-						 				
-										obs.setObsDatetime(obs1.getObsDatetime());
-										conceptList.add(obs0.getValueCoded());
-										encounterList.add(obs0.getEncounter());
-										// j'ajoute la date de dispensation
-										secondObs=obs1;
-										drugsHistory.add(obs);
-						 		}
-						 		
+							obs.setObsDatetime(obs1.getObsDatetime());
+							conceptList.add(obs0.getValueCoded());
+							encounterList.add(obs0.getEncounter());
+							// j'ajoute la date de dispensation
+							drugsHistory.add(obs);
+						} else if (conceptList.contains(obs0.getValueCoded())
+								&& encounterList.contains(obs0.getEncounter()))
+							;
+						else {
+							conceptList.add(obs0.getValueCoded());
+							encounterList.add(obs0.getEncounter());
+							// j'ajoute la date de prescription si la date de
+							// dispensation n'est pas disponible
+							drugsHistory.add(obs);
 						}
-						
-					}
-					
-				}
-				if(secondObs==null)
-				{
-					if (!conceptList.contains(obs0.getValueCoded())
-							|| !encounterList.contains(obs0.getEncounter()))
-					{
-						conceptList.add(obs0.getValueCoded());
-						encounterList.add(obs0.getEncounter());
-						drugsHistory.add(obs0);
 					}
 				}
-				  
-			}
-			
 			}
 
+		}
 		return drugsHistory;
 	}
 

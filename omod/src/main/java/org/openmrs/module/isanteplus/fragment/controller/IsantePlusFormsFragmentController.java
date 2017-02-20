@@ -47,24 +47,24 @@ public class IsantePlusFormsFragmentController {
 
 		model.put("showObygnForms", StringUtils.isNotBlank(patientSex) && patientSex.equals("F"));
 		if (isActiveVisit) {
-			IsantePlusHtmlForm adherence = new IsantePlusHtmlForm("Adherence.xml", resourceFactory, formService,
+			IsantePlusHtmlForm adherence = new IsantePlusHtmlForm("Adh.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm analyseDeLaboratoire = new IsantePlusHtmlForm("AnalyseDeLaboratoire.xml",
+			IsantePlusHtmlForm analyseDeLaboratoire = new IsantePlusHtmlForm("Lab.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm ficheDeConsultationOBGYN = new IsantePlusHtmlForm("FicheDeConsultationOBGYN.xml",
+			IsantePlusHtmlForm ficheDeConsultationOBGYN = new IsantePlusHtmlForm("OBGYN.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ficheDePremiereConsultationOBGYN = new IsantePlusHtmlForm(
-					"FicheDePremiereConsultationOBGYN.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"FOBGYN.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ficheDeTravailEtDaccouchement = new IsantePlusHtmlForm(
-					"FicheDeTravailEtDaccouchement.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"Tacc.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm fichePsychosocialeAdulte = new IsantePlusHtmlForm("FichePsychosocialeAdulte.xml",
+			IsantePlusHtmlForm fichePsychosocialeAdulte = new IsantePlusHtmlForm("PsyA.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm fichePsychosocialePediatrique = new IsantePlusHtmlForm(
-					"FichePsychosocialePediatrique.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"PsyP.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm ordonnanceMedicale = new IsantePlusHtmlForm("OrdonnanceMedicale.xml", resourceFactory,
+			/*IsantePlusHtmlForm ordonnanceMedicale = new IsantePlusHtmlForm("OrdonnanceMedicale.xml", resourceFactory,
 					formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ordonnancepediatrique = new IsantePlusHtmlForm("Ordonnancepediatrique.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
@@ -94,7 +94,7 @@ public class IsantePlusFormsFragmentController {
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm visiteDeSuiviPediatrique = new IsantePlusHtmlForm("VisiteDeSuiviPediatrique.xml",
 					resourceFactory, formService, htmlFormEntryService, patient,
-					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
+					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);*/
 			List<IsantePlusHtmlForm> primaryCareForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> labForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> obygnForms = new ArrayList<IsantePlusHtmlForm>();
@@ -104,20 +104,20 @@ public class IsantePlusFormsFragmentController {
 			Integer adultStartingAge = Integer.parseInt(Context.getAdministrationService()
 					.getGlobalProperty(ConfigurableGlobalProperties.ADULTSTARTINGAGE));
 
-			if (patientAge != null && patientAge > adultStartingAge) {
+			/*if (patientAge != null && patientAge > adultStartingAge) {
 				primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
 				primaryCareForms.add(soinsDeSantePrimaireConsultation);
 			}
 			if (patientAge != null && patientAge <= adultStartingAge) {
 				primaryCareForms.add(soinsDeSantePrimairePremiereConsultationPediatrique);
 				primaryCareForms.add(soinsDeSantePrimaireConsultationPediatrique);
-			}
+			}*/
 
 			labForms.add(analyseDeLaboratoire);
-			if (patientAge != null && patientAge > adultStartingAge)
+			/*if (patientAge != null && patientAge > adultStartingAge)
 				labForms.add(ordonnanceMedicale);
 			if (patientAge != null && patientAge <= adultStartingAge)
-				labForms.add(ordonnancepediatrique);
+				labForms.add(ordonnancepediatrique);*/
 
 			if (StringUtils.isNotBlank(patientSex) && patientAge != null && "F".equals(patientSex)) {
 				obygnForms.add(ficheDePremiereConsultationOBGYN);
@@ -126,14 +126,14 @@ public class IsantePlusFormsFragmentController {
 					obygnForms.add(ficheDeTravailEtDaccouchement);
 			}
 
-			if (patientAge != null && patientAge > adultStartingAge) {
+			/*if (patientAge != null && patientAge > adultStartingAge) {
 				hivCareForms.add(saisiePremiereVisiteAdult);
 				hivCareForms.add(visiteDeSuivi);
 			}
 			if (patientAge != null && patientAge <= adultStartingAge) {
 				hivCareForms.add(saisiePremiereVisitePediatrique);
 				hivCareForms.add(visiteDeSuiviPediatrique);
-			}
+			}*/
 			hivCareForms.add(adherence);
 
 			if (patientAge != null && patientAge > adultStartingAge)
@@ -141,8 +141,8 @@ public class IsantePlusFormsFragmentController {
 			if (patientAge != null && patientAge <= adultStartingAge)
 				psychoSocialForms.add(fichePsychosocialePediatrique);
 
-			otherForms.add(vaccination);
-			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
+			/*otherForms.add(vaccination);
+			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);*/
 
 			model.put("primaryCareForms", primaryCareForms);
 			model.put("labForms", labForms);
