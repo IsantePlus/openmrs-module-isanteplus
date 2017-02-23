@@ -653,4 +653,21 @@
 			<column name="uuid" value="a86ad9bb-d596-413c-bd4e-30f6fea5057d" />
 		</insert>
 	</changeSet>
+	<changeSet id="2017Fev02-0336" author="jamesfeshner">
+  <preConditions onFail="MARK_RAN">
+   <sqlCheck expectedResult="0">
+    SELECT COUNT(uuid) FROM
+    encounter_type WHERE uuid = 
+    'a4cab59f-f0ce-46c3-bd76-416db36ec719';
+   </sqlCheck>
+  </preConditions>
+  <comment></comment>
+  <insert tableName="encounter_type">
+   <column name="name" value="Imagerie Médicale" />
+   <column name="description" value="Imagerie Médicale" />
+   <column name="creator" value="1" />
+   <column name="date_created" value="2016-11-09 09:00:00" />
+   <column name="uuid" value="a4cab59f-f0ce-46c3-bd76-416db36ec719" />
+  </insert>
+ </changeSet>
 </databaseChangeLog>

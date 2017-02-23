@@ -1,0 +1,148 @@
+<htmlform formUuid="42ad13ab-db20-4aed-b8d5-fa4ca15317ee"
+formName="Imagerie et autres" formVersion="1.0"	
+ formAddMetadata="yes"
+ formUILocation="patientDashboard.visitActions"
+ formOrder="100"
+ formIcon="icon-medkit"
+ formShowIf=""
+ formDisplayStyle="Standard"
+ formEncounterType="a4cab59f-f0ce-46c3-bd76-416db36ec719"
+ formDescription="ImagerieEtAutre:ImagerieEtAutre"
+ >
+	<macros>
+		paperFormId = (Fill this in)
+		<!--headerColor =#009d8e-->
+		headerColor =#000000
+		fontOnHeaderColor = white
+	</macros>
+	<style>
+		.section {
+			border: 1px solid $headerColor;
+			padding: 1px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+		.section_b {
+			background-color: #2F4F4F;
+			color:#FFFFFF;
+			padding: 2px;
+			text-align: center;
+			margin-bottom: 1em;
+		}
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 1px;
+			font-weight: bold;
+		}
+		.lienvisible#first{display: block}
+		.lienvisible{
+			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+			width:100%";
+		}
+		.contener
+		{
+			width:100%;
+			height:100%;
+			border:1px solid;
+			margin:0px;
+			padding:0px;
+			background:#87CEEB; border:1px solid #FFFFFF;
+		}
+		.hide{
+			margin:0px;
+			padding:0px;
+		}
+		a:link 
+		{ 
+		 text-decoration:none; 
+		}
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+		#sauvegarde
+		{
+			background:#1E7FCB;
+			position:relative;
+			bottom:0px;
+			width:100%;
+			margin:0px;
+			padding-top:0px;
+			padding-bottom:5px;
+			padding-left:0px;
+			padding-right:0px;
+			height:50px;
+		}
+		#dateVisite{
+			background:#1E7FCB;
+			top:0px;
+			width:100%;
+			padding-top:5px;
+		}
+		#scroll{
+			width: 100%;
+			height: 500px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}
+		#contenerGeneral
+		{
+			height:100%;
+			width:100%;
+			margin:2px;
+			padding:0px;
+		}
+		
+		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
+			float: none;
+		    display: inline-block;
+		}
+		
+		form label, .form label {
+			display: inline-block;
+		}
+		
+	</style>
+	<div id="contenerGeneral">
+		<div id="dateVisite">
+			<b><center>FICHE IMAGERIE ET AUTRES</center></b><br/>
+			<table>
+				<tr>
+					<td>Date visite:</td>
+					<td><encounterDate default="today"/><br/>
+					<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+			
+		<div width="100%" style="border-top:solid 1px">
+			<!--<obs conceptId="CIEL:163752" answerConceptId="CIEL:12" answerLabel="Radiographie pulmonaire"/><br/>-->
+			Radiographie pulmonaire: <obs conceptId="CIEL:12" answerConceptIds="CIEL:1115,CIEL:1137,CIEL:5158,CIEL:6049,CIEL:6050,CIEL:6052,CIEL:114108,CIEL:5622" answerLabels="Normal,Miliaire,Élargissement cardiaque,Infiltra,Changement Diffus (Pas de Miliaire),Lésion cavitaire,Effusion Pleurale,Autre" showCommentField="true" commentFieldLabel=", Préciser&#160;&#160;" style="radio"/>
+		</div> <br/><br/>
+		<div width="100%" style="border-top:solid 1px">
+			Radiographie (Autre): <obs conceptId="CIEL:309" answerConceptIds="CIEL:1115,CIEL:1116" answerLabels="Normal,Anormal" showCommentField="true" commentFieldLabel=", Préciser&#160;&#160;" style="radio"/>
+		</div> <br/><br/>
+		<div width="100%" style="border-top:solid 1px">
+			Crachat BARR: <obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" style="radio"/>
+		</div><br/><br/>
+		<div>
+		Description:<br/>
+		<obs conceptId="CIEL:160845" rows="4" cols="15"/>
+		</div><br/><br/>
+		Date de prochaine visite &#32;&#32;&#32;&#32;&#32; <obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
+		Nom d'auteur de la fiche: <encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd" autocompleteProvider="true" default="currentUser"/><br/><br/>
+		Statut de la fiche<br/>
+	&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
+	<br/>
+	&#160;<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065" answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données."/> <br/><br/>
+		<div id="sauvegarder">
+			<span align="left"><submit submitClass="confirm right" submitCode="general.save"/></span><br/>
+			<span align="right" style="float:right">MSPP FICHE D'IMAGERIE ET AUTRES (VERSION FÉVRIER 2014)</span>
+		</div>
+	</div>
+</htmlform>
