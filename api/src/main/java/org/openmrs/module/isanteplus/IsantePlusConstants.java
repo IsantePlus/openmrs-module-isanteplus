@@ -32,7 +32,7 @@ public class IsantePlusConstants {
 	 * Add a name whenever a new iSante form file is added or one existing is
 	 * renamed
 	 */
-	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adherence.xml,AnalyseDeLaboratoire.xml,FicheDeConsultationOBGYN.xml,FicheDePremiereConsultationOBGYN.xml,FicheDeTravailEtDaccouchement.xml,FichePsychosocialeAdulte.xml,FichePsychosocialePediatrique.xml,OrdonnanceMedicale.xml,Ordonnancepediatrique.xml,RapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA.xml,SaisiePremiereVisiteAdult.xml,SaisiePremiereVisitePediatrique.xml,SoinsDeSantePrimaireConsultationPediatrique.xml,SoinsDeSantePrimairePremiereConsultation.xml,SoinsDeSantePrimairePremiereConsultationPediatrique.xml,SoinsDeSanteSrimaireConsultation.xml,Vaccination.xml,VisiteDeSuivi.xml,VisiteDeSuiviPediatrique.xml";
+	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdonnanceMedicale.xml,Ordonnancepediatrique.xml,RapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA.xml,SaisiePremiereVisiteAdult.xml,SaisiePremiereVisitePediatrique.xml,SoinsDeSantePrimaireConsultationPediatrique.xml,SoinsDeSantePrimairePremiereConsultation.xml,SoinsDeSantePrimairePremiereConsultationPediatrique.xml,SoinsDeSanteSrimaireConsultation.xml,Vaccination.xml,VisiteDeSuivi.xml,VisiteDeSuiviPediatrique.xml";
 
 	public static String[] ISANTEPLUS_FORMFILE_NAMES = ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS.split(",");
 

@@ -91,7 +91,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 				? Context.getConceptService().getConceptByName("HIV VIRAL LOAD")
 				: isantePlusConstants.VIRAL_LOAD_CONCEPT;
 		List<Obs> viralLoadObs = new ArrayList(
-				Context.getObsService().getObservationsByPersonAndConcept(patient, viralLoadConcept));
+				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), viralLoadConcept));
 
 		sortObsListByObsDateTime(viralLoadObs);
 
@@ -160,7 +160,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
 		Concept headCircumferenceConcept = new IsantePlusGlobalProps().HEAD_CIRCUMFERENC_CONCEPT;
 		return new HashSet<Obs>(headCircumferenceConcept != null
-				? Context.getObsService().getObservationsByPersonAndConcept(patient, headCircumferenceConcept) : null);
+				? Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), headCircumferenceConcept) : null);
 	}
 
 	private Set<Obs> getHeightConceptObsForAPatient(Patient patient) {
@@ -254,7 +254,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 	@SuppressWarnings("deprecation")
 	private Set<Obs> getObsFromConceptForPatient(Patient patient, String gpCodeForConcept, Integer conceptId) {
-		return new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient,
+		return new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(),
 				Context.getConceptService().getConcept(
 						StringUtils.isNotBlank(Context.getAdministrationService().getGlobalProperty(gpCodeForConcept))
 								? Integer.parseInt(
@@ -724,13 +724,13 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		Integer labConceptId = 1271;
 		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
 
-		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient, testsOrdered)) {
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), testsOrdered)) {
 			if (obs != null) {
 
 				Integer result = Integer.parseInt(obs.getValueCoded().toString());
 				Concept resultTest = Context.getConceptService().getConcept(result);
 
-				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient, resultTest)) {
+				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), resultTest)) {
 					if (obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId()) {
 						IsantePlusObs obsres = new IsantePlusObs(obs1);
 						labHistory.add(obsres);
@@ -845,10 +845,10 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		List<Concept> conceptList = new ArrayList<Concept>();
 		List<Encounter> encounterList = new ArrayList<Encounter>();
 
-		for (Obs obs0 : Context.getObsService().getObservationsByPersonAndConcept(patient, drugsDispensed)) {
+		for (Obs obs0 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), drugsDispensed)) {
 			Obs obs = Obs.newInstance(obs0);
 			if (obs0 != null) {
-				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient, dateDispensed)) {
+				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), dateDispensed)) {
 					if (obs1 != null) {
 						if (obs0.getObsGroup() == obs1.getObsGroup()) {
 							// je capture dans obs la date de dispensation du
