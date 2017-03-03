@@ -670,4 +670,10 @@
    <column name="uuid" value="a4cab59f-f0ce-46c3-bd76-416db36ec719" />
   </insert>
  </changeSet>
+ <changeSet author="g-francois" id="2017Mars031018" dbms="mysql">
+		<comment>Update search.caseSensitiveDatabaseStringComparison</comment>
+		<sql>
+			UPDATE global_property SET property_value = 'false' where property='search.caseSensitiveDatabaseStringComparison';
+		</sql>
+	</changeSet>
 </databaseChangeLog>
