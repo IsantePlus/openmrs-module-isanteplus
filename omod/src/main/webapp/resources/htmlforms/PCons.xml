@@ -1,5 +1,5 @@
 <htmlform formUuid="dd2c4fc5-3fea-430a-9442-c65a85d9c320"
- formName="Soins de santé primaire--première consultation" formVersion="1.0"	
+ formName="SSP - Première Consultation" formVersion="1.0"	
  formAddMetadata="yes"
  formUILocation="patientDashboard.visitActions"
  formOrder="100"
