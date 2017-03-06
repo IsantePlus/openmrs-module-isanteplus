@@ -84,7 +84,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	}
 
 	@Override
-	@SuppressWarnings({ "unchecked", "rawtypes", "deprecation" })
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Obs getLastViralLoadTestResultObsForPatient(Patient patient) {
 		IsantePlusGlobalProps isantePlusConstants = new IsantePlusGlobalProps();
 		Concept viralLoadConcept = isantePlusConstants.VIRAL_LOAD_CONCEPT == null
@@ -156,7 +156,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return getObsFromConceptForPatient(patient, "concept.weight", 5089);
 	}
 
-	@SuppressWarnings({ "deprecation" })
 	private Set<Obs> getHeadCircumferenceConceptObsForAPatient(Patient patient) {
 		Concept headCircumferenceConcept = new IsantePlusGlobalProps().HEAD_CIRCUMFERENC_CONCEPT;
 		return new HashSet<Obs>(headCircumferenceConcept != null
@@ -252,7 +251,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return getRecentObsFromSet(getTemperatureConceptObsForAPatient(patient));
 	}
 
-	@SuppressWarnings("deprecation")
 	private Set<Obs> getObsFromConceptForPatient(Patient patient, String gpCodeForConcept, Integer conceptId) {
 		return new HashSet<Obs>(Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(),
 				Context.getConceptService().getConcept(
@@ -290,7 +288,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		if (patient.getBirthdate() == null) {
 			return null;
 		}
-		Date endDate = patient.isDead() ? patient.getDeathDate() : new Date();
+		Date endDate = patient.getDead() ? patient.getDeathDate() : new Date();
 
 		return Months.monthsBetween(new DateTime(patient.getBirthdate()), new DateTime(endDate)).getMonths();
 	}
@@ -300,7 +298,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		if (patient.getBirthdate() == null) {
 			return null;
 		}
-		Date endDate = patient.isDead() ? patient.getDeathDate() : new Date();
+		Date endDate = patient.getDead() ? patient.getDeathDate() : new Date();
 
 		return Days.daysBetween(new DateTime(patient.getBirthdate()), new DateTime(endDate)).getDays();
 	}
@@ -716,7 +714,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return filterHistoriesByVisit(getAllFormHistory(), visit);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public List<IsantePlusObs> getLabsHistory(Patient patient) {
 		// TESTS ORDERED = 1271
@@ -834,7 +831,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return dao.saveOrUpdateComponentState(componentState);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public List<Obs> getDrugsHistory(Patient patient) {
 		List<Obs> drugsHistory = new ArrayList<Obs>();
