@@ -78,7 +78,6 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 	}
 
 
-	@SuppressWarnings("deprecation")
 	public String getProvider(EncounterRole role) {
 		
 		return encounter.getProvidersByRole(role)!= null
