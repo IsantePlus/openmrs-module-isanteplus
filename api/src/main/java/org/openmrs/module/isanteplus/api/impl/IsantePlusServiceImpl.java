@@ -724,7 +724,8 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), testsOrdered)) {
 			if (obs != null) {
 
-				Integer result = Integer.parseInt(obs.getValueCoded().toString());
+				//Integer result = Integer.parseInt(obs.getValueCoded().toString());
+				Integer result = obs.getValueCoded().getConceptId();
 				Concept resultTest = Context.getConceptService().getConcept(result);
 
 				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), resultTest)) {
