@@ -38,6 +38,7 @@
 		<uiframeworkVersion>3.9</uiframeworkVersion>
 		<jsonVersion>20160212</jsonVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<emrapiVersion>1.18</emrapiVersion>
 		<coreappsVersion>1.11.1</coreappsVersion>
 		<appuiVersion>1.7</appuiVersion>
