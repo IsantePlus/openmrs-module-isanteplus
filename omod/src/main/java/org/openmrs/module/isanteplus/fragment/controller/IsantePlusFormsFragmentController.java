@@ -47,52 +47,55 @@ public class IsantePlusFormsFragmentController {
 
 		model.put("showObygnForms", StringUtils.isNotBlank(patientSex) && patientSex.equals("F"));
 		if (isActiveVisit) {
-			IsantePlusHtmlForm adherence = new IsantePlusHtmlForm("Adherence.xml", resourceFactory, formService,
+			IsantePlusHtmlForm adherence = new IsantePlusHtmlForm("Adh.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm analyseDeLaboratoire = new IsantePlusHtmlForm("AnalyseDeLaboratoire.xml",
+			IsantePlusHtmlForm analyseDeLaboratoire = new IsantePlusHtmlForm("Lab.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm ficheDeConsultationOBGYN = new IsantePlusHtmlForm("FicheDeConsultationOBGYN.xml",
+			IsantePlusHtmlForm ficheDeConsultationOBGYN = new IsantePlusHtmlForm("OBGYN.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ficheDePremiereConsultationOBGYN = new IsantePlusHtmlForm(
-					"FicheDePremiereConsultationOBGYN.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"FOBGYN.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ficheDeTravailEtDaccouchement = new IsantePlusHtmlForm(
-					"FicheDeTravailEtDaccouchement.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"Tacc.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm fichePsychosocialeAdulte = new IsantePlusHtmlForm("FichePsychosocialeAdulte.xml",
+			IsantePlusHtmlForm fichePsychosocialeAdulte = new IsantePlusHtmlForm("PsyA.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm fichePsychosocialePediatrique = new IsantePlusHtmlForm(
-					"FichePsychosocialePediatrique.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"PsyP.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm ordonnanceMedicale = new IsantePlusHtmlForm("OrdonnanceMedicale.xml", resourceFactory,
+			IsantePlusHtmlForm ordonnanceMedicale = new IsantePlusHtmlForm("OrdM.xml", resourceFactory,
 					formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm ordonnancepediatrique = new IsantePlusHtmlForm("Ordonnancepediatrique.xml",
+			IsantePlusHtmlForm ordonnancepediatrique = new IsantePlusHtmlForm("Ordpd.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA = new IsantePlusHtmlForm(
-					"RapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA.xml", resourceFactory, formService,
+					"ArretVIH.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm saisiePremiereVisiteAdult = new IsantePlusHtmlForm("SaisiePremiereVisiteAdult.xml",
+			IsantePlusHtmlForm saisiePremiereVisiteAdult = new IsantePlusHtmlForm("PVisitAdult.xml",
 					resourceFactory, formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm saisiePremiereVisitePediatrique = new IsantePlusHtmlForm(
-					"SaisiePremiereVisitePediatrique.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"PVisitPed.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm soinsDeSantePrimaireConsultationPediatrique = new IsantePlusHtmlForm(
-					"SoinsDeSantePrimaireConsultationPediatrique.xml", resourceFactory, formService,
+					"ConsPed.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm soinsDeSantePrimairePremiereConsultation = new IsantePlusHtmlForm(
-					"SoinsDeSantePrimairePremiereConsultation.xml", resourceFactory, formService, htmlFormEntryService,
+					"PCons.xml", resourceFactory, formService, htmlFormEntryService,
 					patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm soinsDeSantePrimairePremiereConsultationPediatrique = new IsantePlusHtmlForm(
-					"SoinsDeSantePrimairePremiereConsultationPediatrique.xml", resourceFactory, formService,
+					"PConsPed.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm soinsDeSantePrimaireConsultation = new IsantePlusHtmlForm(
-					"SoinsDeSanteSrimaireConsultation.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					"Cons.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm vaccination = new IsantePlusHtmlForm("Vaccination.xml", resourceFactory, formService,
+			IsantePlusHtmlForm vaccination = new IsantePlusHtmlForm("Vacc.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm visiteDeSuivi = new IsantePlusHtmlForm("VisiteDeSuivi.xml", resourceFactory, formService,
+			IsantePlusHtmlForm visiteDeSuivi = new IsantePlusHtmlForm("VisitSuivi.xml", resourceFactory, formService,
 					htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
-			IsantePlusHtmlForm visiteDeSuiviPediatrique = new IsantePlusHtmlForm("VisiteDeSuiviPediatrique.xml",
+			IsantePlusHtmlForm visiteDeSuiviPediatrique = new IsantePlusHtmlForm("VisitSuiviPed.xml",
+					resourceFactory, formService, htmlFormEntryService, patient,
+					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
+			IsantePlusHtmlForm imagerie = new IsantePlusHtmlForm("Imagerie.xml",
 					resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			List<IsantePlusHtmlForm> primaryCareForms = new ArrayList<IsantePlusHtmlForm>();
@@ -143,6 +146,7 @@ public class IsantePlusFormsFragmentController {
 
 			otherForms.add(vaccination);
 			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
+			otherForms.add(imagerie);
 
 			model.put("primaryCareForms", primaryCareForms);
 			model.put("labForms", labForms);

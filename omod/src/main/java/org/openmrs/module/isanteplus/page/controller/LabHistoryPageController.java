@@ -2,7 +2,6 @@ package org.openmrs.module.isanteplus.page.controller;
 
 import java.util.List;
 import org.json.JSONObject;
-import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.isanteplus.IsantePlusObs;

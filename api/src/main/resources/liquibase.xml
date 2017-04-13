@@ -279,4 +279,788 @@
 		<comment>Renaming isantepluspatientdashboard_form_history table to isanteplus_form_history</comment>
 		<renameTable oldTableName="isantepluspatientdashboard_form_history" newTableName="isanteplus_form_history"/>
 	</changeSet>
+	<changeSet id="2016Nov9-1215" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'17536ba6-dd7c-4f58-8014-08c7cb798ac7';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Saisie Première" />
+			<column name="description" value="Saisie Première visite Adulte VIH" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="17536ba6-dd7c-4f58-8014-08c7cb798ac7" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1216" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'204ad066-c5c2-4229-9a62-644bc5617ca2';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Suivi Visite" />
+			<column name="description" value="Saisie visite suivi Adulte VIH" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="204ad066-c5c2-4229-9a62-644bc5617ca2" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1217" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a0d57dca-3028-4153-88b7-c67a30fde595';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Psychosocial Adult" />
+			<column name="description" value="Fiche psychosocial adult" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a0d57dca-3028-4153-88b7-c67a30fde595" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1218" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'51df75f7-a3de-4f82-a9df-c0bedaf5a2dd';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Psychosocial Pédiatrique" />
+			<column name="description" value="Fiche psychosocial Pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="51df75f7-a3de-4f82-a9df-c0bedaf5a2dd" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1219" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'10d73929-54b6-4d18-a647-8b7316bc1ae3';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Ord. Médicale" />
+			<column name="description" value="Fiche ordonance médicale" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="10d73929-54b6-4d18-a647-8b7316bc1ae3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1220" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'f037e97b-471e-4898-a07c-b8e169e0ddc4';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Analyses de Lab." />
+			<column name="description" value="Fiche Analyses de Laboratoire" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="f037e97b-471e-4898-a07c-b8e169e0ddc4" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1221" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'9d0113c6-f23a-4461-8428-7e9a7344f2ba';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Discontinuation" />
+			<column name="description" value="Rapport d'Arrêt" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="9d0113c6-f23a-4461-8428-7e9a7344f2ba" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1222" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'c45d7299-ad08-4cb5-8e5d-e0ce40532939';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Conseils d'Adhérence" />
+			<column name="description" value="Conseils d'Adhérence" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="c45d7299-ad08-4cb5-8e5d-e0ce40532939" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1223" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'349ae0b4-65c1-4122-aa06-480f186c8350';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Saisie Première pédiatrique" />
+			<column name="description" value="Saisie Première visite pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="349ae0b4-65c1-4122-aa06-480f186c8350" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1224" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'33491314-c352-42d0-bd5d-a9d0bffc9bf1';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Suivi visite pédiatrique" />
+			<column name="description" value="Saisie visite Suivi pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="33491314-c352-42d0-bd5d-a9d0bffc9bf1" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1225" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a9392241-109f-4d67-885b-57cc4b8c638f';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Ord. médicale Pédiatrique" />
+			<column name="description" value="Ordonance médicale pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a9392241-109f-4d67-885b-57cc4b8c638f" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1226" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'5c312603-25c1-4dbe-be18-1a167eb85f97';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Saisie Première ob/gyn" />
+			<column name="description" value="Saisie Première visite ob/gyn" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="5c312603-25c1-4dbe-be18-1a167eb85f97" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1227" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'49592bec-dd22-4b6c-a97f-4dd2af6f2171';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Ob/gyn Suivi" />
+			<column name="description" value="Saisie visite suivi ob/gyn" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="49592bec-dd22-4b6c-a97f-4dd2af6f2171" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1228" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'd95b3540-a39f-4d1e-a301-8ee0e03d5eab';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Travail et d'accouchement" />
+			<column name="description" value="Travail et d'accouchement" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="d95b3540-a39f-4d1e-a301-8ee0e03d5eab" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1229" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'12f4d7c3-e047-4455-a607-47a40fe32460';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--premiére consultation" />
+			<column name="description" value="Soins de santé primaire--premiére consultation" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="12f4d7c3-e047-4455-a607-47a40fe32460" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1230" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a5600919-4dde-4eb8-a45b-05c204af8284';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--consultation" />
+			<column name="description" value="Soins de santé primaire--consultation" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a5600919-4dde-4eb8-a45b-05c204af8284" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1231" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'709610ff-5e39-4a47-9c27-a60e740b0944';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--premiére con. p" />
+			<column name="description" value="Soins de santé primaire--premiére con. p" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="709610ff-5e39-4a47-9c27-a60e740b0944" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1232" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'fdb5b14f-555f-4282-b4c1-9286addf0aae';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--con. pédiatrique" />
+			<column name="description" value="Soins de santé primaire--con. pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="fdb5b14f-555f-4282-b4c1-9286addf0aae" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1233" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_role WHERE uuid = 
+				'7571318b-6358-45cb-b5b3-4d914221eaa1';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_role">
+			<column name="name" value="Infirmière" />
+			<column name="description" value="Encounter role for nurse" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="7571318b-6358-45cb-b5b3-4d914221eaa1" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1234" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_role WHERE uuid = 
+				'322fc5ba-2ed6-44cf-8ebc-963dc40322af';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_role">
+			<column name="name" value="Medecin" />
+			<column name="description" value="Encounter role for doctor" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="322fc5ba-2ed6-44cf-8ebc-963dc40322af" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1235" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_role WHERE uuid = 
+				'ef0445e7-bfe6-4260-a351-09fc835b6bcd';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_role">
+			<column name="name" value="Autres" />
+			<column name="description" value="Encounter role for other members of the clinic" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="ef0445e7-bfe6-4260-a351-09fc835b6bcd" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1236" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a86ad9bb-d596-413c-bd4e-30f6fea5057d';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Vaccination" />
+			<column name="description" value="Fiche Vaccination" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a86ad9bb-d596-413c-bd4e-30f6fea5057d" />
+		</insert>
+	</changeSet>
+	<changeSet id="2017Fev02-0336" author="jamesfeshner">
+  <preConditions onFail="MARK_RAN">
+   <sqlCheck expectedResult="0">
+    SELECT COUNT(uuid) FROM
+    encounter_type WHERE uuid = 
+    'a4cab59f-f0ce-46c3-bd76-416db36ec719';
+   </sqlCheck>
+  </preConditions>
+  <comment></comment>
+  <insert tableName="encounter_type">
+   <column name="name" value="Imagerie Médicale" />
+   <column name="description" value="Imagerie Médicale" />
+   <column name="creator" value="1" />
+   <column name="date_created" value="2016-11-09 09:00:00" />
+   <column name="uuid" value="a4cab59f-f0ce-46c3-bd76-416db36ec719" />
+  </insert>
+ </changeSet>
+ <changeSet author="g-francois" id="2017Mars031018" dbms="mysql">
+		<comment>Update search.caseSensitiveDatabaseStringComparison</comment>
+		<sql>
+			UPDATE global_property SET property_value = 'false' where property='search.caseSensitiveDatabaseStringComparison';
+		</sql>
+	</changeSet>
+	<!-- List of Person attributes -->
+    
+    <changeSet id="2016Oct06-1" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='8d8718c2-c2cc-11de-8d13-0010c6dffd0f';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>
+        <insert tableName="person_attribute_type">
+            <column name="name" value="Birthplace" />
+            <column name="description" value="Location of persons birth" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="8d8718c2-c2cc-11de-8d13-0010c6dffd0f" />
+        </insert>
+    </changeSet>    
+    <changeSet id="2016Oct06-2" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='3b820c18-f530-46b5-a375-6682cde1a21f';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>
+        <insert tableName="person_attribute_type">
+            <column name="name" value="contact" />
+            <column name="description" value="Contact en cas d'urgence" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="3b820c18-f530-46b5-a375-6682cde1a21f" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-3" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='c1af5596-5e50-4658-bf91-6e2ac9c107a5';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="relationContact" />
+            <column name="description" value="Lien avec le contact" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="c1af5596-5e50-4658-bf91-6e2ac9c107a5" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-4" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='eee1e9b3-d7d3-4daf-9c37-c555c83755cd';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="addrContact" />
+            <column name="description" value="Adresse du contact" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="eee1e9b3-d7d3-4daf-9c37-c555c83755cd" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-5" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='7f49d8c5-bbb3-4a36-80e4-ea54efff3f17';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="phoneContact" />
+            <column name="description" value="Téléphone du Contact" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="7f49d8c5-bbb3-4a36-80e4-ea54efff3f17" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-6" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='4dcd847d-b0d1-43b2-8bc4-16c90520472d';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusName1" />
+            <column name="description" value="Premiere personne Responsable" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="4dcd847d-b0d1-43b2-8bc4-16c90520472d" />
+        </insert>
+    </changeSet>    
+    <changeSet id="2016Oct06-7" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='337300d1-0b90-4382-909c-563d915ba9ac';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusName2" />
+            <column name="description" value="Deuxieme personne Responsable" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="337300d1-0b90-4382-909c-563d915ba9ac" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-8" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='95d89e92-958a-4b90-8096-21d90a3328c5';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusRel1" />
+            <column name="description" value="Lien avec la Première Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="95d89e92-958a-4b90-8096-21d90a3328c5" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-9" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='138b111a-eaa7-4fdd-80c9-12d52dbca480';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusRel2" />
+            <column name="description" value="Lien avec la deuxieme Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="138b111a-eaa7-4fdd-80c9-12d52dbca480" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-10" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='a73916fb-662f-49bb-88ee-f6f8f335b977';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusAddress1" />
+            <column name="description" value="Adresse de la premiere Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="a73916fb-662f-49bb-88ee-f6f8f335b977" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-11" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='b609f0c4-2d54-4c51-b433-259a706b1879';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusAdress2" />
+            <column name="description" value="Adresse de la deuxieme Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="b609f0c4-2d54-4c51-b433-259a706b1879" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-12" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='39c3c64c-374e-4a31-81cc-ac764b567c19';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusTelephone2" />
+            <column name="description" value="Téléphone de la deuxieme Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="39c3c64c-374e-4a31-81cc-ac764b567c19" />
+        </insert>
+    </changeSet>    
+    <changeSet id="2016Oct06-13" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='bb89c7a0-1129-4a3b-8f0e-35d84cca7122';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureStatusTelephone1" />
+            <column name="description" value="Téléphone de la premiere Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="bb89c7a0-1129-4a3b-8f0e-35d84cca7122" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-14" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='54747b89-e94f-4948-adbc-795504bdca3b';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="medicalPoa" />
+            <column name="description" value="Personne autorisée par la loi à prendre des décisions médicales pour le patient" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="54747b89-e94f-4948-adbc-795504bdca3b" />
+        </insert>
+    </changeSet>    
+    <changeSet id="2016Oct06-15" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='1ffa053e-df49-4d52-84e9-fa9093ef88a5';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="relationMedicalPoa" />
+            <column name="description" value="Lien de parenté" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="1ffa053e-df49-4d52-84e9-fa9093ef88a5" />
+        </insert>
+    </changeSet>    
+    <changeSet id="2016Oct06-16" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='f18ea49b-7f71-4d99-ae7d-a67b98783fb0';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="addrMedicalPoa" />
+            <column name="description" value="Adresse de la personne autorisée par la loi" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="f18ea49b-7f71-4d99-ae7d-a67b98783fb0" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-17" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='965e66b2-cffc-49fe-a2ce-904f7c003f9f';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="phoneMedicalPoa" />
+            <column name="description" value="Téléphone  personne autorisée par la loi" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="965e66b2-cffc-49fe-a2ce-904f7c003f9f" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-18" author="Jmaxy">
+        <comment></comment>        
+        <update tableName="appframework_component_state">
+            <column name="enabled" value="0" />
+            <where>component_id in ('referenceapplication.registrationapp.registerPatient','registrationapp.basicRegisterPatient')</where>
+        </update>
+    </changeSet>
+    <changeSet id="2016Oct06-19" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='8d871d18-c2cc-11de-8d13-0010c6dffd0f';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="Mother's Name" />
+            <column name="description" value="First or last name of this person's mothe" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="8d871d18-c2cc-11de-8d13-0010c6dffd0f" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-20" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='8d871f2a-c2cc-11de-8d13-0010c6dffd0f';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="Civil Status" />
+            <column name="description" value="Marriage status of this person" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="8d871f2a-c2cc-11de-8d13-0010c6dffd0f" />
+        </insert>
+    </changeSet>
+    
+    <changeSet id="2016Oct06-21" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='e55fd643-a731-4ff4-83c1-c07827b19722';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="occupation" />
+            <column name="description" value="Profession du patient" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="e55fd643-a731-4ff4-83c1-c07827b19722" />
+        </insert>
+    </changeSet>
+    <!-- Saving patient_identifier_type -->
+    <changeSet id="2017march28-1433" author="Feshner">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='d059f6d0-9e42-4760-8de1-8316b48bc5f1';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="Code ST" />
+            <column name="description" value="Code ST du patient" />
+            <column name="check_digit" value="0" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="required" value="0" />
+            <column name="uuid" value="d059f6d0-9e42-4760-8de1-8316b48bc5f1" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-35" author="Feshner">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='9fb4533d-4fd5-4276-875b-2ab41597f5dd';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="Code National" />
+            <column name="description" value="Code National du patient" />
+            <column name="check_digit" value="0" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="required" value="0" />
+            <column name="uuid" value="9fb4533d-4fd5-4276-875b-2ab41597f5dd" />
+        </insert>
+    </changeSet>
 </databaseChangeLog>

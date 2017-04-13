@@ -1,7 +1,7 @@
 <htmlform formUuid="191bbeb5-e0ab-49bb-8df8-9346f5de8f61"
  formName="Vaccination"
  formVersion="1.0"	
- formEncounterType="ca3aed11-1aa4-42a1-b85c-8332fc8001fc"
+ formEncounterType="a86ad9bb-d596-413c-bd4e-30f6fea5057d"
  >
 <ifMode mode="ENTER">
 <includeIf velocityTest="!(($patient.gender == 'F') || ($patient.gender == 'M')) || (! $patient.age)">   
@@ -104,7 +104,7 @@ hide.hidden {
 <hide class="hidden">
    <encounterDate default="today" disallowMultipleEncountersOnDate ="block" />
    <encounterLocation id="encounterLocation" default="SessionAttribute:emrContext.sessionLocationId"/>
-   <encounterProviderAndRole default="currentUser" encounterRole="a0b03050-c99b-11e0-9572-0800200c9a66" required="true"/>
+   <encounterProviderAndRole default="currentUser" encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" required="true"/>
 </hide>
 <div id="generalcontener">
 <section headerLabel="Vaccinations">
