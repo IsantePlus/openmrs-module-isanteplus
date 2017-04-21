@@ -27,10 +27,10 @@ Installation Requirements & Guide
 - Download OpenMRS Reference Application 2.5 modules from: 
 https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_2.5/openmrs-2.5-modules.zip/download
 - Unpack this zip file and copy all modules into the {OPENMRS_HOME}/modules folder
-- Build OpenMRS Platform 2.0.5-SNAPSHOT from [source](https://github.com/openmrs/openmrs-core/tree/2.0.x)
-- Build the following module from source and upgrade the existing module:
-    - [htmlformentry-3.3.2](https://github.com/openmrs/openmrs-module-htmlformentry/tree/3.3.2
-- Download, build and install this module to intergrate with the above mentioned packages
+- Download the OpenMRS Platform 2.0.5 from [source](https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_Platform_2.0.5/openmrs.war/download)
+- Download the following module and upgrade the existing module:
+    - [htmlformentry-3.3.2](https://modules.openmrs.org/modulus/api/releases/1558/download/htmlformentry-3.3.2.omod)
+- Download, build and install this module to integrate with the above mentioned packages
 - Run the integrated package as a normal OpenMRS reference Application using https://wiki.openmrs.org/x/BANGBQ as a sample guide
 
 
