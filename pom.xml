@@ -43,11 +43,17 @@
 		<coreappsVersion>1.11.1</coreappsVersion>
 		<appuiVersion>1.7</appuiVersion>
 		<appframeworkVersion>2.9</appframeworkVersion>
-		<metadatadeployVersion>1.7</metadatadeployVersion>
+		<metadatadeployVersion>1.8.1</metadatadeployVersion>
+		<metadatamappingVersion>1.3.1</metadatamappingVersion>
 		<htmlformentryVersion>3.3.2</htmlformentryVersion>
 		<formentryappVersion>1.3</formentryappVersion>
 		<htmlformentryuiVersion>1.6.1</htmlformentryuiVersion>
 		<referenceapplicationVersion>2.5</referenceapplicationVersion>
+		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
+		<!-- Required to pass tests -->
+		<reportingVersion>0.11.0</reportingVersion>
+		<calculationVersion>1.2</calculationVersion>
+		<serializationxstreamVersion>0.2.12</serializationxstreamVersion>
 	</properties>
 
 	<dependencyManagement>
@@ -133,6 +139,14 @@
 				<version>${referenceapplicationVersion}</version>
 				<scope>provided</scope>
 			</dependency>
+
+			<dependency>
+	            <groupId>org.openmrs.module</groupId>
+	            <artifactId>haiticore-api</artifactId>
+	            <version>${haiticoreVersion}</version>
+	            <scope>provided</scope>
+	        </dependency>
+
 			<!-- End OpenMRS modules -->
 
 			<!-- Begin OpenMRS core -->
@@ -165,7 +179,51 @@
 				<scope>test</scope>
 			</dependency>
 			<!-- End OpenMRS core -->
-			
+
+			<!-- OpenMRS modules required just to fire up application context during testing -->
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>reporting-api</artifactId>
+				<version>${reportingVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>calculation-api</artifactId>
+				<version>${calculationVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>serialization.xstream-api</artifactId>
+				<version>${serializationxstreamVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>serialization.xstream-api-2.0</artifactId>
+				<version>${serializationxstreamVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>metadatamapping-api</artifactId>
+				<version>${metadatamappingVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>metadatasharing-api</artifactId>
+				<version>${metadatasharingVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
 			<dependency>
 				<groupId>org.json</groupId>
 				<artifactId>json</artifactId>

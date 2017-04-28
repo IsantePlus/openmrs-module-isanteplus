@@ -18,9 +18,12 @@ import org.apache.commons.logging.LogFactory;
 import org.openmrs.api.FormService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.ModuleActivator;
+import org.openmrs.module.emrapi.utils.MetadataUtil;
 import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
+import org.openmrs.module.isanteplus.deploy.bundle.IsantePlusMetadataBundle;
+import org.openmrs.module.metadatadeploy.api.MetadataDeployService;
 import org.openmrs.ui.framework.resource.ResourceFactory;
 
 /**
@@ -60,6 +63,9 @@ public class ISantePlusActivator implements ModuleActivator {
 				new IsantePlusManager().getToogleMostRecentVitalsExtension());
 		try {
 			loadIsantePlusHtmlForms();
+			//installMetadataPackages();
+			installMetadataBundles();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -67,6 +73,11 @@ public class ISantePlusActivator implements ModuleActivator {
 		log.info("iSantePlus Patient Dashboard Module started");
 	}
 
+	/**
+	 * Load in the iSantePlus htmlforms that are defiend in the IsantePlusConstants.ISANTEPLUS_FORMFILE_NAMES
+	 * Uses the HtmlFormEntry module
+	 * @throws Exception
+	 */
 	private void loadIsantePlusHtmlForms() throws Exception {
 		try {
 			ResourceFactory resourceFactory = ResourceFactory.getInstance();
@@ -85,6 +96,31 @@ public class ISantePlusActivator implements ModuleActivator {
 			}
 		}
 	}
+	
+	/**
+	 * Install the metadata packages using the MetadataSharing Module
+	 * @throws Exception
+	 */
+	private void installMetadataPackages() throws Exception {
+
+        MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "PIH_REGISTRATION_CONCEPTS_METADATA_PACKAGE_UUID");
+
+        Context.flushSession();
+
+    }
+
+	/**
+	 * Installs metadataBundles from multiple providers all found in the IsantePlusMetadataBundle.class
+	 * Uses the MetadataDeploy Module
+	 */
+    private void installMetadataBundles() {
+
+        MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
+
+        //Deploy metadata packages
+        deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
+
+    }
 
 	/**
 	 * @see ModuleActivator#willStop()

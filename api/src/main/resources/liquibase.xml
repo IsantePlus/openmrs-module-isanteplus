@@ -694,7 +694,8 @@
             <column name="date_created" value="2016-10-06" />
             <column name="uuid" value="8d8718c2-c2cc-11de-8d13-0010c6dffd0f" />
         </insert>
-    </changeSet>    
+    </changeSet>
+<!-- End loading contacts as person attributes-->   
     <changeSet id="2016Oct06-2" author="Jmaxy">
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="0">
@@ -704,7 +705,7 @@
         </preConditions>
         <comment></comment>
         <insert tableName="person_attribute_type">
-            <column name="name" value="contact" />
+            <column name="name" value="emergencyContactName" />
             <column name="description" value="Contact en cas d'urgence" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -721,7 +722,7 @@
         </preConditions>
         <comment></comment>    
         <insert tableName="person_attribute_type">
-            <column name="name" value="relationContact" />
+            <column name="name" value="emergencyContactRelationship" />
             <column name="description" value="Lien avec le contact" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -738,7 +739,7 @@
         </preConditions>
         <comment></comment>    
         <insert tableName="person_attribute_type">
-            <column name="name" value="addrContact" />
+            <column name="name" value="emergencyContactAddress" />
             <column name="description" value="Adresse du contact" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -755,7 +756,7 @@
         </preConditions>
         <comment></comment>        
         <insert tableName="person_attribute_type">
-            <column name="name" value="phoneContact" />
+            <column name="name" value="emergencyContactPhoneNumber" />
             <column name="description" value="Téléphone du Contact" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -772,29 +773,12 @@
         </preConditions>
         <comment></comment>        
         <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusName1" />
+            <column name="name" value="disclosureContactName1" />
             <column name="description" value="Premiere personne Responsable" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
             <column name="uuid" value="4dcd847d-b0d1-43b2-8bc4-16c90520472d" />
-        </insert>
-    </changeSet>    
-    <changeSet id="2016Oct06-7" author="Jmaxy">
-        <preConditions onFail="MARK_RAN">
-            <sqlCheck expectedResult="0">
-                SELECT COUNT(*) FROM
-                person_attribute_type WHERE uuid ='337300d1-0b90-4382-909c-563d915ba9ac';
-            </sqlCheck>
-        </preConditions>
-        <comment></comment>    
-        <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusName2" />
-            <column name="description" value="Deuxieme personne Responsable" />
-            <column name="format" value="java.lang.String" />
-            <column name="creator" value="1" />
-            <column name="date_created" value="2016-10-06" />
-            <column name="uuid" value="337300d1-0b90-4382-909c-563d915ba9ac" />
         </insert>
     </changeSet>
     <changeSet id="2016Oct06-8" author="Jmaxy">
@@ -806,29 +790,12 @@
         </preConditions>
         <comment></comment>        
         <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusRel1" />
+            <column name="name" value="disclosureContactRelationship1" />
             <column name="description" value="Lien avec la Première Personne" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
             <column name="uuid" value="95d89e92-958a-4b90-8096-21d90a3328c5" />
-        </insert>
-    </changeSet>
-    <changeSet id="2016Oct06-9" author="Jmaxy">
-        <preConditions onFail="MARK_RAN">
-            <sqlCheck expectedResult="0">
-                SELECT COUNT(*) FROM
-                person_attribute_type WHERE uuid ='138b111a-eaa7-4fdd-80c9-12d52dbca480';
-            </sqlCheck>
-        </preConditions>
-        <comment></comment>        
-        <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusRel2" />
-            <column name="description" value="Lien avec la deuxieme Personne" />
-            <column name="format" value="java.lang.String" />
-            <column name="creator" value="1" />
-            <column name="date_created" value="2016-10-06" />
-            <column name="uuid" value="138b111a-eaa7-4fdd-80c9-12d52dbca480" />
         </insert>
     </changeSet>
     <changeSet id="2016Oct06-10" author="Jmaxy">
@@ -840,12 +807,63 @@
         </preConditions>
         <comment></comment>    
         <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusAddress1" />
+            <column name="name" value="disclosureContactAddress1" />
             <column name="description" value="Adresse de la premiere Personne" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
             <column name="uuid" value="a73916fb-662f-49bb-88ee-f6f8f335b977" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-13" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='bb89c7a0-1129-4a3b-8f0e-35d84cca7122';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureContactTelephone1" />
+            <column name="description" value="Téléphone de la premiere Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="bb89c7a0-1129-4a3b-8f0e-35d84cca7122" />
+        </insert>
+    </changeSet> 
+    <changeSet id="2016Oct06-7" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='337300d1-0b90-4382-909c-563d915ba9ac';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>    
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureContactName2" />
+            <column name="description" value="Deuxieme personne Responsable" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="337300d1-0b90-4382-909c-563d915ba9ac" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-9" author="Jmaxy">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                person_attribute_type WHERE uuid ='138b111a-eaa7-4fdd-80c9-12d52dbca480';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="person_attribute_type">
+            <column name="name" value="disclosureContactRelationship2" />
+            <column name="description" value="Lien avec la deuxieme Personne" />
+            <column name="format" value="java.lang.String" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="uuid" value="138b111a-eaa7-4fdd-80c9-12d52dbca480" />
         </insert>
     </changeSet>
     <changeSet id="2016Oct06-11" author="Jmaxy">
@@ -857,7 +875,7 @@
         </preConditions>
         <comment></comment>    
         <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusAdress2" />
+            <column name="name" value="disclosureContactAdress2" />
             <column name="description" value="Adresse de la deuxieme Personne" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -874,29 +892,12 @@
         </preConditions>
         <comment></comment>        
         <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusTelephone2" />
+            <column name="name" value="disclosureContactTelephone2" />
             <column name="description" value="Téléphone de la deuxieme Personne" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
             <column name="uuid" value="39c3c64c-374e-4a31-81cc-ac764b567c19" />
-        </insert>
-    </changeSet>    
-    <changeSet id="2016Oct06-13" author="Jmaxy">
-        <preConditions onFail="MARK_RAN">
-            <sqlCheck expectedResult="0">
-                SELECT COUNT(*) FROM
-                person_attribute_type WHERE uuid ='bb89c7a0-1129-4a3b-8f0e-35d84cca7122';
-            </sqlCheck>
-        </preConditions>
-        <comment></comment>    
-        <insert tableName="person_attribute_type">
-            <column name="name" value="disclosureStatusTelephone1" />
-            <column name="description" value="Téléphone de la premiere Personne" />
-            <column name="format" value="java.lang.String" />
-            <column name="creator" value="1" />
-            <column name="date_created" value="2016-10-06" />
-            <column name="uuid" value="bb89c7a0-1129-4a3b-8f0e-35d84cca7122" />
         </insert>
     </changeSet>
     <changeSet id="2016Oct06-14" author="Jmaxy">
@@ -908,7 +909,7 @@
         </preConditions>
         <comment></comment>    
         <insert tableName="person_attribute_type">
-            <column name="name" value="medicalPoa" />
+            <column name="name" value="medicalPowerOfAttorneyName" />
             <column name="description" value="Personne autorisée par la loi à prendre des décisions médicales pour le patient" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -925,7 +926,7 @@
         </preConditions>
         <comment></comment>        
         <insert tableName="person_attribute_type">
-            <column name="name" value="relationMedicalPoa" />
+            <column name="name" value="medicalPowerOfAttorneyRelationship" />
             <column name="description" value="Lien de parenté" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -942,7 +943,7 @@
         </preConditions>
         <comment></comment>    
         <insert tableName="person_attribute_type">
-            <column name="name" value="addrMedicalPoa" />
+            <column name="name" value="medicalPowerOfAttorneyAddress" />
             <column name="description" value="Adresse de la personne autorisée par la loi" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -959,7 +960,7 @@
         </preConditions>
         <comment></comment>        
         <insert tableName="person_attribute_type">
-            <column name="name" value="phoneMedicalPoa" />
+            <column name="name" value="medicalPowerOfAttorneyPhone" />
             <column name="description" value="Téléphone  personne autorisée par la loi" />
             <column name="format" value="java.lang.String" />
             <column name="creator" value="1" />
@@ -967,6 +968,7 @@
             <column name="uuid" value="965e66b2-cffc-49fe-a2ce-904f7c003f9f" />
         </insert>
     </changeSet>
+<!-- End loading contacts as person attributes-->
     <changeSet id="2016Oct06-18" author="Jmaxy">
         <comment></comment>        
         <update tableName="appframework_component_state">

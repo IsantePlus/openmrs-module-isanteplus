@@ -60,7 +60,38 @@
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>htmlformentryui-api</artifactId>
 			</dependency>
-			<!-- End OpenMRS modules -->
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>emrapi-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>coreapps-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>metadatadeploy-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>haiticore-api</artifactId>
+			</dependency>
+
+		<!-- End OpenMRS modules -->
+		
+		<!-- OpenMRS modules required just to fire up application context during testing -->
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>reporting-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>calculation-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>serialization.xstream-api</artifactId>
+			</dependency>
 		
 		<dependency>
 			<groupId>org.json</groupId>

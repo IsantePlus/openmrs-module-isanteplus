@@ -32,11 +32,14 @@ public class IsantePlusConstants {
 	 * Add a name whenever a new iSante form file is added or one existing is
 	 * renamed
 	 */
-	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdM.xml,Ordpd.xml,ArretVIH.xml,PVisitAdult.xml,PVisitPed.xml,ConsPed.xml,PCons.xml,PConsPed.xml,Cons.xml,Vacc.xml,VisitSuivi.xml,VisitSuiviPed.xml,Imagerie.xml";
+	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdM.xml,Ordpd.xml,ArretVIH.xml,PVisitAdult.xml,PVisitPed.xml,ConsPed.xml,PCons.xml,PConsPed.xml,Cons.xml,Vacc.xml,VisitSuivi.xml,VisitSuiviPed.xml,Imagerie.xml,patientRegistration.xml";
 
 	public static String[] ISANTEPLUS_FORMFILE_NAMES = ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS.split(",");
 
 	public static final String DRUGSHISTORY_EXTENSIONPOINT_ID = "isanteplus.drugsHistory";
 
 	public static String BMIGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.bmiGraph";
+	
+	public static final String PIH_REGISTRATION_CONCEPTS_METADATA_PACKAGE_UUID = "2ffa55cc-4dcd-49fc-ac4f-e3406cfce788";
+
 }
