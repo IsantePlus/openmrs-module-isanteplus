@@ -47,32 +47,23 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 
 	protected Log log = LogFactory.getLog(getClass());
 
- 	public static final class Packages {
-		
-	}
-
-	public static final String DEFAULT_LOCALE = "fr";
-    private static final String REGISTRATION_ENCOUNTER_NAME = "Enregistrement de patient";
-
-
 	/**
 	 * @see AbstractMetadataBundle#install()
 	 */
 	@Override
 	public void install() {
 
-        log.info("Install Metadata Sharing Packages");
-
-        //installMetadataSharingPackage("HUM_Metadata-57.zip", IsantePlusConstants.PIH_REGISTRATION_CONCEPTS_METADATA_PACKAGE_UUID);
-
 		log.info("Setting Global Properties");
 
 		Map<String, String> properties = new LinkedHashMap<String, String>();
 		
-		// OpenMRS Core
+		// Set Global properties
+		// Set the default locale
+		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE, IsantePlusConstants.DEFAULT_LOCALE);
+		// Set the locales that are allowed
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LOCALE_ALLOWED_LIST, "fr, ht, en");
-		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE, DEFAULT_LOCALE);
-
+		// Set the name layout from "short" to "givenfamily" to only ask for two names
+		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT, "givenfamily");
 
 		// EMR API
 		// extra patient identifiers

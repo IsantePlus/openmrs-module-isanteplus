@@ -1,0 +1,620 @@
+[
+    {
+        "id": "isanteplus.registration",
+        "label": "IsantePlus Register Patient",
+        "description": "Create a new Patient Record",
+        "extensions": [
+            {
+                "id": "referenceapplication.registrationapp.registerPatient.homepageLink",
+                "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+                "type": "link",
+                "label": "referenceapplication.app.registerPatient.label",
+                "url": "registrationapp/registerPatient.page?appId=isanteplus.registration",
+                "icon": "icon-user",
+                "order": 1,
+                "requiredPrivilege": "App: registrationapp.registerPatient"
+            }
+        ],
+        "config": {
+            "afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
+            "patientDashboardLink": "registrationapp/registrationSummary.page",
+            "allowRetrospectiveEntry": true,
+            "allowUnknownPatients": false,
+            "registrationEncounter": {
+                "encounterType": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
+                "encounterRole": "ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+            },
+            "sections": [
+                {
+                    "id": "mothersName",
+                    "label": "isanteplus.registration.patient.mothersName.label",
+                    "questions": [
+                        {
+                        "legend": "isanteplus.registration.patient.mothersName.label",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "isanteplus.registration.patient.mothersName.label",
+                                "formFieldName": "First Name of Mother",
+                                "uuid": "8d871d18-c2cc-11de-8d13-0010c6dffd0f",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                }
+                            }
+                        ]
+                        }
+                    ]
+                },
+                {
+                    "id": "contactInfo",
+                    "label": "registrationapp.patient.contactInfo.label",
+                    "questions": [
+                        {
+                            "legend": "Person.address",
+                            "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"]
+                                         }
+                                   }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "registrationapp.patient.phone.label",
+                            "id": "phoneNumberLabel",
+                            "fields": [
+                                {
+                                    "type": "personAttribute",
+                                    "label": "registrationapp.patient.phone.question",
+                                    "formFieldName": "Telephone Number",
+                                    "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["phone"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "social",
+                    "label": "isanteplus.registration.patient.social.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.birthplace.label",
+                            "id":"placeOfBirth-container",
+                            "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.birthplace.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"],
+                                            "fieldMappings": {
+                                                "country": "obsgroup.PIH:Birthplace address construct.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.PIH:Birthplace address construct.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.PIH:Birthplace address construct.obs.PIH:City Village",
+                                                "neighborhoodCell": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address3",
+                                                "address1": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address1",
+                                                "address2": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address2"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                        "legend": "isanteplus.registration.patient.civilStatus.label",
+                        "id": "civilStatus",
+                        "fields": [
+                            {
+                                "type": "obs",
+                                "label": "isanteplus.registration.patient.civilStatus.label",
+                                "formFieldName": "obs.CIEL:1054",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "expanded": true,
+                                        "hideEmptyLabel": true,
+                                        "initialValue": "CIEL:1067",
+                                        "options": [
+                                            
+                                            {"value": "CIEL:5555", "label": "isanteplus.registration.patient.civilStatus.married.label"},
+                                            {"value": "CIEL:1060", "label": "isanteplus.registration.patient.civilStatus.livingWithPartner.label"},
+                                            {"value": "CIEL:1059", "label": "isanteplus.registration.patient.civilStatus.widowed.label"},
+                                            {"value": "CIEL:1056", "label": "isanteplus.registration.patient.civilStatus.separated.label"},
+                                            {"value": "CIEL:1058", "label": "isanteplus.registration.patient.civilStatus.divorced.label"},
+                                            {"value": "CIEL:1057", "label": "isanteplus.registration.patient.civilStatus.neverMarried.label"},
+                                            {"value": "CIEL:1067", "label": "isanteplus.registration.patient.civilStatus.unknown.label"}
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                        },
+                        {
+                        "legend": "isanteplus.registration.patient.occupation.label",
+                        "id":"occupation",
+                        "fields": [
+                            {
+                                "type": "obs",
+                                "label": "isanteplus.registration.patient.occupation.label",
+                                "formFieldName": "obs.CIEL:1542",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "expanded": true,
+                                        "hideEmptyLabel": true,
+                                        "initialValue": "CIEL:1067",
+                                        "options": [
+                                            {"value": "CIEL:159466", "label": "isanteplus.registration.patient.occupation.driver.label"},
+                                            {"value": "PIH:COMMERCE", "label": "isanteplus.registration.patient.occupation.commerce.label"},
+                                            {"value": "PIH:MINER", "label": "isanteplus.registration.patient.occupation.miner.label"},
+                                            {"value": "PIH:SHEPHERD", "label": "isanteplus.registration.patient.occupation.shepherd.label"},
+                                            {"value": "CIEL:1538", "label": "isanteplus.registration.patient.occupation.farmer.label"},
+                                            {"value": "PIH:HOUSEWORK/FIELDWORK", "label": "isanteplus.registration.patient.occupation.houseworkFieldwork.label"},
+                                            {"value": "PIH:FACTORY WORKER", "label": "isanteplus.registration.patient.occupation.factoryWorker.label"},
+                                            {"value": "CIEL:5619", "label": "isanteplus.registration.patient.occupation.healthCareWorker.label"},
+                                            {"value": "CIEL:162944", "label": "isanteplus.registration.patient.occupation.civilServant.label"},
+                                            {"value": "CIEL:159390", "label": "isanteplus.registration.patient.occupation.manualLaborer.label"},
+                                            {"value": "CIEL:159464", "label": "isanteplus.registration.patient.occupation.housework.label"},
+                                            {"value": "CIEL:162946", "label": "isanteplus.registration.patient.occupation.teacher.label"},
+                                            {"value": "CIEL:159463", "label": "isanteplus.registration.patient.occupation.professional.label"},
+                                            {"value": "CIEL:159673", "label": "isanteplus.registration.patient.occupation.smallBusinessOwner.label"},
+                                            {"value": "CIEL:159674", "label": "isanteplus.registration.patient.occupation.fisherman.label"},
+                                            {"value": "CIEL:159461", "label": "isanteplus.registration.patient.occupation.retired.label"},
+                                            {"value": "CIEL:159675", "label": "isanteplus.registration.patient.occupation.fruitOrVegetableVendor.label"},
+                                            {"value": "CIEL:162945", "label": "isanteplus.registration.patient.occupation.marketVendor.label"},
+                                            {"value": "CIEL:159465", "label": "isanteplus.registration.patient.occupation.student.label"},
+                                            {"value": "CIEL:123801", "label": "isanteplus.registration.patient.occupation.unemployed.label"},
+                                            {"value": "CIEL:5622", "label": "isanteplus.registration.patient.occupation.other.label"},
+                                            {"value": "CIEL:1067", "label": "isanteplus.registration.patient.occupation.unknown.label"}
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                        },
+                        {
+                        "legend": "isanteplus.registration.patient.religion.label",
+                        "id":"religion",
+                        "fields": [
+                            {
+                                "type": "obs",
+                                "label": "isanteplus.registration.patient.religion.label",
+                                "formFieldName": "obs.CIEL:162929",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "expanded": true,
+                                        "hideEmptyLabel": true,
+                                        "initialValue": "CIEL:1067",
+                                        "options": [
+                                            {"value": "CIEL:162930", "label": "isanteplus.registration.patient.religion.vodoo.label"},
+                                            {"value": "CIEL:162931", "label": "isanteplus.registration.patient.religion.catholic.label"},
+                                            {"value": "CIEL:162932", "label": "isanteplus.registration.patient.religion.baptist.label"},
+                                            {"value": "CIEL:162933", "label": "isanteplus.registration.patient.religion.islam.label"},
+                                            {"value": "CIEL:162934", "label": "isanteplus.registration.patient.religion.pentecostal.label"},
+                                            {"value": "CIEL:162935", "label": "isanteplus.registration.patient.religion.adventist.label"},
+                                            {"value": "CIEL:162936", "label": "isanteplus.registration.patient.religion.jehovasWitness.label"},
+                                            {"value": "CIEL:5622", "label": "isanteplus.registration.patient.religion.other.label"},
+                                            {"value": "CIEL:1067", "label": "isanteplus.registration.patient.religion.unknown.label"}
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                        }
+                    ]
+                },
+                {
+                    "id": "powerOfAttorneyContact",
+                    "label": "isanteplus.registration.patient.powerOfAttorneyContact.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.powerOfAttorneyContact.nameAndRelationship.label",
+                            "id": "powerOfAttorneyContactNameAndRelationship",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.powerOfAttorneyContact.name.question",
+                                    "formFieldName": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    }
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.powerOfAttorneyContact.relationship.question",
+                                    "formFieldName": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.CIEL:164352",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/dropDown",
+                                        "config": {
+                                            "expanded": true,
+                                            "hideEmptyLabel": true,
+                                            "initialValue": "CIEL:1067",
+                                            "options": [
+                                                {"value": "CIEL:971", "label": "isanteplus.registration.patient.relationship.father.label"},
+                                                {"value": "CIEL:970", "label": "isanteplus.registration.patient.relationship.mother.label"},
+                                                {"value": "CIEL:973", "label": "isanteplus.registration.patient.relationship.grandparent.label"},
+                                                {"value": "CIEL:974", "label": "isanteplus.registration.patient.relationship.uncle.label"},
+                                                {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
+                                                {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
+                                                {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
+                                                {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.powerOfAttorneyContact.address.label",
+                            "id": "powerofAttorneyContactAddress",
+                            "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.powerOfAttorneyContact.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"],
+                                            "fieldMappings": {
+                                                "country": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:City Village",
+                                                "neighborhoodCell": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address3",
+                                                "address1": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address1",
+                                                "address2": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address2"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.powerOfAttorneyContact.phone.label",
+                            "id": "powerOfAttorneyContactPhoneNumber",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.powerOfAttorneyContact.phone.question",
+                                    "formFieldName": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["phone"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "emergencyContactPerson",
+                    "label": "isanteplus.registration.patient.emergencyContact.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.emergencyContact.nameAndRelationship.label",
+                            "id": "emergencyContactNameAndRelationship",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.emergencyContact.name.question",
+                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    }
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.emergencyContact.relationship.question",
+                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.CIEL:164352",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/dropDown",
+                                        "config": {
+                                            "expanded": true,
+                                            "hideEmptyLabel": true,
+                                            "initialValue": "CIEL:1067",
+                                            "options": [
+                                                {"value": "CIEL:971", "label": "isanteplus.registration.patient.relationship.father.label"},
+                                                {"value": "CIEL:970", "label": "isanteplus.registration.patient.relationship.mother.label"},
+                                                {"value": "CIEL:973", "label": "isanteplus.registration.patient.relationship.grandparent.label"},
+                                                {"value": "CIEL:974", "label": "isanteplus.registration.patient.relationship.uncle.label"},
+                                                {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
+                                                {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
+                                                {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
+                                                {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.emergencyContact.address.label",
+                            "id": "emergencyContactAddress-container",
+                            "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.emergencyContact.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"],
+                                            "fieldMappings": {
+                                                "country": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:City Village",
+                                                "neighborhoodCell": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address3",
+                                                "address1": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address1",
+                                                "address2": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address2"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.emergencyContact.phone.label",
+                            "id": "emergencyContactPhoneNumber",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.emergencyContact.phone.question",
+                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["phone"]
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text",
+                                        "config": {
+                                            "style":"display:none",
+                                            "initialValue": "1"
+                                        }
+                                    },
+                                    "cssClasses": ["invisible"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "medicalDisclosureContact1",
+                    "label": "isanteplus.registration.patient.medicalDisclosureContact1.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.medicalDisclosure.nameAndRelationship.label",
+                            "id": "medicalDisclosure1NameAndRelationship",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.name.question",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    }
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.relationship.question",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/dropDown",
+                                        "config": {
+                                            "expanded": true,
+                                            "hideEmptyLabel": true,
+                                            "initialValue": "CIEL:1067",
+                                            "options": [
+                                                {"value": "CIEL:971", "label": "isanteplus.registration.patient.relationship.father.label"},
+                                                {"value": "CIEL:970", "label": "isanteplus.registration.patient.relationship.mother.label"},
+                                                {"value": "CIEL:973", "label": "isanteplus.registration.patient.relationship.grandparent.label"},
+                                                {"value": "CIEL:974", "label": "isanteplus.registration.patient.relationship.uncle.label"},
+                                                {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
+                                                {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
+                                                {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
+                                                {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.medicalDisclosure.address.label",
+                            "id": "medicalDisclosure1Address",
+                            "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"],
+                                            "fieldMappings": {
+                                                "country": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
+                                                "neighborhoodCell": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
+                                                "address1": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
+                                                "address2": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.medicalDisclosure.phone.label",
+                            "id": "medicalDisclosure1PhoneNumber",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.phone.question",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["phone"]
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text",
+                                        "config": {
+                                            "style":"display:none",
+                                            "initialValue": "1"
+                                        }
+                                    },
+                                    "cssClasses": ["invisible"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "medicalDisclosureContact2",
+                    "label": "isanteplus.registration.patient.medicalDisclosureContact2.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.medicalDisclosure.nameAndRelationship.label",
+                            "id": "medicalDisclosure2NameAndRelationship",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.name.question",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    }
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.relationship.question",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/dropDown",
+                                        "config": {
+                                            "expanded": true,
+                                            "hideEmptyLabel": true,
+                                            "initialValue": "CIEL:1067",
+                                            "options": [
+                                                {"value": "CIEL:971", "label": "isanteplus.registration.patient.relationship.father.label"},
+                                                {"value": "CIEL:970", "label": "isanteplus.registration.patient.relationship.mother.label"},
+                                                {"value": "CIEL:973", "label": "isanteplus.registration.patient.relationship.grandparent.label"},
+                                                {"value": "CIEL:974", "label": "isanteplus.registration.patient.relationship.uncle.label"},
+                                                {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
+                                                {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
+                                                {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
+                                                {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.medicalDisclosure.address.label",
+                            "id": "medicalDisclosure2Address",
+                            "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"],
+                                            "fieldMappings": {
+                                                "country": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
+                                                "neighborhoodCell": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
+                                                "address1": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
+                                                "address2": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.medicalDisclosure.phone.label",
+                            "id": "medicalDisclosure2PhoneNumber",
+                            "fields": [
+                                {
+                                    "type": "obsgroup",
+                                    "label": "isanteplus.registration.patient.medicalDisclosure.phone.question",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["phone"]
+                                },
+                                {
+                                    "type": "obsgroup",
+                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text",
+                                        "config": {
+                                            "style":"display:none",
+                                            "initialValue": "2"
+                                        }
+                                    },
+                                    "cssClasses": ["invisible"]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]

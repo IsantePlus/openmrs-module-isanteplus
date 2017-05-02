@@ -39,7 +39,7 @@ public class IsantePlusConstants {
 	public static final String DRUGSHISTORY_EXTENSIONPOINT_ID = "isanteplus.drugsHistory";
 
 	public static String BMIGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.bmiGraph";
-	
-	public static final String PIH_REGISTRATION_CONCEPTS_METADATA_PACKAGE_UUID = "2ffa55cc-4dcd-49fc-ac4f-e3406cfce788";
+
+	public static final String DEFAULT_LOCALE = "fr";
 
 }

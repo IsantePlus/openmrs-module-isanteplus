@@ -1,0 +1,22 @@
+<!--
+Defines packages to be loaded by the Metadata Sharing module on startup of this module
+-->
+<org.openmrs.module.emrapi.metadata.MetadataPackagesConfig>
+    <packages>
+
+		<org.openmrs.module.emrapi.metadata.MetadataPackageConfig>
+            <filenameBase>iSantePlus_Concept_Source</filenameBase>
+            <groupUuid>7781d497-f56e-4f5f-8ac2-c4116a7d1271</groupUuid>
+            <version>1</version>
+            <importMode>MIRROR</importMode>
+        </org.openmrs.module.emrapi.metadata.MetadataPackageConfig>
+
+        <org.openmrs.module.emrapi.metadata.MetadataPackageConfig>
+            <filenameBase>iSantePlus_Registration_Concepts_Not_in_CIEL</filenameBase>
+            <groupUuid>2b73be11-d509-461c-8465-866c710f11b9</groupUuid>
+            <version>1</version>
+            <importMode>PEER_TO_PEER</importMode>
+        </org.openmrs.module.emrapi.metadata.MetadataPackageConfig>
+
+    </packages>
+</org.openmrs.module.emrapi.metadata.MetadataPackagesConfig>

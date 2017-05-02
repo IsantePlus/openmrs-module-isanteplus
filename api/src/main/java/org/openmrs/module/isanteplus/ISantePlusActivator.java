@@ -18,6 +18,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openmrs.api.FormService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.ModuleActivator;
+import org.openmrs.module.appframework.service.AppFrameworkService;
 import org.openmrs.module.emrapi.utils.MetadataUtil;
 import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
@@ -61,10 +62,24 @@ public class ISantePlusActivator implements ModuleActivator {
 	public void started() {
 		Context.getService(IsantePlusService.class).toggleRecentVitalsSection(
 				new IsantePlusManager().getToogleMostRecentVitalsExtension());
+		AppFrameworkService appFrameworkService = Context.getService(AppFrameworkService.class);
+		
 		try {
-			loadIsantePlusHtmlForms();
-			//installMetadataPackages();
+			log.info("Installing Metadata Packages");
+			installMetadataPackages();
+			
+			log.info("Installing Metadata Bundles");
 			installMetadataBundles();
+			
+			log.info("Installing iSantePlus Forms");
+			loadIsantePlusHtmlForms();
+			
+			//Disable the following registration apps
+			appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
+			appFrameworkService.disableApp("referenceapplication.registrationapp.registerPatient");
+			
+			//Enable the iSantePlus Apps
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -103,7 +118,11 @@ public class ISantePlusActivator implements ModuleActivator {
 	 */
 	private void installMetadataPackages() throws Exception {
 
-        MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "PIH_REGISTRATION_CONCEPTS_METADATA_PACKAGE_UUID");
+        //We need to first install the iSantePlus concept source metadata bundle
+		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Concept_Source");
+		
+		//Then we install the rest of the metadata. We do this because there's an error when mapping concepts to a transient concepts source in the database
+		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts_Not_in_CIEL");
 
         Context.flushSession();
 
