@@ -1,0 +1,29 @@
+[
+    {
+        "id": "isanteplus.registration.mostRecentPoaContact",
+        "description": "isanteplus.registration.mostRecentPoaContact.description",
+        "label": "isanteplus.registration.mostRecentPoaContact.label",
+        "icon": "icon-user",
+        "order": 2,
+        "config": {
+            "encounterTypeUuid": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
+            "encounterDateLabel": "isanteplus.registration.mostRecentPoaContact.encounterDateLabel",
+            "definitionUiResource": "isanteplus:htmlforms/RegistrationPoa.xml",
+            "editable": true,
+            "editIcon": "icon-pencil",
+            "edit-provider": "htmlformentryui",
+            "edit-fragment": "htmlform/editHtmlFormWithStandardUi"
+        },
+        "extensions": [
+          {
+            "id": "isanteplus.registration.mostRecentPoaContactFirstColumn",
+            "appId": "isanteplus.registration.mostRecentPoaContact",
+            "extensionPointId": "registrationSummary.secondColumnContentFragments",
+            "extensionParams": {
+              "provider": "coreapps",
+              "fragment": "encounter/mostRecentEncounter"
+            }
+          }
+        ]
+    }
+]

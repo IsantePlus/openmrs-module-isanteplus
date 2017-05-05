@@ -1,0 +1,29 @@
+[
+    {
+        "id": "isanteplus.registration.mostRecentSocial",
+        "description": "isanteplus.registration.mostRecentSocial.description",
+        "label": "isanteplus.registration.mostRecentSocial.label",
+        "icon": "icon-user",
+        "order": 1,
+        "config": {
+            "encounterTypeUuid": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
+            "encounterDateLabel": "isanteplus.registration.mostRecentSocial.encounterDateLabel",
+            "definitionUiResource": "isanteplus:htmlforms/RegistrationSocial.xml",
+            "editable": true,
+            "editIcon": "icon-pencil",
+            "edit-provider": "htmlformentryui",
+            "edit-fragment": "htmlform/editHtmlFormWithStandardUi"
+        },
+        "extensions": [
+          {
+            "id": "isanteplus.registration.mostRecentSocialFirstColumn",
+            "appId": "isanteplus.registration.mostRecentSocial",
+            "extensionPointId": "registrationSummary.contentFragments",
+            "extensionParams": {
+              "provider": "coreapps",
+              "fragment": "encounter/mostRecentEncounter"
+            }
+          }
+        ]
+    }
+]

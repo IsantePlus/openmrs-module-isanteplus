@@ -1,0 +1,29 @@
+[
+    {
+        "id": "isanteplus.registration.mostRecentEmergencyContact",
+        "description": "isanteplus.registration.mostRecentEmergencyContact.description",
+        "label": "isanteplus.registration.mostRecentEmergencyContact.label",
+        "icon": "icon-user",
+        "order": 2,
+        "config": {
+            "encounterTypeUuid": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
+            "encounterDateLabel": "isanteplus.registration.mostRecentEmergencyContact.encounterDateLabel",
+            "definitionUiResource": "isanteplus:htmlforms/RegistrationEmerContact.xml",
+            "editable": true,
+            "editIcon": "icon-pencil",
+            "edit-provider": "htmlformentryui",
+            "edit-fragment": "htmlform/editHtmlFormWithStandardUi"
+        },
+        "extensions": [
+          {
+            "id": "isanteplus.registration.mostRecentEmergencyContactFirstColumn",
+            "appId": "isanteplus.registration.mostRecentEmergencyContact",
+            "extensionPointId": "registrationSummary.contentFragments",
+            "extensionParams": {
+              "provider": "coreapps",
+              "fragment": "encounter/mostRecentEncounter"
+            }
+          }
+        ]
+    }
+]

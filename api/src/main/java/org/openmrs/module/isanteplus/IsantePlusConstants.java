@@ -32,7 +32,7 @@ public class IsantePlusConstants {
 	 * Add a name whenever a new iSante form file is added or one existing is
 	 * renamed
 	 */
-	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdM.xml,Ordpd.xml,ArretVIH.xml,PVisitAdult.xml,PVisitPed.xml,ConsPed.xml,PCons.xml,PConsPed.xml,Cons.xml,Vacc.xml,VisitSuivi.xml,VisitSuiviPed.xml,Imagerie.xml,patientRegistration.xml";
+	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdM.xml,Ordpd.xml,ArretVIH.xml,PVisitAdult.xml,PVisitPed.xml,ConsPed.xml,PCons.xml,PConsPed.xml,Cons.xml,Vacc.xml,VisitSuivi.xml,VisitSuiviPed.xml,Imagerie.xml,RegistrationSocial.xml,RegistrationPoa.xml,RegistrationEmerContact.xml,RegistrationDiscContact.xml";
 
 	public static String[] ISANTEPLUS_FORMFILE_NAMES = ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS.split(",");
 

@@ -61,7 +61,7 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 		// Set the default locale
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE, IsantePlusConstants.DEFAULT_LOCALE);
 		// Set the locales that are allowed
-		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LOCALE_ALLOWED_LIST, "fr, ht, en");
+		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LOCALE_ALLOWED_LIST, "fr, ht, en, en_us, en_gb");
 		// Set the name layout from "short" to "givenfamily" to only ask for two names
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT, "givenfamily");
 

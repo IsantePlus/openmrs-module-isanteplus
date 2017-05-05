@@ -2,6 +2,7 @@
     {
         "id": "isanteplus.registration",
         "label": "IsantePlus Register Patient",
+        "instanceOf": "registrationapp.registerPatient",
         "description": "Create a new Patient Record",
         "extensions": [
             {
@@ -26,8 +27,7 @@
             },
             "sections": [
                 {
-                    "id": "mothersName",
-                    "label": "isanteplus.registration.patient.mothersName.label",
+                    "id": "demographics",
                     "questions": [
                         {
                         "legend": "isanteplus.registration.patient.mothersName.label",
@@ -107,7 +107,7 @@
                                                 "country": "obsgroup.PIH:Birthplace address construct.obs.PIH:Country",
                                                 "stateProvince": "obsgroup.PIH:Birthplace address construct.obs.PIH:State Province",
                                                 "cityVillage": "obsgroup.PIH:Birthplace address construct.obs.PIH:City Village",
-                                                "neighborhoodCell": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address3",
+                                                "address3": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address3",
                                                 "address1": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address1",
                                                 "address2": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address2"
                                             }
@@ -284,7 +284,7 @@
                                                 "country": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Country",
                                                 "stateProvince": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:State Province",
                                                 "cityVillage": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:City Village",
-                                                "neighborhoodCell": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address3",
+                                                "address3": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address3",
                                                 "address1": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address1",
                                                 "address2": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address2"
                                             }
@@ -372,7 +372,7 @@
                                                 "country": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Country",
                                                 "stateProvince": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:State Province",
                                                 "cityVillage": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:City Village",
-                                                "neighborhoodCell": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address3",
+                                                "address3": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address3",
                                                 "address1": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address1",
                                                 "address2": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address2"
                                             }
@@ -406,15 +406,15 @@
                                             "initialValue": "1"
                                         }
                                     },
-                                    "cssClasses": ["invisible"]
+                                    "cssClasses": ["invisible disabled"]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "id": "medicalDisclosureContact1",
-                    "label": "isanteplus.registration.patient.medicalDisclosureContact1.label",
+                    "id": "medicalDisclosure1",
+                    "label": "isanteplus.registration.patient.medicalDisclosure1.label",
                     "questions": [
                         {
                             "legend": "isanteplus.registration.patient.medicalDisclosure.nameAndRelationship.label",
@@ -473,7 +473,7 @@
                                                 "country": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
                                                 "stateProvince": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
                                                 "cityVillage": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
-                                                "neighborhoodCell": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
+                                                "address3": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
                                                 "address1": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
                                                 "address2": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
                                             }
@@ -507,15 +507,15 @@
                                             "initialValue": "1"
                                         }
                                     },
-                                    "cssClasses": ["invisible"]
+                                    "cssClasses": ["invisible disabled"]
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "id": "medicalDisclosureContact2",
-                    "label": "isanteplus.registration.patient.medicalDisclosureContact2.label",
+                    "id": "medicalDisclosure2",
+                    "label": "isanteplus.registration.patient.medicalDisclosure2.label",
                     "questions": [
                         {
                             "legend": "isanteplus.registration.patient.medicalDisclosure.nameAndRelationship.label",
@@ -574,7 +574,7 @@
                                                 "country": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
                                                 "stateProvince": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
                                                 "cityVillage": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
-                                                "neighborhoodCell": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
+                                                "address3": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
                                                 "address1": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
                                                 "address2": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
                                             }
@@ -608,7 +608,7 @@
                                             "initialValue": "2"
                                         }
                                     },
-                                    "cssClasses": ["invisible"]
+                                    "cssClasses": ["invisible disabled"]
                                 }
                             ]
                         }

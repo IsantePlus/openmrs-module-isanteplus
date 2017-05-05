@@ -1,0 +1,29 @@
+[
+    {
+        "id": "isanteplus.registration.mostRecentMedDisclosure",
+        "description": "isanteplus.registration.mostRecentMedDisclosure.description",
+        "label": "isanteplus.registration.mostRecentMedDisclosure.label",
+        "icon": "icon-user",
+        "order": 1,
+        "config": {
+            "encounterTypeUuid": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
+            "encounterDateLabel": "isanteplus.registration.mostRecentMedDisclosure.encounterDateLabel",
+            "definitionUiResource": "isanteplus:htmlforms/RegistrationDiscContact.xml",
+            "editable": true,
+            "editIcon": "icon-pencil",
+            "edit-provider": "htmlformentryui",
+            "edit-fragment": "htmlform/editHtmlFormWithStandardUi"
+        },
+        "extensions": [
+          {
+            "id": "isanteplus.registration.mostRecentMedDisclosureFirstColumn",
+            "appId": "isanteplus.registration.mostRecentMedDisclosure",
+            "extensionPointId": "registrationSummary.secondColumnContentFragments",
+            "extensionParams": {
+              "provider": "coreapps",
+              "fragment": "encounter/mostRecentEncounter"
+            }
+          }
+        ]
+    }
+]
