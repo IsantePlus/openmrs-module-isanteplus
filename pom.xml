@@ -13,13 +13,22 @@
 
 	<developers>
 		<developer>
+			<name>guerschon</name>
+		</developer>
+		<developer>
+			<name>jmaxy</name>
+		</developer>
+		<developer>
+			<name>jamesfeshner</name>
+		</developer>
+		<developer>
 			<name>k-joseph</name>
 		</developer>
 	</developers>
 
 	<organization>
-		<name>OpenMRS</name>
-		<url>http://openmrs.org</url>
+		<name>I-TECH</name>
+		<url>http://go2itech.org</url>
 	</organization>
 
 	<scm>
@@ -35,19 +44,19 @@
 
 	<properties>
 		<openMRSVersion>2.0.5</openMRSVersion>
-		<uiframeworkVersion>3.9</uiframeworkVersion>
+		<uiframeworkVersion>3.11.0</uiframeworkVersion>
 		<jsonVersion>20160212</jsonVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<emrapiVersion>1.18</emrapiVersion>
-		<coreappsVersion>1.11.1</coreappsVersion>
-		<appuiVersion>1.7</appuiVersion>
-		<appframeworkVersion>2.9</appframeworkVersion>
-		<metadatadeployVersion>1.7</metadatadeployVersion>
+		<emrapiVersion>1.21.0</emrapiVersion>
+		<coreappsVersion>1.13</coreappsVersion>
+		<appuiVersion>1.8.0</appuiVersion>
+		<appframeworkVersion>2.10.0</appframeworkVersion>
+		<metadatadeployVersion>1.8.1</metadatadeployVersion>
 		<htmlformentryVersion>3.3.2</htmlformentryVersion>
-		<formentryappVersion>1.3</formentryappVersion>
-		<htmlformentryuiVersion>1.6.1</htmlformentryuiVersion>
-		<referenceapplicationVersion>2.5</referenceapplicationVersion>
+		<formentryappVersion>1.4.1</formentryappVersion>
+		<htmlformentryuiVersion>1.6.3</htmlformentryuiVersion>
+		<referenceapplicationVersion>2.6.0</referenceapplicationVersion>
 	</properties>
 
 	<dependencyManagement>
