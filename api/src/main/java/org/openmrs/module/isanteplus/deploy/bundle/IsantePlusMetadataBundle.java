@@ -22,6 +22,7 @@ import org.openmrs.module.emrapi.EmrApiConstants;
 import org.openmrs.module.haiticore.metadata.HaitiAddressBundle;
 import org.openmrs.module.haiticore.metadata.HaitiEncounterTypeBundle;
 import org.openmrs.module.haiticore.metadata.HaitiPersonAttributeTypeBundle;
+import org.openmrs.module.haiticore.metadata.HaitiPatientIdentifierTypeBundle;
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
 import org.openmrs.module.isanteplus.IsantePlusConstants;
@@ -40,7 +41,7 @@ import java.util.Map;
 @Requires( {
 		HaitiEncounterTypeBundle.class,
 		HaitiPersonAttributeTypeBundle.class,
-        //HaitiPatientIdentifierTypeBundle.class, -->This is a placeholder
+	        HaitiPatientIdentifierTypeBundle.class,
 		HaitiAddressBundle.class
 } )
 public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
