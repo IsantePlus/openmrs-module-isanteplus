@@ -49,7 +49,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<emrapiVersion>1.21.0</emrapiVersion>
-		<coreappsVersion>1.13</coreappsVersion>
+		<coreappsVersion>1.13.0</coreappsVersion>
 		<appuiVersion>1.8.0</appuiVersion>
 		<appframeworkVersion>2.10.0</appframeworkVersion>
 		<metadatadeployVersion>1.8.1</metadatadeployVersion>
