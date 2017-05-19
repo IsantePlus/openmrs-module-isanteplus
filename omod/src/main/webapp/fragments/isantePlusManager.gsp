@@ -2,6 +2,7 @@
 <input type="checkbox" class="managerOption" id="${manager.patientFormHistoryExtensionId}" ${manager.patientFormHistoryExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enablePatientFormHistory') }<br />
 <input type="checkbox" class="managerOption" id="${manager.growthChartsExtensionId}" ${manager.growthChartsExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableGrowthCharts') }<br />
 <input type="checkbox" class="managerOption" id="${manager.lastViralLoadTestExtensionId}" ${manager.lastViralLoadTestExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableLastViralLoadTest') }<br />
+<input type="checkbox" class="managerOption" id="${manager.lastDrugsExtensionId}" ${manager.lastDrugsExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableLastDrugs') }<br />
 <input type="checkbox" class="managerOption" id="${manager.weightsGraphExtensionId}" ${manager.weightsGraphExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableWeightsGraph') }<br />
 <input type="checkbox" class="managerOption" id="${manager.labHistoryExtensionId}" ${manager.labHistoryExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableLabHistory') }<br />
 <input type="checkbox" class="managerOption" id="${manager.isantePlusFormsExtensionId}" ${manager.isantePlusFormsExtensionChecked}> ${ ui.message('isanteplus.manageIsantePlusPatientDashboard.enableIsantePlusForms') }<br />
