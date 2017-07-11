@@ -27,6 +27,46 @@
             },
             "sections": [
                 {
+                    "id": "patientIds",
+                    "label": "isanteplus.registration.patient.patientIds.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.codeST.label",
+                            "id": "codeStLabel",
+                            "fields": [
+                                {
+                                    "type": "patientIdentifier",
+                                    "label": "isanteplus.registration.patient.codeST.label",
+                                    "formFieldName": "Code ST",
+                                    "uuid": "d059f6d0-9e42-4760-8de1-8316b48bc5f1",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["required"]
+                                }
+                            ]
+                        },
+                        {
+                            "legend": "isanteplus.registration.patient.codeNational.label",
+                            "id": "codeNationalLabel",
+                            "fields": [
+                                {
+                                    "type": "patientIdentifier",
+                                    "label": "isanteplus.registration.patient.codeNational.label",
+                                    "formFieldName": "Code National",
+                                    "uuid": "9fb4533d-4fd5-4276-875b-2ab41597f5dd",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    },
+                                    "cssClasses": ["required"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "id": "demographics",
                     "questions": [
                         {
