@@ -50,6 +50,7 @@
 
 		<emrapiVersion>1.21.0</emrapiVersion>
 		<coreappsVersion>1.13.0</coreappsVersion>
+		<registrationAppVersion>1.9.0</registrationAppVersion>
 		<appuiVersion>1.8.0</appuiVersion>
 		<appframeworkVersion>2.10.0</appframeworkVersion>
 		<metadatadeployVersion>1.8.1</metadatadeployVersion>
