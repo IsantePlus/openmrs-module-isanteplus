@@ -124,7 +124,7 @@ ${ ui.includeFragment("referenceapplication", "infoAndErrorMessages") }
 
                 <p></p>
                 <p>
-                    <input id="login-button" class="confirm" type="submit" value="${ ui.message("referenceapplication.login.button") }"/>
+                    <input id="login-button" class="confirm" type="submit" value="${ ui.message("isanteplus.loginButton") }"/>
                 </p>
                 <p>
                     <a id="cant-login" href="javascript:void(0)">
