@@ -77,15 +77,19 @@ public class ISantePlusActivator implements ModuleActivator {
 			//Disable the following registration apps
 			appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
 			appFrameworkService.disableApp("referenceapplication.registrationapp.registerPatient");
-			
-			//Enable the iSantePlus Apps
-			
-			
+
+			//Disable the following coreapps dashboardWidgets
+			appFrameworkService.disableApp("coreapps.latestObsForConceptList");
+			appFrameworkService.disableApp("coreapps.obsAcrossEncounters");
+			appFrameworkService.disableApp("coreapps.obsGraph");
+			appFrameworkService.disableApp("coreapps.visitByEncounterType");
+			appFrameworkService.disableApp("coreapps.relationships");		
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		log.info("iSantePlus Patient Dashboard Module started");
+		log.info("iSantePlus Module started");
 	}
 
 	/**
