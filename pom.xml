@@ -254,6 +254,7 @@
 				<artifactId>json</artifactId>
 				<version>${jsonVersion}</version>
 			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 
