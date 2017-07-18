@@ -52,4 +52,40 @@ public class IsantePlusConstants {
 	
 	public static final String VITALS_FORM_NAME = "Vitals";
 
+	// Registration Core Global Properties for integration with SEDISH MPI
+	public static final String GP_REGISTRATIONCORE_MPI_PERSONIDENTIFIERID = "registrationcore.mpi.personIdentifierId";
+
+	public static final String GP_REGISTRATIONCORE_MPI_USERNAME = "registrationcore.mpi.username";
+
+	public static final String GP_REGISTRATIONCORE_MPI_USERNAME_VALUE = "pixc";
+
+	public static final String GP_REGISTRATIONCORE_MPI_PASSWORD = "registrationcore.mpi.password";
+	
+	public static final String GP_REGISTRATIONCORE_MPI_PASSWORD_VALUE = "pixc";
+
+	public static final String GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT = "registrationcore.mpi.pdqEndpoint";
+
+	public static final String GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT_VALUE = "http://sedish.net:5001/pdq";
+
+	public static final String GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT = "registrationcore.mpi.pixEndpoint";
+
+	public static final String GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT_VALUE = "http://sedish.net:5001/pix";
+
+	public static final String GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION = "registrationcore.mpi.sendingApplication";
+
+	public static final String GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION_VALUE = "iSantePlus";
+
+	public static final String GP_REGISTRATIONCORE_MPI_SENDINGFACILITY = "registrationcore.mpi.sendingFacility";
+
+	public static final String GP_REGISTRATIONCORE_MPI_SENDINGFACILITY_VALUE = "Demo";
+
+	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION = "registrationcore.mpi.receivingApplication";
+
+	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION_VALUE = "SEDISH_MPI";
+
+	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY = "registrationcore.mpi.receivingFacility";
+
+	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY_VALUE = "Demo";
+
+	public static final String HaitiCore_ECID_UUID = "f54ed6b9-f5b9-4fd5-a588-8f7561a78401";
 }

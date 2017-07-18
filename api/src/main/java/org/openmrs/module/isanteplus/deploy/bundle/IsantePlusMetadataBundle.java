@@ -17,6 +17,8 @@ package org.openmrs.module.isanteplus.deploy.bundle;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.GlobalProperty;
+import org.openmrs.PatientIdentifierType;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.coreapps.CoreAppsConstants;
 import org.openmrs.module.emrapi.EmrApiConstants;
 import org.openmrs.module.haiticore.metadata.HaitiAddressBundle;
@@ -65,6 +67,23 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE, IsantePlusConstants.DEFAULT_LOCALE);
 		// Set the name layout from "short" to "givenfamily" to only ask for two names
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT, "givenfamily");
+		
+		// Set Registration Core global properties for integration with SEDISH MPI demo
+		PatientIdentifierType ECID = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.HaitiCore_ECID_UUID);
+		
+		if (ECID != null) {
+			properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PERSONIDENTIFIERID, ECID.getId().toString());
+        }
+		
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_USERNAME, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_USERNAME_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PASSWORD, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PASSWORD_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGFACILITY, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGFACILITY_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION_VALUE);
+		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY_VALUE);
+		
 
 		// EMR API
 		// extra patient identifiers
