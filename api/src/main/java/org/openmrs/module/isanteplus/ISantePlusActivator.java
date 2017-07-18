@@ -253,14 +253,29 @@ public class ISantePlusActivator implements ModuleActivator {
             adminService.saveGlobalProperty(passwordGP);
         }
     }
-    
+
+    /**
+     * Change the OpenMRD Id name to iSantePlus ID if it has already been loaded. 
+     * @param patientService
+     */
     public void changeOpenmrsIdName(PatientService patientService) {
 
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName("OpenMRS ID");
-        openmrsIdType.setName("iSantePlus ID");
-        patientService.savePatientIdentifierType(openmrsIdType);
+        if (openmrsIdType != null) {
+        	openmrsIdType.setName("iSantePlus ID");
+        	patientService.savePatientIdentifierType(openmrsIdType);
+        }
     }
-    
+
+    /**
+     * Setup a user in the system. Currently used for creating the scheduler user
+     * @param uuid
+     * @param username
+     * @param person
+     * @param password
+     * @param roles
+     * @return
+     */
     private User setupUser(String uuid, String username, Person person, String password, Role... roles) {
 		UserService userService = Context.getUserService();
 
