@@ -42,8 +42,7 @@
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
-                                    },
-                                    "cssClasses": ["required"]
+                                    }
                                 }
                             ]
                         },

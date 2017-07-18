@@ -691,7 +691,7 @@
             <column name="check_digit" value="0" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
-            <column name="required" value="1" />
+            <column name="required" value="0" />
             <column name="location_behavior" value="NOT_USED" />
             <column name="uniqueness_behavior" value="UNIQUE" />
             <column name="uuid" value="d059f6d0-9e42-4760-8de1-8316b48bc5f1" />
