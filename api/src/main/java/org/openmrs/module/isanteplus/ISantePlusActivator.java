@@ -43,6 +43,8 @@ import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.deploy.bundle.IsantePlusMetadataBundle;
+import org.openmrs.module.isanteplus.deploy.bundle.LocationAttributeTypeBundle;
+import org.openmrs.module.isanteplus.deploy.bundle.LocationBundle;
 import org.openmrs.module.metadatadeploy.api.MetadataDeployService;
 import org.openmrs.ui.framework.resource.ResourceFactory;
 import org.openmrs.util.PrivilegeConstants;
@@ -107,6 +109,12 @@ public class ISantePlusActivator implements ModuleActivator {
 			
 			log.info("Installing iSantePlus Forms");
 			loadIsantePlusHtmlForms();
+			
+			log.info("Installing LocationAttributeType Bundles");
+			installLocationAttributeTypeBundles();
+			
+			log.info("Installing all the iSante locations");
+			installLocations();
 			
 			//Disable the following registration apps
 			appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
@@ -176,6 +184,29 @@ public class ISantePlusActivator implements ModuleActivator {
 
         //Deploy metadata packages
         deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
+
+    }
+    /**
+    	Installing LocationAttributeTypeBundle
+     */
+    private void installLocationAttributeTypeBundles() {
+
+        MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
+
+        //Deploy metadata packages
+        deployService.installBundle(Context.getRegisteredComponents(LocationAttributeTypeBundle.class).get(0));
+
+    }
+    /**
+     * Installing all the locations in iSantePlus
+     */
+    
+    private void installLocations() {
+
+        MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
+
+        //Deploy metadata packages
+        deployService.installBundle(Context.getRegisteredComponents(LocationBundle.class).get(0));
 
     }
     

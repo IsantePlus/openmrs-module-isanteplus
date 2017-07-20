@@ -43,7 +43,7 @@ import java.util.Map;
 @Requires( {
 		HaitiEncounterTypeBundle.class,
 		HaitiPersonAttributeTypeBundle.class,
-	    HaitiPatientIdentifierTypeBundle.class,
+	   HaitiPatientIdentifierTypeBundle.class,
 		HaitiAddressBundle.class
 } )
 public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
