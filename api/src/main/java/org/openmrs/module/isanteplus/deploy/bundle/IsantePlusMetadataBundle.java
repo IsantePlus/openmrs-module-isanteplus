@@ -25,6 +25,7 @@ import org.openmrs.module.haiticore.metadata.HaitiAddressBundle;
 import org.openmrs.module.haiticore.metadata.HaitiEncounterTypeBundle;
 import org.openmrs.module.haiticore.metadata.HaitiPersonAttributeTypeBundle;
 import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiBiometricPatientIdentifierTypeBundle;
+import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiSedishMpiPatientIdentifierTypeBundle;
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
 import org.openmrs.module.isanteplus.IsantePlusConstants;
