@@ -29,6 +29,7 @@ import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiS
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
 import org.openmrs.module.isanteplus.IsantePlusConstants;
+import org.openmrs.module.isanteplus.ConfigurableGlobalProperties;
 import org.openmrs.util.OpenmrsConstants;
 import org.springframework.stereotype.Component;
 
@@ -38,7 +39,7 @@ import java.util.Map;
 ;
 
 /**
- * Core iSantPlus metadata bundle
+ * Core iSantPlus metadata bundle that installs the metadata from the Haiti Core module and sets the global properties
  */
 @Component
 @Requires( {
@@ -71,34 +72,26 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT, "givenfamily");
 		
 		// Set Registration Core global properties for integration with SEDISH MPI demo
-		PatientIdentifierType ECID = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.HaitiCore_ECID_UUID);
-		
-		if (ECID != null) {
-			properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PERSONIDENTIFIERID, ECID.getId().toString());
-        }
-		
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_USERNAME, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_USERNAME_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PASSWORD, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PASSWORD_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGFACILITY, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_SENDINGFACILITY_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION_VALUE);
-		properties.put(IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY, IsantePlusConstants.GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY_VALUE);
-		
-
-		// EMR API
-		// extra patient identifiers
-		// properties.put(EmrApiConstants.GP_EXTRA_PATIENT_IDENTIFIER_TYPES, HaitiPatientIdentifierTypes.DOSSIER_NUMBER.uuid() + "," + HaitiPatientIdentifierTypes.HIVEMR_V1.uuid());
-		// primary identifier type now installed via metadata mappings
-		// properties.put(EmrApiConstants.PRIMARY_IDENTIFIER_TYPE, HaitiPatientIdentifierTypes.ZL_EMR_ID.name());
-
-        // Core Apps
-		// Adding a default location
-        //properties.put(CoreAppsConstants.GP_DEFAULT_PATIENT_IDENTIFIER_LOCATION, MirebalaisLocations.MIREBALAIS_CDI_PARENT.uuid());
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_ECID, IsantePlusConstants.HaitiCore_ECID_UUID + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER_TYPE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_Code_National, IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_Code_National_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_Code_National_UNIVERSAL_IDENTIFIER_TYPE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_ST_Code, IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_ST_Code_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_ST_Code_UNIVERSAL_IDENTIFIER_TYPE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_ID, IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_ISANTEPLUS_ID + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_ID_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_ID_UNIVERSAL_IDENTIFIER_TYPE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_M2Sys_Fingerprint_Registration_ID, IsantePlusConstants.HaitiCore_BIOMETRIC_UUID + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_M2Sys_Fingerprint_Registration_ID_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_M2Sys_Fingerprint_Registration_ID_UNIVERSAL_IDENTIFIER_TYPE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PASSWORD, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PASSWORD_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PDQ_ENDPOINT, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PDQ_ENDPOINT_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PDQ_IDENTIFIERTYPEUUIDLIST, IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_ISANTEPLUS_ID + "," + IsantePlusConstants.HaitiCore_ECID_UUID + "," + IsantePlusConstants.HaitiCore_BIOMETRIC_UUID + "," + IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL + "," + IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PDQ_PORT, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PDQ_PORT_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PERSONIDENTIFIERTYPEUUID, IsantePlusConstants.HaitiCore_ECID_UUID);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PIX_ENDPOINT, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PIX_ENDPOINT_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PIX_IDENTIFIERTYPEUUIDLIST, IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_ISANTEPLUS_ID + "," + IsantePlusConstants.HaitiCore_ECID_UUID + "," + IsantePlusConstants.HaitiCore_BIOMETRIC_UUID + "," + IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL + "," + IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PIX_PORT, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_PIX_PORT_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_RECEIVINGFACILITY, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_RECEIVINGFACILITY_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_SENDINGAPPLICATION, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_SENDINGAPPLICATION_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_SENDINGFACILITY, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_SENDINGFACILITY_VALUE);
+		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_USERNAME, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_USERNAME_VALUE);
 
         setGlobalProperties(properties);
-
 
 	}
 }

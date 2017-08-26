@@ -41,51 +41,25 @@ public class IsantePlusConstants {
 	public static String BMIGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.bmiGraph";
 
 	public static final String DEFAULT_LOCALE = "fr";
-	
-	public static final String SCHEDULER_USER_UUID = "0a3493e8-21f8-11e3-8ad1-1b02b898d14d";
-	
-	public static final String SCHEDULER_USERNAME = "scheduler";
-	
-	public static final String VITALS_FORM_UUID = "a000cb34-9ec1-4344-a1c8-f692232f6edd";
-	
-	public static final String VITALS_FORM_ENCOUNTERTYPE_UUID = "67a71486-1a54-468f-ac3e-7091a9a79584";
-	
-	public static final String VITALS_FORM_NAME = "Vitals";
-
-	// Registration Core Global Properties for integration with SEDISH MPI
-	public static final String GP_REGISTRATIONCORE_MPI_PERSONIDENTIFIERID = "registrationcore.mpi.personIdentifierId";
-
-	public static final String GP_REGISTRATIONCORE_MPI_USERNAME = "registrationcore.mpi.username";
-
-	public static final String GP_REGISTRATIONCORE_MPI_USERNAME_VALUE = "pixc";
-
-	public static final String GP_REGISTRATIONCORE_MPI_PASSWORD = "registrationcore.mpi.password";
-	
-	public static final String GP_REGISTRATIONCORE_MPI_PASSWORD_VALUE = "pixc";
-
-	public static final String GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT = "registrationcore.mpi.pdqEndpoint";
-
-	public static final String GP_REGISTRATIONCORE_MPI_PDQ_ENDPOINT_VALUE = "http://sedish.net:5001/pdq";
-
-	public static final String GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT = "registrationcore.mpi.pixEndpoint";
-
-	public static final String GP_REGISTRATIONCORE_MPI_PIX_ENDPOINT_VALUE = "http://sedish.net:5001/pix";
-
-	public static final String GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION = "registrationcore.mpi.sendingApplication";
-
-	public static final String GP_REGISTRATIONCORE_MPI_SENDINGAPPLICATION_VALUE = "iSantePlus";
-
-	public static final String GP_REGISTRATIONCORE_MPI_SENDINGFACILITY = "registrationcore.mpi.sendingFacility";
-
-	public static final String GP_REGISTRATIONCORE_MPI_SENDINGFACILITY_VALUE = "Demo";
-
-	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION = "registrationcore.mpi.receivingApplication";
-
-	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGAPPLICATION_VALUE = "SEDISH_MPI";
-
-	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY = "registrationcore.mpi.receivingFacility";
-
-	public static final String GP_REGISTRATIONCORE_MPI_RECEIVINGFACILITY_VALUE = "Demo";
 
 	public static final String HaitiCore_ECID_UUID = "f54ed6b9-f5b9-4fd5-a588-8f7561a78401";
+
+	public static final String HaitiCore_BIOMETRIC_UUID = "e26ca279-8f57-44a5-9ed8-8cc16e90e559";
+
+	public static final String PATIENT_IDENTIFIER_TYPE_UUID_ISANTEPLUS_ID = "05a29f94-c0ed-11e2-94be-8c13b969e334"; //Note, this is the same as the OpenMRS ID identifier type because we rename it in the module activator
+
+	public static final String PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL = "9fb4533d-4fd5-4276-875b-2ab41597f5dd";
+
+	public static final String PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST = "d059f6d0-9e42-4760-8de1-8316b48bc5f1";
+
+	public static final String SCHEDULER_USER_UUID = "0a3493e8-21f8-11e3-8ad1-1b02b898d14d";
+
+	public static final String SCHEDULER_USERNAME = "scheduler";
+
+	public static final String VITALS_FORM_UUID = "a000cb34-9ec1-4344-a1c8-f692232f6edd";
+
+	public static final String VITALS_FORM_ENCOUNTERTYPE_UUID = "67a71486-1a54-468f-ac3e-7091a9a79584";
+
+	public static final String VITALS_FORM_NAME = "Vitals";
+
 }
