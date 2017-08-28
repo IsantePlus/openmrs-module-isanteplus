@@ -12,8 +12,8 @@ Defines packages to be loaded by the Metadata Sharing module on startup of this 
         </org.openmrs.module.emrapi.metadata.MetadataPackageConfig>
 
         <org.openmrs.module.emrapi.metadata.MetadataPackageConfig>
-            <filenameBase>iSantePlus_Registration_Concepts_Not_in_CIEL</filenameBase>
-            <groupUuid>2b73be11-d509-461c-8465-866c710f11b9</groupUuid>
+            <filenameBase>iSantePlus_Registration_Concepts</filenameBase>
+            <groupUuid>66811868-251c-417f-b519-d9b3b5b016d1</groupUuid>
             <version>1</version>
             <importMode>PEER_TO_PEER</importMode>
         </org.openmrs.module.emrapi.metadata.MetadataPackageConfig>

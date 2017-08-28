@@ -160,7 +160,7 @@ public class ISantePlusActivator implements ModuleActivator {
 		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Concept_Source");
 		
 		//Then we install the rest of the metadata. We do this because there's an error when mapping concepts to a transient concepts source in the database
-		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts_Not_in_CIEL");
+		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts");
 
         Context.flushSession();
 

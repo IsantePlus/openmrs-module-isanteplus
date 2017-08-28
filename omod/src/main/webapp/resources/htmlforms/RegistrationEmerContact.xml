@@ -144,7 +144,6 @@
                         <h3><uimessage code="isanteplus.registration.patient.emergencyContact.phone.label"/></h3>
                         <p class="left">
                             <obs conceptId="PIH:TELEPHONE NUMBER OF CONTACT" id="emergencyContactPhoneNumber" showUnits="false" unitsCssClass="append-to-value" size="20"/>
-                            <input type="hidden" id="emergencyContactSequenceNumber" name="obsgroup.iSantePlus:EMERGENCY CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER" value="1"/>
                         </p>
                     </div>
                 </div>

@@ -206,7 +206,6 @@
                                             {"value": "PIH:MINER", "label": "isanteplus.registration.patient.occupation.miner.label"},
                                             {"value": "PIH:SHEPHERD", "label": "isanteplus.registration.patient.occupation.shepherd.label"},
                                             {"value": "CIEL:1538", "label": "isanteplus.registration.patient.occupation.farmer.label"},
-                                            {"value": "PIH:HOUSEWORK/FIELDWORK", "label": "isanteplus.registration.patient.occupation.houseworkFieldwork.label"},
                                             {"value": "PIH:FACTORY WORKER", "label": "isanteplus.registration.patient.occupation.factoryWorker.label"},
                                             {"value": "CIEL:5619", "label": "isanteplus.registration.patient.occupation.healthCareWorker.label"},
                                             {"value": "CIEL:162944", "label": "isanteplus.registration.patient.occupation.civilServant.label"},
@@ -433,19 +432,6 @@
                                         "fragmentId": "field/text"
                                     },
                                     "cssClasses": ["phone"]
-                                },
-                                {
-                                    "type": "obsgroup",
-                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER",
-                                    "widget": {
-                                        "providerName": "uicommons",
-                                        "fragmentId": "field/text",
-                                        "config": {
-                                            "style":"display:none",
-                                            "initialValue": "1"
-                                        }
-                                    },
-                                    "cssClasses": ["invisible disabled"]
                                 }
                             ]
                         }
@@ -462,7 +448,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.name.question",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "formFieldName": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -471,7 +457,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.relationship.question",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
+                                    "formFieldName": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/dropDown",
@@ -509,12 +495,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
-                                                "address3": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
-                                                "address1": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
-                                                "address2": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
+                                                "country": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
+                                                "address3": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
+                                                "address1": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
+                                                "address2": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
                                             }
                                         }
                                     }
@@ -528,25 +514,12 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.phone.question",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "formFieldName": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
                                     },
                                     "cssClasses": ["phone"]
-                                },
-                                {
-                                    "type": "obsgroup",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER",
-                                    "widget": {
-                                        "providerName": "uicommons",
-                                        "fragmentId": "field/text",
-                                        "config": {
-                                            "style":"display:none",
-                                            "initialValue": "1"
-                                        }
-                                    },
-                                    "cssClasses": ["invisible disabled"]
                                 }
                             ]
                         }
@@ -563,7 +536,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.name.question",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "formFieldName": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -572,7 +545,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.relationship.question",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
+                                    "formFieldName": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/dropDown",
@@ -610,12 +583,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
-                                                "address3": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
-                                                "address1": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
-                                                "address2": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
+                                                "country": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
+                                                "stateProvince": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
+                                                "cityVillage": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
+                                                "address3": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
+                                                "address1": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
+                                                "address2": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
                                             }
                                         }
                                     }
@@ -629,25 +602,12 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.phone.question",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "formFieldName": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
                                     },
                                     "cssClasses": ["phone"]
-                                },
-                                {
-                                    "type": "obsgroup",
-                                    "formFieldName": "obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER",
-                                    "widget": {
-                                        "providerName": "uicommons",
-                                        "fragmentId": "field/text",
-                                        "config": {
-                                            "style":"display:none",
-                                            "initialValue": "2"
-                                        }
-                                    },
-                                    "cssClasses": ["invisible disabled"]
                                 }
                             ]
                         }
