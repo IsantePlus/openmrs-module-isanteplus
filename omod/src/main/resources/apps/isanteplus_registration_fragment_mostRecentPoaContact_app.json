@@ -22,7 +22,8 @@
             "extensionParams": {
               "provider": "coreapps",
               "fragment": "encounter/mostRecentEncounter"
-            }
+            },
+			"require":"patient.person.age < 18"
           }
         ]
     }
