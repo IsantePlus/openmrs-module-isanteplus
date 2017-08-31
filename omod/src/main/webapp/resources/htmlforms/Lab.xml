@@ -2499,7 +2499,7 @@
 						<td>
 							<span class="titre" ch-target="#span261"><obs conceptId="CIEL:1271" class="master" id="idtestrapide1" answerConceptId="CIEL:1042" answerLabel="VIH test rapide"/></span><br/>
 							<span id="span261" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1042" answerConceptIds="CIEL:664,CIEL:703,CIEL:1304" answerLabels="Négatif,Positif,ECHANTILLON DE PAUVRE QUALITÉ" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1040" answerConceptIds="CIEL:664,CIEL:703,CIEL:1304" answerLabels="Négatif,Positif,ECHANTILLON DE PAUVRE QUALITÉ" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 						</td>
 					</tr>
