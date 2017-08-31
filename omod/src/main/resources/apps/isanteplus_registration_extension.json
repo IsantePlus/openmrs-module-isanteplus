@@ -35,7 +35,7 @@
     },
     {
         "id": "isanteplus.registration.toggleMedicalPOA",
-        "extensionPointId": "registerPatient.includeJavaScriptFragments",
+        "extensionPointId": "registerPatient.includeFragments",
         "type":"fragment",
         "extensionParams": {
           "provider": "isanteplus",
