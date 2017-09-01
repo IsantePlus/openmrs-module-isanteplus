@@ -19,7 +19,6 @@ import org.apache.commons.logging.LogFactory;
 import org.openmrs.GlobalProperty;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.coreapps.CoreAppsConstants;
 import org.openmrs.module.emrapi.EmrApiConstants;
 import org.openmrs.module.haiticore.metadata.HaitiAddressBundle;
 import org.openmrs.module.haiticore.metadata.HaitiEncounterTypeBundle;
@@ -28,6 +27,8 @@ import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiB
 import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiSedishMpiPatientIdentifierTypeBundle;
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
+import org.openmrs.module.metadatamapping.MetadataSet;
+import org.openmrs.module.metadatamapping.api.MetadataMappingService;
 import org.openmrs.module.isanteplus.IsantePlusConstants;
 import org.openmrs.module.isanteplus.ConfigurableGlobalProperties;
 import org.openmrs.util.OpenmrsConstants;
@@ -52,6 +53,8 @@ import java.util.Map;
 public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 
 	protected Log log = LogFactory.getLog(getClass());
+	
+	private MetadataMappingService metadataMappingService;
 
 	/**
 	 * @see AbstractMetadataBundle#install()
@@ -92,6 +95,17 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_USERNAME, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_USERNAME_VALUE);
 
         setGlobalProperties(properties);
+        
+        // Install extraPatientIdentifierTypes as metadatamapping metadata set members
+        metadataMappingService = Context.getService(MetadataMappingService.class);
+
+        MetadataSet extraPatientIdTypesSet = metadataMappingService.getMetadataItem(MetadataSet.class, EmrApiConstants.EMR_METADATA_SOURCE_NAME, EmrApiConstants.GP_EXTRA_PATIENT_IDENTIFIER_TYPES);
+
+        PatientIdentifierType patientIdentifierTypeCodeSt = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST);
+        PatientIdentifierType patientIdentifierTypeCodeNational = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL);
+
+        metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeSt);
+        metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeNational);
 
 	}
 }

@@ -160,6 +160,12 @@
 			</dependency>
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
+				<artifactId>metadatamapping-api</artifactId>
+				<version>${metadatamappingVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
 				<artifactId>referenceapplication-omod</artifactId>
 				<version>${referenceapplicationVersion}</version>
 				<scope>provided</scope>
@@ -232,13 +238,6 @@
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>serialization.xstream-api-2.0</artifactId>
 				<version>${serializationxstreamVersion}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.openmrs.module</groupId>
-				<artifactId>metadatamapping-api</artifactId>
-				<version>${metadatamappingVersion}</version>
 				<scope>test</scope>
 			</dependency>
 			
