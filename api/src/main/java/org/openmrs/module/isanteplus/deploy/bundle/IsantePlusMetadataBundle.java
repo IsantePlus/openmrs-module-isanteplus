@@ -20,11 +20,11 @@ import org.openmrs.GlobalProperty;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.emrapi.EmrApiConstants;
-import org.openmrs.module.haiticore.metadata.HaitiAddressBundle;
-import org.openmrs.module.haiticore.metadata.HaitiEncounterTypeBundle;
-import org.openmrs.module.haiticore.metadata.HaitiPersonAttributeTypeBundle;
-import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiBiometricPatientIdentifierTypeBundle;
-import org.openmrs.module.haiticore.metadata.patientidentifiertypebundles.HaitiSedishMpiPatientIdentifierTypeBundle;
+import org.openmrs.module.haiticore.metadata.bundles.HaitiAddressBundle;
+import org.openmrs.module.haiticore.metadata.bundles.HaitiEncounterTypeBundle;
+import org.openmrs.module.haiticore.metadata.bundles.HaitiPersonAttributeTypeBundle;
+import org.openmrs.module.haiticore.metadata.bundles.HaitiPatientIdentifierTypeBundle;
+import org.openmrs.module.haiticore.metadata.bundles.HaitiSedishMpiPatientIdentifierTypeBundle;
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
 import org.openmrs.module.metadatamapping.MetadataSet;
@@ -46,7 +46,7 @@ import java.util.Map;
 @Requires( {
 		HaitiEncounterTypeBundle.class,
 		HaitiPersonAttributeTypeBundle.class,
-	    HaitiBiometricPatientIdentifierTypeBundle.class,
+	    HaitiPatientIdentifierTypeBundle.class,
 	    HaitiSedishMpiPatientIdentifierTypeBundle.class,
 		HaitiAddressBundle.class
 } )
