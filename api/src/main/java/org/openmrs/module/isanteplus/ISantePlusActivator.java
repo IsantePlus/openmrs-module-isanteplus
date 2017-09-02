@@ -84,6 +84,7 @@ public class ISantePlusActivator implements ModuleActivator {
 		Context.getService(IsantePlusService.class).toggleRecentVitalsSection(
 				new IsantePlusManager().getToogleMostRecentVitalsExtension());
 		AppFrameworkService appFrameworkService = Context.getService(AppFrameworkService.class);
+		PatientService patientService = Context.getPatientService();
 		
 		try {
 			
@@ -97,13 +98,13 @@ public class ISantePlusActivator implements ModuleActivator {
 			//End referencedemodata functions
 			
 			log.info("Updating OpenMRS ID to iSantePlus ID");
-			changeOpenmrsIdName(Context.getPatientService());
+			changeOpenmrsIdName(patientService);
 			
 			log.info("Installing Metadata Packages");
 			installMetadataPackages();
 			
 			log.info("Installing Metadata Bundles");
-			installMetadataBundles();
+			installMetadataBundles(patientService);
 			
 			log.info("Installing iSantePlus Forms");
 			loadIsantePlusHtmlForms();
@@ -170,12 +171,16 @@ public class ISantePlusActivator implements ModuleActivator {
 	 * Installs metadataBundles from multiple providers all found in the IsantePlusMetadataBundle.class
 	 * Uses the MetadataDeploy Module
 	 */
-    private void installMetadataBundles() {
+    private void installMetadataBundles(PatientService patientService) {
 
         MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
 
-        //Deploy metadata packages
-        deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
+        //Deploy metadata bundle if they haven't already been deployed. First, we check to see if one of the haiticore patient identifiers exists already
+        PatientIdentifierType sedishMpiIdType = patientService.getPatientIdentifierTypeByUuid(IsantePlusConstants.HaitiCore_ECID_UUID);
+        if (sedishMpiIdType == null) {
+        	deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
+        }
+        
 
     }
     
