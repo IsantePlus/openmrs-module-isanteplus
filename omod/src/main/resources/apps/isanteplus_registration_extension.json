@@ -32,5 +32,17 @@
                 }
             }
         }
+<<<<<<< HEAD
+=======
+    },
+    {
+        "id": "isanteplus.registration.toggleMedicalPOA",
+        "extensionPointId": "registerPatient.includeFragments",
+        "type":"fragment",
+        "extensionParams": {
+          "provider": "isanteplus",
+          "fragment": "registrationToggleMedicalPOA"
+        }
+>>>>>>> master
     }
 ]

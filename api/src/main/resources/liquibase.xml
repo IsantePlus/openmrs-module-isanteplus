@@ -691,7 +691,11 @@
             <column name="check_digit" value="0" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
+<<<<<<< HEAD
             <column name="required" value="1" />
+=======
+            <column name="required" value="0" />
+>>>>>>> master
             <column name="location_behavior" value="NOT_USED" />
             <column name="uniqueness_behavior" value="UNIQUE" />
             <column name="uuid" value="d059f6d0-9e42-4760-8de1-8316b48bc5f1" />
@@ -717,4 +721,5 @@
             <column name="uuid" value="9fb4533d-4fd5-4276-875b-2ab41597f5dd" />
         </insert>
     </changeSet>
+    
 </databaseChangeLog>

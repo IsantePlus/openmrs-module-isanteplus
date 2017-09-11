@@ -29,6 +29,10 @@
 		<require_module version="${metadatamappingVersion}">org.openmrs.module.metadatamapping</require_module>
 		<require_module version="${metadatasharingVersion}">org.openmrs.module.metadatasharing</require_module>
 		<require_module version="${haiticoreVersion}">org.openmrs.module.haiticore</require_module>
+<<<<<<< HEAD
+=======
+		<require_module version="${xds-senderVersion}">org.openmrs.module.xdssender</require_module>
+>>>>>>> master
 	</require_modules>
 	<!-- / Required Modules -->
 	
@@ -151,5 +155,10 @@
 		<property>isanteplus.enabledIsantePlusUI</property>
 		<defaultValue>true</defaultValue>
 		<description>Set to false to disable iSantePlus custom user interface</description>
+	</globalProperty>
+	<globalProperty>
+		<property>isanteplus.metadataLastUpdatedDate</property>
+		<defaultValue></defaultValue>
+		<description>This is the last date that the iSantePlus metadata was loaded. This date is evaluated each time the module is started. Change it to load the metadata again.</description>
 	</globalProperty>
 </module>

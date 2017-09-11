@@ -186,6 +186,7 @@
 	<h2>Ordonnance médicale (v1.0)</h2>
 
 	<section headerLabel="1. Encounter Details">
+<<<<<<< HEAD
 		<table class="baseline-aligned">
 			<tr>
 				<td>Date:</td>
@@ -198,6 +199,20 @@
 			</tr>
 		</table>
 	</section>
+=======
+	  <table class="baseline-aligned">
+	   <tr>
+	    <td>Date:</td>
+	    <td><encounterDate default="today"/><br/>
+	    <span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+	    </td>
+	    <td>
+	        <obs conceptId="CIEL:1755"  id="dispensation_com" answerConceptId="CIEL:1065" answerLabel="Dispensation communautaire"/> 
+	    </td>
+	   </tr>
+	  </table>
+ 	</section>
+>>>>>>> master
 
         <section headerLabel="Ordonnance">
                        <tr width="100%">

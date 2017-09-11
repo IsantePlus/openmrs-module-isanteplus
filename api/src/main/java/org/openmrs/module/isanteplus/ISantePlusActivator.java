@@ -43,8 +43,11 @@ import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.deploy.bundle.IsantePlusMetadataBundle;
+<<<<<<< HEAD
 import org.openmrs.module.isanteplus.deploy.bundle.LocationAttributeTypeBundle;
 import org.openmrs.module.isanteplus.deploy.bundle.LocationBundle;
+=======
+>>>>>>> master
 import org.openmrs.module.metadatadeploy.api.MetadataDeployService;
 import org.openmrs.ui.framework.resource.ResourceFactory;
 import org.openmrs.util.PrivilegeConstants;
@@ -86,6 +89,10 @@ public class ISantePlusActivator implements ModuleActivator {
 		Context.getService(IsantePlusService.class).toggleRecentVitalsSection(
 				new IsantePlusManager().getToogleMostRecentVitalsExtension());
 		AppFrameworkService appFrameworkService = Context.getService(AppFrameworkService.class);
+<<<<<<< HEAD
+=======
+		PatientService patientService = Context.getPatientService();
+>>>>>>> master
 		
 		try {
 			
@@ -99,7 +106,11 @@ public class ISantePlusActivator implements ModuleActivator {
 			//End referencedemodata functions
 			
 			log.info("Updating OpenMRS ID to iSantePlus ID");
+<<<<<<< HEAD
 			changeOpenmrsIdName(Context.getPatientService());
+=======
+			changeOpenmrsIdName(patientService);
+>>>>>>> master
 			
 			log.info("Installing Metadata Packages");
 			installMetadataPackages();
@@ -110,12 +121,15 @@ public class ISantePlusActivator implements ModuleActivator {
 			log.info("Installing iSantePlus Forms");
 			loadIsantePlusHtmlForms();
 			
+<<<<<<< HEAD
 			log.info("Installing LocationAttributeType Bundles");
 			installLocationAttributeTypeBundles();
 			
 			log.info("Installing all the iSante locations");
 			installLocations();
 			
+=======
+>>>>>>> master
 			//Disable the following registration apps
 			appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
 			appFrameworkService.disableApp("referenceapplication.registrationapp.registerPatient");
@@ -168,7 +182,11 @@ public class ISantePlusActivator implements ModuleActivator {
 		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Concept_Source");
 		
 		//Then we install the rest of the metadata. We do this because there's an error when mapping concepts to a transient concepts source in the database
+<<<<<<< HEAD
 		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts_Not_in_CIEL");
+=======
+		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts");
+>>>>>>> master
 
         Context.flushSession();
 
@@ -178,6 +196,7 @@ public class ISantePlusActivator implements ModuleActivator {
 	 * Installs metadataBundles from multiple providers all found in the IsantePlusMetadataBundle.class
 	 * Uses the MetadataDeploy Module
 	 */
+<<<<<<< HEAD
     private void installMetadataBundles() {
 
         MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
@@ -207,6 +226,21 @@ public class ISantePlusActivator implements ModuleActivator {
 
         //Deploy metadata packages
         deployService.installBundle(Context.getRegisteredComponents(LocationBundle.class).get(0));
+=======
+    private void installMetadataBundles() throws Exception{
+
+        MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
+
+        //Deploy metadata bundle if the ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE is not equal to IsantePlusConstants.METADATA_LAST_UPDATED_DATE
+        String metadataLastUpdatedDate = Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE);
+        if (!IsantePlusConstants.METADATA_LAST_UPDATED_DATE.equals(metadataLastUpdatedDate)) {
+        	log.info("installing isanteplus metadata bundle");
+        	deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
+        } else {
+        	log.info("isanteplus metadata bundle not installed");
+        }
+        
+>>>>>>> master
 
     }
     
@@ -214,7 +248,11 @@ public class ISantePlusActivator implements ModuleActivator {
      * Makes the admin a provider of type UNKNOWN provider
      * This is originally from the referencedemodata module activator.
      */
+<<<<<<< HEAD
     private void linkAdminAccountToAProviderIfNecessary() {
+=======
+    private void linkAdminAccountToAProviderIfNecessary() throws Exception{
+>>>>>>> master
 
 		try {
 			//If unknown provider isn't yet linked to admin, then do it
@@ -244,6 +282,7 @@ public class ISantePlusActivator implements ModuleActivator {
 			Context.removeProxyPrivilege(PrivilegeConstants.MANAGE_PROVIDERS);
 		}
 	}
+<<<<<<< HEAD
 
     /**
      * Create a scheduler username and global properties with a random string generator for a password
@@ -275,6 +314,39 @@ public class ISantePlusActivator implements ModuleActivator {
             }
             adminService.saveGlobalProperty(usernameGP);
 
+=======
+
+    /**
+     * Create a scheduler username and global properties with a random string generator for a password
+     */
+    private void createSchedulerUserAndGPs() throws Exception{
+        UserService us = Context.getUserService();
+        
+        // Create a random password for the scheduler with 5 upper case, 5 lower case and 5 numbers to suit the OpenMRS password requirements
+        char[] possibleCharactersAZ = (new String("ABCDEFGHIJKLMNOPQRSTUVWXYZ")).toCharArray();
+        char[] possibleCharactersaz = (new String("abcdefghijklmnopqrstuvwxyz")).toCharArray();
+        char[] possibleCharacters10 = (new String("0123456789")).toCharArray();
+        String SCHEDULER_PASSWORD = RandomStringUtils.random( 5, 0, possibleCharactersAZ.length-1, false, false, possibleCharactersAZ, new SecureRandom() ) +
+        		RandomStringUtils.random( 5, 0, possibleCharactersaz.length-1, false, false, possibleCharactersaz, new SecureRandom() ) +
+        		RandomStringUtils.random( 5, 0, possibleCharacters10.length-1, false, false, possibleCharacters10, new SecureRandom() );
+        
+        if (us.getUserByUsername(IsantePlusConstants.SCHEDULER_USERNAME) == null) {
+            Person person = Context.getPersonService().getPerson(1);
+            //Apparently admin has no name, set it to pass validation
+            person.addName(new PersonName("super", null, "user"));
+            Role superuserRole = us.getRole(RoleConstants.SUPERUSER);
+            setupUser(IsantePlusConstants.SCHEDULER_USER_UUID, IsantePlusConstants.SCHEDULER_USERNAME, person,
+            		SCHEDULER_PASSWORD, superuserRole);
+            AdministrationService adminService = Context.getAdministrationService();
+            GlobalProperty usernameGP = adminService.getGlobalPropertyObject("scheduler.username");
+            if (usernameGP == null) {
+                usernameGP = new GlobalProperty("scheduler.username", IsantePlusConstants.SCHEDULER_USERNAME);
+            } else {
+                usernameGP.setPropertyValue(IsantePlusConstants.SCHEDULER_USERNAME);
+            }
+            adminService.saveGlobalProperty(usernameGP);
+
+>>>>>>> master
             GlobalProperty passwordGP = adminService.getGlobalPropertyObject("scheduler.password");
             if (passwordGP == null) {
                 passwordGP = new GlobalProperty("scheduler.password", SCHEDULER_PASSWORD);
@@ -289,7 +361,11 @@ public class ISantePlusActivator implements ModuleActivator {
      * Change the OpenMRD Id name to iSantePlus ID if it has already been loaded. 
      * @param patientService
      */
+<<<<<<< HEAD
     public void changeOpenmrsIdName(PatientService patientService) {
+=======
+    public void changeOpenmrsIdName(PatientService patientService) throws Exception{
+>>>>>>> master
 
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName("OpenMRS ID");
         if (openmrsIdType != null) {

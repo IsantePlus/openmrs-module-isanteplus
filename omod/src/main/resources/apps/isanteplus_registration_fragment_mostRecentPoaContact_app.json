@@ -22,7 +22,12 @@
             "extensionParams": {
               "provider": "coreapps",
               "fragment": "encounter/mostRecentEncounter"
+<<<<<<< HEAD
             }
+=======
+            },
+			"require":"patient.person.age < 18"
+>>>>>>> master
           }
         ]
     }

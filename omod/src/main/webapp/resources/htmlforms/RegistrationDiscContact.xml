@@ -56,7 +56,11 @@
 
         <fieldset>
 
+<<<<<<< HEAD
             <obsgroup groupingConceptId="iSantePlus:MEDICAL DISCLOSURE CONTACT">
+=======
+            <obsgroup groupingConceptId="iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT">
+>>>>>>> master
 
                 <div>
                     <!-- edit mode of name/relationship -->
@@ -156,7 +160,10 @@
                         <h3><uimessage code="isanteplus.registration.patient.medicalDisclosure.phone.label"/></h3>
                         <p class="left">
                             <obs conceptId="PIH:TELEPHONE NUMBER OF CONTACT" id="medicalDisclosure1PhoneNumber" showUnits="false" unitsCssClass="append-to-value" size="20"/>
+<<<<<<< HEAD
                             <input type="hidden" id="medicalDisclosure1SequenceNumber" name="obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER" value="1"/>
+=======
+>>>>>>> master
                         </p>
                     </div>
                 </div>
@@ -167,7 +174,11 @@
         <!-- Med Disclosure 2 -->
         <fieldset>
 
+<<<<<<< HEAD
             <obsgroup groupingConceptId="iSantePlus:MEDICAL DISCLOSURE CONTACT">
+=======
+            <obsgroup groupingConceptId="iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT">
+>>>>>>> master
 
                 <div>
                     <!-- edit mode of name/relationship -->
@@ -267,7 +278,10 @@
                         <h3><uimessage code="isanteplus.registration.patient.medicalDisclosure.phone.label"/></h3>
                         <p class="left">
                             <obs conceptId="PIH:TELEPHONE NUMBER OF CONTACT" id="medicalDisclosure2PhoneNumber" showUnits="false" unitsCssClass="append-to-value" size="20"/>
+<<<<<<< HEAD
                             <input type="hidden" id="medicalDisclosure2SequenceNumber" name="obsgroup.iSantePlus:MEDICAL DISCLOSURE CONTACT.obs.iSantePlus:CONTACT SEQUENCE NUMBER" value="2"/>
+=======
+>>>>>>> master
                         </p>
                     </div>
                 </div>
