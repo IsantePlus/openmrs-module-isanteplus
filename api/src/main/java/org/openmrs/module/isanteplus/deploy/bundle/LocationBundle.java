@@ -46,7 +46,7 @@ public class LocationBundle extends AbstractMetadataBundle {
 	
 	public void install(boolean full) throws Exception {
 		if (full) {
-			ObjectSource<Location> source = new LocationMflCsvSource("isanteplus_last_site_list.csv");
+			ObjectSource<Location> source = new LocationMflCsvSource("isanteplus_site_list_20170911.csv");
 			sync(source, mflSynchronization);
         }
 	}

@@ -26,7 +26,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * Synchronization operation to sync locations with a CSV copy of the Kenya Master Facility List
+ * Synchronization operation to sync locations with a CSV copy of the SEDISH Master Facility List
  */
 @Component
 public class LocationMflSynchronization implements ObjectSynchronization<Location> {
