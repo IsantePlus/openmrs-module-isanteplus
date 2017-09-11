@@ -97,6 +97,11 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_SENDINGFACILITY, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_SENDINGFACILITY_VALUE);
 		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_USERNAME, ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_USERNAME_VALUE);
 
+		// Set XDS-sender global properties for integration with the SEDISH SHR demo
+		properties.put(ConfigurableGlobalProperties.XDSSENDER_REPOSITORY_ENDPOINT, ConfigurableGlobalProperties.XDSSENDER_REPOSITORY_ENDPOINT_VALUE);
+		properties.put(ConfigurableGlobalProperties.XDSSENDER_REPOSITORY_USERNAME, ConfigurableGlobalProperties.XDSSENDER_REPOSITORY_USERNAME_VALUE);
+		properties.put(ConfigurableGlobalProperties.XDSSENDER_REPOSITORY_PASSWORD, ConfigurableGlobalProperties.XDSSENDER_REPOSITORY_PASSWORD_VALUE);
+
         setGlobalProperties(properties);
         
         // Install extraPatientIdentifierTypes as metadatamapping metadata set members
