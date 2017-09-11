@@ -104,7 +104,7 @@ public class ISantePlusActivator implements ModuleActivator {
 			installMetadataPackages();
 			
 			log.info("Installing Metadata Bundles");
-			installMetadataBundles(patientService);
+			installMetadataBundles();
 			
 			log.info("Installing iSantePlus Forms");
 			loadIsantePlusHtmlForms();
@@ -171,7 +171,7 @@ public class ISantePlusActivator implements ModuleActivator {
 	 * Installs metadataBundles from multiple providers all found in the IsantePlusMetadataBundle.class
 	 * Uses the MetadataDeploy Module
 	 */
-    private void installMetadataBundles(PatientService patientService) {
+    private void installMetadataBundles() throws Exception{
 
         MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
 
