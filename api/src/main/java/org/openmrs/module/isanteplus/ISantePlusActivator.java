@@ -177,7 +177,7 @@ public class ISantePlusActivator implements ModuleActivator {
 
         //Deploy metadata bundle if the ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE is not equal to IsantePlusConstants.METADATA_LAST_UPDATED_DATE
         String metadataLastUpdatedDate = Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE);
-        if (metadataLastUpdatedDate != IsantePlusConstants.METADATA_LAST_UPDATED_DATE) {
+        if (!IsantePlusConstants.METADATA_LAST_UPDATED_DATE.equals(metadataLastUpdatedDate)) {
         	log.info("installing isanteplus metadata bundle");
         	deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
         } else {
@@ -191,7 +191,7 @@ public class ISantePlusActivator implements ModuleActivator {
      * Makes the admin a provider of type UNKNOWN provider
      * This is originally from the referencedemodata module activator.
      */
-    private void linkAdminAccountToAProviderIfNecessary() {
+    private void linkAdminAccountToAProviderIfNecessary() throws Exception{
 
 		try {
 			//If unknown provider isn't yet linked to admin, then do it
@@ -225,7 +225,7 @@ public class ISantePlusActivator implements ModuleActivator {
     /**
      * Create a scheduler username and global properties with a random string generator for a password
      */
-    private void createSchedulerUserAndGPs() {
+    private void createSchedulerUserAndGPs() throws Exception{
         UserService us = Context.getUserService();
         
         // Create a random password for the scheduler with 5 upper case, 5 lower case and 5 numbers to suit the OpenMRS password requirements
@@ -266,7 +266,7 @@ public class ISantePlusActivator implements ModuleActivator {
      * Change the OpenMRD Id name to iSantePlus ID if it has already been loaded. 
      * @param patientService
      */
-    public void changeOpenmrsIdName(PatientService patientService) {
+    public void changeOpenmrsIdName(PatientService patientService) throws Exception{
 
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName("OpenMRS ID");
         if (openmrsIdType != null) {
