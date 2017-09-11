@@ -29,7 +29,7 @@ import java.io.IOException;
  */
 public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 
-	private LocationAttributeType category, locationType, siteCode, network,incphr,dbSite,ipAddress, dbVersion, oldClinicName, hostname;
+	private LocationAttributeType category, locationType, arrondissement, isanteSiteCode, siteCode, network;
 	
 
 	/**
@@ -39,16 +39,12 @@ public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 	
 	public LocationMflCsvSource(String csvFile) throws IOException {
 		super(csvFile, true);
+		this.arrondissement = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.ARRONDISSEMENT);
 		this.siteCode = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.SITECODE);
+		this.isanteSiteCode = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.ISANTESITECODE);
 		this.category = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.CATEGORY);
 		this.locationType = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.TYPE);
 		this.network = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.NETWORK);
-		this.incphr = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.INCPHR);
-		this.dbSite = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.DBSITE);
-		this.ipAddress = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.IPADDRESS);
-		this.dbVersion = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.DBVERSION);
-		this.oldClinicName = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.OLDCLINICNAME);
-		this.hostname = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.HOSTNAME);
 	}
     
 	/**
@@ -57,39 +53,36 @@ public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 	@Override
 	public Location parseLine(String[] line) {
 		String departement = line[0];
-		String commune = line[1];
-		String name = line[2];
-		String categorySite = line[3];
-		String typeLocation = line[4];
-		String siteCod = line[5];
-		String siteNetwork = line[6];
-		String incphrSite = line[7];
-		String dbSit = line[8];
-		String ipAddr = line[9];
-		String dbVers = line[10];
-		String lat = line[11];
-		String lng = line[12];
-		String oldClinicNam = line[13];
-		String hostName = line[14];
+		String siteArrondissement = line[1];
+		String commune = line[2];
+		String sectionCommunale = line[3];
+		String name = line[4];
+		String categorySite = line[5];
+		String typeLocation = line[6];
+		String siteCod = line[7];
+		String oldSideCode = line [8];
+		String siteNetwork = line[9];
+		String lat = line[10];
+		String lng = line[11];
+		
+		
 
 		Location location = new Location();
-		location.setCityVillage(commune);
+		location.setAddress3(sectionCommunale);;
 		location.setStateProvince(departement);
 		location.setName(name);
 		location.setLatitude(lat);
-		location.setLatitude(lng);
-		location.setCountry("Haïti");
-
+		location.setLongitude(lng);
+		location.setCountry("Haiti");
+		location.setCityVillage(commune);
+		
+		
+		setAsAttribute(location, arrondissement, siteArrondissement);
 		setAsAttribute(location, siteCode, siteCod);
+		setAsAttribute(location, isanteSiteCode, oldSideCode);
 		setAsAttribute(location, category, categorySite);
 		setAsAttribute(location, locationType, typeLocation);
 		setAsAttribute(location, network, siteNetwork);
-		setAsAttribute(location, incphr, incphrSite);
-		setAsAttribute(location, dbSite, dbSit);
-		setAsAttribute(location, ipAddress, ipAddr);
-		setAsAttribute(location, dbVersion, dbVers);
-		setAsAttribute(location, oldClinicName, oldClinicNam);
-		setAsAttribute(location, hostname, hostName);
 
 		return location;
 	}

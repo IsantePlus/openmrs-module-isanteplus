@@ -9,6 +9,7 @@ import org.openmrs.module.isanteplus.deploy.bundle.LocationMflSynchronization;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
+import org.openmrs.module.metadatadeploy.descriptor.LocationAttributeTypeDescriptor;
 import org.openmrs.module.metadatadeploy.source.ObjectSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -25,6 +26,8 @@ public class LocationBundle extends AbstractMetadataBundle {
 	public static final class _LocationAttributeType {
 		public static final String CATEGORY = "c539128d-252c-4b6a-9fa8-f706dfcad1d9";
 		public static final String TYPE = "dc14c848-8e83-409a-b465-3f77f74e9385";
+		public static final String ARRONDISSEMENT = "aba4699b-0dec-4194-9a11-31060b231737";
+		public static final String ISANTESITECODE =  "0e52924e-4ebb-40ba-9b83-b198b532653b"; 
 		public static final String SITECODE = "6242bf19-207e-4076-9d28-9290525b8ed9";
 		public static final String NETWORK = "3001b17e-a153-4efd-816c-e5a52f0555d3";
 		public static final String INCPHR = "940f161c-26a7-4ed2-b5d7-62643265ee0b";
@@ -43,7 +46,7 @@ public class LocationBundle extends AbstractMetadataBundle {
 	
 	public void install(boolean full) throws Exception {
 		if (full) {
-			ObjectSource<Location> source = new LocationMflCsvSource("site_list_2017_07_19.csv");
+			ObjectSource<Location> source = new LocationMflCsvSource("isanteplus_last_site_list.csv");
 			sync(source, mflSynchronization);
         }
 	}

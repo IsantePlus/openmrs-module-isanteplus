@@ -8,6 +8,8 @@ public class LocationAttributeTypeBundle extends AbstractMetadataBundle {
 
     @Override
     public void install() throws Exception {
+    	install(LocationAttributeTypes.ARRONDISSEMENT);
+    	install(LocationAttributeTypes.ISANTESITECODE);
     	install(LocationAttributeTypes.SITECODE);
         install(LocationAttributeTypes.CATEGORY);
         install(LocationAttributeTypes.TYPE);

@@ -6,10 +6,24 @@ import org.openmrs.module.metadatadeploy.descriptor.LocationAttributeTypeDescrip
 
 public class LocationAttributeTypes {
 	
+	public static LocationAttributeTypeDescriptor ARRONDISSEMENT = new LocationAttributeTypeDescriptor() {
+		public String uuid() { return "aba4699b-0dec-4194-9a11-31060b231737"; }
+		public String name() { return "Arrondissement"; }
+		public String description() { return "Arrondissement (Where the site is located"; }
+		public Class<?> datatype() { return FreeTextDatatype.class; }
+	};
+	
+	public static LocationAttributeTypeDescriptor ISANTESITECODE = new LocationAttributeTypeDescriptor() {
+		public String uuid() { return "0e52924e-4ebb-40ba-9b83-b198b532653b"; }
+		public String name() { return "iSanteSiteCode"; }
+		public String description() { return "The old site code in isante for this location"; }
+		public Class<?> datatype() { return FreeTextDatatype.class; }
+	};
+	
 	public static LocationAttributeTypeDescriptor SITECODE = new LocationAttributeTypeDescriptor() {
 		public String uuid() { return "6242bf19-207e-4076-9d28-9290525b8ed9"; }
 		public String name() { return "siteCode"; }
-		public String description() { return "The site code of this location"; }
+		public String description() { return "The new site code for this location"; }
 		public Class<?> datatype() { return FreeTextDatatype.class; }
 	};
 	public static LocationAttributeTypeDescriptor CATEGORY = new LocationAttributeTypeDescriptor() {
