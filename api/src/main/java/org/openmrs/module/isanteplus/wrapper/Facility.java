@@ -73,13 +73,27 @@ public class Facility extends AbstractCustomizableWrapper<Location, LocationAttr
 	public String getLongitude() {
 		return target.getLongitude();
 	}
+	/**
+	 * Gets the master facility Arrondissement
+	 * @return the getArrondissement
+	 */
+	public String getArrondissement() {
+		return (String) getAsAttribute(LocationBundle._LocationAttributeType.ARRONDISSEMENT);
+	}
 	
 	/**
-	 * Gets the master facility code
+	 * Gets the master facility code (MSPP CODE)
 	 * @return the code
 	 */
 	public String getSiteCode() {
 		return (String) getAsAttribute(LocationBundle._LocationAttributeType.SITECODE);
+	}
+	/**
+	 * Gets the master facility code(old iSante Code)
+	 * @return the getIsanteSiteCode
+	 */
+	public String getIsanteSiteCode() {
+		return (String) getAsAttribute(LocationBundle._LocationAttributeType.ISANTESITECODE);
 	}
 
 	/**
@@ -95,6 +109,8 @@ public class Facility extends AbstractCustomizableWrapper<Location, LocationAttr
 	public String getNetwork() {
 		return (String) getAsAttribute(LocationBundle._LocationAttributeType.NETWORK);
 	}
+	
+	/*
 	public String getIncphr() {
 		return (String) getAsAttribute(LocationBundle._LocationAttributeType.INCPHR);
 	}
@@ -112,6 +128,6 @@ public class Facility extends AbstractCustomizableWrapper<Location, LocationAttr
 	}
 	public String getHostname() {
 		return (String) getAsAttribute(LocationBundle._LocationAttributeType.HOSTNAME);
-	}
+	}*/
 	
 }
