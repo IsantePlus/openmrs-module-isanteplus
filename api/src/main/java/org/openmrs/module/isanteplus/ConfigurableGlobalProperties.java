@@ -117,4 +117,19 @@ public class ConfigurableGlobalProperties {
 	public static final String REGISTRATIONCORE_MPI_USERNAME = "registrationcore.mpi.username";
 
 	public static final String REGISTRATIONCORE_MPI_USERNAME_VALUE = "pixc";
+
+	// XDS-Sender global properties for interacting with the SEDISH CR Demo
+
+	public static final String XDSSENDER_REPOSITORY_ENDPOINT = "xdssender.repositoryEndpoint";
+
+	public static final String XDSSENDER_REPOSITORY_ENDPOINT_VALUE = "http://sedish.net:5001/xdsrepository";
+
+	public static final String XDSSENDER_REPOSITORY_USERNAME = "xdssender.xdsrepository.username";
+
+	public static final String XDSSENDER_REPOSITORY_USERNAME_VALUE = "xds";
+
+	public static final String XDSSENDER_REPOSITORY_PASSWORD = "xdssender.xdsrepository.password";
+
+	public static final String XDSSENDER_REPOSITORY_PASSWORD_VALUE = "1234";
+
 }
