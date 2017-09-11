@@ -74,6 +74,9 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 		// Set the name layout from "short" to "givenfamily" to only ask for two names
 		properties.put(OpenmrsConstants.GLOBAL_PROPERTY_LAYOUT_NAME_FORMAT, "givenfamily");
 		
+		// Set the isanteplus metadata last updated date
+		properties.put(ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE, IsantePlusConstants.METADATA_LAST_UPDATED_DATE);
+		
 		// Set Registration Core global properties for integration with SEDISH MPI demo
 		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_ECID, IsantePlusConstants.HaitiCore_ECID_UUID + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER_TYPE);
 		properties.put(ConfigurableGlobalProperties.REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_Code_National, IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_Code_National_UNIVERSAL_IDENTIFIER + ":" + ConfigurableGlobalProperties.REGISTRATIONCORE_MPI_iSantePlus_Code_National_UNIVERSAL_IDENTIFIER_TYPE);

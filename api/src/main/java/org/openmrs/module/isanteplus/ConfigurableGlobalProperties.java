@@ -37,6 +37,8 @@ public class ConfigurableGlobalProperties {
 	public static final String ADULTSTARTINGAGE = "isanteplus.adultStartingAge";
 	
 	public static final String ENABLE_ISANTEPLUS_UI = "isanteplus.enabledIsantePlusUI";
+	
+	public static final String METADATA_LAST_UPDATED_DATE = "isanteplus.metadataLastUpdatedDate";
 
 	// Registration Core Global Properties for integration with SEDISH MPI
 

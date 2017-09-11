@@ -41,6 +41,8 @@ public class IsantePlusConstants {
 	public static String BMIGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.bmiGraph";
 
 	public static final String DEFAULT_LOCALE = "fr";
+	
+	public static final String METADATA_LAST_UPDATED_DATE = "20170911"; //Update this if you wish to trigger a new metadata load on an existing server
 
 	public static final String HaitiCore_ECID_UUID = "f54ed6b9-f5b9-4fd5-a588-8f7561a78401";
 

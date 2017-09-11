@@ -175,10 +175,13 @@ public class ISantePlusActivator implements ModuleActivator {
 
         MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
 
-        //Deploy metadata bundle if they haven't already been deployed. First, we check to see if one of the haiticore patient identifiers exists already
-        PatientIdentifierType sedishMpiIdType = patientService.getPatientIdentifierTypeByUuid(IsantePlusConstants.HaitiCore_ECID_UUID);
-        if (sedishMpiIdType == null) {
+        //Deploy metadata bundle if the ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE is not equal to IsantePlusConstants.METADATA_LAST_UPDATED_DATE
+        String metadataLastUpdatedDate = Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.METADATA_LAST_UPDATED_DATE);
+        if (metadataLastUpdatedDate != IsantePlusConstants.METADATA_LAST_UPDATED_DATE) {
+        	log.info("installing isanteplus metadata bundle");
         	deployService.installBundle(Context.getRegisteredComponents(IsantePlusMetadataBundle.class).get(0));
+        } else {
+        	log.info("isanteplus metadata bundle not installed");
         }
         
 

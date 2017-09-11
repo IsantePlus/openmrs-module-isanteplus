@@ -152,4 +152,9 @@
 		<defaultValue>true</defaultValue>
 		<description>Set to false to disable iSantePlus custom user interface</description>
 	</globalProperty>
+	<globalProperty>
+		<property>isanteplus.metadataLastUpdatedDate</property>
+		<defaultValue></defaultValue>
+		<description>This is the last date that the iSantePlus metadata was loaded. This date is evaluated each time the module is started. Change it to load the metadata again.</description>
+	</globalProperty>
 </module>
