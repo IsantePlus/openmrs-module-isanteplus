@@ -1,0 +1,45 @@
+[
+    {
+        "id": "clinicianFacingOverallActionsLink",
+        "extensionPointId": "patientDashboard.overallActions",
+        "type": "link",
+        "order": 1,
+        "label": "isanteplus.clinicianFacingOverallActionsLink",
+        "url": "registrationapp/registrationSummary.page?patientId={{patient.uuid}}&appId=registrationapp.registerPatient&returnUrl=coreapps/clinicianfacing/patient.page?patientId={{patient.uuid}}",
+        "icon": "icon-user"
+    },
+    {
+        "id": "registrationSummaryOverallActionsLink",
+        "extensionPointId": "registrationSummary.overallActions",
+        "type": "link",
+        "order": 1,
+        "label": "isanteplus.registrationSummaryOverallActionsLink",
+        "url": "coreapps/clinicianfacing/patient.page?patientId={{patient.uuid}}",
+        "icon": "icon-dashboard"
+    },
+    {
+        "id": "isanteplus.defaultEncounterTemplate",
+        "extensionPointId": "org.openmrs.referenceapplication.encounterTemplate",
+        "type": "fragment",
+        "extensionParams": {
+            "templateId": "defaultEncounterTemplate",
+            "templateFragmentProviderName": "coreapps",
+            "templateFragmentId": "patientdashboard/encountertemplate/defaultEncounterTemplate",
+            "supportedEncounterTypes": {
+                "873f968a-73a8-4f9c-ac78-9f4778b751b6": {
+                    "icon": "icon-user",
+                    "editable": true
+                }
+            }
+        }
+    },
+    {
+        "id": "isanteplus.registration.toggleMedicalPOA",
+        "extensionPointId": "registerPatient.includeFragments",
+        "type":"fragment",
+        "extensionParams": {
+          "provider": "isanteplus",
+          "fragment": "registrationToggleMedicalPOA"
+        }
+    }
+]
