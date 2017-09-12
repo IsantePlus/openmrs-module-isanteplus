@@ -48,7 +48,9 @@ import java.util.Map;
 		HaitiPersonAttributeTypeBundle.class,
 	    HaitiPatientIdentifierTypeBundle.class,
 	    HaitiSedishMpiPatientIdentifierTypeBundle.class,
-		HaitiAddressBundle.class
+		HaitiAddressBundle.class,
+		LocationAttributeTypeBundle.class,
+		LocationBundle.class
 } )
 public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 

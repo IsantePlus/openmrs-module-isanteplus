@@ -111,12 +111,6 @@ public class ISantePlusActivator implements ModuleActivator {
 			log.info("Installing iSantePlus Forms");
 			loadIsantePlusHtmlForms();
 			
-			log.info("Installing LocationAttributeType Bundles");
-			installLocationAttributeTypeBundles();
-			
-			log.info("Installing all the iSante locations");
-			installLocations();
-			
 			//Disable the following registration apps
 			appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
 			appFrameworkService.disableApp("referenceapplication.registrationapp.registerPatient");
@@ -192,29 +186,6 @@ public class ISantePlusActivator implements ModuleActivator {
         	log.info("isanteplus metadata bundle not installed");
         }
         
-
-    }
-    /**
-    	Installing LocationAttributeTypeBundle
-     */
-    private void installLocationAttributeTypeBundles() {
-
-        MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
-
-        //Deploy metadata packages
-        deployService.installBundle(Context.getRegisteredComponents(LocationAttributeTypeBundle.class).get(0));
-
-    }
-    /**
-     * Installing all the locations in iSantePlus
-     */
-    
-    private void installLocations() {
-
-        MetadataDeployService deployService = Context.getService(MetadataDeployService.class);
-
-        //Deploy metadata packages
-        deployService.installBundle(Context.getRegisteredComponents(LocationBundle.class).get(0));
 
     }
     
