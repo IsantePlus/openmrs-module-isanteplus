@@ -43,6 +43,8 @@ import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.deploy.bundle.IsantePlusMetadataBundle;
+import org.openmrs.module.isanteplus.deploy.bundle.LocationAttributeTypeBundle;
+import org.openmrs.module.isanteplus.deploy.bundle.LocationBundle;
 import org.openmrs.module.metadatadeploy.api.MetadataDeployService;
 import org.openmrs.ui.framework.resource.ResourceFactory;
 import org.openmrs.util.PrivilegeConstants;

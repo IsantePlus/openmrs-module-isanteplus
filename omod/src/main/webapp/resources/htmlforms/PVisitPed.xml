@@ -1132,7 +1132,7 @@ formDescription="Saisie première visite pédiatrique;Première visite pédiatri
 								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:163291" answerLabel=""/>
 								</td></tr>
 								<tr><td>Injection de drogues</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:105" answerLabel=""/></td><!-- A VERIFIER -->
+								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:105" answerLabel=""/></td>
 								</tr>
 								<tr><td>Bénéficier de sang/dérivé sanguin</td>
 								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:1063" answerLabel=""/><obs conceptId="CIEL:163268"/></td><!-- A VERIFIER -->
