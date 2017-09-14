@@ -113,7 +113,7 @@ ${ ui.includeFragment("referenceapplication", "infoAndErrorMessages") }
         <a href="${ui.pageLink("referenceapplication", "home")}">
 		<%  if (enableIsantePlusUI) {  %>
         		<!-- isantePlus changed logo in the next line -->
-            	<img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo_120x42.png")}"/>
+            	<img src="${ui.resourceLink("isanteplus", "images/isanteplus_logo_120x30.png")}"/>
             <% } else { %>
 				<img src="${ui.resourceLink("referenceapplication", "images/openMrsLogo.png")}"/>
             <% } %>	
