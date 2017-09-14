@@ -16,7 +16,7 @@
     }
     def logoIconUrl;
     if (enableIsantePlusUI) {
-    	logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo_120x30.png")
+    	logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("isanteplus", "images/isanteplus_logo_120x42.png")
     } else {
     	logoIconUrl = addContextPath(configSettings?."logo-icon-url") ?: ui.resourceLink("referenceapplication", "images/openMrsLogo.png")
     }
