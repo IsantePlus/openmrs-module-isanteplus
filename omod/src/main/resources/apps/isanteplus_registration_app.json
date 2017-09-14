@@ -126,6 +126,27 @@
                     ]
                 },
                 {
+                    "id": "fingerprint",
+                    "label": "isanteplus.registration.patient.fingerprint.label",
+                    "questions": [
+                        {
+                            "legend": "isanteplus.registration.patient.fingerprint.label",
+                            "id": "fingerprintLabel",
+                            "fields": [
+                                {
+                                    "type": "patientIdentifier",
+                                    "formFieldName": "Biometrics Reference Code",
+                                    "uuid": "e26ca279-8f57-44a5-9ed8-8cc16e90e559",
+                                    "widget": {
+                                        "providerName": "registrationapp",
+                                        "fragmentId": "field/fingerprintM2sys"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "id": "social",
                     "label": "isanteplus.registration.patient.social.label",
                     "questions": [
