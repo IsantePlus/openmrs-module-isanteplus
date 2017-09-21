@@ -4,7 +4,7 @@
         "description": "isanteplus.registration.mostRecentMedDisclosure.description",
         "label": "isanteplus.registration.mostRecentMedDisclosure.label",
         "icon": "icon-user",
-        "order": 1,
+        "order": 2,
         "config": {
             "encounterTypeUuid": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
             "encounterDateLabel": "isanteplus.registration.mostRecentMedDisclosure.encounterDateLabel",

@@ -42,6 +42,8 @@ public class ConfigurableGlobalProperties {
 
 	// Registration Core Global Properties for integration with SEDISH MPI
 
+	public static final String REGISTRATIONCORE_BIOMETRICS_PERSONIDENTIFIERTYPEUUID = "registrationcore.biometrics.personIdentifierTypeUuid";
+
 	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_ECID = "registrationcore.local_mpi_identifierTypeMap.ECID";
 
 	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_Code_National = "registrationcore.local_mpi_identifierTypeMap.iSantePlus_Code_National";

@@ -135,6 +135,7 @@
                             "fields": [
                                 {
                                     "type": "patientIdentifier",
+                                    "label": "isanteplus.registration.patient.fingerprint.label",
                                     "formFieldName": "Biometrics Reference Code",
                                     "uuid": "e26ca279-8f57-44a5-9ed8-8cc16e90e559",
                                     "widget": {
