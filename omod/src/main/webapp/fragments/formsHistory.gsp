@@ -39,6 +39,9 @@
     		event.preventDefault();
     	});
     });
+    jQuery(document).ready(function() {
+	    jQuery(".tabs").tabs({active: 2});
+	});
 </script>
 
 ${ ui.includeFragment("isanteplus", "isantePlusForms") }
