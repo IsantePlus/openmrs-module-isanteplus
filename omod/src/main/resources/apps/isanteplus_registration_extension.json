@@ -5,7 +5,7 @@
         "type": "link",
         "order": 1,
         "label": "isanteplus.clinicianFacingOverallActionsLink",
-        "url": "registrationapp/registrationSummary.page?patientId={{patient.uuid}}&appId=registrationapp.registerPatient&returnUrl=coreapps/clinicianfacing/patient.page?patientId={{patient.uuid}}",
+        "url": "registrationapp/registrationSummary.page?patientId={{patient.uuid}}&appId=isanteplus.registration&returnUrl=coreapps/clinicianfacing/patient.page?patientId={{patient.uuid}}",
         "icon": "icon-user"
     },
     {
