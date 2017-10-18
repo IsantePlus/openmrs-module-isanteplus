@@ -28,6 +28,8 @@ import org.openmrs.module.haiticore.metadata.bundles.HaitiSedishMpiPatientIdenti
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
 import org.openmrs.module.metadatadeploy.bundle.Requires;
 import org.openmrs.module.metadatamapping.MetadataSet;
+import org.openmrs.module.metadatamapping.MetadataSetMember;
+import org.openmrs.module.metadatamapping.RetiredHandlingMode;
 import org.openmrs.module.metadatamapping.api.MetadataMappingService;
 import org.openmrs.module.isanteplus.IsantePlusConstants;
 import org.openmrs.module.isanteplus.ConfigurableGlobalProperties;
@@ -35,7 +37,9 @@ import org.openmrs.util.OpenmrsConstants;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 ;
 
@@ -115,8 +119,21 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
         PatientIdentifierType patientIdentifierTypeCodeSt = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST);
         PatientIdentifierType patientIdentifierTypeCodeNational = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL);
 
-        metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeSt);
-        metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeNational);
+        if (!checkMetadataSetMemberForPatientIdentifierType(extraPatientIdTypesSet, patientIdentifierTypeCodeSt)) {
+        	metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeSt);
+        	metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeNational);
+        }
 
+	}
+	
+	private boolean checkMetadataSetMemberForPatientIdentifierType(MetadataSet metadataSet, PatientIdentifierType patientIdType) {
+		String patientIdTypeUuid = patientIdType.getUuid();
+		for (MetadataSetMember metadataSetMember : metadataMappingService.getMetadataSetMembers(metadataSet, 0, 1000,
+			    RetiredHandlingMode.ONLY_ACTIVE)) {
+				if (metadataSetMember.getMetadataUuid().equals(patientIdTypeUuid)) {
+					return true;
+				}
+			}
+		return false;
 	}
 }
