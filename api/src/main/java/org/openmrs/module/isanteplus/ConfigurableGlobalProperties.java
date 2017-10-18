@@ -46,13 +46,13 @@ public class ConfigurableGlobalProperties {
 
 	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_ECID = "registrationcore.local_mpi_identifierTypeMap.ECID";
 
-	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_Code_National = "registrationcore.local_mpi_identifierTypeMap.iSantePlus_Code_National";
+	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_Code_National = "registrationcore.local_mpi_identifierTypeMap.Code National";
 
-	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_ID = "registrationcore.local_mpi_identifierTypeMap.iSantePlus_ID";
+	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_ID = "registrationcore.local_mpi_identifierTypeMap.iSantePlus ID";
 
-	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_ST_Code = "registrationcore.local_mpi_identifierTypeMap.iSantePlus_ST_Code";
+	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSantePlus_Code_ST = "registrationcore.local_mpi_identifierTypeMap.Code ST";
 	
-	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_M2Sys_Fingerprint_Registration_ID = "registrationcore.local_mpi_identifierTypeMap.M2Sys_Fingerprint_Registration_ID";
+	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_Biometrics_Reference_Code = "registrationcore.local_mpi_identifierTypeMap.Biometrics Reference Code";
 
 	public static final String REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER = "2.16.840.1.113883.4.56";
 
@@ -66,13 +66,13 @@ public class ConfigurableGlobalProperties {
 
 	public static final String REGISTRATIONCORE_MPI_iSantePlus_ID_UNIVERSAL_IDENTIFIER_TYPE = "PI";
 
-	public static final String REGISTRATIONCORE_MPI_iSantePlus_ST_Code_UNIVERSAL_IDENTIFIER = "2.25.276946543544871160225835991160192746993";
+	public static final String REGISTRATIONCORE_MPI_iSantePlus_Code_ST_UNIVERSAL_IDENTIFIER = "2.25.276946543544871160225835991160192746993";
 
-	public static final String REGISTRATIONCORE_MPI_iSantePlus_ST_Code_UNIVERSAL_IDENTIFIER_TYPE = "PI";
+	public static final String REGISTRATIONCORE_MPI_iSantePlus_Code_ST_UNIVERSAL_IDENTIFIER_TYPE = "PI";
 
 	public static final String REGISTRATIONCORE_MPI_PASSWORD = "registrationcore.mpi.password";
 
-	public static final String REGISTRATIONCORE_MPI_M2Sys_Fingerprint_Registration_ID_UNIVERSAL_IDENTIFIER = "2.25.300969590489438061583573695579607328089";
+	public static final String REGISTRATIONCORE_MPI_Biometrics_Reference_Code_UNIVERSAL_IDENTIFIER = "2.25.300969590489438061583573695579607328089";
 
 	public static final String REGISTRATIONCORE_MPI_M2Sys_Fingerprint_Registration_ID_UNIVERSAL_IDENTIFIER_TYPE = "NI";
 
