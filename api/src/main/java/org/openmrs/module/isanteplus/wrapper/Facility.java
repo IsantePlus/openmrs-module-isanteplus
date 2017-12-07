@@ -73,13 +73,6 @@ public class Facility extends AbstractCustomizableWrapper<Location, LocationAttr
 	public String getLongitude() {
 		return target.getLongitude();
 	}
-	/**
-	 * Gets the master facility Arrondissement
-	 * @return the getArrondissement
-	 */
-	public String getArrondissement() {
-		return (String) getAsAttribute(LocationBundle._LocationAttributeType.ARRONDISSEMENT);
-	}
 	
 	/**
 	 * Gets the master facility code (MSPP CODE)

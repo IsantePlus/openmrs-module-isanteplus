@@ -26,7 +26,6 @@ public class LocationBundle extends AbstractMetadataBundle {
 	public static final class _LocationAttributeType {
 		public static final String CATEGORY = "c539128d-252c-4b6a-9fa8-f706dfcad1d9";
 		public static final String TYPE = "dc14c848-8e83-409a-b465-3f77f74e9385";
-		public static final String ARRONDISSEMENT = "aba4699b-0dec-4194-9a11-31060b231737";
 		public static final String ISANTESITECODE =  "0e52924e-4ebb-40ba-9b83-b198b532653b"; 
 		public static final String SITECODE = "6242bf19-207e-4076-9d28-9290525b8ed9";
 		public static final String NETWORK = "3001b17e-a153-4efd-816c-e5a52f0555d3";
@@ -46,7 +45,7 @@ public class LocationBundle extends AbstractMetadataBundle {
 	
 	public void install(boolean full) throws Exception {
 		if (full) {
-			ObjectSource<Location> source = new LocationMflCsvSource("isanteplus_site_list_20171130.csv");
+			ObjectSource<Location> source = new LocationMflCsvSource("isanteplus_site_list_20171206.csv");
 			sync(source, mflSynchronization);
         }
 	}

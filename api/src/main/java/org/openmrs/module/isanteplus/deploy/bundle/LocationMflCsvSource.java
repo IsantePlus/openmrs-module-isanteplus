@@ -39,7 +39,6 @@ public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 	
 	public LocationMflCsvSource(String csvFile) throws IOException {
 		super(csvFile, true);
-		this.arrondissement = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.ARRONDISSEMENT);
 		this.siteCode = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.SITECODE);
 		this.isanteSiteCode = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.ISANTESITECODE);
 		this.category = MetadataUtils.existing(LocationAttributeType.class, _LocationAttributeType.CATEGORY);
@@ -53,7 +52,6 @@ public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 	@Override
 	public Location parseLine(String[] line) {
 		String departement = line[0];
-		String siteArrondissement = line[1];
 		String commune = line[2];
 		String sectionCommunale = line[3];
 		String name = line[4];
@@ -76,8 +74,6 @@ public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 		location.setCountry("Haiti");
 		location.setCityVillage(commune);
 		
-		
-		setAsAttribute(location, arrondissement, siteArrondissement);
 		setAsAttribute(location, siteCode, siteCod);
 		setAsAttribute(location, isanteSiteCode, oldSideCode);
 		setAsAttribute(location, category, categorySite);
