@@ -29,7 +29,7 @@ import java.io.IOException;
  */
 public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 
-	private LocationAttributeType category, locationType, arrondissement, isanteSiteCode, siteCode, network;
+	private LocationAttributeType category, locationType, isanteSiteCode, siteCode, network;
 	
 
 	/**
@@ -52,16 +52,16 @@ public class LocationMflCsvSource extends AbstractCsvResourceSource<Location> {
 	@Override
 	public Location parseLine(String[] line) {
 		String departement = line[0];
-		String commune = line[2];
-		String sectionCommunale = line[3];
-		String name = line[4];
-		String categorySite = line[5];
-		String typeLocation = line[6];
-		String siteCod = line[7];
-		String oldSideCode = line [8];
-		String siteNetwork = line[9];
-		String lat = line[10];
-		String lng = line[11];
+		String commune = line[1];
+		String sectionCommunale = line[2];
+		String name = line[3];
+		String categorySite = line[4];
+		String typeLocation = line[5];
+		String siteCod = line[6];
+		String oldSideCode = line [7];
+		String siteNetwork = line[8];
+		String lat = line[9];
+		String lng = line[10];
 		
 		
 

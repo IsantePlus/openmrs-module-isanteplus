@@ -55,7 +55,7 @@ public class Facility extends AbstractCustomizableWrapper<Location, LocationAttr
 		return target.getStateProvince();
 	}
 	/**
-	 * Gets The name of the faciliy
+	 * Gets The name of the facility
 	 */
 	public String getName() {
 		return target.getName();
