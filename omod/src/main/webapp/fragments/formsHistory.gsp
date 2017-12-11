@@ -40,7 +40,7 @@
     	});
     });
     jQuery(document).ready(function() {
-	    jQuery(".tabs").tabs({active: 2});
+	    jQuery(".tabs").tabs({active: 1});
 	});
 </script>
 

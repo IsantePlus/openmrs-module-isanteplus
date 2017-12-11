@@ -122,6 +122,11 @@ public class ISantePlusActivator implements ModuleActivator {
 			appFrameworkService.disableApp("referenceapplication.personalRelationships");
 			appFrameworkService.disableApp("referenceapplication.registrationapp.registerPatient");
 			appFrameworkService.disableApp("reportingui.reports");
+			
+			//Disable the following extensions
+			appFrameworkService.disableExtension("appointmentschedulingui.tab");
+			appFrameworkService.disableExtension("org.openmrs.module.appointmentschedulingui.firstColumnFragments.patientDashboard.patientAppointments");
+			appFrameworkService.disableExtension("chartsearch.chartSearchLink");
 
 		} catch (Exception e) {
 			e.printStackTrace();
