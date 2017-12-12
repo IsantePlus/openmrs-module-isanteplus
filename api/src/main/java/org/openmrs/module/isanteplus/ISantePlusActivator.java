@@ -115,9 +115,7 @@ public class ISantePlusActivator implements ModuleActivator {
 			appFrameworkService.disableApp("coreapps.mostRecentVitals");
 			appFrameworkService.disableApp("coreapps.obsAcrossEncounters");
 			appFrameworkService.disableApp("coreapps.obsGraph");
-			appFrameworkService.disableApp("coreapps.visitByEncounterType");
 			appFrameworkService.disableApp("coreapps.relationships");
-			appFrameworkService.disableApp("coreapps.visitByEncounterType");
 			appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
 			appFrameworkService.disableApp("referenceapplication.personalRelationships");
 			appFrameworkService.disableApp("referenceapplication.registrationapp.registerPatient");
