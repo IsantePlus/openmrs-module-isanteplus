@@ -41,5 +41,14 @@
           "provider": "isanteplus",
           "fragment": "registrationToggleMedicalPOA"
         }
-    }
+    },
+    {
+		"id": "isanteplus.registration.searchFingerprint",
+		"extensionPointId": "coreapps.patientSearch.extension",
+		"type": "fragment",
+		"extensionParams": {
+		  "provider": "registrationapp",
+		  "fragment": "search/m2SysSearch"
+		}
+	}
 ]
