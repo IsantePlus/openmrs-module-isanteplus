@@ -1,0 +1,1070 @@
+Departement,commune,section_communale,Institution,Categorie,Statut,code_MSPP,code_iSante,Reseau,Lat,Long
+Artibonite,Gonaïves,3ème Rivière de Bayonnais^511-03,Bayonnais,CSL,Privé à but lucratif,511302,,,,
+Artibonite,Gonaïves,5ème Labranle^511-05,Labranle,Disp.,Public,511504,51103,,19.4284,-72.5402
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Eben-Ezer,CAL,Mixte,511106,51105,,19.4538,-72.69
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Raboteau,HCR,Public,511108,51109,URC,19.4383,-72.6802
+Artibonite,Gonaïves,4ème Poteaux^511-04,Poteaux,Disp.,Public,511410,51111,,19.4625,-72.7692
+Artibonite,Gonaïves,6ème Bassin^511-02,Disp. La Pierre,Disp.,Public,511211,51108,,19.443,-72.695
+Artibonite,Gonaïves,6ème Bassin^511-02,La Providence,HD,Public,511201,51100,UGP MSPP,19.45,-72.69
+Artibonite,Gonaïves,4ème Poteaux^511-04,Bardon Marchand,Disp,Privé,511416,,,,
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Pont Gaudin,CSL,Public,511103,,,,
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Mandrin,CSL,Public,511115,,,,
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Ka-Soleil,CSL,Public,511105,51106,ICC,19.4374,-72.6353
+Artibonite,Gonaïves,6ème Bassin^511-02,Bon Berger,CSL,Privé à but lucratif,511207,51107,,19.5382,-72.6956
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Trou Sable,Disp.,Privé sans but lucratif,511109,51110,,19.5219,-72.6158
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Disp. Brunette,Disp.,Privé à but lucratif,511112,,,,
+Artibonite,Gonaïves,4ème Poteaux^511-04,Disp. Terre Blanche,Disp.,Privé sans but lucratif,511413,,,,
+Artibonite,Gonaïves,1ère Pont Tamarin^511-01,Disp. Tarasse,Disp.,Privé sans but lucratif,511114,,,,
+Artibonite,Ennery,4ème Puiloreau^512-04,Toussaint Louverture,HCR,Public,512401,51201,,19.482,-72.4813
+Artibonite,Ennery,4ème Puiloreau^512-04,Puilboreau (NF),CSL,Public,512407,,,,
+Artibonite,Ennery,4ème Puiloreau^512-04,St François d’Assise,CSL,Privé à but lucratif,512404,51204,ICC,19.4847,-72.4837
+Artibonite,Ennery,3ème Chemin Neuf^512-03,Disp. Chemin neuf,Disp.,Mixte,512305,,,,
+Artibonite,Ennery,3ème Chemin Neuf^512-03,Disp. Rouf,Disp.,Public,512306,,,,
+Artibonite,Ennery,2ème Passe Reine^512-02,Passe Reine,Disp.,Public,512202,51202,,19.5144,-72.5452
+Artibonite,Ennery,1ère Savane Carrée^512-01,Savane Carrée,Disp.,Public,512103,51203,,19.4413,-72.4396
+Artibonite,L'Estère,1ère Pont De L'Estere^513-01,L’Estère,HCR,Public,513201,,,,
+Artibonite,L'Estère,1ère Pont De L'Estere^513-01,SOSAKA,CAL,Public,513204,,,,
+Artibonite,L'Estère,1ère Pont De L'Estere^513-01,Mapou Lagon,Disp.,Privé sans but lucratif,513202,,,,
+Artibonite,L'Estère,1ère Pont De L'Estere^513-01,New Testament,CSL,Privé sans but lucratif,513103,51303,,19.3527,-72.5829
+Artibonite,Gros Morne,5ème Pendu^521-05,Pendu 5e section,Disp.,Privé sans but lucratif,521503,52103,,19.7849,-72.735
+Artibonite,Gros Morne,8ème Ravine Gros Morne^521-08,SOS France,CAL,Privé sans but lucratif,521805,52105,,19.6687,-72.6822
+Artibonite,Gros Morne,4ème L'Acul^521-04,Treuil,Disp.,Public,521406,52106,,19.7596,-72.6544
+Artibonite,Gros Morne,7ème Moulin^521-07,Moulin,CAL,Public,521707,52107,,19.6509,-72.7159
+Artibonite,Gros Morne,8ème Ravine Gros Morne^521-08,Pérou,Disp.,Public,521808,,,,
+Artibonite,Gros Morne,4ème L'Acul^521-04,Verneillen (NF),Disp.,Privé à but lucratif,521409,52109,,19.7595,-72.6751
+Artibonite,Gros Morne,3ème Rivière Blanche^521-03,Disp. Corail,Disp.,Mixte,521311,,,,
+Artibonite,Gros Morne,6ème Savane Carrée^521-06,Clinique Jolivert,CSL,Privé à but lucratif,521612,,,,
+Artibonite,Gros Morne,2ème Rivière Mancelle^521-02,château (Gros-Morne),Disp,Privé à but lucratif,521217,,,,
+Artibonite,Gros Morne,7ème Moulin^521-07,Disp. Décaussière (NF),Disp.,Privé à but lucratif,521713,,,,
+Artibonite,Gros Morne,4ème L'Acul^521-04,Clinique Anti-tuberculeuse,CSL,Privé sans but lucratif,521414,52114,ICC,19.7156,-72.6988
+Artibonite,Gros Morne,4ème L'Acul^521-04,Disp. Charbe (NF),Disp.,Privé à but lucratif,521410,,,,
+Artibonite,Gros Morne,2ème Rivière Mancelle^521-02,Disp. Notre Dame,Disp.,Privé à but lucratif,521215,,,,
+Artibonite,Gros Morne,4ème L'Acul^521-04,Disp. Comm. de Dupuy,Disp.,Privé à but lucratif,521416,,,,
+Artibonite,Gros Morne,3ème Rivière Blanche^521-03,Alma Mater,HCR,Mixte,521301,52101,CMMB,19.6694,-72.6808
+Artibonite,Gros Morne,6ème Savane Carrée^521-06,David 6e section,Disp.,Public,521602,52102,,19.7111,-72.7386
+Artibonite,Gros Morne,2ème Rivière Mancelle^521-02,Rivière Mancelle,Disp.,Privé à but lucratif,521204,52104,,19.7202,-72.6199
+Artibonite,Terre Neuve,2ème Bois Neuf^522-02,CS de Terre-Neuve,CAL,Public,522201,,,,
+Artibonite,Terre Neuve,3ème Lagon^522-03,Disp. Lagon,Disp.,Public,522302,,,,
+Artibonite,Anse Rouge,2ème Sources Chaudes^523-02,Disp. Figuier,Disp.,Public,523203,52303,N/A,19.602,-72.8902
+Artibonite,Anse Rouge,1ère L'Arbre^523-01,Disp. Atrel,Disp.,Public,523108,52308,N/A,19.638,-72.9151
+Artibonite,Anse Rouge,2ème Sources Chaudes^523-02,CS comm. de Coridon,Disp.,Public,523202,52302,N/A,19.56,-72.9011
+Artibonite,Anse Rouge,1ère L'Arbre^523-01,CS d’Anse Rouge,CAL,Public,523101,52301,N/A,19.63,-73.06
+Artibonite,Anse Rouge,2ème Sources Chaudes^523-02,Centre de santé Illodep,CSL,Privé à but lucratif,523204,52304,N/A,19.6006,-72.9539
+Artibonite,Anse Rouge,1ère L'Arbre^523-01,Disp. Canté (Tanté),Disp.,Public,523107,52307,N/A,19.7173,-72.9454
+Artibonite,Anse Rouge,1ère L'Arbre^523-01,Disp. Plaine de l’Arbre,Disp.,Public,523105,52305,N/A,19.6668,-73.022
+Artibonite,Anse Rouge,2ème Sources Chaudes^523-02,Disp. Sources Chaudes,Disp.,Public,523206,52306,N/A,19.6363,-72.9164
+Artibonite,Saint-Marc,2ème Bois Neuf^531-02,Chardène,Disp.,Public,531202,53102,,19.049,-72.7148
+Artibonite,Saint-Marc,1ère Délugé^531-01,Gresseau,Disp.,Public,531105,53105,,18.9828,-72.6461
+Artibonite,Saint-Marc,3ème Goyavier^531-03,Goyavier,Disp.,Public,531304,53104,,,
+Artibonite,Saint-Marc,1ère Délugé^531-01,Montrouis,Disp.,Public,531107,53107,,,
+Artibonite,Saint-Marc,2ème Bois Neuf^531-02,Jeanton,Disp.,Public,531206,53106,,19.0753,-72.7088
+Artibonite,Saint-Marc,5ème Bocozelle^531-05,Bocozelle,CAL,Privé à but lucratif,531510,53110,,19.2069,-72.6405
+Artibonite,Saint-Marc,5ème Bocozelle^531-05,Gervais,Disp.,Privé à but lucratif,531511,53111,,19.2378,-72.7188
+Artibonite,Saint-Marc,4ème Lalouère^531-04,RSCH/ Gilbert,Disp.,Public,531412,53112,,19.0675,-72.6152
+Artibonite,Saint-Marc,6ème Charrette^531-06,Terre Blanche,Disp.,Public,531613,53113,,19.0707,-72.681
+Artibonite,Saint-Marc,6ème Charrette^531-06,SSPE,Disp.,Public,531615,,,,
+Artibonite,Saint-Marc,5ème Bocozelle^531-05,RSCH/ Bertrant,Disp.,Privé à but lucratif,531516,53116,,19.1651,-72.636
+Artibonite,Saint-Marc,6ème Charrette^531-06,Saint Nicolas,HCR,Public,531601,53101,PIH,19.1134,-72.699
+Artibonite,Saint-Marc,6ème Charrette^531-06,Charrettes,Disp.,Public,531603,53103,,19.0802,-72.675
+Artibonite,Saint-Marc,2ème Bois Neuf^531-02,Pierre Payen,CAL,Privé à but lucratif,531208,53108,URC,18.9972,-72.7379
+Artibonite,Saint-Marc,5ème Bocozelle^531-05,Pont Sondé,Disp.,Public,531509,53109,,19.1488,-72.617
+Artibonite,Saint-Marc,4ème Lalouère^531-04,St Laurent/Barbe,Disp.,Public,531414,53114,,19.094,-72.6551
+Artibonite,Saint-Marc,4ème Lalouère^531-04,Lagarenne,Disp,Privé à but lucratif,531417,,,,
+Artibonite,Saint-Marc,5ème Bocozelle^531-05,Fondation Siméus (NF),Disp.,Privé à but lucratif,531517,,,,
+Artibonite,Verrettes,5ème Bastien^532-05,Bastien,Disp.,Privé à but lucratif,532503,53203,,19.0459,-72.5241
+Artibonite,Verrettes,6ème Terre Natte^532-06,Barbe (NF),Disp.,Public,532602,53202,,,
+Artibonite,Verrettes,3ème Guillaume Mogé^532-03,Disp. Christant (NF),Disp.,Public,532310,,,,
+Artibonite,Verrettes,2ème Bélanger^532-02,CS de Belanger,CSL,Privé à but lucratif,532211,,,,
+Artibonite,Verrettes,3ème Guillaume Mogé^532-03,CS St Guillaume,CSL,Mixte,532312,,,,
+Artibonite,Verrettes,5ème Bastien^532-05,Dumarsais Estimé,Hôpital,Public,532506,53206,,19.0506,-72.4671
+Artibonite,Verrettes,1ère Liancourt^532-01,Liancourt,CSL,Privé sans but lucratif,532108,53208,,19.1272,-72.5351
+Artibonite,Verrettes,3ème Guillaume Mogé^532-03,Disp. Marin (NF),Disp.,Public,532309,,,,
+Artibonite,Verrettes,2ème Bélanger^532-02,Albert Schweitzer,Hôpital,Privé sans but lucratif,532201,53201,CRS,19.0745,-72.4914
+Artibonite,Verrettes,4ème Désarmes^532-04,Desarmes,CSL,Mixte,532404,53204,,18.9928,-72.3892
+Artibonite,Verrettes,2ème Bélanger^532-02,Deschapelles,Disp.,Privé sans but lucratif,532205,53205,,19.0818,-72.4952
+Artibonite,Verrettes,4ème Désarmes^532-04,Gabriel,Disp.,Privé sans but lucratif,532407,53207,,19.0159,-72.4595
+Artibonite,Verrettes,4ème Désarmes^532-04,Valheureux,Disp,Privé à but lucratif,532413,,,,
+Artibonite,La Chapelle,1ère Martineau^533-01,La Chapelle,CAL,Mixte,533101,53301,,18.914,-72.3164
+Artibonite,Dessalines,2ème Fossé Naboth ou Duvallon^541-02,Pélissier/ Laraque,Disp.,Privé à but lucratif,541202,54102,,,
+Artibonite,Dessalines,6ème La Croix^541-06,La Croix Missionnaire,Disp.,Privé à but lucratif,541603,51301,,,
+Artibonite,Dessalines,5ème Fiéfé^541-05,Celio,Disp.,Privé à but lucratif,541504,54104,N/A,19.1645,-72.3624
+Artibonite,Dessalines,3ème Ogé^541-03,Niel,Disp.,Privé à but lucratif,541305,54105,,19.2345,-72.5274
+Artibonite,Dessalines,4ème Poste Pierrot^541-04,Poste Pierrot,Disp.,Privé à but lucratif,541406,54106,,19.204,-72.457
+Artibonite,Dessalines,4ème Poste Pierrot^541-04,Coupe à l’Inde,Disp.,Privé à but lucratif,541407,54107,N/A,19.2789,-72.4663
+Artibonite,Dessalines,1ère Villars^541-01,Sanoix,Disp.,Privé à but lucratif,541108,54108,,19.2222,-72.5816
+Artibonite,Dessalines,4ème Poste Pierrot^541-04,Grande Hatte,Disp.,Privé à but lucratif,541410,54110,N/A,19.1428,-72.433
+Artibonite,Dessalines,3ème Ogé^541-03,Ogé,Disp.,Public,541313,54113,,19.1976,-72.4939
+Artibonite,Dessalines,2ème Fossé Naboth ou Duvallon^541-02,Hatte Chevreau,Disp.,Privé à but lucratif,541214,54114,N/A,19.2882,-72.5791
+Artibonite,Dessalines,3ème Ogé^541-03,Centre Médical Philomène Privenston,CAL,Privé à but lucratif,541316,,,,
+Artibonite,Dessalines,2ème Fossé Naboth ou Duvallon^541-02,CS de Haute Feuille,Disp.,Public,541217,,,,
+Artibonite,Dessalines,6ème La Croix^541-06,CS de Basse Cabaille,CSL,Privé à but lucratif,541618,,,,
+Artibonite,Dessalines,3ème Ogé^541-03,CS de Grand Bois,CAL,Public,541319,,,,
+Artibonite,Dessalines,4ème Poste Pierrot^541-04,CS de Bois Mary,CAL,Public,541420,,,,
+Artibonite,Dessalines,3ème Ogé^541-03,Claire Heureuse,HCR,Mixte,541301,54101,URC,19.2632,-72.5163
+Artibonite,Dessalines,2ème Fossé Naboth ou Duvallon^541-02,Deseaux,Disp.,Mixte,541209,54109,N/A,19.2565,-72.5822
+Artibonite,Dessalines,1ère Villars^541-01,Beaufort (NF),Disp,Privé à but lucratif,541111,,,,
+Artibonite,Dessalines,4ème Poste Pierrot^541-04,Shekina (NF),Disp,Privé à but lucratif,541412,,,,
+Artibonite,Dessalines,3ème Ogé^541-03,Sainte Claire d’Assise,Disp.,Privé à but lucratif,541311,54111,ICC,19.2592,-72.5161
+Artibonite,Dessalines,5ème Fiéfé^541-05,Chenot,Disp.,Privé sans but lucratif,541512,54112,N/A,19.1564,-72.3239
+Artibonite,Dessalines,3ème Ogé^541-03,Glenn Eben-Ezer,Disp.,Privé à but lucratif,541315,,,,
+Artibonite,Petite Rivière de L'Artibonite,3ème Labady^542-03,Charles Colimon,HCR,Public,542301,54201,,19.1215,-72.4751
+Artibonite,Petite Rivière de L'Artibonite,4ème Savane à Roche^542-04,Deslandes,Disp.,Privé à but lucratif,542402,54202,,18.9479,-72.3142
+Artibonite,Petite Rivière de L'Artibonite,3ème Labady^542-03,Plassac,CSL,Privé sans but lucratif,542306,54206,,19.0613,-72.4052
+Artibonite,Petite Rivière de L'Artibonite,1ère Bas Coursin^542-01,Jean Denis,Disp.,Privé à but lucratif,542109,54209,,19.1848,-72.5428
+Artibonite,Petite Rivière de L'Artibonite,2ème Bas Coursin^542-02,Ségur (NF),Disp.,Public,542208,54208,,,
+Artibonite,Petite Rivière de L'Artibonite,6ème Médor^542-06,Saint joseph,Disp,Privé à but lucratif,542604,,,,
+Artibonite,Petite Rivière de L'Artibonite,6ème Médor^542-06,Médor,Disp.,Public,542611,,,,
+Artibonite,Petite Rivière de L'Artibonite,1ère Bas Coursin^542-01,Mauger (NF),Disp.,Public,542103,54203,,19.1611,-72.5659
+Artibonite,Petite Rivière de L'Artibonite,5ème Pérodin^542-05,Pérodin,Disp.,Privé sans but lucratif,542505,54205,,19.1075,-72.3014
+Artibonite,Petite Rivière de L'Artibonite,4ème Savane à Roche^542-04,Savane à Roche,Disp.,Mixte,542407,54207,,19.0118,-72.3669
+Artibonite,Grande Saline,1ère Poteneau^543-01,Drouin,CAL,Public,543101,54301,,19.2561,-72.6897
+Artibonite,Grande Saline,1ère Poteneau^543-01,Grande Saline (NF),Disp.,Public,543102,54302,,,
+Artibonite,Grande Saline,1ère Poteneau^543-01,Poteneau,Disp.,Public,543103,54303,,19.237,-72.6416
+Artibonite,Desdunes,2ème Desdunes^544-01,CSL St Pierre,CAL,Public,544201,54401,N/A,19.2841,-72.6348
+Artibonite,Desdunes,2ème Desdunes^544-01,Disp. Des Cahos,Disp.,Public,544202,54402,N/A,19.3011,-72.6504
+Artibonite,Desdunes,2ème Desdunes^544-01,Fèk Parèt,Disp,Public,544204,,,,
+Artibonite,Desdunes,2ème Desdunes^544-01,Disp. Aux Sources,Disp.,Public,544203,54403,N/A,19.3301,-72.6757
+Artibonite,Saint-Michel de L'Attalaye,3ème Bas de Sault^551-03,Saint Michel de l’Attalaye,CAL,Public,551301,55201,,19.5168,-72.3602
+Artibonite,Saint-Michel de L'Attalaye,7ème Mamont^551-07,Marmont/Nan Paul,Disp.,Public,551703,55203,,,
+Artibonite,Saint-Michel de L'Attalaye,6ème Lacedras^551-06,Garde Baptiste,Disp.,Public,551604,55204,,,
+Artibonite,Saint-Michel de L'Attalaye,3ème Bas de Sault^551-03,Bas de Sault,Disp.,Public,551305,55205,,,
+Artibonite,Saint-Michel de L'Attalaye,8ème l'Attalaye^551-08,Disp. l’Attalaye (NF),Disp.,Privé à but lucratif,551808,,,,
+Artibonite,Saint-Michel de L'Attalaye,3ème Bas de Sault^551-03,Disp. Bon Berger (NF),Disp.,Privé à but lucratif,551309,,,,
+Artibonite,Saint-Michel de L'Attalaye,5ème L'Ermite^551-05,L’Ermite,Disp.,Public,551506,55206,,,
+Artibonite,Saint-Michel de L'Attalaye,7ème Mamont^551-07,Disp. New Mission,Disp.,Privé sans but lucratif,551711,,,,
+Artibonite,Saint-Michel de L'Attalaye,4ème Lalomas^551-04,Las Lomas,Disp.,Public,551402,55202,,,
+Artibonite,Saint-Michel de L'Attalaye,8ème l'Attalaye^551-08,CS Village d’Espoir,CSL,Public,551810,,,,
+Artibonite,Saint-Michel de L'Attalaye,2ème Camathe^551-02,Camathe,CSL,Privé sans but lucratif,551207,55207,,,
+Artibonite,Marmelade,2ème Bassin^552-02,Bassin,Disp,Public,552202,,,,
+Artibonite,Marmelade,1ère Crête à Pins^552-01,CSL Marmelade,CAL,Public,552101,55101,URC,19.3762,-72.3367
+Centre,Hinche,1ère Juanaria^611-01,Hôpital Sainte Thérèse (Hinche),HD,Public,611100,61100,,19.1381,-72.014
+Centre,Hinche,1ère Juanaria^611-01,Clinic l’Incarnation de Pandiasou,CAL,Privé à but non lucratif,611106,61106,,19.127,-72.0572
+Centre,Hinche,1ère Juanaria^611-01,Disp. Withney Clinic,CSL,Public,611107,,,,
+Centre,Hinche,1ère Juanaria^611-01,Disp. de Montegrande,Dispensaire,Public,611103,,,,
+Centre,Hinche,1ère Juanaria^611-01,Disp. de Dos Palais (NF),Dispensaire,Mixte,611110,61103,,,
+Centre,Hinche,1ère Juanaria^611-01,Disp. des Abricots,Dispensaire,Privé à but lucratif,611104,61104,,19.0627,-72.0831
+Centre,Hinche,1ère Juanaria^611-01,Centre de santé Abricots,Dispensaire,Privé à but lucratif,611111,,,,
+Centre,Hinche,1ère Juanaria^611-01,Clinique New Hope de Hinche,CSL,Privé à but lucratif,611112,,,,
+Centre,Hinche,2ème Marmont^611-02,Centre de Santé de Marmont,CSL,Public,611201,61101,,19.06,-71.98
+Centre,Hinche,3ème Aguahedionde^611-03,Disp. de Bassin Zim,Dispensaire,Public,611308,,,,
+Centre,Hinche,3ème Aguahedionde^611-03,Disp. de Los Palis,Dispensaire,Mixte,611305,,,,
+Centre,Hinche,3ème Aguahedionde^611-03,Disp. de Los Palma (NF),Dispensaire,Privé à but lucratif,611309,,,,
+Centre,Hinche,4ème Aguahedionde^611-04,Disp. la Belle Onde,Dispensaire,Public,611402,61102,,19.1713,-72.0578
+Centre,Maïssade,1ère Savane Grande^612-01,Centre de Santé de Maïssade,CAL,Public,612101,61201,,19.18,-72.14
+Centre,Maïssade,1ère Savane Grande^612-01,Dispensaire de Selpètre,CSL,Public,612104,61204,,19.1511,-72.1662
+Centre,Maïssade,1ère Savane Grande^612-01,Dispensaire Cinquième,Dispensaire,Public,612105,61205,,19.2084,-72.2264
+Centre,Maïssade,1ère Savane Grande^612-01,Dispensaire Madame Joie,Dispensaire,Public,612106,,,,
+Centre,Maïssade,2ème Narang^612-02,Dispensaire de Bois-Rouge,Dispensaire,Public,612202,61202,,19.1058,-72.2001
+Centre,Maïssade,3ème Hatty^612-03,Dispensaire Ossenande,Dispensaire,Public,612303,,,,
+Centre,Maïssade,3ème Hatty^612-03,Dispensaire Bassin Cave (NF),Dispensaire,Privé à but lucratif,612307,61203,,19.2371,-72.1722
+Centre,Maïssade,3ème Hatty^612-03,Dispensaire Hatty (NF),Dispensaire,Privé à but lucratif,612308,61206,,19.167,-72.2223
+Centre,Thomonde,1ère Cabral^613-01,Centre de Santé de Thomonde,CAL,Mixte,613101,61301,,19.0262,-71.9696
+Centre,Thomonde,1ère Cabral^613-01,Polyclinique commun. Thomonde,CSL,Privé à but lucratif,613106,,,,
+Centre,Thomonde,3ème Baille Tourrible^613-03,CS Baille-Tourrible,CSL,Mixte,613305,,,,
+Centre,Thomonde,3ème La Hoye^613-04,Dispensaire La Hoye,Dispensaire,Public,613402,,,,
+Centre,Thomonde,3ème La Hoye^613-04,Dispensaire Caste (NF),CSL,Public,613404,,,,
+Centre,Thomonde,3ème La Hoye^613-04,Dispensaire Pareidon (NF),Dispensaire,Privé à but lucratif,613403,,,,
+Centre,Cerca Cavajal,1ère Rang^614-01,Centre de Santé de Cerca Cavajal,CAL,Public,614101,,,,
+Centre,Cerca Cavajal,1ère Rang^614-01,Dispensaire Ste famille,Dispensaire,Privé à but lucratif,614108,,,,
+Centre,Cerca Cavajal,1ère Rang^614-01,Dispensaire Bon Samaritain (NF),Dispensaire,Privé à but lucratif,614105,61405,,,
+Centre,Cerca Cavajal,1ère Rang^614-01,Dispensaire d’Angoman (NF),Dispensaire,Privé à but lucratif,614106,61406,,,
+Centre,Cerca Cavajal,1ère Rang^614-01,CS Farnèse Louis Jeune (NF),Dispensaire,Privé à but lucratif,614107,61407,,,
+Centre,Mirebalais,3ème Grand Boucan^621-03,Hôp. Universitaire de Mirebalais,HU,Public,621308,,,,
+Centre,Mirebalais,3ème Grand Boucan^621-03,Dispensaire Décaussière (NF),Dispensaire,Public,621307,,,,
+Centre,Mirebalais,3ème Grand Boucan^621-03,Dispensaire Grand Boucan (NF),Dispensaire,Privé à but lucratif,621305,62105,,,
+Centre,Mirebalais,3ème Grand Boucan^621-03,Dispensaire Fonds Michel,Dispensaire,Privé à but lucratif,621306,62106,,,
+Centre,Mirebalais,4ème Crête Brûlée^621-04,Centre de santé ODECOM,CSL,Mixte,621410,,,,
+Centre,Mirebalais,4ème Crête Brûlée^621-04,Centre de santé Trianon,CSL,Mixte,621409,,,,
+Centre,Mirebalais,5ème Gascogne^621-01,Dispensaire Marché Canard,Dispensaire,Public,621504,62104,URC,18.7756,-72.0322
+Centre,Mirebalais,6ème Sarazin^621-02,Clinique Mennonite (Mirebalais),CSL,Public,621603,62103,,18.8344,-72.0996
+Centre,Mirebalais,6ème Sarazin^621-02,Dispensaire de Sarazin,Dispensaire,Public,621601,62101,,18.798,-72.001
+Centre,Saut d'Eau,1ère Rivière Canot^622-01,CS sans Lit de Saut d’Eau,CSL,Public,622101,62201,,18.8164,-72.1974
+Centre,Saut d'Eau,3ème Coupe Mardi Gras^622-03,Disp. Coupe Mardi- Gras,CSL,Mixte,622302,,,,
+Centre,Saut d'Eau,4ème Montagne Terrible^622-04,Disp. Montagne Terrible (NF),Dispensaire,Privé à but lucratif,622403,62202,,18.8072,-72.2683
+Centre,Saut d'Eau,4ème Montagne Terrible^622-04,Dispensaire Cap Anamur (NF),Dispensaire,Privé à but lucratif,622404,62203,,,
+Centre,Boucan Carré,3ème des Bayes^623-03,Hôpital Bon Sauveur de Cange,HCR,Privé à but lucratif,623103,,,,
+Centre,Boucan Carré,2ème Boucan Carré^623-02,CS de St Michel de Boucan Carré,CAL,Mixte,623201,62301,,18.9192,-72.1403
+Centre,Boucan Carré,3ème des Bayes^623-03,CS Sans Lits Saint EsPrivèt,CAL,Mixte,623302,,,,
+Centre,Lascahobas,2ème Juampas^631-02,Centre Santé Fanm,CAL,Mixte,631202,,,,
+Centre,Lascahobas,2ème Juampas^631-02,Centre de santé Mount Gold (NF),CSL,Privé à but lucratif,631205,,,,
+Centre,Lascahobas,2ème Juampas^631-02,Centre de santé de Lascahobas,CAL,Mixte,631201,63101,,18.8101,-71.9491
+Centre,Belladères,1ère Renth Mathe^632-01,Dispensaire de Croix Fer (NF),Dispensaire,Privé à but lucratif,632102,63202,,18.8541,-71.8153
+Centre,Belladères,1ère Renth Mathe^632-01,Centre de Santé de Baptiste,CAL,Public,632104,63204,,18.7981,-71.7832
+Centre,Belladères,1ère Renth Mathe^632-01,Hôp. Notre Dame de la Nativité,HCR,Public,632101,63201,,18.8675,-71.7618
+Centre,Belladères,2ème Roye Sec^632-02,Dispensaire de Roy Sec,Dispensaire,Public,632203,63203,,18.8928,-71.8386
+Centre,Savanette,2ème La Haye^633-02,Centre de Santé de Savanette,CSL,Mixte,633201,63301,,18.745,-71.8218
+Centre,Savanette,2ème La Haye^633-02,Dispensaire de Colombier,Dispensaire,Mixte,633202,63302,,18.745,-71.821
+Centre,Cerca La Source,1ère Acajou Bruler^641-01,Dispensaire de Saltadère (NF),Dispensaire,Privé à but non lucratif,641102,64102,,19.1339,-71.7324
+Centre,Cerca La Source,1ère Acajou Bruler^641-01,Dispensaire de Pacasse (NF),Dispensaire,Privé à but lucratif,641104,64104,,,
+Centre,Cerca La Source,2ème Acajou Bruler^641-02,CS de Cerca La Source,CAL,Mixte,641201,,,,
+Centre,Cerca La Source,2ème Acajou Bruler^641-02,Dispensaire de Baltazar (NF),Dispensaire,Privé à but lucratif,641203,64103,,,
+Centre,Cerca La Source,3ème Lamielle^641-03,CS de Tilory,CAL,Public,641305,64105,,19.2318,-71.6821
+Centre,Thomassique,2ème Lociane^642-02,Dispensaire de Boc Banic,Dispensaire,Public,642201,64201,,19.0511,-71.7506
+Centre,Thomassique,2ème Lociane^642-02,Clinique St Joseph,CAL,Privé à but non lucratif,642202,64202,,19.09,-71.83
+Grand Anse,Jérémie,4ème Basse Guinaudée^811-04,Centre médico-social de Gébeau,CSL,Mixte,811402,81102,ICC,18.6225,-74.1119
+Grand Anse,Jérémie,8ème Fonds Rouge Dahere^811-08,Sainte Thérèse de l’Enfant Jésus,Dispensaire,Mixte,811803,81103,,18.6357,-74.1862
+Grand Anse,Jérémie,4ème Basse Guinaudée^811-04,NDPS de Latibolière,Dispensaire,Mixte,811404,81104,,18.5954,-74.1379
+Grand Anse,Jérémie,9ème Fonds Rouge Torberck^811-09,ND de l’Assomption de Numéro 2,Dispensaire,Mixte,811908,81108,,18.6633,-74.1584
+Grand Anse,Jérémie,3ème Haute Guinaudée^811-03,Bon Pasteur de Prévilé,CAL,Mixte,811309,81109,,18.5365,-74.1577
+Grand Anse,Jérémie,7ème Marfranc^811-07,Immaculée Conception Ste Hélène,CSL,Mixte,811710,81110,URC,18.6225,-74.1119
+Grand Anse,Jérémie,9ème Fonds Rouge Torberck^811-09,Hôpital Saint Antoine,HCR,Public,811900,81100,ITECH,18.646,-74.1175
+Grand Anse,Jérémie,8ème Fonds Rouge Dahere^811-08,Haitian Health Foundation,CSL,Privé à but non lucratif,811801,81101,URC,18.64,-74.12
+Grand Anse,Jérémie,2ème Haute Voldrogue^811-02,Siloé de Léon,Dispensaire,Public,811205,81105,,18.5457,-74.1115
+Grand Anse,Jérémie,9ème Fonds Rouge Torberck^811-09,SSPE de Mackandal,Dispensaire,Public,811906,81106,,18.6474,-74.1156
+Grand Anse,Jérémie,7ème Marfranc^811-07,SSPE de Marfranc,Dispensaire,Public,811707,81107,,18.5872,-74.209
+Grand Anse,Jérémie,2ème Haute Voldrogue^811-02,Dispensaire Sainte Anne,Dispensaire,Public,811211,,,,
+Grand Anse,Abricots,1ère Anse du Clerc^812-01,CS Léon Coicou d’Anse du Clerc,CSL,Mixte,812102,81202,,18.6476,-74.278
+Grand Anse,Abricots,2ème Balisiers^812-02,SSPE St Joseph des Abricots,CSL,Public,812203,81201,PATHFINDER,,
+Grand Anse,Bonbons,10ème de Désormeau^813-01,Chemen Lavi de Bonbon,Dispensaire,Public,8131001,81301,,18.6651,-74.2448
+Grand Anse,Bonbons,10ème de Désormeau^813-01,HHF de Bonbon,Dispensaire,Privé à but lucratif,8131002,81302,,,
+Grand Anse,Moron,1ère Anotte^814-01,Centre de Santé de Moron,CSL,Public,814101,81401,,18.5597,-74.2591
+Grand Anse,Moron,1ère Anotte^814-01,ND de Lourdes de Moron,Dispensaire,Privé à but lucratif,814103,81403,,18.5596,-74.2561
+Grand Anse,Moron,1ère Anotte^814-01,HHF de Moron,Dispensaire,Privé à but lucratif,814102,81402,,,
+Grand Anse,Chambellan,1ère  Déjean^815-01,CS de Chambellan,CSL,Public,815101,81501,,18.5508,-74.3132
+Grand Anse,Chambellan,2ème Boucan^815-02,Dispensaire de Boucan,Dispensaire,Public,815203,,,,
+Grand Anse,Chambellan,2ème Boucan^815-02,Dispensaire Berluce,Dispensaire,Public,815204,,,,
+Grand Anse,Chambellan,2ème Boucan^815-02,SSPE de Bourdon,Dispensaire,Public,815202,81502,,18.4899,-74.3504
+Grand Anse,Anse D'Hainault,2ème Boudon^821-02,Icéus Picard de Sicard,Dispensaire,Mixte,821205,,,,
+Grand Anse,Anse D'Hainault,4ème Mandou^821-04,SSPE de Mandou,Dispensaire,Public,821402,82102,,18.4413,-74.4492
+Grand Anse,Anse D'Hainault,1ère Grandoit^821-01,Dispensaire de Sainte Hélène,Dispensaire,Privé à but lucratif,821104,,,,
+Grand Anse,Anse D'Hainault,1ère Grandoit^821-01,HCR (St Jean Baptiste),HD,Public,821106,,,,
+Grand Anse,Dame Marie,3ème Désormeau^822-03,Hôp. de la Communauté DM,HCR,Mixte,822301,82201,PATHFINDER,18.56,-74.42
+Grand Anse,Dame Marie,3ème Désormeau^822-03,Notre Dame des Malades,Dispensaire,Public,822302,82202,,,
+Grand Anse,Dame Marie,1ère Bariadelle^822-01,SKS Petite Rivière de Dame Marie,Dispensaire,Public,822104,82204,,,
+Grand Anse,Dame Marie,1ère Bariadelle^822-01,Sainte Anne de Bariadelle,Dispensaire,Public,822103,82203,,18.5168,-74.4412
+Grand Anse,Dame Marie,3ème Désormeau^822-03,Saint Michel de Désormeaux,Dispensaire,Public,822305,82205,,18.5453,-74.3655
+Grand Anse,Les Irois,5ème Matador^823-01,Sant santé Espwa AFSC/Irois,CAL,Public,823501,82301,,18.4063,-74.4499
+Grand Anse,Les Irois,7ème Garcasse^823-03,Dispensaire Carcasse,Dispensaire,Mixte,823702,,,,
+Grand Anse,Corail,1ère Duquillon^831-01,CAL St Pierre de Corail,CAL,Public,831101,83101,PATHFINDER,,
+Grand Anse,Corail,1ère Duquillon^831-01,Dispensaire St Gérard,Dispensaire,Mixte,831102,,,,
+Grand Anse,Corail,1ère Duquillon^831-01,SSPE de Moulines,Dispensaire,Privé à but non lucratif,831103,83102,,18.4773,-73.9975
+Grand Anse,Roseaux,4ème les Gomiers^832-04,Bon Samaritain des Roseaux,Dispensaire,Mixte,832401,83201,,18.5991,-74.0158
+Grand Anse,Roseaux,1ère Carrefour Charles^832-01,SSPE de Carrefour Charles,CSL,Mixte,832102,83202,,18.5363,-73.9996
+Grand Anse,Roseaux,2ème Fonds Cochon^832-02,St Antoine de Padoue de Lopino,Dispensaire,Mixte,832203,83204,,,
+Grand Anse,Roseaux,4ème les Gomiers^832-04,HHF à Roseaux,Dispensaire,Privé à but lucratif,832404,83205,,,
+Grand Anse,Roseaux,1ère Carrefour Charles^832-01,Centre de Santé Saint Martin,CSL,Mixte,832105,,,,
+Grand Anse,Beaumont,4ème Beaumont^833-01,Dispensaire La Providence,Dispensaire,Public,833403,,,,
+Grand Anse,Beaumont,4ème Beaumont^833-01,CAL Sainte Agnès Citimed,CAL,Mixte,833401,83301,ICC,18.4716,-73.9429
+Grand Anse,Pestel,3ème Jean Bellune^834-03,Dispensaire Jean Belune,Dispensaire,Privé à but lucratif,834308,,,,
+Grand Anse,Pestel,4ème Tozia^834-04,Dispensaire de Détail,Dispensaire,Public,834409,,,,
+Grand Anse,Pestel,1ère Bernagousse^834-01,Centre de Santé de Pestel,CAL,Public,834101,83401,UGP MSPP,18.5412,-73.7993
+Grand Anse,Pestel,1ère Bernagousse^834-01,SSPE des Basses,Dispensaire,Public,834102,83402,,,
+Grand Anse,Pestel,5ème Duchity^834-05,SSPE de Duchity,Dispensaire,Public,834503,83403,,18.4351,-73.9011
+Grand Anse,Pestel,3ème Jean Bellune^834-03,SSPE Espwa de Pointe Sable,Dispensaire,Mixte,834304,83404,,18.6069,-73.7951
+Grand Anse,Pestel,5ème Duchity^834-05,Centre de Santé de Tozia,Dispensaire,Public,834506,,,,
+Grand Anse,Pestel,1ère Bernagousse^834-01,Anse à Macon,Dispensaire,Public,834105,,,,
+Grand Anse,Pestel,2ème Espere^834-02,Centre Espoir Communautaire,Dispensaire,Mixte,834207,,,,
+Nippes,Miragoâne,1ère Chalon^1011-01,SSPE de Beraca,Dispensaire,Privé à but lucratif,1011101,84105,,,
+Nippes,Miragoâne,3ème Dessources^1011-03,SSPE de Labrousse,CAL,Mixte,1011305,,,,
+Nippes,Miragoâne,4ème Pemerle^1011-04,SSPE de St Michel du Sud,Dispensaire,Public,1011406,84109,,,
+Nippes,Miragoâne,1ère Chalon,Hôpital Sainte Thérèse,HD,Public,1011600,84100,UGP MSPP,18.446,-73.0701
+Nippes,Miragoâne,1ère Chalon^1011-01,SSPE de Chalon,Dispensaire,Mixte,1011102,84106,,,
+Nippes,Miragoâne,2ème Belle Rivière^1011-02,SSPE de Lhomond,Dispensaire,Mixte,1011203,84107,,,
+Nippes,Miragoâne,2ème Belle Rivière^1011-02,SSPE de Belle Rivière,Dispensaire,Mixte,1011204,84108,,,
+Nippes,Petite Rivière de L'Artibonite,3ème Silegue^1012-03,CAL de Madian,CAL,Mixte,1012301,84201,,,
+Nippes,Petite Rivière de L'Artibonite,3ème Silegue^1012-03,Clinic de la Visitation,CSL,Mixte,1012302,,,,
+Nippes,Petite Rivière de L'Artibonite,1ère Fonds de Lianes^1012-01,SSPE de Petite Rivière,Dispensaire,Public,1012103,84202,,,
+Nippes,Fonds des Nègres,4ème Pemerle^1013-03,SSPE St Joseph de Pémerle,Dispensaire,Mixte,1013301,84110,,,
+Nippes,Fonds des Nègres,2ème Fonds des Nègres^1013-01,CAL de Béthel,CAL,Privé à but lucratif,1013202,84111,CMMB,18.36,-73.21
+Nippes,Fonds des Nègres,1ère Bouzi^1013-02,SSPE Ste Catherine,Dispensaire,Mixte,1013103,,,,
+Nippes,Paillant,1ère Salagnac^1014-01,SSPE de Mussotte,Dispensaire,Public,1014102,84103,,,
+Nippes,Paillant,1ère Salagnac,CAL de Paillant,CAL,Public,1014601,84101,,,
+Nippes,Paillant,2ème Bouzi^1014-02,SSPE de Jeannette,Dispensaire,Privé à but lucratif,1014203,84102,,,
+Nippes,Paillant,1ère Salagnac^1014-01,SSPE de Etang Rey (NF),Dispensaire,Mixte,1014104,84104,,,
+Nippes,Anse à Veau,7ème Sault de Baril^1021-03,SSPE de Javel,Dispensaire,Mixte,1021303,85103,,,
+Nippes,Anse à Veau,1ère Baconnois,CAL Jules Fleury,HCR,Public,1021201,85101,PATHFINDER,,
+Nippes,Anse à Veau,6ème Grande Rivière^1021-02,SSPE de Félix Mathieu,Dispensaire,Privé,1021204,,,,
+Nippes,Anse à Veau,7ème Sault de Baril^1021-03,SSPE de Saint Yves,Dispensaire,Mixte,1021302,85104,,,
+Nippes,L'Asile,4ème Morisseau^1023-01,SSPE de Morisseaux,Dispensaire,Mixte,1022402,85404,,,
+Nippes,L'Asile,1ère l'Asile^1023-03,CAL de L’Asile,HCR,Public,1022301,85401,,,
+Nippes,L'Asile,3ème Tournade^1023-04,SSPE de Changieux,Dispensaire,Public,1022204,85403,,,
+Nippes,L'Asile,3ème Tournade^1023-04,SSPE Béthesda Fleurant (NF),Dispensaire,Mixte,1022203,85402,,,
+Nippes,Petit Trou de Nippes,1ère Raymond^1022-01,CAL de Petit Trou,CAL,Public,1023101,85301,JHPIEGO,,
+Nippes,Plaisance du Sud,6ème Plaisance^1025-01,CAL de Plaisance,CAL,Mixte,1024601,,,,
+Nippes,Plaisance du Sud,5ème Anse à Pins^1025-02,SSPE de Gauthier Civil (NF),Dispensaire,Mixte,1024502,,,,
+Nippes,Arnaud,1ère Arneau^1024-03,SSPE d’Arnaud,CSL,Mixte,1025301,,,,
+Nippes,Baradères,4ème La Plaine^1031-04,Baradères,CAL,Public,1031401,,,,
+Nippes,Baradères,3ème Fonds Tortue^1031-03,Disp. Ste Elisabeth,Dispensaire,Mixte,1031302,,,,
+Nippes,Grand Boucan,1ère Grand Boucan^1032-01,SSPE de Grand Boucan,Dispensaire,Mixte,1032101,,,,
+Nord,Cap Haitien,3ème Petite Anse^311-03,Fort St Michel,HCR,Mixte,311302,31102,UGP MSPP,19.7411,-72.1941
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Disp. ND Lourdes Carénage,CSL,Mixte,311203,31103,,19.7649,-72.1973
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Dispensaire de Labadie,CSL,Public,311204,31104,,19.749,-72.219
+Nord,Cap Haitien,2ème Haut du Cap^311-02,"Disp. Sacré-Coeur, Rue 2K",Dispensaire,Privé à but lucratif,311205,31105,,19.7549,-72.2052
+Nord,Cap Haitien,3ème Petite Anse^311-03,CEMAD Petite Anse,CAL,Privé à but lucratif,311309,31109,,19.733,-72.1834
+Nord,Cap Haitien,2ème Haut du Cap^311-02,"FOSREF, rue 16",CSL,Privé à but non lucratif,311210,31110,Non associée,19.7595,-72.2002
+Nord,Cap Haitien,3ème Petite Anse^311-03,Clinic Médico-Dentaire St Joseph,CSL,Privé à but lucratif,311311,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Dispensaire St Jean Bosco,Dispensaire,Privé à but lucratif,311212,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,DASH,CSL,Privé à but lucratif,311221,,,,
+Nord,Cap Haitien,3ème Petite Anse^311-03,CS Passion du Christ,CSL,Privé à but lucratif,311314,,,,
+Nord,Cap Haitien,3ème Petite Anse^311-03,CS commun. de Nutrition,CSL,Privé à but lucratif,311313,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,FOSREF Lakay,CSL,Privé à but non lucratif,311220,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Dispensaire Caritas,CSL,Privé à but lucratif,311219,31111,,19.7516,-72.2029
+Nord,Cap Haitien,2ème Haut du Cap^311-02,CS St Jude de Cap Haïtien,CSL,Privé à but lucratif,311216,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Clinique Médicale de Cité du Peuple,CSL,Privé à but lucratif,311218,,,,
+Nord,Cap Haitien,1ère Bande du Nord^311-01,Unité de Lutte pour la santé,CSL,Privé à but non lucratif,311122,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,CS médical Shela,CSL,Privé à but lucratif,311217,,,,
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Hôpital Justinien,HU,Public,311200,31100,UMiami,19.7628,-72.2062
+Nord,Cap Haitien,2ème Haut du Cap^311-02,CDS La Fossette,CSL,Mixte,311201,31101,URC,19.7535,-72.2057
+Nord,Cap Haitien,1ère Bande du Nord^311-01,"Disp. Solano SA, Labadie (NF)",Dispensaire,Privé à but lucratif,311106,31106,,19.7861,-72.2435
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Disp. ND Ste Philomène,Dispensaire,Privé à but lucratif,311207,31107,,19.7452,-72.2105
+Nord,Cap Haitien,3ème Petite Anse^311-03,CSL Madeline,CSL,Mixte,311308,31108,,19.7252,-72.1817
+Nord,Cap Haitien,2ème Haut du Cap^311-02,Centre de santé Ste Trinité,CSL,Privé à but lucratif,311215,,,,
+Nord,Quartier Morin,1ère Basse Plaine^312-01,Disp. de Quartier Morin,CAL,Public,312101,31201,,19.6975,-72.1578
+Nord,Quartier Morin,3ème Morne Pelé^312-02,Grand Pré,Dispensaire,Public,312206,31206,,19.6226,-72.1853
+Nord,Quartier Morin,1ère Basse Plaine^312-01,CMB de Carrefour la Mort,HCR,Privé à but lucratif,312107,,,,
+Nord,Quartier Morin,3ème Morne Pelé^312-02,Dispensaire de Cadush,Dispensaire,Public,312202,31202,,19.642,-72.1812
+Nord,Quartier Morin,1ère Basse Plaine^312-01,Dispensaire St Louis,Dispensaire,Mixte,312104,31204,,19.6972,-72.1567
+Nord,Quartier Morin,3ème Morne Pelé^312-02,Disp. de Morne Pelé (NF),Dispensaire,Privé à but lucratif,312203,31203,,,
+Nord,Quartier Morin,3ème Morne Pelé^312-02,Ste Bernadette de Cadush (NF),Dispensaire,Privé à but lucratif,312205,31205,,,
+Nord,Limonade,3ème Roucou^313-03,Dispensaire de Limonade,CSL,Public,313301,31301,ICC,19.6695,-72.1261
+Nord,Limonade,1ère Basse Plaine^313-01,Disp. Bord de mer Limonade,Dispensaire,Mixte,313103,31302,,19.7275,-72.1191
+Nord,Limonade,2ème Bois de Lance^313-02,CSL Porte Ouverte,CSL,Privé à but lucratif,313202,,,,
+Nord,Limonade,3ème Roucou^313-03,Centre de Santé St Charles,CSL,Privé à but non lucratif,313304,,,,
+Nord,Limonade,3ème Roucou^313-03,Centre de Santé Sooring,CSL,Privé à but lucratif,313305,,,,
+Nord,Limonade,3ème Roucou^313-03,Centre Catholique Limonade (NF),CSL,Privé à but lucratif,313306,,,,
+Nord,Acul du Nord,3ème Mornet^321-03,Tovar,CSL,Privé à but lucratif,321302,32102,,19.6252,-72.2881
+Nord,Acul du Nord,3ème Mornet^321-03,Grison Garde (NF),Dispensaire,Public,321303,32103,,,
+Nord,Acul du Nord,2ème Bas de l'Acul^321-02,Dispensaire de Pillatre,Dispensaire,Privé à but lucratif,321204,32104,,19.7055,-72.3264
+Nord,Acul du Nord,3ème Mornet^321-03,Dispensaire de la Bruyère,CSL,Privé à but lucratif,321308,32108,,19.6391,-72.3078
+Nord,Acul du Nord,2ème Bas de l'Acul^321-02,Centre Médical Secours Chrétien,CSL,Privé à but lucratif,321209,,,,
+Nord,Acul du Nord,3ème Mornet^321-03,C/S Divine Miséricorde,CAL,Privé à but lucratif,321311,,,,
+Nord,Acul du Nord,3ème Mornet^321-03,Disp. Carrefour La Chaux,CSL,Public,321310,,,,
+Nord,Acul du Nord,3ème Mornet^321-03,Dispensaire C. de Duty (NF),Dispensaire,Public,321312,,,,
+Nord,Acul du Nord,2ème Bas de l'Acul^321-02,Nativité,CSL,Mixte,321201,32101,,19.6833,-72.3192
+Nord,Acul du Nord,1ère Camp louise^321-01,Disp. de Camp Louise,Dispensaire,Public,321105,32105,,19.7476,-72.3479
+Nord,Acul du Nord,3ème Mornet^321-03,Délivrance (NF),Dispensaire,Privé à but lucratif,321306,32106,,,
+Nord,Acul du Nord,6ème Soufrière^321-06,Disp. de Souffrière (NF),Dispensaire,Public,321607,32107,,,
+Nord,Plaine du Nord,1ère Morne rouge^322-01,Dispensaire de Balan,Dispensaire,Mixte,322102,32202,,19.727,-72.2975
+Nord,Plaine du Nord,1ère Morne rouge^322-01,CSL Béthesda de Vaudreuil,CSL,Privé à but lucratif,322105,32205,UGP MSPP,19.7202,-72.2521
+Nord,Plaine du Nord,1ère Morne rouge^322-01,St François de Sales,HCR,Privé à but lucratif,322106,32206,,19.7183,-72.2522
+Nord,Plaine du Nord,1ère Morne rouge^322-01,Hôpital Divine Mercy,HCR,Privé,322111,,,,
+Nord,Plaine du Nord,1ère Morne rouge^322-01,Hop. de Fondation SAREPTA,HCR,Privé,322112,,,,
+Nord,Plaine du Nord,2ème Basse Plaine^322-02,CSL Jehova Jireh,CSL,Mixte,322208,32208,,19.6774,-72.2709
+Nord,Plaine du Nord,3ème Grand Boucan^322-03,CS Rose Merci Robillard,CSL,Privé à but non lucratif,322310,,,,
+Nord,Plaine du Nord,1ère Morne rouge^322-01,Disp. de Morne Rouge,Dispensaire,Public,322103,32203,,19.7105,-72.266
+Nord,Plaine du Nord,3ème Grand Boucan^322-03,Dispensaire de Robillard,Dispensaire,Public,322304,32204,,19.6119,-72.26
+Nord,Plaine du Nord,1ère Morne rouge^322-01,Clinique François DUGUE,CSL,Privé à but non lucratif,322107,32207,URC,19.7071,-72.2781
+Nord,Plaine du Nord,2ème Basse Plaine^322-02,Centre Médico social,CSL,Mixte,322209,,,,
+Nord,Plaine du Nord,2ème Basse Plaine^322-02,Disp. de Paine du Nord,Dispensaire,Privé à but lucratif,322201,32201,,,
+Nord,Milot,2ème Bonnet à l'Evêque^323-02,CAL Sacre Coeur,hôpital,Privé à but lucratif,323201,32301,CMMB,19.6101,-72.2095
+Nord,Milot,3ème Génipailler^323-03,La Providence de Lory,CSL,Privé à but non lucratif,323305,32305,,19.6976,-72.2262
+Nord,Milot,3ème Génipailler^323-03,Disp. Carrefour des Pères,Dispensaire,Public,323302,32302,,19.6848,-72.2055
+Nord,Milot,1ère Perches du Bonnet^323-01,Dispensaire de Thibault,Dispensaire,Privé à but lucratif,323103,32303,,19.6332,-72.2272
+Nord,Grande Rivière du Nord,9ème Cormiers^331-06,CAL Grande Rivière du Nord,HCR,Public,331901,33101,UGP MSPP,19.579,-72.17
+Nord,Grande Rivière du Nord,8ème Jolitrou^331-05,Disp. Commun. de Joli-Trou,Disp,Privé à but lucratif,331502,,,,
+Nord,Grande Rivière du Nord,8ème Jolitrou^331-05,Disp. Métho. de la Tannerie (NF),Dispensaire,Privé à but lucratif,331503,33102,,,
+Nord,Bahon,5ème Bailly^332-02,Dispensaire de Bahon,CSL,Public,332501,33201,,19.4695,-72.1142
+Nord,Bahon,5ème Bailly^332-02,Dispensaire. St Joseph,Dispensaire,Privé à but lucratif,332502,,,,
+Nord,Saint Raphaël,4ème Sanyago^341-04,CSL de St Raphaël,CAL,Public,341401,34101,SSQH,19.44,-72.2
+Nord,Saint Raphaël,4ème Sanyago^341-04,St Joseph 1,Dispensaire,Privé à but non lucratif,341402,34102,ICC,19.4364,-72.2004
+Nord,Dondon,4ème Laguille^342-04,CSL de Dondon,CAL,Public,342401,34201,,19.5267,-72.2446
+Nord,Dondon,1ère Brostage^342-01,Disp. Commun. de Dondon (NF),Dispensaire,Privé à but lucratif,342103,,,,
+Nord,Dondon,4ème Laguille^342-04,St Joseph 2,Dispensaire,Privé à but lucratif,342402,34202,,19.5261,-72.2417
+Nord,Ranquitte,1ère Bac à Soude^343-01,CSL de Ranquitte,CAL,Public,343101,34301,,19.4106,-72.0828
+Nord,Ranquitte,1ère Bac à Soude^343-01,Dispensaire Brenda West,CSL,Public,343102,,,,
+Nord,Ranquitte,1ère Bac à Soude^343-01,Disp. St Joseph (Catholique),Dispensaire,Public,343103,34303,,19.413,-72.0785
+Nord,Pignon,1ère Savannette^344-01,Hôp. Bienfaisance de Pignon,HCR,Public,344101,34401,URC,19.3397,-72.119
+Nord,Pignon,1ère Savannette^344-01,St Joseph (Pignon),Dispensaire,Privé à but non lucratif,344102,34402,,19.3362,-72.1142
+Nord,La Victoire,1ère La Victoire^345-01,CSL La Victoire,CAL,Public,345101,,,,
+Nord,La Victoire,1ère La Victoire^345-01,Dispensaire Saint Joseph (NF),Dispensaire,Privé à but lucratif,345102,,,,
+Nord,Borgne,7ème Fond Lagrange^351-07,Alliance Santé Borgne,CAL,Mixte,351704,35101,UGP MSPP,19.84,-72.52
+Nord,Borgne,3ème Petit Bourg Du Borgne^351-03,Disp. de Petit Bourg Borgne,Dispensaire,Public,351302,35102,,19.8079,-72.5725
+Nord,Borgne,3ème Petit Bourg Du Borgne^351-03,CAL de Borgne (NF),CAL,Public,351301,,,,
+Nord,Borgne,3ème Petit Bourg Du Borgne^351-03,Corpus Christi (NF),Dispensaire,Privé à but lucratif,351303,35103,,,
+Nord,Port Margot,2ème Bas Petit Borgne^352-02,CSL de Port Margot,CSL,Privé à but lucratif,352201,35201,ICC,19.7511,-72.4295
+Nord,Port Margot,6ème Bras Gauche^352-06,Dispensaire Petit Bourg,CSL,Public,352602,35202,,19.7217,-72.4488
+Nord,Port Margot,5ème Bas Quartier^352-05,Dispensaire de Bayeux,CSL,Mixte,352503,35203,,19.8084,-72.4336
+Nord,Port Margot,2ème Bas Petit Borgne^352-02,Dispensaire Malachy,CSL,Mixte,352204,35204,,19.7507,-72.4282
+Nord,Port Margot,3ème Corail^352-03,Clinique Méd. Dr Dorsainvil,CSL,Privé à but lucratif,352307,,,,
+Nord,Port Margot,3ème Corail^352-03,Disp. Wesleyen de Fauché,CAL,Privé à but non lucratif,352305,35205,,19.737,-72.4303
+Nord,Port Margot,2ème Bas Petit Borgne^352-02,Disp. Cath de Pt Bourg,Dispensaire,Privé à but lucratif,352206,35206,,,
+Nord,Limbé,7ème Ravine Desroches^361-05,Hôpital Bon Samaritain,Hôpital,Privé à but lucratif,361702,36102,ICC,19.6996,-72.4026
+Nord,Limbé,5ème Camp Coq^361-03,Dispensaire de Camp Coq,CSL,Public,361503,36103,,19.6335,-72.4259
+Nord,Limbé,5ème Camp Coq^361-03,Dispensaire Catholique de Camp Coq,CSL,Privé à but lucratif,361506,,,,
+Nord,Limbé,3ème Acul Jeannot,Dispensaire Haut Limbé,CAL,Mixte,361304,36104,,19.6988,-72.3565
+Nord,Limbé,3ème Acul Jeannot,Centre Galilée de Haut Limbé,CSL,Privé à but non lucratif,361305,,,,
+Nord,Limbé,7ème Ravine Desroches^361-05,St Jean de Limbe,HCR,Mixte,361701,36101,CMMB,19.7074,-72.4018
+Nord,Bas Limbé,2ème Petit Howars^362-02,Dispensaire de Bas Limbé,Dispensaire,Public,362201,36201,,19.7802,-72.3797
+Nord,Bas Limbé,2ème Petit Howars^362-02,CS Materno Infantile Mont Carmel,CSL,Privé à but lucratif,362202,,,,
+Nord,Plaisance,7ème Bassin^371-07,CMP Progressio,HCR,Privé à but lucratif,371701,37101,ICC,19.5974,-72.4693
+Nord,Plaisance,1ère Gobert^371-01,Dispensaire de Gobert,Dispensaire,Privé à but lucratif,371102,37102,,19.6297,-72.5061
+Nord,Plaisance,5ème La trouble^371-05,Dispensaire La Trouble,Dispensaire,Privé à but non lucratif,371503,37103,,19.5669,-72.4427
+Nord,Plaisance,8ème Grande Rivière^371-08,Disp. St Henry de Puilboreau,Dispensaire,Mixte,371804,37104,,19.539,-72.473
+Nord,Pilate,1ère Ballon^372-01,Hôpital Espérance de Pilate,HD,Privé à but non lucratif,372101,37201,CMMB,19.6687,-72.5505
+Nord,Pilate,3ème Ravine Trompette^372-03,CDS presbytéral de Ravine Trompette,CSL,Privé à but non lucratif,372102,,,,
+Nord Est,Fort-Liberté,1ère Dumas^411-01,Hôpital de Fort-Liberté,HD,Public,411100,41100,UGP MSPP,19.6655,-71.841
+Nord Est,Fort-Liberté,1ère Dumas^411-01,Derac,Dispensaire,Public,411101,41101,,19.6611,-71.8132
+Nord Est,Fort-Liberté,1ère L'Oiseau^411-03,Acul Samedi,Dispensaire,Public,411302,41102,,19.5204,-71.8816
+Nord Est,Fort-Liberté,2ème Bayaha^411-02,Malfety,Dispensaire,Public,411203,,,,
+Nord Est,Ferrier,3ème Bas Maribahoux^412-01,Disp. de Ferrier,Dispensaire,Public,412301,,,,
+Nord Est,Ferrier,3ème Bas Maribahoux^412-01,Disp. de Meillac,Dispensaire,Public,412302,,,,
+Nord Est,Ferrier,3ème Bas Maribahoux^412-01,Mérande,Dispensaire,Public,412303,,,,
+Nord Est,Perches,1ère Haut des Perches^413-01,Disp. de Perches,Dispensaire,Public,413201,41301,,19.5216,-71.9221
+Nord Est,Perches,2ème Haut des Perches^413-02,Maquillon,Dispensaire,Public,413202,,,,
+Nord Est,Ouanaminthe,1ère Haut Maribahoux^421-01,CAL de Ouanaminthe,CAL,Public,421101,41201,URC,19.6161,-71.7799
+Nord Est,Ouanaminthe,1ère Haut Maribahoux^421-01,Disp. de Dilaire,CSL,Public,421107,,,,
+Nord Est,Ouanaminthe,2ème Acul des Pins^421-02,Disp. d’Acul des Pins,Dispensaire,Public,421202,41202,,19.6699,-71.756
+Nord Est,Ouanaminthe,1ère Haut Maribahoux^421-01,Univers Centre Médical,CAL,Privé à but lucratif,421104,,,,
+Nord Est,Ouanaminthe,7ème Savanne Au Lait^421-04,Disp. Savane au Lait,Dispensaire,Public,421605,,,,
+Nord Est,Ouanaminthe,3ème Savane Longue^421-03,Disp. Savane Longue,Dispensaire,Public,421306,,,,
+Nord Est,Ouanaminthe,5ème Gens de Nantes^421-05,Disp. de Gens de Nantes,Dispensaire,Privé à but lucratif,421503,41203,,,
+Nord Est,Capotille,4ème Capotille^422-01,Disp. de Capotille,CAL,Public,422101,42201,,19.4475,-71.6982
+Nord Est,Capotille,6ème Lamine^422-02,Disp. Lamine,Dispensaire,Public,422202,,,,
+Nord Est,Mont Organisé,2ème Bois Poux^423-02,CAL de Mont Organisé,CAL,Public,423201,42301,CDS,19.4104,-71.7848
+Nord Est,Mont Organisé,1ère Savanette^423-01,Savanette,Dispensaire,Public,423102,,,,
+Nord Est,Trou du Nord,2ème Roucou^431-02,Disp. de Pilette,Dispensaire,Mixte,431203,,,,
+Nord Est,Trou du Nord,2ème Roucou^431-02,CDI de Trou du Nord,Hôpital,Public,431201,43101,CDS,19.6127,-72.0269
+Nord Est,Trou du Nord,3ème Roche Plate^431-03,Disp. de Roche Plate,Dispensaire,Public,431302,43102,,19.5561,-71.9756
+Nord Est,Trou du Nord,2ème Roucou^431-02,Leroux Cachiman,Dispensaire,Public,431204,,,,
+Nord Est,Sainte Suzanne,1ère Foulon^432-01,Disp. de Sainte Suzanne,Dispensaire,Public,432101,43201,URC,19.5842,-72.0883
+Nord Est,Sainte Suzanne,6ème Fond Bleu^432-06,Disp. de Dupity,Dispensaire,Mixte,432602,43202,,19.4743,-72.0481
+Nord Est,Terrier-Rouge,2ème Grand Bassin^433-02,CSL Bethesda,CAL,Privé à but lucratif,433202,,,,
+Nord Est,Terrier-Rouge,1ère Fond Blanc^433-01,CSL de Terrier Rouge,CSL,Mixte,433101,43301,CDS,19.6369,-71.9534
+Nord Est,Terrier-Rouge,1ère Fond Blanc^433-01,Disp. de Phaéton,Dispensaire,Public,433103,43303,,19.6765,-71.8953
+Nord Est,Terrier-Rouge,2ème Grand Bassin^433-02,Disp. de Danda,Dispensaire,Privé à but lucratif,433204,43304,,19.5596,-71.8856
+Nord Est,Terrier-Rouge,1ère Fond Blanc^433-01,Clinique Espérance et Vie,CSL,Privé à but lucratif,433105,,,,
+Nord Est,Terrier-Rouge,2ème Grand Bassin^433-02,ND de Lourdes,CSL,Mixte,433206,,,,
+Nord Est,Caracol,2ème Claudine^434-02,Disp. de Jacquezyl,CSL,Mixte,434201,43103,SSQH,19.68,-71.99
+Nord Est,Caracol,1ère Champin^434-01,Disp. de Caracol,CSL,Mixte,434102,43402,,19.6924,-72.0181
+Nord Est,Caracol,1ère Champin^434-01,CS Sainte Elizabeth,CSL,Mixte,434103,,,,
+Nord Est,Vallières,1ère Trois Palmistes^441-01,Disp. de Vallières,Dispensaire,Public,441101,44101,,19.4351,-71.9207
+Nord Est,Vallières,2ème Grosse Roche^441-02,Disp. de Grosse Roche,Dispensaire,Public,441202,44102,,19.4753,-71.9983
+Nord Est,Carice,1ère Bois Gamelle^442-01,Disp. de Carice,CAL,Public,442101,44201,,19.3777,-71.8365
+Nord Est,Carice,1ère Bois Gamelle^442-01,Disp. Ste Hélène de Carice,CSL,Privé à but non lucratif,442102,44202,,19.3785,-71.83
+Nord Est,Carice,2ème Rose Bonite^442-02,Rose Bonite,Dispensaire,Public,442203,,,,
+Nord Est,Mombin Crochu,2ème Bois Laurence^443-02,Disp. de Bois de Laurence,CAL,Public,443201,44301,,19.3307,-71.8606
+Nord Est,Mombin Crochu,1ère Sans Souci^443-01,CAL de Mombin Crochu,CAL,Public,443102,44302,CDS,19.3686,-71.9852
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Trois Rivières,CSL,Public,911301,91101,,19.9363,-72.8422
+Nord Ouest,Port-de-Paix,7ème Mahotière^911-04,Beauchamp,Dispensaire,Public,911406,91106,,19.8076,-72.9823
+Nord Ouest,Port-de-Paix,7ème Mahotière^911-04,Caluc,Dispensaire,Public,911408,91108,,19.7522,-72.931
+Nord Ouest,Port-de-Paix,7ème Mahotière^911-04,Pilette,Dispensaire,Public,911410,,,,
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Fatima Chalet,Dispensaire,Public,911312,91112,,19.9453,-72.821
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,La Croix St Joseph,Dispensaire,Privé à but lucratif,911313,91113,,19.9054,-72.793
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Antenne Santé,CSL,Mixte,911316,,,,
+Nord Ouest,Port-de-Paix,2ème La Pointe^911-02,Dolciné,Dispensaire,Public,911217,,,,
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,FOSREF Lakay (NF),CSL,Privé à but non lucratif,911320,,,,
+Nord Ouest,Port-de-Paix,8ème Bas des Moustiques^911-05,CS Médical de Passe Catabois,CAL,Privé à but lucratif,911821,,,,
+Nord Ouest,Port-de-Paix,6ème La Corne^911-06,Dispensaire Decide,Dispensaire,Public,911624,,,,
+Nord Ouest,Port-de-Paix,6ème La Corne^911-06,Disp. de Desmarreaux,Dispensaire,Public,911622,,,,
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Immaculée Conception,HD,Public,911300,91100,UGP MSPP,19.9356,-72.8319
+Nord Ouest,Port-de-Paix,8ème Bas des Moustiques^911-05,Poste Métier,Dispensaire,Public,911503,,,,
+Nord Ouest,Port-de-Paix,8ème Bas des Moustiques^911-05,Baie des Moustiques,Dispensaire,Public,911504,,,,
+Nord Ouest,Port-de-Paix,8ème Bas des Moustiques^911-05,Passe Catabois,Dispensaire,Public,911505,91105,,19.8222,-72.9393
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Soleil,Dispensaire,Privé à but lucratif,911309,91109,,19.9461,-72.8235
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Fatima la Coupe,Dispensaire,Privé à but lucratif,911311,91111,,19.9288,-72.8235
+Nord Ouest,Port-de-Paix,1ère Baudin^911-01,Beraca,Hopital,Privé à but non lucratif,911114,91114,URC,19.9443,-72.7747
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,Dispensaire Monfort,Dispensaire,Privé à but non lucratif,911315,,,,
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,FOSREF Jeune,CSL,Privé à but non lucratif,911319,91109,,19.9461,-72.8235
+Nord Ouest,Port-de-Paix,8ème Bas des Moustiques^911-05,Foison,Dispensaire,Privé à but lucratif,911607,91107,,19.7774,-72.9033
+Nord Ouest,Port-de-Paix,3ème Aubert^911-03,CS Communale de l’Étoile (NF),CSL,Public,911323,,,,
+Nord Ouest,La Tortue,1ère Pointe des Oiseaux^912-01,HNDP (La Tortue),HCR,Mixte,911101,91120,JHPIEGO,19.95,-73.76
+Nord Ouest,La Tortue,1ère Pointe des Oiseaux^912-01,Aux Plaines,Dispensaire,Mixte,912107,91202,,20.0058,-72.6644
+Nord Ouest,La Tortue,2ème Mare Rouge^912-02,La Vallée,Dispensaire,Public,912201,91203,,20.0335,-72.8681
+Nord Ouest,La Tortue,2ème Mare Rouge^912-02,Montry/Méance,Dispensaire,Mixte,912202,91205,,20.0398,-72.8297
+Nord Ouest,La Tortue,2ème Mare Rouge^912-02,Mare Rouge 1,Dispensaire,Privé à but non lucratif,912203,91204,,20.0324,-72.7856
+Nord Ouest,La Tortue,2ème Mare Rouge^912-02,Marie Curie,CAL,Mixte,912204,,,,
+Nord Ouest,La Tortue,2ème Mare Rouge^912-02,CS Harry Bordes,CSL,Privé à but lucratif,912206,,,,
+Nord Ouest,Bassin Bleu,1ère La Plate^913-01,Hôp Bon Samaritain (HBBS),Hôpital,Public,913101,91301,,19.7826,-72.7971
+Nord Ouest,Bassin Bleu,2ème Carreau Datty^913-02,La Brousse,Dispensaire,Public,913201,,,,
+Nord Ouest,Bassin Bleu,3ème Haut des Moustiques^913-03,Haut Moustique,Dispensaire,Public,913303,91303,,19.7429,-72.8757
+Nord Ouest,Bassin Bleu,1ère La Plate^913-01,Disp. La Providence de Dugas,Dispensaire,Public,913104,,,,
+Nord Ouest,Chansolme,1ère Chansolme^914-01,Chansolme,CAL,Public,914101,91401,,19.875,-72.8344
+Nord Ouest,Saint Louis du Nord,2ème Derouvray^921-02,HCAH,CAL,Public,921202,92102,,19.93,-72.73
+Nord Ouest,Saint Louis du Nord,1ère Rivière des Nègres,Chamoise,Dispensaire,Mixte,921605,92105,,19.8285,-72.6871
+Nord Ouest,Saint Louis du Nord,1ère Rivière des Nègres,Glacis,Dispensaire,Privé à but non lucratif,921606,92106,,19.8495,-72.7132
+Nord Ouest,Saint Louis du Nord,4ème Rivière de Barre^921-04,Jean Clair,Dispensaire,Privé à but non lucratif,921408,92108,,19.8475,-72.6882
+Nord Ouest,Saint Louis du Nord,4ème Rivière de Barre^921-04,Zabricot,Dispensaire,Public,921412,92112,,19.9119,-72.6976
+Nord Ouest,Saint Louis du Nord,2ème Derouvray^921-02,Centre de santé Medi Care (NF),CAL,Privé à but lucratif,921214,,,,
+Nord Ouest,Saint Louis du Nord,5ème Bonneau^921-05,Bonneau,CAL,Mixte,921501,92101,,19.906,-72.6553
+Nord Ouest,Saint Louis du Nord,2ème Derouvray^921-02,NWCM,CAL,Privé à but lucratif,921203,92103,,19.9315,-72.7205
+Nord Ouest,Saint Louis du Nord,3ème des Granges^921-03,Desgranges,Dispensaire,Public,921304,92104,,19.9248,-72.7078
+Nord Ouest,Saint Louis du Nord,3ème des Granges^921-03,La Perrière,Dispensaire,Mixte,921307,92107,,19.8722,-72.7367
+Nord Ouest,Saint Louis du Nord,4ème Rivière de Barre^921-04,Gaspard,Dispensaire,Privé à but non lucratif,921409,92109,,19.8708,-72.6834
+Nord Ouest,Saint Louis du Nord,5ème Bonneau^921-05,Chaineau (NF),Dispensaire,Privé à but non lucratif,921510,92110,,19.8848,-72.6736
+Nord Ouest,Saint Louis du Nord,1ère Rivière des Nègres^921-01,Guichard (St-Louis-du-Nord),Dispensaire,Privé à but non lucratif,921113,92113,,19.9186,-72.7477
+Nord Ouest,Saint Louis du Nord,2ème Derouvray^921-02,Villaceau (NF),Dispensaire,Privé à but lucratif,921211,92111,,,
+Nord Ouest,Anse à Foleur,1ère Bas de Sainte Anne^922-01,Dity,Dispensaire,Public,922102,92202,,19.8455,-72.609
+Nord Ouest,Anse à Foleur,3ème Cote de Fer^922-03,Côtes-de-Fer (Anse-à-Foleur),Dispensaire,Public,922303,92203,,19.8832,-72.5793
+Nord Ouest,Anse à Foleur,3ème Cote de Fer^922-03,Anse-à-Foleur,CAL,Public,922301,92201,,19.892,-72.6174
+Nord Ouest,Anse à Foleur,1ère Bas de Sainte Anne^922-01,Dupont,Dispensaire,Public,922104,,,,
+Nord Ouest,Môle Saint Nicolas,1ère Cote de Fer^931-01,Môle Saint Nicolas,CAL,Public,931101,93101,UGP MSPP,19.8,-73.37
+Nord Ouest,Môle Saint Nicolas,1ère Cote de Fer^931-01,Côtes-de-Fer (Môle-Saint-Nicolas),Dispensaire,Public,931104,93104,,19.825,-73.2909
+Nord Ouest,Môle Saint Nicolas,2ème Mare Rouge^931-02,Mare Rouge 2,CAL,Public,931202,93102,,19.7999,-73.2561
+Nord Ouest,Môle Saint Nicolas,2ème Mare Rouge^931-02,Sentrain,Dispensaire,Public,931203,93103,,19.8137,-73.2679
+Nord Ouest,Môle Saint Nicolas,2ème Mare Rouge^931-02,Dame-Marie,Dispensaire,Public,931206,,,,
+Nord Ouest,Môle Saint Nicolas,3ème Damé^931-03,Temps Perdu,Dispensaire,Public,931305,93105,,19.783,-73.2445
+Nord Ouest,Baie de Henne,2ème Dos d'Ane^932-02,Baie de Henne,CSL,Mixte,932201,93201,SSQH,19.66,-73.21
+Nord Ouest,Baie de Henne,3ème Réserve^932-03,La Source,Dispensaire,Public,932302,93202,,19.7271,-73.1591
+Nord Ouest,Baie de Henne,2ème Dos d'Ane^932-02,Citerne Rémy,Dispensaire,Public,932205,,,,
+Nord Ouest,Baie de Henne,4ème Estère Dérée^932-04,CS de Bassin Hardy,CSL,Public,932406,,,,
+Nord Ouest,Baie de Henne,3ème Réserve^932-03,Petite Rivière Baie de Henne,Dispensaire,Public,932303,93203,,19.7205,-73.1714
+Nord Ouest,Baie de Henne,2ème Dos d'Ane^932-02,Dupré,Dispensaire,Privé à but non lucratif,932204,,,,
+Nord Ouest,Bombardopolis,1ère Plate Forme^933-01,HEB,CAL,Public,933101,93301,GHESKIO,19.6928,-73.336
+Nord Ouest,Bombardopolis,2ème des Forges^933-02,Rochefort,Dispensaire,Public,933202,93302,,19.7027,-73.3799
+Nord Ouest,Bombardopolis,2ème des Forges^933-02,Mont des Oliviers,Dispensaire,Public,933203,93303,,19.6948,-73.3682
+Nord Ouest,Bombardopolis,3ème Plaine d'Oranges^933-03,Crève,Dispensaire,Public,933306,,,,
+Nord Ouest,Bombardopolis,1ère Plate Forme^933-01,Plate Forme,Dispensaire,Privé à but lucratif,933104,93304,,19.875,-72.8344
+Nord Ouest,Bombardopolis,2ème des Forges^933-02,Desforges (NF),Dispensaire,Privé à but lucratif,933205,93305,,19.875,-72.8344
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,La Coma,Dispensaire,Privé à but lucratif,934104,93404,,19.8802,-73.0762
+Nord Ouest,Jean Rabel,3ème Vielle Hatte^934-03,Guinaudée,Dispensaire,Public,934305,93405,,19.8306,-73.1334
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,Gombo,Dispensaire,Public,934107,93407,,19.8009,-73.0779
+Nord Ouest,Jean Rabel,2ème Guinaudée^934-02,K-Philippe,Dispensaire,Mixte,934211,93411,,19.8032,-73.1083
+Nord Ouest,Jean Rabel,3ème Vielle Hatte^934-03,Boucan Patriot,Dispensaire,Public,934312,93412,,19.7648,-73.0944
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,Port à l’Ecu,Dispensaire,Public,934113,93413,,19.9056,-73.0411
+Nord Ouest,Jean Rabel,2ème Guinaudée^934-02,Café Paul,Dispensaire,Public,934214,93414,,19.8601,-73.0978
+Nord Ouest,Jean Rabel,4ème La Montagne^934-04,La Bellée (NF),Dispensaire,Public,934415,93415,,19.7548,-73.1494
+Nord Ouest,Jean Rabel,6ème Grande Source^934-06,Grann Lison,Dispensaire,Mixte,934616,93417,,19.8311,-73.1871
+Nord Ouest,Jean Rabel,6ème Grande Source^934-06,Dispensaire Cadémé,Dispensaire,Mixte,934617,,,,
+Nord Ouest,Jean Rabel,5ème Dessources^934-05,Disp. Communautaire (NF),Dispensaire,Public,934518,,,,
+Nord Ouest,Jean Rabel,3ème Vielle Hatte^934-03,HNDP,HCR,Public,934301,93401,UGP MSPP,19.8559,-73.1901
+Nord Ouest,Jean Rabel,3ème Vielle Hatte^934-03,Bord de Mer,Dispensaire,Public,934302,93402,,19.9058,-73.1954
+Nord Ouest,Jean Rabel,4ème La Montagne^934-04,La Réserve,Dispensaire,Mixte,934406,93406,,19.7898,-73.1492
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,Cabaret,Dispensaire,Public,934110,93410,,19.8755,-73.0133
+Nord Ouest,Jean Rabel,4ème La Montagne^934-04,La Montagne,Dispensaire,Public,934403,93403,,19.7801,-73.1933
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,Raymond,Dispensaire,Public,934108,93408,,19.7832,-73.0184
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,Dubois,Dispensaire,Public,934109,93409,,19.8327,-73.0152
+Nord Ouest,Jean Rabel,1ère Lacoma^934-01,Manacine,Dispensaire,Public,934119,,,,
+Nord Ouest,Jean Rabel,6ème Grande Source^934-06,Grande Source,Dispensaire,Public,934620,,,,
+Nord Ouest,Jean Rabel,7ème Diondion^934-07,Diondion,Dispensaire,Public,934721,,,,
+Nord Ouest,Jean Rabel,4ème La Montagne^934-04,Cademe,Dispensaire,Public,934422,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,HUEH,HU,Public,111600,11100,UGP MSPP,18.5398,-72.3402
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Aurore du Bel Air,CSL,Public,111602,11103,,18.5335,-72.3168
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital du Canapé Vert,Hôpital,Privé à but lucratif,111603,11104,,18.5296,-72.3686
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé du Portail Léogâne,CSL,Public,111605,11106,UMaryland,18.55,-72.33
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé St Antoine,CSL,Privé à but lucratif,111606,11107,,18.5238,-72.3488
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé Snelak,Dispensaire,Privé à but lucratif,111607,11108,,18.5487,-72.3241
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé de Solino,CSL,Mixte,111608,11109,FOSREF,18.5419,-72.3199
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé Richard Allen,CSL,Privé à but non lucratif,111611,11112,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CEJPEPH,CSL,Privé à but non lucratif,111666,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de psychiatrie Mars & Kline,HCR,Public,111616,11118,,18.5384,-72.3437
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital St. François de Salle,CSL,Privé à but lucratif,111618,13199,CMMB,18.54,-72.32
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CSL SODEC,CAL,Privé à but lucratif,111619,11121,,18.5268,-72.3442
+Ouest,Port-au-Prince,6ème Turgeau^111-01,PROFAMIL 2,CSL,Privé à but non lucratif,111620,11122,,18.5353,-72.3284
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Sanatorium de Port-au-Prince,Hôpital,Public,111621,11123,GHESKIO,18.53,-72.35
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital Saint-Joseph,Hôpital,Privé à but non lucratif,111622,11124,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Pédodontique,CSL,Privé à but lucratif,111623,11125,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé des Prés,CSL,Privé à but lucratif,111626,11128,,18.5245,-72.3398
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Renaissance,CSL,Public,111627,11129,,18.5311,-72.3372
+Ouest,Port-au-Prince,6ème Turgeau^111-01,APROSIFA,CSL,Privé à but non lucratif,111628,11130,,18.5311,-72.3372
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Sainte Elizabeth,CSL,Privé à but lucratif,111629,11131,,18.5293,-72.3557
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Kay Timoun,CSL,Privé à but non lucratif,111630,11132,,18.5336,-72.3534
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Caravelle,CSL,Mixte,111633,11135,,18.5274,-72.3523
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centres GHESKIO,CSL,Privé à but non lucratif,111634,11136,,18.522,-72.3709
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Béthanie,CSL,Privé à but lucratif,111635,11137,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé Bethesda 1,CSL,Privé à but non lucratif,111638,11141,,18.5308,-72.3374
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital Saint-Esprit,Hôpital,Privé à but lucratif,111641,11145,,18.5448,-72.335
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital Sapiens,CAL,Privé à but non lucratif,111642,11147,,18.525,-72.3187
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Maternité UMO,Hôpital,Privé à but lucratif,111643,11148,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,FOSREF 1,CSL,Privé à but lucratif,111645,11151,FOSREF,18.5068,-72.3614
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Maternité de Christ-roi,Hôpital,Privé à but lucratif,111646,11152,,18.5367,-72.3545
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CS Cité Canada (Haut Turgeau),CSL,Mixte,111647,11153,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CEMEAH,CSL,Privé à but lucratif,111650,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Institut FAME PEREO,CSL,Mixte,111655,11127,GHESKIO,18.5489,-72.3395
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Bienfaisance,CSL,Privé à but lucratif,111667,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital St Louis,Hôpital,Privé à but non lucratif,111659,11188,Non associée,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé Communautaire 1,CSL,Mixte,111660,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé Communautaire 2,Dispensaire,Privé à but lucratif,111664,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé Communautaire 3,CSL,Public,111671,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé communautaire 4,CSL,Privé à but lucratif,111677,,,,
+Ouest,Port-au-Prince,8ème Martissant^111-03,Centre de santé Delouis,CSL,Mixte,111874,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé Christ-Roi,CSL,Public,111665,11158,FOSREF,18.53,-72.34
+Ouest,Port-au-Prince,8ème Martissant^111-03,Centre de santé Jehovah,CSL,Privé à but lucratif,111868,,,,
+Ouest,Port-au-Prince,8ème Martissant^111-03,Centre de santé Martissant,CAL,Privé à but lucratif,111832,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé SOFA,CSL,Privé à but lucratif,ND11111,11111,,18.5422,-72.3431
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre Médico-Social,CSL,Privé à but non lucratif,111673,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre Médico-Social de P-au-P,CSL,Privé à but non lucratif,111663,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Clinique Familiale,Hôpital,Privé à but lucratif,111670,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Clinique Repheka,CSL,Privé à but lucratif,111679,,,,
+Ouest,Port-au-Prince,8ème Martissant^111-03,CS Communautaire Cité de l’Eternel,CSL,Privé à but lucratif,111852,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CS communautaire de Tunnel,CSL,Privé à but non lucratif,111678,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CS Evangélique de Siloé,CSL,Privé à but lucratif,111662,,,,
+Ouest,Port-au-Prince,8ème Martissant^111-03,DASH Martissant 4,Hôpital,Privé à but non lucratif,111869,,,,
+Ouest,Port-au-Prince,8ème Martissant^111-03,Centre médico-social/FHSM,CSL,Public,111831,11142,,18.5357,-72.3335
+Ouest,Port-au-Prince,8ème Martissant^111-03,Dispensaire Carifont de Fontamara,CSL,Privé à but non lucratif,111804,11105,,18.5358,-72.3467
+Ouest,Port-au-Prince,8ème Martissant^111-03,Centre de Santé St Michel,CSL,Privé à but lucratif,111840,11144,GHESKIO,18.53,-72.37
+Ouest,Port-au-Prince,8ème Martissant^111-03,CS de St Jude,CSL,Mixte,111851,11138,,18.5239,-72.3695
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Dispensaire Missionnaire,Dispensaire,Privé à but non lucratif,111672,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital Français,Hôpital,Privé à but lucratif,111613,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Hôpital Medimax,Hôpital,Privé à but lucratif,111656,,,,
+Ouest,Port-au-Prince,8ème Martissant^111-03,Hôpital Sans Frontière,Hôpital,Privé à but non lucratif,111875,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Mission de Charité Cœur Immaculé,CAL,Mixte,111661,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de Santé ACDEF Mapou,CSL,Privé à but non lucratif,ND11139,11139,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Plurimédic,Hôpital,Privé à but lucratif,111676,,,,
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Centre de santé de Trou Sable,CSL,Privé à but lucratif,ND11110,11110,,18.5297,-72.373
+Ouest,Delmas,1ère Saint Martin^112-01,CS Bas Fond Philomène Delmas 32,CAL,Privé à but lucratif,112102,11202,,18.5471,-72.3126
+Ouest,Delmas,1ère Saint Martin^112-01,Citymed de Delmas,Hôpital,Privé à but lucratif,112105,11205,,18.5569,-72.3066
+Ouest,Delmas,1ère Saint Martin^112-01,CS commun. Chrétienne Fleuriot T.,CSL,Privé à but non lucratif,112107,11207,,18.575,-72.263
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Grace Children,Hôpital,Mixte,112108,11208,PATHFINDER,18.5599,-72.302
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Isaïe Jeanty,HU,Public,112117,11217,UGP MSPP,18.5643,-72.3354
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital de l’OFATMA,Hôpital,Public,112123,11223,,18.57,-72.33
+Ouest,Delmas,1ère Saint Martin^112-01,CS de Petite Place Cazeau,CSL,Public,112124,11224,CDS,18.56,-72.28
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de santé St Paul,CSL,Privé à but non lucratif,112127,11227,,18.5438,-72.3058
+Ouest,Delmas,1ère Saint Martin^112-01,Bernard Mews,Hôpital,Privé à but lucratif,112128,11228,GHESKIO,18.562,-72.319
+Ouest,Delmas,1ère Saint Martin^112-01,CS Fontaine,CAL,Privé à but non lucratif,112131,11231,,18.5964,-72.3275
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de santé St Martin 1,CSL,Public,112125,11225,,18.5579,-72.3233
+Ouest,Delmas,1ère Saint Martin^112-01,Clinique Commun. Barthelmy,CSL,Privé à but lucratif,112138,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Maison la Santé Delmas,CSL,Privé à but non lucratif,112150,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre Médico-Social de la Saline,CSL,Mixte,112104,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Clinique Santé pour Tous 1,CSL,Privé à but lucratif,112151,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Peace’s Hospital,CSL,Privé à but non lucratif,112144,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Clinique St Jude,CSL,Privé à but lucratif,112152,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Rapha clinique médicale,CSL,Privé à but non lucratif,112153,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,MSF Hollande,Hôpital,Privé à but non lucratif,112154,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital de Delmas 33,HU,Public,112106,11206,,18.5564,-72.2984
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Espoir,Hôpital,Privé à but lucratif,112109,11209,,18.5415,-72.2785
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Jude Anne (DASH),Hôpital,Privé à but non lucratif,112112,11212,,18.5566,-72.3253
+Ouest,Delmas,1ère Saint Martin^112-01,CPFO,CSL,Privé à but non lucratif,112114,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,FONDEFH,CAL,Privé à but non lucratif,112116,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Haiti Med (Siclair),CSL,Privé à but non lucratif,112118,11218,,18.564,-72.308
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de Sante Dieu qui donne,CAL,Privé à but lucratif,112139,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Medicare,Hôpital,Privé à but non lucratif,112143,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Food for the Poor,CSL,Privé à but non lucratif,112146,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,FOSREF 2,CSL,Privé à but non lucratif,112147,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital DASH Delmas 48,Hôpital,Privé à but non lucratif,112111,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,FOSREF Christ Roi,CSL,Privé à but lucratif,112155,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Missionnaires de la Charité,CAL,Privé à but lucratif,112156,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de santé Armée du Salut,CSL,Privé à but lucratif,112101,11201,,18.556,-72.3365
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de Santé de l’Harmonie,CSL,Privé à but lucratif,112157,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,CS Delmas 30,CSL,Privé à but lucratif,112103,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de santé Solidarité,CSL,Privé à but lucratif,112110,11210,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de Santé Saint-Jean,CSL,Public,112122,11222,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de Santé Saint-Martin II,CSL,Public,112126,11226,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre Médico Social de Delmas,CSL,Privé à but lucratif,112145,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital St François de Cazeau,HCR,Privé à but lucratif,112149,,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de santé Croix des Missions (Delmas),CSL,Public,112158,11219,UGP MSPP,,
+Ouest,Delmas,1ère Saint Martin^112-01,Centre de santé Maïs Gâté,CSL,Privé à but lucratif,112159,11220,,,
+Ouest,Carrefour,9ème Bizoton^113-09,Centre de Santé Hands of Love,CSL,Privé à but non lucratif,113919,11319,,18.5317,-72.3753
+Ouest,Carrefour,10ème Thor^113-10,CS FONDEFH Bizoton 61,CAL,Privé à but lucratif,1131001,11301,,18.5327,-72.3851
+Ouest,Carrefour,10ème Thor^113-10,Hôpital de Carrefour,HCR,Public,1131003,11303,UGP MSPP,18.5378,-72.4075
+Ouest,Carrefour,10ème Thor^113-10,Centre Médico-Social Rivière Froide,CSL,Mixte,1131004,11304,,18.5183,-72.4127
+Ouest,Carrefour,10ème Thor^113-10,CS Béthel Mahotière 81,CSL,Privé à but non lucratif,1131005,11305,,18.5364,-72.4051
+Ouest,Carrefour,10ème Thor^113-10,Hôpital Adventiste d’Haïti (HAH),HU,Privé à but lucratif,1131006,11306,Non associée,18.5315,-72.3867
+Ouest,Carrefour,10ème Thor^113-10,CSL La Barque de Pierre (NF),CSL,Privé à but lucratif,1131007,11307,,,
+Ouest,Carrefour,10ème Thor^113-10,CS Multi fonctionnel Sous-Rail,CSL,Mixte,1131014,11314,,18.5479,-72.4001
+Ouest,Carrefour,10ème Thor^113-10,Dispensaire ASCOSADEC,CSL,Mixte,1131015,11315,,18.5251,-72.4059
+Ouest,Carrefour,10ème Thor^113-10,CS OMES,CSL,Mixte,1131017,11317,,18.5324,-72.3887
+Ouest,Carrefour,10ème Thor^113-10,CS Mère Térésa,CAL,Privé à but lucratif,1131018,11318,,18.5379,-72.4032
+Ouest,Carrefour,10ème Thor^113-10,CS communauté Frères Unis (NF),CAL,Mixte,1131020,11320,,18.5419,-72.4062
+Ouest,Carrefour,10ème Thor^113-10,Clinique Mennomite,CSL,Privé à but lucratif,1131027,11327,ICC,18.5418,-72.3983
+Ouest,Carrefour,10ème Thor^113-10,Centre de santé Berekia,CSL,Privé à but lucratif,1131030,,,,
+Ouest,Carrefour,10ème Thor^113-10,ASAD,CAL,Privé à but lucratif,1131031,,,,
+Ouest,Carrefour,10ème Thor^113-10,Centre de Santé Tikajou,CSL,Public,1131037,,,,
+Ouest,Carrefour,10ème Thor^113-10,Centre Hospitalier de Carrefour,Hôpital,Privé à but lucratif,1131040,,,,
+Ouest,Carrefour,10ème Thor^113-10,Centre de santé Shekinah,CSL,Public,1131041,,,,
+Ouest,Carrefour,10ème Thor^113-10,Centre de Santé Médical de Thor,CSL,Privé à but lucratif,1131043,,,,
+Ouest,Carrefour,10ème Thor^113-10,Centre de santé Bethesda,CSL,Privé à but non lucratif,1131045,,,,
+Ouest,Carrefour,10ème Thor^113-10,Centre de santé de Chauffard,Dispensaire,Privé à but non lucratif,1131046,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Disp. la Main Tendue de Bertin,CSL,Mixte,1131108,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,CS Béthel (Christophe Channel),CSL,Privé à but non lucratif,1131113,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Dispensaire Marie Louise de Jésus,Dispensaire,Privé à but non lucratif,1131121,11321,,18.5374,-72.4202
+Ouest,Carrefour,11ème Rivière Froide^113-11,Centre Médical de Bertin,CSL,Privé à but lucratif,1131126,11326,,18.5303,-72.4141
+Ouest,Carrefour,11ème Rivière Froide^113-11,Grace Medical Center,CSL,Mixte,1131132,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Clinique Pré et Post natale,CSL,Privé à but lucratif,1131136,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Centre de santé Midha,CSL,Privé à but lucratif,1131142,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Hôp Alive Clinic,CSL,Privé à but non lucratif,1131148,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Centre de santé Moula,CSL,Privé à but non lucratif,1131149,,,,
+Ouest,Carrefour,11ème Rivière Froide^113-11,Centre médical de Paloma,CAL,Privé à but lucratif,1131150,,,,
+Ouest,Carrefour,15ème Platon Dufréné^113-02,CS Haiti Saint Rock Foundation,CSL,Privé à but lucratif,1131534,,,,
+Ouest,Carrefour,16ème Taïfer^113-03,Dispensaire de Taillefer,Dispensaire,Public,1131611,11311,,18.4814,-72.4136
+Ouest,Carrefour,16ème Taïfer^113-03,Centre de santé Procy Chauffard,CSL,Privé à but lucratif,1131644,,,,
+Ouest,Carrefour,17ème Procy^113-04,Centre FOSREF,CSL,Privé à but non lucratif,1131747,,,,
+Ouest,Carrefour,21ème Berly^113-08,Centre de Santé de Malanga,CSL,Privé à but lucratif,1132138,,,,
+Ouest,Carrefour,22ème Malanga^113-12,Centre de santé Laval,Dispensaire,Public,1132239,,,,
+Ouest,Carrefour,10ème Thor^113-10,CSL OBCG,CSL,Privé à but lucratif,ND11309,11309,PATHFINDER,18.54,-72.41
+Ouest,Carrefour,15ème Platon Dufréné^113-02,CS Communautaire A.J.RAS,CSL,Privé à but non lucratif,ND99901,,,,
+Ouest,Carrefour,15ème Platon Dufréné^113-02,Centre Cookson Hills,CSL,Privé à but lucratif,ND11302,11302,,,
+Ouest,Carrefour,15ème Platon Dufréné^113-02,Rosaline Clinique,CSL,Privé à but lucratif,ND99902,,,,
+Ouest,Carrefour,15ème Platon Dufréné^113-02,SHEKINAH,CAL,Privé à but lucratif,ND11310,11310,,,
+Ouest,Carrefour,15ème Platon Dufréné^113-02,Centre Hospitalier d’Arcachon 32,CSL,Public,ND11316,11316,GHESKIO,18.5415,-72.3978
+Ouest,Carrefour,15ème Platon Dufréné^113-02,CS Commun. Doctors on Mission,CAL,Privé à but lucratif,ND99903,,,,
+Ouest,Carrefour,15ème Platon Dufréné^113-02,Centre Hosp. Dr Raoul Pierre Louis,HCR,Public,ND99904,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Citymed de Pétion ville,Hôpital,Privé à but lucratif,114102,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre de santé Monsanto Petit,CSL,Privé à but lucratif,114103,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Hôpital Eliazar Germain,HCR,Public,114105,11405,GHESKIO,18.5171,-72.2887
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre de santé Notre Dame du Cap,CSL,Mixte,114114,11414,,18.511,-72.2849
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre Médico social Thomassin 25,CSL,Public,114117,11417,,18.4859,-72.3129
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Mosanto Petit Jalousie,CSL,Privé à but lucratif,114127,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,DASH (Hôpital St Landry),Hôpital,Privé à but lucratif,114128,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Clinique médicale de soins communs,CSL,Privé à but lucratif,114131,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Clinique santé pour tous,CSL,Privé à but lucratif,114133,,,,
+Ouest,Petion-Ville,3ème Etang du Jong^114-03,CS Francisca Cabrini (NF),CSL,Privé à but lucratif,114306,11406,,,
+Ouest,Petion-Ville,4ème Bellevue la Montagne^114-04,Centre de Santé Calebasse,CSL,Mixte,114401,11401,,18.4632,-72.2633
+Ouest,Petion-Ville,4ème Bellevue la Montagne^114-04,Hôp. Nos Petits Frères et Soeurs,HCR,Privé à but lucratif,114412,11412,ITECH,18.57,-72.25
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Hôp. de la Communauté Haïtienne,HCR,Privé à but lucratif,114704,11404,GHESKIO,18.524,-72.2723
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Hôpital CensHôpital,Hôpital,Privé à but lucratif,114707,11407,,18.5186,-72.237
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,CS de Pernier,CSL,Public,114715,11415,,18.5235,-72.2266
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,CS Concardia (NF),CSL,Mixte,114719,11419,,18.5269,-72.2851
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,CS Philantropique de Dupont,CSL,Privé à but lucratif,114722,11420,,,
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Dispensaire de Diègue,Dispensaire,Privé à but lucratif,114723,11421,,,
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,GREFAJUR,CSL,Privé à but lucratif,114730,,,,
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Clinimed,CSL,Privé à but lucratif,114732,,,,
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Centre de santé Repheka Pernier,CSL,Privé à but lucratif,114734,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre de santé de Torcelle,CSL,Privé à but lucratif,ND99905,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CS Retraite Sainte Anne,Dispensaire,Mixte,ND11416,11416,,18.5244,-72.2814
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CS Morne Lazarre,CSL,Mixte,ND99906,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,FONDEPH,CSL,Privé à but lucratif,ND11409,11409,,18.5202,-72.3064
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CSL Family Center,CAL,Privé à but lucratif,ND11408,11408,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Dispensaire Sainte Claire,Dispensaire,Public,ND11410,11410,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CS Kay Lavi,CSL,Privé à but lucratif,ND11411,11411,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre de Santé Nazaréen,CSL,Privé à but lucratif,ND11413,11413,,18.511,-72.2849
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre de santé Zafè Fanm,CSL,Privé à but lucratif,ND11418,11418,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CS Canapé-Vert,CSL,Privé à but lucratif,1115001,,,18.53,-72.31
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CS Morne Hercule,CSL,Privé à but lucratif,ND99908,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,CS l’Espoir,CSL,Privé à but lucratif,ND11422,11422,,18.5102,-72.2726
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Kay pou zafè sante fanm,CSL,Privé à but lucratif,ND99909,,,,
+Ouest,Petion-Ville,1ère Montagne Noire^114-01,Centre Hospital de Pernier,HCR,Mixte,ND99910,,,,
+Ouest,Kenscoff,3ème Sourcailles^115-03,Centre de Santé de Kenscoff,CSL,Public,115301,11501,,18.4487,-72.285
+Ouest,Kenscoff,4ème Grand Fond^115-05,Disp. de Robin (Mission Baptiste),Dispensaire,Mixte,115505,11505,,18.4337,-72.2615
+Ouest,Kenscoff,3ème Sourcailles^115-03,Dispensaire Godey (Afè Nèg Konbit),Dispensaire,Public,115309,11509,,18.4476,-72.3059
+Ouest,Kenscoff,2ème Bongars^115-02,Disp. Aux Cadets (Afè Nèg Konbit),Dispensaire,Privé à but lucratif,ND11511,11511,,18.4518,-72.2023
+Ouest,Kenscoff,2ème Bongars^115-02,Disp. de Bolosse (Mission Baptiste),Dispensaire,Privé à but lucratif,115202,11502,,18.4487,-72.285
+Ouest,Kenscoff,3ème Sourcailles^115-03,Hôpital de Fermathe (Mission Baptiste),Hôpital,Mixte,115303,11503,GHESKIO,18.4629,-72.2889
+Ouest,Kenscoff,3ème Sourcailles^115-03,Disp. ND Perpétuel Secours (Furcy),Dispensaire,Privé à but non lucratif,115307,11507,,18.4181,-72.3049
+Ouest,Kenscoff,2ème Bongars^115-02,Disp. de Greffin (Mission Baptiste),Dispensaire,Privé à but lucratif,ND11504,11504,,18.48,-72.2396
+Ouest,Kenscoff,2ème Bongars^115-02,Dispensaire d’Athis,Dispensaire,Public,ND11508,11508,,18.4705,-72.256
+Ouest,Kenscoff,2ème Bongars^115-02,Disp. de Bongars (Mission Baptiste),Hôpital,Privé à but lucratif,115206,11506,,,
+Ouest,Kenscoff,2ème Bongars^115-02,Disp. Dumisseau (Afè Nèg Konbit),Dispensaire,Privé à but lucratif,ND11510,11510,,,
+Ouest,Gressier,24ème Petit Boucan^116-03,Centre de Santé de Christianville,CSL,Privé à but lucratif,1162402,11602,,18.5242,-72.5543
+Ouest,Gressier,1ère Morne à Bateau^116-01,Centre de Santé FOSADEC,CAL,Privé à but lucratif,116103,11603,,18.5394,-72.4989
+Ouest,Gressier,23ème Morne Chandelle^116-02,Centre de santé de Gressier,CAL,Public,1162307,,,,
+Ouest,Gressier,23ème Morne Chandelle^116-02,Dispensaire de Jasmin,Dispensaire,Privé à but non lucratif,1162316,,,,
+Ouest,Gressier,24ème Petit Boucan^116-03,Dispensaire Solo Christus,CSL,Privé à but non lucratif,1162417,,,,
+Ouest,Gressier,23ème Morne Chandelle^116-02,Dispensaire Bon Berger,Dispensaire,Privé à but lucratif,1162301,11601,,18.5429,-72.5244
+Ouest,Gressier,1ère Morne à Bateau^116-01,Centre de santé Haute Sanite (NF),CSL,Privé à but lucratif,116110,,,,
+Ouest,Gressier,24ème Petit Boucan^116-03,Haiti Health Ministries,CSL,Privé à but non lucratif,1162414,,,,
+Ouest,Gressier,1ère Morne à Bateau^116-01,Dispensaire Zèv Atizan Lapè,CSL,Mixte,ND99911,,,,
+Ouest,Gressier,1ère Morne à Bateau^116-01,Dispensaire Morne à Bateau,Dispensaire,Privé à but lucratif,ND99912,,,,
+Ouest,Gressier,1ère Morne à Bateau^116-01,Hôpital Alive clinic,Dispensaire,Privé à but lucratif,1160154,,,18.54,-72.53
+Ouest,Gressier,1ère Morne à Bateau^116-01,ASDEV,CSL,Privé à but lucratif,1160155,,,18.54,-72.53
+Ouest,Gressier,1ère Morne à Bateau^116-01,Centre de santé Bon Secours (Gressier),CAL,Privé à but lucratif,1160157,,,18.54,-72.53
+Ouest,Gressier,24ème Petit Boucan^116-03,Dispensaire CS L’Union (NF),CSL,Privé à but lucratif,1162412,,,,
+Ouest,Gressier,1ère Morne à Bateau^116-01,Hôpital St Charles,HCR,Privé à but lucratif,1160159,,,18.54,-72.53
+Ouest,Gressier,1ère Morne à Bateau^116-01,Dispensaire MOCMOCHAM,Dispensaire,Privé à but lucratif,ND99917,,,,
+Ouest,Cite Soleil,1ère Varreux^117-01,CHAPI,CSL,Public,11730,11230,GHESKIO,,
+Ouest,Cite Soleil,1ère Varreux^117-01,Centre Med.Nutrition Rosalie Rendu,CAL,Privé à but non lucratif,11732,11232,PATHFINDER,,
+Ouest,Cite Soleil,1ère Varreux^117-01,Clinique centrale de l’Eglise,CSL,Privé à but non lucratif,11733,,,,
+Ouest,Cite Soleil,2ème Varreux^117-02,Centre de santé Familiale,CSL,Privé à but lucratif,11734,11213,,,
+Ouest,Cite Soleil,1ère Varreux^117-01,MSF Drouillard,Hôpital,Privé à but non lucratif,11735,,,,
+Ouest,Cite Soleil,1ère Varreux^117-01,Centre de santé Fondation St Luc,CSL,Privé à but non lucratif,11736,,,,
+Ouest,Cite Soleil,1ère Varreux^117-01,Hôpital Ste Marie,Hôpital,Privé à but non lucratif,11737,,,,
+Ouest,Cite Soleil,2ème Varreux^117-02,Centre de santé Lumière,CAL,Privé à but lucratif,11759,,,,
+Ouest,Cite Soleil,2ème Varreux^117-02,CEMEPIO,CAL,Privé à but non lucratif,11760,,,,
+Ouest,Cite Soleil,1ère Varreux^117-01,CHOSCAL,Hôpital,Public,11729,11229,UGP MSPP,18.57,-72.29
+Ouest,Cite Soleil,1ère Varreux^117-01,Clinique St François d’Assise,CSL,Public,ND99918,,,,
+Ouest,Tabarre,4ème Bellevue^118-04,Nos Petits Frères et Soeurs,Hôpital,Public,118441,11412,ITECH,18.57,-72.25
+Ouest,Tabarre,3ème Bellevue^118-03,Haïti Med,CAL,Privé à but lucratif,118342,,,,
+Ouest,Tabarre,4ème Bellevue^118-04,Hôpital St Luc,Hôpital,Privé à but non lucratif,118443,,,,
+Ouest,Tabarre,4ème Bellevue^118-04,Hôpital DASH Tabarre,Hôpital,Privé à but non lucratif,118444,,,,
+Ouest,Tabarre,4ème Bellevue^118-04,Centre de santé de Lyro,CSL,Privé à but lucratif,118445,,,,
+Ouest,Tabarre,4ème Bellevue^118-04,MSF Belgique,Hôpital,Privé à but non lucratif,118446,,,,
+Ouest,Tabarre,3ème Bellevue^118-03,Family Mémorial Médical center,CSL,Privé à but lucratif,118347,,,,
+Ouest,Tabarre,3ème Bellevue^118-03,Centre de santé of Live,CAL,Privé à but lucratif,118349,,,,
+Ouest,Tabarre,3ème Bellevue^118-03,Centre de santé Croix des Missions,CSL,Public,118319,,,,
+Ouest,Tabarre,4ème Bellevue^118-04,GHESKIO/ IMIS,Hôpital,Privé à but non lucratif,118440,,,,
+Ouest,Tabarre,3ème Bellevue^118-03,King’s hospital,Hôpital,Privé à but non lucratif,118348,,,,
+Ouest,Léogâne,6ème Oranger^121-06,Dispensaire de Beauséjour,Dispensaire,Mixte,121601,12101,,18.4212,-72.5064
+Ouest,Léogâne,3ème Grande Rivère^121-03,Centre de santé Darbonne,CAL,Privé à but non lucratif,121302,12102,,18.4925,-72.5898
+Ouest,Léogâne,15ème Palmiste à Vins^121-05,CS Farnèse Louis Charles,CSL,Privé à but lucratif,1211503,12103,,18.4267,-72.643
+Ouest,Léogâne,2ème Petite Rivière^121-02,Hôpital Cardinal Léger,HCR,Privé à but lucratif,121204,12104,,18.5135,-72.6097
+Ouest,Léogâne,2ème Petite Rivière^121-02,Asile de Sigueneau,HU,Public,121207,,,,
+Ouest,Léogâne,1ère Dessources^121-01,Hôpital Sainte-Croix,HCR,Public,121108,12108,Non associée,18.5074,-72.6313
+Ouest,Léogâne,2ème Petite Rivière^121-02,Biré (new mission),CSL,Privé à but non lucratif,121209,12109,,18.5422,-72.5792
+Ouest,Léogâne,14ème Fond de Boudin^121-04,Centre Petit Harpon,CSL,Privé à but lucratif,1211412,12112,,18.3717,-72.6238
+Ouest,Léogâne,2ème Petite Rivière^121-02,Centre de santé Marie Jean,CSL,Mixte,121213,,,,
+Ouest,Léogâne,1ère Dessources^121-01,HCMC,CSL,Privé à but lucratif,121117,,,,
+Ouest,Léogâne,12ème Cormiers^121-12,CS de St Etienne,CSL,Mixte,1211219,,,,
+Ouest,Léogâne,3ème Grande Rivère^121-03,CS Mathieu,CSL,Mixte,121321,,,,
+Ouest,Léogâne,2ème Petite Rivière^121-02,MSF Suisse,Hôpital,Privé à but non lucratif,121222,,,,
+Ouest,Léogâne,10ème Fonds d'Oie^121-10,Dispensaire Tombe Gateau,Dispensaire,Privé à but lucratif,1211023,,,,
+Ouest,Léogâne,2ème Petite Rivière^121-02,Centre Santé Lassale.,CSL,Mixte,121224,,,,
+Ouest,Léogâne,2ème Petite Rivière^121-02,Centre de Santé Fondation Racine,CSL,Privé à but non lucratif,121225,,,,
+Ouest,Léogâne,1ère Dessources^121-01,Centre materno-infantile,CSL,Public,121105,12105,,18.5061,-72.6293
+Ouest,Léogâne,3ème Grande Rivère^121-03,Sanatorium de Léogane,Hôpital,Public,121306,12106,,18.5128,-72.6065
+Ouest,Léogâne,10ème Fonds d'Oie^121-10,Dispensaire de Fonds d’Oie,Dispensaire,Privé à but lucratif,1211010,12110,,18.3887,-72.5845
+Ouest,Léogâne,14ème Fond de Boudin^121-04,Dispensaire de Trouin,CAL,Public,1211411,12111,,18.3652,-72.6534
+Ouest,Léogâne,2ème Petite Rivière^121-02,Help Hospital,Hôpital,Privé à but lucratif,121215,,,,
+Ouest,Léogâne,2ème Petite Rivière^121-02,Centre hospitalier Hosana,CAL,Privé à but lucratif,121220,,,,
+Ouest,Léogâne,2ème Petite Rivière^121-02,Centre de santé Petite Rivière (NF),CSL,Privé à but lucratif,121214,,,,
+Ouest,Léogâne,2ème Petite Rivière^121-02,Centre de santé Anacaona (NF),CSL,Privé à but lucratif,121216,,,,
+Ouest,Léogâne,1ère Dessources^121-01,Azile St Vincent de Paul,CAL,Public,ND99919,,,,
+Ouest,Petit-Goâve,2ème Delatre^122-02,Dispensaire d’Arnoux,CSL,Public,122204,,,,
+Ouest,Petit-Goâve,8ème des Platons^122-08,Centre de Santé de Deslattes,CSL,Mixte,122806,,,,
+Ouest,Petit-Goâve,11ème Ravine Sèche^122-11,Hôpital Notre Dame,HCR,Public,1221101,,,,
+Ouest,Petit-Goâve,1ère Bino^122-01,Dispensaire de Vialet,CSL,Public,122102,,,,
+Ouest,Petit-Goâve,2ème Delatre^122-02,Dispensaire de Madeleine,Dispensaire,Public,122203,,,,
+Ouest,Petit-Goâve,9ème des Palmes^122-09,CS Les Palmes (Besace),CSL,Privé à but lucratif,122905,,,,
+Ouest,Petit-Goâve,2ème Delatre^122-02,Clinique mobile Olivier,CSL,Privé à but lucratif,122207,,,,
+Ouest,Petit-Goâve,11ème Ravine Sèche^122-11,CS Henry Gérard Desgranges,CAL,Privé à but lucratif,1221108,,,,
+Ouest,Petit-Goâve,12ème des Fouques^122-12,Dispensaire APV de Vallue (NF),Dispensaire,Privé à but non lucratif,1221209,,,,
+Ouest,Petit-Goâve,1ère Bino^122-01,Clinique Siloé,CSL,Privé à but lucratif,1220015,,,18.43,-72.86
+Ouest,Petit-Goâve,3ème Trou Chouchou^122-03,CS Trouchouchou (NF),CSL,Privé à but lucratif,122310,,,,
+Ouest,Grand-Goâve,5ème Grande Colline^123-05,Centre de Santé de Meyer,CAL,Public,123502,,,,
+Ouest,Grand-Goâve,2ème Tête à Boeuf^123-02,Dispensaire de Dufour,Dispensaire,Public,123203,,,,
+Ouest,Grand-Goâve,7ème Gérard^123-07,Dispensaire de Bonhomme,Dispensaire,Public,123704,,,,
+Ouest,Grand-Goâve,1ère Tête à Boeuf^123-01,Centre de Santé Georges Gauvin,HCR,Public,123101,,,,
+Ouest,Grand-Goâve,6ème Grande Colline^123-06,Dispensaire Baudin,Dispensaire,Public,123605,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Dispensaire de Bas Boën,Dispensaire,Public,131301,,,,
+Ouest,Croix-des-Bouquets,2ème Petit Bois^131-04,Centre de Santé de Double Harvest,Hôpital,Privé à but non lucratif,131204,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre de Santé Foyer Ste Camille,Hôpital,Privé à but lucratif,131109,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Fwaye Ti zanmi Jezi,CSL,Privé à but non lucratif,131219,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Disp. Marie Louise de Jésus - Mixte,Dispensaire,Privé à but non lucratif,131220,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Eben-ezer Jumecaut,CAL,Privé à but lucratif,131222,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Les Palmes,CSL,Mixte,131223,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,COSECO,Hôpital,Privé à but lucratif,131225,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Shalom Clinique Médicale,CAL,Privé à but lucratif,131327,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Sodeth Clinique Hospitalière,Hôpital,Privé à but lucratif,131228,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Mission Gospel d’Haïti,CSL,Mixte,131230,,,,
+Ouest,Croix-des-Bouquets,2ème Petit Bois^131-04,Centre de Santé de Turbe,CAL,Mixte,131207,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre de santé Bon secours,CSL,Privé à but non lucratif,131237,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre Hospitalier de Santo,CAL,Privé à but lucratif,131234,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,CS Ste Thérèse de Santo,CSL,Public,131208,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre de santé Bonkè,CSL,Public,131235,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre Hosp. Commun. Lilavois,CAL,Privé à but lucratif,131236,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Clinique PROFAMIL,CSL,Mixte,131333,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Centre d’attention Primaire,Dispensaire,Privé à but lucratif,131332,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Clinique Jésus le vrai chemin,CSL,Privé à but non lucratif,131238,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre Hospitalier de Canaan,CAL,Privé à but lucratif,131239,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,CS de la Croix-des-Bouquets,CAL,Public,131203,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Centre de Santé Lucelia Bontemps,CSL,Privé à but non lucratif,131106,,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,CS Kanpèch Dumay,CSL,Privé à but non lucratif,131110,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Centre de Santé Life Line,CAL,Privé à but lucratif,131311,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Fondation Bon samaritain en Action,CSL,Privé à but non lucratif,131115,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Clinique Mennonite,CSL,Privé à but non lucratif,131217,,,,
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Clinique St EsPrivèt,CSL,Privé à but non lucratif,131218,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,CEPRENULET,CSL,Mixte,131326,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Piscine de Bethesda,CAL,Privé à but lucratif,131329,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Hôpital cubain,Hôpital,Public,131331,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Help Incorporate de Vaudreuil,CSL,Privé à but lucratif,131305,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Hôpital Défilé de Beudet,Hôpital,Public,131302,,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,CS Bon Nouvèl,CSL,Privé à but non lucratif,1310001,,,18.58,-72.23
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,Centre de santé de Corail,CSL,Mixte,ND99922,,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,Bon Samaritain,CSL,Privé à but lucratif,ND99923,,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,CS Christ-Roi,CSL,Privé à but lucratif,ND99924,,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,CS Lespwa,CSL,Privé à but lucratif,1319015,,,18.58,-72.23
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,SIF,CSL,Privé à but lucratif,ND99926,,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,CSE,CSL,Public,ND99927,,,,
+Ouest,Croix-des-Bouquets,3ème Petit Bois^131-05,Centre Hosp. Dr Harry Bordes de Beudet,HCR,Public,131341,13135,,,
+Ouest,Croix-des-Bouquets,1ère Petit Bois^131-03,HCR de Bon repos,HCR,Public,ND99928,,,,
+Ouest,Thomazeau,1ère Grande Plaine^132-01,CS de Thomazeau,CAL,Public,132101,13201,,18.6534,-72.0938
+Ouest,Thomazeau,1ère Grande Plaine^132-01,Centre de santé Vision de Néhémie,CSL,Privé à but non lucratif,132102,,,,
+Ouest,Ganthier,5ème Pays Pourri^133-04,Centre de Santé de Ganthier,CSL,Public,133502,,,,
+Ouest,Ganthier,3ème Fonds Parisien^133-03,Eau de vie,CSL,Privé à but lucratif,133306,,,,
+Ouest,Ganthier,3ème Fonds Parisien^133-03,Centre de santé de Thoman 1,CSL,Public,133307,,,,
+Ouest,Ganthier,3ème Fonds Parisien^133-03,Centre Hospitalier Christ pour tous,Hôpital,Privé à but lucratif,133313,,,,
+Ouest,Ganthier,2ème Balan^133-02,Centre de santé Kay Hypocrate,CAL,Privé à but non lucratif,133214,,,,
+Ouest,Ganthier,2ème Balan^133-02,Dispensaire de Savane cabri,Dispensaire,Privé à but non lucratif,133203,,,,
+Ouest,Ganthier,3ème Fonds Parisien^133-03,Love a child,CSL,Privé à but non lucratif,133305,,,,
+Ouest,Ganthier,3ème Fonds Parisien^133-03,Centre de santé de Thoman 2,CSL,Privé à but non lucratif,133308,,,,
+Ouest,Ganthier,2ème Balan^133-02,Dispensaire aux bons soins,Dispensaire,Privé à but lucratif,133210,,,,
+Ouest,Cornillon,2ème Plaine Céleste^134-02,Dispensaire de Cornillon,CSL,Public,134201,13401,,18.6755,-71.9514
+Ouest,Cornillon,1ère Boucan Bois Pin^134-03,Dispensaire de Saint Pierre,Dispensaire,Public,134102,13402,,18.6633,-71.86
+Ouest,Cornillon,2ème Boucan Bois Pin^134-04,Centre de santé St Vincent de Paul,CAL,Privé à but non lucratif,134203,,,,
+Ouest,Fonds Verettes,4ème Fonds-Verrettes^135-01,Dispensaire d’Orianie,Dispensaire,Privé à but lucratif,135403,13503,,18.3061,-71.8324
+Ouest,Fonds Verettes,4ème Fonds-Verrettes^135-01,Clinique Confiance en Dieu,CSL,Privé à but non lucratif,135404,,,,
+Ouest,Fonds Verettes,4ème Fonds-Verrettes^135-01,Dispensaire Ste Croix,Dispensaire,Privé à but non lucratif,135405,,,,
+Ouest,Fonds Verettes,4ème Fonds-Verrettes^135-01,CS de Fonds Verrettes,CAL,Public,135401,13501,,18.3939,-71.854
+Ouest,Fonds Verettes,4ème Fonds-Verrettes^135-01,Dispensaire de Fôret des Pins,Dispensaire,Privé à but lucratif,135402,13502,,,
+Ouest,Arcahaie,7ème Fonds Baptiste^141-02,SADA Fonds Baptiste,CSL,Mixte,141703,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,Disp. ND du Perpétuel Secours,Dispensaire,Public,141205,14104,,18.8209,-72.5392
+Ouest,Arcahaie,2ème des Vases^141-03,Hôpital Reforme de Saintard,Hopital,Privé à but lucratif,141210,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,Carrefour Poy,CSL,Privé à but non lucratif,141213,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,CS Communautaire Williamson,CSL,Privé à but non lucratif,141215,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,Centre de santé Bon Samaritain,Dispensaire,Privé à but lucratif,141209,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,Clinique Laguerre,Dispensaire,Privé à but lucratif,141214,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,Mission Matana,CSL,Public,141216,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,Nicolas Armand,HCR,Public,141201,14101,UGP MSPP,18.7716,-72.5131
+Ouest,Arcahaie,2ème des Vases^141-03,SADA Matheux,CAL,Privé à but non lucratif,141204,14103,PATHFINDER,18.9244,-72.5869
+Ouest,Arcahaie,6ème des Matheux^141-06,SADA-AME/Délices,Dispensaire,Privé à but non lucratif,141612,,,,
+Ouest,Arcahaie,8ème Montrouis^141-04,Centre de santé de Rousseau,CSL,Privé à but non lucratif,141811,11722,UGP MSPP,,
+Ouest,Arcahaie,8ème Montrouis^141-04,Clinique St Paul,Dispensaire,Public,ND14106,14106,JHPIEGO,18.97,-72.68
+Ouest,Arcahaie,8ème Montrouis^141-04,CS Rousseau de Montrouis,CAL,Privé à but non lucratif,141806,,,,
+Ouest,Arcahaie,2ème des Vases^141-03,CAL d’Arcahaie,CAL,Public,141202,14102,,,
+Ouest,Arcahaie,2ème des Vases^141-03,CSL de Saintard,Dispensaire,Public,141208,14107,MATHEUX,18.9424,-72.7002
+Ouest,Cabaret,9ème Source Matelas^142-03,CSL de Source Matelas (SADA),CSL,Privé à but lucratif,142901,14201,,18.7213,-72.3737
+Ouest,Cabaret,9ème Source Matelas^142-03,CS St Antoine de Titanyen,CSL,Privé à but lucratif,142905,14205,,18.7119,-72.3448
+Ouest,Cabaret,9ème Source Matelas^142-03,CS St Gérard,CAL,Mixte,142907,14207,MATHEUX,18.7137,-72.3774
+Ouest,Cabaret,9ème Source Matelas^142-03,Centre de Santé Mission de l’Espoir,CSL,Mixte,142909,14206,MATHEUX,,
+Ouest,Cabaret,1ère Boucassin^142-01,Centre Hospitalier Veramed,CSL,Privé à but lucratif,142112,,,,
+Ouest,Cabaret,4ème Fonds des Blancs^142-04,Centre de santé du Bon samaritain,CSL,Privé à but lucratif,142411,,,,
+Ouest,Cabaret,1ère Boucassin^142-01,CSL de Cabaret,CSL,Public,142102,14202,UGP MSPP,18.7362,-72.419
+Ouest,Cabaret,1ère Boucassin^142-01,CSL de Bélanger (SADA),CSL,Privé à but non lucratif,142104,14204,,18.7323,-72.4417
+Ouest,Cabaret,9ème Source Matelas^142-03,C. hosp. l’université Académique,CAL,Privé à but non lucratif,142910,,,,
+Ouest,Cabaret,1ère Boucassin^142-01,Action Globale,CSL,Privé à but lucratif,1420016,,,18.73,-72.42
+Ouest,Cabaret,1ère Boucassin^142-01,Centre de Santé Communautaire,CSL,Privé à but lucratif,1420018,,,18.73,-72.42
+Ouest,Cabaret,1ère Boucassin^142-01,Centre de santé de Bercy,CSL,Privé à but lucratif,ND99931,,,,
+Ouest,Cabaret,4ème Fonds des Blancs^142-04,Centre de santé de Cazale,CSL,Public,142413,14203,MATHEUX,,
+Ouest,Anse à Galets,1ère Palma^151-01,Dispensaire Bill-Rice,CAL,Mixte,151102,15102,,18.7889,-72.8465
+Ouest,Anse à Galets,1ère Palma^151-01,Hôpital Wesleyen,HCR,Mixte,151103,15103,GHESKIO,18.8339,-72.8624
+Ouest,Anse à Galets,2ème Petite Source^151-02,Dispensaire Grande Source,CSL,Mixte,151305,15105,,18.8217,-72.9569
+Ouest,Anse à Galets,2ème Petite Source^151-02,Clinico Pharma Amis des Enfants,CSL,Mixte,151206,,,,
+Ouest,Anse à Galets,4ème Grand Lagon^151-04,Dispensaire Trou Louis Jeune,Dispensaire,Mixte,151407,15101,,,
+Ouest,Anse à Galets,2ème Petite Source^151-02,Clinique Bon Samaritain,CSL,Public,151308,,,,
+Ouest,Anse à Galets,1ère Palma^151-01,Maison Médicale JESHUA,CAL,Privé à but lucratif,151110,,,,
+Ouest,Anse à Galets,2ème Petite Source^151-02,Clinique Fils Brillant,Dispensaire,Privé à but non lucratif,151211,,,,
+Ouest,Anse à Galets,2ème Petite Source^151-02,Dispensaire Stronght Health Clinic,Dispensaire,Public,151309,,,,
+Ouest,Anse à Galets,2ème Petite Source^151-02,Dispensaire Marsucrin,Dispensaire,Privé à but lucratif,151204,15104,,18.7878,-72.946
+Ouest,Pointe à Raquette,7ème Grand Vide^152-05,Dispensaire de Tamarin,Dispensaire,Privé à but non lucratif,152602,15202,,18.907,-73.2019
+Ouest,Pointe à Raquette,9ème Pointe à Raquette^152-05,Dispensaire Saint-Louis,CAL,Mixte,152805,15205,,18.7855,-73.0634
+Ouest,Pointe à Raquette,8ème Trou Louis^152-04,Dispensaire de Source à Philippe,Dispensaire,Mixte,152706,15206,,18.8193,-73.1227
+Ouest,Pointe à Raquette,9ème Pointe à Raquette^152-05,Centre World Vision Ti palmiste,CAL,Privé à but non lucratif,152804,15204,,18.8384,-73.0519
+Ouest,Pointe à Raquette,8ème Trou Louis^152-04,Clinique communautaire Nan Sema,Dispensaire,Public,ND99932,,,,
+Ouest,Pointe à Raquette,8ème Trou Louis^152-04,Dispensaire la Source,CSL,Privé à but lucratif,ND15201,15201,,,
+Ouest,Pointe à Raquette,8ème Trou Louis^152-04,Centre World Vision de Gros Mangles,Dispensaire,Privé à but lucratif,ND15203,15203,,,
+Ouest,Delmas,1ère Saint Martin^112-01,Hôpital Universitaire de la Paix,Hôpital U,privé,ND11221,11221,,,
+Sud,Les Cayes,7ème Laurent^711-04,Sanatorium,Hôpital spécial.,Public,711702,71102,,18.2223,-73.7454
+Sud,Les Cayes,1ère Bourdet^711-01,Klinik Lafanmy,CAL,Privé à but lucratif,711105,71105,,18.1945,-73.7492
+Sud,Les Cayes,2ème Fonfrède^711-02,Fonfred,Dispensaire,Mixte,711212,71113,,18.2688,-73.7759
+Sud,Les Cayes,9ème Mercy^711-05,World Vision,CSL,Mixte,711913,71114,,,
+Sud,Les Cayes,1ère Bourdet^711-01,FOSREF,CSL,Mixte,711115,71116,,18.1945,-73.7436
+Sud,Les Cayes,1ère Bourdet^711-01,Kay Timoun Bondye (CD),Dispensaire,Privé à but lucratif,711116,,,,
+Sud,Les Cayes,7ème Laurent^711-04,Sacré-Cœur (Charpentier),CSL,Privé à but non lucratif,711717,71107,UGP MSPP,18.3007,-73.7614
+Sud,Les Cayes,1ère Bourdet^711-01,HIC,HCR,Public,711100,71100,GHESKIO,18.1935,-73.751
+Sud,Les Cayes,1ère Bourdet^711-01,I. O. Brenda spécialisé,Hôpital,Mixte,711101,71101,,18.1955,-73.7578
+Sud,Les Cayes,1ère Bourdet^711-01,Citymed,CAL,Privé à but lucratif,711103,71103,,18.1922,-73.7524
+Sud,Les Cayes,1ère Bourdet^711-01,Cite Lumière,CAL,Mixte,711104,71104,URC,18.2285,-73.7614
+Sud,Les Cayes,1ère Bourdet^711-01,Quatre Chemins,CSL,Public,711106,71106,UGP MSPP,18.2009,-73.7537
+Sud,Les Cayes,3ème Laborde^711-03,Laborde,Dispensaire,Mixte,711309,71109,,18.2822,-73.8033
+Sud,Les Cayes,1ère Bourdet^711-01,Colette,Dispensaire,Public,711110,71110,,18.1931,-73.7778
+Sud,Les Cayes,7ème Laurent^711-04,Laurent,Dispensaire,Public,711711,71112,,18.234,-73.8027
+Sud,Les Cayes,1ère Bourdet^711-01,OFATMA,Hôpital,Mixte,711108,71165,N/A,,
+Sud,Torbeck,2ème Bérault^712-02,Béraud,CSL,Public,712205,71205,,18.2054,-73.8598
+Sud,Torbeck,1ère Bourry^712-01,Centre de Santé de Torbeck,CSL,Public,712107,,,,
+Sud,Torbeck,2ème Bérault^712-02,Maison de Naissance,CAL,Privé à but lucratif,712201,71201,UGP MSPP,18.1972,-73.8266
+Sud,Torbeck,3ème Solon^712-03,Ducis,Dispensaire,Mixte,712303,71203,,18.2346,-73.8877
+Sud,Torbeck,1ère Bourry^712-01,Maillard,Dispensaire,Privé à but lucratif,712104,71204,,18.1727,-73.8323
+Sud,Torbeck,3ème Solon^712-03,Ferme Leblanc,Dispensaire,Public,712306,71206,,18.2879,-73.8838
+Sud,Chantal,1ère Fond Palmiste^713-01,Chantal,CSL,Public,713101,71301,UGP MSPP,18.203,-73.889
+Sud,Chantal,3ème Carrefour Canon^713-03,Leprêtre,CAL,Public,713302,71302,,,
+Sud,Camp-Perrin,1ère Lévy^714-01,CS Camp-Perrin,HCR,Public,714101,71401,UGP MSPP,18.3127,-73.8658
+Sud,Camp-Perrin,2ème Champlois^714-02,Mazenod,Dispensaire,Mixte,714202,71402,,18.3294,-73.8532
+Sud,Camp-Perrin,1ère Lévy^714-01,Guichard,Dispensaire,Mixte,714103,71403,,18.2955,-73.8289
+Sud,Camp-Perrin,1ère Lévy^714-01,Mersan,Dispensaire,Public,714104,71404,,18.281,-73.8439
+Sud,Camp-Perrin,3ème Tibi Davezac^714-03,Rhé (NF),Dispensaire,Public,714305,71405,,,
+Sud,Camp-Perrin,3ème Tibi Davezac^714-03,Dispensaire de Dominique (NF),Dispensaire,Privé à but lucratif,714306,,,,
+Sud,Camp-Perrin,3ème Tibi Davezac^714-03,Mouvman Peyizan 3e section,CAL,Privé à but lucratif,714307,,,,
+Sud,Maniche,1ère Maniche^715-01,Maniche,CSL,Mixte,715101,71501,,18.3451,-73.7779
+Sud,Maniche,10ème Dory^715-02,Dory,Dispensaire,Public,715202,71502,,18.3559,-73.723
+Sud,Maniche,11ème Melon^715-03,Melon,Dispensaire,Public,715303,71503,,18.3533,-73.7732
+Sud,Ile à Vache,1ère Ile à Vache^716-01,Dispensaire Kakòk,Dispensaire,Privé à but non lucratif,716102,,,,
+Sud,Ile à Vache,1ère Ile à Vache^716-01,Ile à Vache,CSL,Public,716101,71601,,18.08,-73.65
+Sud,Port-Salut,4ème Barbois^721-01,Port Salut,Hôpital,Privé à but non lucratif,721101,72101,UGP MSPP,18.1099,-73.9392
+Sud,Port-Salut,4ème Barbois^721-01,Dispensaire Marcabel,Dispensaire,Privé à but lucratif,721105,72102,,18.0601,-73.885
+Sud,Port-Salut,5ème Dumont^721-02,Dumont,Dispensaire,Public,721202,72103,,18.1321,-73.9471
+Sud,Port-Salut,5ème Dumont^721-02,Carpentier,Dispensaire,Public,721203,,,,
+Sud,Port-Salut,4ème Barbois^721-01,HCR de Port Salut,HCR,Public,721104,,,,
+Sud,Port-Salut,4ème Barbois^721-01,Klinik Timoun nou yo,CAL,Privé,721106,72133,Non associée,,
+Sud,Saint Jean du Sud,3ème Trichet^722-03,St Jean,CSL,Public,722301,72201,,18.0763,-73.8125
+Sud,Saint Jean du Sud,1ère Tapion^722-01,Carrefour Joute,Dispensaire,Public,722102,72202,,18.115,-73.8521
+Sud,Arniquet,3ème Arniquet^723-03,Arniquet,CSL,Public,723301,72301,,18.1453,-73.875
+Sud,Arniquet,2ème Anse à Drick^723-02,Château,Dispensaire,Public,723202,72302,,18.1739,-73.9165
+Sud,Aquin,9ème Fonds des Blancs^731-09,Hôpital Saint Boniface,Hôpital,Privé à but non lucratif,731911,73103,CMMB,18.28,-73.22
+Sud,Aquin,6ème La Colline^731-06,CS Sunlight La Colline,CAL,Mixte,731602,73102,,18.3081,-73.2463
+Sud,Aquin,1ère Macéan^731-01,Charles Pasqua,CAL,Privé à but non lucratif,731104,73104,,18.2941,-73.3442
+Sud,Aquin,1ère Macéan^731-01,Vx Bourg,Dispensaire,Mixte,731105,73105,,18.2989,-73.3435
+Sud,Aquin,5ème Mare à Coiffe^731-05,Ste Hélène,Dispensaire,Privé à but lucratif,731506,73106,,18.3172,-73.3779
+Sud,Aquin,3ème Brodequin^731-03,HCR d’Aquin (CDI),HCR,Public,731312,73101,UGP MSPP,18.3112,-73.1929
+Sud,Aquin,4ème Flamands^731-04,Mouillage Fouquet (NF),Dispensaire,Public,731415,73107,,,
+Sud,Aquin,1ère Macéan^731-01,Clinique Santé Familiale,Dispensaire,Privé à but lucratif,731114,,,,
+Sud,Aquin,1ère Macéan^731-01,Centre de récupération de TK,CAL,Privé à but lucratif,731113,,,,
+Sud,Saint Louis du Sud,2ème Baie Dumesle^732-02,Saint Louis,CAL,Public,732201,73201,UGP MSPP,18.26,-73.55
+Sud,Saint Louis du Sud,3ème Grenodière^732-03,Saint Patrick,Dispensaire,Privé à but lucratif,732302,73202,,18.2642,-73.5425
+Sud,Saint Louis du Sud,2ème Baie Dumesle^732-02,Centre Commun. Baie Dumesle,CSL,Public,732206,,,,
+Sud,Saint Louis du Sud,5ème Sucrerie-Henry^732-05,Sucrerie Henry,Dispensaire,Mixte,732503,73203,,18.2909,-73.5703
+Sud,Saint Louis du Sud,7ème Cherette^732-07,Cherette,Dispensaire,Privé à but lucratif,732705,73205,,,
+Sud,Cavaillon,4ème Mare Henry^733-04,Hôpital Bonne Fin,Hôpital,Privé à but lucratif,733401,73301,URC,18.3937,-73.6126
+Sud,Cavaillon,5ème Laroque^733-05,PPS Sante Commun. Marc Lacet,Dispensaire,Mixte,733508,,,,
+Sud,Cavaillon,1ère Boileau^733-01,Centre Materno-Infantil,CSL,Privé à but lucratif,733110,,,,
+Sud,Cavaillon,2ème Martineau^733-02,Disp. ND du Bon Secours,Dispensaire,Mixte,733211,,,,
+Sud,Cavaillon,3ème Gros Marin^733-03,PPS La Biche,Dispensaire,Privé à but non lucratif,733312,,,,
+Sud,Cavaillon,1ère Boileau^733-01,CS Cavaillon,CSL,Public,733102,73302,,18.2946,-73.6461
+Sud,Cavaillon,2ème Martineau^733-02,Flamands,Dispensaire,Mixte,733204,73304,,,
+Sud,Cavaillon,4ème Mare Henry^733-04,Sudre (NF),Dispensaire,Mixte,733406,73306,,,
+Sud,Cavaillon,2ème Martineau^733-02,ND de La Nativité de Gros Marin,CAL,Public,733203,,,,
+Sud,Coteaux,5ème Des Pas^741-02,Coteaux,CSL,Public,741501,74101,,18.206,-74.0405
+Sud,Coteaux,5ème Des Pas^741-02,Damassin,Dispensaire,Public,741502,74102,,18.2294,-74.0637
+Sud,Port-à-Piment,1ère Paricot^742-01,Port-à-Piment,CAL,Public,742101,74201,,18.2538,-74.1
+Sud,Roche-à-Bâteaux,1ère Beaulieu^743-01,Roche-à-Bateau,Dispensaire,Mixte,743101,74301,,18.1798,-74.0035
+Sud,Chardonnières,3ème Bony^751-03,Ste Anne,Dispensaire,Privé à but non lucratif,751301,75101,,18.2736,-74.1663
+Sud,Chardonnières,1ère Randel^751-01,Rendel,Dispensaire,Mixte,751102,75102,,18.3177,-74.0934
+Sud,Tiburon,3ème Loby^753-03,Dispensaire Roger Paradis,Dispensaire,Mixte,753301,,,,
+Sud,Les Anglais,3ème Cosse^752-03,Les Anglais,CAL,Public,752301,75201,,18.3076,-74.2191
+Sud Est,Jacmel,13ème La Montagne^211-11,Disp. Bellevue La Montagne,Dispensaire,Public,2111109,21109,,18.1945,-72.5714
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,CAL Christian Martinez,Hôpital,Privé à but lucratif,211112,21112,,18.2339,-72.536
+Sud Est,Jacmel,12ème La vanneau^211-10,Disp. & C. Nutritionnel Bienheureux,Dispensaire,Privé à but non lucratif,2111214,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Disp. La Saline,Dispensaire,Privé à but non lucratif,211115,,,,
+Sud Est,Jacmel,6ème Montagne La Voute^211-06,Hôpital St Michel,HD,Public,211600,21100,ITECH,18.24,-72.54
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,CSL des Orangers,CSL,Public,211101,21101,,,
+Sud Est,Jacmel,6ème Montagne La Voute^211-06,CSL PROFAMIL,CSL,Privé à but non lucratif,211602,21102,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Disp. Cyvadier,CSL,Public,211103,21103,,,
+Sud Est,Jacmel,13ème La Montagne^211-11,Disp. La Montagne La Croix,Dispensaire,Public,2111104,21104,,,
+Sud Est,Jacmel,3ème Cochon Gras^211-03,CSL Marbial,CSL,Public,211305,21105,,,
+Sud Est,Jacmel,3ème Cochon Gras^211-03,CSL. Ste Thérèse,CSL,Privé à but non lucratif,211320,,,,
+Sud Est,Jacmel,6ème Montagne La Voute^211-06,Disp. Montagne-La-Voûte,Dispensaire,Public,211606,21106,,,
+Sud Est,Jacmel,12ème La vanneau^211-10,Disp. Lavanneau,Dispensaire,Public,2111207,21107,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,CSL Lafond,CSL,Public,211110,21110,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Centre de FOSREF,CSL,Privé à but non lucratif,211111,21111,,,
+Sud Est,Jacmel,6ème Montagne La Voute^211-06,Disp. ND de Lourdes,Dispensaire,Privé à but lucratif,211621,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,CAL Arreguy,CAL,Privé à but non lucratif,211108,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,CSL Beaudouin,CSL,Privé à but non lucratif,211113,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,CSL Portail Léogâne,CSL,Privé à but non lucratif,211116,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Kay accouchement,CAL,Privé à but lucratif,211117,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Complexe M.C Rose Marie Paul,CAL,Privé à but lucratif,211118,,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Breman (NF),Disp,Privé à but lucratif,211119,,,,
+Sud Est,Marigot,1ère Corail Soult^212-01,CS de Marigot,CSL,Public,212101,21201,UGP MSPP,18.2317,-72.3264
+Sud Est,Marigot,5ème Savane Dubois^212-05,Hop Communautaire de Peredo,CSL,Privé à but lucratif,212502,21202,,,
+Sud Est,Marigot,4ème Fond Jean Noel^212-04,Disp. Seguin,Dispensaire,Public,212403,21203,,,
+Sud Est,Cayes Jacmel,1ère Ravine Normande^213-01,CS de Cayes Jacmel,HCR,Public,213101,21301,ITECH,18.2309,-72.3978
+Sud Est,Cayes Jacmel,1ère Ravine Normande^213-01,CS Emmanuel Baptiste,CAL,Privé à but non lucratif,213102,21302,ICC,,
+Sud Est,Cayes Jacmel,3ème Haut Cap Rouge^213-03,Disp. de Cap Rouge,Dispensaire,Public,213303,21303,,,
+Sud Est,Cayes Jacmel,2ème Gaillard^213-02,Centre de santé Gaillard,CSL,Public,213204,,,,
+Sud Est,La Vallée de Jacmel,11ème Musac,CAL St Joseph La Vallée,CAL,Public,2141101,21401,UGP MSPP,18.27,-72.67
+Sud Est,La Vallée de Jacmel,10ème Morne à Bruler^214-03,Disp. Morne à Brûler,Dispensaire,Public,2141002,21402,,,
+Sud Est,La Vallée de Jacmel,11ème Musac,Disp. Amalia (NF),Dispensaire,Privé,2141103,21403,,,
+Sud Est,Jacmel,1ère Bas Cap Rouge^211-01,Disp. Caritas,Point Fixe,Privé à but lucratif,ND99933,,,,
+Sud Est,Marigot,2ème Grande Rivière Fesle^212-02,Disp. Grande Rivière,Point Fixe,Privé à but lucratif,212204,,,,
+Sud Est,Bainet,1ère Brésilienne^221-01,Disp. Brésilienne,Dispensaire,Mixte,221105,,,,
+Sud Est,Bainet,5ème Bas de Grandou^221-05,CAL de Bainet,CAL,Public,221501,22101,UGP MSPP,18.18,-72.76
+Sud Est,Bainet,9ème Bas de Gris-gris^221-09,Disp. Saurel,Dispensaire,Public,221902,22102,,,
+Sud Est,Bainet,2ème Trou Mahot^221-02,Disp. Bahot,Dispensaire,Public,221203,22103,,,
+Sud Est,Bainet,9ème Bas de Gris-gris^221-09,Disp. Chaumeille,CSL,Public,221904,,,,
+Sud Est,Bainet,8ème Oranger^221-08,Disp. Orangers,Dispensaire,Public,221806,,,,
+Sud Est,Bainet,7ème Bras Gauche^221-07,Disp. Bras gauche,Dispensaire,Public,221707,,,,
+Sud Est,Bainet,8ème Oranger^221-08,Organisation Espoir Continu pour Haïti,Dispensaire,Privé à but lucratif,221809,,,,
+Sud Est,Bainet,4ème Haut Grandou^221-04,Dipensaire Haut Grandou (NF),Dispensaire,Public,221408,,,,
+Sud Est,Côtes de Fer,6ème Jamais Vu^222-06,Foi et Vie,CAL,Privé à but non lucratif,222605,,,,
+Sud Est,Côtes de Fer,1ère Gris-gris^222-01,CSL de Gris-Gris,CSL,Mixte,222101,22201,,,
+Sud Est,Côtes de Fer,6ème Jamais Vu^222-06,Disp. Saint Joseph,CSL,Public,222602,22202,ICC,,
+Sud Est,Côtes de Fer,5ème Boucan Bélier^222-05,Disp. Boucan Bélier,Dispensaire,Mixte,222503,22203,,,
+Sud Est,Côtes de Fer,6ème Jamais Vu^222-06,Disp. Ricot,Dispensaire,Mixte,222604,22204,,,
+Sud Est,Côtes de Fer,1ère Gris-gris^222-01,CSL de Côtes-de-Fer,Dispensaire,Public,222106,,,,
+Sud Est,Côtes de Fer,2ème La Biche^222-02,Disp. Mayette,Point Fixe,Privé à but lucratif,222207,,,,
+Sud Est,Côtes de Fer,2ème La Biche^222-02,Disp. La Biche,Point Fixe,Privé à but lucratif,222208,,,,
+Sud Est,Côtes de Fer,2ème La Biche^222-02,Disp. Dariole MEBSH,Point Fixe,Privé à but non lucratif,222209,,,,
+Sud Est,Côtes de Fer,4ème Amazone^222-04,Disp. Amazone,Point Fixe,Privé à but non lucratif,222410,,,,
+Sud Est,Côtes de Fer,1ère Gris-gris^222-01,Disp. Macieux,Point Fixe,Privé à but lucratif,ND99934,,,,
+Sud Est,Belle Anse,5ème Bel Air^231-05,CSL de Belle Anse,CAL,Public,231501,23101,,,
+Sud Est,Belle Anse,7ème Mapou^231-07,Disp. de Mapou,Dispensaire,Public,231702,23102,,,
+Sud Est,Grand Gosier,1ère Colline des Chènes^232-01,CS St Benoit de Bodarie.,CSL,Privé à but non lucratif,232105,,,,
+Sud Est,Grand Gosier,1ère Colline des Chènes^232-01,Disp. de Bodarie,Dispensaire,Public,232102,23202,,,
+Sud Est,Grand Gosier,1ère Colline des Chènes^232-01,CS de Grand Gosier,CSL,Privé à but lucratif,232101,23201,,,
+Sud Est,Thiotte,2ème Pot de Chambre^233-02,Disp. Bleck,Dispensaire,Mixte,233102,23302,,18.2172,-71.8422
+Sud Est,Thiotte,3ème Thiotte^233-01,CSL Sacré- Coeur,CAL,Privé à but non lucratif,233305,,,,
+Sud Est,Thiotte,3ème Thiotte^233-01,CSL de Thiotte,CSL,Public,233301,23301,UGP MSPP,18.24,-71.86
+Sud Est,Thiotte,3ème Thiotte^233-01,Disp. Savane Zombi,Dispensaire,Public,233303,23303,,,
+Sud Est,Thiotte,3ème Thiotte^233-01,Disp. Mare Blanche,Dispensaire,Public,233304,23304,,,
+Sud Est,Anse à Pitre,1ère Boucan Guillaume^234-01,CSL de Anse-à-Pitres,CSL,Public,234101,23401,,,
+Sud Est,Anse à Pitre,1ère Boucan Guillaume^234-01,Disp.de Banane,Dispensaire,Public,234102,23402,,,
+Sud Est,Anse à Pitre,2ème Bois d'Orme^234-02,CS Jericho Mare Rouge (NF),CSL,Privé,234205,,,,
+Sud Est,Belle Anse,5ème Bel Air^231-05,PPS Bel Air (ACDI VOCA),Point Fixe,Privé à but non lucratif,231503,,,,
+Sud Est,Belle Anse,4ème Corail Lamothe^231-04,CS Corail Lamothe,Point Fixe,Public,231404,,,,
+Sud Est,Belle Anse,3ème Calumette^231-03,Point fixe Calumet (ACDI VOCA),Point Fixe,Privé à but lucratif,231305,,,,
+Sud Est,Belle Anse,1ère Bais d'Orange^231-01,Point fixe Baie d’Oranges,Point Fixe,Privé à but non lucratif,231106,,,,
+Sud Est,Belle Anse,2ème Mabriol^231-02,Point fixe Marebriole (ACDIVOCA),Point Fixe,Privé à but non lucratif,231207,,,,
+Sud Est,Belle Anse,6ème Pichon^231-06,Point Fixe Pichon (ACDI VOCA),Point Fixe,Privé à but non lucratif,231608,,,,
+Sud Est,Grand Gosier,1ère Colline des Chènes^232-01,Point fixe de Damas (ACDI VOCA),Point Fixe,Privé à but non lucratif,232103,,,,
+Sud Est,Grand Gosier,1ère Colline des Chènes^232-01,Point fixe de Boulaille (ACDI VOCA),Point Fixe,Privé à but non lucratif,232104,,,,
+Sud Est,Thiotte,2ème Pot de Chambre^233-02,Disp. de Platon Fèdre,Point Fixe,Mixte,233106,,,,
+Sud Est,Thiotte,3ème Thiotte^233-01,Point fixe Mare Mirande,Point Fixe,Mixte,ND99935,,,,
+Sud Est,Anse à Pitre,1ère Boucan Guillaume^234-01,Disp. Bony,Point Fixe,Privé à but non lucratif,234103,,,,
+Sud Est,Anse à Pitre,1ère Boucan Guillaume^234-01,Disp. Ka Toussaint,Point Fixe,Privé à but non lucratif,234104,,,,
+Ouest,Arcahaie,8ème Montrouis^141-04,FOSREF Montrouis,CSL,Privé à but non lucratif,ND99936,,FOSREF,,

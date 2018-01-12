@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+	<!-- See http://www.liquibase.org/manual/home#available_database_refactorings 
+		for a list of supported elements and attributes -->
+
+	<changeSet id="20160811-0513" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="isantepluspatientdashboard_form_history" />
+			</not>
+		</preConditions>
+		<comment>
+			Create form history table
+		</comment>
+		<createTable tableName="isantepluspatientdashboard_form_history">
+			<column name="form_history_id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="visit_id" type="int" />
+			<column name="encounter_id" type="int">
+				<constraints nullable="false" unique="true" />
+			</column>
+			<column name="creator" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="date_created" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="changed_by" type="int" />
+			<column name="date_changed" type="datetime" />
+			<column name="voided" type="smallint" defaultValueNumeric="0">
+				<constraints nullable="false" />
+			</column>
+			<column name="voided_by" type="int" />
+			<column name="date_voided" type="datetime" />
+			<column name="void_reason" type="varchar(255)" />
+			<column name="uuid" type="char(38)">
+				<constraints nullable="false" unique="true" />
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint constraintName="form_history_visit_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="visit_id" referencedTableName="visit"
+			referencedColumnNames="visit_id" />
+		<addForeignKeyConstraint constraintName="form_history_encounter_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="encounter_id" referencedTableName="encounter"
+			referencedColumnNames="encounter_id" />
+		<addForeignKeyConstraint constraintName="form_history_creator_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="creator" referencedTableName="users"
+			referencedColumnNames="user_id" />
+		<addForeignKeyConstraint constraintName="form_history_voided_by_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="voided_by" referencedTableName="users"
+			referencedColumnNames="user_id" />
+		<addForeignKeyConstraint constraintName="form_history_changed_by_fk"
+			baseTableName="isantepluspatientdashboard_form_history"
+			baseColumnNames="changed_by" referencedTableName="users"
+			referencedColumnNames="user_id" />
+	</changeSet>
+	<changeSet id="20160824-0728" author="k-joseph" dbms="mysql">
+		<comment>Clearing up liquibase would be issues where module was installed before today</comment>
+		<sql>
+			delete from liquibasechangelog where id='20160811-0316';
+			TRUNCATE isantepluspatientdashboard_form_history;
+		</sql>
+	</changeSet>
+	<changeSet id="20160824-0740" author="k-joseph">
+		<validCheckSum>3:b3020495fbd9a2504a3a1ae6b535a4f5</validCheckSum>
+		<comment>Creates initial FormHistory for existing encounters</comment>
+		<customChange
+			class="org.openmrs.module.isanteplus.liquibase.InitialiseFormsHistory" />
+	</changeSet>
+	<changeSet id="2016Sept02-1519" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.formHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.formHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cf364-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1526" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.labHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.labHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cf710-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1527" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.formsHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.formsHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cf8dc-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1528" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.growthCharts';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.growthCharts" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="3804126a-7111-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1529" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.weightGraph';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.weightGraph" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cfbb6-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept02-1530" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.lastViralLoadTest';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.lastViralLoadTest" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="da7cfa4e-7110-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept03-1904" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.isantePlusForms';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.isantePlusForms" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="cd7a2ae4-72c1-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept05-2136" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM appframework_component_state WHERE component_id = 'coreapps.mostRecentVitals';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id" value="coreapps.mostRecentVitals" />
+			<column name="enabled" value="0" />
+			<column name="component_type" value="APP" />
+			<column name="uuid" value="42996aea-73a0-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept05-2137" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.mostRecentVitals';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.firstColumnFragments.mostRecentVitals" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="8a1159be-73a0-11e6-8b77-86f30ca893d3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept18-2125" author="k-joseph">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.drugsHistory';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.drugsHistory" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="d075e7a0-7dd0-11e6-ae22-56b6b6499611" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Sept26-2126" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				appframework_component_state WHERE component_id =
+				'org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.bmiGraph';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="appframework_component_state">
+			<column name="component_id"
+				value="org.openmrs.module.isantepluspatientdashboard.patientDashboard.secondColumnFragments.bmiGraph" />
+			<column name="enabled" value="1" />
+			<column name="component_type" value="EXTENSION" />
+			<column name="uuid" value="24cf6487-5ba7-4fda-9341-c15349e379e1" />
+		</insert>
+	</changeSet>
+	<changeSet author="k-joseph" id="2016Sept290939" dbms="mysql">
+		<preConditions>
+			<not>
+				<sqlCheck expectedResult="0">SELECT COUNT(*) FROM appframework_component_state WHERE component_id LIKE 'org.openmrs.module.isantepluspatientdashboard.%';</sqlCheck>
+			</not>
+		</preConditions>
+		<comment>Rename isanteplus extension points</comment>
+		<sql>
+			UPDATE appframework_component_state SET component_id = REPLACE(component_id, 'org.openmrs.module.isantepluspatientdashboard.', 'isanteplus.');
+		</sql>
+	</changeSet>
+	<changeSet author="k-joseph" id="2016Sept292235">
+		<preConditions onFail="MARK_RAN">
+			<tableExists tableName="isantepluspatientdashboard_form_history" />
+		</preConditions>
+		<comment>Renaming isantepluspatientdashboard_form_history table to isanteplus_form_history</comment>
+		<renameTable oldTableName="isantepluspatientdashboard_form_history" newTableName="isanteplus_form_history"/>
+	</changeSet>
+	<changeSet id="2016Nov9-1215" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'17536ba6-dd7c-4f58-8014-08c7cb798ac7';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Saisie Première" />
+			<column name="description" value="Saisie Première visite Adulte VIH" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="17536ba6-dd7c-4f58-8014-08c7cb798ac7" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1216" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'204ad066-c5c2-4229-9a62-644bc5617ca2';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Suivi Visite" />
+			<column name="description" value="Saisie visite suivi Adulte VIH" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="204ad066-c5c2-4229-9a62-644bc5617ca2" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1217" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a0d57dca-3028-4153-88b7-c67a30fde595';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Psychosocial Adult" />
+			<column name="description" value="Fiche psychosocial adult" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a0d57dca-3028-4153-88b7-c67a30fde595" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1218" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'51df75f7-a3de-4f82-a9df-c0bedaf5a2dd';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Psychosocial Pédiatrique" />
+			<column name="description" value="Fiche psychosocial Pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="51df75f7-a3de-4f82-a9df-c0bedaf5a2dd" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1219" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'10d73929-54b6-4d18-a647-8b7316bc1ae3';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Ord. Médicale" />
+			<column name="description" value="Fiche ordonance médicale" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="10d73929-54b6-4d18-a647-8b7316bc1ae3" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1220" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'f037e97b-471e-4898-a07c-b8e169e0ddc4';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Analyses de Lab." />
+			<column name="description" value="Fiche Analyses de Laboratoire" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="f037e97b-471e-4898-a07c-b8e169e0ddc4" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1221" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'9d0113c6-f23a-4461-8428-7e9a7344f2ba';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Discontinuation" />
+			<column name="description" value="Rapport d'Arrêt" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="9d0113c6-f23a-4461-8428-7e9a7344f2ba" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1222" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'c45d7299-ad08-4cb5-8e5d-e0ce40532939';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Conseils d'Adhérence" />
+			<column name="description" value="Conseils d'Adhérence" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="c45d7299-ad08-4cb5-8e5d-e0ce40532939" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1223" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'349ae0b4-65c1-4122-aa06-480f186c8350';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Saisie Première pédiatrique" />
+			<column name="description" value="Saisie Première visite pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="349ae0b4-65c1-4122-aa06-480f186c8350" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1224" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'33491314-c352-42d0-bd5d-a9d0bffc9bf1';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Suivi visite pédiatrique" />
+			<column name="description" value="Saisie visite Suivi pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="33491314-c352-42d0-bd5d-a9d0bffc9bf1" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1225" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a9392241-109f-4d67-885b-57cc4b8c638f';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Ord. médicale Pédiatrique" />
+			<column name="description" value="Ordonance médicale pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a9392241-109f-4d67-885b-57cc4b8c638f" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1226" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'5c312603-25c1-4dbe-be18-1a167eb85f97';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Saisie Première ob/gyn" />
+			<column name="description" value="Saisie Première visite ob/gyn" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="5c312603-25c1-4dbe-be18-1a167eb85f97" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1227" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'49592bec-dd22-4b6c-a97f-4dd2af6f2171';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Ob/gyn Suivi" />
+			<column name="description" value="Saisie visite suivi ob/gyn" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="49592bec-dd22-4b6c-a97f-4dd2af6f2171" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1228" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'd95b3540-a39f-4d1e-a301-8ee0e03d5eab';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Travail et d'accouchement" />
+			<column name="description" value="Travail et d'accouchement" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="d95b3540-a39f-4d1e-a301-8ee0e03d5eab" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1229" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'12f4d7c3-e047-4455-a607-47a40fe32460';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--premiére consultation" />
+			<column name="description" value="Soins de santé primaire--premiére consultation" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="12f4d7c3-e047-4455-a607-47a40fe32460" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1230" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a5600919-4dde-4eb8-a45b-05c204af8284';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--consultation" />
+			<column name="description" value="Soins de santé primaire--consultation" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a5600919-4dde-4eb8-a45b-05c204af8284" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1231" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'709610ff-5e39-4a47-9c27-a60e740b0944';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--premiére con. p" />
+			<column name="description" value="Soins de santé primaire--premiére con. p" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="709610ff-5e39-4a47-9c27-a60e740b0944" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1232" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'fdb5b14f-555f-4282-b4c1-9286addf0aae';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Soins de santé primaire--con. pédiatrique" />
+			<column name="description" value="Soins de santé primaire--con. pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="fdb5b14f-555f-4282-b4c1-9286addf0aae" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1233" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_role WHERE uuid = 
+				'7571318b-6358-45cb-b5b3-4d914221eaa1';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_role">
+			<column name="name" value="Infirmière" />
+			<column name="description" value="Encounter role for nurse" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="7571318b-6358-45cb-b5b3-4d914221eaa1" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1234" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_role WHERE uuid = 
+				'322fc5ba-2ed6-44cf-8ebc-963dc40322af';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_role">
+			<column name="name" value="Medecin" />
+			<column name="description" value="Encounter role for doctor" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="322fc5ba-2ed6-44cf-8ebc-963dc40322af" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1235" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_role WHERE uuid = 
+				'ef0445e7-bfe6-4260-a351-09fc835b6bcd';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_role">
+			<column name="name" value="Autres" />
+			<column name="description" value="Encounter role for other members of the clinic" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="ef0445e7-bfe6-4260-a351-09fc835b6bcd" />
+		</insert>
+	</changeSet>
+	<changeSet id="2016Nov9-1236" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'a86ad9bb-d596-413c-bd4e-30f6fea5057d';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Vaccination" />
+			<column name="description" value="Fiche Vaccination" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="a86ad9bb-d596-413c-bd4e-30f6fea5057d" />
+		</insert>
+	</changeSet>
+	<changeSet id="2017Fev02-0336" author="jamesfeshner">
+  <preConditions onFail="MARK_RAN">
+   <sqlCheck expectedResult="0">
+    SELECT COUNT(uuid) FROM
+    encounter_type WHERE uuid = 
+    'a4cab59f-f0ce-46c3-bd76-416db36ec719';
+   </sqlCheck>
+  </preConditions>
+  <comment></comment>
+  <insert tableName="encounter_type">
+   <column name="name" value="Imagerie Médicale" />
+   <column name="description" value="Imagerie Médicale" />
+   <column name="creator" value="1" />
+   <column name="date_created" value="2016-11-09 09:00:00" />
+   <column name="uuid" value="a4cab59f-f0ce-46c3-bd76-416db36ec719" />
+  </insert>
+ </changeSet>
+ <changeSet author="g-francois" id="2017Mars031018" dbms="mysql">
+		<comment>Update search.caseSensitiveDatabaseStringComparison</comment>
+		<sql>
+			UPDATE global_property SET property_value = 'false' where property='search.caseSensitiveDatabaseStringComparison';
+		</sql>
+	</changeSet>
+    <!-- Saving patient_identifier_types -->
+    <changeSet id="2017march28-1433" author="Feshner">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='d059f6d0-9e42-4760-8de1-8316b48bc5f1';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="Code ST" />
+            <column name="description" value="Code ST du patient" />
+            <column name="check_digit" value="0" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="required" value="0" />
+            <column name="location_behavior" value="NOT_USED" />
+            <column name="uniqueness_behavior" value="UNIQUE" />
+            <column name="uuid" value="d059f6d0-9e42-4760-8de1-8316b48bc5f1" />
+        </insert>
+    </changeSet>
+    <changeSet id="2016Oct06-35" author="Feshner">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='9fb4533d-4fd5-4276-875b-2ab41597f5dd';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="Code National" />
+            <column name="description" value="Code National du patient" />
+            <column name="check_digit" value="0" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2016-10-06" />
+            <column name="required" value="1" />
+            <column name="location_behavior" value="NOT_USED" />
+            <column name="uniqueness_behavior" value="UNIQUE" />
+            <column name="uuid" value="9fb4533d-4fd5-4276-875b-2ab41597f5dd" />
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>

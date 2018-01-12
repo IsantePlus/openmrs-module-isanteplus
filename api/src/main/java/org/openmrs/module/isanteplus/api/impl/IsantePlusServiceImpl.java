@@ -858,13 +858,13 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 						} else if (conceptList.contains(obs0.getValueCoded())
 								&& encounterList.contains(obs0.getEncounter()))
 							;
-						else {
+						/*else {
 							conceptList.add(obs0.getValueCoded());
 							encounterList.add(obs0.getEncounter());
 							// j'ajoute la date de prescription si la date de
 							// dispensation n'est pas disponible
 							drugsHistory.add(obs);
-						}
+						}*/
 					}
 				}
 			}
