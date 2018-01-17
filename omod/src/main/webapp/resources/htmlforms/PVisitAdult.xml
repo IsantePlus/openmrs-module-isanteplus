@@ -1,1145 +1,1767 @@
-<htmlform formUuid="f73c1969-49c4-4ef5-8943-e8838547a275" 
-	formName="Saisie Première Visite Adult" 
-	formEncounterType="17536ba6-dd7c-4f58-8014-08c7cb798ac7"
-	formVersion="1.0" 
-	formDescription="Saisie première visite adult;Première visite adulte VIH"> 
+<htmlform formUuid="f73c1969-49c4-4ef5-8943-e8838547a275"
+	formName="Saisie Première Visite Adult" formEncounterType="17536ba6-dd7c-4f58-8014-08c7cb798ac7"
+	formVersion="1.0" formDescription="Saisie première visite adult;Première visite adulte VIH">
 	<macros>
 		paperFormId = (Fill this in)
-		<!--headerColor =#009d8e-->
+		<!--headerColor =#009d8e -->
 		headerColor =#000000
 		fontOnHeaderColor = white
 	</macros>
 	<style>
 		.section {
-			border: 1px solid $headerColor;
-			padding: 2px;
-			text-align: left;
-			margin-bottom: 1em;
+		border: 1px solid $headerColor;
+		padding: 2px;
+		text-align: left;
+		margin-bottom: 1em;
 		}
 		.sectionHeader {
-			background-color: $headerColor;
-			color: $fontOnHeaderColor;
-			display: block;
-			padding: 2px;
-			font-weight: bold;
+		background-color: $headerColor;
+		color: $fontOnHeaderColor;
+		display: block;
+		padding: 2px;
+		font-weight: bold;
 		}
 		table.baseline-aligned td {
-			vertical-align: baseline;
+		vertical-align: baseline;
 		}
 		#conteneur
 		{
-			font-family:arial, sans-serif;
-			font-size:90%;
-			font-weight: normal;
-			font-size: small;
+		font-family:arial, sans-serif;
+		font-size:90%;
+		font-weight: normal;
+		font-size: small;
 		}
 		#dateVisite{
-			background:#81BEF7;
-			/*position:relative;*/
-			top:0px;
-			width:100%;
-			padding-top:5px;
+		background:#81BEF7;
+		/*position:relative;*/
+		top:0px;
+		width:100%;
+		padding-top:5px;
 		}
-		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
-			float: none;
-		    display: inline-block;
+		form input[type="checkbox"], form input[type="radio"], .form
+		input[type="checkbox"], .form input[type="radio"] {
+		float: none;
+		display: inline-block;
 		}
-		
+
 		form label, .form label {
-			display: inline-block;
+		display: inline-block;
 		}
 	</style>
 	<script type="text/javascript">
-	//ca3aed11-1aa4-42a1-b85c-8332fc8001fc
+		//ca3aed11-1aa4-42a1-b85c-8332fc8001fc
 		if(jQuery){
-	 jQuery(document).ready(function(){
+		jQuery(document).ready(function(){
 		if ( jQuery.browser.msie ) {
-			jQuery(":checkbox").click(function(){
-				 jQuery(this).change();
-		 });
-	 }
-	 // Enabled et disabled input type text
-	 jQuery(".enableDisable").each(function(){
-     var group = jQuery(this);
-     function disableFn(){
-         group.children("#disabled").fadeTo(250,0.33);
-         group.children("#disabled").find(":checkbox").attr("checked",false); //uncheck
-         group.children("#disabled").find("input[type$='text']").val("");
-         group.children("#disabled").find("input").attr("disabled",true);  //disable
-     }
-	 function enableFn(){
-		 group.children("#disabled").fadeTo(250,1);
-		 group.children("#disabled").find("input").attr("disabled",false);
-	 }
-	 disableFn();
-	 jQuery(this).children("#trigger").find(":checkbox:first").change(function(){
-		 var checked = jQuery(this).attr("checked");
-		 if(checked == true){
-			  //enableFn();
-			  disableFn();
-		 }else{
-			 disableFn();
-		 }
-	 });
-	});
-	 
-	 //Fin enabled disabled input type text
-	 
-	 jQuery(".checkboxGroup").each(function(){
-		 var group = jQuery(this);
-		 var uncheckAll = function(){
-			 group.find("input[type$='checkbox']").attr("checked",false);
-			 group.find("input[type$='checkbox']").change();
-		 }
-	
-	//Debut checkbox examen Clinique
-	group.find("#normal1").find("input[type$='checkbox']").click(function(){
-			group.find("#anormal1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#anormal1").find("input[type$='checkbox']").change();
-			group.find("#pasconduit1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#pasconduit1").find("input[type$='checkbox']").change();
-		 }
-	);
-	group.find("#anormal1").find("input[type$='checkbox']").click(function(){
-			group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#normal1").find("input[type$='checkbox']").change();
-			group.find("#pasconduit1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#pasconduit1").find("input[type$='checkbox']").change();
-		 }
-	);
-	group.find("#pasconduit1").find("input[type$='checkbox']").click(function(){
-			group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#normal1").find("input[type$='checkbox']").change();
-			group.find("#anormal1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#anormal1").find("input[type$='checkbox']").change();
-		 }
-	);
-	// FIN examen Clinique
-	
-	//Debut ANTÉCEDENTS MÉDICAUX ET SYMPTÔMES ET DIAGNOSTICS ACTUELS
+		jQuery(":checkbox").click(function(){
+		jQuery(this).change();
+		});
+		}
+		// Enabled et disabled input type text
+		jQuery(".enableDisable").each(function(){
+		var group = jQuery(this);
+		function disableFn(){
+		group.children("#disabled").fadeTo(250,0.33);
+		group.children("#disabled").find(":checkbox").attr("checked",false); //uncheck
+		group.children("#disabled").find("input[type$='text']").val("");
+		group.children("#disabled").find("input").attr("disabled",true);
+		//disable
+		}
+		function enableFn(){
+		group.children("#disabled").fadeTo(250,1);
+		group.children("#disabled").find("input").attr("disabled",false);
+		}
+		disableFn();
+		jQuery(this).children("#trigger").find(":checkbox:first").change(function(){
+		var checked = jQuery(this).attr("checked");
+		if(checked == true){
+		//enableFn();
+		disableFn();
+		}else{
+		disableFn();
+		}
+		});
+		});
+
+		//Fin enabled disabled input type text
+
+		jQuery(".checkboxGroup").each(function(){
+		var group = jQuery(this);
+		var uncheckAll = function(){
+		group.find("input[type$='checkbox']").attr("checked",false);
+		group.find("input[type$='checkbox']").change();
+		}
+
+		//Debut checkbox examen Clinique
+		group.find("#normal1").find("input[type$='checkbox']").click(function(){
+		group.find("#anormal1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#anormal1").find("input[type$='checkbox']").change();
+		group.find("#pasconduit1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#pasconduit1").find("input[type$='checkbox']").change();
+		}
+		);
+		group.find("#anormal1").find("input[type$='checkbox']").click(function(){
+		group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#normal1").find("input[type$='checkbox']").change();
+		group.find("#pasconduit1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#pasconduit1").find("input[type$='checkbox']").change();
+		}
+		);
+		group.find("#pasconduit1").find("input[type$='checkbox']").click(function(){
+		group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#normal1").find("input[type$='checkbox']").change();
+		group.find("#anormal1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#anormal1").find("input[type$='checkbox']").change();
+		}
+		);
+		// FIN examen Clinique
+
+		//Debut ANTÉCEDENTS MÉDICAUX ET SYMPTÔMES ET DIAGNOSTICS ACTUELS
 		group.find("#actif").find("input[type$='checkbox']").click(function(){
-			group.find("#gueri").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#gueri").find("input[type$='checkbox']").change();
-		 }
-	);
-	group.find("#gueri").find("input[type$='checkbox']").click(function(){
-			group.find("#actif").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#actif").find("input[type$='checkbox']").change();
-		 }
-	);
-	//Fin ANTÉCEDENTS MÉDICAUX ET SYMPTÔMES ET DIAGNOSTICS ACTUELS
-	
-	//Validation des donnees 
-	group.find("#symptomA").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptoma.value') == '151' ) {
-				group.find("#symptompresenta").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresenta").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresenta").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresenta").find("input[type$='checkbox']").change();
-			}
+		group.find("#gueri").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#gueri").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomB").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomb.value') == '6031' ) {
-				group.find("#symptompresentb").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentb").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentb").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentb").find("input[type$='checkbox']").change();
-			}
+		);
+		group.find("#gueri").find("input[type$='checkbox']").click(function(){
+		group.find("#actif").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#actif").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomC").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomc.value') == '143264' ) {
-				group.find("#symptompresentc").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentc").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentc").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentc").find("input[type$='checkbox']").change();
-			}
+		);
+		//Fin ANTÉCEDENTS MÉDICAUX ET SYMPTÔMES ET DIAGNOSTICS ACTUELS
+
+		//Validation des donnees
+		group.find("#symptomA").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptoma.value') == '151' ) {
+		group.find("#symptompresenta").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresenta").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomD").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomd.value') == '5957' ) {
-				group.find("#symptompresentd").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentd").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentd").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentd").find("input[type$='checkbox']").change();
-			}
+		else
+		{
+		group.find("#symptompresenta").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresenta").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomE").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptome.value') == '122496' ) {
-				group.find("#symptompresente").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresente").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresente").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresente").find("input[type$='checkbox']").change();
-			}
 		}
-	);
-	group.find("#symptomF").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomf.value') == '139084' ) {
-				group.find("#symptompresentf").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentf").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentf").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentf").find("input[type$='checkbox']").change();
-			}
+		);
+		group.find("#symptomB").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomb.value') == '6031' ) {
+		group.find("#symptompresentb").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentb").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomG").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomg.value') == '138905' ) {
-				group.find("#symptompresentg").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentg").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentg").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentg").find("input[type$='checkbox']").change();
-			}
+		else
+		{
+		group.find("#symptompresentb").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentb").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomH").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomh.value') == '5978' ) {
-				group.find("#symptompresenth").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresenth").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresenth").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresenth").find("input[type$='checkbox']").change();
-			}
 		}
-	);
-	group.find("#symptomI").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomi.value') == '133027' ) {
-				group.find("#symptompresenti").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresenti").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresenti").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresenti").find("input[type$='checkbox']").change();
-			}
+		);
+		group.find("#symptomC").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomc.value') == '143264' ) {
+		group.find("#symptompresentc").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentc").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomK").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomk.value') == '118789' ) {
-				group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentk").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentk").find("input[type$='checkbox']").change();
-			}
+		else
+		{
+		group.find("#symptompresentc").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentc").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomL").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptoml.value') == '512' ) {
-				group.find("#symptompresentl").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentl").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentl").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentl").find("input[type$='checkbox']").change();
-			}
 		}
-	);
-	group.find("#symptomM").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomm.value') == '122983' ) {
-				group.find("#symptompresentm").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentm").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentm").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentm").find("input[type$='checkbox']").change();
-			}
+		);
+		group.find("#symptomD").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomd.value') == '5957' ) {
+		group.find("#symptompresentd").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentd").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomN").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomn.value') == '128319' ) {
-				group.find("#symptompresentn").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresentn").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresentn").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresentn").find("input[type$='checkbox']").change();
-			}
+		else
+		{
+		group.find("#symptompresentd").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentd").find("input[type$='checkbox']").change();
 		}
-	);
-	group.find("#symptomO").find("input[type$='checkbox']").click(function(){
-			if (getValue('symptomo.value') == '5622' ) {
-				group.find("#symptompresento").find("input[type$='checkbox']").attr("checked",true);
-				group.find("#symptompresento").find("input[type$='checkbox']").change();
-			}
-			else
-			{
-				group.find("#symptompresento").find("input[type$='checkbox']").attr("checked",false);
-				group.find("#symptompresento").find("input[type$='checkbox']").change();
-			}
 		}
-	);
-	
-	group.find("#disabled1").find("input").attr("disabled",true);
-	jQuery("#eligibilite_arv").click(function(){
+		);
+		group.find("#symptomE").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptome.value') == '122496' ) {
+		group.find("#symptompresente").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresente").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresente").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresente").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomF").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomf.value') == '139084' ) {
+		group.find("#symptompresentf").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentf").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentf").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentf").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomG").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomg.value') == '138905' ) {
+		group.find("#symptompresentg").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentg").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentg").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentg").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomH").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomh.value') == '5978' ) {
+		group.find("#symptompresenth").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresenth").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresenth").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresenth").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomI").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomi.value') == '133027' ) {
+		group.find("#symptompresenti").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresenti").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresenti").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresenti").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomK").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomk.value') == '118789' ) {
+		group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentk").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentk").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomL").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptoml.value') == '512' ) {
+		group.find("#symptompresentl").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentl").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentl").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentl").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomM").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomm.value') == '122983' ) {
+		group.find("#symptompresentm").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentm").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentm").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentm").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomN").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomn.value') == '128319' ) {
+		group.find("#symptompresentn").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentn").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentn").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentn").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		group.find("#symptomO").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomo.value') == '5622' ) {
+		group.find("#symptompresento").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresento").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresento").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresento").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+
+		group.find("#disabled1").find("input").attr("disabled",true);
+		jQuery("#eligibilite_arv").click(function(){
 		if (getValue('eligibilite_ar.value') == '1065' ) {
-			group.find("#disabled1").find("input").attr("disabled",false);
+		group.find("#disabled1").find("input").attr("disabled",false);
 		}
 		else{
-			group.find("#disabled1").find("input").attr("disabled",true);
-			setValue('date_eligibilite_arv.value', '');
-			group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
-			group.find("#disabled1").find("input[type$='checkbox']").change();
+		group.find("#disabled1").find("input").attr("disabled",true);
+		setValue('date_eligibilite_arv.value', '');
+		group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#disabled1").find("input[type$='checkbox']").change();
 		}
-	});
-	
-	 });
-	 }); 
-}
-//Valition des donnees
- beforeSubmit.push(function() {
-  // DEBUT ARV : TRAITEMENTS PRÉCÉDENTS
-  
-  // =============================
-	if ((getValue('abacavir_start.value') == '') &amp;&amp; (getValue('abacavir_end.value') == '') &amp;&amp; (getValue('abacavir_current.value') != '1065')) {
-       setValue('abacavir.value', '');
-	   setValue('abacavir_hiv.value', '');
-    } else {
-	    setValue('abacavir.value', '70056');
+		});
+
+		});
+		});
+		}
+		//Valition des donnees
+		beforeSubmit.push(function() {
+		// DEBUT ARV : TRAITEMENTS PRÉCÉDENTS
+
+		// =============================
+		if ((getValue('abacavir_start.value') == '') &amp;&amp;
+		(getValue('abacavir_end.value') == '') &amp;&amp;
+		(getValue('abacavir_current.value') != '1065')) {
+		setValue('abacavir.value', '');
+		setValue('abacavir_hiv.value', '');
+		} else {
+		setValue('abacavir.value', '70056');
 		setValue('abacavir_hiv.value', '138405');
-    }
-	if ((getValue('combivir_start.value') == '') &amp;&amp; (getValue('combivir_end.value') == '') &amp;&amp; (getValue('combivir_current.value') != '1065')) {
-	   setValue('combivir.value', '');
-	   setValue('combivir_hiv.value', '');
-    } else {
-	    setValue('combivir.value', '630');
+		}
+		if ((getValue('combivir_start.value') == '') &amp;&amp;
+		(getValue('combivir_end.value') == '') &amp;&amp;
+		(getValue('combivir_current.value') != '1065')) {
+		setValue('combivir.value', '');
+		setValue('combivir_hiv.value', '');
+		} else {
+		setValue('combivir.value', '630');
 		setValue('combivir_hiv.value', '138405');
-    }
-	if ((getValue('didanosine_start.value') == '') &amp;&amp; (getValue('didanosine_end.value') == '') &amp;&amp; (getValue('didanosine_current.value') != '1065')) {
-        setValue('didanosine.value', '');
+		}
+		if ((getValue('didanosine_start.value') == '') &amp;&amp;
+		(getValue('didanosine_end.value') == '') &amp;&amp;
+		(getValue('didanosine_current.value') != '1065')) {
+		setValue('didanosine.value', '');
 		setValue('didanosine_hiv.value', '');
-    } else {
-      setValue('didanosine.value', '74807'); 
-	  setValue('didanosine_hiv.value', '138405');
-    }
-	if ((getValue('emtricitabine_start.value') == '') &amp;&amp; (getValue('emtricitabine_end.value') == '') &amp;&amp; (getValue('emtricitabine_current.value') != '1065')){
-      setValue('emtricitabine.value', ''); 
-	  setValue('emtricitabine_hiv.value', '');
-    } else {
-      setValue('emtricitabine.value', '75628');
-	  setValue('emtricitabine_hiv.value', '138405');
-    }
-	if ((getValue('lamivudine_start.value') == '') &amp;&amp; (getValue('lamivudine_end.value') == '') &amp;&amp; (getValue('lamivudine_current.value') != '1065')) {
-       setValue('lamivudine.value', ''); 
-	   setValue('lamivudine_hiv.value', '');
-    } else {
-       setValue('lamivudine.value', '78643');
-	   setValue('lamivudine_hiv.value', '138405');
-    }
-	if ((getValue('stavudine_start.value') == '') &amp;&amp; (getValue('stavudine_end.value') == '') &amp;&amp; (getValue('stavudine_current.value') != '1065')) {
-       setValue('stavudine.value', '');
-	   setValue('stavudine_hiv.value', '');
-    } else {
-        setValue('stavudine.value', '84309');
+		} else {
+		setValue('didanosine.value', '74807');
+		setValue('didanosine_hiv.value', '138405');
+		}
+		if ((getValue('emtricitabine_start.value') == '') &amp;&amp;
+		(getValue('emtricitabine_end.value') == '') &amp;&amp;
+		(getValue('emtricitabine_current.value') != '1065')){
+		setValue('emtricitabine.value', '');
+		setValue('emtricitabine_hiv.value', '');
+		} else {
+		setValue('emtricitabine.value', '75628');
+		setValue('emtricitabine_hiv.value', '138405');
+		}
+		if ((getValue('lamivudine_start.value') == '') &amp;&amp;
+		(getValue('lamivudine_end.value') == '') &amp;&amp;
+		(getValue('lamivudine_current.value') != '1065')) {
+		setValue('lamivudine.value', '');
+		setValue('lamivudine_hiv.value', '');
+		} else {
+		setValue('lamivudine.value', '78643');
+		setValue('lamivudine_hiv.value', '138405');
+		}
+		if ((getValue('stavudine_start.value') == '') &amp;&amp;
+		(getValue('stavudine_end.value') == '') &amp;&amp;
+		(getValue('stavudine_current.value') != '1065')) {
+		setValue('stavudine.value', '');
+		setValue('stavudine_hiv.value', '');
+		} else {
+		setValue('stavudine.value', '84309');
 		setValue('stavudine_hiv.value', '138405');
-    }
-	if ((getValue('tenofovir_start.value') == '') &amp;&amp; (getValue('tenofovir_end.value') == '') &amp;&amp; (getValue('tenofovir_current.value') != '1065')) {
-        setValue('tenofovir.value', ''); 
+		}
+		if ((getValue('tenofovir_start.value') == '') &amp;&amp;
+		(getValue('tenofovir_end.value') == '') &amp;&amp;
+		(getValue('tenofovir_current.value') != '1065')) {
+		setValue('tenofovir.value', '');
 		setValue('tenofovir_hiv.value', '');
-    } else {
-      setValue('tenofovir.value', '84795');
-	   setValue('tenofovir_hiv.value', '138405');
-    }
-	if ((getValue('trizivir_start.value') == '') &amp;&amp; (getValue('trizivir_end.value') == '') &amp;&amp; (getValue('trizivir_current.value') != '1065')) {
-       setValue('trizivir.value', ''); 
-	   setValue('trizivir_hiv.value', '');
-    } else {
-       setValue('trizivir.value', '817');
-	   setValue('trizivir_hiv.value', '138405');
-    }
-	if ((getValue('zidovudine_start.value') == '') &amp;&amp; (getValue('zidovudine_end.value') == '') &amp;&amp; (getValue('zidovudine_current.value') != '1065')) {
-       setValue('zidovudine.value', ''); 
-	   setValue('zidovudine_hiv.value', '');
-    } else {
-       setValue('zidovudine.value', '86663');
-	   setValue('zidovudine_hiv.value', '138405');
-    }
-  if ((getValue('efavirenz_start.value') == '') &amp;&amp; (getValue('efavirenz_end.value') == '') &amp;&amp; (getValue('efavirenz_current.value') != '1065')) {
-      setValue('efavirenz.value', ''); 
-	  setValue('efavirenz_hiv.value', '');
-    } else {
-       setValue('efavirenz.value', '75523');
-	   setValue('efavirenz_hiv.value', '138405');
-    }
-	if ((getValue('nevirapine_start.value') == '') &amp;&amp; (getValue('nevirapine_end.value') == '') &amp;&amp; (getValue('nevirapine_current.value') != '1065')) {
-        setValue('nevirapine.value', ''); 
-		 setValue('nevirapine_hiv.value', '');
-    } else {
-      setValue('nevirapine.value', '80586');
-	  setValue('nevirapine_hiv.value', '138405');
-    }
-	if ((getValue('atazanavir_start.value') == '') &amp;&amp; (getValue('atazanavir_end.value') == '') &amp;&amp; (getValue('atazanavir_current.value') != '1065')) {
-     setValue('atazanavir.value', ''); 
-	 setValue('atazanavir_hiv.value', '');
-    } else {
-       setValue('atazanavir.value', '71647');
-	   setValue('atazanavir_hiv.value', '138405');
-    }
-	if ((getValue('atazanavir_bost_start.value') == '') &amp;&amp; (getValue('atazanavir_bost_end.value') == '') &amp;&amp; (getValue('atazanavir_bost_current.value') != '1065')) {
-        setValue('atazanavir_bost.value', '');
-		setValue('atazanavir_bost_hiv.value', '');		
-    } else {
-      setValue('atazanavir_bost.value', '159809');
-	  setValue('atazanavir_bost_hiv.value', '138405');
-    }
-    if ((getValue('indinavir_start.value') == '') &amp;&amp; (getValue('indinavir_end.value') == '') &amp;&amp; (getValue('indinavir_current.value') != '1065')) {
-       setValue('indinavir.value', ''); 
-	   setValue('indinavir_hiv.value', '');	
-    } else {
-       setValue('indinavir.value', '77995');
-	   setValue('indinavir_hiv.value', '138405');	
-    }
+		} else {
+		setValue('tenofovir.value', '84795');
+		setValue('tenofovir_hiv.value', '138405');
+		}
+		if ((getValue('trizivir_start.value') == '') &amp;&amp;
+		(getValue('trizivir_end.value') == '') &amp;&amp;
+		(getValue('trizivir_current.value') != '1065')) {
+		setValue('trizivir.value', '');
+		setValue('trizivir_hiv.value', '');
+		} else {
+		setValue('trizivir.value', '817');
+		setValue('trizivir_hiv.value', '138405');
+		}
+		if ((getValue('zidovudine_start.value') == '') &amp;&amp;
+		(getValue('zidovudine_end.value') == '') &amp;&amp;
+		(getValue('zidovudine_current.value') != '1065')) {
+		setValue('zidovudine.value', '');
+		setValue('zidovudine_hiv.value', '');
+		} else {
+		setValue('zidovudine.value', '86663');
+		setValue('zidovudine_hiv.value', '138405');
+		}
+		if ((getValue('efavirenz_start.value') == '') &amp;&amp;
+		(getValue('efavirenz_end.value') == '') &amp;&amp;
+		(getValue('efavirenz_current.value') != '1065')) {
+		setValue('efavirenz.value', '');
+		setValue('efavirenz_hiv.value', '');
+		} else {
+		setValue('efavirenz.value', '75523');
+		setValue('efavirenz_hiv.value', '138405');
+		}
+		if ((getValue('nevirapine_start.value') == '') &amp;&amp;
+		(getValue('nevirapine_end.value') == '') &amp;&amp;
+		(getValue('nevirapine_current.value') != '1065')) {
+		setValue('nevirapine.value', '');
+		setValue('nevirapine_hiv.value', '');
+		} else {
+		setValue('nevirapine.value', '80586');
+		setValue('nevirapine_hiv.value', '138405');
+		}
+		if ((getValue('atazanavir_start.value') == '') &amp;&amp;
+		(getValue('atazanavir_end.value') == '') &amp;&amp;
+		(getValue('atazanavir_current.value') != '1065')) {
+		setValue('atazanavir.value', '');
+		setValue('atazanavir_hiv.value', '');
+		} else {
+		setValue('atazanavir.value', '71647');
+		setValue('atazanavir_hiv.value', '138405');
+		}
+		if ((getValue('atazanavir_bost_start.value') == '') &amp;&amp;
+		(getValue('atazanavir_bost_end.value') == '') &amp;&amp;
+		(getValue('atazanavir_bost_current.value') != '1065')) {
+		setValue('atazanavir_bost.value', '');
+		setValue('atazanavir_bost_hiv.value', '');
+		} else {
+		setValue('atazanavir_bost.value', '159809');
+		setValue('atazanavir_bost_hiv.value', '138405');
+		}
+		if ((getValue('indinavir_start.value') == '') &amp;&amp;
+		(getValue('indinavir_end.value') == '') &amp;&amp;
+		(getValue('indinavir_current.value') != '1065')) {
+		setValue('indinavir.value', '');
+		setValue('indinavir_hiv.value', '');
+		} else {
+		setValue('indinavir.value', '77995');
+		setValue('indinavir_hiv.value', '138405');
+		}
 
-	if ((getValue('lopinavir_bost_start.value') == '') &amp;&amp; (getValue('lopinavir_bost_end.value') == '') &amp;&amp; (getValue('lopinavir_bost_current.value') != '1065')) {
-       setValue('lopinavir_bost.value', ''); 
-	   setValue('lopinavir_bost_hiv.value', '');	
-    } else {
-       setValue('lopinavir_bost.value', '794');
-	   setValue('lopinavir_bost_hiv.value', '138405');
-    }
-	if ((getValue('autre_arv_a_start.value') == '') &amp;&amp; (getValue('autre_arv_a_end.value') == '') &amp;&amp; (getValue('autre_arv_a_current.value') != '1065')) {
-       setValue('autre_arv_a.value', ''); 
-	   setValue('autre_arv_a_hiv.value', '');	
-    } else {
-	   setValue('autre_arv_a_hiv.value', '138405');
-    }
-	 if ((getValue('autre_arv_b_start.value') == '') &amp;&amp; (getValue('autre_arv_b_end.value') == '') &amp;&amp; (getValue('autre_arv_b_current.value') != '1065')) {
-       setValue('autre_arv_b.value', ''); 
-	   setValue('autre_arv_b_hiv.value', '');	
-    } else {
-	   setValue('autre_arv_b_hiv.value', '138405');
-    }
-	
-  //=============================
- // FIN ARV : TRAITEMENTS PRÉCÉDENT
- 
-//AUTRES TRAITEMENTS PRÉCÉDENTS
-	if ((getValue('ethambutol_start.value') == '') &amp;&amp; (getValue('ethambutol_end.value') == '') &amp;&amp; (getValue('ethambutol_current.value') != '159367')){
-       setValue('ethambutol.value', '');
-    } else {
-      setValue('ethambutol.value', '75948');
-    }
+		if ((getValue('lopinavir_bost_start.value') == '') &amp;&amp;
+		(getValue('lopinavir_bost_end.value') == '') &amp;&amp;
+		(getValue('lopinavir_bost_current.value') != '1065')) {
+		setValue('lopinavir_bost.value', '');
+		setValue('lopinavir_bost_hiv.value', '');
+		} else {
+		setValue('lopinavir_bost.value', '794');
+		setValue('lopinavir_bost_hiv.value', '138405');
+		}
+		if ((getValue('autre_arv_a_start.value') == '') &amp;&amp;
+		(getValue('autre_arv_a_end.value') == '') &amp;&amp;
+		(getValue('autre_arv_a_current.value') != '1065')) {
+		setValue('autre_arv_a.value', '');
+		setValue('autre_arv_a_hiv.value', '');
+		} else {
+		setValue('autre_arv_a_hiv.value', '138405');
+		}
+		if ((getValue('autre_arv_b_start.value') == '') &amp;&amp;
+		(getValue('autre_arv_b_end.value') == '') &amp;&amp;
+		(getValue('autre_arv_b_current.value') != '1065')) {
+		setValue('autre_arv_b.value', '');
+		setValue('autre_arv_b_hiv.value', '');
+		} else {
+		setValue('autre_arv_b_hiv.value', '138405');
+		}
 
-	if ((getValue('isoniazide_start.value') == '') &amp;&amp; (getValue('isoniazide_end.value') == '') &amp;&amp; (getValue('isoniazide_current.value') != '159367')) {
-        setValue('isoniazide.value', '');
-    } else {
+		//=============================
+		// FIN ARV : TRAITEMENTS PRÉCÉDENT
+
+		//AUTRES TRAITEMENTS PRÉCÉDENTS
+		if ((getValue('ethambutol_start.value') == '') &amp;&amp;
+		(getValue('ethambutol_end.value') == '') &amp;&amp;
+		(getValue('ethambutol_current.value') != '159367')){
+		setValue('ethambutol.value', '');
+		} else {
+		setValue('ethambutol.value', '75948');
+		}
+
+		if ((getValue('isoniazide_start.value') == '') &amp;&amp;
+		(getValue('isoniazide_end.value') == '') &amp;&amp;
+		(getValue('isoniazide_current.value') != '159367')) {
+		setValue('isoniazide.value', '');
+		} else {
 		setValue('isoniazide.value', '78280');
-    }
-	if ((getValue('pyrazinamide_start.value') == '') &amp;&amp; (getValue('pyrazinamide_end.value') == '') &amp;&amp; (getValue('pyrazinamide_current.value') != '159367')) {
-       setValue('pyrazinamide.value', '');
-    } else {
-        setValue('pyrazinamide.value', '82900');
-    }
-	if ((getValue('rifampicine_start.value') == '') &amp;&amp; (getValue('rifampicine_end.value') == '') &amp;&amp; (getValue('rifampicine.value') != '159367')) {
-       setValue('rifampicine.value', '');
-    } else {
-        setValue('rifampicine.value', '767');
-    }
-	if ((getValue('streptomycine_start.value') == '') &amp;&amp; (getValue('streptomycine_end.value') == '') &amp;&amp; (getValue('streptomycine_current.value') != '159367')) {
-       setValue('streptomycine.value', '');
-    } else {
-        setValue('streptomycine.value', '84360');
-    }
-	/* Autres traitements */
-	if ((getValue('acyclovir_start.value') == '') &amp;&amp; (getValue('acyclovir_end.value') == '') &amp;&amp; (getValue('acyclovir_current.value') != '159367')) {
-       setValue('acyclovir.value', ''); 
-	   setValue('acyclovir_autre.value', '');
-    } else {
-       setValue('acyclovir.value', '70245');
-	   setValue('acyclovir_autre.value', '5622');
-    }
-	if ((getValue('cotrimoxazole_start.value') == '') &amp;&amp; (getValue('cotrimoxazole_end.value') == '') &amp;&amp; (getValue('cotrimoxazole_current.value') != '159367')) {
-       setValue('cotrimoxazole.value', ''); 
-	   setValue('cotrimoxazole_autre.value', '');
-    } else {
-       setValue('cotrimoxazole.value', '105281');
-	   setValue('cotrimoxazole_autre.value', '5622');
-    }
-	if ((getValue('fluconazole_start.value') == '') &amp;&amp; (getValue('fluconazole_end.value') == '') &amp;&amp; (getValue('fluconazole_current.value') != '159367')) {
-       setValue('fluconazole.value', ''); 
-	    setValue('fluconazole_autre.value', ''); 
-    } else {
-      setValue('fluconazole.value', '76488'); 
-	  setValue('fluconazole_autre.value', '5622');	  
-    }
-	if ((getValue('ketaconazole_start.value') == '') &amp;&amp; (getValue('ketaconazole_end.value') == '') &amp;&amp; (getValue('ketaconazole_current.value') != '159367')) {
-        setValue('ketaconazole.value', ''); 
+		}
+		if ((getValue('pyrazinamide_start.value') == '') &amp;&amp;
+		(getValue('pyrazinamide_end.value') == '') &amp;&amp;
+		(getValue('pyrazinamide_current.value') != '159367')) {
+		setValue('pyrazinamide.value', '');
+		} else {
+		setValue('pyrazinamide.value', '82900');
+		}
+		if ((getValue('rifampicine_start.value') == '') &amp;&amp;
+		(getValue('rifampicine_end.value') == '') &amp;&amp;
+		(getValue('rifampicine.value') != '159367')) {
+		setValue('rifampicine.value', '');
+		} else {
+		setValue('rifampicine.value', '767');
+		}
+		if ((getValue('streptomycine_start.value') == '') &amp;&amp;
+		(getValue('streptomycine_end.value') == '') &amp;&amp;
+		(getValue('streptomycine_current.value') != '159367')) {
+		setValue('streptomycine.value', '');
+		} else {
+		setValue('streptomycine.value', '84360');
+		}
+		/* Autres traitements */
+		if ((getValue('acyclovir_start.value') == '') &amp;&amp;
+		(getValue('acyclovir_end.value') == '') &amp;&amp;
+		(getValue('acyclovir_current.value') != '159367')) {
+		setValue('acyclovir.value', '');
+		setValue('acyclovir_autre.value', '');
+		} else {
+		setValue('acyclovir.value', '70245');
+		setValue('acyclovir_autre.value', '5622');
+		}
+		if ((getValue('cotrimoxazole_start.value') == '') &amp;&amp;
+		(getValue('cotrimoxazole_end.value') == '') &amp;&amp;
+		(getValue('cotrimoxazole_current.value') != '159367')) {
+		setValue('cotrimoxazole.value', '');
+		setValue('cotrimoxazole_autre.value', '');
+		} else {
+		setValue('cotrimoxazole.value', '105281');
+		setValue('cotrimoxazole_autre.value', '5622');
+		}
+		if ((getValue('fluconazole_start.value') == '') &amp;&amp;
+		(getValue('fluconazole_end.value') == '') &amp;&amp;
+		(getValue('fluconazole_current.value') != '159367')) {
+		setValue('fluconazole.value', '');
+		setValue('fluconazole_autre.value', '');
+		} else {
+		setValue('fluconazole.value', '76488');
+		setValue('fluconazole_autre.value', '5622');
+		}
+		if ((getValue('ketaconazole_start.value') == '') &amp;&amp;
+		(getValue('ketaconazole_end.value') == '') &amp;&amp;
+		(getValue('ketaconazole_current.value') != '159367')) {
+		setValue('ketaconazole.value', '');
 		setValue('ketaconazole_autre.value', '');
-    } else {
-      setValue('ketaconazole.value', '78476');
-	  setValue('ketaconazole_autre.value', '5622');
-    }
-	if ((getValue('traitement_trad_start.value') == '') &amp;&amp; (getValue('traitement_trad_end.value') == '') &amp;&amp; (getValue('traitement_trad_current.value') != '159367')) {
-        setValue('traitement_trad.value', ''); 
-		setValue('traitement_trad_autre.value', ''); 
-    } else {
-      setValue('traitement_trad.value', '5841');
-	  setValue('traitement_trad_autre.value', '5622');
-    }
-	if ((getValue('autres_traitement_arv_start.value') == '') &amp;&amp; (getValue('autres_traitement_arv_end.value') == '') &amp;&amp; (getValue('autres_traitement_arv_current.value') != '159367')) {
-        setValue('autres_traitement_arv.value', '');
+		} else {
+		setValue('ketaconazole.value', '78476');
+		setValue('ketaconazole_autre.value', '5622');
+		}
+		if ((getValue('traitement_trad_start.value') == '') &amp;&amp;
+		(getValue('traitement_trad_end.value') == '') &amp;&amp;
+		(getValue('traitement_trad_current.value') != '159367')) {
+		setValue('traitement_trad.value', '');
+		setValue('traitement_trad_autre.value', '');
+		} else {
+		setValue('traitement_trad.value', '5841');
+		setValue('traitement_trad_autre.value', '5622');
+		}
+		if ((getValue('autres_traitement_arv_start.value') == '') &amp;&amp;
+		(getValue('autres_traitement_arv_end.value') == '') &amp;&amp;
+		(getValue('autres_traitement_arv_current.value') != '159367')) {
+		setValue('autres_traitement_arv.value', '');
 		setValue('autres_traitement_arv_autre.value', '');
-    } else {
-       setValue('autres_traitement_arv.value', '5622');
-	   setValue('autres_traitement_arv_autre.value', '5622');
-    }
-	/*Fin autres traitements*/
-	
-  return true;
- });
-  
-</script>
-<ifMode mode="ENTER">
-<lookup complexExpression="#foreach($encounter in $fn.allEncounters(null))
-	#if($form == $encounter.form.formId)
-	 &lt;script type=&quot;text/javascript&quot;>
-		jQuery(function() {
-			var url = window.location.search;
-			var idurl=url.substring(url.lastIndexOf(&quot;=&quot;)+1);
-			var res='/module/htmlformentry/htmlForm.form?id='+idurl;
-			if (window.location.href.indexOf(res) == -1)
-			{
-				var cheminComplet = document.location.href;
-				var longueur = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;;
-				var souschaine=cheminComplet.substring(longueur.length,cheminComplet.indexOf(&quot;/&quot;,longueur.length));
-				window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ souschaine +&quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.uuid&quot;;
-				
-			}
-			});
-	   &lt;/script> 
-	#end
-#end "/>
+		} else {
+		setValue('autres_traitement_arv.value', '5622');
+		setValue('autres_traitement_arv_autre.value', '5622');
+		}
+		/*Fin autres traitements*/
+
+		return true;
+		});
+
+	</script>
+	<ifMode mode="ENTER">
+		<lookup complexExpression="
+				#set( $encounter = 0 )
+				#set( $encounter = $fn.latestEncounter('17536ba6-dd7c-4f58-8014-08c7cb798ac7') )
+				#if( $encounter != 0 )		
+							
+				 &lt;script type=&quot;text/javascript&quot;>
+				 alert('Cette fiche, doit etre en un seul exemplaire');
+						var url = window.location.search;
+						var idurl=url.substring(url.lastIndexOf(&quot;=&quot;)+1);
+							var cheminComplet = document.location.href;
+							var longueur = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;;
+							var souschaine=cheminComplet.substring(longueur.length,cheminComplet.indexOf(&quot;/&quot;,longueur.length));
+							window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot;+ souschaine +&quot;/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=$encounter.patient.uuid&amp;formUuid=$encounter.form.uuid&amp;encounterId=$encounter.uuid&quot;;
+				&lt;/script> 
+								
+			#end
+		"/>
+
 </ifMode>
 
-<div width="100%" id="conteneur">
-	<div id="dateVisite">
-			<b>FICHE DE SAISIE POUR LA PREMIERE VISITE ADULTE VIH+</b><br/><br/>
+	<div width="100%" id="conteneur">
+		<div id="dateVisite">
+			<b>FICHE DE SAISIE POUR LA PREMIERE VISITE ADULTE VIH+</b>
+			<br />
+			<br />
 			<table>
 				<tr>
 					<td>Date visite:</td>
-					<td><encounterDate default="today"/><br/>
-					<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+					<td>
+						<encounterDate default="today" />
+						<br />
+						<span style="display: none">
+							<encounterLocation
+								default="SessionAttribute:emrContext.sessionLocationId" />
+						</span>
 					</td>
 				</tr>
 			</table>
-	</div>
-	
-	<table width="100%">
-		<tr>
-			<td width="50%" height="100%" valign="TOP">
-				
-							<section headerLabel="SIGNES VITAUX">
-								<table>
-									<tr>
-										<td>Temp</td><td><obs conceptId="CIEL:5088"/> Celcius</td>
-									</tr>
-									<tr>			
-										<td>TA</td><td><obs conceptId="CIEL:5085"/><obs conceptId="CIEL:5086" labelText="/"/> mmHg</td>
-									</tr>
-									 <tr>			
-										<td>Pouls</td><td><obs conceptId="CIEL:5087"/></td><td>Poids</td><td><obs conceptId="CIEL:5089"/> kg</td>
-									</tr>
-									 <tr>			
-										<td>FR</td><td><obs conceptId="CIEL:5242"/></td>
-									</tr>
-									 <tr>			
-										<td>Taille</td><td><obs conceptId="CIEL:5090"/> cm</td>
-									</tr>
-								</table>
-							</section>
-							<section headerLabel="TEST ANTICORPS VIH">
-								<table>
-									<tr>
-									<td>Date du premier test (anticorps) VIH positif</td><td><obs conceptId="CIEL:160082"/></td>
-									</tr>
-									<tr><td colspan="2">Établissement où le test a été réalisé</td></tr> 
-									
-									<tr>
-									<td colspan="2"><obs conceptId="CIEL:159936" answerConceptIds="CIEL:163266,CIEL:5622" answerLabels="Cet établissement,Autre" style="radio" showCommentField="true" commentFieldLabel=""/></td>
-									</tr>
-									
-								</table>
-							</section>
-						
-			</td>
-			<td width="50%" height="100%" valign="TOP">
-				<section headerLabel="SOURCE DE RÉFÉRENCE">
-					<table>
-						<tr><td><obs conceptId="CIEL:159936" answerConceptId="CIEL:5485" answerLabel="Hôpital (patient a été hospitalisé antérieurement)"/></td></tr>
-						<tr><td><obs conceptId="CIEL:159936" answerConceptId="CIEL:159940" answerLabel="Centres CDV intégrés" style="checkbox"/></td></tr>
-						<tr><td><obs conceptId="CIEL:159936" answerConceptId="CIEL:159937" answerLabel="Programme PTME" style="checkbox"/></td></tr>
-						<tr><td><obs conceptId="CIEL:159936" answerConceptId="CIEL:160542" answerLabel="Clinique Externe" style="checkbox"/></td></tr>
-						<tr><td><obs conceptId="CIEL:159936" answerConceptId="CIEL:159938" answerLabel="Programmes communautaires" style="checkbox"/></td></tr>
-						<tr><td><obs conceptId="CIEL:159936" answerConceptId="CIEL:5622" answerLabel="Transfert d'un autre établissement de santé" style="checkbox" showCommentField="true" commentFieldLabel="&lt;br&gt;Nom de l'établissement"/></td></tr>
-					
-					</table>
-				</section>
-				
-			</td>
-			
-		</tr>
-    </table>
-	<includeIf velocityTest="($patient.person.gender=='F')">  <!--patient.person.gender=='M'-->
-	
-	<section headerLabel="ANTECEDENTS OBSTETRIQUES ET GROSSESSE">
+		</div>
+
 		<table width="100%">
 			<tr>
-				<td width="20%" valign="TOP">
-					<table width="100%" style="border-right:1px solid">
-						
+				<td width="50%" height="100%" valign="TOP">
+
+					<section headerLabel="SIGNES VITAUX">
+						<table>
 							<tr>
-								<td>Gravida</td><td><obs conceptId="CIEL:5624"/></td>
+								<td>Temp</td>
+								<td>
+									<obs conceptId="CIEL:5088" />
+									Celcius
+								</td>
 							</tr>
-							<tr>			
-								<td>Para</td><td><obs conceptId="CIEL:1053"/></td>
+							<tr>
+								<td>TA</td>
+								<td>
+									<obs conceptId="CIEL:5085" />
+									<obs conceptId="CIEL:5086" labelText="/" />
+									mmHg
+								</td>
 							</tr>
-							<tr>			
-								<td>Aborta</td><td><obs conceptId="CIEL:1823"/></td>
+							<tr>
+								<td>Pouls</td>
+								<td>
+									<obs conceptId="CIEL:5087" />
+								</td>
+								<td>Poids</td>
+								<td>
+									<obs conceptId="CIEL:5089" />
+									kg
+								</td>
 							</tr>
-							<tr>			
-								<td>Enfants vivants</td><td><obs conceptId="CIEL:1825"/></td>
+							<tr>
+								<td>FR</td>
+								<td>
+									<obs conceptId="CIEL:5242" />
+								</td>
 							</tr>
-							<tr>			
-								<td colspan="2">Grossesse actuelle <br/><obs conceptId="CIEL:5272" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inconnu" style="radio"/></td>
+							<tr>
+								<td>Taille</td>
+								<td>
+									<obs conceptId="CIEL:5090" />
+									cm
+								</td>
 							</tr>
-						
-					</table>
+						</table>
+					</section>
+					<section headerLabel="TEST ANTICORPS VIH">
+						<table>
+							<tr>
+								<td>Date du premier test (anticorps) VIH positif</td>
+								<td>
+									<obs conceptId="CIEL:160082" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">Établissement où le test a été réalisé</td>
+							</tr>
+
+							<tr>
+								<td colspan="2">
+									<obs conceptId="CIEL:159936" answerConceptIds="CIEL:163266,CIEL:5622"
+										answerLabels="Cet établissement,Autre" style="radio"
+										showCommentField="true" commentFieldLabel="" />
+								</td>
+							</tr>
+
+						</table>
+					</section>
+
 				</td>
-				<td valign="TOP">
-					<table width="100%" height="100%">
-							<!--New concept Added PAP test a verifier with James-->
-							<tr><td>Test Pap <obs conceptId="CIEL:163952" answerConceptIds="CIEL:1267,CIEL:1118,CIEL:1067" answerLabels="Oui,Non,Inconnu" style="radio"/></td></tr>
-							<tr><td>Date du dernier Pap Test <obs conceptId="CIEL:163267"/></td><td>Date des dernières règles <obs conceptId="CIEL:1427"/></td></tr>
-							<tr><td>Si grossesse, la patiente est-elle suivie en clinique prénatale? <obs conceptId="CIEL:1622" style="yes_no" noLabel="Non" yesLabel="Oui"/></td></tr>
-							<tr><td colspan="2">En cas de statut de grossesse inconnu, procéder à un test de grossesse (utiliser la Fiche d'Analyses de Laboratoire).
-							En cas de grossesse confirmé,referer la patiente aux services de soins prénatals.</td></tr>
-						
-					</table>
-				</td>
-			</tr>
-		</table>				
-	</section>
-	</includeIf>
-	
-	<table width="100%">
-		<tr>
-			<td width="50%" valign="TOP">
-				<section headerLabel="ÉTAT DE FONCTIONNEMENT">
-					<table>
-						<tr><td>Préciser une catégorie</td></tr>
-						
-						<tr>
-							<td class="checkboxGroup">
-								&#160;<obs conceptId="CIEL:162753" answerConceptIds="CIEL:159468,CIEL:160026,CIEL:162752" answerLabels="&lt;b&gt;Capable de travailler&lt;&#47;b&gt;—Continue de travailler&lt;br \/ &gt;,&lt;b&gt;Ambulatoire&lt;&#47;b&gt;—Accomplit ses activités quotidiennes&#59; mais incapable de travailler&lt;br&#47;&gt;,&lt;b&gt;Alité&lt;&#47;b&gt;—Incapable d'accomplir ses activités quotidiennes" id="pfamilial1" style="radio"/>
-							</td>
-						</tr>
-					
-					</table>
-				</section>
-			</td>
-			<includeIf velocityTest="($patient.person.gender=='F')">
-				<td width="50%" valign="TOP">
-					<section headerLabel="PLANNING FAMILIAL">
+				<td width="50%" height="100%" valign="TOP">
+					<section headerLabel="SOURCE DE RÉFÉRENCE">
 						<table>
 							<tr>
 								<td>
-								<obs conceptId="CIEL:374" answerConceptId="CIEL:965" answerLabel="Oui"/><br/> 
-								<b>Méthode PF</b><br/>
-								<obs conceptId="CIEL:374" answerConceptId="CIEL:190" answerLabel="Préservatif" style="checkbox"/><br/>
-								<obs conceptId="CIEL:374" answerConceptId="CIEL:5279" answerLabel="DMPA" style="checkbox"/><br/>
-								<obs conceptId="CIEL:374" answerConceptId="CIEL:780" answerLabel="Pilluls" style="radio"/><br/>
+									<obs conceptId="CIEL:159936" answerConceptId="CIEL:5485"
+										answerLabel="Hôpital (patient a été hospitalisé antérieurement)" />
 								</td>
-								<td valign="TOP" style="padding-left: 10%">
-									 <obs conceptId="CIEL:374" answerConceptId="CIEL:1472" answerLabel="Ligature des trompes"/><br/>
-									<br/>
-									Autres, préciser :<obs conceptId="CIEL:374" showCommentField="true" commentFieldLabel=""/>
+							</tr>
+							<tr>
+								<td>
+									<obs conceptId="CIEL:159936" answerConceptId="CIEL:159940"
+										answerLabel="Centres CDV intégrés" style="checkbox" />
 								</td>
-							</tr>	
+							</tr>
+							<tr>
+								<td>
+									<obs conceptId="CIEL:159936" answerConceptId="CIEL:159937"
+										answerLabel="Programme PTME" style="checkbox" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obs conceptId="CIEL:159936" answerConceptId="CIEL:160542"
+										answerLabel="Clinique Externe" style="checkbox" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obs conceptId="CIEL:159936" answerConceptId="CIEL:159938"
+										answerLabel="Programmes communautaires" style="checkbox" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<obs conceptId="CIEL:159936" answerConceptId="CIEL:5622"
+										answerLabel="Transfert d'un autre établissement de santé"
+										style="checkbox" showCommentField="true"
+										commentFieldLabel="&lt;br&gt;Nom de l'établissement" />
+								</td>
+							</tr>
+
+						</table>
+					</section>
+
+				</td>
+
+			</tr>
+		</table>
+		<includeIf velocityTest="($patient.person.gender=='F')">  <!--patient.person.gender=='M' -->
+
+			<section headerLabel="ANTECEDENTS OBSTETRIQUES ET GROSSESSE">
+				<table width="100%">
+					<tr>
+						<td width="20%" valign="TOP">
+							<table width="100%" style="border-right:1px solid">
+
+								<tr>
+									<td>Gravida</td>
+									<td>
+										<obs conceptId="CIEL:5624" />
+									</td>
+								</tr>
+								<tr>
+									<td>Para</td>
+									<td>
+										<obs conceptId="CIEL:1053" />
+									</td>
+								</tr>
+								<tr>
+									<td>Aborta</td>
+									<td>
+										<obs conceptId="CIEL:1823" />
+									</td>
+								</tr>
+								<tr>
+									<td>Enfants vivants</td>
+									<td>
+										<obs conceptId="CIEL:1825" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										Grossesse actuelle
+										<br />
+										<obs conceptId="CIEL:5272" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inconnu" style="radio" />
+									</td>
+								</tr>
+
+							</table>
+						</td>
+						<td valign="TOP">
+							<table width="100%" height="100%">
+								<!--New concept Added PAP test a verifier with James -->
+								<tr>
+									<td>
+										Test Pap
+										<obs conceptId="CIEL:163952" answerConceptIds="CIEL:1267,CIEL:1118,CIEL:1067"
+											answerLabels="Oui,Non,Inconnu" style="radio" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Date du dernier Pap Test
+										<obs conceptId="CIEL:163267" />
+									</td>
+									<td>
+										Date des dernières règles
+										<obs conceptId="CIEL:1427" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Si grossesse, la patiente est-elle suivie en clinique
+										prénatale?
+										<obs conceptId="CIEL:1622" style="yes_no" noLabel="Non"
+											yesLabel="Oui" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">En cas de statut de grossesse inconnu, procéder
+										à un test de grossesse (utiliser la Fiche d'Analyses de
+										Laboratoire).
+										En cas de grossesse confirmé,referer la patiente aux services de
+										soins prénatals.</td>
+								</tr>
+
+							</table>
+						</td>
+					</tr>
+				</table>
+			</section>
+		</includeIf>
+
+		<table width="100%">
+			<tr>
+				<td width="50%" valign="TOP">
+					<section headerLabel="ÉTAT DE FONCTIONNEMENT">
+						<table>
+							<tr>
+								<td>Préciser une catégorie</td>
+							</tr>
+
+							<tr>
+								<td class="checkboxGroup">
+									&#160;
+									<obs conceptId="CIEL:162753" answerConceptIds="CIEL:159468,CIEL:160026,CIEL:162752"
+										answerLabels="&lt;b&gt;Capable de travailler&lt;&#47;b&gt;—Continue de travailler&lt;br \/ &gt;,&lt;b&gt;Ambulatoire&lt;&#47;b&gt;—Accomplit ses activités quotidiennes&#59; mais incapable de travailler&lt;br&#47;&gt;,&lt;b&gt;Alité&lt;&#47;b&gt;—Incapable d'accomplir ses activités quotidiennes"
+										id="pfamilial1" style="radio" />
+								</td>
+							</tr>
+
 						</table>
 					</section>
 				</td>
-			</includeIf>
-		</tr>
-    </table>
-	<section headerLabel="MODE PROBABLE DE TRANSMISSION DU VIH">
-		<table width="100%">
-			<tr>
-				<td width="50%" valign="TOP">
-						<table>
-							
-								<tr><td>Rapports sexuels avec un homme
-								</td><td><obs conceptId="CIEL:1061" answerConceptId="CIEL:163290" answerLabel=""/>
-								</td></tr>
-								<tr><td>Rapports sexuels avec une femme</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:163291" answerLabel=""/>
-								</td></tr>
-								<tr><td>Injection de drogues</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:105" answerLabel=""/></td>
-								</tr>
-								<tr><td>Bénéficier de sang/dérivé sanguin</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:1063" answerLabel=""/><obs conceptId="CIEL:163268"/></td>
-								</tr>
-								<tr><td>Transmission mère a enfant</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:163273" answerLabel=""/></td></tr>
-								<tr><td>Accident d'exposition au sang</td>
-								<td>
-								<obsgroup groupingConceptId="163288">
-								<obs conceptId="CIEL:160581" answerConceptId="CIEL:163274" answerLabel=""/>
-								<obs conceptId="CIEL:162601" allowTime="false"/>
-								</obsgroup>
-								</td></tr>
-						</table>
-				</td>
-				<td width="50%" valign="TOP">
-						<table>
-							<tr>
-								<td>
-								<tr><td>Rapports hétérosexuelles avec :</td></tr>
-								<!--<obsgroup groupingConceptId="160581">-->
-								<tr><td>- personne SIDA/VIH+
-								</td><td><obs conceptId="CIEL:1061" answerConceptId="CIEL:163289" answerLabel=""/>
-								</td></tr>
-								<tr><td>- personne qui s'injecte de la drogue</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:105" answerLabel=""/></td>
-								</tr>
-								<tr><td>- homme bisexuel</td><td><obs conceptId="CIEL:1061" answerConceptId="CIEL:163275" answerLabel=""/></td></tr>
-								<tr><td>- bénéficier de sang/dérivé sanguin</td>
-								<td><obs conceptId="CIEL:1061" answerConceptId="CIEL:1063" answerLabel=""/></td>
-								</tr>
-								<!--</obsgroup>-->
-								</td>
-							</tr>	
-						</table>
-					
-				</td>
-			
-			</tr>
-		</table>
-	</section>
-	<section headerLabel="AUTRES FACTEURS DE RISQUE">
-		<table width="100%">
-			<tr>
-				<td width="40%" valign="TOP">
-					<table>
-							<obsgroup groupingConceptId="163292">
-							<tr>
-							
-								<td>Histoire ou présence de syphilis</td>
-								<td>
-									<obs conceptId="CIEL:163276" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inc" style="radio"/>
-								</td>
-							</tr>
-							<tr>
-								<td>Histoire ou présence d'autre IST</td>
-								<td>
-									<obs conceptId="CIEL:156660" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inc" style="radio"/>
-								</td>
-							</tr>
-							<tr>
-								<td>Victime d'agression sexuelle</td>
-								<td>
-									<obs conceptId="CIEL:123160" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inc" style="radio"/>
-								</td>
-							</tr>
-							</obsgroup>
-							
-					</table>
-				</td>
-				<td width="50%" valign="TOP">
-						<table>
-							<tr>
-								<td>
-								<tr><td>Rapports sexuels :</td></tr>
-								<tr><td>
-								- ≥ 2 personnes dans les 3 dernières mois</td><td><obs conceptId="CIEL:160581" answerConceptId="CIEL:5567" answerLabel=""/>
-								</td></tr>
-								<tr><td>- sans préservatif</td><td><obs conceptId="CIEL:160581" answerConceptId="CIEL:159218" answerLabel="" style="radio"/></td></tr>
-								<tr><td>- par voie anale</td><td>
-								<obs conceptId="CIEL:163278" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/>
-								</td></tr>
-								<tr><td><obs conceptId="CIEL:160581" answerConceptId="CIEL:160580" answerLabel="- avec travailleur/euse de sexe" style="radio"/></td>
-								<td><obs conceptId="CIEL:160580" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/></td></tr>
-								<tr><td><obs conceptId="CIEL:160581" answerConceptId="CIEL:160579" answerLabel="- L'échange de sexe pour argent/choses" style="radio"/></td>
-								<td><obs conceptId="CIEL:160579" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/></td></tr>
-								</td>
-							</tr>	
-						</table>
-					
-				</td>
-			
-			</tr>
-		</table>
-	</section>
-	<section headerLabel="RAPPORTS SEXUELS DANS LES TROIS (3) DERNIERS MOIS">
-		<table width="100%">
-			<tr>
-				<td>
-					<obsgroup groupingConceptId="163279">
-						Rapports sexuels 
-						<obs conceptId="CIEL:160109" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui,Non" style="radio"/><br/>
-						Si oui, rapports sexuels avec préservatif
-						<obs conceptId="CIEL:1357" answerConceptIds="CIEL:1358,CIEL:1090" answerLabels="Oui,Non" style="radio"/>
-					</obsgroup>
-				</td>
-				<td valign="TOP" style="padding-left:5%">
-					<obsgroup groupingConceptId="163279">
-						Statut sérologique du conjoint(e)
-						<obs conceptId="CIEL:1436" answerConceptIds="CIEL:703,CIEL:664,CIEL:1067" answerLabels="VIH pos,VIH nég,Inconnu" style="radio"/>
-					</obsgroup>
-				</td>
-			</tr>	
-		</table>
-	</section>
-	<section headerLabel="COMPTE CD4">
-		<table>
-			
-				<tr><td>Compte CD4 le plus bas</td><td><obs conceptId="CIEL:159375"/>cellules/mm3</td><td></td><td>Date</td><td><obs conceptId="CIEL:159376"/></td></tr>
-				<tr><td><obs conceptId="CIEL:1941" answerConceptIds="CIEL:1066,CIEL:1067" answerLabels="Non effectué,Inconnu" style="radio"/></td></tr>
-				<tr><td>Virémie</td><td><obs conceptId="CIEL:163280"/>copies/ml</td><td></td><td>Date</td><td><obs conceptId="CIEL:163281" allowTime="false"/></td></tr>
-				<tr><td><obs conceptId="CIEL:163310" answerConceptIds="CIEL:1118,CIEL:1067" answerLabels="Jamais effectué,Inconnu" style="radio"/></td></tr>
-			
-		</table>
-	</section>
-	<section headerLabel="STATUT TB">
-		<table width="100%">
-			<tr>
-				<td valign="TOP" class="checkboxGroup">
-					&#160;<obs conceptId="CIEL:1659" answerConceptIds="CIEL:1660,CIEL:1663,CIEL:1662" answerLabels="Pas de signes ou symptômes suggestifs de la TB&lt;br&#47;&gt;,Traitement contre la TB complété&lt;br&#47;&gt;,Actuellement sous traitement TB" style="radio"/>
-				</td>
-				<td valign="TOP" style="padding-left:2%">
-					<br/>
-					Date complété <obs conceptId="CIEL:159431"/><br/><br/>
-					No. de dossier TB :<patient field="identifier" identifierTypeId="76a86a29-1f4e-45fe-91bf-7fc2740b4b35" required="false"/>
-				</td>
-				<td valign="TOP" style="padding-left:2%">
-					<br/>
-					Établissement : <patient field="identifierLocation"/><br/> <obs conceptId="CIEL:162724" labelText=""/><br/>
-					Établissement : <patient field="identifierLocation"/><br/> <obs conceptId="CIEL:162724" labelText=""/>
-				</td>
-			</tr>	
-		</table>
-	</section>
-	<section headerLabel="VACCINS"> <!-- A verifier -->
-		<table>
-			<tr>
-			<td valign="TOP">
-				<table style="border-right:1px solid">
-				  <tr>
-					<td>
-					<obsgroup groupingConceptId="1421">
-					<obs conceptId="CIEL:984" answerConceptId="CIEL:782" answerLabel="Hépatite B"/>
-					<br/>
-					<obs conceptId="CIEL:1410" answerLabel=""/>
-						Nombre de dose<obs conceptId="CIEL:1418" answerLabel="Nombre de dose"/>
-					</obsgroup>
-					</td>
-					
-				 </tr>	
-				</table>
-			</td>
-			<td valign="TOP">
-				<table style="border-right:1px solid">
-					<tr>
-						<td>
-							<obsgroup groupingConceptId="1421">
-							<obs conceptId="CIEL:984" answerConceptId="CIEL:1685" answerLabel="Tétanos"/>
-							<br/>
-							<obs conceptId="CIEL:1410" answerLabel=""/>
-							Nombre de dose<obs conceptId="CIEL:1418" answerLabel="Nombre de dose"/>
-							</obsgroup>
-						</td>
-					</tr>	
-				</table>
-			</td>
-			<td valign="TOP">
-				<table>
-					<tr>
-						<td>
-							<obsgroup groupingConceptId="1421">
-								<obs conceptId="CIEL:984" labelText="Autre, préciser:" style="autocomplete"/><br/>
-								<!--<obs conceptId="CIEL:984" answerConceptId="CIEL:5622" answerLabel="Autre, préciser:" showCommentField="true" commentFieldLabel=""/>-->
-								<!--<br/>-->
-								<obs conceptId="CIEL:1410" answerLabel=""/>
-								Nombre de dose<obs conceptId="CIEL:1418" answerLabel="Nombre de dose"/>
-							</obsgroup>
-						</td>
-					</tr>	
-				</table>
-			</td>
-			</tr>
-		</table>
-	</section>
-	<section headerLabel="SYMPTÔMES">
-		<table>
-			<tr>
-				<td valign="TOP">
-					<table height="100%">
-						<tr>
-							<td><!--style="visibility:hidden;"-->
-								
+				<includeIf velocityTest="($patient.person.gender=='F')">
+					<td width="50%" valign="TOP">
+						<section headerLabel="PLANNING FAMILIAL">
+							<table>
 								<tr>
-									<td class="checkboxGroup">
-										<obsgroup groupingConceptId="1727">
-										<span id="symptomA"><obs conceptId="CIEL:1728" id="symptoma" answerConceptId="CIEL:151" answerLabel="Douleur abdominale"/></span>
-										<span id="symptompresenta" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" style="checkbox"/></span>
-										</obsgroup><br/>
-										<obsgroup groupingConceptId="1727">
-											<span id="symptomB"><obs conceptId="CIEL:1728" id="symptomb" answerConceptId="CIEL:6031" answerLabel="Anorexie/Perte d'appétit"/></span>
-											<span id="symptompresentb" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-										</obsgroup><br/>
-										<obsgroup groupingConceptId="1727">
-											<span id="symptomC"><obs conceptId="CIEL:1728" id="symptomc" answerConceptId="CIEL:143264" answerLabel="Toux"/></span>
-											<span id="symptompresentc" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-										</obsgroup><br/>
-										<obsgroup groupingConceptId="1727">
-											<span id="symptomD"><obs conceptId="CIEL:1728" id="symptomd" answerConceptId="CIEL:5957" answerLabel="Toux/Expectoration (sauf hémoptysie)"/></span>
-											<span id="symptompresentd" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-										</obsgroup><br/>
-										<obsgroup groupingConceptId="1727">
-											<span id="symptomE"><obs conceptId="CIEL:1728" id="symptome" answerConceptId="CIEL:122496" answerLabel="Dyspnée"/></span>
-											<span id="symptompresente" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-										</obsgroup>
+									<td>
+										<obs conceptId="CIEL:374" answerConceptId="CIEL:965"
+											answerLabel="Oui" />
+										<br />
+										<b>Méthode PF</b>
+										<br />
+										<obs conceptId="CIEL:374" answerConceptId="CIEL:190"
+											answerLabel="Préservatif" style="checkbox" />
+										<br />
+										<obs conceptId="CIEL:374" answerConceptId="CIEL:5279"
+											answerLabel="DMPA" style="checkbox" />
+										<br />
+										<obs conceptId="CIEL:374" answerConceptId="CIEL:780"
+											answerLabel="Pilluls" style="radio" />
+										<br />
 									</td>
-								</tr> 
-
-							</td>
-						</tr>
-					</table>
-				</td>
-				<td>&#160;&#160;&#160;&#160;&#160;</td> 
-				<td valign="TOP">
-					<table height="100%">
-						<tr>
-							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomF"><obs conceptId="CIEL:1728" id="symptomf" answerConceptId="CIEL:139084" answerLabel="Céphalée"/></span>
-									<span id="symptompresentf" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomG"><obs conceptId="CIEL:1728" id="symptomg" answerConceptId="CIEL:138905" answerLabel="Hémoptysie"/></span>
-									<span id="symptompresentg" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomH"><obs conceptId="CIEL:1728" id="symptomh" answerConceptId="CIEL:5978" answerLabel="Nausée"/></span>
-									<span id="symptompresenth" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomI"><obs conceptId="CIEL:1728" id="symptomi" answerConceptId="CIEL:133027" answerLabel="Sueurs nocturnes"/></span>
-									<span id="symptompresenti" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomJ"><obs conceptId="CIEL:1728" id="symptomj" answerConceptId="CIEL:141635" answerLabel="Perte de sensibilité"/></span>
-									<span id="symptompresentj" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<!--<span id="symptomJ">Perte de sensibilité </span>--><!--A verifier -->
-							</td>
-						</tr>	
-					</table>
-				</td>
-				<td>&#160;&#160;&#160;&#160;&#160;</td>
-				<td valign="TOP">
-					<table height="100%">
-						<tr>
-							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomK"><obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:118789" answerLabel="Odynophagie/dysphagie"/></span>
-									<span id="symptompresentk" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomL"><obs conceptId="CIEL:1728"  id="symptoml" answerConceptId="CIEL:512" answerLabel="Eruption cutanée"/></span>
-									<span id="symptompresentl" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomM"><obs conceptId="CIEL:1728"  id="symptomm" answerConceptId="CIEL:122983" answerLabel="Vomissement"/></span>
-									<span id="symptompresentm" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomN"><obs conceptId="CIEL:1728"  id="symptomn" answerConceptId="CIEL:128319" answerLabel="Prurigo"/></span>
-									<span id="symptompresentn" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup><br/>
-							</td>
-						</tr>	
-					</table>
-				</td>
-				<td>&#160;&#160;&#160;&#160;&#160;</td>
-				<td valign="TOP">
-					<table>
-						<tr>
-							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
-									<span id="symptomO"><obs conceptId="CIEL:1728" id="symptomo" answerConceptId="CIEL:5622" answerLabel="Autres," showCommentField="true" commentFieldLabel="préciser :"/></span>
-									<span id="symptompresento" style="display: none"><obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" /></span>
-								</obsgroup>
-							</td>
-						</tr>	
-					</table>
-				</td>
-				
+									<td valign="TOP" style="padding-left: 10%">
+										<obs conceptId="CIEL:374" answerConceptId="CIEL:1472"
+											answerLabel="Ligature des trompes" />
+										<br />
+										<br />
+										Autres, préciser :
+										<obs conceptId="CIEL:374" showCommentField="true"
+											commentFieldLabel="" />
+									</td>
+								</tr>
+							</table>
+						</section>
+					</td>
+				</includeIf>
 			</tr>
 		</table>
-	</section>
-	<section headerLabel="EXAMEN CLINIQUE">
-		<table>
-			<tr>
-			<td valign="TOP">
-			Marquer si l'examen clinique n'est pas conduit.
-            <table class="tg">
-                <tr>
-                   <th class="tg-5cem">Normal</th>
-                   <th class="tg-5cem">Anormal</th>
-                   <th class="tg-5cem">Pas conduit</th>
-                </tr>
-				<tr bgcolor="#D8D8D8" class="checkboxGroup">
-					<!-- New Concept added -->
-					<td><span id="normal1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:159438" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:163293" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:1119" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Général</td> <!--&#160;  &lt;br&#47;&gt;-->
+		<section headerLabel="MODE PROBABLE DE TRANSMISSION DU VIH">
+			<table width="100%">
+				<tr>
+					<td width="50%" valign="TOP">
+						<table>
+
+							<tr>
+								<td>Rapports sexuels avec un homme
+								</td>
+								<td>
+									<obs conceptId="CIEL:1061" answerConceptId="CIEL:163290"
+										answerLabel="" />
+								</td>
+							</tr>
+							<tr>
+								<td>Rapports sexuels avec une femme</td>
+								<td>
+									<obs conceptId="CIEL:1061" answerConceptId="CIEL:163291"
+										answerLabel="" />
+								</td>
+							</tr>
+							<tr>
+								<td>Injection de drogues</td>
+								<td>
+									<obs conceptId="CIEL:1061" answerConceptId="CIEL:105"
+										answerLabel="" />
+								</td>
+							</tr>
+							<tr>
+								<td>Bénéficier de sang/dérivé sanguin</td>
+								<td>
+									<obs conceptId="CIEL:1061" answerConceptId="CIEL:1063"
+										answerLabel="" />
+									<obs conceptId="CIEL:163268" />
+								</td>
+							</tr>
+							<tr>
+								<td>Transmission mère a enfant</td>
+								<td>
+									<obs conceptId="CIEL:1061" answerConceptId="CIEL:163273"
+										answerLabel="" />
+								</td>
+							</tr>
+							<tr>
+								<td>Accident d'exposition au sang</td>
+								<td>
+									<obsgroup groupingConceptId="163288">
+										<obs conceptId="CIEL:160581" answerConceptId="CIEL:163274"
+											answerLabel="" />
+										<obs conceptId="CIEL:162601" allowTime="false" />
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="50%" valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<tr>
+										<td>Rapports hétérosexuelles avec :</td>
+									</tr>
+									<!--<obsgroup groupingConceptId="160581"> -->
+									<tr>
+										<td>- personne SIDA/VIH+
+										</td>
+										<td>
+											<obs conceptId="CIEL:1061" answerConceptId="CIEL:163289"
+												answerLabel="" />
+										</td>
+									</tr>
+									<tr>
+										<td>- personne qui s'injecte de la drogue</td>
+										<td>
+											<obs conceptId="CIEL:1061" answerConceptId="CIEL:105"
+												answerLabel="" />
+										</td>
+									</tr>
+									<tr>
+										<td>- homme bisexuel</td>
+										<td>
+											<obs conceptId="CIEL:1061" answerConceptId="CIEL:163275"
+												answerLabel="" />
+										</td>
+									</tr>
+									<tr>
+										<td>- bénéficier de sang/dérivé sanguin</td>
+										<td>
+											<obs conceptId="CIEL:1061" answerConceptId="CIEL:1063"
+												answerLabel="" />
+										</td>
+									</tr>
+									<!--</obsgroup> -->
+								</td>
+							</tr>
+						</table>
+
+					</td>
+
 				</tr>
-				<tr class="checkboxGroup">
-					<td><span id="normal1"><obs conceptId="CIEL:1120" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:1120" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:1120" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Peau</td>
-				</tr>
-				<tr bgcolor="#D8D8D8" class="checkboxGroup">
-				<!-- New Concept Add (Mouth region examination findings)-->
-					<td><span id="normal1"><obs conceptId="CIEL:163308" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:163308" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:163308" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Bouche/Orale</td>
-				</tr>
-				<tr class="checkboxGroup">
-					<!-- New Concept Added (Ear exam findings)-->
-					<td><span id="normal1"><obs conceptId="CIEL:163337" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:163337" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:163337" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Oreilles</td>
-				</tr>
-				<tr bgcolor="#D8D8D8" class="checkboxGroup">
-					<!-- New Concept Added (Nose exam findings)-->
-					<td><span id="normal1"><obs conceptId="CIEL:163336" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:163336" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:163336" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Nez</td>
-				</tr>
-				
-				<tr class="checkboxGroup">
-					<td><span id="normal1"><obs conceptId="CIEL:163309" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:163309" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:163309" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Yeux</td>
-				</tr>
-				<tr bgcolor="#D8D8D8" class="checkboxGroup">
-					<td><span id="normal1"><obs conceptId="CIEL:1121" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:1121" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:1121" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Ganglions lymphatiques</td>
-				</tr>
-				<tr class="checkboxGroup">
-					<td><span id="normal1"><obs conceptId="CIEL:1123" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-					<td><span id="anormal1"><obs conceptId="CIEL:1123" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-					<td><span id="pasconduit1"><obs conceptId="CIEL:1123" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-					<td>Poumons</td>
-				</tr>
-				<tr bgcolor="#D8D8D8" class="checkboxGroup">
-				<td><span id="normal1"><obs conceptId="CIEL:1124" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-				<td><span id="anormal1"><obs conceptId="CIEL:1124" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-				<td><span id="pasconduit1"><obs conceptId="CIEL:1124" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-				<td>Cardio-vasculaire</td>
-              </tr>
-			  <tr class="checkboxGroup">
-				<td><span id="normal1"><obs conceptId="CIEL:1125" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-				<td><span id="anormal1"><obs conceptId="CIEL:1125" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-				<td><span id="pasconduit1"><obs conceptId="CIEL:1125" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-				<td>Abdomen</td>
-              </tr>
-			   <tr bgcolor="#D8D8D8" class="checkboxGroup">
-				<td><span id="normal1"><obs conceptId="CIEL:1126" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-				<td><span id="anormal1"><obs conceptId="CIEL:1126" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-				<td><span id="pasconduit1"><obs conceptId="CIEL:1126" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-				<td>Urogénital</td>
-              </tr>
-			   <tr class="checkboxGroup">
-				<td><span id="normal1"><obs conceptId="CIEL:1128" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-				<td><span id="anormal1"><obs conceptId="CIEL:1128" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-				<td><span id="pasconduit1"><obs conceptId="CIEL:1128" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-				<td>Musculo-squeletal</td>
-              </tr>
-			   <tr bgcolor="#D8D8D8" class="checkboxGroup">
-				<td><span id="normal1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-				<td><span id="anormal1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-				<td><span id="pasconduit1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-				<td>Neurologique</td>
-              </tr>
-			  <!-- No mapping code given in PDF or Spreadsheet
-			  <tr bgcolor="#D8D8D8" class="checkboxGroup">
-				<td><span id="normal1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1115" answerLabel=""/></span></td>
-				<td><span id="anormal1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1116" answerLabel=""/></span></td>
-				<td><span id="pasconduit1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1118" answerLabel=""/></span></td>
-				<td>Autre, préciser</td>
-              </tr>
-			  -->
-			  </table>
-			  </td>
-			  
-			  <td style="padding-left:1%" valign="TOP">
-				<br/>
-			     <table>
-					<tr><td>Description des conclusions anormales</td></tr>
-					<tr>
-						<td>
-							<obs conceptId="CIEL:1391" rows="17" cols="45"/>
-						</td>
-					</tr>
-				 </table>
-			  </td>
-			  </tr>
 			</table>
-	</section>
-	<section headerLabel="ÉVALUATION TB">
-		Si TB active, traiter la TB avant d'initier les ARVs. Si suspicion de TB, évaluer avec radiographie thoracique, crachat ou PPD.
-		<br/>
-		<table>
-			<tr>
-				<td valign="TOP">
-					<table height="100%">
-						<tr>
-							
-							<td>
-								<tr><td><obs conceptId="CIEL:160265" answerConceptId="CIEL:1065" answerLabel="Présence de cicatrice BCG"/></td>
-								<td>&#32;&#32;</td>
+		</section>
+		<section headerLabel="AUTRES FACTEURS DE RISQUE">
+			<table width="100%">
+				<tr>
+					<td width="40%" valign="TOP">
+						<table>
+							<obsgroup groupingConceptId="163292">
+								<tr>
+
+									<td>Histoire ou présence de syphilis</td>
+									<td>
+										<obs conceptId="CIEL:163276" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" />
+									</td>
+								</tr>
+								<tr>
+									<td>Histoire ou présence d'autre IST</td>
+									<td>
+										<obs conceptId="CIEL:156660" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" />
+									</td>
+								</tr>
+								<tr>
+									<td>Victime d'agression sexuelle</td>
+									<td>
+										<obs conceptId="CIEL:123160" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" />
+									</td>
+								</tr>
+							</obsgroup>
+
+						</table>
+					</td>
+					<td width="50%" valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<tr>
+										<td>Rapports sexuels :</td>
+									</tr>
+									<tr>
+										<td>
+											- ≥ 2 personnes dans les 3 dernières mois</td>
+										<td>
+											<obs conceptId="CIEL:160581" answerConceptId="CIEL:5567"
+												answerLabel="" />
+										</td>
+									</tr>
+									<tr>
+										<td>- sans préservatif</td>
+										<td>
+											<obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
+												answerLabel="" style="radio" />
+										</td>
+									</tr>
+									<tr>
+										<td>- par voie anale</td>
+										<td>
+											<obs conceptId="CIEL:163278" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<obs conceptId="CIEL:160581" answerConceptId="CIEL:160580"
+												answerLabel="- avec travailleur/euse de sexe" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:160580" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<obs conceptId="CIEL:160581" answerConceptId="CIEL:160579"
+												answerLabel="- L'échange de sexe pour argent/choses" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:160579" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+								</td>
+							</tr>
+						</table>
+
+					</td>
+
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="RAPPORTS SEXUELS DANS LES TROIS (3) DERNIERS MOIS">
+			<table width="100%">
+				<tr>
+					<td>
+						<obsgroup groupingConceptId="163279">
+							Rapports sexuels
+							<obs conceptId="CIEL:160109" answerConceptIds="CIEL:1065,CIEL:1066"
+								answerLabels="Oui,Non" style="radio" />
+							<br />
+							Si oui, rapports sexuels avec préservatif
+							<obs conceptId="CIEL:1357" answerConceptIds="CIEL:1358,CIEL:1090"
+								answerLabels="Oui,Non" style="radio" />
+						</obsgroup>
+					</td>
+					<td valign="TOP" style="padding-left:5%">
+						<obsgroup groupingConceptId="163279">
+							Statut sérologique du conjoint(e)
+							<obs conceptId="CIEL:1436" answerConceptIds="CIEL:703,CIEL:664,CIEL:1067"
+								answerLabels="VIH pos,VIH nég,Inconnu" style="radio" />
+						</obsgroup>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="COMPTE CD4">
+			<table>
+
+				<tr>
+					<td>Compte CD4 le plus bas</td>
+					<td>
+						<obs conceptId="CIEL:159375" />
+						cellules/mm3
+					</td>
+					<td></td>
+					<td>Date</td>
+					<td>
+						<obs conceptId="CIEL:159376" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<obs conceptId="CIEL:1941" answerConceptIds="CIEL:1066,CIEL:1067"
+							answerLabels="Non effectué,Inconnu" style="radio" />
+					</td>
+				</tr>
+				<tr>
+					<td>Virémie</td>
+					<td>
+						<obs conceptId="CIEL:163280" />
+						copies/ml
+					</td>
+					<td></td>
+					<td>Date</td>
+					<td>
+						<obs conceptId="CIEL:163281" allowTime="false" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<obs conceptId="CIEL:163310" answerConceptIds="CIEL:1118,CIEL:1067"
+							answerLabels="Jamais effectué,Inconnu" style="radio" />
+					</td>
+				</tr>
+
+			</table>
+		</section>
+		<section headerLabel="STATUT TB">
+			<table width="100%">
+				<tr>
+					<td valign="TOP" class="checkboxGroup">
+						&#160;
+						<obs conceptId="CIEL:1659" answerConceptIds="CIEL:1660,CIEL:1663,CIEL:1662"
+							answerLabels="Pas de signes ou symptômes suggestifs de la TB&lt;br&#47;&gt;,Traitement contre la TB complété&lt;br&#47;&gt;,Actuellement sous traitement TB"
+							style="radio" />
+					</td>
+					<td valign="TOP" style="padding-left:2%">
+						<br />
+						Date complété
+						<obs conceptId="CIEL:159431" />
+						<br />
+						<br />
+						No. de dossier TB :
+						<patient field="identifier" identifierTypeId="76a86a29-1f4e-45fe-91bf-7fc2740b4b35"
+							required="false" />
+					</td>
+					<td valign="TOP" style="padding-left:2%">
+						<br />
+						Établissement :
+						<patient field="identifierLocation" />
+						<br />
+						<obs conceptId="CIEL:162724" labelText="" />
+						<br />
+						Établissement :
+						<patient field="identifierLocation" />
+						<br />
+						<obs conceptId="CIEL:162724" labelText="" />
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="VACCINS"> <!-- A verifier -->
+			<table>
+				<tr>
+					<td valign="TOP">
+						<table style="border-right:1px solid">
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="1421">
+										<obs conceptId="CIEL:984" answerConceptId="CIEL:782"
+											answerLabel="Hépatite B" />
+										<br />
+										<obs conceptId="CIEL:1410" answerLabel="" />
+										Nombre de dose
+										<obs conceptId="CIEL:1418" answerLabel="Nombre de dose" />
+									</obsgroup>
+								</td>
+
+							</tr>
+						</table>
+					</td>
+					<td valign="TOP">
+						<table style="border-right:1px solid">
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="1421">
+										<obs conceptId="CIEL:984" answerConceptId="CIEL:1685"
+											answerLabel="Tétanos" />
+										<br />
+										<obs conceptId="CIEL:1410" answerLabel="" />
+										Nombre de dose
+										<obs conceptId="CIEL:1418" answerLabel="Nombre de dose" />
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<obsgroup groupingConceptId="1421">
+										<obs conceptId="CIEL:984" labelText="Autre, préciser:"
+											style="autocomplete" />
+										<br />
+										<!--<obs conceptId="CIEL:984" answerConceptId="CIEL:5622" answerLabel="Autre, 
+											préciser:" showCommentField="true" commentFieldLabel=""/> -->
+										<!--<br/> -->
+										<obs conceptId="CIEL:1410" answerLabel="" />
+										Nombre de dose
+										<obs conceptId="CIEL:1418" answerLabel="Nombre de dose" />
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="SYMPTÔMES">
+			<table>
+				<tr>
+					<td valign="TOP">
+						<table height="100%">
+							<tr>
+								<td><!--style="visibility:hidden;" -->
+
+									<tr>
+										<td class="checkboxGroup">
+											<obsgroup groupingConceptId="1727">
+												<span id="symptomA">
+													<obs conceptId="CIEL:1728" id="symptoma"
+														answerConceptId="CIEL:151" answerLabel="Douleur abdominale" />
+												</span>
+												<span id="symptompresenta" style="display: none">
+													<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065"
+														style="checkbox" />
+												</span>
+											</obsgroup>
+											<br />
+											<obsgroup groupingConceptId="1727">
+												<span id="symptomB">
+													<obs conceptId="CIEL:1728" id="symptomb"
+														answerConceptId="CIEL:6031" answerLabel="Anorexie/Perte d'appétit" />
+												</span>
+												<span id="symptompresentb" style="display: none">
+													<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+												</span>
+											</obsgroup>
+											<br />
+											<obsgroup groupingConceptId="1727">
+												<span id="symptomC">
+													<obs conceptId="CIEL:1728" id="symptomc"
+														answerConceptId="CIEL:143264" answerLabel="Toux" />
+												</span>
+												<span id="symptompresentc" style="display: none">
+													<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+												</span>
+											</obsgroup>
+											<br />
+											<obsgroup groupingConceptId="1727">
+												<span id="symptomD">
+													<obs conceptId="CIEL:1728" id="symptomd"
+														answerConceptId="CIEL:5957" answerLabel="Toux/Expectoration (sauf hémoptysie)" />
+												</span>
+												<span id="symptompresentd" style="display: none">
+													<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+												</span>
+											</obsgroup>
+											<br />
+											<obsgroup groupingConceptId="1727">
+												<span id="symptomE">
+													<obs conceptId="CIEL:1728" id="symptome"
+														answerConceptId="CIEL:122496" answerLabel="Dyspnée" />
+												</span>
+												<span id="symptompresente" style="display: none">
+													<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+												</span>
+											</obsgroup>
+										</td>
+									</tr>
+
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>&#160;&#160;&#160;&#160;&#160;</td>
+					<td valign="TOP">
+						<table height="100%">
+							<tr>
+								<td class="checkboxGroup">
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomF">
+											<obs conceptId="CIEL:1728" id="symptomf" answerConceptId="CIEL:139084"
+												answerLabel="Céphalée" />
+										</span>
+										<span id="symptompresentf" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomG">
+											<obs conceptId="CIEL:1728" id="symptomg" answerConceptId="CIEL:138905"
+												answerLabel="Hémoptysie" />
+										</span>
+										<span id="symptompresentg" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomH">
+											<obs conceptId="CIEL:1728" id="symptomh" answerConceptId="CIEL:5978"
+												answerLabel="Nausée" />
+										</span>
+										<span id="symptompresenth" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomI">
+											<obs conceptId="CIEL:1728" id="symptomi" answerConceptId="CIEL:133027"
+												answerLabel="Sueurs nocturnes" />
+										</span>
+										<span id="symptompresenti" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomJ">
+											<obs conceptId="CIEL:1728" id="symptomj" answerConceptId="CIEL:141635"
+												answerLabel="Perte de sensibilité" />
+										</span>
+										<span id="symptompresentj" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<!--<span id="symptomJ">Perte de sensibilité </span> --><!--A verifier -->
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>&#160;&#160;&#160;&#160;&#160;</td>
+					<td valign="TOP">
+						<table height="100%">
+							<tr>
+								<td class="checkboxGroup">
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomK">
+											<obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:118789"
+												answerLabel="Odynophagie/dysphagie" />
+										</span>
+										<span id="symptompresentk" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomL">
+											<obs conceptId="CIEL:1728" id="symptoml" answerConceptId="CIEL:512"
+												answerLabel="Eruption cutanée" />
+										</span>
+										<span id="symptompresentl" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomM">
+											<obs conceptId="CIEL:1728" id="symptomm" answerConceptId="CIEL:122983"
+												answerLabel="Vomissement" />
+										</span>
+										<span id="symptompresentm" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomN">
+											<obs conceptId="CIEL:1728" id="symptomn" answerConceptId="CIEL:128319"
+												answerLabel="Prurigo" />
+										</span>
+										<span id="symptompresentn" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+									<br />
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>&#160;&#160;&#160;&#160;&#160;</td>
+					<td valign="TOP">
+						<table>
+							<tr>
+								<td class="checkboxGroup">
+									<obsgroup groupingConceptId="1727">
+										<span id="symptomO">
+											<obs conceptId="CIEL:1728" id="symptomo" answerConceptId="CIEL:5622"
+												answerLabel="Autres," showCommentField="true"
+												commentFieldLabel="préciser :" />
+										</span>
+										<span id="symptompresento" style="display: none">
+											<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+										</span>
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="EXAMEN CLINIQUE">
+			<table>
+				<tr>
+					<td valign="TOP">
+						Marquer si l'examen clinique n'est pas conduit.
+						<table class="tg">
+							<tr>
+								<th class="tg-5cem">Normal</th>
+								<th class="tg-5cem">Anormal</th>
+								<th class="tg-5cem">Pas conduit</th>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<!-- New Concept added -->
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1119" answerConceptId="CIEL:159438"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1119" answerConceptId="CIEL:163293"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1119" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Général</td> <!--&#160; &lt;br&#47;&gt; -->
+							</tr>
+							<tr class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1120" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1120" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1120" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Peau</td>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<!-- New Concept Add (Mouth region examination findings) -->
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:163308" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:163308" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:163308" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Bouche/Orale</td>
+							</tr>
+							<tr class="checkboxGroup">
+								<!-- New Concept Added (Ear exam findings) -->
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:163337" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:163337" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:163337" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Oreilles</td>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<!-- New Concept Added (Nose exam findings) -->
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:163336" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:163336" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:163336" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Nez</td>
+							</tr>
+
+							<tr class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:163309" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:163309" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:163309" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Yeux</td>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1121" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1121" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1121" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Ganglions lymphatiques</td>
+							</tr>
+							<tr class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1123" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1123" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1123" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Poumons</td>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1124" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1124" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1124" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Cardio-vasculaire</td>
+							</tr>
+							<tr class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1125" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1125" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1125" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Abdomen</td>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1126" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1126" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1126" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Urogénital</td>
+							</tr>
+							<tr class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1128" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1128" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1128" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Musculo-squeletal</td>
+							</tr>
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="CIEL:1129" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="CIEL:1129" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="CIEL:1129" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Neurologique</td>
+							</tr>
+							<!-- No mapping code given in PDF or Spreadsheet <tr bgcolor="#D8D8D8" 
+								class="checkboxGroup"> <td><span id="normal1"><obs conceptId="CIEL:1129" 
+								answerConceptId="CIEL:1115" answerLabel=""/></span></td> <td><span id="anormal1"><obs 
+								conceptId="CIEL:1129" answerConceptId="CIEL:1116" answerLabel=""/></span></td> 
+								<td><span id="pasconduit1"><obs conceptId="CIEL:1129" answerConceptId="CIEL:1118" 
+								answerLabel=""/></span></td> <td>Autre, préciser</td> </tr> -->
+						</table>
+					</td>
+
+					<td style="padding-left:1%" valign="TOP">
+						<br />
+						<table>
+							<tr>
+								<td>Description des conclusions anormales</td>
+							</tr>
+							<tr>
+								<td>
+									<obs conceptId="CIEL:1391" rows="17" cols="45" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="ÉVALUATION TB">
+			Si TB active, traiter la TB avant d'initier les ARVs. Si suspicion de
+			TB, évaluer avec radiographie thoracique, crachat ou PPD.
+			<br />
+			<table>
+				<tr>
+					<td valign="TOP">
+						<table height="100%">
+							<tr>
+
+								<td>
+									<tr>
+										<td>
+											<obs conceptId="CIEL:160265" answerConceptId="CIEL:1065"
+												answerLabel="Présence de cicatrice BCG" />
+										</td>
+										<td>&#32;&#32;</td>
 								<td><obs conceptId="CIEL:1659" answerConceptId="CIEL:142177" answerLabel="Suspicion de TB selon les symptômes "/></td></tr>
-								<tr><td><obs conceptId="CIEL:163283" answerConceptId="CIEL:1065" answerLabel="Récent PPD négatif"/><!-- New concept Added A verifiier with James--></td>
+								<tr><td><obs conceptId="CIEL:163283" answerConceptId="CIEL:1065" answerLabel="Récent PPD négatif"/><!-- New concept Added A verifiier with James-->
+					</td>
 								<td>&#32;&#32;</td>
 								<td><obs conceptId="CIEL:1659" answerConceptId="CIEL:1660" answerLabel="Aucun signe ou sympôtme indicatif de TB"/></td>
 								</tr>
