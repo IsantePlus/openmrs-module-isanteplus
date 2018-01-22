@@ -868,6 +868,12 @@
 						<submit submitClass="confirm right" submitCode="general.save"/>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="3">
+						TYPE DE VISITE <obs conceptId="CIEL:164181" answerConceptIds="CIEL:160542,CIEL:164180,CIEL:160530,CIEL:1597"
+								id="type_visite" answerLabels="Clinique externe,Visite initiale,Visite de suivi,Consultation" style="radio"/>
+					</td>
+				</tr>
 			</table>
 		</div>
 	<div id="scroll">		

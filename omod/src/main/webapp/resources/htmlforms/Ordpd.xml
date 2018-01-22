@@ -293,17 +293,39 @@
 					</span>
 				</td>
 
-				<td>
-					<obs conceptId="CIEL:1755" id="dispensation_com"
-						answerConceptId="CIEL:1065" answerLabel="Dispensation communautaire" />
-				</td>
-
 			</tr>
 			<!--<tr> <td>Location:</td> <td><encounterLocation/></td> </tr> <tr> <td>Provider:</td> 
 				<td><encounterProvider/></td> </tr> -->
 		</table>
 	</section>
+	
+	<section headerLabel="VISITE ASSOCIEE">
 
+		<table class="baseline-aligned">
+			<tr>
+				<td></td>
+				<td>
+					 	Patient inscrit dans programme ARV <obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066"
+								id="patient_i_arv" answerLabels="Oui,Non" style="radio"/>
+				</td>
+				<td>
+					<obs conceptId="CIEL:1755" id="dispensation_com"
+						answerConceptId="CIEL:1065" answerLabel="Dispensation communautaire" />
+				</td>
+			
+			</tr>
+			<tr>
+				<td>
+					<obs conceptId="CIEL:164181" answerConceptIds="CIEL:164180,CIEL:160530"
+								id="type_visite" answerLabels="Visite initiale,Visite de suivi" style="radio" showDate="true"/>
+				</td>
+				<td>Date d'initiation ARV <obs conceptId="CIEL:159599"/></td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+	
+	
 	<section headerLabel="Ordonnance">
 		<tr width="100%">
 
