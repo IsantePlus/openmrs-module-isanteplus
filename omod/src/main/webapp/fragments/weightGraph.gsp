@@ -31,6 +31,7 @@
 			  		jQuery(event.target).attr("title", "Weight: " + properties.value.toString() + "kg At: " + properties.time);
 			  	}
 			}
+			
   		</script>
     </div>
 </div>

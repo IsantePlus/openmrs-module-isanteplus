@@ -774,7 +774,7 @@
 			</tr>
 		</table>
 	</section>
-	<includeIf velocityTest="($patient.person.gender=='F')">
+	<!--  <includeIf velocityTest="($patient.person.gender=='F')">-->
 		<section headerLabel="PLANNING FAMILIAL">
 			<table>
 				<tr>
@@ -805,7 +805,7 @@
 				</tr>
 			</table>
 		</section>
-	</includeIf>
+	<!--</includeIf>-->
 	<h5 class="section_b">SECTION MÉDECIN</h5>
 	<section headerLabel="SYMPTÔMES">
 		<table>

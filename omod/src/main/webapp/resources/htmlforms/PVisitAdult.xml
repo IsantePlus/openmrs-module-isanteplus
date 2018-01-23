@@ -842,7 +842,7 @@
 						</table>
 					</section>
 				</td>
-				<includeIf velocityTest="($patient.person.gender=='F')">
+				<!-- <includeIf velocityTest="($patient.person.gender=='F')"> -->
 					<td width="50%" valign="TOP">
 						<section headerLabel="PLANNING FAMILIAL">
 							<table>
@@ -876,7 +876,7 @@
 							</table>
 						</section>
 					</td>
-				</includeIf>
+				<!--  </includeIf> -->
 			</tr>
 		</table>
 		<section headerLabel="MODE PROBABLE DE TRANSMISSION DU VIH">
