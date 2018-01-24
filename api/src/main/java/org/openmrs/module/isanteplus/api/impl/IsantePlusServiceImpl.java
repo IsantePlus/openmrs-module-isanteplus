@@ -444,17 +444,18 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 					Obs latestHeightForPatient = getLatestHeightForPatient(patient);
 					Double bmi = null;
 					JSONObject bmiJson = new JSONObject();
-
-					if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
-						bmi = roundAbout(
-								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
-								1);
-					} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
-						bmi = roundAbout(
-								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
-								1);
+					if(latestHeightForPatient !=null)
+					{
+						if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
+							bmi = roundAbout(
+									o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
+									1);
+						} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
+							bmi = roundAbout(
+									o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
+									1);
+						}
 					}
-
 					if (bmi != null) {
 						bmiJson.put(Integer.toString(atAge), bmi);
 						bmis.put(bmiJson);
