@@ -2757,6 +2757,13 @@
 										autocompleteProvider="true" />
 								</td>
 							</tr>
+							<tr>
+								<td colspan="2">
+									<br />
+									SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
+								</td>
+							</tr>
+							
 						</table>
 					</fieldset>
 				</div>

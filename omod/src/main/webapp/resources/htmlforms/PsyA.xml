@@ -995,7 +995,7 @@
 	<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
 		autocompleteProvider="true" default="currentUser" />
 	<br />
-	<br />
+	<br/>
 	<div id="sauvegarde">
 		<center>
 			<submit submitClass="confirm right" submitCode="general.save" />

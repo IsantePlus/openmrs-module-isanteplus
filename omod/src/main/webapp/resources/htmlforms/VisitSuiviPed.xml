@@ -2819,6 +2819,8 @@
 	<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
 		autocompleteProvider="true" default="currentUser" />
 	<br />
+	SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
+	<br/>
 	<br />
 	Statut de la fiche
 	<br />

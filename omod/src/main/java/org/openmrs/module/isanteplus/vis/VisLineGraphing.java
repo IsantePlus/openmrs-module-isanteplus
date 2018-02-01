@@ -56,7 +56,6 @@ public class VisLineGraphing {
 	
 	public static JSONArray getBmisGraphsItems(JSONArray bmisItems) {
 		JSONArray jsonArrayItems = new JSONArray();
-
 		for (int i = 0; i < bmisItems.length(); i++) {
 			JSONObject coordinate = new JSONObject();
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");

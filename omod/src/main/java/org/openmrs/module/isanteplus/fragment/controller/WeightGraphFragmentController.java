@@ -1,5 +1,6 @@
 package org.openmrs.module.isanteplus.fragment.controller;
 
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.json.JSONArray;
@@ -15,8 +16,8 @@ public class WeightGraphFragmentController {
 
 	public void controller(FragmentModel model, @FragmentParam("patientId") Patient patient) {
 		JSONArray weights = Context.getService(IsantePlusService.class).getPatientWeights(patient);
-		
 		model.addAttribute("items", VisLineGraphing.getWeightsGraphsItems(weights));
 		model.addAttribute("options", VisLineGraphing.getOptions(null, null));
+		
 	}
 }

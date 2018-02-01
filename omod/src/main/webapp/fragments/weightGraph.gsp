@@ -11,16 +11,14 @@
     	<script type="text/javascript">
     		var items = ${items};
     		var options = ${options};
+  			var weightGraphContainer = document.getElementById('weightGraph');
   			var weightGraph = new vis.Graph2d(weightGraphContainer, new vis.DataSet(items), options);
+  		
   			jQuery(function() {
   				if(items == undefined || items.length <= 0) {
   					jQuery("#weightGraph").hide();
-  					alert('Non trouve');
   				} else {
-  					document.getElementById('weightGraph').style.display = "block";
   					jQuery("#weightGraph").show();
-  					alert(items);
-  					
   				}
   				jQuery(".vis-point").tooltip();
 			    weightGraphContainer.addEventListener('mouseover', onMouseover);
@@ -33,7 +31,6 @@
 			  		jQuery(event.target).attr("title", "Weight: " + properties.value.toString() + "kg At: " + properties.time);
 			  	}
 			}
-			
   		</script>
     </div>
 </div>

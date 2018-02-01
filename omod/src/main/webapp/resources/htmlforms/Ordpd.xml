@@ -2909,6 +2909,9 @@
 			providerMatchMode="ANYWHERE" />
 
 		<br />
+		
+			SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
+		<br/>
 		<br />
 		Statut de la fiche
 		<br />
