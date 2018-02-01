@@ -37,7 +37,8 @@ public class VisLineGraphing {
 
 		for (int i = 0; i < weightsItems.length(); i++) {
 			JSONObject coordinate = new JSONObject();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 			Date date = (Date) weightsItems.getJSONObject(i).get("measureDate");
 
 			coordinate.put("x", date != null ? sdf.format(date) : "");
@@ -58,7 +59,8 @@ public class VisLineGraphing {
 		JSONArray jsonArrayItems = new JSONArray();
 		for (int i = 0; i < bmisItems.length(); i++) {
 			JSONObject coordinate = new JSONObject();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 			Date date = (Date) bmisItems.getJSONObject(i).get("measureDate");
 
 			coordinate.put("x", date != null ? sdf.format(date) : "");
