@@ -443,34 +443,41 @@
 							<tr>
 								<td>
 									Électrophorèse de l’hémoglobine :
-									<obs conceptId="CIEL:161421" answers="AS,SS,AC,SC,AA"
-										answerLabels="AS,SS,AC,SC,AA" style="radio" showCommentField="true"
-										commentFieldLabel="Autre, préciser " />
+									<obs conceptId="CIEL:161421" answers="AS,SS,AC,SC,AA,Autre"
+										answerLabels="AS,SS,AC,SC,AA,Autre" style="radio" showCommentField="true"
+										commentFieldLabel=", préciser " />
 								</td>
 							</tr>
-							<obsgroup groupingConceptId="CIEL:160714">
+							
 								<tr>
 									<td>
+									<obsgroup groupingConceptId="CIEL:160714">
 										<obs conceptId="CIEL:1651" answerConceptId="CIEL:151185"
 											answerLabel="Dépistage CA du Col" />
 										&#160;&#160;Date
 										<obs conceptId="CIEL:160715" allowTime="false" />
+									</obsgroup>
 									</td>
 									<td>
+									
 										&#160;&#160;&#160;&#160;
+										<obsgroup groupingConceptId="CIEL:160714">
 										<obs conceptId="CIEL:1651" answerConceptId="CIEL:163464"
 											answerLabel="Dépistage CA de la Prostate (Homme &gt; 40ans)" />
 										&#160;&#160;Date
 										<obs conceptId="CIEL:160715" allowTime="false" />
+										</obsgroup>
 									</td>
 								</tr>
 								<tr>
 									<td colspan="2">
 										Résultats:
+										<obsgroup groupingConceptId="CIEL:160714">
 										<obs conceptId="CIEL:160716" rows="1" cols="60" />
+										</obsgroup>
 									</td>
 								</tr>
-							</obsgroup>
+							
 						</table>
 					</fieldset>
 				</div>
@@ -681,7 +688,7 @@
 										<tr>
 											<obsgroup groupingConceptId="160593">
 												<td>
-													MDR TB (waiting for New concept)
+													MDR TB
 													<span style="display: none">
 														<obs conceptId="CIEL:160592" id="mdr" answerConceptId="CIEL:139071"
 															defaultValue="CIEL:139071" answerLabel="" />

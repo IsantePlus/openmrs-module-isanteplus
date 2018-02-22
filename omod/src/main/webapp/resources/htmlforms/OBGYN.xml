@@ -532,7 +532,7 @@
 							</tr>
 							<tr>
 								<td>
-									<obs conceptId="CIEL:159614" answerConceptId="CIEL:120749"
+									<obs conceptId="CIEL:159614" answerConceptId="CIEL:122496"
 										answerLabel="Dyspnée" />
 								</td>
 								<td>
@@ -543,7 +543,7 @@
 							</tr>
 							<tr>
 								<td>
-									<obs conceptId="CIEL:159614" answerConceptId="CIEL:122496"
+									<obs conceptId="CIEL:159614" answerConceptId="CIEL:118771"
 										answerLabel="Dysurie" />
 								</td>
 								<td>

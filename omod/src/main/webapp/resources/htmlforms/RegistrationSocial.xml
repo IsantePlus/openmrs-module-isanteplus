@@ -52,7 +52,6 @@
 	<section id="social" sectionTag="section">
 
 		<fieldset>
-
 			<!-- edit mode of placeOfBirth -->
 
 			<ifMode mode="VIEW" include="false">

@@ -2021,7 +2021,87 @@
 		Préciser les détails sur tout diagnostic dans la section Antécédents
 		Médicaux et Diagnostics.
 	</section>
-
+	
+	<section headerLabel="AUTRES DIAGNOSTICS">
+		<table>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:159947">
+						<span class="titre" ch-target="#cacher58">
+						<obs conceptId="CIEL:1284" class="master" id="id58"
+						style="autocomplete" answerClasses="Diagnosis"
+						showCommentField="true" commentFieldLabel=" Commentaire" />
+						</span>
+						<br />
+						<span id="dispnone1" class="cacher">
+						<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+						answerLabels="Confirmé,Suspecté" style="radio" />
+						<br />
+						<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+						answerLabels="Primaire,Secondaire" style="radio" />
+						</span>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:159947">
+						<span class="titre" ch-target="#cacher58">
+						<obs conceptId="CIEL:1284" class="master" id="id58"
+						style="autocomplete" answerClasses="Diagnosis"
+						showCommentField="true" commentFieldLabel=" Commentaire" />
+						</span>
+						<br />
+						<span id="dispnone2" class="cacher">
+						<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+						answerLabels="Confirmé,Suspecté" style="radio" />
+						<br />
+						<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+						answerLabels="Primaire,Secondaire" style="radio" />
+						</span>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:159947">
+						<span class="titre" ch-target="#cacher58">
+						<obs conceptId="CIEL:1284" class="master" id="id58"
+						style="autocomplete" answerClasses="Diagnosis"
+						showCommentField="true" commentFieldLabel=" Commentaire" />
+						</span>
+						<br />
+						<span id="dispnone3" class="cacher">
+						<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+						answerLabels="Confirmé,Suspecté" style="radio" />
+						<br />
+						<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+						answerLabels="Primaire,Secondaire" style="radio" />
+						</span>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:159947">
+						<span class="titre" ch-target="#cacher58">
+						<obs conceptId="CIEL:1284" class="master" id="id58"
+						style="autocomplete" answerClasses="Diagnosis"
+						showCommentField="true" commentFieldLabel=" Commentaire" />
+						</span>
+						<br />
+						<span id="dispnone4" class="cacher">
+						<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+						answerLabels="Confirmé,Suspecté" style="radio" />
+						<br />
+						<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+						answerLabels="Primaire,Secondaire" style="radio" />
+						</span>
+					</obsgroup>
+				</td>
+			</tr>
+		</table>
+	</section>
 	<section headerLabel="COMMENTAIRES">
 		<obs conceptId="CIEL:163322" rows="5" cols="90" />
 	</section>

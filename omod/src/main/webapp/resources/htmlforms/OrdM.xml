@@ -3083,7 +3083,7 @@
 					</obsgroup>
 				</td>
 			</tr>
-			<tr bgcolor="#D8D8D8">
+			 <tr bgcolor="#D8D8D8">
 				<tr>
 					<td width="100%" colspan="10">
 						<b>Autres medicaments</b>
@@ -3093,21 +3093,21 @@
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
 							<obs conceptId="CIEL:1282" showCommentField="true"
-								answerClasses="Diagnosis" style="autocomplete" />
+								answerClasses="Drug" style="autocomplete" />
 						</td>
 						<td></td>
 						<td>
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" />
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
 
 						<td>
 							<span style="display:none">
-								<obs conceptId="CIEL:1282" answerClasses="Diagnosis"
+								<obs conceptId="CIEL:1282" answerClasses="Drug"
 									showCommentField="true" style="autocomplete" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
@@ -3116,8 +3116,119 @@
 								<obs conceptId="CIEL:1444" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" />
+						    </td>
+							<td>
+								<obs conceptId="CIEL:1443" />
 							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							<obs conceptId="CIEL:1282" showCommentField="true"
+								answerClasses="Drug" style="autocomplete" />
+						</td>
+						<td></td>
+						<td>
+							<obs conceptId="CIEL:1444" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" />
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerClasses="Drug"
+									showCommentField="true" style="autocomplete" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" />
+						    </td>
+							<td>
+								<obs conceptId="CIEL:1443" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							<obs conceptId="CIEL:1282" showCommentField="true"
+								answerClasses="Drug" style="autocomplete" />
+						</td>
+						<td></td>
+						<td>
+							<obs conceptId="CIEL:1444" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" />
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerClasses="Drug"
+									showCommentField="true" style="autocomplete" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" />
+						    </td>
+							<td>
+								<obs conceptId="CIEL:1443" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							<obs conceptId="CIEL:1282" showCommentField="true"
+								answerClasses="Drug" style="autocomplete" />
+						</td>
+						<td></td>
+						<td>
+							<obs conceptId="CIEL:1444" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" />
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerClasses="Drug"
+									showCommentField="true" style="autocomplete" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" />
+						    </td>
 							<td>
 								<obs conceptId="CIEL:1443" />
 							</td>
@@ -3126,6 +3237,9 @@
 				</td>
 			</tr>
 		</table>
+	</section>
+	<section headerLabel="AUTRES MEDICAMENTS">
+		<obs conceptId="CIEL:163322" rows="5" cols="90"/> 
 	</section>
 	<section headerLabel="COLLECTE DES MEDICAMENTS/PROCHAINE VISITE">
 		Informations sur la personne prenant les médicaments.
