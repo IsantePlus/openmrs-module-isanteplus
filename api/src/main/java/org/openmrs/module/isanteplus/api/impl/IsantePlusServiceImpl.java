@@ -444,17 +444,18 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 					Obs latestHeightForPatient = getLatestHeightForPatient(patient);
 					Double bmi = null;
 					JSONObject bmiJson = new JSONObject();
-
-					if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
-						bmi = roundAbout(
-								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
-								1);
-					} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
-						bmi = roundAbout(
-								o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
-								1);
+					if(latestHeightForPatient !=null)
+					{
+						if (ageUnit.equals(AgeUnit.MONTHS) && diffMonths == 0) {
+							bmi = roundAbout(
+									o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
+									1);
+						} else if (ageUnit.equals(AgeUnit.YEARS) && diffYears == 0) {
+							bmi = roundAbout(
+									o.getValueNumeric() / (Math.pow(latestHeightForPatient.getValueNumeric() * 0.01, 2)),
+									1);
+						}
 					}
-
 					if (bmi != null) {
 						bmiJson.put(Integer.toString(atAge), bmi);
 						bmis.put(bmiJson);
@@ -858,13 +859,13 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 						} else if (conceptList.contains(obs0.getValueCoded())
 								&& encounterList.contains(obs0.getEncounter()))
 							;
-						else {
+						/*else {
 							conceptList.add(obs0.getValueCoded());
 							encounterList.add(obs0.getEncounter());
 							// j'ajoute la date de prescription si la date de
 							// dispensation n'est pas disponible
 							drugsHistory.add(obs);
-						}
+						}*/
 					}
 				}
 			}

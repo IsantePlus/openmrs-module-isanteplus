@@ -21,7 +21,7 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.openmrs.module</groupId>	
+			<groupId>org.openmrs.module</groupId>
 			<artifactId>uiframework-api</artifactId>
 		</dependency>
 		<dependency>
@@ -53,7 +53,7 @@
 			<artifactId>xds-sender-omod</artifactId>
 		</dependency>
 		<!-- End OpenMRS modules -->
-		
+
 		<!-- Begin OpenMRS core -->
 		<dependency>
 			<groupId>org.openmrs.api</groupId>
@@ -79,7 +79,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- End OpenMRS core -->
-		
+
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>

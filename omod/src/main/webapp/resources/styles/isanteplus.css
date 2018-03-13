@@ -1,13 +1,14 @@
 header {
- 	background-color: #718bb7;
-  	color: #deecfd;
+	background-color: #718bb7;
+	color: #deecfd;
 }
 
 header .user-options li.change-location {
 	border: 1px solid #163160;
 }
 
-header .user-options li.change-location:hover, header .user-options li.change-location .focus {
+header .user-options li.change-location:hover, header .user-options li.change-location .focus
+	{
 	background: #163160;
 }
 
@@ -20,11 +21,11 @@ body {
 }
 
 .highlighted {
-  	background-color: #163160;
+	background-color: #163160;
 }
 
 header .user-options li.change-location {
- 	border: 1px solid #163160;
+	border: 1px solid #163160;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,41 +52,57 @@ h6 {
 	border-color: #363463;
 }
 
-.button.arrow, button.arrow, input[type="submit"].arrow, input[type="button"].arrow, input[type="submit"].arrow, a.button.arrow {
+.button.arrow, button.arrow, input[type="submit"].arrow, input[type="button"].arrow,
+	input[type="submit"].arrow, a.button.arrow {
 	background: #363463;
 }
 
-.button.arrow .arrow-button, button.arrow .arrow-button, input[type="submit"].arrow .arrow-button, input[type="button"].arrow .arrow-button, input[type="submit"].arrow .arrow-button, a.button.arrow .arrow-button {
+.button.arrow .arrow-button, button.arrow .arrow-button, input[type="submit"].arrow .arrow-button,
+	input[type="button"].arrow .arrow-button, input[type="submit"].arrow .arrow-button,
+	a.button.arrow .arrow-button {
 	border-left: 18px solid #363463;
 }
 
-.button.task.arrow, button.task.arrow, input[type="submit"].task.arrow, input[type="button"].task.arrow, input[type="submit"].task.arrow, a.button.task.arrow {
+.button.task.arrow, button.task.arrow, input[type="submit"].task.arrow,
+	input[type="button"].task.arrow, input[type="submit"].task.arrow, a.button.task.arrow
+	{
 	background: #363463;
 }
 
-.button.task.arrow .arrow-button, button.task.arrow .arrow-button, input[type="submit"].task.arrow .arrow-button, input[type="button"].task.arrow .arrow-button, input[type="submit"].task.arrow .arrow-button, a.button.task.arrow .arrow-button {
+.button.task.arrow .arrow-button, button.task.arrow .arrow-button, input[type="submit"].task.arrow .arrow-button,
+	input[type="button"].task.arrow .arrow-button, input[type="submit"].task.arrow .arrow-button,
+	a.button.task.arrow .arrow-button {
 	border-left: 18px solid #363463;
 }
 
-.button.confirm, button.confirm, input[type="submit"].confirm, input[type="button"].confirm, input[type="submit"].confirm, a.button.confirm {
-	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #163160), color-stop(100%, #363463));
-  	background: -webkit-linear-gradient(top, #163160, #363463);
-  	background: -moz-linear-gradient(top, #163160, #363463);
-  	background: -o-linear-gradient(top, #163160, #363463);
-  	background: -ms-linear-gradient(top, #163160, #363463);
-  	background: linear-gradient(top, #163160, #363463);
-  	background-color: #363463;
-  	border: #363463 1px solid;
+.button.confirm, button.confirm, input[type="submit"].confirm, input[type="button"].confirm,
+	input[type="submit"].confirm, a.button.confirm {
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #163160),
+		color-stop(100%, #363463));
+	background: -webkit-linear-gradient(top, #163160, #363463);
+	background: -moz-linear-gradient(top, #163160, #363463);
+	background: -o-linear-gradient(top, #163160, #363463);
+	background: -ms-linear-gradient(top, #163160, #363463);
+	background: linear-gradient(top, #163160, #363463);
+	background-color: #363463;
+	border: #363463 1px solid;
 }
 
-.button.confirm.active, button.confirm.active, input[type="submit"].confirm.active, input[type="button"].confirm.active, input[type="submit"].confirm.active, a.button.confirm.active {
-  	background: #363463;
+.button.confirm.active, button.confirm.active, input[type="submit"].confirm.active,
+	input[type="button"].confirm.active, input[type="submit"].confirm.active,
+	a.button.confirm.active {
+	background: #363463;
 }
 
-.button.confirm.arrow, button.confirm.arrow, input[type="submit"].confirm.arrow, input[type="button"].confirm.arrow, input[type="submit"].confirm.arrow, a.button.confirm.arrow {
-	  background: #363463;
+.button.confirm.arrow, button.confirm.arrow, input[type="submit"].confirm.arrow,
+	input[type="button"].confirm.arrow, input[type="submit"].confirm.arrow,
+	a.button.confirm.arrow {
+	background: #363463;
 }
 
-.button.confirm.arrow .arrow-button, button.confirm.arrow .arrow-button, input[type="submit"].confirm.arrow .arrow-button, input[type="button"].confirm.arrow .arrow-button, input[type="submit"].confirm.arrow .arrow-button, a.button.confirm.arrow .arrow-button {
- 	border-left: 18px solid #363463;
+.button.confirm.arrow .arrow-button, button.confirm.arrow .arrow-button,
+	input[type="submit"].confirm.arrow .arrow-button, input[type="button"].confirm.arrow .arrow-button,
+	input[type="submit"].confirm.arrow .arrow-button, a.button.confirm.arrow .arrow-button
+	{
+	border-left: 18px solid #363463;
 }

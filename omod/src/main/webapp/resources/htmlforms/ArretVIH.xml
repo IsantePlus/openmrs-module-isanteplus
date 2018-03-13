@@ -1,190 +1,289 @@
 <htmlform formUuid="0c3ca345-f834-46d1-a620-6d0f20f217f2"
- formName="Rapport d'arrêt du VIH/SIDA"
- formEncounterType="9d0113c6-f23a-4461-8428-7e9a7344f2ba"
- formVersion="1.0"
- formDescription="Rapport d'arrêt au soins VIH"
- > 
+	formName="Rapport d'arrêt du VIH/SIDA" formEncounterType="9d0113c6-f23a-4461-8428-7e9a7344f2ba"
+	formVersion="1.0" formDescription="Rapport d'arrêt au soins VIH">
 	<macros>
 		paperFormId = (Fill this in)
-		<!--headerColor =#009d8e-->
+		<!--headerColor =#009d8e -->
 		headerColor =#000000
 		fontOnHeaderColor = white
 	</macros>
 	<style>
 		.section {
-			border: 1px solid $headerColor;
-			padding: 1px;
-			text-align: left;
-			margin-bottom: 1em;
+		border: 1px solid $headerColor;
+		padding: 1px;
+		text-align: left;
+		margin-bottom: 1em;
 		}
 		.section_b {
-			background-color: #2F4F4F;
-			color:#FFFFFF;
-			padding: 2px;
-			text-align: center;
-			margin-bottom: 1em;
+		background-color: #2F4F4F;
+		color:#FFFFFF;
+		padding: 2px;
+		text-align: center;
+		margin-bottom: 1em;
 		}
 		.sectionHeader {
-			background-color: $headerColor;
-			color: $fontOnHeaderColor;
-			display: block;
-			padding: 1px;
-			font-weight: bold;
+		background-color: $headerColor;
+		color: $fontOnHeaderColor;
+		display: block;
+		padding: 1px;
+		font-weight: bold;
 		}
 		.lienvisible#first{display: block}
 		.lienvisible{
-			height:auto; background:#87CEEB; border:1px solid #FFFFFF;
-			width:100%";
+		height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+		width:100%";
 		}
 		.contener
 		{
-			width:100%;
-			height:100%;
-			border:1px solid;
-			margin:0px;
-			padding:0px;
-			background:#87CEEB; border:1px solid #FFFFFF;
+		width:100%;
+		height:100%;
+		border:1px solid;
+		margin:0px;
+		padding:0px;
+		background:#87CEEB; border:1px solid #FFFFFF;
 		}
 		.hide{
-			margin:0px;
-			padding:0px;
+		margin:0px;
+		padding:0px;
 		}
-		a:link 
-		{ 
-		 text-decoration:none; 
+		a:link
+		{
+		text-decoration:none;
 		}
 		table.baseline-aligned td {
-			vertical-align: baseline;
+		vertical-align: baseline;
 		}
 		#sauvegarde
 		{
-			background:#81BEF7;
-			position:relative;
-			bottom:0px;
-			width:100%;
-			margin:0px;
-			padding-top:0px;
-			padding-bottom:5px;
-			padding-left:0px;
-			padding-right:0px;
-			height:50px;
+		background:#81BEF7;
+		position:relative;
+		bottom:0px;
+		width:100%;
+		margin:0px;
+		padding-top:0px;
+		padding-bottom:5px;
+		padding-left:0px;
+		padding-right:0px;
+		height:50px;
 		}
 		#dateVisite{
-			background:#81BEF7;
-			top:0px;
-			width:100%;
-			padding-top:5px;
+		background:#81BEF7;
+		top:0px;
+		width:100%;
+		padding-top:5px;
 		}
 		#scroll{
-			width: 99%;
-			margin-right:1%;
-			margin-left:0px;
-			margin-bottom:0px;
-			height:520px;
-			overflow: scroll;
-			border: 1px solid black;
-			text-align: justify;
-			padding: 5px;
+		width: 99%;
+		margin-right:1%;
+		margin-left:0px;
+		margin-bottom:0px;
+		height:520px;
+		overflow: scroll;
+		border: 1px solid black;
+		text-align: justify;
+		padding: 5px;
 		}
 		#contenerGeneral
 		{
-			height:100%;
-			width:100%;
-			margin:0px;
-			padding:0px;
-			bottom:0px;
+		height:100%;
+		width:100%;
+		margin:0px;
+		padding:0px;
+		bottom:0px;
 		}
-		form input[type="checkbox"], form input[type="radio"], .form input[type="checkbox"], .form input[type="radio"] {
-			float: none;
-		    display: inline-block;
+		form input[type="checkbox"], form input[type="radio"], .form
+		input[type="checkbox"], .form input[type="radio"] {
+		float: none;
+		display: inline-block;
 		}
-		
+
 		form label, .form label {
-			display: inline-block;
+		display: inline-block;
 		}
 	</style>
 	<script type="text/javascript">
-	jQuery.fn.cleanWhitespace = function() {
-    	textNodes = this.contents().filter(
-        	function() { return (this.nodeType &#61;&#61; 3 &amp;&amp; !/\S/.test(this.nodeValue)); })
-        	.remove();
-    	return this;
-	}
+		jQuery.fn.cleanWhitespace = function() {
+		textNodes = this.contents().filter(
+		function() { return (this.nodeType &#61;&#61; 3 &amp;&amp;
+		!/\S/.test(this.nodeValue)); })
+		.remove();
+		return this;
+		}
 
-	jQuery(function() {
+		jQuery(function() {
 		jQuery(".section").cleanWhitespace();
-	});
-</script>
+		});
+	</script>
 	<div id="contenerGeneral">
 		<div id="dateVisite">
-			<b><center>RAPPORT D'ARRÊT DU PROGAMME DE SOINS ET DE TRAITEMENT VIH/SIDA</center></b><br/>
+			<b>
+				<center>RAPPORT D'ARRÊT DU PROGAMME DE SOINS ET DE TRAITEMENT
+					VIH/SIDA</center>
+			</b>
+			<br />
 			<table>
 				<tr>
 					<td>Date visite:</td>
-					<td><encounterDate default="today"/><br/>
-					<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+					<td>
+						<encounterDate default="today" />
+						<br />
+						<span style="display: none">
+							<encounterLocation
+								default="SessionAttribute:emrContext.sessionLocationId" />
+						</span>
 					</td>
 					<td>
-						<submit submitClass="confirm right" submitCode="general.save"/>
+						<submit submitClass="confirm right" submitCode="general.save" />
 					</td>
 				</tr>
 			</table>
 		</div>
 		<div>
-			Est-ce que le patient a arrêté définitif de la participation au programme de soins et traitment VIH/SIDA?<br/>
-            &#160;<obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui- préciser la Raison ci-dessous&lt;br/&gt;,Non, ne pas remplir le Rapport d'Arrêt" style="radio"/>		
+			Est-ce que le patient a arrêté définitif de la participation au
+			programme de soins et traitment VIH/SIDA?
+			<br />
+			&#160;
+			<obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066"
+				answerLabels="Oui- préciser la Raison ci-dessous&lt;br/&gt;,Non, ne pas remplir le Rapport d'Arrêt"
+				style="radio" />
 			<table width="80%">
 				<tr>
 					<td>Date d'arrêt du programme des soins et traitement VIH/SIDA </td>
-					<td><obs conceptId="CIEL:164094" allowTime="false"/></td>
+					<td>
+						<obs conceptId="CIEL:164094" allowTime="false" />
+					</td>
 				</tr>
 				<tr>
 					<td>Date du dernier contact avec le patient</td>
-					<td><obs conceptId="CIEL:164093"/></td>
+					<td>
+						<obs conceptId="CIEL:164093" />
+					</td>
 				</tr>
 			</table>
-			<br/>
-			Est-ce que le patient recevait traitement ARV?<br/>
-			&#160;<obs conceptId="CIEL:1192" style="yes_no" noLabel="Non, sauter à Raison d'arrêt" yesLabel="Oui&lt;br/&gt;"/><br/><br/>
-			Est-ce que le patient a arrêté définitif de prendre les médicaments ARV? <br/>
-			&#160;<obs conceptId="CIEL:160121" answerConceptIds="CIEL:1065,CIEL:1066" answerLabels="Oui- préciser la Raison ci-dessous&lt;br/&gt;,Non, ne pas remplir le Rapport d'Arrêt" style="radio"/><br/>
-			<b>Raison d'arrêt</b>, préciser<br/>
-			<obs conceptId="CIEL:161555" answerConceptId="CIEL:5240" answerLabel="Perte de contact avec le patient depuis plus de trois mois "/><br/>
-			&#160;&#160;&#160;&#160;&#160;Si arrêt dû à la perte de contact avec le patient, y a-t-il eu un minimum de 3 visites à domicile afin d'assurer la continuité des services? <br/>
-			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:164090" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inconnu" style="radio"/><br/>
-			&#160;&#160;&#160;&#160;&#160;Si non, expliquer <obs conceptId="CIEL:164091" rows="1" cols="50"/><br/>
-			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159492" answerLabel="Transfert vers un autre établissement"/><br/>
-			&#160;&#160;&#160;<obs conceptId="CIEL:164089" answerConceptIds="CIEL:162571,CIEL:162591" answerLabels="Préférence du patient&lt;br/&gt;&#160;&#160;,Référence du médecin" style="radio"/><br/>
-			&#160;&#160;&#160;&#160;&#160;Nom de l'établissement:<obs conceptId="CIEL:162724"/><br/>
-			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159" answerLabel="Décès"/><br/>
-			&#160;&#160;&#160;&#160;&#160;Cause présumée du décès: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Date<obs conceptId="CIEL:1543"/><br/>
-			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1599" answerConceptIds="CIEL:156671,CIEL:131768,CIEL:5622" answerLabels="Effets secondaires&lt;br/&gt;&#160;&#160;&#160;&#160;,Infection opportuniste&lt;br/&gt;&#160;&#160;&#160;&#160;,Autre cause" style="radio"/><br/>
-			&#160;&#160;&#160;&#160;&#160;Préciser:<obs conceptId="CIEL:161602" rows="1" cols="50"/><br/>
-			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1667" answerLabel="Discontinuations, préciser"/><br/>
-			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:1754" answerLabel="ARVs non-disponibles"/><br/>
-			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:160415" answerLabel="Patient a déménagé"/><br/>
-			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:115198" answerLabel="Adhérence inadéquate"/><br/>
-		    &#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:159737" answerLabel="Préférence du patient"/><br/>
-		    &#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622" answerLabel="Autre raison, préciser" showCommentField="true" commentFieldLabel=""/><br/>
-			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1067" answerLabel="Raison d'arrêt inconnue"/><br/>
+			<br />
+			Est-ce que le patient recevait traitement ARV?
+			<br />
+			&#160;
+			<obs conceptId="CIEL:1192" style="yes_no" noLabel="Non, sauter à Raison d'arrêt"
+				yesLabel="Oui&lt;br/&gt;" />
+			<br />
+			<br />
+			Est-ce que le patient a arrêté définitif de prendre les médicaments
+			ARV?
+			<br />
+			&#160;
+			<obs conceptId="CIEL:160121" answerConceptIds="CIEL:1065,CIEL:1066"
+				answerLabels="Oui- préciser la Raison ci-dessous&lt;br/&gt;,Non, ne pas remplir le Rapport d'Arrêt"
+				style="radio" />
+			<br />
+			<b>Raison d'arrêt</b>
+			, préciser
+			<br />
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:5240"
+				answerLabel="Perte de contact avec le patient depuis plus de trois mois " />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;Si arrêt dû à la perte de contact avec
+			le patient, y a-t-il eu un minimum de 3 visites à domicile afin
+			d'assurer la continuité des services?
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:164090" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+				answerLabels="Oui,Non,Inconnu" style="radio" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;Si non, expliquer
+			<obs conceptId="CIEL:164091" rows="1" cols="50" />
+			<br />
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159492"
+				answerLabel="Transfert vers un autre établissement" />
+			<br />
+			&#160;&#160;&#160;
+			<obs conceptId="CIEL:164089" answerConceptIds="CIEL:162571,CIEL:162591"
+				answerLabels="Préférence du patient&lt;br/&gt;&#160;&#160;,Référence du médecin"
+				style="radio" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;Nom de l'établissement:
+			<obs conceptId="CIEL:162724" />
+			<br />
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159"
+				answerLabel="Décès" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;Cause présumée du décès:
+			&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Date
+			<obs conceptId="CIEL:1543" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1599" answerConceptIds="CIEL:156671,CIEL:131768,CIEL:5622"
+				answerLabels="Effets secondaires&lt;br/&gt;&#160;&#160;&#160;&#160;,Infection opportuniste&lt;br/&gt;&#160;&#160;&#160;&#160;,Autre cause"
+				style="radio" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;Préciser:
+			<obs conceptId="CIEL:161602" rows="1" cols="50" />
+			<br />
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1667"
+				answerLabel="Discontinuations, préciser" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:1754"
+				answerLabel="ARVs non-disponibles" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:160415"
+				answerLabel="Patient a déménagé" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:115198"
+				answerLabel="Adhérence inadéquate" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:159737"
+				answerLabel="Préférence du patient" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622"
+				answerLabel="Autre raison, préciser" showCommentField="true"
+				commentFieldLabel="" />
+			<br />
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1067"
+				answerLabel="Raison d'arrêt inconnue" />
+			<br />
 		</div>
-		<br/>
+		<br />
 		<section headerLabel="REMARQUES">
-			<obs conceptId="CIEL:161011" rows="5" cols="50"/>
+			<obs conceptId="CIEL:161011" rows="5" cols="50" />
 		</section>
+		<br />
+		<br />
+		SIGNATURE DU CONSEILLER:
+		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+			providerRoles="3" id="infirmiere" autocompleteProvider="true"
+			providerMatchMode="ANYWHERE" default="currentUser" />
+		<br />
+		SIGNATURE DU MÉDECIN:
+		<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
+			providerRoles="1" id="medecin" autocompleteProvider="true"
+			providerMatchMode="ANYWHERE" />
+		<br />
+		<br />
+			SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
 		<br/>
 		<br/>
-		SIGNATURE DU CONSEILLER:<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
-		SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
-		<br/><br/>
-		Statut de la fiche<br/>
-		&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
-		<br/>
-		&#160;<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065" answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données."/> <br/><br/>
-		<br/>
-		<submit submitClass="confirm right" submitCode="general.save"/>
-		<br/>
-		<br/>
-		<span style="margin-right:0px">MSPP RAPPORT D'ARRÊT DU PROGAMME SOINS ET TRAITEMENT VIH/SIDA(VERSION OCTOBRE 2006)</span>
+		Statut de la fiche
+		<br />
+		&#160;
+		<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267"
+			answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète."
+			defaultValue="CIEL:1267" style="radio" />
+		<br />
+		&#160;
+		<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065"
+			answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données." />
+		<br />
+		<br />
+		<br />
+		<submit submitClass="confirm right" submitCode="general.save" />
+		<br />
+		<br />
+		<span style="margin-right:0px">MSPP RAPPORT D'ARRÊT DU PROGAMME SOINS ET TRAITEMENT
+			VIH/SIDA(VERSION OCTOBRE 2006)</span>
 	</div>
 </htmlform>

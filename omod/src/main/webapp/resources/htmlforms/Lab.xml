@@ -1,10 +1,8 @@
 <htmlform formUuid="56cf5b28-c0b5-4d57-8dde-a43e93e269d2"
- formName="Analyse de Laboratoire"
- formVersion="1.0"	
- formEncounterType="f037e97b-471e-4898-a07c-b8e169e0ddc4"
- formDescription="Analyse de laboratoire;Analyse de laboratoire"
- > 
-	<macros>
+	formName="Analyse de Laboratoire" formVersion="1.0"
+	formEncounterType="f037e97b-471e-4898-a07c-b8e169e0ddc4"
+	formDescription="Analyse de laboratoire;Analyse de laboratoire">
+		<macros>
 		paperFormId = (Fill this in)
 		<!--headerColor =#009d8e-->
 		headerColor =#000000
@@ -870,6 +868,12 @@
 						<submit submitClass="confirm right" submitCode="general.save"/>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="3">
+						TYPE DE VISITE <obs conceptId="CIEL:164181" answerConceptIds="CIEL:160542,CIEL:164180,CIEL:160530,CIEL:1597"
+								id="type_visite" answerLabels="Clinique externe,Visite initiale,Visite de suivi,Consultation" style="radio"/>
+					</td>
+				</tr>
 			</table>
 		</div>
 	<div id="scroll">		
@@ -1521,9 +1525,9 @@
 								</fieldset></span>
 							</td>
 						</tr>
-						<tr><td><span class="titre" ch-target="#span78"><obs conceptId="CIEL:1271" class="master" id="idphophy1" answerConceptId="CIEL:1299" answerLabel="La porphyrineVLDL – cholesterol (calculée)"/></span><br/>
+						<!--<tr><td><span class="titre" ch-target="#span78"><obs conceptId="CIEL:1271" class="master" id="idphophy1" answerConceptId="CIEL:1299" answerLabel="La porphyrineVLDL – cholesterol (calculée)"/></span><br/>
 						<span id="span78" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1299" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1299" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>-->
 						
 					</table>
 					</td>
@@ -1788,7 +1792,7 @@
 									<td>
 										<span class="titre" ch-target="#couleur"><obs conceptId="CIEL:1271" class="master" id="spermogrammecouleur" answerConceptId="CIEL:163657" answerLabel="Couleur"/></span><br/>
 										<span id="couleur" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163657" answerConceptIds="CIEL:163656,CIEL:163655,CIEL:160910,CIEL:127778,CIEL:162097,CIEL:162097,CIEL:162098,CIEL:162100" answerLabels="Orange,blanc jaunâtre,Jaune,Rouge,Jaune clair,Jaune foncé,Marron" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163657" answerConceptIds="CIEL:163656,CIEL:163655,CIEL:160910,CIEL:127778,CIEL:162097,CIEL:162098,CIEL:162100" answerLabels="Orange,blanc jaunâtre,Jaune,Rouge,Jaune clair,Jaune foncé,Marron" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1806,13 +1810,13 @@
 								</tr>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#formesanormales"><obs conceptId="CIEL:1271" class="master" id="spermogrammefnormales" answerConceptId="CIEL:163662" answerLabel="Formes anormales"/></span><br/>
+										<span class="titre" ch-target="#formesanormales"><obs conceptId="CIEL:1271" class="master" id="spermogrammefnormales" answerConceptId="CIEL:163662" answerLabel="Formes normales"/></span><br/>
 										<span id="formesanormales" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163662" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
-								<includeIf velocityTest="($patient.person.gender=='M')">
+							<!--	<includeIf velocityTest="($patient.person.gender=='M')">
 								<tr>
 									<td>
 										<span class="titre" ch-target="#frottisuretral"><obs conceptId="CIEL:1271" class="master" id="gouttependantefrot" answerConceptId="CIEL:161454" answerLabel="Frottis Uretral/Gram"/></span><br/>
@@ -1831,7 +1835,7 @@
 										</fieldset></span>
 									</td>
 								</tr>
-								</includeIf>
+								</includeIf>-->
 								<tr>
 									<td>
 										<span class="titre" ch-target="#fructose"><obs conceptId="CIEL:1271" class="master" id="spermogrammefructose" answerConceptId="CIEL:163659" answerLabel="Fructose"/></span><br/>
@@ -2042,7 +2046,7 @@
 									<td>
 										<span class="titre" ch-target="#colziehl"><obs conceptId="CIEL:1271" class="master" id="antibcolorziehl" answerConceptId="CIEL:307" answerLabel="Coloration de Ziehl-Neelsen"/></span><br/>
 										<span id="colziehl" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:307" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Minimes,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 									</td>
 								</tr>
 								<!--<tr><td>Culture Bacterienne</td></tr>-->
@@ -2226,7 +2230,7 @@
 									<td>
 										<span class="titre" ch-target="#span205"><obs conceptId="CIEL:1271" class="master" id="macrocouleur" answerConceptId="CIEL:162106" answerLabel="Couleur"/></span><br/>
 										<span id="span205" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:162106" answerConceptIds="CIEL:162099,CIEL:127778,CIEL:162097,CIEL:162105,CIEL:162098,CIEL:162098,CIEL:162100" answerLabels="Incolore,Rouge,Jaune clair,Jaune-vert,Jaune foncé,Marron" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:162106" answerConceptIds="CIEL:162099,CIEL:127778,CIEL:162097,CIEL:162105,CIEL:162098,CIEL:162100" answerLabels="Incolore,Rouge,Jaune clair,Jaune-vert,Jaune foncé,Marron" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2688,11 +2692,11 @@
 			</div>
 			<div class="item">
 			<table>
-					<tr><td><span class="titre" ch-target="#span300"><obs conceptId="CIEL:1271" class="master" id="idlcr1" answerConceptId="161454" answerLabel="LCR GRAM"/></span><br/>
+				<!--  <tr><td><span class="titre" ch-target="#span300"><obs conceptId="CIEL:1271" class="master" id="idlcr1" answerConceptId="161454" answerLabel="LCR GRAM"/></span><br/>
 					<span id="span300" class="togglable" style="display: none;">
 						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161454" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 						</fieldset></span>
-					</td></tr>
+					</td></tr>-->
 					<tr><td><span class="titre" ch-target="#span301"><obs conceptId="CIEL:1271" class="master" id="idlcr2" answerConceptId="161466" answerLabel="LCR ZIELH NIELSEN"/></span><br/>
 					<span id="span301" class="togglable" style="display: none;">
 						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161466" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365" answerLabels="Négatif,+,++,+++,++++" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
@@ -2707,11 +2711,11 @@
 						<td valign="TOP">
 							<table>
 								
-								<tr><td>Ac anti HBc (hépatite B)</td></tr>
+								<!--<tr><td>Ac anti HBc (hépatite B)</td></tr>
 								<tr><td>Ac anti hépatite A (IgM et IgG)</td></tr>
 								<tr><td>Ac AntiH HBs (hépatite B)</td></tr>
 								<tr><td>Anticorps anti-ADN Natif</td></tr>
-								<tr><td>Anticorps antinucléaire (ANA)</td></tr>
+								<tr><td>Anticorps antinucléaire (ANA)</td></tr>-->
 								<tr>
 								<td>
 									<span class="titre" ch-target="#aso"><obs conceptId="CIEL:1271" class="master" id="idso1" answerConceptId="161469" answerLabel="ASO"/></span><br/>
@@ -2797,7 +2801,7 @@
 								<tr><td><span class="titre" ch-target="#span330"><obs conceptId="CIEL:1271" class="master" id="idhelicobac12" answerConceptId="CIEL:163620" answerLabel="Helicobacter Pilori"/></span><br/>
 								
 									<span id="span330" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163620" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163620" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 									</fieldset></span>
 									</td>
 								</tr>
@@ -2805,7 +2809,7 @@
 									<td>
 										<span class="titre" ch-target="#herpessimp"><obs conceptId="CIEL:1271" class="master" id="idherpess21" answerConceptId="CIEL:908" answerLabel="Herpes Simplex"/></span><br/>
 										<span id="herpessimp" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:908" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304,CIEL:1300" answerLabels="Négatif,Positif,Indéterminé,échantillon de pauvre qualité,équivoque" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:908" answerConceptIds="CIEL:664,CIEL:703,CIEL:1304,CIEL:1300" answerLabels="Négatif,Positif,échantillon de pauvre qualité,équivoque" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2826,14 +2830,15 @@
 											</span>
 									</td>
 								</tr>
+								<!--
 								<tr>
 									<td>
-										<span class="titre" ch-target="#span335"><obs conceptId="CIEL:1271" class="master" id="idmalariatrapi1" answerConceptId="CIEL:1643" answerLabel="Malaria Test Rapide"/><!-- A verifier --></span><br/>
+										<span class="titre" ch-target="#span335"><obs conceptId="CIEL:1271" class="master" id="idmalariatrapi1" answerConceptId="CIEL:1643" answerLabel="Malaria Test Rapide"/></span><br/>
 										<span id="span335" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1643" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304,CIEL:1300" answerLabels="Négatif,Positif,Indéterminé,échantillon de pauvre qualité,équivoque" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
-								</tr>
+								</tr> -->
 								<tr>
 									<td>
 										<span class="titre" ch-target="#monotest"><obs conceptId="CIEL:1271" class="master" id="idmonotest1" answerConceptId="CIEL:163614" answerLabel="Mono Test"/></span><br/>
@@ -2850,13 +2855,13 @@
 									<td>
 										<span class="titre" ch-target="#span337"><obs conceptId="CIEL:1271" class="master" id="idsyphilisrpr" answerConceptId="CIEL:1619" answerLabel="Syphilis RPR"/><!-- A verifier --></span><br/>
 										<span id="span337" class="togglable" style="display: none;">
-											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1619" answerConceptIds="CIEL:664,CIEL:703,CIEL:703" answerLabels="Négatif,Positif,Inconnu" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1619" answerConceptIds="CIEL:664,CIEL:703,CIEL:1067" answerLabels="Négatif,Positif,Inconnu" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#span337"><obs conceptId="CIEL:1271" class="master" id="idsyphitestrap21" answerConceptId="CIEL:163626" answerLabel="Syphilis Test Rapide"/></span><br/>
+										<span class="titre" ch-target="#span337tr"><obs conceptId="CIEL:1271" class="master" id="idsyphitestrap21" answerConceptId="CIEL:163626" answerLabel="Syphilis Test Rapide"/></span><br/>
 										<span id="span337" class="togglable" style="display: none;">
 											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163626" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
