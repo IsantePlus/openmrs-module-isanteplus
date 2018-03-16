@@ -717,5 +717,24 @@
             <column name="uuid" value="9fb4533d-4fd5-4276-875b-2ab41597f5dd" />
         </insert>
     </changeSet>
-    
+    <changeSet id="2018Mar13-35" author="Pawel Cieszko">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='5a597bcc-26ad-11e8-b467-0ed5f89f718b';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="Biometrics National Reference Code"/>
+            <column name="description"
+                    value="Code referencing a patient's record in an external national biometrics system"/>
+            <column name="check_digit" value="0"/>
+            <column name="creator" value="2"/>
+            <column name="date_created" value="2018-03-13"/>
+            <column name="required" value="0"/>
+            <column name="location_behavior" value="NOT_USED"/>
+            <column name="uuid" value="5a597bcc-26ad-11e8-b467-0ed5f89f718b"/>
+        </insert>
+    </changeSet>
 </databaseChangeLog>
