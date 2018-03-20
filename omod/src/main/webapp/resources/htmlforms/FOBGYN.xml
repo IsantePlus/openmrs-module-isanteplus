@@ -2942,7 +2942,7 @@
 							<tr>
 								<td>
 									No. d’enregistrement TB :
-									<patient field="identifier" identifierTypeId="76a86a29-1f4e-45fe-91bf-7fc2740b4b35"
+									<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
 										required="false" />
 									Date d’enregistrement :
 									<obs conceptId="CIEL:161552" />
