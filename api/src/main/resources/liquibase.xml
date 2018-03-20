@@ -759,8 +759,7 @@
             <column name="uuid" value="0e0c7cc2-3491-4675-b705-746e372ff346" />
         </insert>
     </changeSet>
-    
-     <changeSet id="2018march20-121333" author="Feshner">
+    <changeSet id="2018march20-121333" author="Feshner">
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="0">
                 SELECT COUNT(*) FROM
