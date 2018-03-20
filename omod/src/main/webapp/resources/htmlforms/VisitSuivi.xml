@@ -760,7 +760,7 @@
 					<obs conceptId="CIEL:159431" />
 					<br />
 					No. de dossier TB :
-					<patient field="identifier" identifierTypeId="76a86a29-1f4e-45fe-91bf-7fc2740b4b35"
+					<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
 						required="false" />
 				</td>
 				<td valign="TOP" style="padding-left:2%">
