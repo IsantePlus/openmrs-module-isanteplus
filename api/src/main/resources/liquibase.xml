@@ -717,6 +717,7 @@
             <column name="uuid" value="9fb4533d-4fd5-4276-875b-2ab41597f5dd" />
         </insert>
     </changeSet>
+    
     <changeSet id="2018Mar13-35" author="Pawel Cieszko">
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="0">
@@ -735,6 +736,47 @@
             <column name="required" value="0"/>
             <column name="location_behavior" value="NOT_USED"/>
             <column name="uuid" value="5a597bcc-26ad-11e8-b467-0ed5f89f718b"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet id="2018march18-100733" author="Feshner">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='0e0c7cc2-3491-4675-b705-746e372ff346';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="iSante ID" />
+            <column name="description" value="Old iSante ID, ID generated specially for LNSP (Laboratoire National de Santé Publique)" />
+            <column name="check_digit" value="0" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2018-03-20" />
+            <column name="required" value="0" />
+            <column name="location_behavior" value="NOT_USED" />
+            <column name="uniqueness_behavior" value="UNIQUE" />
+            <column name="uuid" value="0e0c7cc2-3491-4675-b705-746e372ff346" />
+        </insert>
+    </changeSet>
+    <changeSet id="2018march20-121333" author="Feshner">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM
+                patient_identifier_type WHERE uuid ='4814250c-bbba-4380-a843-206d5307808a';
+            </sqlCheck>
+        </preConditions>
+        <comment></comment>        
+        <insert tableName="patient_identifier_type">
+            <column name="name" value="No. de dossier TB" />
+            <column name="description" value="Numéro de dossier TB du patient" />
+            <column name="check_digit" value="0" />
+            <column name="creator" value="1" />
+            <column name="date_created" value="2018-03-20" />
+            <column name="required" value="0" />
+            <column name="location_behavior" value="NOT_USED" />
+            <column name="uniqueness_behavior" value="UNIQUE" />
+            <column name="uuid" value="4814250c-bbba-4380-a843-206d5307808a" />
         </insert>
     </changeSet>
 </databaseChangeLog>
