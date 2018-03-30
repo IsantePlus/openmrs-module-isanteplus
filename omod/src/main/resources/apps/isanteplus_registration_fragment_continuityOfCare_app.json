@@ -8,8 +8,8 @@
         "appId": "isanteplus.registration.continuityOfCare",
         "extensionPointId": "registrationSummary.contentFragments",
         "extensionParams": {
-          "provider": "isanteplus",
-          "fragment": "continuityOfCare"
+          "provider": "registrationapp",
+          "fragment": "summary/continuityOfCare"
         }
       }
     ]
