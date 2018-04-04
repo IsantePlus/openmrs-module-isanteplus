@@ -125,6 +125,9 @@ public class ISantePlusActivator implements ModuleActivator {
 			appFrameworkService.disableExtension("appointmentschedulingui.tab");
 			appFrameworkService.disableExtension("org.openmrs.module.appointmentschedulingui.firstColumnFragments.patientDashboard.patientAppointments");
 			appFrameworkService.disableExtension("chartsearch.chartSearchLink");
+			
+			// Active Auto close visits after 24 hours
+			activeAutoCloseVisits();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -313,6 +316,15 @@ public class ISantePlusActivator implements ModuleActivator {
 
 		return user;
 	}
+    public void activeAutoCloseVisits() throws Exception {
+    	
+    	String visits = "Facility Visit,Patient externe";
+    	String visitsType = Context.getAdministrationService().getGlobalProperty("visits.autoCloseVisitType");
+    	if(visitsType != visits)
+    	{
+    		Context.getAdministrationService().setGlobalProperty("visits.autoCloseVisitType", visits);
+    	}
+    }
     
 	/**
 	 * @see ModuleActivator#willStop()
