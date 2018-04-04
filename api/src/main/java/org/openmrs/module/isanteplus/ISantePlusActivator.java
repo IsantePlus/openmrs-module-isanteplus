@@ -316,6 +316,7 @@ public class ISantePlusActivator implements ModuleActivator {
 
 		return user;
 	}
+    // Adding visit type Facility Visit and Patient externe in visits.autoCloseVisitType property
     public void activeAutoCloseVisits() throws Exception {
     	
     	String visits = "Facility Visit,Patient externe";
