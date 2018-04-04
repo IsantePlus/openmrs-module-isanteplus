@@ -1,0 +1,17 @@
+[
+  {
+    "id": "isanteplus.registration.continuityOfCare",
+    "order": 4,
+    "extensions": [
+      {
+        "id": "isanteplus.registration.continuityOfCareFirstColumn",
+        "appId": "isanteplus.registration.continuityOfCare",
+        "extensionPointId": "registrationSummary.contentFragments",
+        "extensionParams": {
+          "provider": "registrationapp",
+          "fragment": "summary/continuityOfCare"
+        }
+      }
+    ]
+  }
+]
