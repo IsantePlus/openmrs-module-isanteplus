@@ -314,7 +314,19 @@
 			</tr>
 		</table>
 	</section>
-	
+
+	<section headerLabel="Partage du résultat">
+		<table class="baseline-aligned">
+			<tr>
+				<td>
+					<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="4beb926f-0911-4b7b-b8a1-2bdf3fee026f"
+						 answerConceptIds="e98139f6-9fdc-44e9-9907-e498e43f48d8,d121b387-e846-45fc-8452-57287d3f61a3"
+						 answerLabels="SCC via Sedish,OpenELIS" defaultValue="e98139f6-9fdc-44e9-9907-e498e43f48d8" style="radio" required="true" />
+				</td>
+			</tr>
+		</table>
+	</section>
+
 	<section headerLabel="VISITE ASSOCIEE">
 
 		<table class="baseline-aligned">
