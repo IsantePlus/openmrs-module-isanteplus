@@ -2625,14 +2625,14 @@
 							<obs conceptId="CIEL:1444" id="posologie34bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
 
 						<td>
 							<span style="display:none">
-								<obs conceptId="CIEL:1282" answerConceptId="CIEL:461" id="multivitamine"
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:461" id="multivitamine1"
 									answerLabel="Multivitamine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"

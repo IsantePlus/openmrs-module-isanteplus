@@ -782,7 +782,7 @@
      <changeSet author="Feshner" id="2018Avril4-090434" dbms="mysql">
 		<comment>Update scheduler_task_config to active AutoClose visits</comment>
 		<sql>
-			UPDATE scheduler_task_config SET start_time = '2011-11-28 09:01:01', start_on_startup = 1, started = 1 where uuid = '8c17b376-1a2b-11e1-a51a-00248140a5eb';
+			UPDATE scheduler_task_config SET start_time = '2011-11-28 15:01:01', start_on_startup = 1, started = 1 where uuid = '8c17b376-1a2b-11e1-a51a-00248140a5eb';
 		</sql>
 	</changeSet>
     
