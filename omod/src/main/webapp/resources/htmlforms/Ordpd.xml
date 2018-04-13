@@ -52,112 +52,724 @@
 	</script>
 	<script type="text/javascript">
 		//validation des donnees
-		beforeSubmit.push(function() {
-		if((getValue('presentation.value') == '138405') || (getValue('presentation.value') == '163768')) {
-		setValue('abacavir.value',70056);setValue('abacavir1.value',70056); }
-
-
-		if((getValue('presentation1.value') == '138405') ||
-		(getValue('presentation1.value') == '163768')) {
-		setValue('combivir.value',630);setValue('combivir1.value',630);}
-
-		if((getValue('presentation2.value') == '138405') ||
-		(getValue('presentation2.value') == '163768')) {
-		setValue('didanosine.value',74807);setValue('didanosine1.value',74807);}
-
-		if((getValue('presentation3.value') == '138405') ||
-		(getValue('presentation3.value') == '163768')) {
-		setValue('emtricitabine.value',75628);setValue('emtricitabine1.value',75628);}
-
-		if((getValue('presentation4.value') == '138405') ||
-		(getValue('presentation4.value') == '163768')) {
-		setValue('lamivudine.value',78643);
-		setValue('lamivudine1.value',78643);}
-
-		if((getValue('presentation5.value') == '138405') ||
-		(getValue('presentation5.value') == '163768')) {
-		setValue('stavudine.value',84309); setValue('stavudine1.value',84309);
+		beforeSubmit.push(function() {		
+		if((getValue('presentation.value') == '138405') || (getValue('presentation.value') == '163768')
+			|| (getValue('abac_dosage.value') !='') || (getValue('abac_dosage_alt.value') !='')
+			|| (getValue('abac_nbj_prescrit.value') !='')) 
+		{
+			setValue('abacavir.value',70056);
+		}
+		
+		if((getValue('abacavir_dispensee.value') !='') || (getValue('abac_post_alt.value') !='')
+			|| (getValue('abac_j_alt.value') !='') || (getValue('abac_nb_pil.value') !='')) 
+		{
+			setValue('abacavir1.value',70056);
 		}
 
-		if((getValue('presentation6.value') == '138405') || (getValue('presentation6.value') == '163768')) {
+
+		if((getValue('presentation1.value') == '138405') || (getValue('presentation1.value') == '163768')
+			|| (getValue('comb_dosage.value') !='') || (getValue('comb_dosage_alt.value') !='')
+			|| (getValue('comb_nbj_prescrit.value') !='')) 
+		{
+		setValue('combivir.value',630);
+		}
+		
+		if((getValue('combivir_dispensee.value') !='') || (getValue('comb_post_alt.value') !='')
+			|| (getValue('comb_j_alt.value') !='') || (getValue('comb_nb_pil.value') !=''))
+		{
+			setValue('combivir1.value',630);
+		}
+
+		if((getValue('presentation2.value') == '138405') || (getValue('presentation2.value') == '163768')
+			|| (getValue('did_dosage.value') !='') || (getValue('did_dosage_alt.value') !='')
+			|| (getValue('did_nbj_prescrit.value') !='')) 
+		{
+		setValue('didanosine.value',74807);
+		}
+		
+		if((getValue('did_dispensee.value') !='') || (getValue('did_post_alt.value') !='')
+			|| (getValue('did_j_alt.value') !='') || (getValue('did_nb_pil.value') !=''))
+		{
+		setValue('didanosine1.value',74807);
+		}
+
+		if((getValue('presentation3.value') == '138405') || (getValue('presentation3.value') == '163768')
+			|| (getValue('emt_dosage.value') !='') || (getValue('emt_dosage_alt.value') !='')
+			|| (getValue('emt_nbj_prescrit.value') !='')) 
+		{
+		setValue('emtricitabine.value',75628);
+		}
+		
+		if((getValue('emt_dispensee.value') !='') || (getValue('emt_post_alt.value') !='')
+			|| (getValue('emt_j_alt.value') !='') || (getValue('emt_nb_pil.value') !=''))
+		{
+		setValue('emtricitabine1.value',75628);
+		}
+		
+		if((getValue('presentation4.value') == '138405') || (getValue('presentation4.value') == '163768')
+			|| (getValue('lam_dosage.value') !='') || (getValue('lam_dosage_alt.value') !='')
+			|| (getValue('lam_nbj_prescrit.value') !='')) 
+		{
+		setValue('lamivudine.value',78643);
+		}
+		
+		if((getValue('lam_dispensee.value') !='') || (getValue('lam_post_alt.value') !='')
+			|| (getValue('lam_j_alt.value') !='') || (getValue('lam_nb_pil.value') !=''))
+		{
+		setValue('lamivudine1.value',78643);
+		}
+		
+		if((getValue('presentation5.value') == '138405') || (getValue('presentation5.value') == '163768')
+			|| (getValue('sta_dosage.value') !='') || (getValue('sta_dosage_alt.value') !='')
+			|| (getValue('sta_nbj_prescrit.value') !='')) 
+		{
+		setValue('stavudine.value',84309);
+		}
+		
+		if((getValue('sta_dispensee.value') !='') || (getValue('sta_post_alt.value') !='')
+			|| (getValue('sta_j_alt.value') !='') || (getValue('sta_nb_pil.value') !=''))
+		{
+		 setValue('stavudine1.value',84309);
+		}
+
+		if((getValue('presentation6.value') == '138405') || (getValue('presentation6.value') == '163768')
+			|| (getValue('ten_dosage.value') !='') || (getValue('ten_dosage_alt.value') !='')
+			|| (getValue('ten_nbj_prescrit.value') !='')) 
+		{
 		setValue('tenofovir.value',84795);
-		setValue('tenofovir1.value',84795);}
+		}
+		
+		if((getValue('ten_dispensee.value') !='') || (getValue('ten_post_alt.value') !='')
+			|| (getValue('ten_j_alt.value') !='') || (getValue('ten_nb_pil.value') !=''))
+		{
+		setValue('tenofovir1.value',84795);
+		}
 
-		if((getValue('presentation7.value') == '138405') ||
-		(getValue('presentation7.value') == '163768')) {
-		setValue('trizivir.value',817); setValue('trizivir1.value',817);}
+		if((getValue('presentation7.value') == '138405') || (getValue('presentation7.value') == '163768')
+			|| (getValue('tri_dosage.value') !='') || (getValue('tri_dosage_alt.value') !='')
+			|| (getValue('tri_nbj_prescrit.value') !='')) 
+		{
+		setValue('trizivir.value',817);
+		}
+		
+		if((getValue('tri_dispensee.value') !='') || (getValue('tri_post_alt.value') !='')
+			|| (getValue('tri_j_alt.value') !='') || (getValue('tri_nb_pil.value') !=''))
+		{
+		setValue('trizivir1.value',817);
+		}
 
-		if((getValue('presentation8.value') == '138405') ||
-		(getValue('presentation8.value') == '163768')) {
+		if((getValue('presentation8.value') == '138405') || (getValue('presentation8.value') == '163768')
+			|| (getValue('zid_dosage.value') !='') || (getValue('zid_dosage_alt.value') !='')
+			|| (getValue('zid_nbj_prescrit.value') !='')) 
+		{
 		setValue('zidovudine.value',86663);
-		setValue('zidovudine1.value',86663);}
+		}
+		
+		if((getValue('zid_dispensee.value') !='') || (getValue('zid_post_alt.value') !='')
+			|| (getValue('zid_j_alt.value') !='') || (getValue('zid_nb_pil.value') !=''))
+		{
+		setValue('zidovudine1.value',86663);
+		}
 
-		if((getValue('presentation9.value') == '138405') ||
-		(getValue('presentation9.value') == '163768')) {
+		if((getValue('presentation9.value') == '138405') || (getValue('presentation9.value') == '163768')
+			|| (getValue('efa_dosage.value') !='') || (getValue('efa_dosage_alt.value') !='')
+			|| (getValue('efa_nbj_prescrit.value') !='')) 
+		{
 		setValue('efavirenz.value',75523);
-		setValue('efavirenz1.value',75523);}
+		}
+		
+		if((getValue('efa_dispensee.value') !='') || (getValue('efa_post_alt.value') !='')
+			|| (getValue('efa_j_alt.value') !='') || (getValue('efa_nb_pil.value') !=''))
+		{
+		setValue('efavirenz1.value',75523);
+		}
 
-		if((getValue('presentation10.value') == '138405') ||
-		(getValue('presentation10.value') == '163768')) {
+		if((getValue('presentation10.value') == '138405') || (getValue('presentation10.value') == '163768')
+			|| (getValue('nev_dosage.value') !='') || (getValue('nev_dosage_alt.value') !='')
+			|| (getValue('nev_nbj_prescrit.value') !='')) 
+		{
 		setValue('nevirapine.value',80586);
-		setValue('nevirapine1.value',80586);}
+		}
+		
+		if((getValue('nev_dispensee.value') !='') || (getValue('nev_post_alt.value') !='')
+			|| (getValue('nev_j_alt.value') !='') || (getValue('nev_nb_pil.value') !=''))
+		{
+		setValue('nevirapine1.value',80586);
+		}
 
-		if((getValue('presentation11.value') == '138405') ||
-		(getValue('presentation11.value') == '163768')) {
+		<!-- if((getValue('presentation11.value') == '138405') || (getValue('presentation11.value') == '163768')
+			|| (getValue('ata_dosage.value') !='') || (getValue('ata_dosage_alt.value') !='')
+			|| (getValue('ata_nbj_prescrit.value') !='')) 
+		{
 		setValue('atazanavir.value',71647);
-		setValue('atazanavir1.value',71647);}
+		}
+		
+		if((getValue('ata_dispensee.value') !='') || (getValue('ata_post_alt.value') !='')
+			|| (getValue('ata_j_alt.value') !='') || (getValue('ata_nb_pil.value') !=''))
+		{
+		setValue('atazanavir1.value',71647);
+		} -->
 
-		if((getValue('presentation12.value') == '138405') ||
-		(getValue('presentation12.value') == '163768')) {
+		if((getValue('presentation12.value') == '138405') || (getValue('presentation12.value') == '163768')
+			|| (getValue('nelf_dosage.value') !='') || (getValue('nelf_dosage_alt.value') !='')
+			|| (getValue('nelf_nbj_prescrit.value') !='')) 
+		{
 		setValue('nelfinavir.value',80487);
-		setValue('nelfinavir1.value',80487);}
+		}
+		
+		if((getValue('nelf_dispensee.value') !='') || (getValue('nelf_post_alt.value') !='')
+			|| (getValue('nelf_j_alt.value') !='') || (getValue('nelf_nb_pil.value') !=''))
+		{
+		setValue('nelfinavir1.value',80487);
+		}
 
-		if((getValue('presentation13.value') == '138405') ||
-		(getValue('presentation13.value') == '163768')) {
+		if((getValue('presentation13.value') == '138405') || (getValue('presentation13.value') == '163768')
+			|| (getValue('saq_dosage.value') !='') || (getValue('saq_dosage_alt.value') !='')
+			|| (getValue('saq_nbj_prescrit.value') !='')) 
+		{
 		setValue('saquinavir.value',83690);
-		setValue('saquinavir1.value',83690);}
+		}
+		
+		if((getValue('saq_dispensee.value') !='') || (getValue('saq_post_alt.value') !='')
+			|| (getValue('saq_j_alt.value') !='') || (getValue('saq_nb_pil.value') !=''))
+		{
+		setValue('saquinavir1.value',83690);
+		}
 
-		if((getValue('presentation14.value') == '138405') ||
-		(getValue('presentation14.value') == '163768')) {
-		setValue('lopinavir.value',794); setValue('lopinavir1.value',794);}
+		if((getValue('presentation14.value') == '138405') || (getValue('presentation14.value') == '163768')
+			|| (getValue('lop_dosage.value') !='') || (getValue('lop_dosage_alt.value') !='')
+			|| (getValue('lop_nbj_prescrit.value') !='')) 
+		{
+		setValue('lopinavir.value',794);
+		}
+		
+		if((getValue('lop_dispensee.value') !='') || (getValue('lop_post_alt.value') !='')
+			|| (getValue('lop_j_alt.value') !='') || (getValue('lop_nb_pil.value') !=''))
+		{
+		setValue('lopinavir1.value',794);
+		}
 
-		if((getValue('presentation15.value') == '138405') ||
-		(getValue('presentation15.value') == '163768')) {
+		if((getValue('presentation15.value') == '138405') || (getValue('presentation15.value') == '163768')
+			|| (getValue('rit_dosage.value') !='') || (getValue('rit_dosage_alt.value') !='')
+			|| (getValue('rit_nbj_prescrit.value') !='')) 
+		{
 		setValue('ritonavir.value',83412);
-		setValue('ritonavir1.value',83412);}
+		}
+		
+		if((getValue('rit_dispensee.value') !='') || (getValue('rit_post_alt.value') !='')
+			|| (getValue('rit_j_alt.value') !='') || (getValue('rit_nb_pil.value') !=''))
+		{
+		setValue('ritonavir1.value',83412);
+		}
 
-		if((getValue('presentation16.value') == '138405') ||
-		(getValue('presentation16.value') == '163768')) {
+		<!-- if((getValue('presentation16.value') == '138405') || (getValue('presentation16.value') == '163768')
+			|| (getValue('ralt_dosage.value') !='') || (getValue('ralt_dosage_alt.value') !='')
+			|| (getValue('ralt_nbj_prescrit.value') !='')) 
+		{
 		setValue('raltegravir.value',154378);
-		setValue('raltegravir1.value',154378);}
+		}
+		
+		if((getValue('ralt_dispensee.value') !='') || (getValue('ralt_post_alt.value') !='')
+			|| (getValue('ralt_j_alt.value') !='') || (getValue('ralt_nb_pil.value') !=''))
+		{
+		setValue('raltegravir1.value',154378);
+		} -->
+		
+		if((getValue('posologie2.value') !='') || (getValue('posologie2bis.value') !='')
+			|| (getValue('asp_nbj_prescrit.value') != '')) 
+		{
+		setValue('aspirine.value',71617);
+		}
+		
+		if((getValue('asp_dispensee.value') !='') || (getValue('asp_post_alt.value') != '')
+			|| (getValue('asp_j_alt.value') != '') || (getValue('asp_nb_pil.value') !=''))
+		{
+		setValue('aspirine1.value',71617);
+		}
+		
+		if((getValue('posologieDiclofenac.value') !='') || (getValue('posologie_diclofenac.value') !='')
+			|| (getValue('dicl_nbj_prescrit.value') != '')) 
+		{
+		setValue('diclofenac.value',74778);
+		}
+		
+		if((getValue('dicl_dispensee.value') !='') || (getValue('dicl_post_alt.value') != '')
+			|| (getValue('dicl_j_alt.value') != '') || (getValue('dicl_nb_pil.value') !=''))
+		{
+		setValue('diclofenac1.value',74778);
+		}
+		
+		if((getValue('posologieIbuprofene.value') !='') || (getValue('posologie_ibuprofene.value') !='')
+			|| (getValue('ibu_nbj_prescrit.value') != '')) 
+		{
+		setValue('ibuprofene.value',77897);
+		}
+		
+		if((getValue('ibu_dispensee.value') !='') || (getValue('ibu_post_alt.value') != '')
+			|| (getValue('ibu_j_alt.value') != '') || (getValue('ibu_nb_pil.value') !=''))
+		{
+		setValue('ibuprofene1.value',77897);
+		}
+		
+		if((getValue('posologieParacetamol.value') !='') || (getValue('posologie_paracetamol.value') !='')
+			|| (getValue('para_nbj_prescrit.value') != '')) 
+		{
+		setValue('paracetamol.value',70116);
+		}
+		
+		if((getValue('para_dispensee.value') !='') || (getValue('para_post_alt.value') != '')
+			|| (getValue('para_j_alt.value') != '') || (getValue('para_nb_pil.value') !=''))
+		{
+		setValue('paracetamol1.value',70116);
+		}
+		
+		if((getValue('posologie6.value') !='') || (getValue('posologie6bis.value') !='')
+			|| (getValue('amox_nbj_prescrit.value') != '')) 
+		{
+		setValue('amoxiciline.value',71160);
+		}
+		
+		if((getValue('amox_dispensee.value') !='') || (getValue('amox_post_alt.value') != '')
+			|| (getValue('amox_j_alt.value') != '') || (getValue('amox_nb_pil.value') !=''))
+		{
+		setValue('amoxiciline1.value',71160);
+		}
+		
+		if((getValue('posologie7.value') !='') || (getValue('posologie7bis.value') !='')
+			|| (getValue('cipr_nbj_prescrit.value') != '')) 
+		{
+		setValue('ciprofloxacine.value',73449);
+		}
+		
+		if((getValue('cipr_dispensee.value') !='') || (getValue('cipr_post_alt.value') != '')
+			|| (getValue('cipr_j_alt.value') != '') || (getValue('cipr_nb_pil.value') !=''))
+		{
+		setValue('ciprofloxacine1.value',73449);
+		}
+		
+		if((getValue('posologie8.value') !='') || (getValue('posologie8bis.value') !='')
+			|| (getValue('clar_nbj_prescrit.value') != '')) 
+		{
+		setValue('clarithromycin.value',73498);
+		}
+		
+		if((getValue('clar_dispensee.value') !='') || (getValue('clar_post_alt.value') != '')
+			|| (getValue('clar_j_alt.value') != '') || (getValue('clar_nb_pil.value') !=''))
+		{
+		setValue('clarithromycin1.value',73498);
+		}
+		
+		if((getValue('posologie_amoxac.value') !='') || (getValue('posologie_amoxacbis.value') !='')
+			|| (getValue('amoxac_nbj_prescrit.value') != '')) 
+		{
+		setValue('amoxac.value',450);
+		}
+		
+		if((getValue('amoxac_dispensee.value') !='') || (getValue('amoxac_post_alt.value') != '')
+			|| (getValue('amoxac_j_alt.value') != '') || (getValue('amoxac_nb_pil.value') !=''))
+		{
+		setValue('amoxac1.value',450);
+		}
+		
+		if((getValue('posologie9.value') !='') || (getValue('posologie9bis.value') !='')
+			|| (getValue('azit_nbj_prescrit.value') != '')) 
+		{
+		setValue('azithromycin.value',71780);
+		}
+		
+		if((getValue('azit_dispensee.value') !='') || (getValue('azit_post_alt.value') != '')
+			|| (getValue('azit_j_alt.value') != '') || (getValue('azit_nb_pil.value') !=''))
+		{
+		setValue('azithromycin1.value',71780);
+		}
+		
+		if((getValue('presentation17.value') == '138405') || (getValue('presentation17.value') == '163768')
+			|| (getValue('posologie_cotrimoxazole.value') !='') || (getValue('posologie_cotrimoxazole_bis.value') !='')
+			|| (getValue('cotrim_nbj_prescrit.value') != '')) 
+		{
+		setValue('cotrimoxazole.value',105281);
+		}
+		
+		if((getValue('cotrim_dispensee.value') !='') || (getValue('cotrim_post_alt.value') != '')
+			|| (getValue('cotrim_j_alt.value') != '') || (getValue('cotrim_nb_pil.value') !=''))
+		{
+		setValue('cotrimoxazole1.value',105281);
+		}
+		
+		if((getValue('posologie10.value') !='') || (getValue('posologie10bis.value') !='')
+			|| (getValue('eryt_nbj_prescrit.value') != '')) 
+		{
+		setValue('erythromycin.value',75842);
+		}
+		
+		if((getValue('eryt_dispensee.value') !='') || (getValue('eryt_post_alt.value') != '')
+			|| (getValue('eryt_j_alt.value') != '') || (getValue('eryt_nb_pil.value') !=''))
+		{
+		setValue('erythromycin1.value',75842);
+		}
+		
+		if((getValue('posologie_mebendazole.value') !='') || (getValue('posologie_mebendazolebis.value') !='')
+			|| (getValue('meben_nbj_prescrit.value') != '')) 
+		{
+		setValue('mebendazole.value',79413);
+		}
+		
+		if((getValue('meben_dispensee.value') !='') || (getValue('meben_post_alt.value') != '')
+			|| (getValue('meben_j_alt.value') != '') || (getValue('meben_nb_pil.value') !=''))
+		{
+		setValue('mebendazole1.value',79413);
+		}
+		
+		if((getValue('posologie11.value') !='') || (getValue('posologie11bis.value') !='')
+			|| (getValue('metro_nbj_prescrit.value') != '')) 
+		{
+		setValue('metromidazole.value',79782);
+		}
+		
+		if((getValue('metro_dispensee.value') !='') || (getValue('metro_post_alt.value') != '')
+			|| (getValue('metro_j_alt.value') != '') || (getValue('metro_nb_pil.value') !=''))
+		{
+		setValue('metromidazole1.value',79782);
+		}
+		
+		if((getValue('posologie14.value') !='') || (getValue('posologie14bis.value') !='')
+			|| (getValue('amph_nbj_prescrit.value') != '')) 
+		{
+		setValue('amphotericine.value',71184);
+		}
+		
+		if((getValue('amph_dispensee.value') !='') || (getValue('amph_post_alt.value') != '')
+			|| (getValue('amph_j_alt.value') != '') || (getValue('amph_nb_pil.value') !=''))
+		{
+		setValue('amphotericine1.value',71184);
+		}
+		
+		if((getValue('posologie15.value') !='') || (getValue('posologie15bis.value') !='')
+			|| (getValue('fluc_nbj_prescrit.value') != '')) 
+		{
+		setValue('fluconazole.value',76488);
+		}
+		
+		if((getValue('fluc_dispensee.value') !='') || (getValue('fluc_post_alt.value') != '')
+			|| (getValue('fluc_j_alt.value') != '') || (getValue('fluc_nb_pil.value') !=''))
+		{
+		setValue('fluconazole1.value',76488);
+		}
+		
+		if((getValue('posologie16.value') !='') || (getValue('posologie16bis.value') !='')
+			|| (getValue('itra_nbj_prescrit.value') != '')) 
+		{
+		setValue('itraconazole.value',78338);
+		}
+		
+		if((getValue('itra_dispensee.value') !='') || (getValue('itra_post_alt.value') != '')
+			|| (getValue('itra_j_alt.value') != '') || (getValue('itra_nb_pil.value') !=''))
+		{
+		setValue('itraconazole1.value',78338);
+		}
+		
+		if((getValue('posologie17.value') !='') || (getValue('posologie17bis.value') !='')
+			|| (getValue('keta_nbj_prescrit.value') != '')) 
+		{
+		setValue('ketaconazole.value',78476);
+		}
+		
+		if((getValue('keta_dispensee.value') !='') || (getValue('keta_post_alt.value') != '')
+			|| (getValue('keta_j_alt.value') != '') || (getValue('keta_nb_pil.value') !=''))
+		{
+		setValue('ketaconazole1.value',78476);
+		}
+		
+		if((getValue('posologie18.value') !='') || (getValue('posologie18bis.value') !='')
+			|| (getValue('mico_nbj_prescrit.value') != '')) 
+		{
+		setValue('miconazole.value',79831);
+		}
+		
+		if((getValue('mico_dispensee.value') !='') || (getValue('mico_post_alt.value') != '')
+			|| (getValue('mico_j_alt.value') != '') || (getValue('mico_nb_pil.value') !=''))
+		{
+		setValue('miconazole1.value',79831);
+		}
+		
+		if((getValue('posologie19.value') !='') || (getValue('posologie19bis.value') !='')
+			|| (getValue('nys_nbj_prescrit.value') != '')) 
+		{
+		setValue('nystatin.value',80945);
+		}
+		
+		if((getValue('nys_dispensee.value') !='') || (getValue('nys_post_alt.value') != '')
+			|| (getValue('nys_j_alt.value') != '') || (getValue('nys_nb_pil.value') !=''))
+		{
+		setValue('nystatin1.value',80945);
+		}
+		
+		if((getValue('posologie20.value') !='') || (getValue('posologie20bis.value') !='')
+			|| (getValue('alb_nbj_prescrit.value') != '')) 
+		{
+		setValue('albendazole.value',70439);
+		}
+		
+		if((getValue('alb_dispensee.value') !='') || (getValue('alb_post_alt.value') != '')
+			|| (getValue('alb_j_alt.value') != '') || (getValue('alb_nb_pil.value') !=''))
+		{
+		setValue('albendazole1.value',70439);
+		}
+		
+		if((getValue('posologie21.value') !='') || (getValue('posologie21bis.value') !='')
+			|| (getValue('chlo_nbj_prescrit.value') != '')) 
+		{
+		setValue('chloroquine.value',73300);
+		}
+		
+		if((getValue('chlo_dispensee.value') !='') || (getValue('chlo_post_alt.value') != '')
+			|| (getValue('chlo_j_alt.value') != '') || (getValue('chlo_nb_pil.value') !=''))
+		{
+		setValue('chloroquine1.value',73300);
+		}
+		
+		if((getValue('posologie22.value') !='') || (getValue('posologie22bis.value') !='')
+			|| (getValue('iver_nbj_prescrit.value') != '')) 
+		{
+		setValue('ivermectine.value',78342);
+		}
+		
+		if((getValue('iver_dispensee.value') !='') || (getValue('iver_post_alt.value') != '')
+			|| (getValue('iver_j_alt.value') != '') || (getValue('iver_nb_pil.value') !=''))
+		{
+		setValue('ivermectine1.value',78342);
+		}
+		
+		if((getValue('posologie23.value') !='') || (getValue('posologie23bis.value') !='')
+			|| (getValue('prima_nbj_prescrit.value') != '')) 
+		{
+		setValue('primaquine.value',82521);
+		}
+		
+		if((getValue('prima_dispensee.value') !='') || (getValue('prima_post_alt.value') != '')
+			|| (getValue('prima_j_alt.value') != '') || (getValue('prima_nb_pil.value') !=''))
+		{
+		setValue('primaquine1.value',82521);
+		}
+		
+		if((getValue('posologie24.value') !='') || (getValue('posologie24bis.value') !='')
+			|| (getValue('pyri_nbj_prescrit.value') != '')) 
+		{
+		setValue('pyrimethamine.value',82919);
+		}
+		
+		if((getValue('pyri_dispensee.value') !='') || (getValue('pyri_post_alt.value') != '')
+			|| (getValue('pyri_j_alt.value') != '') || (getValue('pyri_nb_pil.value') !=''))
+		{
+		setValue('pyrimethamine1.value',82919);
+		}
+		
+		if((getValue('posologie25.value') !='') || (getValue('posologie25bis.value') !='')
+			|| (getValue('quin_nbj_prescrit.value') != '')) 
+		{
+		setValue('quinine.value',83023);
+		}
+		
+		if((getValue('quin_dispensee.value') !='') || (getValue('quin_post_alt.value') != '')
+			|| (getValue('quin_j_alt.value') != '') || (getValue('quin_nb_pil.value') !=''))
+		{
+		setValue('quinine1.value',83023);
+		}
+		
+		if((getValue('posologie26.value') !='') || (getValue('posologie26bis.value') !='')
+			|| (getValue('sulf_nbj_prescrit.value') != '')) 
+		{
+		setValue('sulfadiazine.value',84459);
+		}
+		
+		if((getValue('sulf_dispensee.value') !='') || (getValue('sulf_post_alt.value') != '')
+			|| (getValue('sulf_j_alt.value') != '') || (getValue('sulf_nb_pil.value') !=''))
+		{
+		setValue('sulfadiazine1.value',84459);
+		}
+		
+		if((getValue('posologie27.value') !='') || (getValue('posologie27bis.value') !='')
+			|| (getValue('eth_nbj_prescrit.value') != '')) 
+		{
+		setValue('ethambutol.value',75948);
+		}
+		
+		if((getValue('presentation18.value') == '138405') || (getValue('presentation18.value') == '163768')
+			|| (getValue('posologie_isoniazide.value') !='') || (getValue('posologie_isoniazide_bis.value') !='')
+			|| (getValue('ison_nbj_prescrit.value') != '')) 
+		{
+		setValue('isoniazide.value',78280);
+		}
+		
+		if((getValue('ison_dispensee.value') !='') || (getValue('ison_post_alt.value') != '')
+			|| (getValue('ison_j_alt.value') != '') || (getValue('ison_nb_pil.value') !=''))
+		{
+		setValue('isoniazide1.value',78280);
+		}
+		
+		
+		if((getValue('eth_dispensee.value') !='') || (getValue('eth_post_alt.value') != '')
+			|| (getValue('eth_j_alt.value') != '') || (getValue('eth_nb_pil.value') !=''))
+		{
+		setValue('ethambutol1.value',75948);
+		}
+		
+		if((getValue('posologie28.value') !='') || (getValue('posologie28bis.value') !='')
+			|| (getValue('pyr_nbj_prescrit.value') != '')) 
+		{
+		setValue('pyrazinamide.value',82900);
+		}
+		
+		if((getValue('pyr_dispensee.value') !='') || (getValue('pyr_post_alt.value') != '')
+			|| (getValue('pyr_j_alt.value') != '') || (getValue('pyr_nb_pil.value') !=''))
+		{
+		setValue('pyrazinamide1.value',82900);
+		}
+		
+		if((getValue('posologie29.value') !='') || (getValue('posologie29bis.value') !='')
+			|| (getValue('rif_nbj_prescrit.value') != '')) 
+		{
+		setValue('rifampicine.value',767);
+		}
+		
+		if((getValue('rif_dispensee.value') !='') || (getValue('rif_post_alt.value') != '')
+			|| (getValue('rif_j_alt.value') != '') || (getValue('rif_nb_pil.value') !=''))
+		{
+		setValue('rifampicine1.value',767);
+		}
+		
+		if((getValue('posologie30.value') !='') || (getValue('posologie30bis.value') !='')
+			|| (getValue('strep_nbj_prescrit.value') != '')) 
+		{
+		setValue('streptomycine.value',84360);
+		}
+		
+		if((getValue('strep_dispensee.value') !='') || (getValue('strep_post_alt.value') != '')
+			|| (getValue('strep_j_alt.value') != '') || (getValue('strep_nb_pil.value') !=''))
+		{
+		setValue('streptomycine1.value',84360);
+		}
+		
+		if((getValue('posologie31.value') !='') || (getValue('posologie31bis.value') !='')
+			|| (getValue('acf_nbj_prescrit.value') != '')) 
+		{
+		setValue('acideF.value',76613);
+		}
+		
+		if((getValue('acf_dispensee.value') !='') || (getValue('acf_post_alt.value') != '')
+			|| (getValue('acf_j_alt.value') != '') || (getValue('acf_nb_pil.value') !=''))
+		{
+		setValue('acideF1.value',76613);
+		}
+		
+		if((getValue('posologie32.value') !='') || (getValue('posologie32bis.value') !='')
+			|| (getValue('bcom_nbj_prescrit.value') != '')) 
+		{
+		setValue('bComplexe.value',86341);
+		}
+		
+		if((getValue('bcom_dispensee.value') !='') || (getValue('bcom_post_alt.value') != '')
+			|| (getValue('bcom_j_alt.value') != '') || (getValue('bcom_nb_pil.value') !=''))
+		{
+		setValue('bComplexe1.value',86341);
+		}
+		
+		if((getValue('posologie33.value') !='') || (getValue('posologie33bis.value') !='')
+			|| (getValue('fer_nbj_prescrit.value') != '')) 
+		{
+		setValue('fer.value',78218);
+		}
+		
+		if((getValue('fer_dispensee.value') !='') || (getValue('fer_post_alt.value') != '')
+			|| (getValue('fer_j_alt.value') != '') || (getValue('fer_nb_pil.value') !=''))
+		{
+		setValue('fer1.value',78218);
+		}
+		
+		if((getValue('posologie34.value') !='') || (getValue('posologie34bis.value') !='')
+			|| (getValue('mult_nbj_prescrit.value') != '')) 
+		{
+		setValue('multivitamine.value',461);
+		}
+		
+		if((getValue('mult_dispensee.value') !='') || (getValue('mult_post_alt.value') != '')
+			|| (getValue('mult_j_alt.value') != '') || (getValue('mult_nb_pil.value') !=''))
+		{
+		setValue('multivitamine1.value',461);
+		}
+		
+		if((getValue('posologie36.value') !='') || (getValue('posologie36bis.value') !='')
+			|| (getValue('supp_nbj_prescrit.value') != '')) 
+		{
+		setValue('supplémentP.value',82767);
+		}
+		
+		if((getValue('supp_dispensee.value') !='') || (getValue('supp_post_alt.value') != '')
+			|| (getValue('supp_j_alt.value') != '') || (getValue('supp_nb_pil.value') !=''))
+		{
+		setValue('supplémentP1.value',82767);
+		}
+		
+		if((getValue('posologie38.value') !='') || (getValue('posologie38bis.value') !='')
+			|| (getValue('acy_nbj_prescrit.value') != '')) 
+		{
+		setValue('acyclovir.value',70245);
+		}
+		
+		if((getValue('acy_dispensee.value') !='') || (getValue('acy_post_alt.value') != '')
+			|| (getValue('acy_j_alt.value') != '') || (getValue('acy_nb_pil.value') !=''))
+		{
+		setValue('acyclovir1.value',70245);
+		}
+		
+		if((getValue('posologie39.value') !='') || (getValue('posologie39bis.value') !='')
+			|| (getValue('lope_nbj_prescrit.value') != '')) 
+		{
+		setValue('loperamide.value',79037);
+		}
+		
+		if((getValue('lope_dispensee.value') !='') || (getValue('lope_post_alt.value') != '')
+			|| (getValue('lope_j_alt.value') != '') || (getValue('lope_nb_pil.value') !=''))
+		{
+		setValue('loperamide1.value',79037);
+		}
+		
+		if((getValue('posologie40.value') !='') || (getValue('posologie40bis.value') !='')
+			|| (getValue('pro_nbj_prescrit.value') != '')) 
+		{
+		setValue('promethazine.value',82667);
+		}
+		
+		if((getValue('pro_dispensee.value') !='') || (getValue('pro_post_alt.value') != '')
+			|| (getValue('pro_j_alt.value') != '') || (getValue('pro_nb_pil.value') !=''))
+		{
+		setValue('promethazine1.value',82667);
+		}
 
-		if(getValue('posologie2.value') !='') {
-		setValue('aspirine.value',71617); setValue('aspirine1.value',71617);}
-
-		if(getValue('posologieDiclofenac.value') !='') {
+		<!--  if(getValue('posologieDiclofenac.value') !='') {
 		setValue('diclofenac.value',74778);
 		setValue('diclofenac1.value',74778);}
 
 		if(getValue('posologieIbuprofene.value') !='') {
 		setValue('ibuprofene.value',77897);
-		setValue('ibuprofene1.value',77897);}
+		setValue('ibuprofene1.value',77897);} 
 
 		if(getValue('posologieParacetamol.value') !='') {
 		setValue('paracetamol.value',70116);
-		setValue('paracetamol1.value',70116);}
+		setValue('paracetamol1.value',70116);} 
 
 		if(getValue('posologie6.value') !='') { setValue('amoxiciline.value',71160);
-		setValue('amoxiciline1.value',71160);}
+		setValue('amoxiciline1.value',71160);} 
 
 		if(getValue('posologie7.value') !='') { setValue('ciprofloxacine.value',73449);
-		setValue('ciprofloxacine1.value',73449);}
+		setValue('ciprofloxacine1.value',73449);} 
 
 		if(getValue('posologie8.value') !='') {
 		setValue('clarithromycin.value',73498);
-		setValue('clarithromycin1.value',73498);}
+		setValue('clarithromycin1.value',73498);} 
 
 		if(getValue('posologie_amoxac.value') !='') {
-		setValue('amoxac.value',450); setValue('amoxac1.value',450);}
+		setValue('amoxac.value',450); setValue('amoxac1.value',450);} 
 
 		if(getValue('posologie9.value') !='') {
 		setValue('azithromycin.value',71780);
@@ -170,11 +782,11 @@
 
 		if(getValue('posologie10.value') !='') {
 		setValue('erythromycin.value',75842);
-		setValue('erythromycin1.value',75842);}
+		setValue('erythromycin1.value',75842);} 
 
 		if(getValue('posologie_mebendazole.value') !='') {
 		setValue('mebendazole.value',79413);
-		setValue('mebendazole1.value',79413);}
+		setValue('mebendazole1.value',79413);} 
 
 		if(getValue('posologie11.value') !='') {
 		setValue('metromidazole.value',79782);
@@ -186,7 +798,7 @@
 
 		if(getValue('posologie15.value') !='') {
 		setValue('fluconazole.value',76488);
-		setValue('fluconazole1.value',76488);}
+		setValue('fluconazole1.value',76488);} 
 
 		if(getValue('posologie16.value') !='') {
 		setValue('itraconazole.value',78338);
@@ -194,7 +806,7 @@
 
 		if(getValue('posologie17.value') !='') {
 		setValue('ketaconazole.value',78476);
-		setValue('ketaconazole1.value',78476);}
+		setValue('ketaconazole1.value',78476);} 
 
 		if(getValue('posologie18.value') !='') {
 		setValue('miconazole.value',79831);
@@ -272,7 +884,7 @@
 		setValue('loperamide1.value',79037);}
 
 		if(getValue('posologie40.value') !='') { setValue('promethazine.value',82667);
-		setValue('promethazine1.value',82667);}
+		setValue('promethazine1.value',82667);} -->
 
 		return true;
 		});
@@ -373,7 +985,7 @@
 							<td>
 								Abacavir(ABC):
 								<span style="display:none">
-									<obs conceptId="CIEL:1282" id="abacavir" answerConceptId="CIEL:70056"
+									<obs conceptId="CIEL:1282"  answerConceptId="CIEL:70056" id="abacavir"
 										answerLabel="Abacavir(ABC)" />
 								</span>
 							</td>
@@ -382,33 +994,33 @@
 									id="presentation" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="300mg comprimé &lt;br/&gt;,20mg/ml sirop"
+								<obs conceptId="CIEL:1444" answers="300mg comprimé &lt;br/&gt;,20mg/ml sirop" id="abac_dosage"
 									style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="abac_dosage_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="abac_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
 
 							<td>
 								<span style="display:none">
-									<obs conceptId="CIEL:1282" id="abacavir1" answerConceptId="CIEL:70056"
+									<obs conceptId="CIEL:1282"  answerConceptId="CIEL:70056" id="abacavir1"
 										answerLabel="Abacavir(ABC)" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="abacavir_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="abac_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="abac_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="abac_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -430,13 +1042,13 @@
 								id="presentation1" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg/ 150mg BID" style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg/ 150mg BID" id="comb_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="comb_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="comb_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -447,15 +1059,15 @@
 									answerLabel="Combivir(AZT+3TC)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="combivir_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="comb_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="comb_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="comb_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -476,13 +1088,13 @@
 								id="presentation2" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="400mg tablette" style="radio" />
+							<obs conceptId="CIEL:1444" answers="400mg tablette" id="did_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="did_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="did_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -493,15 +1105,15 @@
 									answerLabel="Didanosine(ddI)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="did_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="did_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="did_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="did_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -522,13 +1134,13 @@
 								id="presentation3" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="200mg" style="radio" />
+							<obs conceptId="CIEL:1444" answers="200mg" id="emt_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="emt_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="emt_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -539,15 +1151,15 @@
 									answerConceptId="CIEL:75628" answerLabel="Emtricitabine(FTC)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="emt_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="emt_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="emt_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="emt_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -568,14 +1180,14 @@
 								id="presentation4" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="150mg comprimé&lt;br/&gt;,10mg/ml sirop"
+							<obs conceptId="CIEL:1444" answers="150mg comprimé&lt;br/&gt;,10mg/ml sirop" id="lam_dosage"
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="lam_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="lam_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -586,15 +1198,15 @@
 									answerLabel="Lamivudine(3TC)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="lam_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="lam_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="lam_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="lam_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -615,14 +1227,14 @@
 								id="presentation5" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="40mg capsule&lt;br/&gt;,1mg/ml sirop"
+							<obs conceptId="CIEL:1444" answers="40mg capsule&lt;br/&gt;,1mg/ml sirop" id="sta_dosage"
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="sta_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="sta_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -633,15 +1245,15 @@
 									answerLabel="Stavudine(d4T)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="sta_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="sta_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="sta_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="sta_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -662,14 +1274,14 @@
 								id="presentation7" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg/ 300mg/ 150mg"
+							<obs conceptId="CIEL:1444" answers="300mg/ 300mg/ 150mg" id="tri_dosage" 
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="tri_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="tri_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -680,15 +1292,15 @@
 									answerLabel="Trizivir(ABC+AZT+3TC)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="tri_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="tri_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="tri_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="tri_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -709,14 +1321,14 @@
 								id="presentation8" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg capsule&lt;br/&gt;,10mg/ml sirop"
+							<obs conceptId="CIEL:1444" answers="300mg capsule&lt;br/&gt;,10mg/ml sirop" id="zid_dosage"
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="zid_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="zid_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -727,15 +1339,15 @@
 									answerLabel="Zidovudine(AZT)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="zid_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="zid_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="zid_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="zid_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -756,13 +1368,13 @@
 								id="presentation6" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg" style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg" id="ten_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="ten_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="ten_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -773,15 +1385,15 @@
 									answerLabel="Tenofovir(TNF)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="ten_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="ten_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="ten_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="ten_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -808,14 +1420,14 @@
 									id="presentation9" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="600mg comprimé&lt;br/&gt;,30mg/ml sirop"
+								<obs conceptId="CIEL:1444" answers="600mg comprimé&lt;br/&gt;,30mg/ml sirop" id="efa_dosage"
 									style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="efa_dosage_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="efa_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -826,15 +1438,15 @@
 										answerLabel="Efavirenz(EFV)" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="efa_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="efa_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="efa_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="efa_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -856,14 +1468,14 @@
 								id="presentation10" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="200mg comprimé&lt;br/&gt;,10mg/ml"
+							<obs conceptId="CIEL:1444" answers="200mg comprimé&lt;br/&gt;,10mg/ml" id="nev_dosage"
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="nev_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="nev_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -874,15 +1486,15 @@
 									answerLabel="Nevirapine(NVP)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="nev_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="nev_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="nev_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="nev_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -910,14 +1522,14 @@
 							</td>
 							<td>
 								<obs conceptId="CIEL:1444"
-									answers="400mg/ 100mg comprimé&lt;br/&gt;,80mg/20mg/ml sirop"
+									answers="400mg/ 100mg comprimé&lt;br/&gt;,80mg/20mg/ml sirop" id="lop_dosage" 
 									style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="lop_dosage_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="lop_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -928,15 +1540,15 @@
 										answerLabel="Lopinavir + BostRTV(Kaletra)" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="lop_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="lop_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="lop_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="lop_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -959,14 +1571,14 @@
 								id="presentation12" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="250mg comprimé&lt;br/&gt;,200mg/5ml sirop"
+							<obs conceptId="CIEL:1444" answers="250mg comprimé&lt;br/&gt;,200mg/5ml sirop" id="nelf_dosage"
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="nelf_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="nelf_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -977,15 +1589,15 @@
 									answerLabel="Nelfinavir (NFV)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="nelf_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="nelf_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="nelf_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="nelf_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1006,13 +1618,13 @@
 								id="presentation13" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="200mg" style="radio" />
+							<obs conceptId="CIEL:1444" answers="200mg" id="saq_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="saq_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="saq_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1023,15 +1635,15 @@
 									answerLabel="Saquinavir (SQV)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="saq_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="saq_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="saq_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="saq_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1053,14 +1665,14 @@
 								id="presentation15" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="100mg comprimé&lt;br/&gt;,80mg/ml"
+							<obs conceptId="CIEL:1444" answers="100mg comprimé&lt;br/&gt;,80mg/ml" id="rit_dosage"
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="rit_dosage_alt" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="rit_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1071,15 +1683,15 @@
 									answerLabel="Ritonavir (RTV)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="rit_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="rit_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="rit_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="rit_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1120,7 +1732,7 @@
 								<obs conceptId="CIEL:1444" id="posologie2bis" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="asp_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1131,15 +1743,15 @@
 										answerLabel="Aspirine" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="asp_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="asp_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="asp_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="asp_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1163,7 +1775,7 @@
 								<obs conceptId="CIEL:1444" id="posologie_diclofenac" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="dicl_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1174,15 +1786,15 @@
 										answerLabel="Diclofénac de Sodium" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="dicl_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="dicl_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="dicl_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="dicl_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1206,7 +1818,7 @@
 								<obs conceptId="CIEL:1444" id="posologie_ibuprofene" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="ibu_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1217,15 +1829,15 @@
 										answerLabel="Ibuprofene" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="ibu_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="ibu_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="ibu_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="ibu_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1249,7 +1861,7 @@
 								<obs conceptId="CIEL:1444" id="posologie_paracetamol" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="para_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1260,15 +1872,15 @@
 										answerLabel="Paracétamol" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="para_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="para_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="para_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="para_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1302,7 +1914,7 @@
 								<obs conceptId="CIEL:1444" id="posologie6bis" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="amox_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1313,15 +1925,15 @@
 										answerLabel="Amoxiciline" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="amox_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="amox_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="amox_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="amox_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1346,7 +1958,7 @@
 							<obs conceptId="CIEL:1444" id="posologie7bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="cipr_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1357,15 +1969,15 @@
 									answerLabel="Ciprofloxacine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="cipr_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="cipr_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="cipr_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="cipr_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1389,7 +2001,7 @@
 							<obs conceptId="CIEL:1444" id="posologie_amoxacbis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="amoxac_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1400,15 +2012,15 @@
 									answerLabel="Amoxiciline + acide clavulanique" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="amoxac_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="amoxac_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="amoxac_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="amoxac_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1420,7 +2032,7 @@
 						<td>
 							Azithromycin:
 							<span style="display:none">
-								<obs conceptId="CIEL:1282" answerConceptId="CIEL:73546" id="azithromycin"
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:71780" id="azithromycin"
 									answerLabel="Azithromycin" />
 							</span>
 						</td>
@@ -1432,26 +2044,26 @@
 							<obs conceptId="CIEL:1444" id="posologie9bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="azit_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
 
 						<td>
 							<span style="display:none">
-								<obs conceptId="CIEL:1282" answerConceptId="CIEL:73546" id="azithromycin1"
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:71780" id="azithromycin1"
 									answerLabel="Azithromycin" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="azit_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="azit_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="azit_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="azit_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1472,13 +2084,13 @@
 								id="presentation17" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="posologie_cotrimoxazole" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="posologie_cotrimoxazole_bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="cotrim_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1489,15 +2101,15 @@
 									answerLabel="Cotrimoxazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="cotrim_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="cotrim_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="cotrim_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="cotrim_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1521,7 +2133,7 @@
 							<obs conceptId="CIEL:1444" id="posologie10bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="eryt_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1532,15 +2144,15 @@
 									answerLabel="Erythromycin" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="eryt_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="eryt_post_alt"/>
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368"  id="eryt_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="eryt_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1564,7 +2176,7 @@
 							<obs conceptId="CIEL:1444" id="posologie8bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="clar_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1575,15 +2187,15 @@
 									answerLabel="Clarithromycin" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="clar_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="clar_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="clar_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="clar_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1613,7 +2225,7 @@
 								<obs conceptId="CIEL:1444" id="posologie14bis" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="amph_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1624,15 +2236,15 @@
 										answerLabel="Amphotericine B" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="amph_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="amph_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="amph_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="amph_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1657,7 +2269,7 @@
 							<obs conceptId="CIEL:1444" id="posologie15bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="fluc_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1668,15 +2280,15 @@
 									answerLabel="Fluconazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="fluc_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="fluc_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="fluc_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="fluc_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1700,7 +2312,7 @@
 							<obs conceptId="CIEL:1444" id="posologie16bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="itra_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1711,15 +2323,15 @@
 									answerLabel="Itraconazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="itra_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="itra_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="itra_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="itra_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1743,7 +2355,7 @@
 							<obs conceptId="CIEL:1444" id="posologie17bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="keta_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1754,15 +2366,15 @@
 									answerLabel="Ketaconazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="keta_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="keta_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="keta_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="keta_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1786,7 +2398,7 @@
 							<obs conceptId="CIEL:1444" id="posologie18bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="mico_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1797,15 +2409,15 @@
 									answerLabel="Miconazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="mico_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="mico_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="mico_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="mico_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1829,7 +2441,7 @@
 							<obs conceptId="CIEL:1444" id="posologie19bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="nys_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1840,15 +2452,15 @@
 									answerLabel="Nystatin" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="nys_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="nys_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="nys_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="nys_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1878,7 +2490,7 @@
 								<obs conceptId="CIEL:1444" id="posologie20bis" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="alb_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -1889,15 +2501,15 @@
 										answerLabel="Albendazole" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="alb_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="alb_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="alb_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="alb_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -1922,7 +2534,7 @@
 							<obs conceptId="CIEL:1444" id="posologie21bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="chlo_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1933,15 +2545,15 @@
 									answerLabel="Chloroquine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="chlo_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="chlo_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="chlo_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="chlo_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -1965,7 +2577,7 @@
 							<obs conceptId="CIEL:1444" id="posologie22bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="iver_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -1976,15 +2588,15 @@
 									answerLabel="Ivermectine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="iver_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="iver_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="iver_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="iver_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2008,26 +2620,26 @@
 							<obs conceptId="CIEL:1444" id="posologie_mebendazolebis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="meben_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
 
 						<td>
 							<span style="display:none">
-								<obs conceptId="CIEL:1282" answerConceptId="CIEL:79413" id="mebendazole"
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:79413" id="mebendazole1"
 									answerLabel="Mebendazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="meben_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="meben_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="meben_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="meben_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2051,7 +2663,7 @@
 							<obs conceptId="CIEL:1444" id="posologie11bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="metro_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2062,15 +2674,15 @@
 									answerLabel="Metromidazole" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="metro_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="metro_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="metro_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="metro_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2094,7 +2706,7 @@
 							<obs conceptId="CIEL:1444" id="posologie23bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="prima_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2105,15 +2717,15 @@
 									answerLabel="Primaquine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="prima_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="prima_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="prima_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="prima_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2137,7 +2749,7 @@
 							<obs conceptId="CIEL:1444" id="posologie24bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="pyri_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2148,15 +2760,15 @@
 									answerLabel="Pyrimethamine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="pyri_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="pyri_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="pyri_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="pyri_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2180,7 +2792,7 @@
 							<obs conceptId="CIEL:1444" id="posologie25bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="quin_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2191,15 +2803,15 @@
 									answerLabel="Quinine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="quin_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="quin_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="quin_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="quin_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2223,7 +2835,7 @@
 							<obs conceptId="CIEL:1444" id="posologie26bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="sulf_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2234,15 +2846,15 @@
 									answerLabel="Sulfadiazine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="sulf_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="sulf_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="sulf_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="sulf_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2271,7 +2883,7 @@
 							<obs conceptId="CIEL:1444" id="posologie27bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="eth_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2282,15 +2894,15 @@
 									answerLabel="Ethambutol" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="eth_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="eth_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="eth_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="eth_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2311,13 +2923,13 @@
 								id="presentation18" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="posologie_isoniazide" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="CIEL:1444" id="posologie_isoniazide_bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="ison_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2328,15 +2940,15 @@
 									answerLabel="Isoniazide" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="ison_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="ison_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="ison_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="ison_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2360,7 +2972,7 @@
 							<obs conceptId="CIEL:1444" id="posologie28bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="pyr_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2371,15 +2983,15 @@
 									answerLabel="Pyrazinamide" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="pyr_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="pyr_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="pyr_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="pyr_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2403,7 +3015,7 @@
 							<obs conceptId="CIEL:1444" id="posologie29bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="rif_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2414,15 +3026,15 @@
 									answerLabel="Rifampicine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="rif_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="rif_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="rif_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="rif_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2446,7 +3058,7 @@
 							<obs conceptId="CIEL:1444" id="posologie30bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="strep_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2457,15 +3069,15 @@
 									answerLabel="Streptomycine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="strep_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="strep_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="strep_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="strep_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2495,7 +3107,7 @@
 								<obs conceptId="CIEL:1444" id="posologie31bis" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="acf_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 						</obsgroup>
 						<obsgroup groupingConceptId="163711">
@@ -2506,15 +3118,15 @@
 										answerLabel="Acide Folique" />
 								</span>
 								<obs conceptId="CIEL:1276" style="checkbox" value="true"
-									showDate="true" labelText="Oui" />
+									showDate="true" id="acf_dispensee" labelText="Oui" />
 								<td>
-									<obs conceptId="CIEL:1444" />
+									<obs conceptId="CIEL:1444" id="acf_post_alt" />
 								</td>
 								<td>
-									<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+									<obs conceptId="CIEL:159368" id="acf_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 								</td>
 								<td>
-									<obs conceptId="CIEL:1443" />
+									<obs conceptId="CIEL:1443" id="acf_nb_pil" />
 								</td>
 							</td>
 						</obsgroup>
@@ -2539,7 +3151,7 @@
 							<obs conceptId="CIEL:1444" id="posologie32bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="bcom_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2550,15 +3162,15 @@
 									answerLabel="B Complexe" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="bcom_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="bcom_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="bcom_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="bcom_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2582,7 +3194,7 @@
 							<obs conceptId="CIEL:1444" id="posologie33bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="fer_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2593,15 +3205,15 @@
 									answerLabel="Fer" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="fer_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="fer_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="fer_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="fer_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2625,7 +3237,11 @@
 							<obs conceptId="CIEL:1444" id="posologie34bis" />
 						</td>
 						<td>
+
+							<obs conceptId="CIEL:159368" id="mult_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+
 							<obs conceptId="CIEL:159368"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2636,15 +3252,15 @@
 									answerLabel="Multivitamine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="mult_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="mult_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="mult_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="mult_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2669,7 +3285,7 @@
 							<obs conceptId="CIEL:1444" id="posologie36bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="supp_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2680,15 +3296,15 @@
 									answerLabel="Supplément Protéinique" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="supp_dispensee" abelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="supp_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="supp_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="supp_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2718,7 +3334,7 @@
 							<obs conceptId="CIEL:1444" id="posologie38bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="acy_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2729,15 +3345,15 @@
 									answerLabel="Acyclovir" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="acy_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="acy_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="acy_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="acy_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2761,7 +3377,7 @@
 							<obs conceptId="CIEL:1444" id="posologie39bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="lope_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2772,15 +3388,15 @@
 									answerLabel="Loperamide" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="lope_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="lope_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="lope_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="lope_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2804,7 +3420,7 @@
 							<obs conceptId="CIEL:1444" id="posologie40bis" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							<obs conceptId="CIEL:159368" id="pro_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 						</td>
 					</obsgroup>
 					<obsgroup groupingConceptId="163711">
@@ -2815,15 +3431,15 @@
 									answerLabel="Promethazine" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
-								showDate="true" labelText="Oui" />
+								showDate="true" id="pro_dispensee" labelText="Oui" />
 							<td>
-								<obs conceptId="CIEL:1444" />
+								<obs conceptId="CIEL:1444" id="pro_post_alt" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								<obs conceptId="CIEL:159368" id="pro_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
 							</td>
 							<td>
-								<obs conceptId="CIEL:1443" />
+								<obs conceptId="CIEL:1443" id="pro_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
@@ -2888,6 +3504,9 @@
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
+							<obs conceptId="CIEL:1444" />
+						</td>
+						<td>
 							<obs conceptId="CIEL:159368" />
 						</td>
 					</obsgroup>
@@ -2925,6 +3544,9 @@
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
+							<obs conceptId="CIEL:1444" />
+						</td>
+						<td>
 							<obs conceptId="CIEL:159368" />
 						</td>
 					</obsgroup>
@@ -2958,6 +3580,9 @@
 								answerClasses="Drug" style="autocomplete" />
 						</td>
 						<td></td>
+						<td>
+							<obs conceptId="CIEL:1444" />
+						</td>
 						<td>
 							<obs conceptId="CIEL:1444" />
 						</td>
