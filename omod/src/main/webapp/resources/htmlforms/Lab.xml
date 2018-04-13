@@ -3028,10 +3028,10 @@
 		Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
 		Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/>
 
+		Envoyez le résultat de laboratoire à: <br/>
+		<input id="send-lab-order-to-SCC" type="checkbox" />
+		<label for="send-lab-order-to-SCC">SCC via Sedish</label>
 		<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
-			Envoyez le résultat de laboratoire à: <br/>
-			<input id="send-lab-order-to-SCC" type="checkbox" />
-			<label for="send-lab-order-to-SCC">SCC via Sedish</label>
 			<input id="send-lab-order-to-OpenELIS" type="checkbox" />
 			<label for="send-lab-order-to-OpenELIS">OpenELIS</label><br/>
 		</includeIf>
