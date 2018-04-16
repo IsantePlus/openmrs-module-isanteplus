@@ -841,7 +841,7 @@
 	</script>
 	<script type="text/javascript">
 		function isEditMode() {
-			return typeof getValue === 'function'
+			return typeof getValue === 'function';
 		}
 		jQuery(function() {
 			if (isEditMode()) {
@@ -3031,7 +3031,7 @@
 			var SCC = 'SCC';
 			var OPEN_ELIS = 'OpenELIS';
 
-			function disableChoiceboxes() {
+			function disableCheckboxes() {
 				$('#send-lab-order-to-SCC').attr('disabled', true);
 				$('#send-lab-order-to-OpenELIS').attr("disabled", true);
 			}
@@ -3074,7 +3074,7 @@
 				registerHandlers();
 				init();
 				if (!isEditMode()) {
-					disableChoiceboxes();
+					disableCheckboxes();
 				}
 			});
 		</script>
@@ -3087,12 +3087,13 @@
 		<label for="send-lab-order-to-SCC">SCC via Sedish</label>
 		<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
 			<input id="send-lab-order-to-OpenELIS" type="checkbox" />
-			<label for="send-lab-order-to-OpenELIS">OpenELIS</label><br/>
+			<label for="send-lab-order-to-OpenELIS">OpenELIS</label>
 		</includeIf>
+		<br/>
 
 		<span style="display: none;">
-			<obs id="labOrderDestination1" conceptId="160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
-			<obs id="labOrderDestination2" conceptId="160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
+			<obs id="labOrderDestination1" conceptId="CIEL:160632" />
+			<obs id="labOrderDestination2" conceptId="CIEL:160632" />
 		</span>
 
 		<br/>
