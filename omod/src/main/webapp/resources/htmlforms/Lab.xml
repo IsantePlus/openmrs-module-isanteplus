@@ -3027,76 +3027,16 @@
 	<br/>
 	<br/>
 	<div id="datePr">
-		<script type="text/javascript">
-			var SCC = 'SCC';
-			var OPEN_ELIS = 'OpenELIS';
-
-			function disableCheckboxes() {
-				$('#send-lab-order-to-SCC').attr('disabled', true);
-				$('#send-lab-order-to-OpenELIS').attr("disabled", true);
-			}
-
-			function registerHandlers() {
-				$('#send-lab-order-to-SCC').change(function() {
-					if ($(this).is(':checked')) {
-						$('#labOrderDestination1 input').val(SCC);
-					} else {
-						$('#labOrderDestination1 input').val('');
-					}
-				});
-				$('#send-lab-order-to-OpenELIS').change(function() {
-					if ($(this).is(':checked')) {
-						$('#labOrderDestination2 input').val(OPEN_ELIS);
-					} else {
-						$('#labOrderDestination2 input').val('');
-					}
-				});
-			}
-
-			function init() {
-				// it is required when we edit the form - it makes sure that concepts are in the proper order
-				// and checks previously checked checkboxes
-
-				var initialValues = isEditMode()
-					? [$('#labOrderDestination1 input').val(), $('#labOrderDestination2 input').val()]
-					: [$('#labOrderDestination1 span').text(), $('#labOrderDestination2 span').text()];
-
-				var sccEnabled = $.inArray(SCC, initialValues) !== -1;
-				var openElisEnabled = $.inArray(OPEN_ELIS, initialValues) !== -1;
-
-				$('#send-lab-order-to-SCC').attr("checked", sccEnabled);
-				$('#send-lab-order-to-SCC').change()
-				$('#send-lab-order-to-OpenELIS').attr("checked", openElisEnabled);
-				$('#send-lab-order-to-OpenELIS').change()
-			}
-
-			$(function() {
-				registerHandlers();
-				init();
-				if (!isEditMode()) {
-					disableCheckboxes();
-				}
-			});
-		</script>
 		Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
-		Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/>
-		<br/>
+		Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/><br/>
 
-		Envoyez le résultat de laboratoire à: <br/>
-		<input id="send-lab-order-to-SCC" type="checkbox" />
-		<label for="send-lab-order-to-SCC">SCC via Sedish</label>
 		<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
-			<input id="send-lab-order-to-OpenELIS" type="checkbox" />
-			<label for="send-lab-order-to-OpenELIS">OpenELIS</label>
+			<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC,OpenELIS" style="dropdown" />
 		</includeIf>
-		<br/>
-
-		<span style="display: none;">
-			<obs id="labOrderDestination1" conceptId="CIEL:160632" />
-			<obs id="labOrderDestination2" conceptId="CIEL:160632" />
-		</span>
-
-		<br/>
+		<excludeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+			<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC" style="dropdown" />
+		</excludeIf>
+		<br/><br/>
 	</div>
 	<div id="sauvegarde">
 		<center><submit submitClass="confirm right" submitCode="general.save"/><br/>
