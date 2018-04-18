@@ -120,46 +120,42 @@
 		beforeSubmit.push(function() {
 
 		//Debut bacilloscopie
-		if ((getValue('bacidate1.value') == '') &amp;&amp;
-		(getValue('bacipoids1.value') == '') &amp;&amp;
-		(getValue('bacilloscopie1.value') != '703') &amp;&amp;
-		(getValue('bacilloscopie1.value') != '664')) {
-		setValue('bacimois1.value', '');
-		} else {
-		setValue('bacimois1.value', '0');
+		if ((getValue('bacidate1.value') != '') ||
+		(getValue('bacipoids1.value') != '') ||
+		(getValue('bacilloscopie1.value') == '703') ||
+		(getValue('bacilloscopie1.value') == '664')) {
+			setValue('bacimois1.value', '0');
 		}
-		if ((getValue('bacidate2.value') == '') &amp;&amp;
-		(getValue('bacipoids2.value') == '') &amp;&amp;
-		(getValue('bacilloscopie2.value') != '703') &amp;&amp;
-		(getValue('bacilloscopie2.value') != '664')) {
-		setValue('bacimois2.value', '');
-		} else {
-		setValue('bacimois2.value', '2');
+	
+		if ((getValue('bacidate2.value') != '') ||
+		(getValue('bacipoids2.value') != '') ||
+		(getValue('bacilloscopie2.value') == '703') ||
+		(getValue('bacilloscopie2.value') == '664')) {
+			setValue('bacimois2.value', '2');
 		}
-		if ((getValue('bacidate3.value') == '') &amp;&amp;
-		(getValue('bacipoids3.value') == '') &amp;&amp;
-		(getValue('bacilloscopie3.value') != '703') &amp;&amp;
-		(getValue('bacilloscopie3.value') != '664')) {
-		setValue('bacimois3.value', '');
-		} else {
-		setValue('bacimois3.value', '3');
+		
+		if ((getValue('bacidate3.value') != '') ||
+		(getValue('bacipoids3.value') != '') ||
+		(getValue('bacilloscopie3.value') == '703') ||
+		(getValue('bacilloscopie3.value') == '664')) {
+			setValue('bacimois3.value', '3');
 		}
-		if ((getValue('bacidate4.value') == '') &amp;&amp;
-		(getValue('bacipoids4.value') == '') &amp;&amp;
-		(getValue('bacilloscopie4.value') != '703') &amp;&amp;
-		(getValue('bacilloscopie4.value') != '664')) {
-		setValue('bacimois4.value', '');
-		} else {
-		setValue('bacimois4.value', '5');
+		
+		
+		if ((getValue('bacidate4.value') != '') ||
+		(getValue('bacipoids4.value') != '') ||
+		(getValue('bacilloscopie4.value') == '703') ||
+		(getValue('bacilloscopie4.value') == '664')) {
+			setValue('bacimois4.value', '5');
 		}
-		if ((getValue('bacidate5.value') == '') &amp;&amp;
-		(getValue('bacipoids5.value') == '') &amp;&amp;
-		(getValue('bacilloscopie5.value') != '703') &amp;&amp;
-		(getValue('bacilloscopie5.value') != '664')) {
-		setValue('bacimois5.value', '');
-		} else {
-		setValue('bacimois5.value', 'Fin de rx');
+		
+		if ((getValue('bacidate5.value') != '') ||
+		(getValue('bacipoids5.value') != '') ||
+		(getValue('bacilloscopie5.value') == '703') ||
+		(getValue('bacilloscopie5.value') == '664')) {
+			setValue('bacimois5.value', 'Fin de rx');
 		}
+		
 		//Fin bacilloscopie
 
 
@@ -2144,7 +2140,7 @@
 									<td>
 										0
 										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois1" defaultValue="0" />
+											<obs conceptId="CIEL:163756" id="bacimois1" />
 										</span>
 									</td>
 									<td>
@@ -2164,7 +2160,7 @@
 									<td>
 										2
 										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois2" defaultValue="2" />
+											<obs conceptId="CIEL:163756" id="bacimois2" />
 										</span>
 									</td>
 									<td>
@@ -2184,7 +2180,7 @@
 									<td>
 										3
 										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois3" defaultValue="3" />
+											<obs conceptId="CIEL:163756" id="bacimois3" />
 										</span>
 									</td>
 									<td>
@@ -2204,7 +2200,7 @@
 									<td>
 										5
 										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois4" defaultValue="5" />
+											<obs conceptId="CIEL:163756" id="bacimois4" />
 										</span>
 									</td>
 									<td>
@@ -2224,7 +2220,7 @@
 									<td>
 										Fin de rx
 										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois5" defaultValue="Fin de rx" />
+											<obs conceptId="CIEL:163756" id="bacimois5" />
 										</span>
 									</td>
 									<td>
