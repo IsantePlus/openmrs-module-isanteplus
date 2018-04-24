@@ -534,11 +534,33 @@
 								id="retrait_social" color="#D8D8D8" />
 							<render concept="CIEL:6023" drugname="IRRITABILITÉ" id="irritabilite"
 								color="#FFFFFF" />
-							<render concept="CIEL:137646" symtomename="Discours Incoherent"
+							<render concept="CIEL:137646" drugname="Discours Incoherent"
 								id="discours" color="#D8D8D8" />
-							<render concept="CIEL:141611" symtomename="Humeur dysphorique"
+							<render concept="CIEL:141611" drugname="Humeur dysphorique"
 								id="humeur_dysphorique" color="#FFFFFF" />
 						</repeat>
+						<obsgroup groupingConceptId="1727">
+									<tr>
+										<td>
+											<obs conceptId="CIEL:1728" answerConceptId="5622"
+												answerLabel="Autre" id="autre_a" showCommentField="true" commentFieldLabel=", précisez"/>
+										</td>
+										<td>
+											<obs conceptId="CIEL:1730" id="autre_a_start" />
+										</td>
+									</tr>
+						</obsgroup>
+						<obsgroup groupingConceptId="1727">
+									<tr>
+										<td>
+											<obs conceptId="CIEL:1728" answerConceptId="5622"
+												answerLabel="Autre" id="autre_b" showCommentField="true" commentFieldLabel=", précisez"/>
+										</td>
+										<td>
+											<obs conceptId="CIEL:1730" id="autre_b_start" />
+										</td>
+									</tr>
+						</obsgroup>
 					</table>
 				</td>
 			</tr>
