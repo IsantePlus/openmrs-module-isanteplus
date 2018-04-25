@@ -408,7 +408,7 @@
 		});
 
 		});
-		</script>>
+		</script>
 
 	<ifMode mode="ENTER">
 		<lookup complexExpression="
@@ -3485,7 +3485,7 @@
 								<b>Plan d'accouchement</b>
 							</legend>
 							Date de prochaine visite :
-							<obs conceptId="CIEL:5096" />
+							<obs conceptId="CIEL:5096" allowFutureDates="true"/>
 							<table width="100%">
 								<tr>
 									<td>Suivi Prénatal</td>
