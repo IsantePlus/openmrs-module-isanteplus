@@ -610,7 +610,7 @@
 												<br />
 												<b>Cardiovasculaire/pulmonaire</b>
 												<br />
-												<obs conceptId="CIEL:159614" answerConceptId="CIEL:129255"
+												<obs conceptId="CIEL:159614" answerConceptId="CIEL:159361"
 													answerLabel="Douleurs précordiales" />
 												<br />
 												<obs conceptId="CIEL:159614" answerConceptId="CIEL:120749"
@@ -1208,7 +1208,7 @@
 												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher4">
 														<obs conceptId="CIEL:1284" class="master" id="id4"
-															answerConceptId="CIEL:119270" answerLabel="Cardiopathie [I51.9]" />
+															answerConceptId="CIEL:139071" answerLabel="Cardiopathie [I51.9]" />
 													</span>
 													<br />
 													<span id="cacher4" class="cacher" style="display:none">

@@ -1520,7 +1520,7 @@
 												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher5">
 														<obs conceptId="CIEL:1284" class="master" id="id5"
-															answerConceptId="CIEL:119270" answerLabel="Cardiopathie [I51.9]" />
+															answerConceptId="CIEL:139071" answerLabel="Cardiopathie [I51.9]" />
 													</span>
 													<br />
 													<span id="cacher5" class="cacher" style="display:none">
