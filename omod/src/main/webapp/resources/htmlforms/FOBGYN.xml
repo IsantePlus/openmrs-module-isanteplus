@@ -165,7 +165,7 @@
 		if ((getValue('mdr1.value') != null) || 
 		(getValue('mdr2.value') != null) ||
 		 (getValue('mdr3.value') != null)) {
-			setValue('mdr.value', '139071');
+			setValue('mdr.value', '164102');
 		}
 
 		//Fin ANTECEDENTS HEREDO-COLLATERAUX
@@ -700,7 +700,7 @@
 												  	<td class="sansbordure">
 														MDR TB
 														<span style="display: none">
-															<obs conceptId="CIEL:160592" answerConceptId="CIEL:139071" id="mdr"  answerLabel="" />
+															<obs conceptId="CIEL:160592" answerConceptId="CIEL:164102" id="mdr"  answerLabel="" />
 														</span>
 													</td>
 													<td>
