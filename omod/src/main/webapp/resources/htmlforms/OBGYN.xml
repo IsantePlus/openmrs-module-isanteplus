@@ -2598,7 +2598,7 @@
 						<br />
 						<fieldset>
 							Date Probable d’accouchement
-							<obs conceptId="CIEL:5596" />
+							<obs conceptId="CIEL:5596" allowFutureDates="true" />
 							Lieu :
 							<obs conceptId="CIEL:159758" answerConceptIds="CIEL:1536,CIEL:1589"
 								answerLabels="Domicile,Hôpital - précisez :" style="radio"
