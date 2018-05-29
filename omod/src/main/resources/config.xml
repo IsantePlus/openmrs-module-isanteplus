@@ -85,12 +85,12 @@
 	</globalProperty>
 	<globalProperty>
 		<property>isanteplus.yesConceptId</property>
-		<defaultValue>1066</defaultValue>
+		<defaultValue>1065</defaultValue>
 		<description>Yes Concept id</description>
 	</globalProperty>
 	<globalProperty>
 		<property>isanteplus.noConceptId</property>
-		<defaultValue>1065</defaultValue>
+		<defaultValue>1066</defaultValue>
 		<description>No Concept id</description>
 	</globalProperty>
 	<globalProperty>
