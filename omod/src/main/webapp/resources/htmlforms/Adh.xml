@@ -18,22 +18,26 @@
 		margin-bottom: 1em;
 		}
 		.section_b {
-		background-color: #2F4F4F;
+		background-color:
+		#2F4F4F;
 		color:#FFFFFF;
 		padding: 2px;
 		text-align: center;
-		margin-bottom: 1em;
+		margin-bottom:
+		1em;
 		}
 		.sectionHeader {
 		background-color: $headerColor;
-		color: $fontOnHeaderColor;
+		color:
+		$fontOnHeaderColor;
 		display: block;
 		padding: 1px;
 		font-weight: bold;
 		}
 		.lienvisible#first{display: block}
 		.lienvisible{
-		height:auto; background:#87CEEB; border:1px solid #FFFFFF;
+		height:auto;
+		background:#87CEEB; border:1px solid #FFFFFF;
 		width:100%";
 		}
 		.contener
@@ -79,7 +83,8 @@
 		width: 100%;
 		height: 500px;
 		overflow: scroll;
-		border: 1px solid black;
+		border: 1px solid
+		black;
 		text-align: justify;
 		padding: 5px;
 		margin:0px;
@@ -92,7 +97,8 @@
 		padding:0px;
 		}
 
-		form input[type="checkbox"], form input[type="radio"], .form
+		form
+		input[type="checkbox"], form input[type="radio"], .form
 		input[type="checkbox"], .form input[type="radio"] {
 		float: none;
 		display: inline-block;
@@ -106,59 +112,75 @@
 	<script type="text/javascript">
 		beforeSubmit.push(function() {
 
-		if ((getValue('nausee_vomissement_severity.value') != '1498') &amp;&amp;
+		if
+		((getValue('nausee_vomissement_severity.value') != '1498') &amp;&amp;
 		(getValue('nausee_vomissement_severity.value') != '1499') &amp;&amp;
 		(getValue('nausee_vomissement_severity.value') != '1500')){
 		setValue('nausee_vomissement.value', '');
 		} else {
 		setValue('nausee_vomissement.value', '133473');
 		}
-		if ((getValue('diarrhee_severity.value') != '1498') &amp;&amp;
+		if
+		((getValue('diarrhee_severity.value') != '1498') &amp;&amp;
 		(getValue('diarrhee_severity.value') != '1499') &amp;&amp;
 		(getValue('diarrhee_severity.value') != '1500')){
 		setValue('diarrhee.value', '');
 		} else {
-		setValue('diarrhee.value', '142412');
+		setValue('diarrhee.value',
+		'142412');
 		}
-		if ((getValue('eruption_cutanee_severity.value') != '1498') &amp;&amp;
-		(getValue('eruption_cutanee_severity.value') != '1499') &amp;&amp;
+		if ((getValue('eruption_cutanee_severity.value') != '1498')
+		&amp;&amp;
+		(getValue('eruption_cutanee_severity.value') != '1499')
+		&amp;&amp;
 		(getValue('eruption_cutanee_severity.value') != '1500')){
 		setValue('eruption_cutanee.value', '');
 		} else {
 		setValue('eruption_cutanee.value', '512');
 		}
-		if ((getValue('maux_tete_severity.value') != '1498') &amp;&amp;
+		if
+		((getValue('maux_tete_severity.value') != '1498') &amp;&amp;
 		(getValue('maux_tete_severity.value') != '1499') &amp;&amp;
 		(getValue('maux_tete_severity.value') != '1500')){
 		setValue('maux_tete.value', '');
 		} else {
-		setValue('maux_tete.value', '139084');
+		setValue('maux_tete.value',
+		'139084');
 		}
-		if ((getValue('douleur_abdominale_severity.value') != '1498') &amp;&amp;
-		(getValue('douleur_abdominale_severity.value') != '1499') &amp;&amp;
-		(getValue('douleur_abdominale_severity.value') != '1500')){
+		if ((getValue('douleur_abdominale_severity.value') !=
+		'1498') &amp;&amp;
+		(getValue('douleur_abdominale_severity.value') !=
+		'1499') &amp;&amp;
+		(getValue('douleur_abdominale_severity.value') !=
+		'1500')){
 		setValue('douleur_abdominale.value', '');
 		} else {
 		setValue('douleur_abdominale.value', '151');
 		}
-		if ((getValue('faiblesse_severity.value') != '1498') &amp;&amp;
+		if
+		((getValue('faiblesse_severity.value') != '1498') &amp;&amp;
 		(getValue('faiblesse_severity.value') != '1499') &amp;&amp;
 		(getValue('faiblesse_severity.value') != '1500')){
 		setValue('faiblesse.value', '');
 		} else {
-		setValue('faiblesse.value', '5226');
+		setValue('faiblesse.value',
+		'5226');
 		}
-		if ((getValue('paresthesie_severity.value') != '1498') &amp;&amp;
-		(getValue('paresthesie_severity.value') != '1499') &amp;&amp;
+		if ((getValue('paresthesie_severity.value') != '1498')
+		&amp;&amp;
+		(getValue('paresthesie_severity.value') != '1499')
+		&amp;&amp;
 		(getValue('paresthesie_severity.value') != '1500')){
 		setValue('paresthesie.value', '');
 		} else {
 		setValue('paresthesie.value', '6004');
 		}
-		if ((getValue('autre_severity.value') != '1498') &amp;&amp;
+		if
+		((getValue('autre_severity.value') != '1498') &amp;&amp;
 		(getValue('autre_severity.value') != '1499') &amp;&amp;
 		(getValue('autre_severity.value') != '1500')){
-		setValue('autre.value', '');
+		setValue('autre.value',
+		'');
 		} else {
 		setValue('autre.value', '5622');
 		}
@@ -233,8 +255,10 @@
 			Quel pourcentage de doses le patient a-t-il pris le mois dernier ?
 			<br />
 			<span width="100%">
-				<obs conceptId="CIEL:163710" answers="0,10,20,30,40,50,60,70,80,90,95,100"
-					answerLabels="0%,10%,20%,30%,40%,50%,60%,70%,80%,90%,95%,100%" style="radio" />
+				<obs conceptId="CIEL:163710"
+					answers="0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100"
+					answerLabels="0%,5%,10%,15%,20%,25%,30%,35%,40%,45%,50%,55%,60%,65%,70%,75%,80%,85%,90%,95%,100%"
+					style="radio" />
 			</span>
 			<br />
 			Demander au patient une estimation visuelle de la prise de ses
@@ -429,7 +453,8 @@
 			</span>
 			<br />
 			<span align="right" style="float:right">MSPP FICHE D'ADHÉRENCE (VERSION
-				OCTOBRE 2006)</span>
+				OCTOBRE 2006)
+			</span>
 		</div>
 	</div>
 </htmlform>

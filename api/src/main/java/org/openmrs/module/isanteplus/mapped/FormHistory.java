@@ -115,12 +115,12 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 						&& o.getConcept().getConceptId().equals(formStatus.getConceptId())) {
 					if (completed != null && o.getValueCoded() != null
 							&& o.getValueCoded().getConceptId().equals(completed.getConceptId())) {
-						status += Context.getMessageSourceService()
-								.getMessage("isanteplus.formsHistory.formStatus.complete");
+						status += "<b style=\"color:green;\">" + Context.getMessageSourceService()
+								.getMessage("isanteplus.formsHistory.formStatus.complete") + "<b/>";
 					} else if (incomplete != null && o.getValueCoded() != null
 							&& o.getValueCoded().getConceptId().equals(incomplete.getConceptId())) {
-						status += Context.getMessageSourceService()
-								.getMessage("isanteplus.formsHistory.formStatus.incomplete");
+						status += "<b style=\"color:red;\">" + Context.getMessageSourceService()
+								.getMessage("isanteplus.formsHistory.formStatus.incomplete")+ "<b/>";
 					}
 				}
 				if (formNeedsReview != null && o.getConcept() != null
@@ -128,16 +128,16 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 					if (yes != null && o.getValueCoded() != null
 							&& o.getValueCoded().getConceptId().equals(yes.getConceptId())) {
 						status += StringUtils.isNotBlank(status)
-								? ", " + Context.getMessageSourceService()
+								? ", " + "<b style=\"color:blue;\">" + Context.getMessageSourceService()
 										.getMessage("isanteplus.formsHistory.formStatus.review")
 								: Context.getMessageSourceService()
-										.getMessage("isanteplus.formsHistory.formStatus.review");
+										.getMessage("isanteplus.formsHistory.formStatus.review") + "<b/>";
 					}
 				}
 			}
 		} else {
-			status = Context.getMessageSourceService()
-					.getMessage("isanteplus.formsHistory.formStatus.deleted");
+			status = "<b style=\"color:brown;\">" + Context.getMessageSourceService()
+					.getMessage("isanteplus.formsHistory.formStatus.deleted") + "<b/>";
 		}
 
 		if (StringUtils.isBlank(status)) {
