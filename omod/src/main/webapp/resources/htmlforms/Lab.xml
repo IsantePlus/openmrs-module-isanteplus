@@ -862,6 +862,16 @@
 			<b><center>Analyses de laboratoire</center></b><br/>
 			<table>
 				<tr>
+					<td colspan="3">
+						<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+							<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC,OpenELIS" style="dropdown" />
+						</includeIf>
+						<excludeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+							<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC" style="dropdown" />
+						</excludeIf>
+					</td>
+				</tr>
+				<tr>
 					<td>Date visite:</td>
 					<td><encounterDate default="today"/><br/>
 					<span style="display: none"><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
@@ -3030,12 +3040,6 @@
 		Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
 		Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/><br/>
 
-		<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
-			<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC,OpenELIS" style="dropdown" />
-		</includeIf>
-		<excludeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
-			<obs labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC" style="dropdown" />
-		</excludeIf>
 		<br/><br/>
 	</div>
 	<div id="sauvegarde">
