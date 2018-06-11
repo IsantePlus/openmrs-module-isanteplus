@@ -521,7 +521,6 @@
 		setValue('acyclovir_autre.value', '');
 		} else {
 		setValue('acyclovir.value', '70245');
-		setValue('acyclovir_autre.value', '5622');
 		}
 		if ((getValue('cotrimoxazole_start.value') == '') &amp;&amp;
 		(getValue('cotrimoxazole_end.value') == '') &amp;&amp;
@@ -530,7 +529,6 @@
 		setValue('cotrimoxazole_autre.value', '');
 		} else {
 		setValue('cotrimoxazole.value', '105281');
-		setValue('cotrimoxazole_autre.value', '5622');
 		}
 		if ((getValue('fluconazole_start.value') == '') &amp;&amp;
 		(getValue('fluconazole_end.value') == '') &amp;&amp;
@@ -539,7 +537,6 @@
 		setValue('fluconazole_autre.value', '');
 		} else {
 		setValue('fluconazole.value', '76488');
-		setValue('fluconazole_autre.value', '5622');
 		}
 		if ((getValue('ketaconazole_start.value') == '') &amp;&amp;
 		(getValue('ketaconazole_end.value') == '') &amp;&amp;
@@ -548,7 +545,6 @@
 		setValue('ketaconazole_autre.value', '');
 		} else {
 		setValue('ketaconazole.value', '78476');
-		setValue('ketaconazole_autre.value', '5622');
 		}
 		if ((getValue('traitement_trad_start.value') == '') &amp;&amp;
 		(getValue('traitement_trad_end.value') == '') &amp;&amp;
@@ -557,7 +553,6 @@
 		setValue('traitement_trad_autre.value', '');
 		} else {
 		setValue('traitement_trad.value', '5841');
-		setValue('traitement_trad_autre.value', '5622');
 		}
 		if ((getValue('autres_traitement_arv_start.value') == '') &amp;&amp;
 		(getValue('autres_traitement_arv_end.value') == '') &amp;&amp;
@@ -566,8 +561,15 @@
 		setValue('autres_traitement_arv_autre.value', '');
 		} else {
 		setValue('autres_traitement_arv.value', '5622');
-		setValue('autres_traitement_arv_autre.value', '5622');
 		}
+		
+		if(getValue('travailleur_sexe_b.value')==1065 || getValue('travailleur_sexe_b.value')==1066){
+			setValue('travailleur_sexe_a.value', '160580');
+		}
+		if(getValue('echange_sexe_b.value')==1065 || getValue('echange_sexe_b.value')==1066){
+			setValue('echange_sexe_a.value', '160579');
+		}
+		
 		/*Fin autres traitements*/
 
 		return true;
@@ -676,7 +678,7 @@
 
 							<tr>
 								<td colspan="2">
-									<obs conceptId="CIEL:159936" answerConceptIds="CIEL:163266,CIEL:5622"
+									<obs conceptId="CIEL:159936" answerConceptIds="CIEL:163266,CIEL:164407"
 										answerLabels="Cet établissement,Autre" style="radio"
 										showCommentField="true" commentFieldLabel="" />
 								</td>
@@ -1044,22 +1046,26 @@
 									</tr>
 									<tr>
 										<td>
-											<obs conceptId="CIEL:160581" answerConceptId="CIEL:160580"
-												answerLabel="- avec travailleur/euse de sexe" style="radio" />
+											<span style="display: none">
+												<obs conceptId="CIEL:160581" answerConceptId="CIEL:160580"
+													id="travailleur_sexe_a" answerLabel="- avec travailleur/euse de sexe" style="radio" />
+											</span> - avec travailleur/euse de sexe
 										</td>
 										<td>
 											<obs conceptId="CIEL:160580" answerConceptIds="CIEL:1065,CIEL:1066"
-												answerLabels="Oui,Non" style="radio" />
+												id="travailleur_sexe_b" answerLabels="Oui,Non" style="radio" />
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<obs conceptId="CIEL:160581" answerConceptId="CIEL:160579"
-												answerLabel="- L'échange de sexe pour argent/choses" style="radio" />
+											<span style="display: none">
+												<obs conceptId="CIEL:160581" answerConceptId="CIEL:160579"
+												id="echange_sexe_a" answerLabel="- L'échange de sexe pour argent/choses" style="radio" />
+											</span> - L'échange de sexe pour argent/choses
 										</td>
 										<td>
 											<obs conceptId="CIEL:160579" answerConceptIds="CIEL:1065,CIEL:1066"
-												answerLabels="Oui,Non" style="radio" />
+												id="echange_sexe_b" answerLabels="Oui,Non" style="radio" />
 										</td>
 									</tr>
 								</td>
@@ -1159,12 +1165,10 @@
 					<td valign="TOP" style="padding-left:2%">
 						<br />
 						Établissement :
-						<patient field="identifierLocation" />
 						<br />
 						<obs conceptId="CIEL:162724" labelText="" />
 						<br />
 						Établissement :
-						<patient field="identifierLocation" />
 						<br />
 						<obs conceptId="CIEL:162724" labelText="" />
 					</td>
@@ -2585,7 +2589,7 @@
 								</td>
 								<td><obs conceptId="CIEL:1190" id="{id}_start"/></td>
 								<td><obs conceptId="CIEL:1191" id="{id}_end"/></td>
-								<td><obs conceptId="CIEL:1282" id="{id}_current" answerConceptId="CIEL:159367" answerLabel=""/></td>	
+								<td><obs conceptId="CIEL:159367" id="{id}_current" answerConceptId="CIEL:1065" answerLabel=""/></td>	
 							</tr>
 						</obsgroup>
 					</template>
@@ -2607,12 +2611,11 @@
 				<tr bgcolor="{color}" class="checkboxGroup">
 					<td>{drugname}<span class="arv1_div" style="display: none">
 					<obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/>
-					<obs conceptId="CIEL:160742" id="{id}_autre" answerConceptId="CIEL:5622" defaultValue="5622" answerLabel=""/>
 					</span>
 					</td>
 					<td><obs conceptId="CIEL:1190" id="{id}_start"/></td>
 					<td><obs conceptId="CIEL:1191" id="{id}_end"/></td>
-					<td><obs conceptId="CIEL:1282" id="{id}_current" answerConceptId="CIEL:159367" answerLabel=""/></td>
+					<td><obs conceptId="CIEL:159367" id="{id}_current" answerConceptId="CIEL:1065" answerLabel=""/></td>
 				</tr>
 				</obsgroup>
 				</template>
@@ -2629,13 +2632,12 @@
 							<tr bgcolor="{color}" class="checkboxGroup">
 								<td>{drugname}<span class="arv1_div" style="display: none">
 								<obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/>
-								<obs conceptId="CIEL:160742" id="{id}_autre" answerConceptId="CIEL:5622" defaultValue="5622" answerLabel=""/>
 								</span>
 								<obs conceptId="CIEL:160632" answerLabel=""/>
 								</td>
 								<td><obs conceptId="CIEL:1190" id="{id}_start"/></td>
 								<td><obs conceptId="CIEL:1191" id="{id}_end"/></td>
-								<td><obs conceptId="CIEL:1282" id="{id}_current" answerConceptId="CIEL:159367" answerLabel=""/></td>
+								<td><obs conceptId="CIEL:159367" id="{id}_current" answerConceptId="CIEL:1065" answerLabel=""/></td>
 							</tr>
 						</obsgroup>
 					</template>
