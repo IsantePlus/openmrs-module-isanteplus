@@ -56,6 +56,8 @@ public class IsantePlusConstants {
 
 	public static final String PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST = "d059f6d0-9e42-4760-8de1-8316b48bc5f1";
 
+	public static final String PATIENT_IDENTIFIER_TYPE_UUID_ISANTE_ID = "0e0c7cc2-3491-4675-b705-746e372ff346";
+
 	public static final String SCHEDULER_USER_UUID = "0a3493e8-21f8-11e3-8ad1-1b02b898d14d";
 
 	public static final String SCHEDULER_USERNAME = "scheduler";

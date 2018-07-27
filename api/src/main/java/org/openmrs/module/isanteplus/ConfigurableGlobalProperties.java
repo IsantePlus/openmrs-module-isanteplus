@@ -56,6 +56,8 @@ public class ConfigurableGlobalProperties {
 	
 	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_Biometrics_Reference_Code = "registrationcore.local_mpi_identifierTypeMap.Biometrics Reference Code";
 
+	public static final String REGISTRATIONCORE_LOCAL_MPI_IDENTIFIERTYPEMAP_iSante_ID = "registrationcore.local_mpi_identifierTypeMap.iSante ID";
+
 	public static final String REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER = "2.16.840.1.113883.4.56";
 
 	public static final String REGISTRATIONCORE_MPI_ECID_UNIVERSAL_IDENTIFIER_TYPE = "NI";
@@ -77,6 +79,10 @@ public class ConfigurableGlobalProperties {
 	public static final String REGISTRATIONCORE_MPI_Biometrics_Reference_Code_UNIVERSAL_IDENTIFIER = "2.25.300969590489438061583573695579607328089";
 
 	public static final String REGISTRATIONCORE_MPI_M2Sys_Fingerprint_Registration_ID_UNIVERSAL_IDENTIFIER_TYPE = "NI";
+
+	public static final String REGISTRATIONCORE_MPI_iSante_ID_UNIVERSAL_IDENTIFIER = "2.25.36136748588937772373969278066039786242";
+
+	public static final String REGISTRATIONCORE_MPI_iSante_ID_UNIVERSAL_IDENTIFIER_TYPE = "PI";
 
 	public static final String REGISTRATIONCORE_MPI_PASSWORD_VALUE = "pixc";
 
