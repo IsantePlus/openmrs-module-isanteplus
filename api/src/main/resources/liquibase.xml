@@ -786,4 +786,11 @@
 		</sql>
 	</changeSet>
 
+	<changeSet id="2018May12-00" author="Oskar Hinc">
+		<comment>Update patient_identifier_type (Biometrics National Reference Code) to be UNIQUE</comment>
+		<sql>
+			UPDATE patient_identifier_type SET uniqueness_behavior = 'UNIQUE' where uuid = '5a597bcc-26ad-11e8-b467-0ed5f89f718b';
+		</sql>
+	</changeSet>
+
 </databaseChangeLog>
