@@ -3029,7 +3029,9 @@
 											<obs conceptId="CIEL:856" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											<obs id="viralLoadStage" labelText="LNSP stage" conceptId="63cbd0ac-7b4d-477a-910d-8e75168275bf" answerConceptIds="372cba89-1924-451c-9da4-8a9ac1e5a681, 2123b704-4ae8-4f3e-b5e9-0ebb9343256b,
 												0f4a98cd-99e7-4a49-87e7-ef1786e67941, a9056b55-299c-4cd3-bb30-5dfa3f6126ef, c2f00d7b-d675-4805-8f1a-a6f090c0dd58, 876902e2-34e7-4769-9a4c-6cb4551b60a1, 9ebacdd9-2acb-4b59-9dcb-5a251803ebc6,
-												8c71bdd3-e67c-4667-9375-c657a9dd2e36, 69326ac4-2df6-4db8-b18d-5c2bf7cc05c8, cbf0fa45-cfb3-4777-ab14-7eb187df7c1b, ba65bd79-a9e2-4372-9515-ee88039850d9, 169f77a2-7f3c-480c-8c65-0ed14838b6a4"/>
+												8c71bdd3-e67c-4667-9375-c657a9dd2e36, 69326ac4-2df6-4db8-b18d-5c2bf7cc05c8, cbf0fa45-cfb3-4777-ab14-7eb187df7c1b, ba65bd79-a9e2-4372-9515-ee88039850d9, 169f77a2-7f3c-480c-8c65-0ed14838b6a4"
+												answerLabels="VIH-Charge Virale (CVi-1), VIH-Charge Virale (CVi-2), VIH-Charge Virale (CVi-3), VIH-Charge Virale (CVau), VIH-Charge Virale (CVce), VIH-Charge Virale (CVr),
+												VIH-Charge Virale (CVi-1) Plasma, VIH-Charge Virale (CVi-2) Plasma, VIH-Charge Virale (CVi-3) Plasma, VIH-Charge Virale (CVau) Plasma, VIH-Charge Virale (CVce) Plasma, VIH-Charge Virale (CVr) Plasma" />
 										</fieldset>
 										</span>
 									</td>
@@ -3044,7 +3046,9 @@
 											<obs conceptId="CIEL:844" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1300,CIEL:1304" answerLabels="Détectable,Indétectable,Equivoque,Echatillon de pauvre qualité" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											<obs id="pcrStage" labelText="LNSP stage" conceptId="4f318d58-7647-47e2-92dd-7b568aa26360" answerConceptIds="69db5c1b-33ba-487c-8613-d09ce2a300a3, 048568cf-f0dc-49f7-89a1-c9768f17afe7,
 												07390957-df63-466b-b053-2faa53bb334f, 8c9c35a7-c276-42db-bae1-fc2d6050c1cd, d1295091-3785-4a4d-8cc8-74b788aee569, d112794e-219c-4299-bd1e-d8bfcedd28e8, 7b7479f0-6592-4652-aadc-b9449fd3d232,
-												b57ebd98-b1f8-4fff-ac5e-80b2f175821b, faf7644f-8f59-4500-9e93-97e0904e1dc4, 9b0cc757-ae30-4927-84fd-b1c291ab3811, e8f87596-8b2d-4dcf-afc1-92deb2e2c428, f8f1fa5d-51b5-4092-9df0-b9438c9c8f6b"/>
+												b57ebd98-b1f8-4fff-ac5e-80b2f175821b, faf7644f-8f59-4500-9e93-97e0904e1dc4, 9b0cc757-ae30-4927-84fd-b1c291ab3811, e8f87596-8b2d-4dcf-afc1-92deb2e2c428, f8f1fa5d-51b5-4092-9df0-b9438c9c8f6b"
+												answerLabels="ADN VIH-1 (PCR-1), ADN VIH-1 (PCR-2), ADN VIH-1 (PCR-3), ADN VIH-1 (PCR-4), ADN VIH-1 (PCR-5), ADN VIH-1 (PCR-C)
+												ADN VIH-1 (PCR-1) Plasma, ADN VIH-1 (PCR-2) Plasma, ADN VIH-1 (PCR-3) Plasma, ADN VIH-1 (PCR-4) Plasma, ADN VIH-1 (PCR-5) Plasma, ADN VIH-1 (PCR-C) Plasma"/>
 										</fieldset>
 										</span>
 									</td>
