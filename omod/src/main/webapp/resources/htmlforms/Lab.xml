@@ -194,11 +194,34 @@
 	    });
 	</script>  
 	<script type="text/javascript">
+	function validateSccRequiredFields(parentObsId, childObsId) {
+		if (getValue('destinationOfTestOrder.value') == 'SCC') {
+			var parentObs = getValue(parentObsId + '.value');
+			var childObs = getValue(childObsId + '.value');
+			if (parentObs != null &amp;&amp; parentObs != '' &amp;&amp; (childObs == null || childObs == '')) {
+				getField(childObsId + '.error').html('Required').show();
+				return false;
+			}
+		}
+		getField(childObsId + '.error').html('').show();
+		return true;
+	}
+
+	beforeValidation.push(function() {
+		return validateSccRequiredFields('idchargeviralqua', 'viralLoadStage');
+	});
+
+	beforeValidation.push(function() {
+		return validateSccRequiredFields('idpcr32', 'pcrStage');
+	});
+
 	jQuery(function() {
 	jQuery('#destinationOfTestOrder').on( 'change', function() {
 		if (getValue('destinationOfTestOrder.value') == 'SCC') {
 			jQuery('#viralLoadStage').show();
+			jQuery('#viralLoadStage:not(:has(.required))').append('<span class="required">*</span>');
 			jQuery('#pcrStage').show();
+			jQuery('#pcrStage:not(:has(.required))').append('<span class="required">*</span>');
 		} else {
 			jQuery('#viralLoadStage').hide()
 			jQuery('#pcrStage').hide();
@@ -3013,7 +3036,7 @@
 								</tr>
 								<tr>
 									<td>
-										
+
 										<span class="titre" ch-target="#pcr"><obs conceptId="CIEL:1271" class="master" id="idpcr32" answerConceptId="844" answerLabel="PCR"/></span><br/>
 										<span id="pcr" class="togglable" style="display: none;">
 										<fieldset>
