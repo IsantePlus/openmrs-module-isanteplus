@@ -766,6 +766,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 			ComponentState isantePlusForms = getAppframeworkComponentState(manager.getIsantePlusFormsExtensionId());
 			ComponentState drugsHistory = getAppframeworkComponentState(manager.getDrugsHistoryExtensionId());
 			ComponentState bmiGraph = getAppframeworkComponentState(manager.getBmiGraphExtensionId());
+			ComponentState viralLoadGraph = getAppframeworkComponentState(manager.getViralLoadGraphExtensionId());
 			if (growthCharts != null && extensions.has(manager.getGrowthChartsExtensionId())) {
 				growthCharts.setEnabled(extensions.getBoolean(manager.getGrowthChartsExtensionId()));
 				saveOrUpdateComponentState(growthCharts);
@@ -807,6 +808,10 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 			if (bmiGraph != null && extensions.has(manager.getBmiGraphExtensionId())) {
 				bmiGraph.setEnabled(extensions.getBoolean(manager.getBmiGraphExtensionId()));
 				saveOrUpdateComponentState(bmiGraph);
+			}
+			if (viralLoadGraph != null && extensions.has(manager.getViralLoadGraphExtensionId())) {
+				viralLoadGraph.setEnabled(extensions.getBoolean(manager.getViralLoadGraphExtensionId()));
+				saveOrUpdateComponentState(viralLoadGraph);
 			}
 		}
 	}
@@ -900,6 +905,94 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	@Override
 	public List<FormHistory> getFormHistoryByEncounterId(Integer encounterId) {
 		return dao.getFormHistoryByEncounterId(encounterId);
+	}
+	
+	private Set<Obs> getViralLoadConceptObsForAPatient(Patient patient) {
+		return getObsFromConceptForPatient(patient, "concept.viralLoad", 856);
+	}
+	
+	@Override
+	public JSONArray getPatientViralLoad(Patient patient) {
+		JSONArray viralLoadJson = new JSONArray();
+
+		for (Obs obs : getViralLoadConceptObsForAPatient(patient)) {
+			if (obs != null) {
+				JSONObject json = new JSONObject();
+				Double viralLoadValue = obs.getValueNumeric();
+				if(viralLoadValue > 0)
+				{
+					Double logViralLoad = Math.log10(obs.getValueNumeric());
+					json.put("viralLoadvalues", logViralLoad);
+					json.put("measureDate", getObservationDate(obs));
+					viralLoadJson.put(json);
+				}
+			}
+		}
+		return viralLoadJson;
+	}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private Obs getLatestNextOtherVisitDate(Patient patient) {
+		Concept latestNextVisitConcept = Context.getConceptService().getConcept(5096);
+		List<Obs> latestNextVisitObs = new ArrayList(
+				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), latestNextVisitConcept));
+		sortObsListByObsDateTime(latestNextVisitObs);
+
+		return latestNextVisitObs != null && latestNextVisitObs.size() > 0 ? latestNextVisitObs.get(latestNextVisitObs.size() - 1) : null;
+	}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private Obs getLatestNextOrdonanceVisitDate(Patient patient) {
+		Concept latestNextOrdonanceConcept = Context.getConceptService().getConcept(162549);
+		List<Obs> latestNextOrdonanceObs = new ArrayList(
+				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), latestNextOrdonanceConcept));
+
+		sortObsListByObsDateTime(latestNextOrdonanceObs);
+
+		return latestNextOrdonanceObs != null && latestNextOrdonanceObs.size() > 0 ? latestNextOrdonanceObs.get(latestNextOrdonanceObs.size() - 1) : null;
+	}
+	
+	@Override
+	public Obs getLatestNextVisitDate(Patient patient) {
+		Obs obsa = null;
+		Obs obsb = getLatestNextOtherVisitDate(patient);
+		Obs obsc = getLatestNextOrdonanceVisitDate(patient);
+		if(obsb == null && obsc == null)
+		{
+			obsa = null;
+		}
+		else{
+			if(obsb != null && obsb.getValueDatetime() != null && obsc == null)
+			{	
+				obsa = obsb;
+			}
+			else
+			{
+				if(obsb == null && obsc != null && obsc.getValueDatetime() != null)
+				{
+					obsa = obsc;
+				}
+				else{
+					if(obsb.getValueDatetime() == null && obsc.getValueDatetime() == null){
+						obsa = null;	
+					}
+					else{
+						if(obsb.getValueDatetime().compareTo(obsc.getValueDatetime()) > 0)
+							obsa = obsb;
+							else
+								obsa = obsc;
+					}
+				}
+				
+			}
+			
+		}
+		return obsa;
+	}
+	@Override
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Encounter getFirstEncounterDate(Patient patient){
+		List<Encounter> firstEncounter = new ArrayList(
+				Context.getEncounterService().getEncountersByPatient(patient));
+		return firstEncounter.get(0);
 	}
 
 }

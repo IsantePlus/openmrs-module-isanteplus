@@ -70,4 +70,19 @@ public class VisLineGraphing {
 
 		return jsonArrayItems;
 	}
+	public static JSONArray getViralLoadGraphsItems(JSONArray viralLoadItems) {
+		JSONArray jsonArrayItems = new JSONArray();
+		for (int i = 0; i < viralLoadItems.length(); i++) {
+			JSONObject coordinate = new JSONObject();
+			//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HHmmss");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+			Date date = (Date) viralLoadItems.getJSONObject(i).get("measureDate");
+
+			coordinate.put("x", date != null ? sdf.format(date) : "");
+			coordinate.put("y", viralLoadItems.getJSONObject(i).getLong("viralLoadvalues"));
+			jsonArrayItems.put(coordinate);
+		}
+
+		return jsonArrayItems;
+	}
 }

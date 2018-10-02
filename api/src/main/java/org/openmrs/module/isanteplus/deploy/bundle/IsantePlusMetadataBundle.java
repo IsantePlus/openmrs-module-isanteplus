@@ -116,10 +116,20 @@ public class IsantePlusMetadataBundle extends AbstractMetadataBundle {
 
         PatientIdentifierType patientIdentifierTypeCodeSt = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_ST);
         PatientIdentifierType patientIdentifierTypeCodeNational = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_NATIONAL);
-
+        PatientIdentifierType patientIdentifierTypeIsanteOldId = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_OLD_ISANTE_ID);
+        PatientIdentifierType patientIdentifierTypeCodePc = Context.getPatientService().getPatientIdentifierTypeByUuid(IsantePlusConstants.PATIENT_IDENTIFIER_TYPE_UUID_CODE_PC);
+        
         if (!checkMetadataSetMemberForPatientIdentifierType(extraPatientIdTypesSet, patientIdentifierTypeCodeSt)) {
         	metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeSt);
+        }
+        if (!checkMetadataSetMemberForPatientIdentifierType(extraPatientIdTypesSet, patientIdentifierTypeCodeNational)) {
         	metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodeNational);
+        }
+        if (!checkMetadataSetMemberForPatientIdentifierType(extraPatientIdTypesSet, patientIdentifierTypeIsanteOldId)) {
+        	metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeIsanteOldId);
+        }
+        if (!checkMetadataSetMemberForPatientIdentifierType(extraPatientIdTypesSet, patientIdentifierTypeCodePc)) {
+        	metadataMappingService.saveMetadataSetMember(extraPatientIdTypesSet, patientIdentifierTypeCodePc);
         }
 
 	}
