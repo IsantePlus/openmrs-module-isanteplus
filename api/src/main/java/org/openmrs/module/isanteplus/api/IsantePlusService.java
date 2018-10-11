@@ -28,6 +28,7 @@ import org.openmrs.module.isanteplus.ChartJSAgeAxis;
 import org.openmrs.module.isanteplus.IsantePlusObs;
 import org.openmrs.module.isanteplus.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isanteplus.mapped.FormHistory;
+import org.openmrs.module.reporting.dataset.DataSet;
 import org.springframework.transaction.annotation.Transactional;
 
 import liquibase.database.jvm.JdbcConnection;
@@ -138,4 +139,10 @@ public interface IsantePlusService extends OpenmrsService {
 	Obs getLatestNextVisitDate(Patient patient);
 
 	Encounter getFirstEncounterDate(Patient patient);
+
+	Obs getArtInitiationDate(Patient patient);
+
+	DataSet getPatientStatusArv(Patient patient);
+
+	DataSet getDateStartedArv(Patient patient);
 }

@@ -33,6 +33,18 @@
 			<artifactId>emrapi-api</artifactId>
 		</dependency>
 		<dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-api-1.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-api-1.11</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-api-1.12</artifactId>
+        </dependency>
+		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>appframework-api</artifactId>
 		</dependency>
@@ -52,6 +64,28 @@
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>xds-sender-omod</artifactId>
 		</dependency>
+		<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>coreapps-api</artifactId>
+		</dependency>
+		<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>idgen-api</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>emrapi-api</artifactId>
+            <classifier>tests</classifier>
+        </dependency>
+        <dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>metadatamapping-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reporting-api</artifactId>
+		</dependency>
+		
 		<!-- End OpenMRS modules -->
 
 		<!-- Begin OpenMRS core -->

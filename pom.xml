@@ -63,11 +63,12 @@
 		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
 		<xds-senderVersion>1.0.0</xds-senderVersion>
 		<!-- Required to pass tests -->
-		<reportingVersion>0.11.0</reportingVersion>
+		<reportingVersion>1.12.0</reportingVersion>
 		<calculationVersion>1.2</calculationVersion>
 		<serializationxstreamVersion>0.2.12</serializationxstreamVersion>
 		<providermanagementVersion>2.5.0</providermanagementVersion>
-
+		<idgenVersion>4.4.1</idgenVersion>
+		
 	</properties>
 
 	<dependencyManagement>
@@ -87,20 +88,55 @@
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>emrapi-api-1.10</artifactId>
+                <version>${emrapiVersion}</version>
+				<scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>emrapi-api-1.11</artifactId>
+                <version>${emrapiVersion}</version>
+				<scope>provided</scope>
+            </dependency>
+            <dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>emrapi-api-1.12</artifactId>
 				<version>${emrapiVersion}</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.openmrs.module</groupId>
-				<artifactId>appui-api</artifactId>
-				<version>${appuiVersion}</version>
-				<scope>provided</scope>
-			</dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appui-omod</artifactId>
+            <version>${appuiVersion}</version>
+            <type>jar</type>
+            <scope>provided</scope>
+            <exclusions>
+	         	<exclusion>
+	         		<artifactId>appui-api</artifactId>
+	         		<groupId>org.openmrs.module</groupId>
+	         	</exclusion>
+	         </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>appui-api</artifactId>
+            <classifier>tests</classifier>
+            <version>${appuiVersion}</version>
+            <scope>test</scope>
+        </dependency>
+			
+			 <dependency>
+	            <groupId>org.openmrs.module</groupId>
+	            <artifactId>emrapi-api</artifactId>
+	            <classifier>tests</classifier>
+	            <scope>test</scope>
+	            <version>${emrapiVersion}</version>
+        	</dependency>
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
-				<artifactId>appui-omod</artifactId>
+				<artifactId>appui-api</artifactId>
 				<version>${appuiVersion}</version>
 				<scope>provided</scope>
 			</dependency>
@@ -185,6 +221,29 @@
 	            <version>${xds-senderVersion}</version>
 	            <scope>provided</scope>
 	        </dependency>
+	        
+	        <dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>idgen-api</artifactId>
+				<version>${idgenVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reporting-api</artifactId>
+			<version>${reportingVersion}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reporting-omod</artifactId>
+			<version>${reportingVersion}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
 
 			<!-- End OpenMRS modules -->
 
@@ -221,12 +280,20 @@
 
 			<!-- OpenMRS modules required just to fire up application context during testing -->
 
-			<dependency>
+		<!--  <dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>reporting-api</artifactId>
 				<version>${reportingVersion}</version>
 				<scope>test</scope>
-			</dependency>
+		</dependency> -->
+		
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reporting-api-tests</artifactId>
+            <version>${reportingVersion}</version>
+            <type>jar</type>
+            <scope>test</scope>
+        </dependency>
 
 			<dependency>
 				<groupId>org.openmrs.module</groupId>

@@ -98,25 +98,5 @@
         },
          "order": 2,
          "icon": "icon-list-alt"
-    },
-     {
-        "id": "isanteplus.patientDashboard.firstColumnFragments.patientRecordingDate",
-        "extensionPointId": "patientDashboard.firstColumnFragments",
-        "extensionParams": {
-            "provider": "${project.parent.artifactId}",
-            "fragment": "patientRecordingDate"
-        },
-         "order": -20,
-         "icon": "icon-list-alt"
-    },
-     {
-        "id": "isanteplus.patientDashboard.firstColumnFragments.nextVisitDate",
-        "extensionPointId": "patientDashboard.firstColumnFragments",
-        "extensionParams": {
-            "provider": "${project.parent.artifactId}",
-            "fragment": "nextVisitDate"
-        },
-         "order": -10,
-         "icon": "icon-list-alt"
     }
 ]

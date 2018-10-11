@@ -711,7 +711,7 @@
             <column name="check_digit" value="0" />
             <column name="creator" value="1" />
             <column name="date_created" value="2016-10-06" />
-            <column name="required" value="1" />
+            <column name="required" value="0" />
             <column name="location_behavior" value="NOT_USED" />
             <column name="uniqueness_behavior" value="UNIQUE" />
             <column name="uuid" value="9fb4533d-4fd5-4276-875b-2ab41597f5dd" />
@@ -1531,6 +1531,35 @@
 			FROM concept c
 			WHERE c.uuid = 'f8f1fa5d-51b5-4092-9df0-b9438c9c8f6b';
 		</sql>
+	</changeSet>
+	
+	<changeSet id="20180905-121345" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="isanteplus_patient_arv" />
+			</not>
+		</preConditions>
+		<comment>
+			Create form history table
+		</comment>
+		<createTable tableName="isanteplus_patient_arv">
+			<column name="patient_id" type="int" autoIncrement="false">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="arv_status" type="VARCHAR(255)" />
+			<column name="arv_regimen" type="VARCHAR(255)" />
+			<column name="date_started_arv" type="date" />
+			<column name="next_visit_date" type="date" />
+			<column name="date_created" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="date_changed" type="datetime" />
+		</createTable>
+
+		<addForeignKeyConstraint constraintName="isanteplus_patient_id_fk"
+			baseTableName="isanteplus_patient_arv"
+			baseColumnNames="patient_id" referencedTableName="patient"
+			referencedColumnNames="patient_id" />
 	</changeSet>
 
 </databaseChangeLog>

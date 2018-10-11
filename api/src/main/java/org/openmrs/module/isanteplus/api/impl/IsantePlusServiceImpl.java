@@ -15,6 +15,7 @@ package org.openmrs.module.isanteplus.api.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,11 +25,13 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.hibernate.SQLQuery;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.joda.time.Months;
@@ -53,6 +56,13 @@ import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.api.db.IsantePlusDAO;
 import org.openmrs.module.isanteplus.liquibase.InitialiseFormsHistory;
 import org.openmrs.module.isanteplus.mapped.FormHistory;
+import org.openmrs.module.reporting.common.MessageUtil;
+import org.openmrs.module.reporting.dataset.DataSet;
+import org.openmrs.module.reporting.dataset.DataSetColumn;
+import org.openmrs.module.reporting.dataset.DataSetRow;
+import org.openmrs.module.reporting.dataset.SimpleDataSet;
+import org.openmrs.module.reporting.dataset.definition.SqlDataSetDefinition;
+import org.openmrs.module.reporting.evaluation.EvaluationContext;
 
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.DatabaseException;
@@ -993,6 +1003,63 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		List<Encounter> firstEncounter = new ArrayList(
 				Context.getEncounterService().getEncountersByPatient(patient));
 		return firstEncounter.get(0);
+	}
+	
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public Obs getArtInitiationDate(Patient patient) {
+		Concept artInitiationDateConcept = Context.getConceptService().getConcept(159599);
+		List<Obs> artInitiationDateObs = new ArrayList(
+				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), artInitiationDateConcept));
+		
+		sortObsListByObsDateTime(artInitiationDateObs);
+
+		return artInitiationDateObs != null && artInitiationDateObs.size() > 0 ? artInitiationDateObs.get(artInitiationDateObs.size() - 1) : null;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public DataSet getPatientStatusArv(Patient patient) {
+		EvaluationContext context = new EvaluationContext();
+		SqlDataSetDefinition dataSetDefinition = new SqlDataSetDefinition();
+		StringBuilder sqlQuery = new StringBuilder(
+		        "select distinct"
+		                + " s_arv.patient_id, s_arv.arv_status, s_arv.arv_regimen");
+		sqlQuery.append(" FROM openmrs.isanteplus_patient_arv s_arv");
+		sqlQuery.append(" WHERE s_arv.patient_id = '" + patient.getPatientId() + "'");
+		SQLQuery query = dao.getSessionFactoryResult().getCurrentSession().createSQLQuery(sqlQuery.toString());
+		List<Object[]> list = query.list();
+		SimpleDataSet dataSet = new SimpleDataSet(dataSetDefinition, context);
+		for (Object[] o : list) {
+			DataSetRow row = new DataSetRow();
+			row.addColumnValue(new DataSetColumn(MessageUtil.translate("isanteplus.patientStatus"), MessageUtil.translate("isanteplus.patientStatus"), String.class), o[1]);
+			row.addColumnValue(new DataSetColumn(MessageUtil.translate("isanteplus.arv_regimen"), MessageUtil.translate("isanteplus.arv_regimen"), String.class), o[2]);
+			dataSet.addRow(row);
+		}
+		return dataSet;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public DataSet getDateStartedArv(Patient patient) {
+		EvaluationContext context = new EvaluationContext();
+		SqlDataSetDefinition dataSetDefinition = new SqlDataSetDefinition();
+		DateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+		StringBuilder sqlQuery = new StringBuilder(
+		        "select distinct"
+		                + " s_arv.patient_id, s_arv.date_started_arv");
+		sqlQuery.append(" FROM openmrs.isanteplus_patient_arv s_arv");
+		sqlQuery.append(" WHERE s_arv.patient_id = '" + patient.getPatientId() + "'");
+		SQLQuery query = dao.getSessionFactoryResult().getCurrentSession().createSQLQuery(sqlQuery.toString());
+		List<Object[]> list = query.list();
+		SimpleDataSet dataSet = new SimpleDataSet(dataSetDefinition, context);
+		for (Object[] o : list) {
+			DataSetRow row = new DataSetRow();
+			row.addColumnValue(new DataSetColumn(MessageUtil.translate("isanteplus.artInitiationDate"), MessageUtil.translate("isanteplus.artInitiationDate"), String.class), inputFormat.format(o[1]));
+			dataSet.addRow(row);
+		}
+		return dataSet;
 	}
 
 }

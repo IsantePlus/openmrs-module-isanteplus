@@ -106,4 +106,8 @@ public class HibernateIsantePlusDAO implements IsantePlusDAO {
 
 		return crit.list();
 	}
+	@Override
+	public SessionFactory getSessionFactoryResult() {
+		return sessionFactory;
+	}
 }
