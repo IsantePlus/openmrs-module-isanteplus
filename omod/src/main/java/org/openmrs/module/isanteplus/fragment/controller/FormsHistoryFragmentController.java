@@ -29,14 +29,14 @@ public class FormsHistoryFragmentController {
 		if (patient != null) {
 			if (allPatientForms != null && allPatientForms == 1) {
 				formHistory = Context.getService(IsantePlusService.class)
-						.getAllFormHistoryForAPatient(patient);
+						.getAllFormHistory(patient); /*.getAllFormHistoryForAPatient(patient);*/
 			} else {
 				if (visit != null && patient.getPatientId().equals(visit.getPatient().getPatientId())) {
 					formHistory = new IsantePlusGlobalProps().EXCLUDE_DEFAULT_OPENMRSFORMHISTORY
 							? Context.getService(IsantePlusService.class)
 									.getOnlyIsanteFormHistoriesByVisit(visit)
 							: Context.getService(IsantePlusService.class)
-									.getAllFormHistoryByVisit(visit);
+									.getAllFormHistory(visit);
 				}
 			}
 

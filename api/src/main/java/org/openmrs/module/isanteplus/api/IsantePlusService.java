@@ -81,12 +81,17 @@ public interface IsantePlusService extends OpenmrsService {
 	void deleteFormHistory(FormHistory formHistory);
 
 	List<FormHistory> getAllFormHistory();
+	
+	/* this method was added to resolve slow issue*/
+	List<FormHistory> getAllFormHistory(Patient patient);
+	List<FormHistory> getAllFormHistory(Visit visit);
 
 	FormHistory saveFormHistory(FormHistory formHistory);
 
 	boolean formHistoryExist(FormHistory formHistory, List<FormHistory> formHistoryLookup);
 
 	List<FormHistory> getOnlyIsanteFormHistories();
+	List<FormHistory> getOnlyIsanteFormHistories(Visit visit);
 
 	List<FormHistory> getOnlyIsanteFormHistoriesByVisit(Visit visit);
 
