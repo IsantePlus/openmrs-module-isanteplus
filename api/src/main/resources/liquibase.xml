@@ -1215,6 +1215,17 @@
 			WHERE c.uuid = '169f77a2-7f3c-480c-8c65-0ed14838b6a4';
 		</sql>
 	</changeSet>
+	
+	<changeSet id="20181010-1427" author="jmaxy">
+    <addColumn tableName="isanteplus_form_history">
+        <column name="patient_id" type="int(11)"/>
+    </addColumn>
+    <addForeignKeyConstraint constraintName="form_history_patient_fk"
+			baseTableName="isanteplus_form_history"
+			baseColumnNames="patient_id" referencedTableName="patient"
+			referencedColumnNames="patient_id" />
+   </changeSet>
+	
 
 	<changeSet dbms="mysql" id="2018August27-19:00" author="Arkadiusz Lalo"
 			   runInTransaction="true">

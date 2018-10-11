@@ -575,9 +575,9 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 		if (formHistory != null && userId != null) {
 			sql = "INSERT INTO isanteplus_form_history (" + (formHistory.getVisit() != null ? "visit_id ," : "")
-					+ "encounter_id, creator, date_created, voided, uuid) VALUES("
+					+ "encounter_id, patient_id, creator, date_created, voided, uuid) VALUES("
 					+ (formHistory.getVisit() != null ? formHistory.getVisit().getVisitId() + "," : "")
-					+ formHistory.getEncounter().getEncounterId() + ", " + userId + ", '"
+					+ formHistory.getEncounter().getEncounterId() + ", "+ formHistory.getPatient().getPatientId() + ", " + userId + ", '"
 					+ sdf.format(formHistory.getDateCreated()) + "', " + (formHistory.isVoided() ? 1 : 0) + ", '"
 					+ formHistory.getUuid() + "')";
 		}
@@ -619,6 +619,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 			formHistory.setDateCreated(new Date());
 			formHistory.setVisit(encounter.getVisit());
 			formHistory.setVoided(false);
+			formHistory.setPatient(encounter.getPatient());
 		}
 		return formHistory;
 	}
@@ -642,6 +643,18 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	public List<FormHistory> getAllFormHistory() {
 		return dao.getAllFormHistory();
 	}
+	
+	/* this method was added to resolve slow issue*/
+	@Override
+	public List<FormHistory> getAllFormHistory(Patient patient) {
+		return dao.getAllFormHistory(patient);
+	}
+	/* this method was added to resolve slow issue*/
+	@Override
+	public List<FormHistory> getAllFormHistory(Visit visit) {
+		return dao.getAllFormHistory(visit);
+	}
+	
 
 	@Override
 	public FormHistory saveFormHistory(FormHistory formHistory) {
@@ -679,10 +692,36 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 		return iSanteFormHistories;
 	}
+	
+	
+	@Override
+	public List<FormHistory> getOnlyIsanteFormHistories(Visit visit) {
+		List<FormHistory> allFormhistories = getAllFormHistory(visit);
+		List<FormHistory> iSanteFormHistories = new ArrayList<FormHistory>();
+		String excludableFormIds = Context.getAdministrationService()
+				.getGlobalProperty(ConfigurableGlobalProperties.FORMIDS_WHOSE_HISTORY_TOBEEXCLUDED);
+		List<String> formIdsToBeMissed = StringUtils.isNotBlank(excludableFormIds)
+				? Arrays.asList(excludableFormIds.replaceAll("\\s", "").split(",")) : null;
+		List<Integer> formIdsToBeExcluded = new ArrayList<Integer>();
+
+		if (formIdsToBeMissed != null && formIdsToBeMissed.size() > 0) {
+			for (String s : formIdsToBeMissed)
+				formIdsToBeExcluded.add(Integer.valueOf(s));
+		}
+		if (allFormhistories != null && allFormhistories.size() > 0) {
+			for (FormHistory history : allFormhistories) {
+				if (!formIdsToBeExcluded.contains(history.getEncounter().getForm().getFormId())) {
+					iSanteFormHistories.add(history);
+				}
+			}
+		}
+
+		return iSanteFormHistories;
+	}
 
 	@Override
 	public List<FormHistory> getOnlyIsanteFormHistoriesByVisit(Visit visit) {
-		return filterHistoriesByVisit(getOnlyIsanteFormHistories(), visit);
+		return filterHistoriesByVisit(getOnlyIsanteFormHistories(visit), visit);
 	}
 
 	private List<FormHistory> filterHistoriesByVisit(List<FormHistory> history, Visit visit) {

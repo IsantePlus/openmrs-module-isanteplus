@@ -21,6 +21,8 @@ import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.Encounter;
+import org.openmrs.Patient;
+import org.openmrs.Visit;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.api.db.IsantePlusDAO;
 import org.openmrs.module.isanteplus.mapped.FormHistory;
@@ -70,6 +72,28 @@ public class HibernateIsantePlusDAO implements IsantePlusDAO {
 	public List<FormHistory> getAllFormHistory() {
 		return getSessionFactory().getCurrentSession().createCriteria(FormHistory.class).list();
 	}
+	
+	/* this method was added to resolve slow issue*/
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<FormHistory> getAllFormHistory(Patient patient) {
+		Criteria crit = sessionFactory.getCurrentSession().createCriteria(FormHistory.class)
+				.createAlias("patient", "p").add(Restrictions.eq("p.patientId", patient.getPatientId()));
+
+		return crit.list();
+	}
+	
+	/* this method was added to resolve slow issue*/
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<FormHistory> getAllFormHistory(Visit visit) {
+		Criteria crit = sessionFactory.getCurrentSession().createCriteria(FormHistory.class)
+				.createAlias("visit", "v").add(Restrictions.eq("v.visitId", visit.getVisitId()));
+
+		return crit.list();
+	}
+	
+	
 
 	@Override
 	@SuppressWarnings("unchecked")

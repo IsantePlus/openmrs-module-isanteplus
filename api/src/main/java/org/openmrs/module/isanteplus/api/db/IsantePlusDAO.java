@@ -16,6 +16,8 @@ package org.openmrs.module.isanteplus.api.db;
 import java.util.List;
 
 import org.openmrs.Encounter;
+import org.openmrs.Patient;
+import org.openmrs.Visit;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.mapped.FormHistory;
@@ -32,6 +34,10 @@ public interface IsantePlusDAO {
 	void deleteFormHistory(FormHistory formHistory);
 
 	List<FormHistory> getAllFormHistory();
+	
+	/* this method was added to resolve slow issue*/
+	List<FormHistory> getAllFormHistory(Patient patient);
+	List<FormHistory> getAllFormHistory(Visit visit);
 
 	FormHistory saveFormHistory(FormHistory formHistory);
 
