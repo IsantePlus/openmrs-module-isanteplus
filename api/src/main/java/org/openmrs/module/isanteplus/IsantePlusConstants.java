@@ -39,6 +39,8 @@ public class IsantePlusConstants {
 	public static final String DRUGSHISTORY_EXTENSIONPOINT_ID = "isanteplus.drugsHistory";
 
 	public static String BMIGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.bmiGraph";
+	
+	public static String VIRALLOADGRAPH_EXTENSIONPOINT_ID = "isanteplus.patientDashboard.secondColumnFragments.viralLoadGraph";
 
 	public static final String DEFAULT_LOCALE = "fr";
 	
@@ -67,5 +69,9 @@ public class IsantePlusConstants {
 	public static final String VITALS_FORM_ENCOUNTERTYPE_UUID = "67a71486-1a54-468f-ac3e-7091a9a79584";
 
 	public static final String VITALS_FORM_NAME = "Vitals";
+	
+	public static final String PATIENT_IDENTIFIER_TYPE_UUID_OLD_ISANTE_ID = "0e0c7cc2-3491-4675-b705-746e372ff346";
+	
+	public static final String PATIENT_IDENTIFIER_TYPE_UUID_CODE_PC = "b7a154fd-0097-4071-ac09-af11ee7e0310";
 
 }

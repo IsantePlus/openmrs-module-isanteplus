@@ -21,9 +21,16 @@ public class IsantePlusMostRecentVitalsFragmentController {
 		Obs height = Context.getService(IsantePlusService.class).getLatestHeightForPatient(patient);
 		Obs weight = Context.getService(IsantePlusService.class).getLatestWeightForPatient(patient);
 
-		if (height != null & weight != null) {
-			return Context.getService(IsantePlusService.class)
-					.roundAbout(weight.getValueNumeric() / (Math.pow(height.getValueNumeric() * 0.01, 2)), 1);
+		if (height != null && weight != null) {
+			if(weight.getValueNumeric() > 0 && height.getValueNumeric() > 0)
+			{
+				return Context.getService(IsantePlusService.class)
+						.roundAbout(weight.getValueNumeric() / (Math.pow(height.getValueNumeric() * 0.01, 2)), 1);
+			}
+			else
+			{
+				return null;
+			}
 		}
 		return null;
 	}

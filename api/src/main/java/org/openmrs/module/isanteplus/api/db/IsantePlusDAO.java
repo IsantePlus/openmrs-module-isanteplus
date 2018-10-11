@@ -15,6 +15,7 @@ package org.openmrs.module.isanteplus.api.db;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
 import org.openmrs.Encounter;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
@@ -42,4 +43,6 @@ public interface IsantePlusDAO {
 	ComponentState saveOrUpdateComponentState(ComponentState componentState);
 
 	List<FormHistory> getFormHistoryByEncounterId(Integer encounterId);
+
+	SessionFactory getSessionFactoryResult();
 }

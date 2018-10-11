@@ -30,6 +30,13 @@
 		<require_module version="${metadatasharingVersion}">org.openmrs.module.metadatasharing</require_module>
 		<require_module version="${haiticoreVersion}">org.openmrs.module.haiticore</require_module>
 		<require_module version="${xds-senderVersion}">org.openmrs.module.xdssender</require_module>
+		 <require_module version="${appuiVersion}">
+            org.openmrs.module.appui
+        </require_module>
+
+        <require_module version="${idgenVersion}">
+            org.openmrs.module.idgen
+        </require_module>
 	</require_modules>
 	<!-- / Required Modules -->
 

@@ -27,6 +27,26 @@
             },
             "sections": [
                 {
+                    "id": "demographics",
+                    "questions": [
+                        {
+                        "legend": "isanteplus.registration.patient.mothersName.label",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "isanteplus.registration.patient.mothersName.label",
+                                "formFieldName": "First Name of Mother",
+                                "uuid": "8d871d18-c2cc-11de-8d13-0010c6dffd0f",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                }
+                            }
+                        ]
+                        }
+                    ]
+                }, 
+                {
                     "id": "patientIds",
                     "label": "isanteplus.registration.patient.patientIds.label",
                     "questions": [
@@ -62,27 +82,23 @@
                                     "cssClasses": ["required"]
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "id": "demographics",
-                    "questions": [
+                        },
                         {
-                        "legend": "isanteplus.registration.patient.mothersName.label",
-                        "fields": [
-                            {
-                                "type": "personAttribute",
-                                "label": "isanteplus.registration.patient.mothersName.label",
-                                "formFieldName": "First Name of Mother",
-                                "uuid": "8d871d18-c2cc-11de-8d13-0010c6dffd0f",
-                                "widget": {
-                                    "providerName": "uicommons",
-                                    "fragmentId": "field/text"
+                            "legend": "isanteplus.registration.patient.codePC.label",
+                            "id": "codePcLabel",
+                            "fields": [
+                                {
+                                    "type": "patientIdentifier",
+                                    "label": "isanteplus.registration.patient.codePC.label",
+                                    "formFieldName": "Code PC",
+                                    "uuid": "b7a154fd-0097-4071-ac09-af11ee7e0310",
+                                    "widget": {
+                                        "providerName": "uicommons",
+                                        "fragmentId": "field/text"
+                                    }
                                 }
-                            }
-                        ]
-                        }
+                            ]
+                		}
                     ]
                 },
                 {

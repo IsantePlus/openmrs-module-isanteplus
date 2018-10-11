@@ -63,8 +63,14 @@ public class IsantePlusManager {
 	private String bmiGraphExtensionId;
 
 	private String bmiGraphExtensionChecked;
-
+	
 	private boolean toogleBmiGraphExtension;
+	
+	private String viralLoadGraphExtensionId;
+
+	private String viralLoadGraphExtensionChecked;
+	
+	private boolean toogleViralLoadGraphExtension;
 
 	public IsantePlusManager() {
 		visitFormHistoryExtensionId = IsantePlusConstants.VISITFORMHISTORY_EXTENSIONPOINT_ID;
@@ -77,6 +83,7 @@ public class IsantePlusManager {
 		mostRecentVitalsExtensionId = IsantePlusConstants.MOSTRECENTVITALS_EXTENSIONPOINT_ID;
 		drugsHistoryExtensionId = IsantePlusConstants.DRUGSHISTORY_EXTENSIONPOINT_ID;
 		bmiGraphExtensionId = IsantePlusConstants.BMIGRAPH_EXTENSIONPOINT_ID;
+		viralLoadGraphExtensionId = IsantePlusConstants.VIRALLOADGRAPH_EXTENSIONPOINT_ID;
 		toggleVisitFormHistoryExtension = getComponentStateStateEnabled(getVisitFormHistoryExtensionId());
 		toggleLabHistoryExtension = getComponentStateStateEnabled((getLabHistoryExtensionId()));
 		togglePatientFormHistoryExtension = getComponentStateStateEnabled((getPatientFormHistoryExtensionId()));
@@ -87,6 +94,7 @@ public class IsantePlusManager {
 		toogleMostRecentVitalsExtension = getComponentStateStateEnabled(getMostRecentVitalsExtensionId());
 		toogleDrugsHistoryExtension = getComponentStateStateEnabled(getDrugsHistoryExtensionId());
 		toogleBmiGraphExtension = getComponentStateStateEnabled(getBmiGraphExtensionId());
+		toogleViralLoadGraphExtension = getComponentStateStateEnabled(getViralLoadGraphExtensionId());
 		visitFormHistoryExtensionChecked = getToggleVisitFormHistoryExtension() ? "checked" : "";
 		labHistoryExtensionChecked = getToggleLabHistoryExtension() ? "checked" : "";
 		patientFormHistoryExtensionChecked = getTogglePatientFormHistoryExtension() ? "checked" : "";
@@ -97,6 +105,7 @@ public class IsantePlusManager {
 		mostRecentVitalsExtensionChecked = getToogleMostRecentVitalsExtension() ? "checked" : "";
 		drugsHistoryExtensionChecked = getToogleDrugsHistoryExtension() ? "checked" : "";
 		bmiGraphExtensionChecked = getToogleBmiGraphExtension() ? "checked" : "";
+		viralLoadGraphExtensionChecked = getToogleViralLoadGraphExtension() ? "checked" : "";
 	}
 
 	public String getVisitFormHistoryExtensionId() {
@@ -225,5 +234,17 @@ public class IsantePlusManager {
 
 	public String getBmiGraphExtensionChecked() {
 		return bmiGraphExtensionChecked;
+	}
+	
+	public boolean getToogleViralLoadGraphExtension() {
+		return toogleViralLoadGraphExtension;
+	}
+	
+	public String getViralLoadGraphExtensionId() {
+		return viralLoadGraphExtensionId;
+	}
+
+	public String getViralLoadGraphExtensionChecked() {
+		return viralLoadGraphExtensionChecked;
 	}
 }

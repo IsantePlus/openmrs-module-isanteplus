@@ -1600,9 +1600,9 @@
 							</span>
 							</td>
 						</tr>
-						<tr><td><span class="titre" ch-target="#span80"><obs conceptId="CIEL:1271" class="master" id="idlipase1" answerConceptId="CIEL:101" answerLabel="Lipase"/></span><br/>
+						<tr><td><span class="titre" ch-target="#span80"><obs conceptId="CIEL:1271" class="master" id="idlipase1" answerConceptId="CIEL:1013" answerLabel="Lipase"/></span><br/>
 							<span id="span80" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:101" answerConceptIds="CIEL:1115,CIEL:1116" answerLabels="Normal,Anormal" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1013" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 							</td>
 						</tr>

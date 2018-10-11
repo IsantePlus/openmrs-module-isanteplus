@@ -88,5 +88,15 @@
         },
          "order": 10,
          "icon": "icon-list-alt"
+    },
+     {
+        "id": "isanteplus.patientDashboard.secondColumnFragments.viralLoadGraph",
+        "extensionPointId": "patientDashboard.secondColumnFragments",
+        "extensionParams": {
+            "provider": "${project.parent.artifactId}",
+            "fragment": "viralLoadGraph"
+        },
+         "order": 2,
+         "icon": "icon-list-alt"
     }
 ]
