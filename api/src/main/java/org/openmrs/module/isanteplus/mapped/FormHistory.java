@@ -21,6 +21,7 @@ import org.openmrs.EncounterRole;
 import org.openmrs.Obs;
 import org.openmrs.User;
 import org.openmrs.Visit;
+import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.isanteplus.BaseOpenmrsDataObject;
 import org.openmrs.module.isanteplus.IsantePlusGlobalProps;
@@ -50,6 +51,10 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 	@JoinColumn(name = "visit_id")
 	private Visit visit;
 
+	@ManyToOne
+	@JoinColumn(name = "patient_id")
+	private Patient patient;
+	
 	/**
 	 * Encounter is the required field here, since a visit can contain a list of
 	 * encounters which actually are entered each through a form
@@ -166,6 +171,14 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 
 	public void setVisit(Visit visit) {
 		this.visit = visit;
+	}
+	
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
 	}
 
 	public Encounter getEncounter() {
