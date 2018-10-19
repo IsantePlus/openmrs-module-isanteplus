@@ -14,10 +14,7 @@
 package org.openmrs.module.isanteplus;
 
 import java.security.SecureRandom;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -45,8 +42,6 @@ import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
 import org.openmrs.module.isanteplus.deploy.bundle.IsantePlusMetadataBundle;
 import org.openmrs.module.metadatadeploy.api.MetadataDeployService;
-import org.openmrs.scheduler.SchedulerException;
-import org.openmrs.scheduler.TaskDefinition;
 import org.openmrs.ui.framework.resource.ResourceFactory;
 import org.openmrs.util.PrivilegeConstants;
 import org.openmrs.util.RoleConstants;

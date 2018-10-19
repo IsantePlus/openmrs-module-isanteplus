@@ -1066,7 +1066,8 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		        "select distinct"
 		                + " s_arv.patient_id, s_arv.arv_status, s_arv.arv_regimen");
 		sqlQuery.append(" FROM openmrs.isanteplus_patient_arv s_arv");
-		sqlQuery.append(" WHERE s_arv.patient_id = '" + patient.getPatientId() + "'");
+		sqlQuery.append(" WHERE (s_arv.arv_status is not null OR s_arv.arv_regimen is not null)");
+		sqlQuery.append(" AND s_arv.patient_id = '" + patient.getPatientId() + "'");
 		SQLQuery query = dao.getSessionFactoryResult().getCurrentSession().createSQLQuery(sqlQuery.toString());
 		List<Object[]> list = query.list();
 		SimpleDataSet dataSet = new SimpleDataSet(dataSetDefinition, context);
@@ -1089,7 +1090,8 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		        "select distinct"
 		                + " s_arv.patient_id, s_arv.date_started_arv");
 		sqlQuery.append(" FROM openmrs.isanteplus_patient_arv s_arv");
-		sqlQuery.append(" WHERE s_arv.patient_id = '" + patient.getPatientId() + "'");
+		sqlQuery.append(" WHERE (s_arv.date_started_arv is not null AND s_arv.date_started_arv <> '')");
+		sqlQuery.append(" AND s_arv.patient_id = '" + patient.getPatientId() + "'");
 		SQLQuery query = dao.getSessionFactoryResult().getCurrentSession().createSQLQuery(sqlQuery.toString());
 		List<Object[]> list = query.list();
 		SimpleDataSet dataSet = new SimpleDataSet(dataSetDefinition, context);
