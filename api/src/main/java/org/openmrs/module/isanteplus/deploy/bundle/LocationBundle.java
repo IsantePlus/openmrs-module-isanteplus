@@ -1,20 +1,12 @@
 package org.openmrs.module.isanteplus.deploy.bundle;
 
 import org.openmrs.Location;
-import org.openmrs.LocationAttributeType;
-import org.openmrs.customdatatype.datatype.FreeTextDatatype;
-import org.openmrs.customdatatype.datatype.RegexValidatedTextDatatype;
 import org.openmrs.module.isanteplus.deploy.bundle.LocationMflCsvSource;
 import org.openmrs.module.isanteplus.deploy.bundle.LocationMflSynchronization;
-import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.metadatadeploy.bundle.AbstractMetadataBundle;
-import org.openmrs.module.metadatadeploy.bundle.Requires;
-import org.openmrs.module.metadatadeploy.descriptor.LocationAttributeTypeDescriptor;
 import org.openmrs.module.metadatadeploy.source.ObjectSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import static org.openmrs.module.metadatadeploy.bundle.CoreConstructors.locationAttributeType;
 
 @Component
 //@Requires({ CommonMetadata.class })
