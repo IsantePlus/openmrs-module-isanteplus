@@ -147,6 +147,27 @@ public class IsantePlusFormsFragmentController {
 			otherForms.add(vaccination);
 			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
 			otherForms.add(imagerie);
+			
+			if(patientAge == null)
+			{
+				primaryCareForms.add(soinsDeSantePrimairePremiereConsultation);
+				primaryCareForms.add(soinsDeSantePrimaireConsultation);
+				primaryCareForms.add(soinsDeSantePrimairePremiereConsultationPediatrique);
+				primaryCareForms.add(soinsDeSantePrimaireConsultationPediatrique);
+				labForms.add(ordonnanceMedicale);
+				labForms.add(ordonnancepediatrique);
+				hivCareForms.add(saisiePremiereVisiteAdult);
+				hivCareForms.add(visiteDeSuivi);
+				hivCareForms.add(saisiePremiereVisitePediatrique);
+				hivCareForms.add(visiteDeSuiviPediatrique);
+				psychoSocialForms.add(fichePsychosocialeAdulte);
+				psychoSocialForms.add(fichePsychosocialePediatrique);
+				if (StringUtils.isNotBlank(patientSex) && "F".equals(patientSex)) {
+					obygnForms.add(ficheDePremiereConsultationOBGYN);
+					obygnForms.add(ficheDeConsultationOBGYN);
+					obygnForms.add(ficheDeTravailEtDaccouchement);
+				}
+			}
 
 			model.put("primaryCareForms", primaryCareForms);
 			model.put("labForms", labForms);

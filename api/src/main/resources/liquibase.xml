@@ -1254,13 +1254,20 @@
 	</changeSet>
 	
 	<changeSet id="20181010-1427" author="jmaxy">
-    <addColumn tableName="isanteplus_form_history">
-        <column name="patient_id" type="int(11)"/>
-    </addColumn>
-    <addForeignKeyConstraint constraintName="form_history_patient_fk"
-			baseTableName="isanteplus_form_history"
-			baseColumnNames="patient_id" referencedTableName="patient"
-			referencedColumnNames="patient_id" />
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(*) FROM
+				liquibasechangelog WHERE ID = '20181010-1427';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+	    <addColumn tableName="isanteplus_form_history">
+	        <column name="patient_id" type="int(11)"/>
+	    </addColumn>
+	    <addForeignKeyConstraint constraintName="form_history_patient_fk"
+				baseTableName="isanteplus_form_history"
+				baseColumnNames="patient_id" referencedTableName="patient"
+				referencedColumnNames="patient_id" />
    </changeSet>
 	
 
@@ -1551,7 +1558,7 @@
 			</not>
 		</preConditions>
 		<comment>
-			Create form history table
+			Create patient_arv table
 		</comment>
 		<createTable tableName="isanteplus_patient_arv">
 			<column name="patient_id" type="int" autoIncrement="false">

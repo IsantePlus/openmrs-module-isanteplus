@@ -845,68 +845,116 @@
 		setValue('autreTraitement.value', '5622');
 		}*/
 		/*Fin autres traitements*/
+		
 		//DEBUT TEST JAVASCRIPT FOR TESTS SEROLOGIQUES
-		if ((getValue('testrapide1age.value') == '')) {
-		setValue('testrapide1.value', '');
+		if ((getValue('testrapide1age.value') != '') || 
+		(getValue('testrapide1unite.value') == '1072') || (getValue('testrapide1unite.value') == '1074') || 
+		(getValue('testrapide1resultat.value') == '664') || (getValue('testrapide1resultat.value') == '703') ||
+		(getValue('testrapide1resultat.value') == '1138')) {
+			setValue('testrapide1.value', '163722');
 		} else {
-		setValue('testrapide1.value', '163722');
+			setValue('testrapide1.value', '');
 		}
-		if ((getValue('testrapide2age.value') == '')) {
-		setValue('testrapide2.value', '');
+		
+		if ((getValue('testrapide2age.value') != '') || 
+		(getValue('testrapide2unite.value') == '1072') || (getValue('testrapide2unite.value') == '1074') || 
+		(getValue('testrapide2resultat.value') == '664') || (getValue('testrapide2resultat.value') == '703') ||
+		(getValue('testrapide2resultat.value') == '1138')) {
+			setValue('testrapide2.value', '163722');
 		} else {
-		setValue('testrapide2.value', '163722');
+			setValue('testrapide2.value', '');
 		}
-		if ((getValue('testrapide3age.value') == '')) {
-		setValue('testrapide3.value', '');
+		
+		if ((getValue('testrapide3age.value') != '') || 
+		(getValue('testrapide3unite.value') == '1072') || (getValue('testrapide3unite.value') == '1074') || 
+		(getValue('testrapide3resultat.value') == '664') || (getValue('testrapide3resultat.value') == '703') ||
+		(getValue('testrapide3resultat.value') == '1138')) {
+			setValue('testrapide3.value', '163722');
 		} else {
-		setValue('testrapide3.value', '163722');
+			setValue('testrapide3.value', '');
 		}
+		
 		// ELISA
-		if ((getValue('elisa1age.value') == '')) {
-		setValue('elisa1.value', '');
+		
+		if ((getValue('elisa1age.value') != '') || 
+		(getValue('elisa1unite.value') == '1072') || (getValue('elisa1unite.value') == '1074') || 
+		(getValue('elisa1resultat.value') == '664') || (getValue('elisa1resultat.value') == '703') ||
+		(getValue('elisa1resultat.value') == '1138')) {
+			setValue('elisa1.value', '1042');
 		} else {
-		setValue('elisa1.value', '1042');
+			setValue('elisa1.value', '');
 		}
-		if ((getValue('elisa2age.value') == '')) {
-		setValue('elisa2.value', '');
+		
+		if ((getValue('elisa2age.value') != '') || 
+		(getValue('elisa2unite.value') == '1072') || (getValue('elisa2unite.value') == '1074') || 
+		(getValue('elisa2resultat.value') == '664') || (getValue('elisa2resultat.value') == '703') ||
+		(getValue('elisa2resultat.value') == '1138')) {
+			setValue('elisa2.value', '1042');
 		} else {
-		setValue('elisa2.value', '1042');
+			setValue('elisa2.value', '');
 		}
-		if ((getValue('elisa3age.value') == '')) {
-		setValue('elisa3.value', '');
+		
+		if ((getValue('elisa3age.value') != '') || 
+		(getValue('elisa3unite.value') == '1072') || (getValue('elisa3unite.value') == '1074') || 
+		(getValue('elisa3resultat.value') == '664') || (getValue('elisa3resultat.value') == '703') ||
+		(getValue('elisa3resultat.value') == '1138')) {
+			setValue('elisa3.value', '1042');
 		} else {
-		setValue('elisa3.value', '1042');
+			setValue('elisa3.value', '');
 		}
-		if ((getValue('pcr1age.value') == '')) {
-		setValue('pcr1.value', '');
+		
+		if ((getValue('pcr1age.value') != '') || 
+		(getValue('pcr1unite.value') == '1072') || (getValue('pcr1unite.value') == '1074') || 
+		(getValue('pcr1resultat.value') == '664') || (getValue('pcr1resultat.value') == '703') ||
+		(getValue('pcr1resultat.value') == '1138')) {
+			setValue('pcr1.value', '1030');
 		} else {
-		setValue('pcr1.value', '1030');
+			setValue('pcr1.value', '');
 		}
-		if ((getValue('pcr2age.value') == '')) {
-		setValue('pcr2.value', '');
+		if ((getValue('pcr2age.value') != '') || 
+		(getValue('pcr2unite.value') == '1072') || (getValue('pcr2unite.value') == '1074') || 
+		(getValue('pcr2resultat.value') == '664') || (getValue('pcr2resultat.value') == '703') ||
+		(getValue('pcr2resultat.value') == '1138')) {
+			setValue('pcr2.value', '1030');
 		} else {
-		setValue('pcr2.value', '1030');
+			setValue('pcr2.value', '');
 		}
-		if ((getValue('pcr3age.value') == '')) {
-		setValue('pcr3.value', '');
+		if ((getValue('pcr3age.value') != '') || 
+		(getValue('pcr3unite.value') == '1072') || (getValue('pcr3unite.value') == '1074') || 
+		(getValue('pcr3resultat.value') == '664') || (getValue('pcr3resultat.value') == '703') ||
+		(getValue('pcr3resultat.value') == '1138')) {
+			setValue('pcr3.value', '1030');
 		} else {
-		setValue('pcr3.value', '1030');
+			setValue('pcr3.value', '');
 		}
-		if ((getValue('antigenemie1age.value') == '')) {
-		setValue('antigenemie1.value', '');
+		
+		if ((getValue('antigenemie1age.value') != '') || 
+		(getValue('antigenemie1unite.value') == '1072') || (getValue('antigenemie1unite.value') == '1074') || 
+		(getValue('antigenemie1resultat.value') == '664') || (getValue('antigenemie1resultat.value') == '703') ||
+		(getValue('antigenemie1resultat.value') == '1138')) {
+			setValue('antigenemie1.value', '163342');
 		} else {
-		setValue('antigenemie1.value', '163342');
+			setValue('antigenemie1.value', '');
 		}
-		if ((getValue('antigenemie2age.value') == '')) {
-		setValue('antigenemie2.value', '');
+		
+		if ((getValue('antigenemie2age.value') != '') || 
+		(getValue('antigenemie2unite.value') == '1072') || (getValue('antigenemie2unite.value') == '1074') || 
+		(getValue('antigenemie2resultat.value') == '664') || (getValue('antigenemie2resultat.value') == '703') ||
+		(getValue('antigenemie2resultat.value') == '1138')) {
+			setValue('antigenemie2.value', '163342');
 		} else {
-		setValue('antigenemie2.value', '163342');
+			setValue('antigenemie2.value', '');
 		}
-		if ((getValue('antigenemie3age.value') == '')) {
-		setValue('antigenemie3.value', '');
+		
+		if ((getValue('antigenemie3age.value') != '') || 
+		(getValue('antigenemie3unite.value') == '1072') || (getValue('antigenemie3unite.value') == '1074') || 
+		(getValue('antigenemie3resultat.value') == '664') || (getValue('antigenemie3resultat.value') == '703') ||
+		(getValue('antigenemie3resultat.value') == '1138')) {
+			setValue('antigenemie3.value', '163342');
 		} else {
-		setValue('antigenemie3.value', '163342');
+			setValue('antigenemie3.value', '');
 		}
+		
 
 		//antigenemie1=163342
 		//FIN TEST JAVASCRIPT FOR TESTS SEROLOGIQUES
@@ -1338,16 +1386,22 @@
 						<tr>
 							<td><!-- A verifier with James (Autres concepts -->
 								<tr>
-									<td>Âge</td>
-								</tr>
-								<tr>
-									<td colspan="2" width="50%">Tests rapides</td>
-									<td width="50%">
-										Résultat (Ind=Indeterminé) <!-- demande d'ajout dans le groupe 1361 -->
+									<td>
+										<td>Âge</td>
+										<td></td>
 									</td>
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="1361">
+									<td>
+										<td colspan="2" width="50%">Tests rapides</td>
+										<td width="50%">
+											Résultat (Ind=Indeterminé) <!-- demande d'ajout dans le groupe 1361 -->
+										</td>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<obsgroup groupingConceptId="1361">
 										<td colspan="2">
 											<span style="display:none">
 												<obs conceptId="CIEL:162087" id="testrapide1"
@@ -1356,7 +1410,7 @@
 											</span>
 											&#160;&#160;
 											<obs conceptId="CIEL:163540" id="testrapide1age" />
-											<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
+											<obs conceptId="CIEL:163541" id="testrapide1unite" answerConceptIds="CIEL:1072,CIEL:1074"
 												answerLabels="en jours,en mois" style="radio" />
 										</td>
 										<td>
@@ -1364,10 +1418,13 @@
 												answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Nég,Positif,Ind"
 												style="radio" />
 										</td>
-									</obsgroup>
+									
+									   </obsgroup>
+									</td>
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="1361">
+									<td>
+									  <obsgroup groupingConceptId="1361">
 										<td colspan="2">
 											<span style="display:none">
 												<obs conceptId="CIEL:162087" id="testrapide2"
@@ -1376,7 +1433,7 @@
 											</span>
 											&#160;&#160;
 											<obs conceptId="CIEL:163540" id="testrapide2age" />
-											<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
+											<obs conceptId="CIEL:163541" id="testrapide2unite" answerConceptIds="CIEL:1072,CIEL:1074"
 												answerLabels="en jours,en mois" style="radio" />
 										</td>
 										<td>
@@ -1384,10 +1441,12 @@
 												answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Nég,Positif,Ind"
 												style="radio" />
 										</td>
-									</obsgroup>
+									 </obsgroup>
+									</td>
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="1361">
+									<td>
+										<obsgroup groupingConceptId="1361">
 										<td colspan="2">
 											<span style="display:none">
 												<obs conceptId="CIEL:162087" id="testrapide3"
@@ -1396,7 +1455,7 @@
 											</span>
 											&#160;&#160;
 											<obs conceptId="CIEL:163540" id="testrapide3age" />
-											<obs conceptId="CIEL:163541" id="testrapide3enjours"
+											<obs conceptId="CIEL:163541" id="testrapide3unite"
 												answerConceptIds="CIEL:1072,CIEL:1074" answerLabels="en jours,en mois"
 												style="radio" />
 										</td>
@@ -1405,13 +1464,15 @@
 												answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Nég,Positif,Ind"
 												style="radio" />
 										</td>
-									</obsgroup>
+									 </obsgroup>
+									</td>
 								</tr>
 								<tr>
 									<td colspan="2">ELISA </td>
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="1361">
+									<td>
+									  <obsgroup groupingConceptId="1361">
 										<td colspan="2">
 											<span style="display:none">
 												<obs conceptId="CIEL:162087" id="elisa1"
@@ -1420,36 +1481,40 @@
 											</span>
 											&#160;&#160;
 											<obs conceptId="CIEL:163540" id="elisa1age" />
-											<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
+											<obs conceptId="CIEL:163541" id="elisa1unite" answerConceptIds="CIEL:1072,CIEL:1074"
 												answerLabels="en jours,en mois" style="radio" />
 										</td>
 										<td>
-											<obs conceptId="CIEL:1042" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											<obs conceptId="CIEL:1042" id="elisa1resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
 												answerLabels="Nég,Positif,Ind" style="radio" />
 										</td>
-									</obsgroup>
+									 </obsgroup>
+									</td>
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="1361">
-										<td colspan="2">
-											<span style="display:none">
-												<obs conceptId="CIEL:162087" id="elisa2"
-													answerConceptId="CIEL:1042" defaultValue="CIEL:1042"
-													answerLabel="" />
-											</span>
-											&#160;&#160;
-											<obs conceptId="CIEL:163540" id="elisa2age" />
-											<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-												answerLabels="en jours,en mois" style="radio" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:1042" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-												answerLabels="Nég,Positif,Ind" style="radio" />
-										</td>
-									</obsgroup>
+									<td>
+										<obsgroup groupingConceptId="1361">
+											<td colspan="2">
+												<span style="display:none">
+													<obs conceptId="CIEL:162087" id="elisa2"
+														answerConceptId="CIEL:1042" defaultValue="CIEL:1042"
+														answerLabel="" />
+												</span>
+												&#160;&#160;
+												<obs conceptId="CIEL:163540" id="elisa2age" />
+												<obs conceptId="CIEL:163541" id="elisa2unite" answerConceptIds="CIEL:1072,CIEL:1074"
+													answerLabels="en jours,en mois" style="radio" />
+											</td>
+											<td>
+												<obs conceptId="CIEL:1042" id="elisa2resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+													answerLabels="Nég,Positif,Ind" style="radio" />
+											</td>
+										</obsgroup>
+									</td>
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="1361">
+									<td>
+										<obsgroup groupingConceptId="1361">
 										<td colspan="2">
 											<span style="display:none">
 												<obs conceptId="CIEL:162087" id="elisa3"
@@ -1458,14 +1523,15 @@
 											</span>
 											&#160;&#160;
 											<obs conceptId="CIEL:163540" id="elisa3age" />
-											<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
+											<obs conceptId="CIEL:163541" id="elisa3unite" answerConceptIds="CIEL:1072,CIEL:1074"
 												answerLabels="en jours,en mois" style="radio" />
 										</td>
 										<td>
-											<obs conceptId="CIEL:1042" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											<obs conceptId="CIEL:1042" id="elisa3resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
 												answerLabels="Nég,Positif,Ind" style="radio" />
 										</td>
-									</obsgroup>
+										</obsgroup>
+									</td>
 								</tr>
 							</td>
 						</tr>
@@ -1480,126 +1546,144 @@
 				<section headerLabel="TESTS VIROLOGIQUES">
 					<table width="100%">
 						<tr>
-							<td width="50%">Âge</td>
-							<td width="50%">Résultat (Ind=Indeterminé)</td>
+							<td>
+								<td width="50%">Âge</td>
+								<td width="50%">Résultat (Ind=Indeterminé)</td>
+							</td>
 						</tr>
 						<tr>
-							<td>PCR</td>
+							<td>
+								<td>PCR</td>
+							</td>
 						</tr>
 						<tr>
-							<obsgroup groupingConceptId="1361">
-								<td>
-									<span style="display:none">
-										<obs conceptId="CIEL:162087" id="pcr1" answerConceptId="CIEL:1030"
-											defaultValue="CIEL:1030" answerLabel="" />
-									</span>
-									&#160;&#160;
-									<obs conceptId="CIEL:163540" id="pcr1age" />
-									<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-										answerLabels="en jours,en mois" style="radio" />
-								</td>
-								<td>
-									<obs conceptId="CIEL:1030" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-										answerLabels="Nég,Positif,Ind" style="radio" />
-								</td>
-							</obsgroup>
+							<td>
+								<obsgroup groupingConceptId="1361">
+									<td>
+										<span style="display:none">
+											<obs conceptId="CIEL:162087" id="pcr1" answerConceptId="CIEL:1030"
+												defaultValue="CIEL:1030" answerLabel="" />
+										</span>
+										&#160;&#160;
+										<obs conceptId="CIEL:163540" id="pcr1age" />
+										<obs conceptId="CIEL:163541" id="pcr1unite" answerConceptIds="CIEL:1072,CIEL:1074"
+											answerLabels="en jours,en mois" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:1030" id="pcr1resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											answerLabels="Nég,Positif,Ind" style="radio" />
+									</td>
+								</obsgroup>
+							</td>
 						</tr>
 						<tr>
-							<obsgroup groupingConceptId="1361">
-								<td>
-									<span style="display:none">
-										<obs conceptId="CIEL:162087" id="pcr2" answerConceptId="CIEL:1030"
-											defaultValue="CIEL:1030" answerLabel="" />
-									</span>
-									&#160;&#160;
-									<obs conceptId="CIEL:163540" id="pcr2age" />
-									<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-										answerLabels="en jours,en mois" style="radio" />
-								</td>
-								<td>
-									<obs conceptId="CIEL:1030" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-										answerLabels="Nég,Positif,Ind" style="radio" />
-								</td>
-							</obsgroup>
+							<td>
+								<obsgroup groupingConceptId="1361">
+									<td>
+										<span style="display:none">
+											<obs conceptId="CIEL:162087" id="pcr2" answerConceptId="CIEL:1030"
+												defaultValue="CIEL:1030" answerLabel="" />
+										</span>
+										&#160;&#160;
+										<obs conceptId="CIEL:163540" id="pcr2age" />
+										<obs conceptId="CIEL:163541" id="pcr2unite" answerConceptIds="CIEL:1072,CIEL:1074"
+											answerLabels="en jours,en mois" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:1030" id="pcr2resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											answerLabels="Nég,Positif,Ind" style="radio" />
+									</td>
+								</obsgroup>
+							</td>
 						</tr>
 						<tr>
-							<obsgroup groupingConceptId="1361">
-								<td>
-									<span style="display:none">
-										<obs conceptId="CIEL:162087" id="pcr3" answerConceptId="CIEL:1030"
-											defaultValue="CIEL:1030" answerLabel="" />
-									</span>
-									&#160;&#160;
-									<obs conceptId="CIEL:163540" id="pcr3age" />
-									<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-										answerLabels="en jours,en mois" style="radio" />
-								</td>
-								<td>
-									<obs conceptId="CIEL:1030" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-										answerLabels="Nég,Positif,Ind" style="radio" />
-								</td>
-							</obsgroup>
+							<td>
+								<obsgroup groupingConceptId="1361">
+									<td>
+										<span style="display:none">
+											<obs conceptId="CIEL:162087" id="pcr3" answerConceptId="CIEL:1030"
+												defaultValue="CIEL:1030" answerLabel="" />
+										</span>
+										&#160;&#160;
+										<obs conceptId="CIEL:163540" id="pcr3age" />
+										<obs conceptId="CIEL:163541" id="pcr3unite" answerConceptIds="CIEL:1072,CIEL:1074"
+											answerLabels="en jours,en mois" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:1030" id="pcr3resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											answerLabels="Nég,Positif,Ind" style="radio" />
+									</td>
+								</obsgroup>
+							</td>
 						</tr>
 						<tr>
-							<td>Antigénémie P24 (UP24)</td>
+							<td>
+								<td>Antigénémie P24 (UP24)</td>
+							</td>
+						</tr>
+						<tr> 
+							<td>
+								<obsgroup groupingConceptId="1361">
+									<td>
+										<span style="display:none">
+											<obs conceptId="CIEL:163541" id="antigenemie1"
+												answerConceptId="CIEL:163342" defaultValue="CIEL:163342"
+												answerLabel="" />
+										</span>
+										&#160;&#160;
+										<obs conceptId="CIEL:163540" id="antigenemie1age" />
+										<obs conceptId="CIEL:163541" id="antigenemie1unite" answerConceptIds="CIEL:1072,CIEL:1074"
+											answerLabels="en jours,en mois" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:163342" id="antigenemie1resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											answerLabels="Nég,Positif,Ind" style="radio" />
+									</td>
+	
+								</obsgroup>
+							</td>
 						</tr>
 						<tr>
-							<obsgroup groupingConceptId="1361">
-								<td>
-									<span style="display:none">
-										<obs conceptId="CIEL:163541" id="antigenemie1"
-											answerConceptId="CIEL:163342" defaultValue="CIEL:163342"
-											answerLabel="" />
-									</span>
-									&#160;&#160;
-									<obs conceptId="CIEL:163540" id="antigenemie1age" />
-									<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-										answerLabels="en jours,en mois" style="radio" />
-								</td>
-								<td>
-									<obs conceptId="CIEL:163342" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-										answerLabels="Nég,Positif,Ind" style="radio" />
-								</td>
-
-							</obsgroup>
+							<td>
+								<obsgroup groupingConceptId="1361">
+									<td>
+										<span style="display:none">
+											<obs conceptId="CIEL:163541" id="antigenemie2"
+												answerConceptId="CIEL:163342" defaultValue="CIEL:163342"
+												answerLabel="" />
+										</span>
+										&#160;&#160;
+										<obs conceptId="CIEL:163540" id="antigenemie2age" />
+										<obs conceptId="CIEL:163541" id="antigenemie2unite" answerConceptIds="CIEL:1072,CIEL:1074"
+											answerLabels="en jours,en mois" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:163342" id="antigenemie2resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											answerLabels="Nég,Positif,Ind" style="radio" />
+									</td>
+								</obsgroup>
+							</td>
 						</tr>
 						<tr>
-							<obsgroup groupingConceptId="1361">
-								<td>
-									<span style="display:none">
-										<obs conceptId="CIEL:163541" id="antigenemie2"
-											answerConceptId="CIEL:163342" defaultValue="CIEL:163342"
-											answerLabel="" />
-									</span>
-									&#160;&#160;
-									<obs conceptId="CIEL:163540" id="antigenemie2age" />
-									<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-										answerLabels="en jours,en mois" style="radio" />
-								</td>
-								<td>
-									<obs conceptId="CIEL:163342" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-										answerLabels="Nég,Positif,Ind" style="radio" />
-								</td>
-							</obsgroup>
-						</tr>
-						<tr>
-							<obsgroup groupingConceptId="1361">
-								<td>
-									<span style="display:none">
-										<obs conceptId="CIEL:163541" id="antigenemie3"
-											answerConceptId="CIEL:163342" defaultValue="CIEL:163342"
-											answerLabel="" />
-									</span>
-									&#160;&#160;
-									<obs conceptId="CIEL:163540" id="antigenemie3age" />
-									<obs conceptId="CIEL:163541" answerConceptIds="CIEL:1072,CIEL:1074"
-										answerLabels="en jours,en mois" style="radio" />
-								</td>
-								<td>
-									<obs conceptId="CIEL:163342" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
-										answerLabels="Nég,Positif,Ind" style="radio" />
-								</td>
-							</obsgroup>
+							<td>
+								<obsgroup groupingConceptId="1361">
+									<td>
+										<span style="display:none">
+											<obs conceptId="CIEL:163541" id="antigenemie3"
+												answerConceptId="CIEL:163342" defaultValue="CIEL:163342"
+												answerLabel="" />
+										</span>
+										&#160;&#160;
+										<obs conceptId="CIEL:163540" id="antigenemie3age" />
+										<obs conceptId="CIEL:163541" id="antigenemie3unite" answerConceptIds="CIEL:1072,CIEL:1074"
+											answerLabels="en jours,en mois" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:163342" id="antigenemie3resultat" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138"
+											answerLabels="Nég,Positif,Ind" style="radio" />
+									</td>
+								</obsgroup>
+							</td>
 						</tr>
 
 					</table>
