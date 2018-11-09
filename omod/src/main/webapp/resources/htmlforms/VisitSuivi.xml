@@ -645,8 +645,8 @@
 						<table width="100%">
 							<tr>
 								<td colspan="2">
-									<obs conceptId="CIEL:5272" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-										answerLabels="Oui,Non,Inconnu" style="radio" />
+									<obs conceptId="CIEL:5272" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:134346,CIEL:1067"
+										answerLabels="Oui,Non,Ménopause,Inconnu" style="radio" />
 								</td>
 							</tr>
 							<tr>
