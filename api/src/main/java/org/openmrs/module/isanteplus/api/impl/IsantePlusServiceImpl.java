@@ -1041,7 +1041,8 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	public Encounter getFirstEncounterDate(Patient patient){
 		List<Encounter> firstEncounter = new ArrayList(
 				Context.getEncounterService().getEncountersByPatient(patient));
-		return firstEncounter.get(0);
+		//return firstEncounter.get(0);
+		return firstEncounter != null && firstEncounter.size() > 0 ? firstEncounter.get(0) : null;
 	}
 	
 	

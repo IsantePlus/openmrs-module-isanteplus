@@ -226,7 +226,7 @@
 		if((getValue('raltegravir_dispensee.value') != null) || (getValue('raltegravir_post_alt.value') != '')
 			|| (getValue('raltegravir_j_alt.value') != '') || (getValue('raltegravir_nb_pil.value') != '')) {
 		setValue('raltegravir1.value',154378);}
-		/*
+		
 		if((getValue('presentation17.value') == '138405') ||
 		(getValue('presentation17.value') == '163768')
 		|| (getValue('dolutegravir_dosage.value') != '') || (getValue('dolutegravir_dosage_alt.value') != '')
@@ -247,7 +247,7 @@
 			|| (getValue('elviltegravir_j_alt.value') != '') || (getValue('elviltegravir_nb_pil.value') != '')) {
 		setValue('elviltegravir1.value',165093);}
 		
-		*/
+		
 		if((getValue('posologie1.value') !='') || (getValue('acetaminophene_nbj_prescrit.value')!='')) {
 		setValue('acetaminophene.value',70116);}
 		
@@ -505,7 +505,7 @@
 		if((getValue('posologie34.value') !='') || (getValue('mul_nbj_prescrit.value') !='')) {
 		setValue('multivitamine.value',461);
 		}
-		if((getValue('multivitamine_dispensee.value') == true)
+		if((getValue('multivitamine_dispensee.value') != null)
 		|| (getValue('mul_post_alt.value.value') != '')
 		|| (getValue('mul_nb_pil.value.value')!='') 
 		|| (getValue('mul_j_alt.value.value')!='')) {
@@ -1473,7 +1473,7 @@
 					</td>
 				</tr>
 			</tr>
-			<!--
+			
 				<tr bgcolor="silver">
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
@@ -1565,7 +1565,7 @@
 						</td>
 					</obsgroup>
 				</td>
-			</tr>-->
+			</tr>
 		</table>
 	</section>
 	<section headerLabel="Ordonnance">
@@ -3629,7 +3629,10 @@
 			<tr></tr>
 			<tr></tr>
 			Relation avec le patient :
-			<obs conceptId="CIEL:160540" />
+			<!-- <obs conceptId="CIEL:160540" /> -->
+			<obs conceptId="CIEL:164352" id="relationship"
+			answerConceptIds="CIEL:971,CIEL:970,CIEL:160273,CIEL:159772,CIEL:974,CIEL:975,CIEL:160729,CIEL:160730,CIEL:160727,CIEL:160728,CIEL:5618,CIEL:5617,CIEL:5622,CIEL:1067"
+			answerCodes="isanteplus.registration.patient.relationship.father.label,isanteplus.registration.patient.relationship.mother.label,isanteplus.registration.patient.relationship.grandfather.label,isanteplus.registration.patient.relationship.grandmother.label,isanteplus.registration.patient.relationship.uncle.label,isanteplus.registration.patient.relationship.aunt.label,isanteplus.registration.patient.relationship.brother.label,isanteplus.registration.patient.relationship.sister.label,isanteplus.registration.patient.relationship.son.label,isanteplus.registration.patient.relationship.daughter.label,isanteplus.registration.patient.relationship.friend.label,isanteplus.registration.patient.relationship.partner.label,isanteplus.registration.patient.relationship.other.label,isanteplus.registration.patient.relationship.unknown.label" showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 		</td>
 		<br />
 		<br />

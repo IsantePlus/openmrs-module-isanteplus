@@ -21,17 +21,17 @@
   					jQuery("#viralLoadGraph").show();
   				}
   				jQuery(".vis-point").tooltip();
-			    viralLoadGraphContainer.addEventListener('mouseover', onMouseover);
+			    viralLoadGraphContainer.addEventListener('mouseover', onMouseover1);
 		    });
 		    
-		    function onMouseover(event) {
-			  	var properties = viralLoadGraph.getEventProperties(event);
+		   function onMouseover1(event1) {
+			  	var properties1 = viralLoadGraph.getEventProperties(event1);
 			  	
-				if(jQuery(event.target).is("rect")) {
-			  		jQuery(event.target).attr("title", "Charge virale: " + properties.value.toString() + "   At: " + properties.time);
+				if(jQuery(event1.target).is("rect")) {
+			  		jQuery(event1.target).attr("title", "Charge virale: " + properties1.value.toString() + "   At: " + properties1.time);
 			  		
 			  	}
-			}
+			} 
   		</script>
     </div>
 </div>

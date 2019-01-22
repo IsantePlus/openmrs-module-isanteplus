@@ -98,8 +98,8 @@ public class ISantePlusActivator implements ModuleActivator {
 			log.info("Updating OpenMRS ID to iSantePlus ID");
 			changeOpenmrsIdName(patientService);
 			
-			log.info("Installing Metadata Packages");
-			installMetadataPackages();
+			/*log.info("Installing Metadata Packages");
+			installMetadataPackages();*/
 			
 			log.info("Installing Metadata Bundles");
 			installMetadataBundles();

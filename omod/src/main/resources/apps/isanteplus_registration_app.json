@@ -181,12 +181,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.PIH:Birthplace address construct.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.PIH:Birthplace address construct.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.PIH:Birthplace address construct.obs.PIH:City Village",
-                                                "address3": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address3",
-                                                "address1": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address1",
-                                                "address2": "obsgroup.PIH:Birthplace address construct.obs.PIH:Address2"
+                                                "country": "obsgroup.CIEL:165194.obs.CIEL:165198",
+                                                "stateProvince": "obsgroup.CIEL:165194.obs.CIEL:165197",
+                                                "cityVillage": "obsgroup.CIEL:165194.obs.CIEL:1354",
+                                                "address3": "obsgroup.CIEL:165194.obs.CIEL:165196",
+                                                "address1": "obsgroup.CIEL:165194.obs.CIEL:165195",
+                                                "address2": "obsgroup.CIEL:165194.obs.CIEL:162725"
                                             }
                                         }
                                     }
@@ -240,11 +240,11 @@
                                         "initialValue": "CIEL:1067",
                                         "options": [
                                             {"value": "CIEL:159466", "label": "isanteplus.registration.patient.occupation.driver.label"},
-                                            {"value": "PIH:COMMERCE", "label": "isanteplus.registration.patient.occupation.commerce.label"},
-                                            {"value": "PIH:MINER", "label": "isanteplus.registration.patient.occupation.miner.label"},
-                                            {"value": "PIH:SHEPHERD", "label": "isanteplus.registration.patient.occupation.shepherd.label"},
+                                            {"value": "CIEL:1539", "label": "isanteplus.registration.patient.occupation.commerce.label"},
+                                            {"value": "CIEL:165202", "label": "isanteplus.registration.patient.occupation.miner.label"},
+                                            {"value": "CIEL:165200", "label": "isanteplus.registration.patient.occupation.shepherd.label"},
                                             {"value": "CIEL:1538", "label": "isanteplus.registration.patient.occupation.farmer.label"},
-                                            {"value": "PIH:FACTORY WORKER", "label": "isanteplus.registration.patient.occupation.factoryWorker.label"},
+                                            {"value": "CIEL:165201", "label": "isanteplus.registration.patient.occupation.factoryWorker.label"},
                                             {"value": "CIEL:5619", "label": "isanteplus.registration.patient.occupation.healthCareWorker.label"},
                                             {"value": "CIEL:162944", "label": "isanteplus.registration.patient.occupation.civilServant.label"},
                                             {"value": "CIEL:159390", "label": "isanteplus.registration.patient.occupation.manualLaborer.label"},
@@ -310,7 +310,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.powerOfAttorneyContact.name.question",
-                                    "formFieldName": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165211.obs.CIEL:163258",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -319,7 +319,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.powerOfAttorneyContact.relationship.question",
-                                    "formFieldName": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.CIEL:164352",
+                                    "formFieldName": "obsgroup.CIEL:165211.obs.CIEL:164352",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/dropDown",
@@ -335,6 +335,7 @@
                                                 {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
                                                 {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
                                                 {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5617", "label": "isanteplus.registration.patient.relationship.partner.label"},
                                                 {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
                                                 {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
                                             ]
@@ -357,12 +358,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:City Village",
-                                                "address3": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address3",
-                                                "address1": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address1",
-                                                "address2": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:Address2"
+                                                "country": "obsgroup.CIEL:165211.obs.CIEL:165198",
+                                                "stateProvince": "obsgroup.CIEL:165211.obs.CIEL:165197",
+                                                "cityVillage": "obsgroup.CIEL:165211.obs.CIEL:1354",
+                                                "address3": "obsgroup.CIEL:165211.obs.CIEL:165196",
+                                                "address1": "obsgroup.CIEL:165211.obs.CIEL:165195",
+                                                "address2": "obsgroup.CIEL:165211.obs.CIEL:162725"
                                             }
                                         }
                                     }
@@ -376,7 +377,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.powerOfAttorneyContact.phone.question",
-                                    "formFieldName": "obsgroup.iSantePlus:POWER OF ATTORNEY.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165211.obs.CIEL:159635",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -398,7 +399,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.emergencyContact.name.question",
-                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165210.obs.CIEL:163258",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -407,7 +408,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.emergencyContact.relationship.question",
-                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.CIEL:164352",
+                                    "formFieldName": "obsgroup.CIEL:165210.obs.CIEL:164352",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/dropDown",
@@ -423,6 +424,7 @@
                                                 {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
                                                 {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
                                                 {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5617", "label": "isanteplus.registration.patient.relationship.partner.label"},
                                                 {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
                                                 {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
                                             ]
@@ -445,12 +447,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:City Village",
-                                                "address3": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address3",
-                                                "address1": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address1",
-                                                "address2": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:Address2"
+                                                "country": "obsgroup.CIEL:165210.obs.CIEL:165198",
+                                                "stateProvince": "obsgroup.CIEL:165210.obs.CIEL:165197",
+                                                "cityVillage": "obsgroup.CIEL:165210.obs.CIEL:1354",
+                                                "address3": "obsgroup.CIEL:165210.obs.CIEL:165196",
+                                                "address1": "obsgroup.CIEL:165210.obs.CIEL:165195",
+                                                "address2": "obsgroup.CIEL:165210.obs.CIEL:162725"
                                             }
                                         }
                                     }
@@ -464,7 +466,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.emergencyContact.phone.question",
-                                    "formFieldName": "obsgroup.iSantePlus:EMERGENCY CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165210.obs.CIEL:159635",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -486,7 +488,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.name.question",
-                                    "formFieldName": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165212.obs.CIEL:163258",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -495,7 +497,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.relationship.question",
-                                    "formFieldName": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
+                                    "formFieldName": "obsgroup.CIEL:165212.obs.CIEL:164352",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/dropDown",
@@ -511,6 +513,7 @@
                                                 {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
                                                 {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
                                                 {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5617", "label": "isanteplus.registration.patient.relationship.partner.label"},
                                                 {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
                                                 {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
                                             ]
@@ -533,12 +536,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
-                                                "address3": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
-                                                "address1": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
-                                                "address2": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
+                                                "country": "obsgroup.CIEL:165212.obs.CIEL:165198",
+                                                "stateProvince": "obsgroup.CIEL:165212.obs.CIEL:165197",
+                                                "cityVillage": "obsgroup.CIEL:165212.obs.CIEL:1354",
+                                                "address3": "obsgroup.CIEL:165212.obs.CIEL:165196",
+                                                "address1": "obsgroup.CIEL:165212.obs.CIEL:165195",
+                                                "address2": "obsgroup.CIEL:165212.obs.CIEL:162725"
                                             }
                                         }
                                     }
@@ -552,7 +555,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.phone.question",
-                                    "formFieldName": "obsgroup.iSantePlus:PRIMARY MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165212.obs.CIEL:159635",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -574,7 +577,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.name.question",
-                                    "formFieldName": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:NAMES AND FIRSTNAMES OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165213.obs.CIEL:163258",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"
@@ -583,7 +586,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.relationship.question",
-                                    "formFieldName": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.CIEL:164352",
+                                    "formFieldName": "obsgroup.CIEL:165213.obs.CIEL:164352",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/dropDown",
@@ -599,6 +602,7 @@
                                                 {"value": "CIEL:975", "label": "isanteplus.registration.patient.relationship.aunt.label"},
                                                 {"value": "CIEL:972", "label": "isanteplus.registration.patient.relationship.sibling.label"},
                                                 {"value": "CIEL:5618", "label": "isanteplus.registration.patient.relationship.friend.label"},
+                                                {"value": "CIEL:5617", "label": "isanteplus.registration.patient.relationship.partner.label"},
                                                 {"value": "CIEL:5622", "label": "isanteplus.registration.patient.relationship.other.label"},
                                                 {"value": "CIEL:1067", "label": "isanteplus.registration.patient.relationship.unknown.label"}
                                             ]
@@ -621,12 +625,12 @@
                                             "shortcutFor": "address1",
                                             "manualFields": ["address2"],
                                             "fieldMappings": {
-                                                "country": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Country",
-                                                "stateProvince": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:State Province",
-                                                "cityVillage": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:City Village",
-                                                "address3": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address3",
-                                                "address1": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address1",
-                                                "address2": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:Address2"
+                                                "country": "obsgroup.CIEL:165213.obs.CIEL:165198",
+                                                "stateProvince": "obsgroup.CIEL:165213.obs.CIEL:165197",
+                                                "cityVillage": "obsgroup.CIEL:165213.obs.CIEL:1354",
+                                                "address3": "obsgroup.CIEL:165213.obs.CIEL:165196",
+                                                "address1": "obsgroup.CIEL:165213.obs.CIEL:165195",
+                                                "address2": "obsgroup.CIEL:165213.obs.CIEL:162725"
                                             }
                                         }
                                     }
@@ -640,7 +644,7 @@
                                 {
                                     "type": "obsgroup",
                                     "label": "isanteplus.registration.patient.medicalDisclosure.phone.question",
-                                    "formFieldName": "obsgroup.iSantePlus:SECONDARY MEDICAL DISCLOSURE CONTACT.obs.PIH:TELEPHONE NUMBER OF CONTACT",
+                                    "formFieldName": "obsgroup.CIEL:165213.obs.CIEL:159635",
                                     "widget": {
                                         "providerName": "uicommons",
                                         "fragmentId": "field/text"

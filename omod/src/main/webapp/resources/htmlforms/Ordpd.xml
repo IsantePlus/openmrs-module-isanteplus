@@ -480,7 +480,7 @@
 		setValue('ketaconazole1.value',78476);
 		}
 		
-		if((getValue('posologie18.value') != null) || (getValue('posologie18bis.value') !='')
+		if((getValue('posologie18.value') != '') || (getValue('posologie18bis.value') !='')
 			|| (getValue('mico_nbj_prescrit.value') != '')) 
 		{
 		setValue('miconazole.value',79831);
@@ -3492,7 +3492,11 @@
 			<tr></tr>
 			<tr></tr>
 			Relation avec le patient :
-			<obs conceptId="CIEL:160540" />
+			<!-- <obs conceptId="CIEL:160540" />-->
+				<obs conceptId="CIEL:164352" id="relationship"
+			answerConceptIds="CIEL:971,CIEL:970,CIEL:160273,CIEL:159772,CIEL:974,CIEL:975,CIEL:160729,CIEL:160730,CIEL:160727,CIEL:160728,CIEL:5618,CIEL:5617,CIEL:5622,CIEL:1067"
+			answerCodes="isanteplus.registration.patient.relationship.father.label,isanteplus.registration.patient.relationship.mother.label,isanteplus.registration.patient.relationship.grandfather.label,isanteplus.registration.patient.relationship.grandmother.label,isanteplus.registration.patient.relationship.uncle.label,isanteplus.registration.patient.relationship.aunt.label,isanteplus.registration.patient.relationship.brother.label,isanteplus.registration.patient.relationship.sister.label,isanteplus.registration.patient.relationship.son.label,isanteplus.registration.patient.relationship.daughter.label,isanteplus.registration.patient.relationship.friend.label,isanteplus.registration.patient.relationship.partner.label,isanteplus.registration.patient.relationship.other.label,isanteplus.registration.patient.relationship.unknown.label" showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
+		
 		</td>
 		<br />
 		<br />
