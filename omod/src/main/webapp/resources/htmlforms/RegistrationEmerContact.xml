@@ -1,5 +1,5 @@
 <htmlform formUuid="32a87f2c-925f-47ba-8a57-ce37596e7282"
-	formName="Enregistrement de patient - Contacter d'urgence"
+	formName="Enregistrement de patient - Contact en cas d'urgence"
 	formDescription="Patient Registration Form for Emergency Contact"
 	formEncounterType="873f968a-73a8-4f9c-ac78-9f4778b751b6" formVersion="1.0">
 
@@ -54,7 +54,7 @@
 
 		<fieldset>
 
-			<obsgroup groupingConceptId="iSantePlus:EMERGENCY CONTACT">
+			<obsgroup groupingConceptId="CIEL:165210">
 
 				<div>
 					<!-- edit mode of name/relationship -->
@@ -69,7 +69,7 @@
 									<uimessage
 										code="isanteplus.registration.patient.emergencyContact.name.question" />
 								</h3>
-								<obs conceptId="PIH:NAMES AND FIRSTNAMES OF CONTACT" id="emergencyContactName"
+								<obs conceptId="CIEL:163258" id="emergencyContactName"
 									showUnits="false" unitsCssClass="append-to-value" size="20" />
 							</p>
 						</div>
@@ -84,8 +84,8 @@
 										code="isanteplus.registration.patient.emergencyContact.relationship.question" />
 								</h3>
 								<obs conceptId="CIEL:164352" id="emergencyContactRelationship"
-									answerConceptIds="CIEL:971,CIEL:970,CIEL:973,CIEL:974,CIEL:975,CIEL:972,CIEL:5618,CIEL:5622,CIEL:1067"
-									answerCodes="isanteplus.registration.patient.relationship.father.label,isanteplus.registration.patient.relationship.mother.label,isanteplus.registration.patient.relationship.grandparent.label,isanteplus.registration.patient.relationship.uncle.label,isanteplus.registration.patient.relationship.aunt.label,isanteplus.registration.patient.relationship.sibling.label,isanteplus.registration.patient.relationship.friend.label,isanteplus.registration.patient.relationship.other.label,isanteplus.registration.patient.relationship.unknown.label"
+									answerConceptIds="CIEL:971,CIEL:970,CIEL:973,CIEL:974,CIEL:975,CIEL:972,CIEL:5618,CIEL:5617,CIEL:5622,CIEL:1067"
+									answerCodes="isanteplus.registration.patient.relationship.father.label,isanteplus.registration.patient.relationship.mother.label,isanteplus.registration.patient.relationship.grandparent.label,isanteplus.registration.patient.relationship.uncle.label,isanteplus.registration.patient.relationship.aunt.label,isanteplus.registration.patient.relationship.sibling.label,isanteplus.registration.patient.relationship.friend.label,isanteplus.registration.patient.relationship.partner.label,isanteplus.registration.patient.relationship.other.label,isanteplus.registration.patient.relationship.unknown.label"
 									showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 							</p>
 						</div>
@@ -99,7 +99,7 @@
 									code="isanteplus.registration.patient.emergencyContact.name.question" />
 							</h3>
 							<p class="left">
-								<obs conceptId="PIH:NAMES AND FIRSTNAMES OF CONTACT" id="emergencyContactName"
+								<obs conceptId="CIEL:163258" id="emergencyContactName"
 									showUnits="false" unitsCssClass="append-to-value" size="20" />
 							</p>
 						</div>
@@ -110,8 +110,13 @@
 									code="isanteplus.registration.patient.emergencyContact.relationship.question" />
 							</h3>
 							<p class="left">
-								<obs conceptId="CIEL:164352" id="emergencyContactRelationship"
-									showUnits="false" unitsCssClass="append-to-value" />
+								<!--<obs conceptId="CIEL:164352" id="emergencyContactRelationship"
+									showUnits="false" unitsCssClass="append-to-value" />-->
+									
+									<obs conceptId="CIEL:164352" id="emergencyContactRelationship"
+									answerConceptIds="CIEL:971,CIEL:970,CIEL:973,CIEL:974,CIEL:975,CIEL:972,CIEL:5618,CIEL:5617,CIEL:5622,CIEL:1067"
+									answerCodes="isanteplus.registration.patient.relationship.father.label,isanteplus.registration.patient.relationship.mother.label,isanteplus.registration.patient.relationship.grandparent.label,isanteplus.registration.patient.relationship.uncle.label,isanteplus.registration.patient.relationship.aunt.label,isanteplus.registration.patient.relationship.sibling.label,isanteplus.registration.patient.relationship.friend.label,isanteplus.registration.patient.relationship.partner.label,isanteplus.registration.patient.relationship.other.label,isanteplus.registration.patient.relationship.unknown.label"
+									showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 							</p>
 						</div>
 					</ifMode>
@@ -135,7 +140,7 @@
 								<h3>
 									<uimessage code="haiticore.address.country" />
 								</h3>
-								<obs class="level" conceptId="PIH:Country"
+								<obs class="level" conceptId="CIEL:165198"
 									id="emergencyContactAddress-country" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
@@ -143,7 +148,7 @@
 								<h3>
 									<uimessage code="haiticore.address.stateProvince" />
 								</h3>
-								<obs class="level" conceptId="PIH:State Province"
+								<obs class="level" conceptId="CIEL:165197"
 									id="emergencyContactAddress-stateProvince" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
@@ -151,7 +156,7 @@
 								<h3>
 									<uimessage code="haiticore.address.cityVillage" />
 								</h3>
-								<obs class="level" conceptId="PIH:City Village"
+								<obs class="level" conceptId="CIEL:1354"
 									id="emergencyContactAddress-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
@@ -159,7 +164,7 @@
 								<h3>
 									<uimessage code="haiticore.address.neighborhoodCell" />
 								</h3>
-								<obs class="level" conceptId="PIH:Address3"
+								<obs class="level" conceptId="CIEL:165196"
 									id="emergencyContactAddress-address3" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 
@@ -168,7 +173,7 @@
 								<h3>
 									<uimessage code="haiticore.address.address1" />
 								</h3>
-								<obs class="level" conceptId="PIH:Address1"
+								<obs class="level" conceptId="CIEL:165195"
 									id="emergencyContactAddress-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
@@ -176,7 +181,7 @@
 								<h3>
 									<uimessage code="haiticore.address.address2" />
 								</h3>
-								<obs class="level" conceptId="PIH:Address2"
+								<obs class="level" conceptId="CIEL:162725"
 									id="emergencyContactAddress-address2" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 
@@ -192,27 +197,27 @@
 									code="isanteplus.registration.patient.emergencyContact.address.label" />
 							</h3>
 							<p class="left">
-								<obs class="level" conceptId="PIH:Address2"
+								<obs class="level" conceptId="CIEL:162725"
 									id="emergencyContactAddress-address2" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="PIH:Address1"
+								<obs class="level" conceptId="CIEL:165195"
 									id="emergencyContactAddress-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="PIH:Address3"
+								<obs class="level" conceptId="CIEL:165196"
 									id="emergencyContactAddress-address3" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								,
-								<obs class="level" conceptId="PIH:City Village"
+								<obs class="level" conceptId="CIEL:1354"
 									id="emergencyContactAddress-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="PIH:State Province"
+								<obs class="level" conceptId="CIEL:165197"
 									id="emergencyContactAddress-stateProvince" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								,
-								<obs class="level" conceptId="PIH:Country"
+								<obs class="level" conceptId="CIEL:165198"
 									id="emergencyContactAddress-country" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</p>
@@ -225,7 +230,7 @@
 								code="isanteplus.registration.patient.emergencyContact.phone.label" />
 						</h3>
 						<p class="left">
-							<obs conceptId="PIH:TELEPHONE NUMBER OF CONTACT" id="emergencyContactPhoneNumber"
+							<obs conceptId="CIEL:159635" id="emergencyContactPhoneNumber"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</p>
 					</div>

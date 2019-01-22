@@ -20,8 +20,19 @@
   				} else {
   					jQuery("#bmiGraph").show();
   				}
+  				jQuery(".vis-point").tooltip();
+			    bmiGraphContainer.addEventListener('mouseover', onMouseover2);
   				
 		    });
+		    
+		    function onMouseover2(event2) {
+			  	var properties2 = bmiGraph.getEventProperties(event2);
+			  	
+				if(jQuery(event2.target).is("rect")) {
+			  		jQuery(event2.target).attr("title", "BMI: " + properties2.value.toString() + "   At: " + properties2.time);
+			  		
+			  	}
+			} 
   		</script>
     </div>
 </div>

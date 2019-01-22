@@ -66,47 +66,47 @@
 						</h3>
 						<input type="text" class="address-hierarchy-shortcut" size="60" />
 					</div>
-					<obsgroup groupingConceptId="PIH:Birthplace address construct">
+					<obsgroup groupingConceptId="CIEL:165194">
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.country" />
 							</h3>
-							<obs class="level" conceptId="PIH:Country" id="placeOfBirth-country"
+							<obs class="level" conceptId="CIEL:165198" id="placeOfBirth-country"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.stateProvince" />
 							</h3>
-							<obs class="level" conceptId="PIH:State Province" id="placeOfBirth-stateProvince"
+							<obs class="level" conceptId="CIEL:165197" id="placeOfBirth-stateProvince"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.cityVillage" />
 							</h3>
-							<obs class="level" conceptId="PIH:City Village" id="placeOfBirth-cityVillage"
+							<obs class="level" conceptId="CIEL:1354" id="placeOfBirth-cityVillage"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.neighborhoodCell" />
 							</h3>
-							<obs class="level" conceptId="PIH:Address3" id="placeOfBirth-address3"
+							<obs class="level" conceptId="CIEL:165196" id="placeOfBirth-address3"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.address1" />
 							</h3>
-							<obs class="level" conceptId="PIH:Address1" id="placeOfBirth-address1"
+							<obs class="level" conceptId="CIEL:165195" id="placeOfBirth-address1"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.address2" />
 							</h3>
-							<obs class="level" conceptId="PIH:Address2" id="placeOfBirth-address2"
+							<obs class="level" conceptId="CIEL:162725" id="placeOfBirth-address2"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
 					</obsgroup>
@@ -119,24 +119,24 @@
 					<h3>
 						<uimessage code="isanteplus.registration.patient.birthplace.label" />
 					</h3>
-					<obsgroup groupingConceptId="PIH:Birthplace address construct">
+					<obsgroup groupingConceptId="CIEL:165194">
 						<p class="left">
-							<obs class="level" conceptId="PIH:Address2" id="placeOfBirth-address2"
+							<obs class="level" conceptId="CIEL:162725" id="placeOfBirth-address2"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							<br />
-							<obs class="level" conceptId="PIH:Address1" id="placeOfBirth-address1"
+							<obs class="level" conceptId="CIEL:165195" id="placeOfBirth-address1"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							<br />
-							<obs class="level" conceptId="PIH:Address3" id="placeOfBirth-address3"
+							<obs class="level" conceptId="CIEL:165196" id="placeOfBirth-address3"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							,
-							<obs class="level" conceptId="PIH:City Village" id="placeOfBirth-cityVillage"
+							<obs class="level" conceptId="CIEL:1354" id="placeOfBirth-cityVillage"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							<br />
-							<obs class="level" conceptId="PIH:State Province" id="placeOfBirth-stateProvince"
+							<obs class="level" conceptId="CIEL:165197" id="placeOfBirth-stateProvince"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							,
-							<obs class="level" conceptId="PIH:Country" id="placeOfBirth-country"
+							<obs class="level" conceptId="CIEL:165198" id="placeOfBirth-country"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</p>
 					</obsgroup>
@@ -164,7 +164,7 @@
 					</h3>
 					<p>
 						<obs conceptId="CIEL:1542" id="occupation"
-							answerConceptIds="CIEL:159466,PIH:COMMERCE,PIH:MINER,PIH:SHEPHERD,CIEL:1538,PIH:FACTORY WORKER,CIEL:5619,CIEL:162944,CIEL:159390,CIEL:159464,CIEL:162946,CIEL:159463,CIEL:159673,CIEL:159674,CIEL:159461,CIEL:159675,CIEL:162945,CIEL:159465,CIEL:123801,CIEL:5622,CIEL:1067"
+							answerConceptIds="CIEL:159466,CIEL:1539,CIEL:165202,CIEL:165200,CIEL:1538,CIEL:165201,CIEL:5619,CIEL:162944,CIEL:159390,CIEL:159464,CIEL:162946,CIEL:159463,CIEL:159673,CIEL:159674,CIEL:159461,CIEL:159675,CIEL:162945,CIEL:159465,CIEL:123801,CIEL:5622,CIEL:1067"
 							answerCodes="isanteplus.registration.patient.occupation.driver.label,isanteplus.registration.patient.occupation.commerce.label,isanteplus.registration.patient.occupation.miner.label,isanteplus.registration.patient.occupation.shepherd.label,isanteplus.registration.patient.occupation.farmer.label,isanteplus.registration.patient.occupation.factoryWorker.label,isanteplus.registration.patient.occupation.healthCareWorker.label,isanteplus.registration.patient.occupation.civilServant.label,isanteplus.registration.patient.occupation.manualLaborer.label,isanteplus.registration.patient.occupation.housework.label,isanteplus.registration.patient.occupation.teacher.label,isanteplus.registration.patient.occupation.professional.label,isanteplus.registration.patient.occupation.smallBusinessOwner.label,isanteplus.registration.patient.occupation.fisherman.label,isanteplus.registration.patient.occupation.retired.label,isanteplus.registration.patient.occupation.fruitOrVegetableVendor.label,isanteplus.registration.patient.occupation.marketVendor.label,isanteplus.registration.patient.occupation.student.label,isanteplus.registration.patient.occupation.unemployed.label,isanteplus.registration.patient.occupation.other.label,isanteplus.registration.patient.occupation.unknown.label"
 							showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 					</p>
@@ -200,8 +200,12 @@
 						<uimessage code="isanteplus.registration.patient.occupation.label" />
 					</h3>
 					<p class="left">
-						<obs conceptId="CIEL:1542" id="occupation" showUnits="false"
-							unitsCssClass="append-to-value" />
+						<!-- <obs conceptId="CIEL:1542" id="occupation" showUnits="false"
+							unitsCssClass="append-to-value" />-->
+							<obs conceptId="CIEL:1542" id="occupation"
+							answerConceptIds="CIEL:159466,CIEL:1539,CIEL:165202,CIEL:165200,CIEL:1538,CIEL:165201,CIEL:5619,CIEL:162944,CIEL:159390,CIEL:159464,CIEL:162946,CIEL:159463,CIEL:159673,CIEL:159674,CIEL:159461,CIEL:159675,CIEL:162945,CIEL:159465,CIEL:123801,CIEL:5622,CIEL:1067"
+							answerCodes="isanteplus.registration.patient.occupation.driver.label,isanteplus.registration.patient.occupation.commerce.label,isanteplus.registration.patient.occupation.miner.label,isanteplus.registration.patient.occupation.shepherd.label,isanteplus.registration.patient.occupation.farmer.label,isanteplus.registration.patient.occupation.factoryWorker.label,isanteplus.registration.patient.occupation.healthCareWorker.label,isanteplus.registration.patient.occupation.civilServant.label,isanteplus.registration.patient.occupation.manualLaborer.label,isanteplus.registration.patient.occupation.housework.label,isanteplus.registration.patient.occupation.teacher.label,isanteplus.registration.patient.occupation.professional.label,isanteplus.registration.patient.occupation.smallBusinessOwner.label,isanteplus.registration.patient.occupation.fisherman.label,isanteplus.registration.patient.occupation.retired.label,isanteplus.registration.patient.occupation.fruitOrVegetableVendor.label,isanteplus.registration.patient.occupation.marketVendor.label,isanteplus.registration.patient.occupation.student.label,isanteplus.registration.patient.occupation.unemployed.label,isanteplus.registration.patient.occupation.other.label,isanteplus.registration.patient.occupation.unknown.label"
+							showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 					</p>
 				</div>
 
