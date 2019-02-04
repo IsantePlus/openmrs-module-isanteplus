@@ -261,6 +261,36 @@
 		{
 		setValue('ritonavir1.value',83412);
 		}
+		
+		if((getValue('presentation116.value') == '138405') ||
+		(getValue('presentation116.value') == '163768')
+		|| (getValue('raltegravir_dosage.value') != '') || (getValue('raltegravir_dosage_alt.value') != '')
+			|| (getValue('raltegravir_nbj_prescrit.value') != '')) {
+		setValue('raltegravir.value',154378);}
+		
+		if((getValue('raltegravir_dispensee.value') != null) || (getValue('raltegravir_post_alt.value') != '')
+			|| (getValue('raltegravir_j_alt.value') != '') || (getValue('raltegravir_nb_pil.value') != '')) {
+		setValue('raltegravir1.value',154378);}
+		
+		if((getValue('presentation117.value') == '138405') ||
+		(getValue('presentation117.value') == '163768')
+		|| (getValue('dolutegravir_dosage.value') != '') || (getValue('dolutegravir_dosage_alt.value') != '')
+			|| (getValue('dolutegravir_nbj_prescrit.value') != '')) {
+		setValue('dolutegravir.value',165085);}
+		
+		if((getValue('dolutegravir_dispensee.value') != null) || (getValue('dolutegravir_post_alt.value') != '')
+			|| (getValue('dolutegravir_j_alt.value') != '') || (getValue('dolutegravir_nb_pil.value') != '')) {
+		setValue('dolutegravir1.value',165085);}
+		
+		if((getValue('presentation118.value') == '138405') ||
+		(getValue('presentation118.value') == '163768')
+		|| (getValue('elviltegravir_dosage.value') != '') || (getValue('elviltegravir_dosage_alt.value') != '')
+			|| (getValue('elviltegravir_nbj_prescrit.value') != '')) {
+		setValue('elviltegravir.value',165093);}
+		
+		if((getValue('elviltegravir_dispensee.value') != null) || (getValue('elviltegravir_post_alt.value') != '')
+			|| (getValue('elviltegravir_j_alt.value') != '') || (getValue('elviltegravir_nb_pil.value') != '')) {
+		setValue('elviltegravir1.value',165093);}
 
 		<!-- if((getValue('presentation16.value') == '138405') || (getValue('presentation16.value') == '163768')
 			|| (getValue('ralt_dosage.value') !='') || (getValue('ralt_dosage_alt.value') !='')
@@ -1559,7 +1589,152 @@
 				</td>
 			</tr>
 
+			<tr>
+				<tr>
+					<td width="100%" colspan="10">
+						<b>(-) II</b>
+					</td>
+				</tr>
+				<tr bgcolor="silver">
+					<td>
+						<obsgroup groupingConceptId="CIEL:1442">
+							<td>
+								Raltegravir:
+								<span style="display:none">
+									<obs conceptId="CIEL:1282" answerConceptId="CIEL:154378"
+										id="raltegravir" answerLabel="Raltegravir" />
+								</span>
+							</td>
+							<td>
+								<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+									id="presentation116" answerLabels="Rx,Prophy" style="radio" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:1444" answers="400mg 1co BID" id="raltegravir_dosage" style="radio" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:1444" id="raltegravir_dosage_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="raltegravir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							</td>
+						</obsgroup>
+						<obsgroup groupingConceptId="163711">
 
+							<td>
+								<span style="display:none">
+									<obs conceptId="CIEL:1282" answerConceptId="CIEL:154378"
+										id="raltegravir1" answerLabel="Raltegravir" />
+								</span>
+								<obs conceptId="CIEL:1276" style="checkbox" value="true"
+									showDate="true" id="raltegravir_dispensee" labelText="Oui" />
+								<td>
+									<obs conceptId="CIEL:1444" id="raltegravir_post_alt" />
+								</td>
+								<td>
+									<obs conceptId="CIEL:159368" id="raltegravir_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								</td>
+								<td>
+									<obs conceptId="CIEL:1443" id="raltegravir_nb_pil" />
+								</td>
+							</td>
+						</obsgroup>
+					</td>
+				</tr>
+			</tr>
+			
+				<tr bgcolor="silver">
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							Dolutegravir(DTG):
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:165085" id="dolutegravir"
+									answerLabel="Dolutegravir" />
+							</span>
+						</td>
+						<td>
+							<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+								id="presentation117" answerLabels="Rx,Prophy" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" answers="50mg qd" id="dolutegravir_dosage" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" id="dolutegravir_dosage_alt" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" id="dolutegravir_nbj_prescrit"/> 
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:165085" id="dolutegravir1"
+									answerLabel="Dolutegravir" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" id="dolutegravir_dispensee" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" id="dolutegravir_post_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="dolutegravir_j_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:1443" id="dolutegravir_nb_pil" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr bgcolor="silver">
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							Elviltegravir(EVG):
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:165093" id="elviltegravir"
+									answerLabel="Elviltegravir" />
+							</span>
+						</td>
+						<td>
+							<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+								id="presentation118" answerLabels="Rx,Prophy" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" answers="150mg qd" id="elviltegravir_dosage" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" id="elviltegravir_dosage_alt" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" id="elviltegravir_nbj_prescrit"/> 
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:165093" id="elviltegravir1"
+									answerLabel="Elviltegravir" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" id="elviltegravir_dispensee" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" id="elviltegravir_post_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="elviltegravir_j_alt" /> 
+							</td>
+							<td>
+								<obs conceptId="CIEL:1443" id="elviltegravir_nb_pil" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
 
 
 

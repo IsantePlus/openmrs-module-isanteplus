@@ -733,7 +733,7 @@
 		</table>
 		<includeIf velocityTest="($patient.person.gender=='F')">  <!--patient.person.gender=='M' -->
 
-			<section headerLabel="ANTECEDENTS OBSTETRIQUES ET GROSSESSE">
+			<section headerLabel="ANTECEDENTS OBSTETRIQUES ET GYNÉCOLOGIQUES">
 				<table width="100%">
 					<tr>
 						<td width="20%" valign="TOP">
@@ -2697,6 +2697,17 @@
 	<section headerLabel="ÉVALUATION ET PLAN">
 		Utiliser la section Antécédants Médicaux pour indiquer tous les diagnostics. Utiliser cette section pour décrire le plan de traitement et de soin.<br/>
 		<obs conceptId="CIEL:159395" rows="5" cols="90"/>
+	</section>
+	<section headerLabel="INTERVENTION">
+		<fieldset>
+			<legend><b>Intervention</b></legend>
+			Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:163408" answerLabel="Thermocoagulation" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162811" answerLabel="Conisation" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
+		</fieldset>
 	</section>
 	
 	SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>

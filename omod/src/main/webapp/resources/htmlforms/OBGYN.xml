@@ -2376,6 +2376,15 @@
 							</table>
 						</fieldset>
 						<fieldset>
+							<legend><b>Intervention</b></legend>
+							Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:163408" answerLabel="Thermocoagulation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162811" answerLabel="Conisation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
+						</fieldset>
+						<fieldset>
 							<legend>
 								<b>Suivi et planification</b>
 							</legend>
