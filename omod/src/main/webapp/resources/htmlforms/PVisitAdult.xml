@@ -908,6 +908,8 @@
 								<td>
 									<obs conceptId="CIEL:1061" answerConceptId="CIEL:1063"
 										answerLabel="" />
+									<!-- <obs conceptId="CIEL:1063" style="yes_no" noLabel="Non"
+											yesLabel="Oui" />  -->
 									<obs conceptId="CIEL:163268" />
 								</td>
 							</tr>
@@ -1022,6 +1024,8 @@
 										<td>
 											<obs conceptId="CIEL:160581" answerConceptId="CIEL:5567"
 												answerLabel="" />
+												<!-- <obs conceptId="CIEL:5567" style="yes_no" noLabel="Non"
+											yesLabel="Oui" />  -->
 										</td>
 									</tr>
 									<tr>
@@ -1029,6 +1033,8 @@
 										<td>
 											<obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
 												answerLabel="" style="radio" />
+												<!-- <obs conceptId="CIEL:159218" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" /> -->
 										</td>
 									</tr>
 									<tr>
@@ -2700,7 +2706,7 @@
 	</section>
 	<section headerLabel="INTERVENTION">
 		<fieldset>
-			<legend><b>Intervention</b></legend>
+			<legend></legend>
 			Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" /><br/>
 			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" /><br/>
 			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" /><br/>

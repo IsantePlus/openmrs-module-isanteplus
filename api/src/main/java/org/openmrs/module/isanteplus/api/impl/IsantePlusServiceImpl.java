@@ -1103,5 +1103,35 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		}
 		return dataSet;
 	}
+	
+	
+	@Override
+	public List<IsantePlusObs> getViralLoadHistory(Patient patient) {
+		// TESTS ORDERED = 1271
+		List<IsantePlusObs> viralLoadHistory = new ArrayList<IsantePlusObs>();
+		Integer labConceptId = 1271;
+		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
+
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), testsOrdered)) {
+			if (obs != null) {
+
+				//Integer result = Integer.parseInt(obs.getValueCoded().toString());
+				Integer result = obs.getValueCoded().getConceptId();
+				Concept resultTest = Context.getConceptService().getConcept(result);
+				if(result == 856 || result == 1305)
+				{
+					for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), resultTest)) {
+						if (obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId()) {
+							IsantePlusObs obsres = new IsantePlusObs(obs1);
+							viralLoadHistory.add(obsres);
+	
+						}
+					}
+				}
+			}
+		}
+		return viralLoadHistory;
+	}
+	
 
 }

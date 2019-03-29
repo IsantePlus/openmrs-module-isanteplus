@@ -2866,6 +2866,66 @@
 												</obsgroup>
 											</td>
 										</tr>
+										<tr>
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher76">
+														<obs conceptId="CIEL:1284" class="master" id="id76"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher76" class="cacher" style="display:none">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														<br />
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher77">
+														<obs conceptId="CIEL:1284" class="master" id="id77"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher77" class="cacher" style="display:none">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														<br />
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher78">
+														<obs conceptId="CIEL:1284" class="master" id="id78"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher78" class="cacher" style="display:none">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														<br />
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
 										<!-- <tr> <td> <obsgroup groupingConceptId="CIEL:159947"> <span 
 											class="titre" ch-target="#cacher76"><obs conceptId="CIEL:1284" style="autocomplete" 
 											answerClasses="Diagnosis" showCommentField="true" commentFieldLabel="si autre, 

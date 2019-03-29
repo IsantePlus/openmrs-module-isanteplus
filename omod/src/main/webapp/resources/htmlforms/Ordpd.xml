@@ -196,7 +196,17 @@
 		{
 		setValue('nevirapine1.value',80586);
 		}
-
+		
+		if((getValue('etravirine_presentation.value') == '138405') ||
+		(getValue('etravirine_presentation.value') == '163768')
+		|| (getValue('etravirine_dosage.value') != '') || (getValue('etravirine_dosage_alt.value') != '')
+			|| (getValue('etravirine_nbj_prescrit.value') != '')) {
+		setValue('etravirine.value',159810);}
+		
+		if((getValue('etravirine_dispensee.value') != null) || (getValue('etravirine_post_alt.value') != '')
+			|| (getValue('etravirine_j_alt.value') != '') || (getValue('etravirine_nb_pil.value') != '')) {
+		setValue('etravirine1.value',159810);}
+		
 		<!-- if((getValue('presentation11.value') == '138405') || (getValue('presentation11.value') == '163768')
 			|| (getValue('ata_dosage.value') !='') || (getValue('ata_dosage_alt.value') !='')
 			|| (getValue('ata_nbj_prescrit.value') !='')) 
@@ -1386,6 +1396,52 @@
 							</td>
 							<td>
 								<obs conceptId="CIEL:1443" id="nev_nb_pil" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							Etravirine(ETV):
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:159810" id="etravirine"
+									answerLabel="Etravirine(ETV)" />
+							</span>
+						</td>
+						<td>
+							<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+								id="etravirine_presentation" answerLabels="Rx,Prophy" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" answers="200mg BID" id="etravirine_dosage" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" id="etravirine_dosage_alt" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" id="etravirine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:159810" id="etravirine1"
+									answerLabel="Etravirine(ETV)" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" id="etravirine_dispensee" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" id="etravirine_post_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="etravirine_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							</td>
+							<td>
+								<obs conceptId="CIEL:1443" id="etravirine_nb_pil" />
 							</td>
 						</td>
 					</obsgroup>
