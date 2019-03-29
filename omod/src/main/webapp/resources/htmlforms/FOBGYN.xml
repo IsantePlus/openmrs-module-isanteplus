@@ -2859,12 +2859,11 @@
 												</obsgroup>
 											</td>
 										</tr>
+										<tr><td><b>Autres</b></td></tr>
 										<tr>
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher44">
-														<b>Autres</b>
-														<br />
 														<obs conceptId="CIEL:1284" class="master" id="id43"
 															style="autocomplete" answerClasses="Diagnosis"
 															showCommentField="true"
@@ -2872,6 +2871,66 @@
 													</span>
 													<br />
 													<span id="cacher44" class="cacher" style="display:none">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														<br />
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher45">
+														<obs conceptId="CIEL:1284" class="master" id="id44"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher45" class="cacher" style="display:none">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														<br />
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher46">
+														<obs conceptId="CIEL:1284" class="master" id="id45"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher46" class="cacher" style="display:none">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														<br />
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher47">
+														<obs conceptId="CIEL:1284" class="master" id="id46"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher47" class="cacher" style="display:none">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
@@ -3320,6 +3379,15 @@
 								</tr>
 
 							</table>
+						</fieldset>
+						<fieldset>
+							<legend><b>Intervention</b></legend>
+							Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:163408" answerLabel="Thermocoagulation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162811" answerLabel="Conisation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
 						</fieldset>
 						<fieldset>
 							<legend>

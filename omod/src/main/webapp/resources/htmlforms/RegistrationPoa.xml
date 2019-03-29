@@ -238,7 +238,7 @@
 								showUnits="false" unitsCssClass="append-to-value" size="20"
 								required="true" />
 							<input type="hidden" id="powerOfAttorneyContactSequenceNumber"
-								name="obsgroup.iSantePlus:POWER OF ATTORNEY.obs.iSantePlus:CONTACT SEQUENCE NUMBER"
+								name="obsgroup.CIEL:165211.obs.CIEL:165209"
 								value="1" />
 						</p>
 					</div>

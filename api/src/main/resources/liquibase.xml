@@ -1579,5 +1579,11 @@
 			baseColumnNames="patient_id" referencedTableName="patient"
 			referencedColumnNames="patient_id" />
 	</changeSet>
-
+	<changeSet id="20190327-122745" author="jamesfeshner">
+		<comment>SET uniqueness_behavior to NON_UNIQUE for the Code National identifier</comment>
+		<sql>
+			UPDATE patient_identifier_type SET uniqueness_behavior = 'NON_UNIQUE' WHERE uuid = '9fb4533d-4fd5-4276-875b-2ab41597f5dd';
+		</sql>
+	</changeSet>
+	
 </databaseChangeLog>

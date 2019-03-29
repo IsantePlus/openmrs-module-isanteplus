@@ -107,7 +107,7 @@
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
-				<center>FICHE PSYCHOSOCIAL PÉDIATRIQUE</center>
+				<center>FICHE PSYCHOSOCIALE PÉDIATRIQUE</center>
 			</b>
 			<br />
 			<table>
@@ -130,9 +130,9 @@
 	</div>
 	<section headerLabel="RÉLIGION">
 		<obs conceptId="CIEL:162929"
-			answerConceptIds="CIEL:162930,CIEL:162931,CIEL:162932,CIEL:162933,CIEL:162934,CIEL:162935,CIEL:162936,CIEL:163098,CIEL:163125,CIEL:163124"
-			answerLabels="Vaudou,Catholique,Baptiste,Musulman,Pentecôtiste,Adventiste,Témoin de Jéhovah,Bouddhisme,Christianisme (non-catholique),Hindouisme"
-			style="radio" />
+			answerConceptIds="CIEL:162930,CIEL:162931,CIEL:162932,CIEL:162933,CIEL:162934,CIEL:162935,CIEL:162936,CIEL:163098,CIEL:163125,CIEL:163124, CIEL:5622"
+			answerLabels="Vaudou,Catholique,Baptiste,Musulman,Pentecôtiste,Adventiste,Témoin de Jéhovah,Bouddhisme,Christianisme (non-catholique),Hindouisme, Autre"
+			showCommentField="true" commentFieldLabel=", préciser" style="radio" />
 	</section>
 
 	<section headerLabel="CONDITIONS DE VIE SOCIAL">
@@ -161,239 +161,60 @@
 	</section>
 	<section headerLabel="ANTÉCÉDENT FAMILIAUX">
 		<br />
-		<obsgroup groupingConceptId="160593">
+		
 			<table>
 				<tr>
-					<th>Nom du membre de la famille</th>
-					<th>Âge (années)</th>
-					<th>Membre de la famille</th>
-					<th>Résultat VIH</th>
-					<th>Sous traitement</th>
-					<th>Code ST du membre de la famille</th>
+						<th>Nom du membre de la famille</th>
+						<th>Âge (années)</th>
+						<th>Membre de la famille</th>
+						<th>Résultat VIH</th>
+						<th>Sous traitement</th>
+						<th>Code ST du membre de la famille</th>	
 				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="CIEL:160750" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160617" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:1560" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
-							answerLabels="Oui,Non" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-							answerLabels="Oui,Non,Inconnu" />
-					</td>
-					<td>
-						<obs conceptId="CIEL:160752" />
-					</td>
-				</tr>
-			</table>
-
-		</obsgroup>
+				
+				<repeat>
+				
+				<template>
+						<obsgroup groupingConceptId="160593">
+							<tr>
+									<td>
+									<obs conceptId="{concept}" />
+									
+									<!-- <obs conceptId="CIEL:160750" /> -->
+									</td>
+									<td>
+										<obs conceptId="CIEL:160617" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:1560" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:160592" answerConceptIds="CIEL:138405,CIEL:1107"
+											answerLabels="Oui,Non" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:160749" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inconnu" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:160752" />
+									</td>
+							</tr>
+						</obsgroup>
+			</template>
+			
+			<render concept="CIEL:160750" id="id1"/>
+			<render concept="CIEL:160750" id="id2"/>
+			<render concept="CIEL:160750" id="id3"/>
+			<render concept="CIEL:160750" id="id4"/>
+			<render concept="CIEL:160750" id="id5"/>
+			<render concept="CIEL:160750" id="id6"/>
+			<render concept="CIEL:160750" id="id7"/>
+			<render concept="CIEL:160750" id="id8"/>
+			<render concept="CIEL:160750" id="id9"/>
+			<render concept="CIEL:160750" id="id10"/>
+			</repeat>
+		</table>
 	</section>
 	<section headerLabel="NIVEAU D'ÉTUDE">
 		<obs conceptId="CIEL:1712"

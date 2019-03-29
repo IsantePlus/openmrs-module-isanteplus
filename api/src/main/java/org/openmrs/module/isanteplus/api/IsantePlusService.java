@@ -150,4 +150,6 @@ public interface IsantePlusService extends OpenmrsService {
 	DataSet getPatientStatusArv(Patient patient);
 
 	DataSet getDateStartedArv(Patient patient);
+
+	List<IsantePlusObs> getViralLoadHistory(Patient patient);
 }
