@@ -52,11 +52,11 @@
 	<script type="text/javascript">
 		if(jQuery){
 		jQuery(document).ready(function(){
-		if ( jQuery.browser.msie ) {
+		//if ( jQuery.browser.msie ) {
 		jQuery(":checkbox").click(function(){
 		jQuery(this).change();
 		});
-		}
+		//}
 		// Enabled et disabled input type text
 		jQuery(".enableDisable").each(function(){
 		var group = jQuery(this);
@@ -3076,16 +3076,16 @@
 		</table>
 	</section>
 	<section headerLabel="ANTÉCÉDENTS MÉDICAUX ET SYMPTÔMES ET DIAGNOSTICS ACTUELS">
-		<table width="100%">
-			<tr>
-				<td width="50%" valign="TOP">
-					<obs conceptId="CIEL:1284" answerConceptId="133010"
+		<obs conceptId="CIEL:1284" answerConceptId="CIEL:133010"
 						answerLabel="Aucun diagnostic fait ou reporté aujourd'hui" />
 					<br />
 					Indiquer les diagnostics actuels ou passés.
 					<br />
 					'Hosp' = Hospitalisation à cause de la condition.
 					<br />
+		<table width="100%">
+			<tr>
+				<td width="50%" valign="TOP">
 					<table width="100%">
 						<tr style="outline: thin solid">
 							<th width="35%" class="tg-5cem">Actif (Date de début de la condition)</th>

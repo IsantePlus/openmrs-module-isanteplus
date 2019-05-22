@@ -263,11 +263,15 @@
 		}
 		
 		//Debut bacilloscopie
-		if ((getValue('bacidate1.value') != '') ||
+		/* if ((getValue('bacidate1.value') != '') ||
 		(getValue('bacipoids1.value') != '') ||
 		(getValue('bacilloscopie1.value') == '703') ||
 		(getValue('bacilloscopie1.value') == '664')) {
 			setValue('bacimois1.value', '0');
+		}
+		else
+		{
+			setValue('bacimois1.value', '');
 		}
 	
 		if ((getValue('bacidate2.value') != '') ||
@@ -276,12 +280,20 @@
 		(getValue('bacilloscopie2.value') == '664')) {
 			setValue('bacimois2.value', '2');
 		}
+		else
+		{
+			setValue('bacimois2.value', '');
+		}
 		
 		if ((getValue('bacidate3.value') != '') ||
 		(getValue('bacipoids3.value') != '') ||
 		(getValue('bacilloscopie3.value') == '703') ||
 		(getValue('bacilloscopie3.value') == '664')) {
 			setValue('bacimois3.value', '3');
+		}
+		else
+		{
+			setValue('bacimois3.value', '');
 		}
 		
 		
@@ -291,6 +303,10 @@
 		(getValue('bacilloscopie4.value') == '664')) {
 			setValue('bacimois4.value', '5');
 		}
+		else
+		{
+			setValue('bacimois4.value', '');
+		}
 		
 		if ((getValue('bacidate5.value') != '') ||
 		(getValue('bacipoids5.value') != '') ||
@@ -298,6 +314,9 @@
 		(getValue('bacilloscopie5.value') == '664')) {
 			setValue('bacimois5.value', 'Fin de rx');
 		}
+		else{
+			setValue('bacimois5.value', '');
+		} */
 		
 		//Fin bacilloscopie
 		return true;
@@ -323,11 +342,11 @@
 	<script type="text/javascript">
 		if(jQuery){
 		jQuery(document).ready(function(){
-		if ( jQuery.browser.msie ) {
+		//if ( jQuery.browser.msie ) {
 		jQuery(":checkbox").click(function(){
 		jQuery(this).change();
 		});
-		}
+		//}
 		jQuery(".checkboxGroup").each(function(){
 		var group = jQuery(this);
 		var uncheckAll = function(){
@@ -3048,110 +3067,114 @@
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
-								<th>Mois</th>
-								<th>Date</th>
-								<th>Bacilloscopie</th>
-								<th>Poids (kg)</th>
+								<td>
+									<td><b>Mois</b></td>
+									<td><b>Date</b></td>
+									<td><b>Bacilloscopie</b></td>
+									<td><b>Poids (kg)</b></td>
+								</td>
 							</tr>
 							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										0
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois1" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids1" />
-									</td>
-								</obsgroup>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159960">
+										<td>
+										<!--  	<span style="display:none"> -->
+												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois1" answerLabel="0,2,3,5,Fin de rx" style="radio" />
+											<!--  </span> -->
+										</td>
+										<td>
+											<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+												id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:5089" id="bacipoids1" />
+										</td>
+									</obsgroup>
+								</td>
 							</tr>
 							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										2
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois2" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie2" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids2" />
-									</td>
-								</obsgroup>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159960">
+										<td>
+										<!--  	<span style="display:none"> -->
+												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois2" answerLabel="0,2,3,5,Fin de rx" style="radio" />
+										<!--	</span> -->
+										</td>
+										<td>
+											<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+												id="bacilloscopie2" answerLabels="Pos,Neg" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:5089" id="bacipoids2" />
+										</td>
+									</obsgroup>
+								</td>
 							</tr>
 							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										3
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois3" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie3" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids3" />
-									</td>
-								</obsgroup>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159960">
+										<td>
+											<!--   <span style="display:none"> -->
+												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois3" answerLabel="0,2,3,5,Fin de rx" style="radio" />
+											<!--  </span> -->
+										</td>
+										<td>
+											<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+												id="bacilloscopie3" answerLabels="Pos,Neg" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:5089" id="bacipoids3" />
+										</td>
+									</obsgroup>
+								</td>
 							</tr>
 							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										5
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois4" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie4" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids4" />
-									</td>
-								</obsgroup>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159960">
+										<td>
+											<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois4" answerLabel="0,2,3,5,Fin de rx" style="radio" />	
+										</td>
+										<td>
+											<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+												id="bacilloscopie4" answerLabels="Pos,Neg" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:5089" id="bacipoids4" />
+										</td>
+									</obsgroup>
+								</td>
 							</tr>
 							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										Fin de rx
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois5" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie5" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids5" />
-									</td>
-								</obsgroup>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159960">
+										<td>
+											<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois5" answerLabel="0,2,3,5,Fin de rx" style="radio" />
+											
+										</td>
+										<td>
+											<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+												id="bacilloscopie5" answerLabels="Pos,Neg" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:5089" id="bacipoids5" />
+										</td>
+									</obsgroup>
+								</td>
 							</tr>
 						</table>
 					</fieldset>
@@ -3202,48 +3225,57 @@
 								<b>Medicaments prescrits / Posologie</b>
 							</legend>
 							<table>
-								<obsgroup groupingConceptId="CIEL:1442">
+								
 									<tr>
 										<td>1</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>2</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>3</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>4</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>5</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
-								</obsgroup>
 							</table>
 						</fieldset>
 						<fieldset>

@@ -283,11 +283,11 @@
 	<script type="text/javascript">
 		if(jQuery){
 		jQuery(document).ready(function(){
-		if ( jQuery.browser.msie ) {
+		//if ( jQuery.browser.msie ) {
 		jQuery(":checkbox").click(function(){
 		jQuery(this).change();
 		});
-		}
+		//}
 		jQuery(".checkboxGroup").each(function(){
 		var group = jQuery(this);
 		var uncheckAll = function(){
@@ -3328,54 +3328,64 @@
 							</legend>
 							<table><!-- use ifmode -->
 								<tr>
-									<obsgroup groupingConceptId="CIEL:1442">
+									
 										<td>1</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
-									</obsgroup>
+									
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="CIEL:1442">
+									
 										<td>2</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
-									</obsgroup>
+									
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="CIEL:1442">
+									
 										<td>3</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
-									</obsgroup>
+									
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="CIEL:1442">
+									
 										<td>4</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
-									</obsgroup>
+									
 								</tr>
 								<tr>
-									<obsgroup groupingConceptId="CIEL:1442">
+									
 										<td>5</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
+											</obsgroup>
 										</td>
-									</obsgroup>
+									
 								</tr>
 
 							</table>
