@@ -78,7 +78,7 @@ ${ ui.includeFragment("isanteplus", "isantePlusForms") }
 					<td>${ ui.format(it.provider) }</td>
 					<td>${ ui.format(it.dateChanged) }</td>
 					<td>${ ui.format(it.enteredBy) }</td>
-					<td><a href="/${appName}/htmlformentryui/htmlform/viewEncounterWithHtmlForm.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounter=${ ui.format(it.encounter.uuid) }" target="_blank">
+					<td><a href="/${appName}/htmlformentryui/htmlform/viewEncounterWithHtmlForm.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounter=${ ui.format(it.encounter.uuid) }">
 					<i class="viewEncounter view-action icon-file-alt" data-mode="view" title="${ ui.message("isanteplus.encounter.view") }"></i>
 					</a></td>
 					<td><input type="checkbox" class="delete_form_history" id="${ ui.format(it.uuid) }"></td>

@@ -110,13 +110,13 @@
 		});
 	</script>
 	<script type="text/javascript">
-		jQuery(function() {
+		/*jQuery(function() {
 		jQuery( '.titre' ).on( 'change', function() {
 		jQuery( this.getAttribute(
 		'ch-target' ) ).show();
 
 		});
-		});
+		});*/
 
 		beforeSubmit.push(function() {
 			//Debut ANTECEDENTS HEREDO-COLLATERAUX
@@ -170,44 +170,6 @@
 
 		//Fin ANTECEDENTS HEREDO-COLLATERAUX
 		
-		//Debut bacilloscopie
-		if ((getValue('bacidate1.value') != '') ||
-		(getValue('bacipoids1.value') != '') ||
-		(getValue('bacilloscopie1.value') == '703') ||
-		(getValue('bacilloscopie1.value') == '664')) {
-			setValue('bacimois1.value', '0');
-		}
-	
-		if ((getValue('bacidate2.value') != '') ||
-		(getValue('bacipoids2.value') != '') ||
-		(getValue('bacilloscopie2.value') == '703') ||
-		(getValue('bacilloscopie2.value') == '664')) {
-			setValue('bacimois2.value', '2');
-		}
-		
-		if ((getValue('bacidate3.value') != '') ||
-		(getValue('bacipoids3.value') != '') ||
-		(getValue('bacilloscopie3.value') == '703') ||
-		(getValue('bacilloscopie3.value') == '664')) {
-			setValue('bacimois3.value', '3');
-		}
-		
-		
-		if ((getValue('bacidate4.value') != '') ||
-		(getValue('bacipoids4.value') != '') ||
-		(getValue('bacilloscopie4.value') == '703') ||
-		(getValue('bacilloscopie4.value') == '664')) {
-			setValue('bacimois4.value', '5');
-		}
-		
-		if ((getValue('bacidate5.value') != '') ||
-		(getValue('bacipoids5.value') != '') ||
-		(getValue('bacilloscopie5.value') == '703') ||
-		(getValue('bacilloscopie5.value') == '664')) {
-			setValue('bacimois5.value', 'Fin de rx');
-		}
-		
-		//Fin bacilloscopie
 		
 		if((getValue('indication2result.value') == '') &amp;&amp; (getValue('indication2date.value') == ''))
 		{
@@ -267,17 +229,43 @@
 
 	<script type="text/javascript">
 		jQuery(function() {
-		jQuery('.titre').each(function(rang) {
-		var ma =jQuery(this).find(".master").attr("id");
-		if(getValue(''+ma+'.value')&gt;0)
-		{
-		jQuery( this.getAttribute( 'ch-target' ) ).show();
-		}
-		else{
-		jQuery( this.getAttribute( 'ch-target' ) ).hide();
-		}
-		});
-
+			
+			jQuery('.titre').each(function() {
+				var m =jQuery(this).find(".master").attr("id");
+				if(getValue(''+m+'.value')&gt;0)
+				{
+					jQuery( this.getAttribute( 'ch-target' ) ).show();
+				}
+				else{
+					if(getValue(''+m+'.value') == null){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+					}
+				}
+				if(getValue(''+m+'.value') == ''){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+				}
+			});
+			
+			jQuery( '.titre' ).on( 'change', function() {
+			
+				var m =jQuery(this).find(".master").attr("id");
+				if(getValue(''+m+'.value')&gt;0 || getValue(''+m+'.value') != null)
+				{
+					jQuery( this.getAttribute( 'ch-target' ) ).show();
+				}
+				else{
+					if(getValue(''+m+'.value') == null){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+					}
+					
+				}
+				if(getValue(''+m+'.value') == ''){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+				}
+			
+	
+			});
+			
 		});
 	</script>
 	<script type="text/javascript">
@@ -317,6 +305,43 @@
 		group.find("#anormal1").find("input[type$='checkbox']").change();
 		}
 		);
+		
+		
+		group.find("#trigger").find("input[type$='checkbox']").click(function(){
+		     var res = group.find(".titre").attr("id");
+		     var idm = group.find(".master").attr("id");
+		   	
+		   	if(getValue(''+idm+'.value') == null || getValue(''+idm+'.value') == '')
+			{
+				group.find("#confirmation").find("input[type$='radio']").attr("checked",false);
+				group.find("#confirmation").find("input[type$='radio']").change();
+				group.find("#primary").find("input[type$='radio']").attr("checked",false);
+				group.find("#primary").find("input[type$='radio']").change();
+				
+				jQuery( group.find(".cacher") ).hide();
+				var idcacher = '#' + group.find(".cacher").attr("id") + '';
+				//alert(idcacher);
+				jQuery(''+idcacher+'').hide();
+			} 	
+		 });
+		 
+		 group.find("#trigger").find("input[type$='text']").change(function(){
+		     var res = group.find(".titre").attr("id");
+		     var idm = group.find(".master").attr("id");
+		   	
+		   	if(getValue(''+idm+'.value') == null || getValue(''+idm+'.value') == '')
+			{
+				group.find("#confirmation").find("input[type$='radio']").attr("checked",false);
+				group.find("#confirmation").find("input[type$='radio']").change();
+				group.find("#primary").find("input[type$='radio']").attr("checked",false);
+				group.find("#primary").find("input[type$='radio']").change();
+				jQuery( group.find(".cacher") ).hide();
+				var idcacher = '#' + group.find(".cacher").attr("id") + '';
+				jQuery(''+idcacher+'').hide();
+			} 	
+		 });
+		
+		
 		});
 		});
 		}
@@ -522,204 +547,67 @@
 						<obs conceptId="CIEL:163607" answerConceptIds="CIEL:163729,CIEL:163728"
 							answerLabels="Aucune, Inconnu" style="radio" /> <br/><br/>
 						<table>
-									<tr>		
-												<td class="sansbordure"></td>
-												<td class="sansbordure"></td>
-												<td class="sansbordure"></td>
-												<td>Mère</td>
-												<td>Père</td>
-												<td>Frère/Sœur</td>
-												<td class="sansbordure"></td>
-												<td class="sansbordure"></td>
-												<td class="sansbordure"></td>
-												<td>Mère</td>
-												<td>Père</td>
-												<td>Frère/Sœur</td>
-											
-									</tr>
-									<tr>
-										<td class="sansbordure">
-											<obsgroup groupingConceptId="160593">
-												<td class="sansbordure">
-														<td class="sansbordure">
-															Asthme
-															<span style="display: none">
-															<obs conceptId="CIEL:160592" answerConceptId="CIEL:140234" id="asthme" answerLabel="Asthme" />
-															</span>
-														</td>
-														<td>
-															<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="asthme1" answerLabel=""/>
-														</td>
-														<td>
-															<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="asthme2" answerLabel="" />
-														</td>
-														<td>
-															<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="asthme3" answerLabel="" />
-														</td>
-												</td>
-											</obsgroup>
-										</td>
-										<td class="sansbordure">
-											<obsgroup groupingConceptId="160593">
-											<td class="sansbordure">
-												<td class="sansbordure">
-													Diabète
-													<span style="display: none">
-														<obs conceptId="CIEL:160592" answerConceptId="CIEL:140228" id="diabete" answerLabel="Diabète" />
-													</span>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="diabete1" answerLabel=""/>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="diabete2" answerLabel="" />
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="diabete3" answerLabel="" />
-												</td>
-											</td>
-										</obsgroup>
-										</td>
-									</tr>
-									<tr>
-										<td class="sansbordure">
-											<obsgroup groupingConceptId="160593">
-												<td class="sansbordure">
-													<td class="sansbordure">
-														Cancer
-														<span style="display: none">
-															<obs conceptId="CIEL:160592" answerConceptId="CIEL:151521" id="cancer" answerLabel="Cancer" />
-														</span>
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="cancer1" answerLabel="" />
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="cancer2" answerLabel="" />
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="cancer3" answerLabel="" />
-													</td>
-												</td>
-											 </obsgroup>
-										 </td>
-										 <td class="sansbordure">
-										 	 <obsgroup groupingConceptId="160593">
-										 	<td class="sansbordure">
-												<td class="sansbordure">
-													Epilepsie
-													<span style="display: none">
-														<obs conceptId="CIEL:160592" answerConceptId="CIEL:152450" id="epilepsie" answerLabel="Epilepsie" />
-													</span>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="epilepsie1" answerLabel=""/>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="epilepsie2" answerLabel="" />
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="epilepsie3" answerLabel="" />
-												</td>
-											</td>
-										</obsgroup>
-										 </td>
-									</tr>
-									<tr>
-										<td class="sansbordure">
-											<obsgroup groupingConceptId="160593">
-												<td class="sansbordure">
-													<td class="sansbordure">
-														Cardiopathie
-														<span style="display: none">
-															<obs conceptId="CIEL:160592" answerConceptId="CIEL:163114" id="cardiopathie" answerLabel="Cardiopathie" />
-														</span>
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="cardiopathie1" answerLabel="" />
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="cardiopathie2" answerLabel="" />
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="cardiopathie3" answerLabel=""/>
-													</td>
-												</td>
-											</obsgroup>
-										</td>
-										<td class="sansbordure">
-											<obsgroup groupingConceptId="160593">
-											<td class="sansbordure">
-												<td class="sansbordure">
-													HTA
-													<span style="display: none">
-														<obs conceptId="CIEL:160592" answerConceptId="CIEL:151927" id="hta" answerLabel="HTA" />
-													</span>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="hta1" answerLabel="" />
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="hta2" answerLabel="" />
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="hta3" answerLabel="" />
-												</td>
-											</td>
-										</obsgroup>
+												<tr>
+													
+														<th></th>
+														<th>Mère</th>
+														<th>Père</th>
+														<th>Frère/Sœur</th>
+													
+												</tr>
+													<repeat>
+													<template>
+														
+															<tr>
+																<td>
+																	
+																		<p>
+																			{conceptname}
+																			<!--  <div style="display: none"> 
+																				<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}"  answerLabel="{conceptname}" />
+																			 </div>-->
+																		</p>
+																		<td>
+																			<obsgroup groupingConceptId="CIEL:160593">
+																				<div style="display: none"> 
+																					<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}_a"  answerLabel="{conceptname}" />
+																			 	</div>
+																				<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="{id}1" answerLabel="" />
+																			</obsgroup>
+																		</td>
+																		<td>
+																			<obsgroup groupingConceptId="CIEL:160593">
+																				<div style="display: none"> 
+																					<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}_b"  answerLabel="{conceptname}" />
+																			 	</div>
+																				<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="{id}2" answerLabel="" />
+																			</obsgroup>
+																		</td>
+																		<td>
+																			<obsgroup groupingConceptId="CIEL:160593">
+																				<div style="display: none"> 
+																					<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}_c"  answerLabel="{conceptname}" />
+																				 </div>
+																				<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="{id}3" answerLabel="" />
+																			</obsgroup>
+																		</td>
+																	 
+																</td>
+															</tr>
+														
+														</template>
+														<render concept="CIEL:140234" conceptname="Asthme" id="asthme" />
+														<render concept="CIEL:151521" conceptname="Cancer" id="cancer" />
+														<render concept="CIEL:163114" conceptname="Cardiopathie" id="cardiopathie" />
+														<render concept="CIEL:152460" conceptname="Tuberculose" id="tuberculose" />
+														<render concept="CIEL:140228" conceptname="Diabète" id="diabete" />
+														<render concept="CIEL:152450" conceptname="Epilepsie" id="epilepsie" />
+														<render concept="CIEL:151927" conceptname="HTA" id="hta" />
+														<render concept="CIEL:164102" conceptname="MDR TB" id="mdr" />
+													</repeat>
 										
-										</td>
-										
-									</tr>
-									<tr>
-										<td class="sansbordure">
-										<obsgroup groupingConceptId="160593">
-											<td class="sansbordure">
-												<td class="sansbordure">
-													Tuberculose
-													<span style="display: none">
-														<obs conceptId="CIEL:160592" answerConceptId="CIEL:152460" id="tuberculose" answerLabel="Tuberculose" />
-													</span>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="tuberculose1" answerLabel=""/>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="tuberculose2" answerLabel=""/>
-												</td>
-												<td>
-													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="tuberculose3" answerLabel="" />
-												</td>
-											</td>
-										</obsgroup>
-										</td>
-									
-										<td class="sansbordure">
-											<obsgroup groupingConceptId="160593">
-												<td class="sansbordure">
-												  	<td class="sansbordure">
-														MDR TB
-														<span style="display: none">
-															<obs conceptId="CIEL:160592" answerConceptId="CIEL:164102" id="mdr"  answerLabel="" />
-														</span>
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="mdr1" answerLabel="" />
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="mdr2" answerLabel="" />
-													</td>
-													<td>
-														<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="mdr3" answerLabel="" />
-													</td>
-												</td>
-											</obsgroup>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="12">Autres: <obs conceptId="CIEL:162148" rows="1" cols="50" /></td>
-									</tr>
-								</table>
+								</table><br/>
+								Autres: <obs conceptId="CIEL:162148" rows="1" cols="50" />
 					</fieldset>
 				</div>
 			</div>
@@ -747,9 +635,8 @@
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:110247"
-														answerLabel="Allergies, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Allergies" showCommentField="true" commentFieldLabel=", précisez" />
+													
 												</obsgroup>
 												<br />
 												<obsgroup groupingConceptId="1633">
@@ -759,16 +646,14 @@
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:151286"
-														answerLabel="Cancer, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Cancer" showCommentField="true" commentFieldLabel=", précisez"  />
+													
 												</obsgroup>
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:156660"
-														answerLabel="IST, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="IST" showCommentField="true" commentFieldLabel=", précisez"  />
+													
 												</obsgroup>
 												<br />
 												<obsgroup groupingConceptId="1633">
@@ -778,16 +663,14 @@
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:163521"
-														answerLabel="Chirurgie, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Chirurgie" showCommentField="true" commentFieldLabel=", précisez" />
+													
 												</obsgroup>
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:163520"
-														answerLabel="Trauma, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Trauma" showCommentField="true" commentFieldLabel=", précisez" />
+												
 												</obsgroup>
 												<br />
 											</td>
@@ -806,9 +689,8 @@
 												<!--NEW CONCEPT ADDED -->
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:163583"
-														answerLabel="Hémoglobinopathie, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Hémoglobinopathie" showCommentField="true" commentFieldLabel=", précisez" />
+													
 												</obsgroup>
 												<br />
 												<obsgroup groupingConceptId="1633">
@@ -828,9 +710,8 @@
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:162556"
-														answerLabel="Drogue, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Drogue" showCommentField="true" commentFieldLabel=", précisez" />
+													
 												</obsgroup>
 												<br />
 												<!--NEW CONCEPT ADDED -->
@@ -877,9 +758,8 @@
 												<br />
 												<obsgroup groupingConceptId="1633">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:151282"
-														answerLabel="Troubles psychiatriques, précisez:" />
-													<br />
-													<obs conceptId="CIEL:160221" />
+														answerLabel="Troubles psychiatriques" showCommentField="true" commentFieldLabel=", précisez" />
+													
 												</obsgroup>
 												<br />
 												<obsgroup groupingConceptId="1633">
@@ -2071,10 +1951,10 @@
 							<tr>
 								<td valign="TOP">
 									<table>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher1">
+													<span class="titre" ch-target="#cacher1" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id1"
 															answerConceptId="CIEL:152370" answerLabel="Agression sexuelle [T74.21XA]" />
 													</span>
@@ -2083,16 +1963,18 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher2">
+													<span class="titre" ch-target="#cacher2" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id2"
 															answerConceptId="CIEL:147635" answerLabel="Adénofibrome (ADF) du sein [N60.39]" />
 													</span>
@@ -2101,16 +1983,18 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher4">
+													<span class="titre" ch-target="#cacher4" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id3"
 															answerConceptId="CIEL:121629" answerLabel="Anémie" />
 													</span>
@@ -2119,27 +2003,33 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher5">
+													<span class="titre" ch-target="#cacher5" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id4"
 															answerConceptId="CIEL:50" answerLabel="Avortement [O03.9],"
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher5" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 												<!--<obs conceptId="CIEL:160850" textLabel="précisez :" showCommentField="true" 
@@ -2147,152 +2037,184 @@
 											</td>
 
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher6">
+													<span class="titre" ch-target="#cacher6" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id5"
 															answerConceptId="CIEL:128983" answerLabel="Cancer de l’endomètre [C54.1]" />
 													</span>
 													<br />
 													<span id="cacher6" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher7">
+													<span class="titre" ch-target="#cacher7" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id6"
 															answerConceptId="CIEL:133318" answerLabel="Cancer de l’ovaire [C56.9]" />
 													</span>
 													<br />
 													<span id="cacher7" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher8">
+													<span class="titre" ch-target="#cacher8" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id7"
 															answerConceptId="CIEL:133354" answerLabel="Cancer de sein [C50.919], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher8" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher9">
+													<span class="titre" ch-target="#cacher9" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id8"
 															answerConceptId="CIEL:139071" answerLabel="Cardiopathie [I51.9], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher9" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher10">
+													<span class="titre" ch-target="#cacher10" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id9"
 															answerConceptId="CIEL:145548" answerLabel="Chorioamniotite [O41.129]" />
 													</span>
 													<br />
 													<span id="cacher10" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher11">
+													<span class="titre" ch-target="#cacher11" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id10"
 															answerConceptId="CIEL:1449" answerLabel="Diabète + grossesse [O99.810], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher11" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher12">
+													<span class="titre" ch-target="#cacher12" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id11"
 															answerConceptId="CIEL:115178" answerLabel="Dystrophie ovarienne [N83.8]"
 															showCommentField="true" commentFieldLabel=", précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher12" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
 
 
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher13">
+													<span class="titre" ch-target="#cacher13" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id12"
 															answerConceptId="CIEL:118744" answerLabel="Eclampsie [O15.9]" />
 													</span>
 													<br />
 													<span id="cacher13" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
@@ -2301,244 +2223,296 @@
 								</td>
 								<td valign="TOP">
 									<table>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher14">
+													<span class="titre" ch-target="#cacher14" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id13"
 															answerConceptId="CIEL:118629" answerLabel="Endométriose [N80.9], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher14" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher15">
+													<span class="titre" ch-target="#cacher15" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id14"
 															answerConceptId="CIEL:123455" answerLabel="Fibrome utérin [D26.9], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher15" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher16">
+													<span class="titre" ch-target="#cacher16" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id15"
 															answerConceptId="CIEL:46" answerLabel="Grossesse ectopique [O0.00], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher16" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher17">
+													<span class="titre" ch-target="#cacher17" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id16"
 															answerConceptId="CIEL:132678" answerLabel="Grossesse intra utérine [Z33.1]" />
 													</span>
 													<br />
 													<span id="cacher17" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher18">
+													<span class="titre" ch-target="#cacher18" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id17"
 															answerConceptId="CIEL:47" answerLabel="HTA + grossesse [O16.9]"
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher18" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher19">
+													<span class="titre" ch-target="#cacher19" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id18"
 															answerConceptId="CIEL:163751" answerLabel="Hémorragie troisième trimestre [O46.90]"
 															showCommentField="true" commentFieldLabel=", précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher19" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher20">
+													<span class="titre" ch-target="#cacher20" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id19"
 															answerConceptId="CIEL:490" answerLabel="Hyperémèse gravidique [O21.0]" />
 													</span>
 													<br />
 													<span id="cacher20" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher21">
+													<span class="titre" ch-target="#cacher21" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id20"
 															answerConceptId="CIEL:116988" answerLabel="Infection génito-urinaire (IGU) [N73.9]" />
 													</span>
 													<br />
 													<span id="cacher21" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher22">
+													<span class="titre" ch-target="#cacher22" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id21"
 															answerConceptId="CIEL:112992" answerLabel="IST, "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher22" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher23">
+													<span class="titre" ch-target="#cacher23" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id22"
 															answerConceptId="CIEL:119702" answerLabel="Kyste de l’ovaire [N83.29], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher23" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher24">
+													<span class="titre" ch-target="#cacher24" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id23"
 															answerConceptId="CIEL:157480" answerLabel="Lésion cervicale [D26.0], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher24" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher25">
+													<span class="titre" ch-target="#cacher25" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id24"
 															answerConceptId="CIEL:902" answerLabel="Maladie inflammatoire pelvienne [N73.9]" />
 													</span>
 													<br />
 													<span id="cacher25" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher26">
+													<span class="titre" ch-target="#cacher26" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id25"
 															answerConceptId="CIEL:116128" answerLabel="Malaria (paludisme) [B52.9]*" />
 													</span>
 													<br />
 													<span id="cacher26" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
@@ -2547,323 +2521,392 @@
 								</td>
 								<td valign="TOP">
 									<table>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher27">
+													<span class="titre" ch-target="#cacher27" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id26"
 															answerConceptId="CIEL:158489"
 															answerLabel="Menace d’accouchement prématurée [O42.00]" />
 													</span>
 													<br />
 													<span id="cacher27" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher28">
+													<span class="titre" ch-target="#cacher28" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id27"
 															answerConceptId="CIEL:140399" answerLabel="Mort fœtale [O36.4XX0]" />
 													</span>
 													<br />
 													<span id="cacher28" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher29">
+													<span class="titre" ch-target="#cacher29" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id28"
 															answerConceptId="CIEL:132425" answerLabel="Oligoamnios [O41.00X0]" />
 													</span>
 													<br />
 													<span id="cacher29" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher30">
+													<span class="titre" ch-target="#cacher30" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id29"
 															answerConceptId="CIEL:6033" answerLabel="Pathologie rénale, "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher30" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher31">
+													<span class="titre" ch-target="#cacher31" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id30"
 															answerConceptId="CIEL:129251" answerLabel="Pré éclampsie [O14.90], "
 															showCommentField="true" commentFieldLabel="précisez :&lt;br/&gt;" />
 													</span>
 													<br />
 													<span id="cacher31" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher32">
+													<span class="titre" ch-target="#cacher32" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id31"
 															answerConceptId="CIEL:118245" answerLabel="Retard croissance Intrautérin [P05.9]" />
 													</span>
 													<br />
 													<span id="cacher32" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher33">
+													<span class="titre" ch-target="#cacher33" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id32"
 															answerConceptId="CIEL:129211"
 															answerLabel="Rupture prématurée des membranes [O42.00]" />
 													</span>
 													<br />
 													<span id="cacher33" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+														</span>
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher34">
+													<span class="titre" ch-target="#cacher34" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id33"
 															answerConceptId="CIEL:141631" answerLabel="Saignement utérin anormal [N93.8]" />
 													</span>
 													<br />
 													<span id="cacher34" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher35">
+													<span class="titre" ch-target="#cacher35" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id34"
 															answerConceptId="CIEL:112493" answerLabel="Syphilis [A53.9]" />
 													</span>
 													<br />
 													<span id="cacher35" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher36">
+													<span class="titre" ch-target="#cacher36" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id35"
 															answerConceptId="CIEL:112406" answerLabel="Thrombopénie [D69.6]" />
 													</span>
 													<br />
 													<span id="cacher36" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+														</span>
 														<br />
+														
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher37">
+													<span class="titre" ch-target="#cacher37" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id36"
 															answerConceptId="CIEL:124772" answerLabel="Thromboses" />
 													</span>
 													<br />
 													<span id="cacher37" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher38">
+													<span class="titre" ch-target="#cacher38" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id37"
 															answerConceptId="CIEL:112141"
 															answerLabel="Tuberculose [A15.0] remplir la section Tuberculose ci-dessous" />
 													</span>
 													<br />
 													<span id="cacher38" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher39">
+													<span class="titre" ch-target="#cacher39" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id38"
 															answerConceptId="CIEL:159345"
 															answerLabel="MDR TB remplir la section Tuberculose ci-dessous [Z16.24]" />
 													</span>
 													<br />
 													<span id="cacher39" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher40">
+													<span class="titre" ch-target="#cacher40" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id39"
 															answerConceptId="CIEL:162938" answerLabel="Travail, Latent" />
 													</span>
 													<br />
 													<span id="cacher40" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher41">
+													<span class="titre" ch-target="#cacher41" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id40"
 															answerConceptId="CIEL:162194" answerLabel="Travail, Actif" />
 													</span>
 													<br />
 													<span id="cacher41" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher42">
+													<span class="titre" ch-target="#cacher42" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id41"
 															answerConceptId="CIEL:149197" answerLabel="VIH/SIDA [B20]" />
 													</span>
 													<br />
 													<span id="cacher42" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher43">
+													<span class="titre" ch-target="#cacher43" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id42"
 															answerConceptId="CIEL:123380" answerLabel="Vulvo vaginite [N76.0]" />
 													</span>
 													<br />
 													<span id="cacher43" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
 										<tr><td><b>Autres</b></td></tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher44">
+													<span class="titre" ch-target="#cacher44" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id43"
 															style="autocomplete" answerClasses="Diagnosis"
 															showCommentField="true"
@@ -2871,19 +2914,23 @@
 													</span>
 													<br />
 													<span id="cacher44" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher45">
+													<span class="titre" ch-target="#cacher45" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id44"
 															style="autocomplete" answerClasses="Diagnosis"
 															showCommentField="true"
@@ -2891,19 +2938,23 @@
 													</span>
 													<br />
 													<span id="cacher45" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher46">
+													<span class="titre" ch-target="#cacher46" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id45"
 															style="autocomplete" answerClasses="Diagnosis"
 															showCommentField="true"
@@ -2911,19 +2962,23 @@
 													</span>
 													<br />
 													<span id="cacher46" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="CIEL:159947">
-													<span class="titre" ch-target="#cacher47">
+													<span class="titre" ch-target="#cacher47" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id46"
 															style="autocomplete" answerClasses="Diagnosis"
 															showCommentField="true"
@@ -2931,11 +2986,15 @@
 													</span>
 													<br />
 													<span id="cacher47" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
@@ -3122,110 +3181,31 @@
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
+								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
 								<th>Poids (kg)</th>
 							</tr>
 							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										0
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois1"/>
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids1" />
-									</td>
-								</obsgroup>
-							</tr>
-							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										2
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois2" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie2" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids2" />
-									</td>
-								</obsgroup>
-							</tr>
-							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										3
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois3" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie3" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids3" />
-									</td>
-								</obsgroup>
-							</tr>
-							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										5
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois4" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie4" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids4" />
-									</td>
-								</obsgroup>
-							</tr>
-							<tr>
-								<obsgroup groupingConceptId="159960">
-									<td>
-										Fin de rx
-										<span style="display:none">
-											<obs conceptId="CIEL:163756" id="bacimois5" />
-										</span>
-									</td>
-									<td>
-										<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-											id="bacilloscopie5" answerLabels="Pos,Neg" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:5089" id="bacipoids5" />
-									</td>
-								</obsgroup>
+								<td>
+									<obsgroup groupingConceptId="CIEL:159960">
+										<td>
+												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois1" answerLabel="0,2,3,5,Fin de rx" style="radio" />
+											
+										</td>
+										<td>
+											<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+												id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
+										</td>
+										<td>
+											<obs conceptId="CIEL:5089" id="bacipoids1" />
+										</td>
+									</obsgroup>
+								</td>
 							</tr>
 						</table>
 					</fieldset>
