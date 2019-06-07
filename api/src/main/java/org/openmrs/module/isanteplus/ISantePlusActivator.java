@@ -125,6 +125,9 @@ public class ISantePlusActivator implements ModuleActivator {
 			appFrameworkService.disableExtension("appointmentschedulingui.tab");
 			appFrameworkService.disableExtension("org.openmrs.module.appointmentschedulingui.firstColumnFragments.patientDashboard.patientAppointments");
 			appFrameworkService.disableExtension("chartsearch.chartSearchLink");
+			appFrameworkService.disableExtension("referenceapplication.realTime.vitals");
+			appFrameworkService.disableExtension("referenceapplication.realTime.simpleVisitNote");
+			appFrameworkService.disableExtension("referenceapplication.realTime.simpleAdmission");
 			
 			// Active Auto close visits after 24 hours
 			activeAutoCloseVisits();

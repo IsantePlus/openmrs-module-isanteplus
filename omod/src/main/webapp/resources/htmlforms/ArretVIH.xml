@@ -237,7 +237,13 @@
 			&#160;&#160;&#160;&#160;&#160;
 			<obs conceptId="CIEL:1667" answerConceptId="CIEL:159737"
 				answerLabel="Préférence du patient" />
-			<br />
+			<br /> 
+			<includeIf velocityTest="$patient.age &lt; 15" >
+			&#160;&#160;&#160;&#160;&#160;
+				<obs conceptId="CIEL:1667" answerConceptId="CIEL:165439"
+					answerLabel="Séroréversion" />
+				<br />
+			</includeIf>
 			&#160;&#160;&#160;&#160;&#160;
 			<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622"
 				answerLabel="Autre raison, préciser" showCommentField="true"
