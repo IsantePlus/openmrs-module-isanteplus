@@ -812,7 +812,7 @@
 
 								<tr>
 									<td class="checkboxGroup">
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="280f7e9e-73de-4fa1-899e-3e4db50915db">
 											<span id="symptomA">
 												<obs conceptId="CIEL:1728" id="symptoma"
 													answerConceptId="CIEL:151" answerLabel="Douleur abdominale" />
@@ -823,7 +823,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="8d118f23-1934-4ae3-9a0c-2045dd67c849">
 											<span id="symptomB">
 												<obs conceptId="CIEL:1728" id="symptomb"
 													answerConceptId="CIEL:6031" answerLabel="Anorexie/Perte d'appétit" />
@@ -833,7 +833,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="78b69c38-8119-4634-8def-4b75e079243f">
 											<span id="symptomC">
 												<obs conceptId="CIEL:1728" id="symptomc"
 													answerConceptId="CIEL:143264" answerLabel="Toux" />
@@ -843,7 +843,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="64e7b85c-355e-4c40-a11e-2893934bb38b">
 											<span id="symptomD">
 												<obs conceptId="CIEL:1728" id="symptomd"
 													answerConceptId="CIEL:5957" answerLabel="Toux/Expectoration (sauf hémoptysie)" />
@@ -853,7 +853,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="81db35ed-27a7-4e26-a54a-1ddff821ca5e">
 											<span id="symptomE">
 												<obs conceptId="CIEL:1728" id="symptome"
 													answerConceptId="CIEL:122496" answerLabel="Dyspnée" />
@@ -874,7 +874,7 @@
 					<table height="100%">
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="7ff8201b-93b9-4aa3-b86c-ab9c567a1f35">
 									<span id="symptomF">
 										<obs conceptId="CIEL:1728" id="symptomf" answerConceptId="CIEL:139084"
 											answerLabel="Céphalée" />
@@ -884,7 +884,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="3d584639-8c55-45de-b202-f7405af953df">
 									<span id="symptomG">
 										<obs conceptId="CIEL:1728" id="symptomg" answerConceptId="CIEL:138905"
 											answerLabel="Hémoptysie" />
@@ -894,7 +894,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="244851ca-731c-4ee1-8557-4c75cb38fe9b">
 									<span id="symptomH">
 										<obs conceptId="CIEL:1728" id="symptomh" answerConceptId="CIEL:5978"
 											answerLabel="Nausée" />
@@ -904,7 +904,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="3777f798-60fd-4f8c-acb6-c9bf879c8913">
 									<span id="symptomI">
 										<obs conceptId="CIEL:1728" id="symptomi" answerConceptId="CIEL:133027"
 											answerLabel="Sueurs nocturnes" />
@@ -914,7 +914,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="bfa2b9d6-75d1-407e-b4a9-1df36e639429">
 									<span id="symptomJ">
 										<obs conceptId="CIEL:1728" id="symptomj" answerConceptId="CIEL:141635"
 											answerLabel="Perte de sensibilité" />
@@ -932,7 +932,7 @@
 					<table height="100%">
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="b41e4d9d-b0f7-455c-851f-dc9c05fc519a">
 									<span id="symptomK">
 										<obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:118789"
 											answerLabel="Odynophagie/dysphagie" />
@@ -942,7 +942,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="9c67aa65-9411-4ac7-b56f-b7f2ffe36192">
 									<span id="symptomL">
 										<obs conceptId="CIEL:1728" id="symptoml" answerConceptId="CIEL:512"
 											answerLabel="Eruption cutanée" />
@@ -952,7 +952,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="89803a57-4a1b-475d-9a7a-fbcd9f74c0c9">
 									<span id="symptomM">
 										<obs conceptId="CIEL:1728" id="symptomm" answerConceptId="CIEL:122983"
 											answerLabel="Vomissement" />
@@ -962,7 +962,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="696e5e96-c3ca-4b01-a792-583dfcd4af2a">
 									<span id="symptomN">
 										<obs conceptId="CIEL:1728" id="symptomn" answerConceptId="CIEL:128319"
 											answerLabel="Prurigo" />
@@ -981,7 +981,7 @@
 					<table>
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="0671685b-ced1-459f-b31d-fa851985d117">
 									<span id="symptomO">
 										<obs conceptId="CIEL:1728" id="symptomo" answerConceptId="CIEL:5622"
 											answerLabel="Autres," showCommentField="true"
