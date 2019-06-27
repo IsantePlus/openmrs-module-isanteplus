@@ -812,7 +812,7 @@
 
 								<tr>
 									<td class="checkboxGroup">
-										<obsgroup groupingConceptId="280f7e9e-73de-4fa1-899e-3e4db50915db">
+										<obsgroup groupingConceptId="6196c182-d6b3-452d-8571-35793bdd6128">
 											<span id="symptomA">
 												<obs conceptId="CIEL:1728" id="symptoma"
 													answerConceptId="CIEL:151" answerLabel="Douleur abdominale" />
