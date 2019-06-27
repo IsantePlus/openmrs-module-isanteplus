@@ -50,11 +50,11 @@
 	<script type="text/javascript">
 		if(jQuery){
 		jQuery(document).ready(function(){
-		if ( jQuery.browser.msie ) {
+		//if ( jQuery.browser.msie ) {
 		jQuery(":checkbox").click(function(){
 		jQuery(this).change();
 		});
-		}
+		//}
 		// Enabled et disabled input type text
 		jQuery(".enableDisable").each(function(){
 		var group = jQuery(this);
@@ -759,12 +759,21 @@
 						required="false" />
 				</td>
 				<td valign="TOP" style="padding-left:2%">
+						<br />
+						Établissement :
+						<br />
+						<obs conceptId="CIEL:162724" labelText="" />
+						<br />
+						Établissement :
+						<br />
+						<obs conceptId="CIEL:162724" labelText="" />
+				<!--  
 					<br />
 					Établissement :
 					<patient field="identifierLocation" />
 					<br />
 					Établissement :
-					<patient field="identifierLocation" />
+					<patient field="identifierLocation" /> -->
 				</td>
 			</tr>
 		</table>
@@ -774,8 +783,8 @@
 			<table>
 				<tr>
 					<td>
-						<obs conceptId="CIEL:374" answerConceptId="CIEL:965"
-							answerLabel="Oui" />
+						<obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
+											answerLabels="Oui, Non" style="radio" />
 						<br />
 						<b>Méthode PF</b>
 						<br />
@@ -1352,6 +1361,9 @@
 		</table>
 	</section>
 	<section headerLabel="DIAGNOSTICS ACTUELS/ÉVOLUTION">
+		<obs conceptId="CIEL:1284" answerConceptId="CIEL:133010"
+						answerLabel="Aucun diagnostic fait ou reporté aujourd'hui" />
+					<br />
 		Indiquer les diagnostics actuels ou passés qui n'ont pas été préalablement reportés. Ne pas indiquer les diagnostics présomptifs.
 		<br/>
 		<table width="100%">
@@ -1962,33 +1974,31 @@
 	</tr>
 		<repeat>
 		<template>
-			
-			<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
-				<span>
-					<obsgroup groupingConceptId="160741">
-						<div>
-							<td>{drugname}<span class="arv1_div" style="display: none"><span id="trigger"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/></span>
-							<obs conceptId="CIEL:160742" id="{id}_hiv" answerConceptId="CIEL:138405" defaultValue="CIEL:138405" /></span>
-							</td>
-							<td><span id="disabled3"><obs conceptId="CIEL:159367" id="{id}_current" answerConceptId="CIEL:1065" answerLabel=""/></span></td>
-							<td><obs conceptId="CIEL:1191" id="{id}_end"/></td>
-							<td><span id="disabled4"><obs conceptId="CIEL:6098" id="{id}_tox" answerConceptId="CIEL:102" answerLabel=""/></span></td>
-							<td><span id="disabled5"><obs conceptId="CIEL:6098" id="{id}_intol" answerConceptId="CIEL:987" answerLabel=""/></span></td>
-							<td><span id="disabled6"><obs conceptId="CIEL:6098" id="{id}_echvir" answerConceptId="CIEL:843" answerLabel=""/></span></td>
-							<td><span id="disabled7"><obs conceptId="CIEL:6098" id="{id}_echimm" answerConceptId="CIEL:1067" answerLabel=""/></span></td>
-							<td><span id="disabled8"><obs conceptId="CIEL:6098" id="{id}_echclin" answerConceptId="CIEL:1253" answerLabel=""/></span></td>
-							<td><span id="disabled9"><obs conceptId="CIEL:6098" id="{id}_rs" answerConceptId="CIEL:1754" answerLabel=""/></span></td>
-							<td><span id="disabled10"><obs conceptId="CIEL:6098" id="{id}_gros" answerConceptId="CIEL:1434" answerLabel=""/></span></td>
-							<td><span id="disabled11"><obs conceptId="CIEL:6098" id="{id}_hop" answerConceptId="CIEL:5485" answerLabel=""/></span></td>
-							<td><span id="disabled12"><obs conceptId="CIEL:6098" id="{id}_arg" answerConceptId="CIEL:819" answerLabel=""/></span></td>
-							<td><span id="disabled13"><obs conceptId="CIEL:6098" id="{id}_alt" answerConceptId="CIEL:151316" answerLabel=""/></span></td>
-							<td><span id="disabled14"><obs conceptId="CIEL:6098" id="{id}_suiv" answerConceptId="CIEL:162192" answerLabel=""/></span></td>
-							<td><span id="disabled15"><obs conceptId="CIEL:6098" id="{id}_pref" answerConceptId="CIEL:160018" answerLabel=""/></span></td>	
-					   </div>
-					</obsgroup>
-				</span>
-			</tr>
-			
+			<obsgroup groupingConceptId="160741">
+				<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
+					<span>
+							<div>
+								<td>{drugname}<span class="arv1_div" style="display: none"><span id="trigger"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/></span>
+								<obs conceptId="CIEL:160742" id="{id}_hiv" answerConceptId="CIEL:138405" defaultValue="CIEL:138405" /></span>
+								</td>
+								<td><span id="disabled3"><obs conceptId="CIEL:159367" id="{id}_current" answerConceptId="CIEL:1065" answerLabel=""/></span></td>
+								<td><obs conceptId="CIEL:1191" id="{id}_end"/></td>
+								<td><span id="disabled4"><obs conceptId="CIEL:6098" id="{id}_tox" answerConceptId="CIEL:102" answerLabel=""/></span></td>
+								<td><span id="disabled5"><obs conceptId="CIEL:6098" id="{id}_intol" answerConceptId="CIEL:987" answerLabel=""/></span></td>
+								<td><span id="disabled6"><obs conceptId="CIEL:6098" id="{id}_echvir" answerConceptId="CIEL:843" answerLabel=""/></span></td>
+								<td><span id="disabled7"><obs conceptId="CIEL:6098" id="{id}_echimm" answerConceptId="CIEL:1067" answerLabel=""/></span></td>
+								<td><span id="disabled8"><obs conceptId="CIEL:6098" id="{id}_echclin" answerConceptId="CIEL:1253" answerLabel=""/></span></td>
+								<td><span id="disabled9"><obs conceptId="CIEL:6098" id="{id}_rs" answerConceptId="CIEL:1754" answerLabel=""/></span></td>
+								<td><span id="disabled10"><obs conceptId="CIEL:6098" id="{id}_gros" answerConceptId="CIEL:1434" answerLabel=""/></span></td>
+								<td><span id="disabled11"><obs conceptId="CIEL:6098" id="{id}_hop" answerConceptId="CIEL:5485" answerLabel=""/></span></td>
+								<td><span id="disabled12"><obs conceptId="CIEL:6098" id="{id}_arg" answerConceptId="CIEL:819" answerLabel=""/></span></td>
+								<td><span id="disabled13"><obs conceptId="CIEL:6098" id="{id}_alt" answerConceptId="CIEL:151316" answerLabel=""/></span></td>
+								<td><span id="disabled14"><obs conceptId="CIEL:6098" id="{id}_suiv" answerConceptId="CIEL:162192" answerLabel=""/></span></td>
+								<td><span id="disabled15"><obs conceptId="CIEL:6098" id="{id}_pref" answerConceptId="CIEL:160018" answerLabel=""/></span></td>	
+						   </div>
+					</span>
+				</tr>
+				</obsgroup>
 			</template>
 			<render concept="CIEL:70056" drugname="Abacavir (ABC)" id="abacavir" color="#D8D8D8"/>
 			<render concept="CIEL:630" drugname="Combivir (AZT+3TC)" id="combivir" color="#FFFFFF"/>
@@ -2013,9 +2023,10 @@
 	</tr>
 <repeat>
 <template>
-	<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
-		<span>
-			<obsgroup groupingConceptId="160741">
+	<obsgroup groupingConceptId="160741">
+		<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
+			<span>
+			
 				<div>
 						<td>{drugname}<span class="arv1_div" style="display: none"><span id="trigger"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/></span>
 						<obs conceptId="CIEL:160742" id="{id}_hiv" answerConceptId="CIEL:138405" defaultValue="CIEL:138405" /></span>
@@ -2035,10 +2046,10 @@
 					<td><span id="disabled14"><obs conceptId="CIEL:6098" id="{id}_suiv" answerConceptId="CIEL:162192" answerLabel=""/></span></td>
 					<td><span id="disabled15"><obs conceptId="CIEL:6098" id="{id}_pref" answerConceptId="CIEL:160018" answerLabel=""/></span></td>
 				</div>
-			</obsgroup>	
-		</span>
-	</tr>
-	
+				
+			</span>
+		</tr>
+	</obsgroup>
 </template>
 <render concept="CIEL:75523" drugname="Efavirenz (EFV)" id="efavirenz" color="#FFFFFF"/>
 <render concept="CIEL:80586" drugname="Nevirapine (NVP)" id="nevirapine" color="#D8D8D8"/>
@@ -2056,10 +2067,10 @@
 	</tr>
 	<repeat>
 		<template>
-			
+			<obsgroup groupingConceptId="160741">
 				<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
 				<span>
-				<obsgroup groupingConceptId="160741">
+				
 					<div>
 						<td>{drugname}<span class="arv1_div" style="display: none"><span id="trigger"><obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/></span>
 						<obs conceptId="CIEL:160742" id="{id}_hiv" answerConceptId="CIEL:138405" defaultValue="CIEL:138405" /></span>
@@ -2080,10 +2091,10 @@
 						<td><span id="disabled14"><obs conceptId="CIEL:6098" id="{id}_suiv" answerConceptId="CIEL:162192" answerLabel=""/></span></td>
 						<td><span id="disabled15"><obs conceptId="CIEL:6098" id="{id}_pref" answerConceptId="CIEL:160018" answerLabel=""/></span></td>
 					</div>
-				</obsgroup>
-				</span>
-			</tr>
-			
+				
+					</span>
+				</tr>
+			</obsgroup>
 		</template>
 		<render concept="CIEL:71647" drugname="Atazanavir (ATZN)" id="atazanavir" color="#D8D8D8"/>
 		<render concept="CIEL:159809" drugname="Atazanavir+BostRTV" id="atazanavir_bost" color="#FFFFFF"/>
@@ -2094,10 +2105,10 @@
 	
 	<repeat>
 		<template>
-			
-			<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group defaultValue="{concept}"-->
-				<span>
-					<obsgroup groupingConceptId="160741">
+			<obsgroup groupingConceptId="160741">
+				<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group defaultValue="{concept}"-->
+					<span>
+					
 						<div>
 							<td>{drugname}&lt;br&gt;<!--<obs conceptId="CIEL:1282" id="{id}" answerConceptSetIds="1085" answerClasses="Drug" style="autocomplete"/>-->
 							<obs conceptId="CIEL:160632" id="{id}" answerLabel=""/>
@@ -2118,10 +2129,10 @@
 							<td><span id="disabled14"><obs conceptId="CIEL:6098" id="{id}_suiv" answerConceptId="CIEL:162192" answerLabel=""/></span></td>
 							<td><span id="disabled15"><obs conceptId="CIEL:6098" id="{id}_pref" answerConceptId="CIEL:160018" answerLabel=""/></span></td>
 						</div>
-					</obsgroup>
-				</span>
-			</tr>
-			
+					
+					</span>
+				</tr>
+			</obsgroup>
 		</template>
 		<render drugname="Autre ARV, préciser" id="autre_arv_a" color="#D8D8D8"/>
 		<render drugname="Autre ARV, préciser" id="autre_arv_b" color="#FFFFFF"/>

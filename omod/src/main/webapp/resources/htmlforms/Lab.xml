@@ -2915,7 +2915,7 @@
 								<tr>
 									<td>
 										<span class="titre" ch-target="#span337tr"><obs conceptId="CIEL:1271" class="master" id="idsyphitestrap21" answerConceptId="CIEL:163626" answerLabel="Syphilis Test Rapide"/></span><br/>
-										<span id="span337" class="togglable" style="display: none;">
+										<span id="span337tr" class="togglable" style="display: none;">
 											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163626" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>

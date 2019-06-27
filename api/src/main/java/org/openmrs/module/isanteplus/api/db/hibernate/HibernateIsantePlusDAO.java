@@ -13,6 +13,7 @@
  */
 package org.openmrs.module.isanteplus.api.db.hibernate;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -23,6 +24,8 @@ import org.hibernate.criterion.Restrictions;
 import org.openmrs.Encounter;
 import org.openmrs.Patient;
 import org.openmrs.Visit;
+import org.openmrs.api.EncounterService;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.appframework.domain.ComponentState;
 import org.openmrs.module.isanteplus.api.db.IsantePlusDAO;
 import org.openmrs.module.isanteplus.mapped.FormHistory;
@@ -64,7 +67,9 @@ public class HibernateIsantePlusDAO implements IsantePlusDAO {
 
 	@Override
 	public void deleteFormHistory(FormHistory formHistory) {
-		getSessionFactory().getCurrentSession().delete(formHistory);
+		/*getSessionFactory().getCurrentSession().delete(formHistory);*/
+		Encounter encounter = formHistory.getEncounter();
+		Context.getEncounterService().voidEncounter(encounter, "delete encounter");
 	}
 
 	@Override
