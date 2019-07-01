@@ -128,7 +128,7 @@
 			</table>
 		</div>
 	</div>
-	<section headerLabel="RÉLIGION">
+	<section headerLabel="RELIGION">
 		<obs conceptId="CIEL:162929"
 			answerConceptIds="CIEL:162930,CIEL:162931,CIEL:162932,CIEL:162933,CIEL:162934,CIEL:162935,CIEL:162936,CIEL:163098,CIEL:163125,CIEL:163124, CIEL:5622"
 			answerLabels="Vaudou,Catholique,Baptiste,Musulman,Pentecôtiste,Adventiste,Témoin de Jéhovah,Bouddhisme,Christianisme (non-catholique),Hindouisme, Autre"
@@ -680,15 +680,20 @@
 									<td>
 										- ≥ 2 personnes dans les 3 dernières mois</td>
 									<td>
-										<obs conceptId="CIEL:160581" answerConceptId="CIEL:5567"
-											answerLabel="" />
+										<!--  <obs conceptId="CIEL:160581" answerConceptId="CIEL:5567"
+											answerLabel="" /> -->
+											
+											 <obs conceptId="CIEL:5567" style="yes_no" noLabel="Non"
+											yesLabel="Oui" /> 
 									</td>
 								</tr>
 								<tr>
 									<td>- sans préservatif</td>
 									<td>
-										<obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
-											answerLabel="" style="radio" />
+										<!--   <obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
+											answerLabel="" style="radio" /> -->
+											<obs conceptId="CIEL:159218" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
 									</td>
 								</tr>
 								<tr>
