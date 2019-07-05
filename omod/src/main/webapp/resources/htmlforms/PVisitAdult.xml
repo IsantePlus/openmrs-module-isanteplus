@@ -685,6 +685,18 @@
 										showCommentField="true" commentFieldLabel="" />
 								</td>
 							</tr>
+							<tr>
+								<td>Date du test de répétition dans cet établissement</td>
+								<td>
+									<obs conceptId="b8bdec55-6b04-4750-958c-e09eed84a2f8" />
+								</td>
+							</tr>
+							<tr>
+								<td>Résultats reçus par le patient ?</td>
+								<td>
+									<!-- Need a concept for this -->
+								</td>
+							</tr>
 
 						</table>
 					</section>
@@ -1080,7 +1092,11 @@
 									</td>
 								</tr>
 							</obsgroup>
-
+								<tr><td>Autre risque spécifier :</td> <td><obs conceptId="5392c31c-0432-4210-99e1-7698d4470eec" /></td></tr>
+								<tr><td>CoInfection</td> <td><obs conceptId="da351ae6-b482-441d-9c47-2242e5600c1d" /></td></tr>
+								<tr><td>Histoire ou présence de TB</td> 
+								<td><obs conceptId="a3e61f72-6066-4af6-94e5-958458c04418" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" /></td></tr>
 						</table>
 					</td>
 					<td width="50%" valign="TOP">
@@ -1796,6 +1812,7 @@
 								</td>
 								<td>Neurologique</td>
 							</tr>
+						
 							<!-- No mapping code given in PDF or Spreadsheet <tr bgcolor="#D8D8D8" 
 								class="checkboxGroup"> <td><span id="normal1"><obs conceptId="CIEL:1129" 
 								answerConceptId="CIEL:1115" answerLabel=""/></span></td> <td><span id="anormal1"><obs 

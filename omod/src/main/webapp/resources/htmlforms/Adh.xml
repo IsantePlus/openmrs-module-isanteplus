@@ -112,8 +112,7 @@
 	<script type="text/javascript">
 		beforeSubmit.push(function() {
 
-		if
-		((getValue('nausee_vomissement_severity.value') != '1498') &amp;&amp;
+		if((getValue('nausee_vomissement_severity.value') != '1498') &amp;&amp;
 		(getValue('nausee_vomissement_severity.value') != '1499') &amp;&amp;
 		(getValue('nausee_vomissement_severity.value') != '1500')){
 		setValue('nausee_vomissement.value', '');
@@ -372,7 +371,7 @@
 			<table width="100%">
 				<repeat>
 					<template>
-						<obsgroup groupingConceptId="CIEL:161879">
+						<obsgroup groupingConceptId="{conceptgroup}">
 							<tr>
 								<td>
 									{drugname}
@@ -390,18 +389,18 @@
 						</obsgroup>
 					</template>
 					<render concept="CIEL:133473" drugname="Nausée ou vomissement"
-						id="nausee_vomissement" />
-					<render concept="CIEL:142412" drugname="Diarrhée" id="diarrhee" />
-					<render concept="CIEL:512" drugname="Eruption cutanée" id="eruption_cutanee" />
-					<render concept="CIEL:139084" drugname="Maux de tête" id="maux_tete" />
-					<render concept="CIEL:151" drugname="Douleur abdominale" id="douleur_abdominale" />
-					<render concept="CIEL:5226" drugname="Faiblesse" id="faiblesse" />
+						id="nausee_vomissement" conceptgroup="72074743-ae89-425e-ba48-718b02585b91" />
+					<render concept="CIEL:142412" drugname="Diarrhée" id="diarrhee" conceptgroup="bc514162-eae6-4126-95b4-c3695a410e2d" />
+					<render concept="CIEL:512" drugname="Eruption cutanée" id="eruption_cutanee" conceptgroup="40a0c708-a7bb-40ee-941b-c7bdefbb73bd" />
+					<render concept="CIEL:139084" drugname="Maux de tête" id="maux_tete" conceptgroup="369d0166-14dd-4f43-baa4-10ce377c5afb" />
+					<render concept="CIEL:151" drugname="Douleur abdominale" id="douleur_abdominale" conceptgroup="cec53311-713b-4d80-8387-639be8d90f16" />
+					<render concept="CIEL:5226" drugname="Faiblesse" id="faiblesse" conceptgroup="654d4c9e-f171-485c-9aee-5c906406342c" />
 					<render concept="CIEL:6004" drugname="Paresthésie/fourmillement"
-						id="paresthesie" />
+						id="paresthesie" conceptgroup="654d4c9e-f171-485c-9aee-5c906406342c" />
 				</repeat>
 				<repeat>
 					<template>
-						<obsgroup groupingConceptId="CIEL:161879">
+						<obsgroup groupingConceptId="{conceptgroup}">
 							<tr>
 								<td>
 									<obs conceptId="CIEL:159935" id="{id}" answerConceptId="{concept}"
@@ -417,7 +416,7 @@
 						</obsgroup>
 					</template>
 					<render concept="CIEL:5622" drugname="Autres, préciser :"
-						id="autre" />
+						id="autre" conceptgroup="0c362159-faae-4212-8866-5c59afc0c99b" />
 				</repeat>
 			</table>
 		</section>

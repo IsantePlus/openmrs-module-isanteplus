@@ -955,6 +955,13 @@
 			setValue('antigenemie3.value', '');
 		}
 		
+		if(getValue('travailleur_sexe_b.value')==1065 || getValue('travailleur_sexe_b.value')==1066){
+			setValue('travailleur_sexe_a.value', '160580');
+		}
+		if(getValue('echange_sexe_b.value')==1065 || getValue('echange_sexe_b.value')==1066){
+			setValue('echange_sexe_a.value', '160579');
+		}
+		
 
 		//antigenemie1=163342
 		//FIN TEST JAVASCRIPT FOR TESTS SEROLOGIQUES
@@ -1735,204 +1742,230 @@
 	</section>
 	<section headerLabel="MODE DE TRANSMISSION PROBABLE DU PATIENT PÉDIATRIQUE">
 		Cocher pour chaque risque. (Inc = Inconnu)
-		<table width="100%">
-			<tr>
-				<td width="50%" valign="TOP">
-					<table>
+			<table width="100%">
+				<tr>
+					<td width="50%" valign="TOP">
+						<table>
 
-						<tr>
-							<td>Rapports sexuels avec un homme
-							</td>
-							<td>
-								<obs conceptId="CIEL:1061" answerConceptId="CIEL:163290"
-									answerLabel="" />
-							</td>
-						</tr>
-						<tr>
-							<td>Rapports sexuels avec une femme</td>
-							<td>
-								<obs conceptId="CIEL:1061" answerConceptId="CIEL:163291"
-									answerLabel="" />
-							</td>
-						</tr>
-						<tr>
-							<td>Injection de drogues</td>
-							<td>
-								<obs conceptId="CIEL:1061" answerConceptId="CIEL:105"
-									answerLabel="" />
-							</td>
-						</tr>
-						<tr>
-							<td>Bénéficier de sang/dérivé sanguin</td>
-							<td>
-								<obs conceptId="CIEL:1061" answerConceptId="CIEL:1063"
-									answerLabel="" />
-								<obs conceptId="CIEL:163268" />
-							</td><!-- A VERIFIER -->
-						</tr>
-						<tr>
-							<td>Transmission mère a enfant</td>
-							<td>
-								<obs conceptId="CIEL:1061" answerConceptId="CIEL:163273"
-									answerLabel="" />
-							</td>
-						</tr>
-						<tr>
-							<td>Accident d'exposition au sang</td>
-							<td>
-								<obsgroup groupingConceptId="163288">
-									<obs conceptId="CIEL:160581" answerConceptId="CIEL:163274"
-										answerLabel="" />
-									<obs conceptId="CIEL:162601" allowTime="false" />
-								</obsgroup>
-							</td>
-						</tr>
-					</table>
-				</td>
-				<td width="50%" valign="TOP">
-					<table>
-						<tr>
-							<td>
-								<tr>
-									<td>Rapports hétérosexuelles avec :</td>
-								</tr>
-								<tr>
-									<td>- personne SIDA/VIH+
-									</td>
-									<td>
-										<obs conceptId="CIEL:1061" answerConceptId="CIEL:163289"
-											answerLabel="" />
-									</td>
-								</tr>
-								<tr>
-									<td>- personne qui s'injecte de la drogue</td>
-									<td>
-										<obs conceptId="CIEL:1061" answerConceptId="CIEL:105"
-											answerLabel="" />
-									</td>
-								</tr>
-								<tr>
-									<td>- homme bisexuel</td>
-									<td>
-										<obs conceptId="CIEL:1061" answerConceptId="CIEL:163275"
-											answerLabel="" />
-									</td>
-								</tr>
-								<tr>
-									<td>- bénéficier de sang/dérivé sanguin</td>
-									<td>
-										<obs conceptId="CIEL:1061" answerConceptId="CIEL:1063"
-											answerLabel="" />
-									</td>
-								</tr>
-							</td>
-						</tr>
-					</table>
-
-				</td>
-
-			</tr>
-		</table>
-	</section>
-	<section headerLabel="AUTRES FACTEURS DE RISQUE">
-		<table width="100%">
-			<tr>
-				<td width="40%" valign="TOP">
-					<table width="100%">
-						<obsgroup groupingConceptId="163292">
 							<tr>
-
-								<td>Histoire ou présence de syphilis</td>
+								<td>Rapports sexuels avec un homme
+								</td>
 								<td>
-									<obs conceptId="CIEL:163276" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-										answerLabels="Oui,Non,Inc" style="radio" />
-
+									<obsgroup groupingConceptId="c2b3c5cb-f1e6-4d3d-ad18-5ecf71b26dc2">
+										<obs conceptId="CIEL:1061" answerConceptIds="CIEL:163290,CIEL:1066"
+											answerLabels="Oui,Non" style="radio" />
+									 </obsgroup>
 								</td>
 							</tr>
 							<tr>
-								<td>Histoire ou présence d'autre IST</td>
+								<td>Rapports sexuels avec une femme</td>
 								<td>
-									<obs conceptId="CIEL:156660" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-										answerLabels="Oui,Non,Inc" style="radio" />
-
+									<obsgroup groupingConceptId="0906f171-72d4-4727-8ede-97a47c2e25ee">
+										<obs conceptId="CIEL:1061" answerConceptIds="CIEL:163291,CIEL:1066"
+											answerLabels="Oui,Non" style="radio" />
+									</obsgroup>
 								</td>
 							</tr>
 							<tr>
-								<td>Victime d'agression sexuelle</td>
+								<td>Injection de drogues</td>
 								<td>
-									<obs conceptId="CIEL:123160" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
-										answerLabels="Oui,Non,Inc" style="radio" />
+									<obsgroup groupingConceptId="f6a51d0c-eb19-4875-8c37-85e39f0def00">
+										<obs conceptId="CIEL:1061" answerConceptIds="CIEL:105,CIEL:1066"
+										answerLabels="Oui,Non" style="radio" />
+									</obsgroup>
 								</td>
 							</tr>
-						</obsgroup>
-
-					</table>
-				</td>
-				<td width="50%" valign="TOP">
-					<table width="100%">
-						<!-- Error! java.lang.RuntimeException: Boolean with style = null not 
-							yet implemented (concept = 5567) -->
-						<tr>
-							<td>
-								<tr>
-									<td>Rapports sexuels :</td>
-								</tr>
-								<tr>
-									<td>
-										<!--<obs conceptId="CIEL:5567" answerConceptId="CIEL:1357,CIEL:1358,CIEL:1090" 
-											answerLabel="- ≥ 2 personnes dans les 3 dernières mois"/> -->
-										- ≥ 2 personnes dans les 3 dernières mois
-									</td>
-									<td>
-										<obs conceptId="CIEL:160581" answerConceptId="CIEL:5567"
-											answerLabel="" />
-									</td>
-								</tr>
-								<tr>
-									<td>- sans préservatif</td>
-									<td>
-										<obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
-											answerLabel="" style="radio" />
-									</td>
-								</tr>
-								<tr>
-									<td>- par voie anale</td>
-									<td>
-										<!--<obs conceptId="CIEL:160581" answerConceptId="CIEL:163278" 
-											answerLabel="" style="radio"/> -->
-										<obs conceptId="CIEL:163278" answerConceptIds="CIEL:1065,CIEL:1066"
+							<tr>
+								<td>Bénéficier de sang/dérivé sanguin</td>
+								<td>
+									<obsgroup groupingConceptId="92259610-b7b8-4723-b879-6e33fdd4b817">
+										<obs conceptId="CIEL:1061" answerConceptIds="CIEL:1063,CIEL:1066"
 											answerLabels="Oui,Non" style="radio" />
+										<!-- <obs conceptId="CIEL:1063" style="yes_no" noLabel="Non"
+												yesLabel="Oui" />  -->
+										<obs conceptId="CIEL:163268" />
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>Transmission mère a enfant</td>
+								<td>
+									<obsgroup groupingConceptId="92259610-b7b8-4723-b879-6e33fdd4b817">
+										<obs conceptId="CIEL:1061" answerConceptIds="CIEL:163273,CIEL:1066,CIEL:1067"
+										answerLabels="Oui, Non, Inc" style="radio" />
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>Accident d'exposition au sang</td>
+								<td>
+									<obsgroup groupingConceptId="163288">
+										<obs conceptId="CIEL:160581" answerConceptIds="CIEL:163274,CIEL:1066"
+											answerLabels="Oui,Non" style="radio" />
+										<obs conceptId="CIEL:162601" allowTime="false" />
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="50%" valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<tr>
+										<td>Rapports hétérosexuelles avec :</td>
+									</tr>
+									<tr>
+										<td>- personne SIDA/VIH+
+										</td>
+										<td>
+											<obsgroup groupingConceptId="844017f9-8d6a-4b9a-8347-637284b43893">
+												<obs conceptId="CIEL:1061" answerConceptIds="CIEL:163289,CIEL:1066,CIEL:1067"
+												answerLabels="Oui,Non,Inc" style="radio" />
+											</obsgroup>
+										</td>
+									</tr>
+									<tr>
+										<td>- personne qui s'injecte de la drogue</td>
+										<td>
+											<obsgroup groupingConceptId="d526575e-5fa1-45c6-b8ed-73a2cba0fba0">
+												<obs conceptId="CIEL:1061" answerConceptIds="CIEL:105,CIEL:1066,CIEL:1067"
+												answerLabels="Oui,Non,Inc" style="radio" />
+											</obsgroup>
+										</td>
+									</tr>
+									<tr>
+										<td>- homme bisexuel</td>
+										<td>
+											<obsgroup groupingConceptId="9d6ee2a2-8547-4fa9-a2d8-301d009ca3a5">
+												<obs conceptId="CIEL:1061" answerConceptIds="CIEL:163275,CIEL:1066,CIEL:1067"
+												answerLabels="Oui,Non,Inc" style="radio" />
+											</obsgroup>
+										</td>
+									</tr>
+									<tr>
+										<td>- bénéficier de sang/dérivé sanguin</td>
+										<td>
+											<obsgroup groupingConceptId="df47e128-268f-4238-9b13-f829c01ae7d8">
+												<obs conceptId="CIEL:1061" answerConceptIds="CIEL:1063,CIEL:1066,1067"
+												answerLabels="Oui,Non,Inc" style="radio" />
+											</obsgroup>
+										</td>
+									</tr>
+								</td>
+							</tr>
+						</table>
+
+					</td>
+
+				</tr>
+			</table>
+		</section>
+		<section headerLabel="AUTRES FACTEURS DE RISQUE">
+			<table width="100%">
+				<tr>
+					<td width="40%" valign="TOP">
+						<table>
+							<obsgroup groupingConceptId="163292">
+								<tr>
+
+									<td>Histoire ou présence de syphilis</td>
+									<td>
+										<obs conceptId="CIEL:163276" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" />
 									</td>
 								</tr>
 								<tr>
+									<td>Histoire ou présence d'autre IST</td>
 									<td>
-										<obs conceptId="CIEL:160581" answerConceptId="CIEL:160580"
-											answerLabel="- avec travailleur/euse de sexe" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:160580" answerConceptIds="CIEL:1065,CIEL:1066"
-											answerLabels="Oui,Non" style="radio" />
+										<obs conceptId="CIEL:156660" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" />
 									</td>
 								</tr>
 								<tr>
+									<td>Victime d'agression sexuelle</td>
 									<td>
-										<obs conceptId="CIEL:160581" answerConceptId="CIEL:160579"
-											answerLabel="- L'échange de sexe pour argent/choses" style="radio" />
-									</td>
-									<td>
-										<obs conceptId="CIEL:160579" answerConceptIds="CIEL:1065,CIEL:1066"
-											answerLabels="Oui,Non" style="radio" />
+										<obs conceptId="CIEL:123160" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" />
 									</td>
 								</tr>
-							</td>
-						</tr>
-					</table>
+							</obsgroup>
+							<tr><td>Autre risque spécifier :</td> <td><obs conceptId="5392c31c-0432-4210-99e1-7698d4470eec" /></td></tr>
+								<tr><td>CoInfection</td> <td><obs conceptId="da351ae6-b482-441d-9c47-2242e5600c1d" /></td></tr>
+								<tr><td>Histoire ou présence de TB</td> 
+								<td><obs conceptId="a3e61f72-6066-4af6-94e5-958458c04418" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+											answerLabels="Oui,Non,Inc" style="radio" /></td></tr>
+						</table>
+					</td>
+					<td width="50%" valign="TOP">
+						<table>
+							<tr>
+								<td>
+									<tr>
+										<td>Rapports sexuels :</td>
+									</tr>
+									<tr>
+										<td>
+											- ≥ 2 personnes dans les 3 dernières mois</td>
+										<td>
+											<!--  <obs conceptId="CIEL:160581" answerConceptId="CIEL:5567"
+												answerLabel="" /> before -->
+												 <obs conceptId="CIEL:5567" style="yes_no" noLabel="Non"
+											yesLabel="Oui" />  
+										</td>
+									</tr>
+									<tr>
+										<td>- sans préservatif</td>
+										<td>
+											<!-- <obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
+												answerLabel="" style="radio" /> before -->
+												
+												<!-- <obs conceptId="CIEL:160581" answerConceptIds="CIEL:159218,CIEL:1357"
+												answerLabels="Oui,Non" style="radio" />-->
+												<obs conceptId="CIEL:159218" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+									<tr>
+										<td>- par voie anale</td>
+										<td>
+											<obs conceptId="CIEL:163278" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span style="display: none">
+												<obs conceptId="CIEL:160581" answerConceptId="CIEL:160580"
+													id="travailleur_sexe_a" answerLabel="- avec travailleur/euse de sexe" style="radio" />
+											</span> - avec travailleur/euse de sexe
+										</td>
+										<td>
+											<obs conceptId="CIEL:160580" answerConceptIds="CIEL:1065,CIEL:1066"
+												id="travailleur_sexe_b" answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span style="display: none">
+												<obs conceptId="CIEL:160581" answerConceptId="CIEL:160579"
+												id="echange_sexe_a" answerLabel="- L'échange de sexe pour argent/choses" style="radio" />
+											</span> - L'échange de sexe pour argent/choses
+										</td>
+										<td>
+											<obs conceptId="CIEL:160579" answerConceptIds="CIEL:1065,CIEL:1066"
+												id="echange_sexe_b" answerLabels="Oui,Non" style="radio" />
+										</td>
+									</tr>
+								</td>
+							</tr>
+						</table>
 
-				</td>
+					</td>
 
-			</tr>
-		</table>
-	</section>
+				</tr>
+			</table>
+		</section>
 	<section headerLabel="ÉVALUATION DU RISQUE">
 		A eu dans les dernier 3 mois (cocher pour le ou les cas ci-dessous)
 		<table width="100%">
@@ -3538,6 +3571,57 @@
 	<section headerLabel="COMMENTAIRES">
 		<obs conceptId="CIEL:163322" rows="5" cols="90" />
 	</section>
+	<section headerLabel="MÉDICAMENTS : ALLERGIES">
+		<obs conceptId="CIEL:160643" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inconnu" style="radio" />
+		&#160;&#160;Si Oui, préciser <br/>
+		
+		<obs conceptId="CIEL:160643" answerConceptId="CIEL:139994" answerLabel="Aliments, préciser:" showCommentField="true" commentFieldLabel="" /><br/>
+		<obs conceptId="CIEL:160643" answerConceptId="CIEL:5622" answerLabel="Autres, préciser:" showCommentField="true" commentFieldLabel="" /><br/>
+		<obs conceptId="CIEL:160643" answerConceptId="CIEL:141760" answerLabel="Médicaments, préciser:" /><br/>
+		
+		<table>
+			<tr><td style="border:0px;"></td>
+			<td style="border:0px;">Type de Réaction</td><td style="border:0px;"></td><td style="border:0px;"></td><td style="border:0px;"></td><td style="border:0px;"></td>
+			<td style="border:0px;"></td><td style="border:0px;"></td></tr>
+			<tr>
+				<td><b>Nom du médicament :</b></td>
+				<td><b>Erup</b></td><td><b>ErupF</b></td>
+				<td><b>Pap</b></td><td><b>SJ</b></td><td><b>Anaph</b></td><td><b>Autre</b></td>
+			</tr>
+			<repeat>
+				<template>
+					<obsgroup groupingConceptId="{conceptgroup}">
+						<tr>
+							<td><obs conceptId="{concept}" id="{id}"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:512" answerLabel="" id="{id}_erup"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:156083" answerLabel="" id="{id}_erupf"/></td>
+							<td>
+							<!-- Need to be verified -->
+							<obs conceptId="CIEL:160646" answerConceptId="CIEL:111061" answerLabel="" id="{id}_pap"/>
+							
+							</td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:125886" answerLabel="" id="{id}_sj"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:148888" answerLabel="" id="{id}_anaph"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:5622" answerLabel="" id="{id}_other"/></td>
+						</tr>
+					</obsgroup>
+				</template>
+				<render concept="CIEL:160632" id="drug_1" conceptgroup="c5e4b458-41cf-4d17-aa7a-6dfc00482198" />
+				<render concept="CIEL:160632" id="drug_2" conceptgroup="09f30ecb-b6e8-4e44-9adc-e27bdf07b081" />
+				<render concept="CIEL:160632" id="drug_3" conceptgroup="6639a971-43ca-4baf-89b6-194ab3597ebd" />
+			</repeat>	
+		
+		</table>
+		<!-- Autre réaction, préciser : <obs conceptId="CIEL:160644" /> -->
+		<table>
+			<tr>
+				<td><b>CODE : RÉACTION</b></td><td><b>Erup</b>=Eruptions sans fièvre<br/>  <b>Pap</b>=Papules</td>
+				<td><b>ErupF</b>=Eruptions avec fièvre<br/><b>SJ</b>=Stevens Johnson</td>
+				<td><b>Anaph</b>=Choc Anaphylaxique</td>
+				
+			</tr>
+		</table>
+	</section>
 	<section headerLabel="ARV: TRAITEMENTS PRÉCÉDENTS">
 		<table>
 			<tr>
@@ -3865,6 +3949,9 @@
 		<obs conceptId="CIEL:159395" rows="10" cols="80"/>
 	</section>
 	<br/>
+	<!-- Analyses de laboratoire nécessaires, 1654 -->
+	<!-- Ordonnance Médicale, 1519 -->
+	 	
 	<br/>
 	<br/>
 	Date de prochaine visite <obs conceptId="CIEL:5096" allowFutureDates="true"/><br/>
