@@ -3596,8 +3596,8 @@
 							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:512" answerLabel="" id="{id}_erup"/></td>
 							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:156083" answerLabel="" id="{id}_erupf"/></td>
 							<td>
-							<!-- Need to be verified -->
-							<obs conceptId="CIEL:160646" answerConceptId="CIEL:111061" answerLabel="" id="{id}_pap"/>
+							<!-- 111061 replaced by 130908-->
+							<obs conceptId="CIEL:160646" answerConceptId="CIEL:130908" answerLabel="" id="{id}_pap"/>
 							
 							</td>
 							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:125886" answerLabel="" id="{id}_sj"/></td>
