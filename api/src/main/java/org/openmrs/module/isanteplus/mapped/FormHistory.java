@@ -141,10 +141,20 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 				}
 			}
 		} else {
-			status = "<b style=\"color:brown;\">" + Context.getMessageSourceService()
+			
+			/*if(encounter.getVoided().equals(true)){*/
+				status = "<b style=\"color:red;\">" + Context.getMessageSourceService()
 					.getMessage("isanteplus.formsHistory.formStatus.deleted") + "<b/>";
+			//}
 		}
-
+		
+		
+		if(encounter.getVoided().equals(true)){
+			status = "<b style=\"color:red;\">" + Context.getMessageSourceService()
+				.getMessage("isanteplus.formsHistory.formStatus.deleted") + "<b/>";
+		}
+		
+			
 		if (StringUtils.isBlank(status)) {
 			status = Context.getMessageSourceService()
 					.getMessage("isanteplus.formsHistory.formStatus.unkown");

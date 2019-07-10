@@ -108,85 +108,57 @@
 		});
 		});
 	</script>
-	<script type="text/javascript">
-		jQuery(function() {
-		jQuery( '.titre' ).on( 'change', function() {
-		jQuery( this.getAttribute(
-		'ch-target' ) ).show();
-
-		});
-		});
-
-		beforeSubmit.push(function() {
-
-		//Debut bacilloscopie
-		if ((getValue('bacidate1.value') != '') ||
-		(getValue('bacipoids1.value') != '') ||
-		(getValue('bacilloscopie1.value') == '703') ||
-		(getValue('bacilloscopie1.value') == '664')) {
-			setValue('bacimois1.value', '0');
-		}
 	
-		if ((getValue('bacidate2.value') != '') ||
-		(getValue('bacipoids2.value') != '') ||
-		(getValue('bacilloscopie2.value') == '703') ||
-		(getValue('bacilloscopie2.value') == '664')) {
-			setValue('bacimois2.value', '2');
-		}
-		
-		if ((getValue('bacidate3.value') != '') ||
-		(getValue('bacipoids3.value') != '') ||
-		(getValue('bacilloscopie3.value') == '703') ||
-		(getValue('bacilloscopie3.value') == '664')) {
-			setValue('bacimois3.value', '3');
-		}
-		
-		
-		if ((getValue('bacidate4.value') != '') ||
-		(getValue('bacipoids4.value') != '') ||
-		(getValue('bacilloscopie4.value') == '703') ||
-		(getValue('bacilloscopie4.value') == '664')) {
-			setValue('bacimois4.value', '5');
-		}
-		
-		if ((getValue('bacidate5.value') != '') ||
-		(getValue('bacipoids5.value') != '') ||
-		(getValue('bacilloscopie5.value') == '703') ||
-		(getValue('bacilloscopie5.value') == '664')) {
-			setValue('bacimois5.value', 'Fin de rx');
-		}
-		
-		//Fin bacilloscopie
-
-
-
-		return true;
-		});
-	</script>
-
 	<script type="text/javascript">
 		jQuery(function() {
-		jQuery('.titre').each(function(rang) {
-		var ma =jQuery(this).find(".master").attr("id");
-		if(getValue(''+ma+'.value')&gt;0)
-		{
-		jQuery( this.getAttribute( 'ch-target' ) ).show();
-		}
-		else{
-		jQuery( this.getAttribute( 'ch-target' ) ).hide();
-		}
-		});
+		jQuery('.titre').each(function() {
+				var m =jQuery(this).find(".master").attr("id");
+				if(getValue(''+m+'.value')&gt;0)
+				{
+					jQuery( this.getAttribute( 'ch-target' ) ).show();
+				}
+				else{
+					if(getValue(''+m+'.value') == null){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+					}
+				}
+				if(getValue(''+m+'.value') == ''){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+				}
+			});
+			
+			jQuery( '.titre' ).on( 'change', function() {
+			
+				var m =jQuery(this).find(".master").attr("id");
+				if(getValue(''+m+'.value')&gt;0 || getValue(''+m+'.value') != null)
+				{
+					jQuery( this.getAttribute( 'ch-target' ) ).show();
+				}
+				else{
+					if(getValue(''+m+'.value') == null){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+					}
+					
+				}
+				if(getValue(''+m+'.value') == ''){
+						jQuery( this.getAttribute( 'ch-target' ) ).hide();
+				}
+			
+	
+			});
+		
+		
 
 		});
 	</script>
 	<script type="text/javascript">
 		if(jQuery){
 		jQuery(document).ready(function(){
-		if ( jQuery.browser.msie ) {
+		//if ( jQuery.browser.msie ) {
 		jQuery(":checkbox").click(function(){
 		jQuery(this).change();
 		});
-		}
+		//}
 		jQuery(".checkboxGroup").each(function(){
 		var group = jQuery(this);
 		var uncheckAll = function(){
@@ -216,6 +188,43 @@
 		group.find("#anormal1").find("input[type$='checkbox']").change();
 		}
 		);
+		
+		group.find("#trigger").find("input[type$='checkbox']").click(function(){
+		     var res = group.find(".titre").attr("id");
+		     var idm = group.find(".master").attr("id");
+		   	
+		   	if(getValue(''+idm+'.value') == null || getValue(''+idm+'.value') == '')
+			{
+				group.find("#confirmation").find("input[type$='radio']").attr("checked",false);
+				group.find("#confirmation").find("input[type$='radio']").change();
+				group.find("#primary").find("input[type$='radio']").attr("checked",false);
+				group.find("#primary").find("input[type$='radio']").change();
+				
+				jQuery( group.find(".cacher") ).hide();
+				var idcacher = '#' + group.find(".cacher").attr("id") + '';
+				//alert(idcacher);
+				jQuery(''+idcacher+'').hide();
+			} 	
+		 });
+		 
+		 group.find("#trigger").find("input[type$='text']").change(function(){
+		     var res = group.find(".titre").attr("id");
+		     var idm = group.find(".master").attr("id");
+		   	
+		   	if(getValue(''+idm+'.value') == null || getValue(''+idm+'.value') == '')
+			{
+				group.find("#confirmation").find("input[type$='radio']").attr("checked",false);
+				group.find("#confirmation").find("input[type$='radio']").change();
+				group.find("#primary").find("input[type$='radio']").attr("checked",false);
+				group.find("#primary").find("input[type$='radio']").change();
+				jQuery( group.find(".cacher") ).hide();
+				var idcacher = '#' + group.find(".cacher").attr("id") + '';
+				jQuery(''+idcacher+'').hide();
+			} 	
+		 });
+		
+		
+		
 		});
 		});
 		}
@@ -1082,10 +1091,10 @@
 			</div>
 			<div>
 				<a href="#read">
-					<div class="toggle-button" data-target="#div5">IMPRESSIONS
+					<div class="toggle-button" data-target="#div7">IMPRESSIONS
 						CLINIQUES/DIAGNOSTIQUES</div>
 				</a>
-				<div id="div5" class="togglable" style="display:none;">
+				<div id="div7" class="togglable" style="display:none;">
 					<fieldset>
 						<table width="100%">
 							<tr>
@@ -1096,7 +1105,7 @@
 							<tr>
 								<td valign="TOP">
 									<table>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="98fc479a-9757-4931-bf54-9d32f395d39d">
 													<span class="titre" ch-target="#cacher1">
@@ -1108,13 +1117,15 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="d512157d-6bbb-4730-be0a-6e60105c0717">
 													<span class="titre" ch-target="#cacher2">
@@ -1126,13 +1137,15 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="d9a7ed8a-678c-4c23-91cf-e8389bdf1f00">
 													<span class="titre" ch-target="#cacher4">
@@ -1144,13 +1157,15 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="2fcd5b3b-3728-498c-8727-e371a0a0b58c">
 													<span class="titre" ch-target="#cacher5">
@@ -1160,11 +1175,15 @@
 													</span>
 													<br />
 													<span id="cacher5" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 												<!--<obs conceptId="CIEL:160850" textLabel="précisez :" showCommentField="true" 
@@ -1172,7 +1191,7 @@
 											</td>
 
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="75ed57ce-cbd8-41ed-9420-50bbbfb2b5b1">
 													<span class="titre" ch-target="#cacher6">
@@ -1181,16 +1200,20 @@
 													</span>
 													<br />
 													<span id="cacher6" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f277707e-6288-4efe-9732-e89cfc7d62d2">
 													<span class="titre" ch-target="#cacher7">
@@ -1199,16 +1222,20 @@
 													</span>
 													<br />
 													<span id="cacher7" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="1e684a1a-76fe-47f6-91b4-e5856556f24e">
 													<span class="titre" ch-target="#cacher8">
@@ -1218,16 +1245,20 @@
 													</span>
 													<br />
 													<span id="cacher8" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="6a54a0b5-7c1b-4079-8072-d9f4985d84e3">
 													<span class="titre" ch-target="#cacher9">
@@ -1237,16 +1268,20 @@
 													</span>
 													<br />
 													<span id="cacher9" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="3d40e9cc-82b1-4658-b4c3-f7e1a74aefd5">
 													<span class="titre" ch-target="#cacher10">
@@ -1255,16 +1290,20 @@
 													</span>
 													<br />
 													<span id="cacher10" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="6e639f6c-1b62-41c4-8cfd-fb76b3205313">
 													<span class="titre" ch-target="#cacher11">
@@ -1274,16 +1313,20 @@
 													</span>
 													<br />
 													<span id="cacher11" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="34491714-aefc-4fc9-9fe5-b5853b3775cc">
 													<span class="titre" ch-target="#cacher12">
@@ -1293,18 +1336,22 @@
 													</span>
 													<br />
 													<span id="cacher12" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
 
 
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="cb4d6c75-c218-4a26-9046-41e0939e55c4">
 													<span class="titre" ch-target="#cacher13">
@@ -1313,11 +1360,15 @@
 													</span>
 													<br />
 													<span id="cacher13" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
@@ -1326,7 +1377,7 @@
 								</td>
 								<td valign="TOP">
 									<table>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="55114e3d-35a7-4fb2-bd83-8c0f1bbcd341">
 													<span class="titre" ch-target="#cacher14">
@@ -1336,16 +1387,20 @@
 													</span>
 													<br />
 													<span id="cacher14" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="68fb8efd-457f-4e80-88cb-b13febfbf5d4">
 													<span class="titre" ch-target="#cacher15">
@@ -1355,16 +1410,20 @@
 													</span>
 													<br />
 													<span id="cacher15" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="3fea18d4-88f1-40c1-aadc-41dca3449f9d">
 													<span class="titre" ch-target="#cacher16">
@@ -1374,16 +1433,20 @@
 													</span>
 													<br />
 													<span id="cacher16" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="361bd482-59a9-4ee8-80f0-e7e39b1d1827">
 													<span class="titre" ch-target="#cacher17">
@@ -1392,16 +1455,20 @@
 													</span>
 													<br />
 													<span id="cacher17" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="fd7987b1-d551-4451-b8e2-59a998adf1d5">
 													<span class="titre" ch-target="#cacher18">
@@ -1411,16 +1478,20 @@
 													</span>
 													<br />
 													<span id="cacher18" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="ee6c7fd3-6a2f-4af0-8978-e1c5e06a9a62">
 													<span class="titre" ch-target="#cacher19">
@@ -1430,16 +1501,20 @@
 													</span>
 													<br />
 													<span id="cacher19" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="22be1344-65f9-4310-9be3-1d300e57820b">
 													<span class="titre" ch-target="#cacher20">
@@ -1448,16 +1523,20 @@
 													</span>
 													<br />
 													<span id="cacher20" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="2e143919-ec49-4fd0-8531-2d1651d9ddfc">
 													<span class="titre" ch-target="#cacher21">
@@ -1466,16 +1545,20 @@
 													</span>
 													<br />
 													<span id="cacher21" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="45a0cf27-6096-4b8d-9870-49c24d7bacc2">
 													<span class="titre" ch-target="#cacher22">
@@ -1485,16 +1568,20 @@
 													</span>
 													<br />
 													<span id="cacher22" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="802ec4ac-2b25-4222-b043-d758c30dc12c">
 													<span class="titre" ch-target="#cacher23">
@@ -1504,16 +1591,20 @@
 													</span>
 													<br />
 													<span id="cacher23" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f2412438-203a-46ef-b9fd-017b985cae43">
 													<span class="titre" ch-target="#cacher24">
@@ -1523,16 +1614,20 @@
 													</span>
 													<br />
 													<span id="cacher24" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="c5265213-bc23-491f-b1a8-aba71fa7f123">
 													<span class="titre" ch-target="#cacher25">
@@ -1541,16 +1636,20 @@
 													</span>
 													<br />
 													<span id="cacher25" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="12191641-452e-493f-b9a6-b91a34abfec6">
 													<span class="titre" ch-target="#cacher26">
@@ -1559,11 +1658,15 @@
 													</span>
 													<br />
 													<span id="cacher26" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
@@ -1572,7 +1675,7 @@
 								</td>
 								<td valign="TOP">
 									<table>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="1dfb560d-6627-441e-a8e2-d1517b51c8b4">
 													<span class="titre" ch-target="#cacher27">
@@ -1582,16 +1685,20 @@
 													</span>
 													<br />
 													<span id="cacher27" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="36454c12-bc26-4f2c-b9af-73673d2af0d7">
 													<span class="titre" ch-target="#cacher28">
@@ -1600,16 +1707,20 @@
 													</span>
 													<br />
 													<span id="cacher28" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="3a32ae34-4a72-486c-beaa-e2c0e8aecf5d">
 													<span class="titre" ch-target="#cacher29">
@@ -1618,16 +1729,20 @@
 													</span>
 													<br />
 													<span id="cacher29" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="a80a56f6-614e-4945-a748-675297d5bbfe">
 													<span class="titre" ch-target="#cacher30">
@@ -1637,16 +1752,20 @@
 													</span>
 													<br />
 													<span id="cacher30" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b4c4f7fd-61cd-4c06-89f7-a40478501011">
 													<span class="titre" ch-target="#cacher31">
@@ -1656,16 +1775,20 @@
 													</span>
 													<br />
 													<span id="cacher31" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f9d52515-6c56-41b3-881a-1b40f355144c">
 													<span class="titre" ch-target="#cacher32">
@@ -1674,16 +1797,20 @@
 													</span>
 													<br />
 													<span id="cacher32" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="1dfb560d-6627-441e-a8e2-d1517b51c8b4">
 													<span class="titre" ch-target="#cacher33">
@@ -1693,16 +1820,20 @@
 													</span>
 													<br />
 													<span id="cacher33" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+														</span>
 														<br />
+														<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="756f00e4-b1b6-40cd-b5ab-d5cce8a571fb">
 													<span class="titre" ch-target="#cacher34">
@@ -1711,16 +1842,20 @@
 													</span>
 													<br />
 													<span id="cacher34" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="36e9fab0-e56f-4ad7-a41d-86c94baf0053">
 													<span class="titre" ch-target="#cacher35">
@@ -1729,16 +1864,20 @@
 													</span>
 													<br />
 													<span id="cacher35" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b4fbafaa-3119-4a0a-b800-9d6a33a12daa">
 													<span class="titre" ch-target="#cacher36">
@@ -1747,16 +1886,21 @@
 													</span>
 													<br />
 													<span id="cacher36" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+														</span>
 														<br />
+														
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="47903948-4ba6-46de-8ca3-0670deb27b6b">
 													<span class="titre" ch-target="#cacher37">
@@ -1765,16 +1909,20 @@
 													</span>
 													<br />
 													<span id="cacher37" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="30d2b9eb-0a2f-4b0a-9ae9-31476ec13ed6">
 													<span class="titre" ch-target="#cacher38">
@@ -1784,16 +1932,20 @@
 													</span>
 													<br />
 													<span id="cacher38" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b148cd09-496d-4a97-8cd5-75500f2d684f">
 													<span class="titre" ch-target="#cacher39">
@@ -1803,16 +1955,20 @@
 													</span>
 													<br />
 													<span id="cacher39" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="80b0b6b9-621e-4ef2-9c5a-abe0650af829">
 													<span class="titre" ch-target="#cacher40">
@@ -1821,16 +1977,20 @@
 													</span>
 													<br />
 													<span id="cacher40" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="3e459cbc-d49d-4976-accd-88f8b79de796">
 													<span class="titre" ch-target="#cacher41">
@@ -1839,16 +1999,20 @@
 													</span>
 													<br />
 													<span id="cacher41" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f2557bca-6f44-4625-800b-b3e02da52009">
 													<span class="titre" ch-target="#cacher42">
@@ -1857,16 +2021,20 @@
 													</span>
 													<br />
 													<span id="cacher42" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="66896071-fa70-410a-80e4-2ca8904ad67b">
 													<span class="titre" ch-target="#cacher43">
@@ -1875,16 +2043,21 @@
 													</span>
 													<br />
 													<span id="cacher43" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
 										</tr>
-										<tr>
+										<tr><td><b>Autres</b></td></tr>
+										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="bdb0c5f8-f122-4911-9295-c667200bb8d4">
 													<span class="titre" ch-target="#cacher44">
@@ -1897,11 +2070,87 @@
 													</span>
 													<br />
 													<span id="cacher44" class="cacher" style="display:none">
+													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
 														<br />
+													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher45" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id44"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher45" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher46" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id45"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher46" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="CIEL:159947">
+													<span class="titre" ch-target="#cacher47" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id46"
+															style="autocomplete" answerClasses="Diagnosis"
+															showCommentField="true"
+															commentFieldLabel="&lt;br/&gt;si autre, préciser&lt;br/&gt;" />
+													</span>
+													<br />
+													<span id="cacher47" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
 													</span>
 												</obsgroup>
 											</td>
@@ -1916,8 +2165,6 @@
 								</td>
 							</tr>
 						</table>
-						<br />
-						N: nouveau, A: actif, G: guéri
 						<br />
 						* Notifiez le Ministère de la Santé pour le registre de
 						surveillance épidémiologique.
@@ -2130,6 +2377,7 @@
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
+								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
@@ -2336,44 +2584,63 @@
 								<b>Medicaments prescrits / Posologie</b>
 							</legend>
 							<table>
-								<obsgroup groupingConceptId="CIEL:1442">
+								
 									<tr>
 										<td>1</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>2</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>3</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>4</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
 									<tr>
 										<td>5</td>
 										<td>
-											<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
+											<obsgroup groupingConceptId="CIEL:1442">
+												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
+											</obsgroup>
 										</td>
 									</tr>
-								</obsgroup>
+								
 							</table>
+						</fieldset>
+						<fieldset>
+							<legend><b>Intervention</b></legend>
+							Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:163408" answerLabel="Thermocoagulation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162811" answerLabel="Conisation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
 						</fieldset>
 						<fieldset>
 							<legend>

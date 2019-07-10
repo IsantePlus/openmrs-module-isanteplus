@@ -98,6 +98,9 @@ public class IsantePlusFormsFragmentController {
 			IsantePlusHtmlForm imagerie = new IsantePlusHtmlForm("Imagerie.xml",
 					resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
+			IsantePlusHtmlForm homeVisit = new IsantePlusHtmlForm("HomeVisit.xml",
+					resourceFactory, formService, htmlFormEntryService, patient,
+					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			List<IsantePlusHtmlForm> primaryCareForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> labForms = new ArrayList<IsantePlusHtmlForm>();
 			List<IsantePlusHtmlForm> obygnForms = new ArrayList<IsantePlusHtmlForm>();
@@ -147,6 +150,7 @@ public class IsantePlusFormsFragmentController {
 			otherForms.add(vaccination);
 			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);
 			otherForms.add(imagerie);
+			otherForms.add(homeVisit);
 			
 			if(patientAge == null)
 			{
