@@ -1586,4 +1586,22 @@
 		</sql>
 	</changeSet>
 	
+	<changeSet id="2019Juillet06-0930" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'1dd1e63a-1543-4885-b807-e49c6d18cffd';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Visite à domicile" />
+			<column name="description" value="Fiche Visite à domicile" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2019-07-05 09:30:00" />
+			<column name="uuid" value="1dd1e63a-1543-4885-b807-e49c6d18cffd" />
+		</insert>
+	</changeSet>
+	
 </databaseChangeLog>

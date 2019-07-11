@@ -1,0 +1,684 @@
+<htmlform formUuid="55070987-51e1-45e1-ba5a-c37848450978"
+	formName="Visite à domicile" formEncounterType="1dd1e63a-1543-4885-b807-e49c6d18cffd"
+	formVersion="1.0" formDescription="Visite à domicile;Visite à domicile">
+	<macros>
+		paperFormId = (Fill this in)
+		<!--headerColor =#009d8e -->
+		headerColor =#000000
+		fontOnHeaderColor = white
+	</macros>
+	<style>
+		.section {
+		border: 1px solid $headerColor;
+		padding: 2px;
+		text-align: left;
+		margin-bottom: 1em;
+		}
+		.section_b {
+		background-color: #2F4F4F;
+		color:#FFFFFF;
+		padding: 2px;
+		text-align: center;
+		margin-bottom: 1em;
+		}
+		.sectionHeader {
+		background-color: $headerColor;
+		color: $fontOnHeaderColor;
+		display: block;
+		padding: 2px;
+		font-weight: bold;
+		}
+		table.baseline-aligned td {
+		vertical-align: baseline;
+		}
+		#dateVisite{
+		background:#81BEF7;
+		top:0px;
+		width:100%;
+		padding-top:5px;
+		}
+		form input[type="checkbox"], form input[type="radio"], .form
+		input[type="checkbox"], .form input[type="radio"] {
+		float: none;
+		display: inline-block;
+		}
+
+		form label, .form label {
+		display: inline-block;
+		}
+	</style>
+	<script type="text/javascript">
+		if(jQuery){
+		jQuery(document).ready(function(){
+		jQuery(":checkbox").click(function(){
+		jQuery(this).change();
+		});
+		// Enabled et disabled input type text
+		jQuery(".enableDisable").each(function(){
+		var group = jQuery(this);
+		function disableFn(){
+		group.children("#disabled").fadeTo(250,0.33);
+		group.children("#disabled").find(":checkbox").attr("checked",false); //uncheck
+		group.children("#disabled").find("input[type$='text']").val("");
+		group.children("#disabled").find("input").attr("disabled",true);
+		//disable
+		}
+		function enableFn(){
+		group.children("#disabled").fadeTo(250,1);
+		group.children("#disabled").find("input").attr("disabled",false);
+		}
+		disableFn();
+		jQuery(this).children("#trigger").find(":checkbox:first").change(function(){
+		var checked = jQuery(this).attr("checked");
+		if(checked == true){
+		//enableFn();
+		disableFn();
+		}else{
+		disableFn();
+		}
+		});
+		});
+
+		//Fin enabled disabled input type text
+
+		jQuery(".checkboxGroup").each(function(){
+		var group = jQuery(this);
+		var uncheckAll = function(){
+		group.find("input[type$='checkbox']").attr("checked",false);
+		group.find("input[type$='checkbox']").change();
+		}
+
+		//Fin ANTÉCEDENTS MÉDICAUX ET SYMPTÔMES ET DIAGNOSTICS ACTUELS
+
+		//Validation des donnees
+		
+		group.find("#symptomC").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomc.value') == '139084' ) {
+		group.find("#symptompresentc").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentc").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentc").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentc").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
+		group.find("#symptomE").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptome.value') == '163465' ) {
+		group.find("#symptompresente").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresente").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresente").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresente").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
+		group.find("#symptomF").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomf.value') == '151' ) {
+		group.find("#symptompresentf").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentf").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentf").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentf").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
+		group.find("#symptomK").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomk.value') == '163282' ) {
+		group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentk").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentk").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
+		group.find("#symptomO").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomo.value') == '5978' ) {
+		group.find("#symptompresento").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresento").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresento").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresento").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
+		group.find("#symptomP").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomp.value') == '122983' ) {
+		group.find("#symptompresentp").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentp").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentp").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentp").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
+		group.find("#symptomBB").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptombb.value') == '5622' ) {
+		group.find("#symptompresentbb").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentbb").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentbb").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentbb").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+	</script>
+	<script type="text/javascript">
+		beforeSubmit.push(function() {
+
+		if((getValue('nausee_vomissement_severity.value') != '1498') &amp;&amp;
+		(getValue('nausee_vomissement_severity.value') != '1499') &amp;&amp;
+		(getValue('nausee_vomissement_severity.value') != '1500')){
+		setValue('nausee_vomissement.value', '');
+		} else {
+		setValue('nausee_vomissement.value', '133473');
+		}
+		if
+		((getValue('diarrhee_severity.value') != '1498') &amp;&amp;
+		(getValue('diarrhee_severity.value') != '1499') &amp;&amp;
+		(getValue('diarrhee_severity.value') != '1500')){
+		setValue('diarrhee.value', '');
+		} else {
+		setValue('diarrhee.value',
+		'142412');
+		}
+		if ((getValue('eruption_cutanee_severity.value') != '1498')
+		&amp;&amp;
+		(getValue('eruption_cutanee_severity.value') != '1499')
+		&amp;&amp;
+		(getValue('eruption_cutanee_severity.value') != '1500')){
+		setValue('eruption_cutanee.value', '');
+		} else {
+		setValue('eruption_cutanee.value', '512');
+		}
+		if
+		((getValue('maux_tete_severity.value') != '1498') &amp;&amp;
+		(getValue('maux_tete_severity.value') != '1499') &amp;&amp;
+		(getValue('maux_tete_severity.value') != '1500')){
+		setValue('maux_tete.value', '');
+		} else {
+		setValue('maux_tete.value',
+		'139084');
+		}
+		if ((getValue('douleur_abdominale_severity.value') !=
+		'1498') &amp;&amp;
+		(getValue('douleur_abdominale_severity.value') !=
+		'1499') &amp;&amp;
+		(getValue('douleur_abdominale_severity.value') !=
+		'1500')){
+		setValue('douleur_abdominale.value', '');
+		} else {
+		setValue('douleur_abdominale.value', '151');
+		}
+		if
+		((getValue('faiblesse_severity.value') != '1498') &amp;&amp;
+		(getValue('faiblesse_severity.value') != '1499') &amp;&amp;
+		(getValue('faiblesse_severity.value') != '1500')){
+		setValue('faiblesse.value', '');
+		} else {
+		setValue('faiblesse.value',
+		'5226');
+		}
+		if ((getValue('paresthesie_severity.value') != '1498')
+		&amp;&amp;
+		(getValue('paresthesie_severity.value') != '1499')
+		&amp;&amp;
+		(getValue('paresthesie_severity.value') != '1500')){
+		setValue('paresthesie.value', '');
+		} else {
+		setValue('paresthesie.value', '6004');
+		}
+		
+		return true;
+		});
+	</script>
+	
+	<div width="100%" id="conteneur">
+		<div id="dateVisite">
+			<b>FICHE DE VISITE À DOMICILE : ADULTE VIH+</b>
+			<br />
+			<br />
+			<table>
+				<tr>
+					<td>Date visite:</td>
+					<td>
+						<encounterDate default="today" />
+						<br />
+						<span style="display: none">
+							<encounterLocation
+								default="SessionAttribute:emrContext.sessionLocationId" />
+						</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<section headerLabel="BUT DE LA VISITE">
+		<table>
+			<tr>
+				<td><obs conceptId="CIEL:160288" answerConceptIds="e2739712-ed4b-4a8d-b8e7-f6ef8cf780e5,CIEL:164370,ef958f97-f811-49af-a0e1-c22546eca30d,CIEL:162192,CIEL:5622"
+											answerLabels="Routine,Thérapie sous observation directe (TOD),Patient malade,Rendez-vous à l'établissement manqué,Autres" style="radio" showCommentField="true" commentFieldLabel=", préciser :" /></td>							
+			</tr>
+		
+		</table>
+	</section>
+	<section headerLabel="SUIVI DES SOINS">
+		<table>
+			<tr>
+				<td>Observation faite lors de la visite à domicile</td>
+				<td><obs conceptId="CIEL:1899" answerConceptIds="CIEL:1065,CIEL:1066"
+						answerLabels="Patient présent,Patient absent (fixer un autre RDV à domicile)"
+						style="radio" />
+				</td>
+				<td>
+					<obs conceptId="CIEL:160112" answerConceptIds="CIEL:163748,CIEL:163747"
+						answerLabels="Accompagnateur présent,Accompagnateur absent"
+						style="radio" />
+				</td>
+						
+			</tr>
+		
+		</table>
+		Support de l'accompagnateur au cours du mois précédent :<br/>
+		<obs conceptId="65581878-a659-4e15-bd6a-699d535b7c7f" answerConceptIds="CIEL:1464,33994c72-47ae-4ec4-9cfd-6a80de5457da,CIEL:1099,af9b2b1b-f829-4c6c-81ed-a70f3c017c53,CIEL:1098,CIEL:1107"
+						answerLabels="Quotidien,Quelques fois par semaine,Chaque semaine,Quelques fois par mois,Une fois par mois,Aucun"
+						style="radio" /><br/>
+		Est-ce que le patient a manqué une visite ?<br/>
+		<obs conceptId="19ec4c07-484d-4f0a-adb5-2b79245b3605" answerConceptIds="CIEL:1065,CIEL:1066"
+						answerLabels="Oui,Non"
+						style="radio" /><br/>
+		Date de la visite manquée <obs conceptId="e45337bf-6953-4c9d-9604-a3d74523aca9" /><br/>
+		
+		Raison :<br/>
+		<obs conceptId="f8162b87-e660-41d4-86c9-392a45bdbf7d" answerConceptIds="CIEL:1737,CIEL:820,b4c726da-e0c6-4109-96e6-5ca4d5c2f04e,CIEL:819,18cfea41-c788-4096-9652-5c6b53eb549b,1b1a2739-6ae0-43f9-b765-9e2e20968532,d0378433-debc-4a5d-b989-6c32aede2bb6,CIEL:5841,CIEL:164377,CIEL:162192,CIEL:160589,CIEL:5622"
+			answerLabels="Coût de transport,Transport non disponible,Coût des services,Coût des médicaments,Personnel soignant/services insatisfaisants,État trop malade,Recherche de soins alternatifs,Médecine traditionnelle,Effets secondaires des médicaments,Oubli,Peur d'être vu dans un site de prise en charge des patients sidatiques,Autres"
+				style="radio" showCommentField="true" commentFieldLabel=", préciser :" />
+		<br/>
+		Expliquer les raisons des visites manquées et indiquer un plan d'action pour éviter cela dans la section Remarques/Plan d'action.
+	
+	</section>
+	<section headerLabel="DESCRIPTION DE LA MALADIE DONT LE PATIENT SOUFFRE ACTUELLEMENT">
+	<table width="100%">
+			<tr>
+				<td valign="TOP">
+					<table width="100%" height="100%">
+						<tr>
+							<td><!-- A reviser -->
+
+								<tr>
+									<td class="checkboxGroup">
+										<obsgroup groupingConceptId="280f7e9e-73de-4fa1-899e-3e4db50915db">
+											<span id="symptomF">
+												<obs conceptId="CIEL:1728" id="symptomf"
+													answerConceptId="CIEL:151" answerLabel="Douleur abdominale" />
+											</span>
+											<span id="symptompresentf" style="display: none">
+												<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065"
+													style="checkbox" />
+											</span>
+										</obsgroup>
+										<br />
+										<obsgroup groupingConceptId="d4c71b0e-3c8e-4613-ab0b-2dbedf726994">
+											<span id="symptomE">
+												<obs conceptId="CIEL:1728" id="symptome"
+													answerConceptId="CIEL:163465" answerLabel="Diarrhée" />
+											</span>
+											<span id="symptompresente" style="display: none">
+												<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065"
+													style="checkbox" />
+											</span>
+										</obsgroup>
+										<br/>
+										<obsgroup groupingConceptId="7ff8201b-93b9-4aa3-b86c-ab9c567a1f35">
+											<span id="symptomC">
+												<obs conceptId="CIEL:1728" id="symptomc"
+													answerConceptId="CIEL:139084" answerLabel="Maux de tête" />
+											</span>
+											<span id="symptompresentc" style="display: none">
+												<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+											</span>
+										</obsgroup>
+									</td>
+								</tr>
+
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>&#160;&#160;&#160;&#160;&#160;</td>
+				<td valign="TOP">
+					<table width="100%" height="100%">
+						<tr>
+							<td class="checkboxGroup">
+								<obsgroup groupingConceptId="16e2f3d9-579c-4731-8b9b-5ff7a53b0c89">
+									<span id="symptomK">
+										<obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:163282"
+											answerLabel="Fièvre" />
+									</span>
+									<span id="symptompresentk" style="display: none">
+										<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+									</span>
+								</obsgroup>
+								<br />
+								<obsgroup groupingConceptId="244851ca-731c-4ee1-8557-4c75cb38fe9b">
+									<span id="symptomO">
+										<obs conceptId="CIEL:1728" id="symptomo" answerConceptId="CIEL:5978"
+											answerLabel="Nausée" />
+									</span>
+									<span id="symptompresento" style="display: none">
+										<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+									</span>
+								</obsgroup>
+								<br />
+								<obsgroup groupingConceptId="89803a57-4a1b-475d-9a7a-fbcd9f74c0c9">
+									<span id="symptomP">
+										<obs conceptId="CIEL:1728" id="symptomp" answerConceptId="CIEL:122983"
+											answerLabel="Vomissements" />
+									</span>
+									<span id="symptompresentp" style="display: none">
+										<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+									</span>
+								</obsgroup>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>&#160;&#160;&#160;&#160;&#160;</td>
+				<td valign="TOP">
+					<table width="100%">
+						<tr>
+							<td class="checkboxGroup">
+								<obsgroup groupingConceptId="0671685b-ced1-459f-b31d-fa851985d117">
+									<span id="symptomBB">
+										<obs conceptId="CIEL:1728" id="symptombb" answerConceptId="CIEL:5622"
+											answerLabel="Autres," showCommentField="true"
+											commentFieldLabel="préciser&lt;br/&gt;" />
+									</span>
+									<span id="symptompresentbb" style="display: none">
+										<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
+									</span>
+								</obsgroup>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section headerLabel="ADHÉRENCE COUNSELING">
+		Durant les 4 derniers jours, combien de doses de médicament le patient n'a-t-il pas prises ? 
+			<obs conceptId="CIEL:163709" answers="0,1,2,3,4" answerLabels="0,1,2,3,&gt;3"
+				style="radio" />
+			<br />
+			Quel pourcentage de doses le patient a-t-il pris le mois dernier ?
+			<br />
+			<span width="100%">
+				<obs conceptId="CIEL:163710"
+					answers="0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100"
+					answerLabels="0%,5%,10%,15%,20%,25%,30%,35%,40%,45%,50%,55%,60%,65%,70%,75%,80%,85%,90%,95%,100%"
+					style="radio" />
+			</span>
+			<br />
+			Demander au patient une estimation visuelle de la prise de ses médicaments ARV. 
+			0% représente aucune prise de médicaments, 50% représente une prise de médicaments la moitié du temps, 
+			et 100% représente une prise parfaite des médicaments.
+			<br />
+			
+	<fieldset width="100%">
+		Indiquer la raison donnée pour toute dose de médicament non prise (cocher le ou les cas ci-dessous)<br/>
+				<table width="100%">
+							<tr>
+								<td valign="top">
+									<table>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:1754"
+													answerLabel="Médicament non-disponible à la clinique" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:160587"
+													answerLabel="A oublié" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:1778"
+													answerLabel="Effets secondaires, préciser ci-dessous" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:156761"
+													answerLabel="Emprisonné" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:160585"
+													answerLabel="S'est senti trop malade" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:1775"
+													answerLabel="A terminé tous les médicaments" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:160586"
+													answerLabel="S'est senti bien" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:160584"
+													answerLabel="A perdu les pilules" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:127750"
+													answerLabel="N'a pas voulu" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:160589"
+													answerLabel="Gêné de prendre des médicaments en présence d'autres personnes" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:5954"
+													answerLabel="Difficultés à avaler" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:124153"
+													answerLabel="En voyage" />
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td valign="top">
+									<table>
+										
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:119533"
+													answerLabel="Manque de nourriture" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<obs conceptId="CIEL:160582" answerConceptId="CIEL:5622"
+													answerLabel="Autres, préciser :" showCommentField="true"
+													commentFieldLabel="" />
+											</td>
+										</tr>
+									</table>
+									<br/>
+					<table width="100%">
+						<repeat>
+							<template>
+								<obsgroup groupingConceptId="{conceptgroup}">
+									<tr>
+										<td>
+											{drugname}
+											<span class="arv1_div" style="display: none">
+												<obs conceptId="CIEL:159935" id="{id}" answerConceptIds="{concept}"
+													defaultValue="{concept}" answerLabel="" />
+											</span>
+										</td>
+										<td>
+											<obs conceptId="CIEL:162760" id="{id}_severity"
+												answerConceptIds="CIEL:1498,CIEL:1499,CIEL:1500" answerLabels="Faible,Modéré,Sévère"
+												style="radio" />
+										</td>
+									</tr>
+								</obsgroup>
+							</template>
+							<render concept="CIEL:133473" drugname="Nausée ou vomissement"
+								id="nausee_vomissement" conceptgroup="72074743-ae89-425e-ba48-718b02585b91" />
+							<render concept="CIEL:142412" drugname="Diarrhée" id="diarrhee" conceptgroup="bc514162-eae6-4126-95b4-c3695a410e2d" />
+							<render concept="CIEL:512" drugname="Eruption cutanée" id="eruption_cutanee" conceptgroup="40a0c708-a7bb-40ee-941b-c7bdefbb73bd" />
+							<render concept="CIEL:139084" drugname="Maux de tête" id="maux_tete" conceptgroup="369d0166-14dd-4f43-baa4-10ce377c5afb" />
+							<render concept="CIEL:151" drugname="Douleur abdominale" id="douleur_abdominale" conceptgroup="cec53311-713b-4d80-8387-639be8d90f16" />
+							<render concept="CIEL:5226" drugname="Faiblesse" id="faiblesse" conceptgroup="654d4c9e-f171-485c-9aee-5c906406342c" />
+							<render concept="CIEL:6004" drugname="Paresthésie/fourmillement"
+								id="paresthesie" conceptgroup="654d4c9e-f171-485c-9aee-5c906406342c" />
+						</repeat>
+						
+				</table>
+							<br/>
+								Référer au médecin tout patient avec des effets secondaires modérés ou sévères.
+								</td>
+							</tr>
+						</table>
+						
+	
+	</fieldset>
+	
+	</section>
+	
+	<section headerLabel="SERVICES RENDUS">
+				
+		<table>
+				<tr>
+					<td><!-- Concept pour la question -->
+						Cochez la ou les cases<br/>
+						<obs conceptId="CIEL:163560" answerConceptId="CIEL:5490"
+						answerLabel="Counseling/Support psychosocial pour patient ou famille" /><br/>
+						<obs conceptId="CIEL:163560" answerConceptId="CIEL:161648"
+						answerLabel="Aide alimentaire" /><br/>
+						<obs conceptId="CIEL:163560" answerConceptId="eb2104d6-bb87-4283-a024-d9a115e57a27"
+						answerLabel="Kit pour les soins à domicile" />
+					</td>
+					<td>
+						<obs conceptId="CIEL:163560" answerConceptId="6e2a8a88-e49d-4382-8125-e7afc8d420b8"
+						answerLabel="Livraisons des Médicaments" /><br/>
+						<obs conceptId="CIEL:163560" answerConceptId="CIEL:1379"
+						answerLabel="Conseils santé" /><br/>
+						<obs conceptId="CIEL:163560" answerConceptId="CIEL:5622"
+						answerLabel="Autres" showCommentField="true" commentFieldLabel=", préciser" /><br/>
+						
+					</td>
+				
+				</tr>
+		
+		</table>
+	</section>
+	<section headerLabel="PLAN DE SUIVI">
+		<table>
+			<tr><td>Prochaine visite médicale à la établissement recommandée dans</td>
+			<td><obs conceptId="7f142c0a-5f24-472b-955d-f839e36f5e24" /></td></tr>
+			
+			<tr><td>Date de la prochaine visite à la établissement</td>
+			<td><obs conceptId="CIEL:5096" /></td></tr>		
+			
+			<tr><td>Prochaine visite à domicile recommandée dans</td>
+			<td><obs conceptId="4abbc619-d0ba-4233-89aa-d94647327b4c" /></td></tr>		
+			
+			<tr><td>Date de la prochaine visite à domicile</td>
+			<td><obs conceptId="545a2c88-2f37-4228-97ef-3895b480062d" /></td></tr>	
+			
+		</table>
+	</section>
+	
+	<section headerLabel="DISCONTINUATION">
+		Le patient a-t-il arrêté de prendre ses médicaments ARV ? <br/>
+		<!--  <obs conceptId="CIEL:160121" answerConceptIds="CIEL:1065,CIEL:1066"
+				answerLabels="Oui - préciser date d'arrêt,Non" style="radio" showDate="true" /> -->
+		 <br/>
+				
+		Le patient a-t-il complètement arrêté sa participation au programme de traitement ARV ? <br/>
+		<obs conceptId="CIEL:160121" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+				answerLabels="Oui Si oui - remplir la Fiche de Discontinuation,Non,Inconnu" style="radio" /><br/>
+		<table>
+			<tr>
+				<td>Préciser la ou les raisons :</td>
+				<td><obs conceptId="CIEL:161555" answerConceptIds="CIEL:159,CIEL:159492,CIEL:160415,CIEL:159737"
+				answerLabels="Décès - préciser date, Transfert à une autre institution - préciser :,Patient a déménagé,Préférence du patient"
+				 style="radio" showDate="true" showCommentField="true" commentFieldLabel=""/></td>
+			
+			</tr>
+		</table>
+	
+	</section>
+	<section headerLabel="REMARQUES/PLAN D'ACTION">
+			<obs conceptId="CIEL:161011" rows="5" cols="50" />
+	</section>
+	<span class="signature" style="display: none">
+		SIGNATURE
+		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+			providerRoles="3" id="infirmiere" autocompleteProvider="true"
+			providerMatchMode="ANYWHERE" default="currentUser" />
+		<br /></span>
+		<br />
+			Nom d'auteur de la fiche :<obs conceptId="CIEL:1473"/>
+		<br/>
+		<br/>
+		Statut de la fiche
+		<br />
+		&#160;
+		<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267"
+			answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète."
+			defaultValue="CIEL:1267" style="radio" />
+		<br />
+		&#160;
+		<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065"
+			answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données." />
+		<br />
+		<br />
+		<br />
+		<submit submitClass="confirm right" submitCode="general.save" />
+		<br />
+		<br />
+		<span style="margin-right:0px">MSPP FICHE DE VISITE À DOMICILE : ADULTE VIH+ (VERSION OCTOBRE 2005)</span>
+	
+</htmlform>

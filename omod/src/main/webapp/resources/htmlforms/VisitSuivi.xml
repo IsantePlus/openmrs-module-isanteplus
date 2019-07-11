@@ -821,7 +821,7 @@
 
 								<tr>
 									<td class="checkboxGroup">
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="280f7e9e-73de-4fa1-899e-3e4db50915db">
 											<span id="symptomA">
 												<obs conceptId="CIEL:1728" id="symptoma"
 													answerConceptId="CIEL:151" answerLabel="Douleur abdominale" />
@@ -832,7 +832,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="8d118f23-1934-4ae3-9a0c-2045dd67c849">
 											<span id="symptomB">
 												<obs conceptId="CIEL:1728" id="symptomb"
 													answerConceptId="CIEL:6031" answerLabel="Anorexie/Perte d'appétit" />
@@ -842,7 +842,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="78b69c38-8119-4634-8def-4b75e079243f">
 											<span id="symptomC">
 												<obs conceptId="CIEL:1728" id="symptomc"
 													answerConceptId="CIEL:143264" answerLabel="Toux" />
@@ -852,7 +852,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="64e7b85c-355e-4c40-a11e-2893934bb38b">
 											<span id="symptomD">
 												<obs conceptId="CIEL:1728" id="symptomd"
 													answerConceptId="CIEL:5957" answerLabel="Toux/Expectoration (sauf hémoptysie)" />
@@ -862,7 +862,7 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="1727">
+										<obsgroup groupingConceptId="81db35ed-27a7-4e26-a54a-1ddff821ca5e">
 											<span id="symptomE">
 												<obs conceptId="CIEL:1728" id="symptome"
 													answerConceptId="CIEL:122496" answerLabel="Dyspnée" />
@@ -883,7 +883,7 @@
 					<table height="100%">
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="7ff8201b-93b9-4aa3-b86c-ab9c567a1f35">
 									<span id="symptomF">
 										<obs conceptId="CIEL:1728" id="symptomf" answerConceptId="CIEL:139084"
 											answerLabel="Céphalée" />
@@ -893,7 +893,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="3d584639-8c55-45de-b202-f7405af953df">
 									<span id="symptomG">
 										<obs conceptId="CIEL:1728" id="symptomg" answerConceptId="CIEL:138905"
 											answerLabel="Hémoptysie" />
@@ -903,7 +903,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="244851ca-731c-4ee1-8557-4c75cb38fe9b">
 									<span id="symptomH">
 										<obs conceptId="CIEL:1728" id="symptomh" answerConceptId="CIEL:5978"
 											answerLabel="Nausée" />
@@ -913,7 +913,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="3777f798-60fd-4f8c-acb6-c9bf879c8913">
 									<span id="symptomI">
 										<obs conceptId="CIEL:1728" id="symptomi" answerConceptId="CIEL:133027"
 											answerLabel="Sueurs nocturnes" />
@@ -923,7 +923,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="bfa2b9d6-75d1-407e-b4a9-1df36e639429">
 									<span id="symptomJ">
 										<obs conceptId="CIEL:1728" id="symptomj" answerConceptId="CIEL:141635"
 											answerLabel="Perte de sensibilité" />
@@ -941,7 +941,7 @@
 					<table height="100%">
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="b41e4d9d-b0f7-455c-851f-dc9c05fc519a">
 									<span id="symptomK">
 										<obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:118789"
 											answerLabel="Odynophagie/dysphagie" />
@@ -951,7 +951,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="9c67aa65-9411-4ac7-b56f-b7f2ffe36192">
 									<span id="symptomL">
 										<obs conceptId="CIEL:1728" id="symptoml" answerConceptId="CIEL:512"
 											answerLabel="Eruption cutanée" />
@@ -961,7 +961,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="89803a57-4a1b-475d-9a7a-fbcd9f74c0c9">
 									<span id="symptomM">
 										<obs conceptId="CIEL:1728" id="symptomm" answerConceptId="CIEL:122983"
 											answerLabel="Vomissement" />
@@ -971,7 +971,7 @@
 									</span>
 								</obsgroup>
 								<br />
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="696e5e96-c3ca-4b01-a792-583dfcd4af2a">
 									<span id="symptomN">
 										<obs conceptId="CIEL:1728" id="symptomn" answerConceptId="CIEL:128319"
 											answerLabel="Prurigo" />
@@ -990,7 +990,7 @@
 					<table>
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="0671685b-ced1-459f-b31d-fa851985d117">
 									<span id="symptomO">
 										<obs conceptId="CIEL:1728" id="symptomo" answerConceptId="CIEL:5622"
 											answerLabel="Autres," showCommentField="true"
@@ -1974,7 +1974,7 @@
 	</tr>
 		<repeat>
 		<template>
-			<obsgroup groupingConceptId="160741">
+			<obsgroup groupingConceptId="{conceptgroup}">
 				<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
 					<span>
 							<div>
@@ -2000,15 +2000,15 @@
 				</tr>
 				</obsgroup>
 			</template>
-			<render concept="CIEL:70056" drugname="Abacavir (ABC)" id="abacavir" color="#D8D8D8"/>
-			<render concept="CIEL:630" drugname="Combivir (AZT+3TC)" id="combivir" color="#FFFFFF"/>
-			<render concept="CIEL:74807" drugname="Didanosine (ddI)" id="didanosine" color="#D8D8D8"/>
-			<render concept="CIEL:75628" drugname="Emtricitabine (FTC)" id="emtricitabine" color="#FFFFFF"/>
-			<render concept="CIEL:78643" drugname="Lamivudine (3TC)" id="lamivudine" color="#D8D8D8"/>
-			<render concept="CIEL:84309" drugname="Stavudine (d4T)" id="stavudine" color="#FFFFFF"/>
-			<render concept="CIEL:84795" drugname="Tenofovir (TNF)" id="tenofovir" color="#D8D8D8"/>
-			<render concept="CIEL:817" drugname="Trizivir (ABC+AZT+3TC)" id="trizivir" color="#FFFFFF"/>
-			<render concept="CIEL:86663" drugname="Zidovudine (AZT)" id="zidovudine" color="#D8D8D8"/>
+			<render concept="CIEL:70056" drugname="Abacavir (ABC)" id="abacavir" conceptgroup="f604049d-9959-49cb-812a-7dcf453b2d73" color="#D8D8D8"/>
+			<render concept="CIEL:630" drugname="Combivir (AZT+3TC)" id="combivir" conceptgroup="4898493b-c3ba-42e0-b893-7e9ac50a5de0" color="#FFFFFF"/>
+			<render concept="CIEL:74807" drugname="Didanosine (ddI)" id="didanosine" conceptgroup="95ac7b3a-0bda-49d3-8562-ee77bc8fd733" color="#D8D8D8"/>
+			<render concept="CIEL:75628" drugname="Emtricitabine (FTC)" id="emtricitabine" conceptgroup="3e8dea76-369d-45bf-970e-2005496587a5" color="#FFFFFF"/>
+			<render concept="CIEL:78643" drugname="Lamivudine (3TC)" id="lamivudine" conceptgroup="eb704fe8-7cf0-4e36-b86b-a69bc8ed5a4a" color="#D8D8D8"/>
+			<render concept="CIEL:84309" drugname="Stavudine (d4T)" id="stavudine" conceptgroup="544b0301-f89e-4ae6-b48f-9780b2ea4bed" color="#FFFFFF"/>
+			<render concept="CIEL:84795" drugname="Tenofovir (TNF)" id="tenofovir" conceptgroup="7ae7e7f7-db75-4533-bce3-caf77a75355e" color="#D8D8D8"/>
+			<render concept="CIEL:817" drugname="Trizivir (ABC+AZT+3TC)" id="trizivir" conceptgroup="60299c6d-de85-45d9-adbd-9d67906c658d" color="#FFFFFF"/>
+			<render concept="CIEL:86663" drugname="Zidovudine (AZT)" id="zidovudine" conceptgroup="32bc1f59-e316-4c4f-84eb-dc0906f8e2fa" color="#D8D8D8"/>
 		</repeat>
 	<tr>
 		<td><b>(-) INNTIs</b></td>
@@ -2023,7 +2023,7 @@
 	</tr>
 <repeat>
 <template>
-	<obsgroup groupingConceptId="160741">
+	<obsgroup groupingConceptId="{conceptgroup}">
 		<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
 			<span>
 			
@@ -2051,8 +2051,8 @@
 		</tr>
 	</obsgroup>
 </template>
-<render concept="CIEL:75523" drugname="Efavirenz (EFV)" id="efavirenz" color="#FFFFFF"/>
-<render concept="CIEL:80586" drugname="Nevirapine (NVP)" id="nevirapine" color="#D8D8D8"/>
+<render concept="CIEL:75523" drugname="Efavirenz (EFV)" id="efavirenz" conceptgroup="5b14f87d-3b64-418c-bfcf-90a8d0ae0e02" color="#FFFFFF"/>
+<render concept="CIEL:80586" drugname="Nevirapine (NVP)" id="nevirapine" conceptgroup="dbd8e7e9-6b7a-4b70-8c8f-a80f8e64b710" color="#D8D8D8"/>
 </repeat>
 	<tr bgcolor="#FFFFFF">
 		<td><b>(-) IPs</b></td>
@@ -2067,7 +2067,7 @@
 	</tr>
 	<repeat>
 		<template>
-			<obsgroup groupingConceptId="160741">
+			<obsgroup groupingConceptId="{conceptgroup}">
 				<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
 				<span>
 				
@@ -2096,16 +2096,16 @@
 				</tr>
 			</obsgroup>
 		</template>
-		<render concept="CIEL:71647" drugname="Atazanavir (ATZN)" id="atazanavir" color="#D8D8D8"/>
-		<render concept="CIEL:159809" drugname="Atazanavir+BostRTV" id="atazanavir_bost" color="#FFFFFF"/>
-		<render concept="CIEL:77995" drugname="Indinavir (IDV)" id="indinavir" color="#D8D8D8"/>
+		<render concept="CIEL:71647" drugname="Atazanavir (ATZN)" id="atazanavir" conceptgroup="d1c8a581-4512-4874-8960-cb3306f06f11" color="#D8D8D8"/>
+		<render concept="CIEL:159809" drugname="Atazanavir+BostRTV" id="atazanavir_bost" conceptgroup="71cfae87-3d31-40d8-8a06-aeed72c799d0" color="#FFFFFF"/>
+		<render concept="CIEL:77995" drugname="Indinavir (IDV)" id="indinavir" conceptgroup="7f5144db-0182-4775-a0e5-78f71aa9d6e1" color="#D8D8D8"/>
 		<!--<render concept="77995" drugname="Indinavir+BostRTV" id="indinavir_bost" color="#FFFFFF"/>--> <!-- Verification Important -->
-		<render concept="CIEL:794" drugname="Lopinavir+BostRTV (Kaletra)" id="lopinavir_bost" color="#FFFFFF"/>
+		<render concept="CIEL:794" drugname="Lopinavir+BostRTV (Kaletra)" id="lopinavir_bost" conceptgroup="e017cfcf-a763-4e85-845a-e0aa6573c829" color="#FFFFFF"/>
 	</repeat>
 	
 	<repeat>
 		<template>
-			<obsgroup groupingConceptId="160741">
+			<obsgroup groupingConceptId="{conceptgroup}">
 				<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group defaultValue="{concept}"-->
 					<span>
 					
@@ -2134,8 +2134,8 @@
 				</tr>
 			</obsgroup>
 		</template>
-		<render drugname="Autre ARV, préciser" id="autre_arv_a" color="#D8D8D8"/>
-		<render drugname="Autre ARV, préciser" id="autre_arv_b" color="#FFFFFF"/>
+		<render drugname="Autre ARV, préciser" id="autre_arv_a" conceptgroup="2917c4a3-71bc-4c2d-92fc-9911b55d02f3" color="#D8D8D8"/>
+		<render drugname="Autre ARV, préciser" id="autre_arv_b" conceptgroup="f9c09540-f8c0-4884-96dd-a81b4b2a6e84" color="#FFFFFF"/>
 	</repeat>
 	<tr bgcolor="#2B60DE">
 		<td colspan="15">CODES :  Tox=Toxicité  Intol=Intolérance  Ech Vir=Echec Virologique (>10,000 copies/ml)  Ech Imm=Echec Immunologique (diminution par rapport aux chiffres de base CD4 >30%)  Ech Clin=Echec Clinique (WHO Stade IV diagnoses)  RS=Rupture de stock  Gros=Grossesse  Hop=Patient a été hospitalisé  Arg=Manque d'argent  Alt=Thérapies alternatives  Suiv=Manque de rendez-vous  Pref=Préférence du patient</td>
@@ -2199,7 +2199,7 @@
 					<template>
 						<tr bgcolor="{color}" class="checkboxGroup">
 							<span>
-								<obsgroup groupingConceptId="160741">
+								<obsgroup groupingConceptId="{conceptgroup}">
 									<div id="{id}_div">
 										<td>{drugname}<span class="arv1_div" style="display: none">
 										<obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/>
@@ -2214,11 +2214,11 @@
 						</tr>
 						
 					</template>
-					<render concept="CIEL:75948" drugname="Ethambutol" id="ethambutol" color="#D8D8D8"/>
-					<render concept="CIEL:78280" drugname="Isoniazide (INH)" id="isoniazide" color="#FFFFFF"/>
-					<render concept="CIEL:82900" drugname="Pyrazinamide" id="pyrazinamide" color="#D8D8D8"/>
-					<render concept="CIEL:767" drugname="Rifampicine" id="rifampicine" color="#FFFFFF"/>
-					<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" color="#D8D8D8"/>
+					<render concept="CIEL:75948" drugname="Ethambutol" id="ethambutol" conceptgroup="439f0405-b70b-49a9-8c32-66b39b3186bd" color="#D8D8D8"/>
+					<render concept="CIEL:78280" drugname="Isoniazide (INH)" id="isoniazide" conceptgroup="fee8bd39-2a95-47f9-b1f5-3f9e9b3ee959" color="#FFFFFF"/>
+					<render concept="CIEL:82900" drugname="Pyrazinamide" id="pyrazinamide" conceptgroup="ee73ed0f-8fd5-4a3e-be10-c12cef9672e8" color="#D8D8D8"/>
+					<render concept="CIEL:767" drugname="Rifampicine" id="rifampicine" conceptgroup="2b2053bd-37f3-429d-be0b-f1f8952fe55e" color="#FFFFFF"/>
+					<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
 				</repeat>
 				<tr>
 					<td colspan="3"><b>Autres traitements</b>
@@ -2230,7 +2230,7 @@
 				
 				<tr bgcolor="{color}" class="checkboxGroup">
 					<span>
-						<obsgroup groupingConceptId="160741">
+						<obsgroup groupingConceptId="{conceptgroup}">
 							<div id="{id}_div">
 								<td>{drugname}<span class="arv1_div" style="display: none">
 								<obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/>
@@ -2245,18 +2245,18 @@
 				</tr>
 				
 				</template>
-				<render concept="CIEL:70245" drugname="Acyclovir" id="acyclovir" color="#D8D8D8"/>
-				<render concept="CIEL:105281" drugname="Cotrimoxazole (TMS)" id="cotrimoxazole" color="#FFFFFF"/>
-				<render concept="CIEL:76488" drugname="Fluconazole" id="fluconazole" color="#D8D8D8"/>
-				<render concept="CIEL:78476" drugname="Ketaconazole" id="ketaconazole" color="#FFFFFF"/>
-				<render concept="CIEL:5841" drugname="Traitement traditionnelle" id="traitement_trad" color="#D8D8D8"/> 
+				<render concept="CIEL:70245" drugname="Acyclovir" id="acyclovir" conceptgroup="137fc1c1-84b9-4cbc-97a3-124835f29866" color="#D8D8D8"/>
+				<render concept="CIEL:105281" drugname="Cotrimoxazole (TMS)" id="cotrimoxazole" conceptgroup="ace97bb2-35d8-4195-ad08-edfee78f1ec2" color="#FFFFFF"/>
+				<render concept="CIEL:76488" drugname="Fluconazole" id="fluconazole" conceptgroup="1c4f7da3-2d64-4c58-aad5-16d7eafa53a0" color="#D8D8D8"/>
+				<render concept="CIEL:78476" drugname="Ketaconazole" id="ketaconazole" conceptgroup="1152e548-2161-43ab-94fa-76bf3d327b3a" color="#FFFFFF"/>
+				<render concept="CIEL:5841" drugname="Traitement traditionnelle" id="traitement_trad" conceptgroup="0e545872-74fe-4a54-8e9f-6ee86262f28f" color="#D8D8D8"/> 
 				</repeat>
 	
 				<repeat>
 					<template>
 						<tr bgcolor="{color}" class="checkboxGroup"><!-- Attente d'un concept group -->
 						 	<span>
-							 	<obsgroup groupingConceptId="160741">
+							 	<obsgroup groupingConceptId="{conceptgroup}">
 							 		<div id="{id}_div">
 										<td>{drugname}<span class="arv1_div" style="display: none">
 										<obs conceptId="CIEL:1282" id="{id}" answerConceptId="{concept}" defaultValue="{concept}" answerLabel="{drugname}"/>
@@ -2271,7 +2271,7 @@
 							</span>
 						</tr>
 					</template>
-					<render concept="CIEL:5622" drugname="Autres, préciser :" id="autres_traitement_arv" color="#FFFFFF"/>
+					<render concept="CIEL:5622" drugname="Autres, préciser :" id="autres_traitement_arv" conceptgroup="9da0ca77-d4fa-4689-8f14-e358f4d60f6a" color="#FFFFFF"/>
 				</repeat>
 			</table>	
 		</td>
