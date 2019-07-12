@@ -1863,11 +1863,11 @@
 		</table>
 	</section>
 <br></br>
-<section headerLabel="AUTRES DIAGNOSTICS">
+<section headerLabel="AUTRES DIAGNOSTIQUES">
 		<table>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -1886,7 +1886,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -1905,7 +1905,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -1924,7 +1924,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
