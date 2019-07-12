@@ -1767,7 +1767,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="b4c4f7fd-61cd-4c06-89f7-a40478501011">
+												<obsgroup groupingConceptId="73da2a29-a035-41b5-8891-717ba99a3081">
 													<span class="titre" ch-target="#cacher31">
 														<obs conceptId="CIEL:1284" class="master" id="id30"
 															answerConceptId="CIEL:129251" answerLabel="Pré éclampsie [O14.90], "
@@ -2085,7 +2085,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="619f7b60-5262-4b32-ae55-155276817987">
 													<span class="titre" ch-target="#cacher45" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id44"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2109,7 +2109,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="c3a487ce-80d1-4939-bce1-49bb32a55332">
 													<span class="titre" ch-target="#cacher46" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id45"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2133,7 +2133,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="560f7cd7-0e07-4bd7-b268-de0db9e249b8">
 													<span class="titre" ch-target="#cacher47" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id46"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2146,7 +2146,7 @@
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
 													</span>
-														<br />
+														<br/>
 													<span id="primary">
 														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 															answerLabels="Primaire,Secondaire" style="radio" />
@@ -2588,7 +2588,7 @@
 									<tr>
 										<td>1</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="68c79da3-7261-4e32-9a8b-85288fbef43b">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
 											</obsgroup>
@@ -2597,7 +2597,7 @@
 									<tr>
 										<td>2</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="0092abda-de8d-4564-9d16-7bda84b78bc5">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
 											</obsgroup>
@@ -2606,7 +2606,7 @@
 									<tr>
 										<td>3</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="d4231f0f-92aa-4f28-9534-0d726d436b98">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
 											</obsgroup>
@@ -2615,7 +2615,7 @@
 									<tr>
 										<td>4</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="99f42a2a-cba7-4baf-822f-1be8ece88705">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
 											</obsgroup>
@@ -2624,7 +2624,7 @@
 									<tr>
 										<td>5</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="46cd375f-4324-4fde-b01f-1ec2342f29ca">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												showCommentField="true" commentFieldLabel="" />
 											</obsgroup>
