@@ -976,7 +976,7 @@
 										Date 1
 										<obs conceptId="CIEL:160715" allowTime="false" />
 									</obsgroup>
-									<obsgroup groupingConceptId="8d4e82af-b278-4cc7-ad4a-f74865f63239">
+									<obsgroup groupingConceptId="3904edb1-e1ba-46de-a2fd-da11076f29b5">
 										<span style="display:none">
 											<obs conceptId="CIEL:1651" id="indication2"
 												answerConceptId="CIEL:1171" answerLabel="ATCD de Césarienne"
@@ -1096,7 +1096,7 @@
 										</tr>
 									</obsgroup>
 								</template>
-								<render concept="CIEL:782" drugname="Hépatite B" id="hepatiteb"
+								<render concept="120157b7-a596-4623-8f7d-960fd686fb67" drugname="Hépatite B" id="hepatiteb"
 									color="#D8D8D8" />
 								<render concept="CIEL:84879" drugname="Tétanos Texoïde"
 									id="texoide" color="#FFFFFF" />
@@ -2590,7 +2590,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="a80a56f6-614e-4945-a748-675297d5bbfe">
 													<span class="titre" ch-target="#cacher30" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id29"
 															answerConceptId="CIEL:6033" answerLabel="Pathologie rénale, "
@@ -2613,7 +2613,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="73da2a29-a035-41b5-8891-717ba99a3081">
 													<span class="titre" ch-target="#cacher31" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id30"
 															answerConceptId="CIEL:129251" answerLabel="Pré éclampsie [O14.90], "
@@ -2658,7 +2658,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="1dfb560d-6627-441e-a8e2-d1517b51c8b4">
 													<span class="titre" ch-target="#cacher33" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id32"
 															answerConceptId="CIEL:129211"
@@ -2770,7 +2770,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="b148cd09-496d-4a97-8cd5-75500f2d684f">
+												<obsgroup groupingConceptId="30d2b9eb-0a2f-4b0a-9ae9-31476ec13ed6">
 													<span class="titre" ch-target="#cacher38" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id37"
 															answerConceptId="CIEL:112141"
@@ -2905,7 +2905,7 @@
 										<tr><td><b>Autres</b></td></tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="619f7b60-5262-4b32-ae55-155276817987">
 													<span class="titre" ch-target="#cacher44" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id43"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2929,7 +2929,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="c3a487ce-80d1-4939-bce1-49bb32a55332">
 													<span class="titre" ch-target="#cacher45" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id44"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2953,7 +2953,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="560f7cd7-0e07-4bd7-b268-de0db9e249b8">
 													<span class="titre" ch-target="#cacher46" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id45"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2977,7 +2977,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="54179a82-5497-425d-b93d-3279bdbe332f">
 													<span class="titre" ch-target="#cacher47" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id46"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -3294,7 +3294,7 @@
 							<legend>
 								<b>Vaccination</b>
 							</legend>
-							<obsgroup groupingConceptId="120157b7-a596-4623-8f7d-960fd686fb67">
+							<obsgroup groupingConceptId="1c4998b1-b6db-4fda-aa8c-7c0f0de25135">
 								<obs conceptId="CIEL:984" answerConceptId="17"
 									answerLabel="DT/Tétanos toxoïde" />
 								<obs conceptId="CIEL:984" answerConceptId="782" answerLabel="Hépatite B" />
@@ -3311,7 +3311,7 @@
 									
 										<td>1</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="68c79da3-7261-4e32-9a8b-85288fbef43b">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -3323,7 +3323,7 @@
 									
 										<td>2</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="0092abda-de8d-4564-9d16-7bda84b78bc5">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -3335,7 +3335,7 @@
 									
 										<td>3</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="d4231f0f-92aa-4f28-9534-0d726d436b98">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -3347,7 +3347,7 @@
 									
 										<td>4</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="99f42a2a-cba7-4baf-822f-1be8ece88705">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -3359,7 +3359,7 @@
 									
 										<td>5</td>
 										<td>
-											<obsgroup groupingConceptId="CIEL:1442">
+											<obsgroup groupingConceptId="46cd375f-4324-4fde-b01f-1ec2342f29ca">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
