@@ -190,7 +190,7 @@
 				<repeat>
 				
 				<template>
-						<obsgroup groupingConceptId="160593">
+						<obsgroup groupingConceptId="{concept_group}">
 							<tr>
 									<td>
 									<obs conceptId="{concept}" />
@@ -218,19 +218,18 @@
 						</obsgroup>
 			</template>
 			
-			<render concept="CIEL:160750" id="id1"/>
-			<render concept="CIEL:160750" id="id2"/>
-			<render concept="CIEL:160750" id="id3"/>
-			<render concept="CIEL:160750" id="id4"/>
-			<render concept="CIEL:160750" id="id5"/>
-			<render concept="CIEL:160750" id="id6"/>
-			<render concept="CIEL:160750" id="id7"/>
-			<render concept="CIEL:160750" id="id8"/>
-			<render concept="CIEL:160750" id="id9"/>
-			<render concept="CIEL:160750" id="id10"/>
+			<render concept="CIEL:160750" id="id1" concept_group="1bdf65c8-36ec-4136-a6c9-4f9f12229352" />
+			<render concept="CIEL:160750" id="id2" concept_group="c4c62e6e-d42a-4547-81ad-51d628d21780" />
+			<render concept="CIEL:160750" id="id3" concept_group="f251619e-216b-4bb6-9958-e13f394ae624" />
+			<render concept="CIEL:160750" id="id4" concept_group="b7edfe16-db8e-436c-9cd5-52104e4da2b3" />
+			<render concept="CIEL:160750" id="id5" concept_group="52ebfb85-1cf4-4781-8284-7d2684125dd7" />
+			<render concept="CIEL:160750" id="id6" concept_group="ae57f93c-75a6-4f2b-a3f9-e7932814f1ea" />
+			<render concept="CIEL:160750" id="id7" concept_group="38fac7ce-1f10-4f91-acea-ed1b7e2e5f03" />
+			<render concept="CIEL:160750" id="id8" concept_group="abf1a12c-96fc-4067-83bf-0bc799e1bc4e" />
+			<render concept="CIEL:160750" id="id9" concept_group="f741b700-11b7-4266-b088-b3b3e0f66951" />
+			<render concept="CIEL:160750" id="id10" concept_group="7cf65c5c-f50d-4a36-aa59-8f1f67df3731" />
 			</repeat>
 		</table>
-		
 	</section>
 	<section headerLabel="NIVEAU D'ÉTUDE">
 		<obs conceptId="CIEL:1712"
@@ -277,7 +276,7 @@
 						</tr>
 						<repeat>
 							<template>
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="{conceptgroup}">
 									<tr>
 										<td>
 											<obs conceptId="CIEL:1728" answerConceptId="{concept}"
@@ -290,35 +289,35 @@
 								</obsgroup>
 							</template>
 							<render concept="CIEL:163471" drugname="Angoisse" id="angoisse"
-								color="#D8D8D8" /> <!--New concept added -->
+								conceptgroup="f88abb0d-47bd-4dc7-a801-c895b479093c" color="#D8D8D8" /> <!--New concept added -->
 							<render concept="CIEL:118764" drugname="Troubles de l'alimentation"
-								id="troubles_alimentation" color="#FFFFFF" />
+								id="troubles_alimentation" conceptgroup="68a816a5-3918-4f52-a238-d33b5524ee0e" color="#FFFFFF" />
 							<render concept="CIEL:121543" drugname="Anxiété" id="anxiete"
-								color="#D8D8D8" />
+								conceptgroup="08079f5b-6b76-4095-a484-25e05e4ec41f" color="#D8D8D8" />
 							<render concept="CIEL:163470" drugname="auto-accusation"
-								id="auto_accusation" color="#FFFFFF" /><!-- New concept added -->
+								id="auto_accusation" conceptgroup="e5d3b234-99be-48ee-a351-df07c5f47cf3" color="#FFFFFF" /><!-- New concept added -->
 							<render concept="CIEL:156280" drugname="Se sentir énervé"
-								id="enerve" color="#D8D8D8" />
+								id="enerve" conceptgroup="bb87b6d6-a963-4257-ba21-130df09efd27" color="#D8D8D8" />
 							<render concept="CIEL:110540" drugname="Pleurs excessifs"
-								id="pleurs_excessif" color="#FFFFFF" />
+								id="pleurs_excessif" conceptgroup="18702bfb-b61a-41cc-bc98-8416cccd4ba3" color="#FFFFFF" />
 							<render concept="CIEL:119574" drugname="Délire" id="delire"
-								color="#D8D8D8" />
+								conceptgroup="54a0a76d-61d8-4180-ac25-902a6be3e5ac" color="#D8D8D8" />
 							<render concept="CIEL:155891" drugname="Deni (mécanisme de défense mentale)"
-								id="deni" color="#FFFFFF" />
+								id="deni" conceptgroup="9619592c-a619-4c73-aa2b-26e997c630b2" color="#FFFFFF" />
 							<render concept="CIEL:119544" drugname="Toxicomanie" id="toxicomanie"
-								color="#D8D8D8" />
+								conceptgroup="958c472f-4012-4941-923d-2dfca78af232" color="#D8D8D8" />
 							<render concept="CIEL:163472" drugname="Haine" id="haine"
-								color="#FFFFFF" /><!-- New concept added -->
+								conceptgroup="647eb89c-e4c1-4cf1-9ac9-09849e80a147" color="#FFFFFF" /><!-- New concept added -->
 							<render concept="CIEL:139146" drugname="Hallucinations"
-								id="hallucinations" color="#D8D8D8" />
+								id="hallucinations" conceptgroup="3a6e912b-2552-4699-b445-8c585769a875" color="#D8D8D8" />
 							<render concept="CIEL:163473" drugname="Honte" id="honte"
-								color="#FFFFFF" /> <!-- New concept added -->
+								conceptgroup="778118d9-0027-460d-be78-19efa5870427" color="#FFFFFF" /> <!-- New concept added -->
 							<render concept="CIEL:125562" drugname="Pensées suicidaires"
-								id="pensees_suicidaires" color="#D8D8D8" />
+								id="pensees_suicidaires" conceptgroup="581a04f6-210f-4c1c-ab0c-0c342954f528" color="#D8D8D8" />
 							<render concept="CIEL:112930" drugname="Troubles du sommeil"
-								id="troubles_sommeil" color="#FFFFFF" />
+								id="troubles_sommeil" conceptgroup="a262999a-69a0-405e-9fab-85269c1608c3" color="#FFFFFF" />
 							<render concept="CIEL:126311" drugname="Isolation sociale"
-								id="isolation_sociale" color="#D8D8D8" />
+								id="isolation_sociale" conceptgroup="9928319d-f8aa-4aea-9652-6fdbae73b15a" color="#D8D8D8" />
 
 						</repeat>
 					</table>
@@ -331,7 +330,7 @@
 						</tr>
 						<repeat>
 							<template>
-								<obsgroup groupingConceptId="1727">
+								<obsgroup groupingConceptId="{conceptgroup}">
 									<tr>
 										<td>
 											<obs conceptId="CIEL:1728" answerConceptId="{concept}"
@@ -344,39 +343,39 @@
 								</obsgroup>
 							</template>
 							<render concept="CIEL:163474" drugname="Perte d'intérêt"
-								id="perte_intérêt" color="#FFFFFF" /><!-- New concept added -->
+								id="perte_intérêt" conceptgroup="815c5227-1d07-41dc-b163-aa62a7970e58" color="#FFFFFF" /><!-- New concept added -->
 							<render concept="CIEL:163475" drugname="Perte de l'estime de soi"
-								id="perte_estime" color="#D8D8D8" /><!-- NEw concept added -->
+								id="perte_estime" conceptgroup="d999795c-86e5-4dda-9e01-3c8f1fa017bb" color="#D8D8D8" /><!-- NEw concept added -->
 							<render concept="CIEL:140487" drugname="Humeur craintive"
-								id="humeur" color="#D8D8D8" />
+								id="humeur" conceptgroup="9eda89fd-663f-4c1d-82a4-35e8ecdc21bf" color="#D8D8D8" />
 							<render concept="CIEL:114164" drugname="Phobie" id="phobie"
-								color="#FFFFFF" />
+								conceptgroup="e5644641-c001-4406-8050-57b2b9597abe" color="#FFFFFF" />
 							<render concept="CIEL:140472" drugname="Se sentir désesperer"
-								id="sentir_desesperer" color="#D8D8D8" />
+								id="sentir_desesperer" conceptgroup="bbd41862-7bbb-45c3-9840-6a5b4b4f3630" color="#D8D8D8" />
 							<render concept="CIEL:163490" drugname="Regret" id="regret"
-								color="#FFFFFF" />
+								conceptgroup="9bf8b035-c0aa-4152-a7e2-0cc2d8db1583" color="#FFFFFF" />
 							<render concept="CIEL:125811" drugname="Stress" id="stress"
-								color="#D8D8D8" />
+								conceptgroup="40c6be94-b03e-4c34-ae31-8bba8d1ba020" color="#D8D8D8" />
 							<render concept="CIEL:112412" drugname="Comportement suicidaire"
-								id="comportement_suicidaire" color="#FFFFFF" />
+								id="comportement_suicidaire" conceptgroup="3bdd58a3-1b70-427c-a3e4-ae49efe771e0" color="#FFFFFF" />
 							<render concept="CIEL:121712" drugname="Alcoolisme" id="alcoolisme"
-								color="#D8D8D8" />
+								conceptgroup="14f76cc4-73e7-4cda-9d05-4e370773586f" color="#D8D8D8" />
 							<render concept="CIEL:152722" drugname="Fumeur" id="fumeur"
-								color="#FFFFFF" />
+								conceptgroup="a9e3807f-7ed8-419a-8abe-c9f2bc0fb7e5" color="#FFFFFF" />
 							<render concept="CIEL:126580" drugname="Trouble sexuel"
-								id="trouble_sexuel" color="#D8D8D8" />
+								id="trouble_sexuel" conceptgroup="66e17b32-2ea4-4a96-90a0-f9a57c31cde4" color="#D8D8D8" />
 							<render concept="CIEL:139521" drugname="Phobie sociale généralisée"
-								id="phobie" color="#FFFFFF" />
+								id="phobie" conceptgroup="4b62f7c0-a69c-4282-bec8-0cac8ab9195f" color="#FFFFFF" />
 							<render concept="CIEL:126307" drugname="Retrait social"
-								id="retrait_social" color="#D8D8D8" />
+								id="retrait_social" conceptgroup="afbcfe5b-ad88-40d8-a81b-dd218d9d23f0" color="#D8D8D8" />
 							<render concept="CIEL:6023" drugname="IRRITABILITÉ" id="irritabilite"
-								color="#FFFFFF" />
+								conceptgroup="f954221c-3003-4960-b02c-89366ea4113e" color="#FFFFFF" />
 							<render concept="CIEL:137646" drugname="Discours Incoherent"
-								id="discours" color="#D8D8D8" />
+								id="discours" conceptgroup="ab2e8f89-485a-48f1-aa80-c435c26fc547" color="#D8D8D8" />
 							<render concept="CIEL:141611" drugname="Humeur dysphorique"
-								id="humeur_dysphorique" color="#FFFFFF" />
+								id="humeur_dysphorique" conceptgroup="8ad88660-9dd1-4fca-a9e3-ed7ab072df32" color="#FFFFFF" />
 						</repeat>
-						<obsgroup groupingConceptId="1727">
+						<obsgroup groupingConceptId="0671685b-ced1-459f-b31d-fa851985d117">
 									<tr>
 										<td>
 											<obs conceptId="CIEL:1728" answerConceptId="5622"
@@ -387,7 +386,7 @@
 										</td>
 									</tr>
 						</obsgroup>
-						<obsgroup groupingConceptId="1727">
+						<obsgroup groupingConceptId="f995cbc5-be5e-40c5-8ed0-ced72101e17f">
 									<tr>
 										<td>
 											<obs conceptId="CIEL:1728" answerConceptId="5622"

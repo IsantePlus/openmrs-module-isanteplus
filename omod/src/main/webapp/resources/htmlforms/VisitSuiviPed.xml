@@ -739,12 +739,41 @@
 		} else {
 		setValue('acyclovir.value', '70245');
 		}
-		if ((getValue('cotrimoxazole_end.value') == '') &amp;&amp;
+		
+		if ((getValue('azythromycin_end.value') == '') &amp;&amp;
+		(getValue('azythromycin_current.value') != '159367')) {
+		setValue('azythromycin.value', '');
+		} else {
+		setValue('azythromycin.value', '71780');
+		}
+		if ((getValue('clarythromycin_start.value') == '') &amp;&amp;
+		(getValue('clarythromycin_end.value') == '') &amp;&amp;
+		(getValue('clarythromycin_current.value') != '159367')) {
+		setValue('clarythromycin.value', '');
+		} else {
+		setValue('clarythromycin.value', '73498');
+		}
+		if ((getValue('cotrimoxazole_ind_start.value') == '') &amp;&amp;
+		(getValue('cotrimoxazole_ind_end.value') == '') &amp;&amp;
+		(getValue('cotrimoxazole_ind_current.value') != '159367')) {
+		setValue('cotrimoxazole_ind.value', '');
+		} else {
+		setValue('cotrimoxazole_ind.value', '882');
+		}
+		if ((getValue('cotrimoxazole_autre_start.value') == '') &amp;&amp;
+		(getValue('cotrimoxazole_autre_end.value') == '') &amp;&amp;
+		(getValue('cotrimoxazole_autre_current.value') != '159367')) {
+		setValue('cotrimoxazole_autre.value', '');
+		} else {
+		setValue('cotrimoxazole_autre.value', '5622');
+		}
+		
+		/*if ((getValue('cotrimoxazole_end.value') == '') &amp;&amp;
 		(getValue('cotrimoxazole_current.value') != '159367')) {
 		setValue('cotrimoxazole.value', '');
 		} else {
 		setValue('cotrimoxazole.value', '105281');
-		}
+		}*/
 		if ((getValue('fluconazole_end.value') == '') &amp;&amp;
 		(getValue('fluconazole_current.value') != '159367')) {
 		setValue('fluconazole.value', '');
@@ -2404,11 +2433,11 @@
 		</table>
 	</section>
 	
-	<section headerLabel="AUTRES DIAGNOSTICS">
+	<section headerLabel="AUTRES DIAGNOSTIQUES">
 		<table>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -2427,7 +2456,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -2446,7 +2475,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -2465,7 +2494,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -2486,6 +2515,58 @@
 	</section>
 	<section headerLabel="COMMENTAIRES">
 		<obs conceptId="CIEL:163322" rows="5" cols="90" />
+	</section>
+	
+	<section headerLabel="MÉDICAMENTS : ALLERGIES">
+		<obs conceptId="CIEL:160643" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="Oui,Non,Inconnu" style="radio" />
+		&#160;&#160;Si Oui, préciser <br/>
+		
+		<obs conceptId="CIEL:160643" answerConceptId="CIEL:139994" answerLabel="Aliments, préciser:" showCommentField="true" commentFieldLabel="" /><br/>
+		<obs conceptId="CIEL:160643" answerConceptId="CIEL:5622" answerLabel="Autres, préciser:" showCommentField="true" commentFieldLabel="" /><br/>
+		<obs conceptId="CIEL:160643" answerConceptId="CIEL:141760" answerLabel="Médicaments, préciser:" /><br/>
+		
+		<table>
+			<tr><td style="border:0px;"></td>
+			<td style="border:0px;">Type de Réaction</td><td style="border:0px;"></td><td style="border:0px;"></td><td style="border:0px;"></td><td style="border:0px;"></td>
+			<td style="border:0px;"></td><td style="border:0px;"></td></tr>
+			<tr>
+				<td><b>Nom du médicament :</b></td>
+				<td><b>Erup</b></td><td><b>ErupF</b></td>
+				<td><b>Pap</b></td><td><b>SJ</b></td><td><b>Anaph</b></td><td><b>Autre</b></td>
+			</tr>
+			<repeat>
+				<template>
+					<obsgroup groupingConceptId="{conceptgroup}">
+						<tr>
+							<td><obs conceptId="{concept}" id="{id}"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:512" answerLabel="" id="{id}_erup"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:156083" answerLabel="" id="{id}_erupf"/></td>
+							<td>
+							<!-- 111061 replaced by 130908-->
+							<obs conceptId="CIEL:160646" answerConceptId="CIEL:130908" answerLabel="" id="{id}_pap"/>
+							
+							</td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:125886" answerLabel="" id="{id}_sj"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:148888" answerLabel="" id="{id}_anaph"/></td>
+							<td><obs conceptId="CIEL:160646" answerConceptId="CIEL:5622" answerLabel="" id="{id}_other"/></td>
+						</tr>
+					</obsgroup>
+				</template>
+				<render concept="CIEL:160632" id="drug_1" conceptgroup="c5e4b458-41cf-4d17-aa7a-6dfc00482198" />
+				<render concept="CIEL:160632" id="drug_2" conceptgroup="09f30ecb-b6e8-4e44-9adc-e27bdf07b081" />
+				<render concept="CIEL:160632" id="drug_3" conceptgroup="6639a971-43ca-4baf-89b6-194ab3597ebd" />
+			</repeat>	
+		
+		</table>
+		<!-- Autre réaction, préciser : <obs conceptId="CIEL:160644" /> -->
+		<table>
+			<tr>
+				<td><b>CODE : RÉACTION</b></td><td><b>Erup</b>=Eruptions sans fièvre<br/>  <b>Pap</b>=Papules</td>
+				<td><b>ErupF</b>=Eruptions avec fièvre<br/><b>SJ</b>=Stevens Johnson</td>
+				<td><b>Anaph</b>=Choc Anaphylaxique</td>
+				
+			</tr>
+		</table>
 	</section>
 
 	<section headerLabel="TRAITEMENT ARV EN COURS"> <!-- A verifier sur utilisation du concept -->
@@ -3142,8 +3223,15 @@
 							</template>
 							<render concept="CIEL:70245" drugname="Acyclovir" id="acyclovir"
 								conceptgroup="137fc1c1-84b9-4cbc-97a3-124835f29866" color="#D8D8D8" />
-							<render concept="CIEL:105281" drugname="Cotrimoxazole (TMS)"
-								id="cotrimoxazole" conceptgroup="ace97bb2-35d8-4195-ad08-edfee78f1ec2" color="#FFFFFF" />
+							<render concept="CIEL:71780" drugname="Azythromycin, indication de la prophylaxie du MAC" 
+							id="azythromycin" conceptgroup="ac9fb855-6326-4c81-b55b-6bf053ec7088" color="#FFFFFF"/>
+							<render concept="CIEL:73498" drugname="Clarythromycin" 
+							id="clarythromycin" conceptgroup="52849bc9-412f-48e0-9afc-166e5720de66" color="#D8D8D8"/>
+							 <render concept="CIEL:882" drugname="Cotrimoxazole (TMS), indication de la prophylaxie du PCP" 
+							 id="cotrimoxazole_ind" conceptgroup="a4411b68-deab-430e-8c4c-4f80486b6f3b" color="#FFFFFF"/>
+				 			<render concept="CIEL:5622" drugname="Cotrimoxazole (TMS), autre indication" 
+				 			id="cotrimoxazole_autre" conceptgroup="22a20dd8-fbc9-4040-af3c-1a8fb2c6f9f7" color="#D8D8D8"/>
+							
 							<render concept="CIEL:76488" drugname="Fluconazole" id="fluconazole"
 								conceptgroup="1c4f7da3-2d64-4c58-aad5-16d7eafa53a0" color="#D8D8D8" />
 							<render concept="CIEL:78476" drugname="Ketaconazole" id="ketaconazole"

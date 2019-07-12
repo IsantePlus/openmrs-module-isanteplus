@@ -339,10 +339,10 @@
 											</span>
 										</obsgroup>
 										<br />
-										<obsgroup groupingConceptId="d4c71b0e-3c8e-4613-ab0b-2dbedf726994">
+										<obsgroup groupingConceptId="cc8df5ed-7f7a-4c39-ae6c-d292c46c3034">
 											<span id="symptomE">
 												<obs conceptId="CIEL:1728" id="symptome"
-													answerConceptId="CIEL:163465" answerLabel="Diarrhée" />
+													answerConceptId="CIEL:142412" answerLabel="Diarrhée" />
 											</span>
 											<span id="symptompresente" style="display: none">
 												<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065"
@@ -371,9 +371,9 @@
 					<table width="100%" height="100%">
 						<tr>
 							<td class="checkboxGroup">
-								<obsgroup groupingConceptId="16e2f3d9-579c-4731-8b9b-5ff7a53b0c89">
+								<obsgroup groupingConceptId="271a5ab5-131d-45c9-9415-b0dcedb418c7">
 									<span id="symptomK">
-										<obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:163282"
+										<obs conceptId="CIEL:1728" id="symptomk" answerConceptId="CIEL:140238"
 											answerLabel="Fièvre" />
 									</span>
 									<span id="symptompresentk" style="display: none">

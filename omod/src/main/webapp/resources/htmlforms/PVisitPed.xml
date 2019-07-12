@@ -1388,10 +1388,9 @@
 		<tr>
 			<td valign="TOP" width="45%">
 				<section headerLabel="TESTS SEROLOGIQUES">
-					<!--<obsgroup groupingConceptId="162085"> -->
 					<table width="100%">
 						<tr>
-							<td><!-- A verifier with James (Autres concepts -->
+							<td>
 								<tr>
 									<td>
 										<td>Âge</td>
@@ -1402,7 +1401,7 @@
 									<td>
 										<td colspan="2" width="50%">Tests rapides</td>
 										<td width="50%">
-											Résultat (Ind=Indeterminé) <!-- demande d'ajout dans le groupe 1361 -->
+											Résultat (Ind=Indeterminé) 
 										</td>
 									</td>
 								</tr>
@@ -3488,11 +3487,11 @@
 			</tr>
 		</table>
 	</section>
-	<section headerLabel="AUTRES DIAGNOSTICS">
+	<section headerLabel="AUTRES DIAGNOSTIQUES">
 		<table>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3511,7 +3510,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3530,7 +3529,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3549,7 +3548,7 @@
 			</tr>
 			<tr>
 				<td>
-					<obsgroup groupingConceptId="CIEL:159947">
+					<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3854,14 +3853,14 @@
 				</obsgroup>
 				</template>
 				<render concept="CIEL:70245" drugname="Acyclovir" id="acyclovir" conceptgroup="137fc1c1-84b9-4cbc-97a3-124835f29866" color="#D8D8D8"/>
-				<!-- Need concept group for the two <render concept="CIEL:71780" drugname="Azythromycin, indication de la prophylaxie du MAC" id="azythromycin" conceptgroup="ace97bb2-35d8-4195-ad08-edfee78f1ec2" color="#FFFFFF"/> -->
-				<!-- <render concept="CIEL:73498" drugname="Clarythromycin" id="clarythromycin" conceptgroup="ace97bb2-35d8-4195-ad08-edfee78f1ec2s" color="#D8D8D8"/> -->
+				<render concept="CIEL:71780" drugname="Azythromycin, indication de la prophylaxie du MAC" id="azythromycin" conceptgroup="ac9fb855-6326-4c81-b55b-6bf053ec7088" color="#FFFFFF"/>
+				<render concept="CIEL:73498" drugname="Clarythromycin" id="clarythromycin" conceptgroup="52849bc9-412f-48e0-9afc-166e5720de66" color="#D8D8D8"/>
 				<render concept="CIEL:105281" drugname="Cotrimoxazole (TMS)" id="cotrimoxazole" conceptgroup="ace97bb2-35d8-4195-ad08-edfee78f1ec2" color="#FFFFFF"/>
 				<render concept="CIEL:76488" drugname="Fluconazole" id="fluconazole" conceptgroup="1c4f7da3-2d64-4c58-aad5-16d7eafa53a0" color="#D8D8D8"/>
 				<render concept="CIEL:78476" drugname="Ketaconazole" id="ketaconazole" conceptgroup="1152e548-2161-43ab-94fa-76bf3d327b3a" color="#FFFFFF"/>
 				<render concept="CIEL:5841" drugname="Traitement traditionnelle" id="traitement_trad" conceptgroup="0e545872-74fe-4a54-8e9f-6ee86262f28f" color="#D8D8D8"/> 
 				</repeat>
-			<!--   need concept group for these -->	
+			
 				<repeat>
 				<template>
 				<obsgroup groupingConceptId="{conceptgroup}">
@@ -3876,8 +3875,8 @@
 				</tr>
 				</obsgroup>
 				</template>
-				<!--  <render concept="CIEL:882" drugname="Cotrimoxazole (TMS), indication de la prophylaxie du PCP" id="cotrimoxazole_ind" conceptgroup="" color="#FFFFFF"/>-->
-				<!--  <render concept="CIEL:5622" drugname="Cotrimoxazole (TMS), autre indication" id="cotrimoxazole_autre" conceptgroup="" color="#D8D8D8"/>-->
+				 <render concept="CIEL:882" drugname="Cotrimoxazole (TMS), indication de la prophylaxie du PCP" id="cotrimoxazole_ind" conceptgroup="a4411b68-deab-430e-8c4c-4f80486b6f3b" color="#FFFFFF"/>
+				 <render concept="CIEL:5622" drugname="Cotrimoxazole (TMS), autre indication" id="cotrimoxazole_autre" conceptgroup="22a20dd8-fbc9-4040-af3c-1a8fb2c6f9f7" color="#D8D8D8"/>
 				</repeat>
 				
 				<repeat>
