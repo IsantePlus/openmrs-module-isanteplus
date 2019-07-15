@@ -899,7 +899,7 @@
 									style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="abac_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="abac_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="abac_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -946,7 +946,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg/ 150mg BID" id="comb_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="comb_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="comb_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="comb_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -992,7 +992,7 @@
 							<obs conceptId="CIEL:1444" answers="400mg tablette" id="did_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="did_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="did_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="did_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1038,7 +1038,7 @@
 							<obs conceptId="CIEL:1444" answers="200mg" id="emt_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="emt_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="emt_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="emt_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1085,7 +1085,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="lam_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="lam_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="lam_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1132,7 +1132,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="sta_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="sta_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="sta_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1179,7 +1179,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="tri_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="tri_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="tri_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1226,7 +1226,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="zid_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="zid_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="zid_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1272,7 +1272,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg" id="ten_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="ten_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="ten_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="ten_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1325,7 +1325,7 @@
 									style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="efa_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="efa_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="efa_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1373,7 +1373,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="nev_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="nev_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="nev_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1419,7 +1419,7 @@
 							<obs conceptId="CIEL:1444" answers="200mg BID" id="etravirine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="etravirine_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="etravirine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="etravirine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1473,7 +1473,7 @@
 									style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="lop_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="lop_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="lop_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1522,7 +1522,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="nelf_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="nelf_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="nelf_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1568,7 +1568,7 @@
 							<obs conceptId="CIEL:1444" answers="200mg" id="saq_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="saq_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="saq_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="saq_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1616,7 +1616,7 @@
 								style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="rit_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="rit_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="rit_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1669,7 +1669,7 @@
 								<obs conceptId="CIEL:1444" answers="400mg 1co BID" id="raltegravir_dosage" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="raltegravir_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="raltegravir_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="raltegravir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1717,7 +1717,7 @@
 							<obs conceptId="CIEL:1444" answers="50mg qd" id="dolutegravir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="dolutegravir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="dolutegravir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="dolutegravir_nbj_prescrit"/> 
@@ -1763,7 +1763,7 @@
 							<obs conceptId="CIEL:1444" answers="150mg qd" id="elviltegravir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="elviltegravir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="elviltegravir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="elviltegravir_nbj_prescrit"/> 
@@ -1821,7 +1821,7 @@
 								<obs conceptId="CIEL:1444" id="posologie2" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie2bis" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie2bis" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="asp_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1864,7 +1864,7 @@
 								<obs conceptId="CIEL:1444" id="posologieDiclofenac" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie_diclofenac" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_diclofenac" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="dicl_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1907,7 +1907,7 @@
 								<obs conceptId="CIEL:1444" id="posologieIbuprofene" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie_ibuprofene" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_ibuprofene" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="ibu_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1950,7 +1950,7 @@
 								<obs conceptId="CIEL:1444" id="posologieParacetamol" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie_paracetamol" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_paracetamol" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="para_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2003,7 +2003,7 @@
 								<obs conceptId="CIEL:1444" id="posologie6" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie6bis" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie6bis" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="amox_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2047,7 +2047,7 @@
 							<obs conceptId="CIEL:1444" id="posologie7" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie7bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie7bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="cipr_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2090,7 +2090,7 @@
 							<obs conceptId="CIEL:1444" id="posologie_amoxac" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie_amoxacbis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_amoxacbis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="amoxac_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2133,7 +2133,7 @@
 							<obs conceptId="CIEL:1444" id="posologie9" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie9bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie9bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="azit_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2179,7 +2179,7 @@
 							<obs conceptId="CIEL:1444" id="posologie_cotrimoxazole" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie_cotrimoxazole_bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_cotrimoxazole_bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="cotrim_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2222,7 +2222,7 @@
 							<obs conceptId="CIEL:1444" id="posologie10" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie10bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie10bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="eryt_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2265,7 +2265,7 @@
 							<obs conceptId="CIEL:1444" id="posologie8" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie8bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie8bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="clar_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2314,7 +2314,7 @@
 								<obs conceptId="CIEL:1444" id="posologie14" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie14bis" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie14bis" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="amph_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2358,7 +2358,7 @@
 							<obs conceptId="CIEL:1444" id="posologie15" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie15bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie15bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="fluc_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2401,7 +2401,7 @@
 							<obs conceptId="CIEL:1444" id="posologie16" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie16bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie16bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="itra_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2444,7 +2444,7 @@
 							<obs conceptId="CIEL:1444" id="posologie17" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie17bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie17bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="keta_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2487,7 +2487,7 @@
 							<obs conceptId="CIEL:1444" id="posologie18" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie18bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie18bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="mico_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2530,7 +2530,7 @@
 							<obs conceptId="CIEL:1444" id="posologie19" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie19bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie19bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="nys_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2579,7 +2579,7 @@
 								<obs conceptId="CIEL:1444" id="posologie20" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie20bis" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie20bis" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="alb_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2623,7 +2623,7 @@
 							<obs conceptId="CIEL:1444" id="posologie21" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie21bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie21bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="chlo_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2666,7 +2666,7 @@
 							<obs conceptId="CIEL:1444" id="posologie22" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie22bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie22bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="iver_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2709,7 +2709,7 @@
 							<obs conceptId="CIEL:1444" id="posologie_mebendazole" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie_mebendazolebis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_mebendazolebis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="meben_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2752,7 +2752,7 @@
 							<obs conceptId="CIEL:1444" id="posologie11" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie11bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie11bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="metro_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2795,7 +2795,7 @@
 							<obs conceptId="CIEL:1444" id="posologie23" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie23bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie23bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="prima_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2838,7 +2838,7 @@
 							<obs conceptId="CIEL:1444" id="posologie24" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie24bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie24bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="pyri_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2881,7 +2881,7 @@
 							<obs conceptId="CIEL:1444" id="posologie25" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie25bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie25bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="quin_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2924,7 +2924,7 @@
 							<obs conceptId="CIEL:1444" id="posologie26" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie26bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie26bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="sulf_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -2972,7 +2972,7 @@
 							<obs conceptId="CIEL:1444" id="posologie27" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie27bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie27bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="eth_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3018,7 +3018,7 @@
 							<obs conceptId="CIEL:1444" id="posologie_isoniazide" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie_isoniazide_bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie_isoniazide_bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="ison_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3061,7 +3061,7 @@
 							<obs conceptId="CIEL:1444" id="posologie28" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie28bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie28bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="pyr_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3104,7 +3104,7 @@
 							<obs conceptId="CIEL:1444" id="posologie29" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie29bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie29bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="rif_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3147,7 +3147,7 @@
 							<obs conceptId="CIEL:1444" id="posologie30" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie30bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie30bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="strep_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3196,7 +3196,7 @@
 								<obs conceptId="CIEL:1444" id="posologie31" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="posologie31bis" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie31bis" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="acf_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3240,7 +3240,7 @@
 							<obs conceptId="CIEL:1444" id="posologie32" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie32bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie32bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="bcom_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3283,7 +3283,7 @@
 							<obs conceptId="CIEL:1444" id="posologie33" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie33bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie33bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="fer_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3326,7 +3326,7 @@
 							<obs conceptId="CIEL:1444" id="posologie34" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie34bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie34bis" />
 						</td>
 						<td>
 
@@ -3374,7 +3374,7 @@
 							<obs conceptId="CIEL:1444" id="posologie36" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie36bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie36bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="supp_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3423,7 +3423,7 @@
 							<obs conceptId="CIEL:1444" id="posologie38" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie38bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie38bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="acy_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3466,7 +3466,7 @@
 							<obs conceptId="CIEL:1444" id="posologie39" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie39bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie39bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="lope_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3509,7 +3509,7 @@
 							<obs conceptId="CIEL:1444" id="posologie40" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="posologie40bis" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="posologie40bis" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="pro_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3555,7 +3555,7 @@
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -3596,7 +3596,7 @@
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" />
@@ -3636,7 +3636,7 @@
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" />
@@ -3676,7 +3676,7 @@
 							<obs conceptId="CIEL:1444" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" />
