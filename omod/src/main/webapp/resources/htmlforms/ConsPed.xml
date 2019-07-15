@@ -509,7 +509,7 @@
 							</tr>
 							<repeat>
 								<template>
-									<obsgroup groupingConceptId="f0584ab8-6e58-415a-87c0-cd41bf43d554">
+									<obsgroup groupingConceptId="160741AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
 										<tr bgcolor="{color}">
 											<td>
 												{drugname}
@@ -1581,7 +1581,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="e1c63328-643a-4387-a0b1-0b3c5432e970">
+												<obsgroup groupingConceptId="3969465a-1c50-44d1-9bff-b58b3e182f1a">
 													<span class="titre" ch-target="#cacher7" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id6"
 															answerConceptId="CIEL:134723" answerLabel="Malnutrition aigue légère [263.1]" />
@@ -2548,7 +2548,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="5777e77f-5cd1-49b9-877b-817aad011b3b">
 													<span class="titre" ch-target="#cacher51" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id48"
 															answerConceptId="CIEL:131115" answerLabel="Otite, "
@@ -2572,7 +2572,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="3ea37139-104b-4402-b922-10649f2bb18c">
 													<span class="titre" ch-target="#cacher52" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id49"
 															answerConceptId="CIEL:119525" answerLabel="Mycose cutanée [111.9], "
@@ -2981,7 +2981,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="2b97f41a-587e-4afa-83ba-33fb1094219a">
 													<span class="titre" ch-target="#cacher69" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id66"
 															answerConceptId="CIEL:146623" answerLabel="Brûlure [T30.0], "
@@ -3074,7 +3074,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
-												<obsgroup groupingConceptId="CIEL:159947">
+												<obsgroup groupingConceptId="a5adb862-1ac9-47f5-9ca2-97f9238d6d73">
 													<span class="titre" ch-target="#cacher73" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id70"
 															answerConceptId="CIEL:159328" answerLabel="Plaie, "
