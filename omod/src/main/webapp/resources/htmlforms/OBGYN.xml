@@ -2416,15 +2416,14 @@
 
 			<div>
 				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div7">SURVEILLANCE
+					<div href="#read" class="toggle-button" data-target="#div9">SURVEILLANCE
 						DU TRAITEMENT(TB)</div>
 				</a>
-				<div id="div7" class="togglable" style="display:none">
+				<div id="div9" class="togglable" style="display:none">
 					<fieldset>
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
-								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
@@ -2844,9 +2843,9 @@
 			</div>
 			<div>
 				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div9">AUTRE PLAN</div>
+					<div href="#read" class="toggle-button" data-target="#div11">AUTRE PLAN</div>
 				</a>
-				<div id="div9" class="togglable" style="display:none">
+				<div id="div11" class="togglable" style="display:none">
 					<fieldset>
 						<fieldset>
 							<legend>
