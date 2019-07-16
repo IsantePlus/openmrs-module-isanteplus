@@ -99,6 +99,11 @@
 		display: inline-block;
 		}
 		
+		.sansbordure
+		{
+			border: 0;
+		}
+		
 	</style>
 
 	<script type="text/javascript">
@@ -356,94 +361,92 @@
 	<script type="text/javascript">
 	beforeSubmit.push(function() {
 
-		/*if ((getValue('asthme1.value') != null) ||
+		if ((getValue('asthme1.value') != null) ||
 		(getValue('asthme2.value') != null) ||
 		(getValue('asthme3.value') != null)) {
 			setValue('asthme.value', '140234');
 		}
-		else{ setValue('asthme.value', ''); }
 		
 		if ((getValue('cancer1.value') != null) ||
 		(getValue('cancer2.value') != null) ||
 		(getValue('cancer3.value') != null)) {
 			setValue('cancer.value', '151521');
 		}
-		else{setValue('cancer.value', '');}
 		
 		if ((getValue('cardiopathie1.value') != null) ||
 		(getValue('cardiopathie2.value') != null) ||
 		(getValue('cardiopathie3.value') != null)) {
 			setValue('cardiopathie.value', '163114');
 		}
-		else{setValue('cardiopathie.value', '');}
-		
-		if ((getValue('tuberculose1.value') != null) ||
-		(getValue('tuberculose2.value') != null) ||
-		(getValue('tuberculose3.value') != null)) {
-			setValue('tuberculose.value', '152460');
-		}
-		else{setValue('tuberculose.value', '152460');}
 		
 		if ((getValue('diabete1.value') != null) ||
 		(getValue('diabete2.value') != null) ||
 		(getValue('diabete3.value') != null)) {
 			setValue('diabete.value', '140228');
 		}
-		else{setValue('diabete.value', '');}
 		
 		if ((getValue('epilepsie1.value') != null) ||
 		(getValue('epilepsie2.value') != null) ||
 		(getValue('epilepsie3.value') != null)) {
 			setValue('epilepsie.value', '152450');
 		}
-		else{setValue('epilepsie.value', '');}
 		
 		if ((getValue('hta1.value') != null) ||
 		 (getValue('hta2.value') != null) ||
 		 (getValue('hta3.value') != null)) {
 			setValue('hta.value', '151927');
 		}
-		else{setValue('hta.value', '');}
+		
+		if ((getValue('tuberculose1.value') != null) ||
+		(getValue('tuberculose2.value') != null) ||
+		(getValue('tuberculose3.value') != null)) {
+			setValue('tuberculose.value', '152460');
+		}
 		
 		if ((getValue('mdr1.value') != null) || 
 		(getValue('mdr2.value') != null) ||
 		 (getValue('mdr3.value') != null)) {
 			setValue('mdr.value', '164102');
 		}
-		else{setValue('mdr.value', '');}
-		*/
 		
-		if (getValue('asthme1.value') != null){setValue('asthme_a.value', '140234');}
-		if (getValue('asthme2.value') != null){setValue('asthme_b.value', '140234');}
-		if (getValue('asthme3.value') != null){setValue('asthme_c.value', '140234');}
+		//Debut bacilloscopie
+		if ((getValue('bacidate1.value') != '') ||
+		(getValue('bacipoids1.value') != '') ||
+		(getValue('bacilloscopie1.value') == '703') ||
+		(getValue('bacilloscopie1.value') == '664')) {
+			setValue('bacimois1.value', '0');
+		}
+	
+		if ((getValue('bacidate2.value') != '') ||
+		(getValue('bacipoids2.value') != '') ||
+		(getValue('bacilloscopie2.value') == '703') ||
+		(getValue('bacilloscopie2.value') == '664')) {
+			setValue('bacimois2.value', '2');
+		}
 		
-		if (getValue('cancer1.value') != null){setValue('cancer_a.value', '151521');}
-		if (getValue('cancer2.value') != null){setValue('cancer_b.value', '151521');}
-		if (getValue('cancer3.value') != null){setValue('cancer_c.value', '151521');}
+		if ((getValue('bacidate3.value') != '') ||
+		(getValue('bacipoids3.value') != '') ||
+		(getValue('bacilloscopie3.value') == '703') ||
+		(getValue('bacilloscopie3.value') == '664')) {
+			setValue('bacimois3.value', '3');
+		}
 		
-		if (getValue('cardiopathie1.value') != null){setValue('cardiopathie_a.value', '163114');}
-		if (getValue('cardiopathie2.value') != null){setValue('cardiopathie_b.value', '163114');}
-		if (getValue('cardiopathie3.value') != null){setValue('cardiopathie_c.value', '163114');}
 		
-		if (getValue('tuberculose1.value') != null){setValue('tuberculose_a.value', '152460');}
-		if (getValue('tuberculose2.value') != null){setValue('tuberculose_b.value', '152460');}
-		if (getValue('tuberculose3.value') != null){setValue('tuberculose_c.value', '152460');}
+		if ((getValue('bacidate4.value') != '') ||
+		(getValue('bacipoids4.value') != '') ||
+		(getValue('bacilloscopie4.value') == '703') ||
+		(getValue('bacilloscopie4.value') == '664')) {
+			setValue('bacimois4.value', '5');
+		}
 		
-		if (getValue('diabete1.value') != null) {setValue('diabete_a.value', '140228');}
-		if (getValue('diabete2.value') != null) {setValue('diabete_b.value', '140228');}
-		if (getValue('diabete3.value') != null) {setValue('diabete_c.value', '140228');}
+		if ((getValue('bacidate5.value') != '') ||
+		(getValue('bacipoids5.value') != '') ||
+		(getValue('bacilloscopie5.value') == '703') ||
+		(getValue('bacilloscopie5.value') == '664')) {
+			setValue('bacimois5.value', 'Fin de rx');
+		}
 		
-		if (getValue('epilepsie1.value') != null){setValue('epilepsie_a.value', '152450');}
-		if (getValue('epilepsie2.value') != null){setValue('epilepsie_b.value', '152450');}
-		if (getValue('epilepsie3.value') != null){setValue('epilepsie_c.value', '152450');}
-		
-		if (getValue('hta1.value') != null){setValue('hta_a.value', '151927');}
-		if (getValue('hta2.value') != null){setValue('hta_b.value', '151927');}
-		if (getValue('hta3.value') != null){setValue('hta_c.value', '151927');}
-		
-		if (getValue('mdr1.value') != null){setValue('mdr_a.value', '164102');}
-		if (getValue('mdr2.value') != null){setValue('mdr_b.value', '164102');}
-		if (getValue('mdr3.value') != null){setValue('mdr_c.value', '164102');}
+		//Fin bacilloscopie
 		
 		
 		return true;
@@ -573,67 +576,203 @@
 						<obs conceptId="CIEL:163607" answerConceptIds="CIEL:163729,CIEL:163728"
 							answerLabels="Aucune, Inconnu" style="radio" /><br/><br/>
 								<table>
-												<tr>
-													
-														<th></th>
-														<th>Mère</th>
-														<th>Père</th>
-														<th>Frère/Sœur</th>
-													
-												</tr>
-													<repeat>
-													<template>
-														
-															<tr>
-																<td>
-																	
-																		<p>
-																			{conceptname}
-																			<!--  <div style="display: none"> 
-																				<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}"  answerLabel="{conceptname}" />
-																			 </div>-->
-																		</p>
-																		<td>
-																			<obsgroup groupingConceptId="CIEL:160593">
-																				<div style="display: none"> 
-																					<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}_a"  answerLabel="{conceptname}" />
-																			 	</div>
-																				<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="{id}1" answerLabel="" />
-																			</obsgroup>
-																		</td>
-																		<td>
-																			<obsgroup groupingConceptId="CIEL:160593">
-																				<div style="display: none"> 
-																					<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}_b"  answerLabel="{conceptname}" />
-																			 	</div>
-																				<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="{id}2" answerLabel="" />
-																			</obsgroup>
-																		</td>
-																		<td>
-																			<obsgroup groupingConceptId="CIEL:160593">
-																				<div style="display: none"> 
-																					<obs conceptId="CIEL:160592" answerConceptId="{concept}" id="{id}_c"  answerLabel="{conceptname}" />
-																				 </div>
-																				<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="{id}3" answerLabel="" />
-																			</obsgroup>
-																		</td>
-																	 
-																</td>
-															</tr>
-														
-														</template>
-														<render concept="CIEL:140234" conceptname="Asthme" id="asthme" />
-														<render concept="CIEL:151521" conceptname="Cancer" id="cancer" />
-														<render concept="CIEL:163114" conceptname="Cardiopathie" id="cardiopathie" />
-														<render concept="CIEL:152460" conceptname="Tuberculose" id="tuberculose" />
-														<render concept="CIEL:140228" conceptname="Diabète" id="diabete" />
-														<render concept="CIEL:152450" conceptname="Epilepsie" id="epilepsie" />
-														<render concept="CIEL:151927" conceptname="HTA" id="hta" />
-														<render concept="CIEL:164102" conceptname="MDR TB" id="mdr" />
-													</repeat>
+									<tr>		
+												<td class="sansbordure"></td>
+												<td class="sansbordure"></td>
+												<td class="sansbordure"></td>
+												<td>Mère</td>
+												<td>Père</td>
+												<td>Frère/Sœur</td>
+												<td class="sansbordure"></td>
+												<td class="sansbordure"></td>
+												<td class="sansbordure"></td>
+												<td>Mère</td>
+												<td>Père</td>
+												<td>Frère/Sœur</td>
+											
+									</tr>
+									<tr>
+										<td class="sansbordure">
+											<obsgroup groupingConceptId="50f7bb2d-09e2-4ac1-9679-f6f171bae7ae">
+												<td class="sansbordure">
+														<td class="sansbordure">
+															Asthme
+															<span style="display: none">
+															<obs conceptId="CIEL:160592" answerConceptId="CIEL:140234" id="asthme" answerLabel="Asthme" />
+															</span>
+														</td>
+														<td>
+															<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="asthme1" answerLabel=""/>
+														</td>
+														<td>
+															<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="asthme2" answerLabel="" />
+														</td>
+														<td>
+															<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="asthme3" answerLabel="" />
+														</td>
+												</td>
+											</obsgroup>
+										</td>
+										<td class="sansbordure">
+											<obsgroup groupingConceptId="41bd1e8c-298f-4878-a094-369a298d64ab">
+											<td class="sansbordure">
+												<td class="sansbordure">
+													Diabète
+													<span style="display: none">
+														<obs conceptId="CIEL:160592" answerConceptId="CIEL:140228" id="diabete" answerLabel="Diabète" />
+													</span>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="diabete1" answerLabel=""/>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="diabete2" answerLabel="" />
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="diabete3" answerLabel="" />
+												</td>
+											</td>
+										</obsgroup>
+										</td>
+									</tr>
+									<tr>
+										<td class="sansbordure">
+											<obsgroup groupingConceptId="2e3667fc-09e3-48f8-8aeb-9a02fac8b472">
+												<td class="sansbordure">
+													<td class="sansbordure">
+														<span>
+															<obs conceptId="CIEL:160592" answerConceptId="CIEL:151521" id="cancer" answerLabel="Cancer" showCommentField="true" commentFieldLabel=", précisez"/>
+														</span>
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="cancer1" answerLabel="" />
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="cancer2" answerLabel="" />
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="cancer3" answerLabel="" />
+													</td>
+												</td>
+											 </obsgroup>
+										 </td>
+										 <td class="sansbordure">
+										 	 <obsgroup groupingConceptId="fe686c52-a77b-4aee-8110-85d2897f6bd1">
+										 	<td class="sansbordure">
+												<td class="sansbordure">
+													Epilepsie
+													<span style="display: none">
+														<obs conceptId="CIEL:160592" answerConceptId="CIEL:152450" id="epilepsie" answerLabel="Epilepsie" />
+													</span>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="epilepsie1" answerLabel=""/>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="epilepsie2" answerLabel="" />
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="epilepsie3" answerLabel="" />
+												</td>
+											</td>
+										</obsgroup>
+										 </td>
+									</tr>
+									<tr>
+										<td class="sansbordure">
+											<obsgroup groupingConceptId="c168326c-31b6-4f99-8a7c-c5124336d673">
+												<td class="sansbordure">
+													<td class="sansbordure">
+														Cardiopathie
+														<span style="display: none">
+															<obs conceptId="CIEL:160592" answerConceptId="CIEL:163114" id="cardiopathie" answerLabel="Cardiopathie" />
+														</span>
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="cardiopathie1" answerLabel="" />
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="cardiopathie2" answerLabel="" />
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="cardiopathie3" answerLabel=""/>
+													</td>
+												</td>
+											</obsgroup>
+										</td>
+										<td class="sansbordure">
+											<obsgroup groupingConceptId="f0748bfb-1465-4d6c-89f1-c631f46c1510">
+											<td class="sansbordure">
+												<td class="sansbordure">
+													HTA
+													<span style="display: none">
+														<obs conceptId="CIEL:160592" answerConceptId="CIEL:151927" id="hta" answerLabel="HTA" />
+													</span>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="hta1" answerLabel="" />
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="hta2" answerLabel="" />
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="hta3" answerLabel="" />
+												</td>
+											</td>
+										</obsgroup>
 										
-								</table><br/>
-								Autres: <obs conceptId="CIEL:162148" rows="1" cols="50" />
+										</td>
+										
+									</tr>
+									<tr>
+										<td class="sansbordure">
+										<obsgroup groupingConceptId="CIEL:160593">
+											<td class="sansbordure">
+												<td class="sansbordure">
+													Tuberculose
+													<span style="display: none">
+														<obs conceptId="CIEL:160592" answerConceptId="CIEL:152460" id="tuberculose" answerLabel="Tuberculose" />
+													</span>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="tuberculose1" answerLabel=""/>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="tuberculose2" answerLabel=""/>
+												</td>
+												<td>
+													<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="tuberculose3" answerLabel="" />
+												</td>
+											</td>
+										</obsgroup>
+										</td>
+									
+										<td class="sansbordure">
+											<obsgroup groupingConceptId="07766a1b-fe6c-444a-9b53-c1a381bcc771">
+												<td class="sansbordure">
+												  	<td class="sansbordure">
+														MDR TB
+														<span style="display: none">
+															<obs conceptId="CIEL:160592" answerConceptId="CIEL:164102" id="mdr"  answerLabel="" />
+														</span>
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:970" id="mdr1" answerLabel="" />
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:971" id="mdr2" answerLabel="" />
+													</td>
+													<td>
+														<obs conceptId="CIEL:1560" answerConceptId="CIEL:972" id="mdr3" answerLabel="" />
+													</td>
+												</td>
+											</obsgroup>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="12">Autres: <obs conceptId="CIEL:162148" rows="1" cols="50" /></td>
+									</tr>
+								</table>
 					</fieldset>
 				</div>
 			</div>
@@ -669,7 +808,7 @@
 														answerLabel="Asthme" />
 												</obsgroup>
 												<br />
-												<obsgroup groupingConceptId="f2521e56-6922-40f7-85c1-70541a8305d9">
+												<obsgroup groupingConceptId="53e0d1c2-3df5-4ab9-9b5c-d492fc22fd08">
 													<obs conceptId="CIEL:1628" answerConceptId="CIEL:151286"
 														answerLabel="Cancer" showCommentField="true" commentFieldLabel=", précisez" />
 												</obsgroup>
@@ -3239,32 +3378,111 @@
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
-								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
 								<th>Poids (kg)</th>
-								
 							</tr>
 							<tr>
-								<td>
-									<obsgroup groupingConceptId="7ae17faf-5935-46f2-a1fb-88e51b65480e">
-										<td>
-												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois1" answerLabel="0,2,3,5,Fin de rx" style="radio" />
-											
-										</td>
-										<td>
-											<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-												id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:5089" id="bacipoids1" />
-										</td>
-									</obsgroup>
-								</td>
+
+								<obsgroup groupingConceptId="c2c7db51-d427-4c21-9655-ae9ee604c81c">
+									<td>
+										0
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois1" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids1" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="be7a27bb-2dcd-4bff-b696-ccdbbd2d3192">
+									<td>
+										2
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois2" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie2" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids2" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="fdd9d953-004a-4e9a-ab93-9afaa0e090fa">
+									<td>
+										3
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois3" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie3" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids3" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="224546bb-03da-4793-9ef6-3d42adc5b353">
+									<td>
+										5
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois4" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie4" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids4" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="7ae17faf-5935-46f2-a1fb-88e51b65480e">
+									<td>
+										Fin de rx
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois5" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie5" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids5" />
+									</td>
+								</obsgroup>
 							</tr>
 						</table>
 					</fieldset>

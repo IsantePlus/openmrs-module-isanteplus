@@ -2788,31 +2788,110 @@
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
-								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
 								<th>Poids (kg)</th>
 							</tr>
 							<tr>
-								<td>
-									<obsgroup groupingConceptId="7ae17faf-5935-46f2-a1fb-88e51b65480e">
-										<td>
-												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois1" answerLabel="0,2,3,5,Fin de rx" style="radio" />
-											
-										</td>
-										<td>
-											<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-												id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:5089" id="bacipoids1" />
-										</td>
-									</obsgroup>
-								</td>
+								<obsgroup groupingConceptId="c2c7db51-d427-4c21-9655-ae9ee604c81c">
+									<td>
+										0
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois1" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids1" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="be7a27bb-2dcd-4bff-b696-ccdbbd2d3192">
+									<td>
+										2
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois2" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie2" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids2" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="fdd9d953-004a-4e9a-ab93-9afaa0e090fa">
+									<td>
+										3
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois3" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie3" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids3" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="224546bb-03da-4793-9ef6-3d42adc5b353">
+									<td>
+										5
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois4" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie4" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids4" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="7ae17faf-5935-46f2-a1fb-88e51b65480e">
+									<td>
+										Fin de rx
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois5" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie5" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids5" />
+									</td>
+								</obsgroup>
 							</tr>
 						</table>
 					</fieldset>

@@ -697,7 +697,7 @@
 									id="abac_dosage" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="abac_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="abac_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="abac_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -745,7 +745,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg/ 150mg BID" id="comb_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="comb_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="comb_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="comb_nbj_prescrit"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -791,7 +791,7 @@
 							<obs conceptId="CIEL:1444" answers="EC 400mg qd" id="didanosine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="didanosine_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="didanosine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="didanosine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -837,7 +837,9 @@
 							<obs conceptId="CIEL:1444" answers="200mg qd" id="emtricitabine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="emtricitabine_dosage_alt" />
+							<!--  <obs conceptId="CIEL:1444" id="emtricitabine_dosage_alt" /> -->
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="emtricitabine_dosage_alt" />
+							
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="emtricitabine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -883,7 +885,8 @@
 							<obs conceptId="CIEL:1444" answers="150mg BID" id="lamivudine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="lamivudine_dosage_alt" />
+							<!--  <obs conceptId="CIEL:1444" id="lamivudine_dosage_alt" /> -->
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="lamivudine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="lamivudine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -929,7 +932,7 @@
 							<obs conceptId="CIEL:1444" answers="40mg BID" id="stavudine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="stavudine_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="stavudine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="stavudine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -975,7 +978,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg qd" id="tenofovir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="tenofovir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="tenofovir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="tenofovir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1022,7 +1025,7 @@
 								id="trizivir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="trizivir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="trizivir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="trizivir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1068,7 +1071,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg BID" id="zidovudine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="zidovudine_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="zidovudine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="zidovudine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1120,7 +1123,7 @@
 								<obs conceptId="CIEL:1444" answers="600mg qd" id="efavirenz_dosage" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="efavirenz_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="efavirenz_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="efavirenz_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1167,7 +1170,7 @@
 							<obs conceptId="CIEL:1444" answers="200mg BID" id="nevirapine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="nevirapine_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="nevirapine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="nevirapine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1213,7 +1216,7 @@
 							<obs conceptId="CIEL:1444" answers="200mg BID" id="etravirine_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="etravirine_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="etravirine_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="etravirine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1265,7 +1268,7 @@
 								<obs conceptId="CIEL:1444" answers="400mg qd" id="atazanavir_dosage" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="atazanavir_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="atazanavir_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="atazanavir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1312,7 +1315,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg/ 100mg qd" id="atazanavirRtv_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="atazanavirRtv_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="atazanavirRtv_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="atazanavirRtv_nbj_prescrit"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1358,7 +1361,7 @@
 							<obs conceptId="CIEL:1444" answers="800mg TID" id="indinavir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="indinavir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="indinavir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="indinavir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1404,7 +1407,7 @@
 							<obs conceptId="CIEL:1444" answers="400mg/ 100mg BID" id="lopinavir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="lopinavir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="lopinavir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="lopinavir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1450,7 +1453,7 @@
 							<obs conceptId="CIEL:1444" answers="300mg 2co BID" id="darunavir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="darunavir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="darunavir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="darunavir_nbj_prescrit"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1502,7 +1505,7 @@
 								<obs conceptId="CIEL:1444" answers="400mg 1co BID" id="raltegravir_dosage" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" id="raltegravir_dosage_alt" />
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="raltegravir_dosage_alt" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:159368" id="raltegravir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
@@ -1550,7 +1553,7 @@
 							<obs conceptId="CIEL:1444" answers="50mg qd" id="dolutegravir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="dolutegravir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="dolutegravir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="dolutegravir_nbj_prescrit"/> 
@@ -1596,7 +1599,7 @@
 							<obs conceptId="CIEL:1444" answers="150mg qd" id="elviltegravir_dosage" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" id="elviltegravir_dosage_alt" />
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="elviltegravir_dosage_alt" />
 						</td>
 						<td>
 							<obs conceptId="CIEL:159368" id="elviltegravir_nbj_prescrit"/> 

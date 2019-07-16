@@ -229,6 +229,53 @@
 		});
 		}
 	</script>
+	<script type="text/javascript">
+	beforeSubmit.push(function() {
+	//Debut bacilloscopie
+		if ((getValue('bacidate1.value') != '') ||
+		(getValue('bacipoids1.value') != '') ||
+		(getValue('bacilloscopie1.value') == '703') ||
+		(getValue('bacilloscopie1.value') == '664')) {
+			setValue('bacimois1.value', '0');
+		}
+	
+		if ((getValue('bacidate2.value') != '') ||
+		(getValue('bacipoids2.value') != '') ||
+		(getValue('bacilloscopie2.value') == '703') ||
+		(getValue('bacilloscopie2.value') == '664')) {
+			setValue('bacimois2.value', '2');
+		}
+		
+		if ((getValue('bacidate3.value') != '') ||
+		(getValue('bacipoids3.value') != '') ||
+		(getValue('bacilloscopie3.value') == '703') ||
+		(getValue('bacilloscopie3.value') == '664')) {
+			setValue('bacimois3.value', '3');
+		}
+		
+		
+		if ((getValue('bacidate4.value') != '') ||
+		(getValue('bacipoids4.value') != '') ||
+		(getValue('bacilloscopie4.value') == '703') ||
+		(getValue('bacilloscopie4.value') == '664')) {
+			setValue('bacimois4.value', '5');
+		}
+		
+		if ((getValue('bacidate5.value') != '') ||
+		(getValue('bacipoids5.value') != '') ||
+		(getValue('bacilloscopie5.value') == '703') ||
+		(getValue('bacilloscopie5.value') == '664')) {
+			setValue('bacimois5.value', 'Fin de rx');
+		}
+		
+		//Fin bacilloscopie
+		
+	
+		return true;
+		});
+
+	</script>
+	
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>Fiche de Consultation OB-GYN</b>
@@ -2369,15 +2416,14 @@
 
 			<div>
 				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div7">SURVEILLANCE
+					<div href="#read" class="toggle-button" data-target="#div9">SURVEILLANCE
 						DU TRAITEMENT(TB)</div>
 				</a>
-				<div id="div7" class="togglable" style="display:none">
+				<div id="div9" class="togglable" style="display:none">
 					<fieldset>
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
-								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
@@ -2797,9 +2843,9 @@
 			</div>
 			<div>
 				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div9">AUTRE PLAN</div>
+					<div href="#read" class="toggle-button" data-target="#div11">AUTRE PLAN</div>
 				</a>
-				<div id="div9" class="togglable" style="display:none">
+				<div id="div11" class="togglable" style="display:none">
 					<fieldset>
 						<fieldset>
 							<legend>

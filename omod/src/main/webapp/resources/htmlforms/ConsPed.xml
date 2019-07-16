@@ -268,6 +268,46 @@
 		
 
 		// Fin supplementation en vitamine A
+		
+		//Debut bacilloscopie
+		if ((getValue('bacidate1.value') != '') ||
+		(getValue('bacipoids1.value') != '') ||
+		(getValue('bacilloscopie1.value') == '703') ||
+		(getValue('bacilloscopie1.value') == '664')) {
+			setValue('bacimois1.value', '0');
+		}
+	
+		if ((getValue('bacidate2.value') != '') ||
+		(getValue('bacipoids2.value') != '') ||
+		(getValue('bacilloscopie2.value') == '703') ||
+		(getValue('bacilloscopie2.value') == '664')) {
+			setValue('bacimois2.value', '2');
+		}
+		
+		if ((getValue('bacidate3.value') != '') ||
+		(getValue('bacipoids3.value') != '') ||
+		(getValue('bacilloscopie3.value') == '703') ||
+		(getValue('bacilloscopie3.value') == '664')) {
+			setValue('bacimois3.value', '3');
+		}
+		
+		
+		if ((getValue('bacidate4.value') != '') ||
+		(getValue('bacipoids4.value') != '') ||
+		(getValue('bacilloscopie4.value') == '703') ||
+		(getValue('bacilloscopie4.value') == '664')) {
+			setValue('bacimois4.value', '5');
+		}
+		
+		if ((getValue('bacidate5.value') != '') ||
+		(getValue('bacipoids5.value') != '') ||
+		(getValue('bacilloscopie5.value') == '703') ||
+		(getValue('bacilloscopie5.value') == '664')) {
+			setValue('bacimois5.value', 'Fin de rx');
+		}
+		
+		//Fin bacilloscopie
+		
 
 
 		return true;
@@ -509,7 +549,7 @@
 							</tr>
 							<repeat>
 								<template>
-									<obsgroup groupingConceptId="160741AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+									<obsgroup groupingConceptId="{conceptgroup}">
 										<tr bgcolor="{color}">
 											<td>
 												{drugname}
@@ -525,16 +565,15 @@
 									</obsgroup>
 								</template>
 								<render concept="CIEL:86339" drugname="Vitamine A" id="vitaminea"
-									color="#fcfdf5" />
+									conceptgroup="f0584ab8-6e58-415a-87c0-cd41bf43d554" color="#fcfdf5" />
 								<render concept="CIEL:5843" drugname="Fer." id="fer"
-									color="#FFFFFF" />
+									conceptgroup="a436c4cc-9c75-4994-8c25-982de31e6324" color="#FFFFFF" />
 								<render concept="CIEL:78130" drugname="Iode" id="iode"
-									color="#fcfdf5" />
-								<!--A verifier with doc nathaelf -->
+									conceptgroup="1e437bd8-0865-42b4-a62e-ff2f396a76d4" color="#fcfdf5" />
 								<render concept="CIEL:163395" drugname="Déparasitage" id="deparasitage"
-									color="#FFFFFF" />
+									conceptgroup="077bfa73-6180-493d-82ed-dfd224677210" color="#FFFFFF" />
 								<render concept="CIEL:86672" drugname="Zinc" id="zinc"
-									color="#FFFFFF" />
+									conceptgroup="8e7995ef-2c27-402c-80cb-27a9a94eac5b" color="#FFFFFF" />
 							</repeat>
 						</table>
 					</fieldset>
@@ -3448,32 +3487,110 @@
 						RESULTATS DE L’EXPECTORATION
 						<table>
 							<tr>
-								<th></th>
 								<th>Mois</th>
 								<th>Date</th>
 								<th>Bacilloscopie</th>
 								<th>Poids (kg)</th>
-							
 							</tr>
 							<tr>
-								<td>
-									<obsgroup groupingConceptId="7ae17faf-5935-46f2-a1fb-88e51b65480e">
-										<td>
-												<obs conceptId="CIEL:163756" answers="0,2,3,5,Fin de rx" id="bacimois1" answerLabel="0,2,3,5,Fin de rx" style="radio" />
-											
-										</td>
-										<td>
-											<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
-												id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
-										</td>
-										<td>
-											<obs conceptId="CIEL:5089" id="bacipoids1" />
-										</td>
-									</obsgroup>
-								</td>
+								<obsgroup groupingConceptId="c2c7db51-d427-4c21-9655-ae9ee604c81c">
+									<td>
+										0
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois1" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie1" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids1" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="be7a27bb-2dcd-4bff-b696-ccdbbd2d3192">
+									<td>
+										2
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois2" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie2" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids2" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="fdd9d953-004a-4e9a-ab93-9afaa0e090fa">
+									<td>
+										3
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois3" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie3" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids3" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="224546bb-03da-4793-9ef6-3d42adc5b353">
+									<td>
+										5
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois4" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie4" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids4" />
+									</td>
+								</obsgroup>
+							</tr>
+							<tr>
+								<obsgroup groupingConceptId="7ae17faf-5935-46f2-a1fb-88e51b65480e">
+									<td>
+										Fin de rx
+										<span style="display:none">
+											<obs conceptId="CIEL:163756" id="bacimois5" />
+										</span>
+									</td>
+									<td>
+										<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:307" answerConceptIds="CIEL:703,CIEL:664"
+											id="bacilloscopie5" answerLabels="Pos,Neg" style="radio" />
+									</td>
+									<td>
+										<obs conceptId="CIEL:5089" id="bacipoids5" />
+									</td>
+								</obsgroup>
 							</tr>
 						</table>
 					</fieldset>
