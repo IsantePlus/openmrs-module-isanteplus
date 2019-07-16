@@ -1241,7 +1241,7 @@
 							</tr>
 							<repeat>
 								<template>
-									<obsgroup groupingConceptId="1441">
+									<obsgroup groupingConceptId="{conceptgroup}">
 										<tr>
 
 											<td>
@@ -1271,16 +1271,16 @@
 										</tr>
 									</obsgroup>
 								</template>
-								<render concept="120157b7-a596-4623-8f7d-960fd686fb67" drugname="Hépatite B" id="hepatiteb"
-									color="#D8D8D8" />
+								<render concept="CIEL:782" drugname="Hépatite B" id="hepatiteb"
+									conceptgroup="120157b7-a596-4623-8f7d-960fd686fb67" color="#D8D8D8" />
 								<render concept="CIEL:84879" drugname="Tétanos Texoïde"
-									id="texoide" color="#FFFFFF" />
+									id="texoide" conceptgroup="f9e79221-424c-44e9-a23d-3b507d326c32" color="#FFFFFF" />
 								<render concept="CIEL:82215" drugname="Pneumocoque" id="pneumocoque"
-									color="#D8D8D8" />
+									conceptgroup="CIEL:1441" color="#D8D8D8" />
 							</repeat>
 							<repeat>
 								<template>
-									<obsgroup groupingConceptId="1441">
+									<obsgroup groupingConceptId="d2947119-fa79-4903-842d-4b38b9d2856f">
 										<tr>
 											<td>
 												{drugname}
