@@ -2927,12 +2927,18 @@
 							<legend>
 								<b>Vaccination</b>
 							</legend>
-							<obsgroup groupingConceptId="120157b7-a596-4623-8f7d-960fd686fb67">
+							<obsgroup groupingConceptId="CIEL:1421">
 								<obs conceptId="CIEL:984" answerConceptId="162586"
 									answerLabel="RR" />
+							</obsgroup>
+							<obsgroup groupingConceptId="CIEL:1421">
 								<obs conceptId="CIEL:984" answerConceptId="17"
 									answerLabel="DT/Tétanos toxoïde" />
+							</obsgroup>
+							<obsgroup groupingConceptId="CIEL:1421">
 								<obs conceptId="CIEL:984" answerConceptId="782" answerLabel="Hépatite B" />
+							</obsgroup>
+							<obsgroup groupingConceptId="CIEL:1421">
 								<obs conceptId="CIEL:984" answerConceptId="5622"
 									answerLabel="Autre" showCommentField="true" commentFieldLabel="" />
 							</obsgroup>
