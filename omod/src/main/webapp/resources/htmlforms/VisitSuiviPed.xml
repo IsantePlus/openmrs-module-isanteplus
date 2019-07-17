@@ -926,8 +926,8 @@
 					<i>Rapports sexuels sans préservatif</i>
 				</td>
 				<td>
-					<obs conceptId="CIEL:160581" answerConceptId="CIEL:159218"
-						answerLabel="" style="radio" />
+					<obs conceptId="CIEL:159218" answerConceptIds="CIEL:1065,CIEL:1066"
+												answerLabels="Oui,Non" style="radio" />
 				</td>
 			</tr>
 		</table>
