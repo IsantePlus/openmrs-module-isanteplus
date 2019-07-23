@@ -128,7 +128,7 @@ public class IsantePlusFormsFragmentController {
 			if (StringUtils.isNotBlank(patientSex) && patientAge != null && "F".equals(patientSex)) {
 				obygnForms.add(ficheDePremiereConsultationOBGYN);
 				obygnForms.add(ficheDeConsultationOBGYN);
-				if (patientAge > adultStartingAge)
+				/*if (patientAge > adultStartingAge)*/
 					obygnForms.add(ficheDeTravailEtDaccouchement);
 			}
 
