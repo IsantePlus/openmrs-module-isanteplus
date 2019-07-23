@@ -1814,6 +1814,28 @@
 								</td>
 								<td>Neurologique</td>
 							</tr>
+							
+							<tr bgcolor="#D8D8D8" class="checkboxGroup">
+								<td>
+									<span id="normal1">
+										<obs conceptId="a71f7a86-d8a7-4124-9188-2de74a267c40" answerConceptId="CIEL:1115"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="anormal1">
+										<obs conceptId="a71f7a86-d8a7-4124-9188-2de74a267c40" answerConceptId="CIEL:1116"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>
+									<span id="pasconduit1">
+										<obs conceptId="a71f7a86-d8a7-4124-9188-2de74a267c40" answerConceptId="CIEL:1118"
+											answerLabel="" />
+									</span>
+								</td>
+								<td>Autre, préciser</td>
+							</tr>
 						
 							<!-- No mapping code given in PDF or Spreadsheet <tr bgcolor="#D8D8D8" 
 								class="checkboxGroup"> <td><span id="normal1"><obs conceptId="CIEL:1129" 
@@ -2518,7 +2540,8 @@
 	<tr>
 	<td>
 	Est-ce que le patient a déjà utilisé des ARV ? <!-- <obs conceptId="CIEL:160117" answerConceptId="CIEL:160119" answerLabel=""/>-->
-	<obs conceptId="CIEL:160117" answerConceptIds="CIEL:160119, CIEL:160118" answerLabels="Oui, Non" style="radio" /> 
+	<!--  <obs conceptId="CIEL:160117" answerConceptIds="CIEL:160119, CIEL:160118" answerLabels="Oui, Non" style="radio" /> -->
+	<obs conceptId="CIEL:160533" style="yes_no" yesLabel="Oui" noLabel="Non" />
 	 (Sauter à la section Autres traitements précédents)
 	</td>
 	<td>

@@ -36,6 +36,109 @@
 		display: inline-block;
 		}
 	</style>
+	
+	<script type="text/javascript">
+		jQuery(function() {
+		
+			/*End TABLEAU DE NAISSANCE Validation*/
+			
+			jQuery( '#n_vivante_1_1' ).on( 'change', function() {
+			
+				if(getValue('n_vivante_1_1.value') == '151849') {
+					setValue('maceree_1_1.value', '');
+					setValue('foetale_1_1.value', '');
+				}
+			});
+			
+			jQuery( '#maceree_1_1' ).on( 'change', function() {
+			
+				if(getValue('maceree_1_1.value') == '135436') {
+					setValue('n_vivante_1_1.value', '');
+					setValue('foetale_1_1.value', '');
+				}
+			});
+			
+			jQuery( '#foetale_1_1' ).on( 'change', function() {
+			
+				if(getValue('foetale_1_1.value') == '159916') {
+					setValue('n_vivante_1_1.value', '');
+					setValue('maceree_1_1.value', '');
+				}
+			});
+			
+			jQuery( '#n_vivante_1_2' ).on( 'change', function() {
+			
+				if(getValue('n_vivante_1_2.value') == '151849') {
+					setValue('maceree_1_2.value', '');
+					setValue('foetale_1_2.value', '');
+				}
+			});
+			jQuery( '#maceree_1_2' ).on( 'change', function() {
+			
+				if(getValue('maceree_1_2.value') == '135436') {
+					setValue('n_vivante_1_2.value', '');
+					setValue('foetale_1_2.value', '');
+				}
+			});
+			
+			jQuery( '#foetale_1_2' ).on( 'change', function() {
+			
+				if(getValue('foetale_1_2.value') == '159916') {
+					setValue('n_vivante_1_2.value', '');
+					setValue('maceree_1_2.value', '');
+				}
+			});
+			
+			jQuery( '#n_vivante_1_3' ).on( 'change', function() {
+			
+				if(getValue('n_vivante_1_3.value') == '151849') {
+					setValue('maceree_1_3.value', '');
+					setValue('foetale_1_3.value', '');
+				}
+			});
+			jQuery( '#maceree_1_3' ).on( 'change', function() {
+			
+				if(getValue('maceree_1_3.value') == '135436') {
+					setValue('n_vivante_1_3.value', '');
+					setValue('foetale_1_3.value', '');
+				}
+			});
+			
+			jQuery( '#foetale_1_3' ).on( 'change', function() {
+			
+				if(getValue('foetale_1_3.value') == '159916') {
+					setValue('n_vivante_1_3.value', '');
+					setValue('maceree_1_3.value', '');
+				}
+			});
+			
+			jQuery( '#n_vivante_1_4' ).on( 'change', function() {
+			
+				if(getValue('n_vivante_1_4.value') == '151849') {
+					setValue('maceree_1_4.value', '');
+					setValue('foetale_1_4.value', '');
+				}
+			});
+			jQuery( '#maceree_1_4' ).on( 'change', function() {
+			
+				if(getValue('maceree_1_4.value') == '135436') {
+					setValue('n_vivante_1_4.value', '');
+					setValue('foetale_1_4.value', '');
+				}
+			});
+			
+			jQuery( '#foetale_1_4' ).on( 'change', function() {
+			
+				if(getValue('foetale_1_4.value') == '159916') {
+					setValue('n_vivante_1_4.value', '');
+					setValue('maceree_1_4.value', '');
+				}
+			});
+			
+			/*End TABLEAU DE NAISSANCE Validation*/
+		
+		});
+	</script>
 
 	<span style="float:right">Paper Form ID: $paperFormId</span>
 	<h2>Fiche de travail et d'accouchement (v1.0)</h2>
@@ -63,7 +166,7 @@
 		Kg
 	</td>
 	<td colspan="3">
-		&#160;&#160;&#160;Age
+		&#160;&#160;&#160;Age<br/>
 	</td>
 	&#160;&#160;
 	<td colspan="4">
@@ -415,20 +518,28 @@
 							Naissance vivante
 						</td>
 						<td colspan="2">
-							<obs conceptId="159917" answerConceptIds="151849"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="159917" answerConceptId="151849"
+								id="n_vivante_1_1" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="159917" answerConceptIds="151849"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="159917" answerConceptId="151849"
+								id="n_vivante_1_2" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="159917" answerConceptIds="151849"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+							<obs conceptId="159917" answerConceptId="151849"
+								id="n_vivante_1_3" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="159917" answerConceptIds="151849"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="159917" answerConceptId="151849"
+								id="n_vivante_1_4" answerLabel="" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -436,20 +547,28 @@
 							Macérée
 						</td>
 						<td colspan="2">
-							<obs conceptId="159917" answerConceptIds="135436"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="159917" answerConceptId="135436"
+								id="maceree_1_1" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="159917" answerConceptIds="135436"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="159917" answerConceptId="135436"
+									id="maceree_1_2" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="159917" answerConceptIds="135436"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="159917" answerConceptId="135436"
+									id="maceree_1_3" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="159917" answerConceptIds="135436"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="159917" answerConceptId="135436"
+								id="maceree_1_4" answerLabel="" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -457,20 +576,28 @@
 							Mort Foetale Non Macérée
 						</td>
 						<td colspan="2">
-							<obs conceptId="159917" answerConceptIds="159916"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="159917" answerConceptId="159916"
+								id="foetale_1_1" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="159917" answerConceptIds="159916"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="159917" answerConceptId="159916"
+									id="foetale_1_2" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="159917" answerConceptIds="159916"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="159917" answerConceptId="159916"
+									id="foetale_1_3" answerLabel="" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="159917" answerConceptIds="159916"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="159917" answerConceptId="159916"
+								id="foetale_1_4" answerLabel="" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -478,16 +605,24 @@
 							Date et Heure
 						</td>
 						<td colspan="2">
-							<obs conceptId="5599" showTime="true" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="5599" showTime="true" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="5599" showTime="true" />
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="5599" showTime="true" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="5599" showTime="true" />
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="5599" showTime="true" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="5599" showTime="true" />
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="5599" showTime="true" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -495,20 +630,28 @@
 							Mort Néonatale
 						</td>
 						<td colspan="2">
-							<obs conceptId="159917" answerConceptIds="154223"
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="159917" answerConceptIds="154223"
 								answerLabels="" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="159917" answerConceptIds="154223"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="159917" answerConceptIds="154223"
+									answerLabels="" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="159917" answerConceptIds="154223"
-								answerLabels="" style="radio" />
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="159917" answerConceptIds="154223"
+									answerLabels="" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="159917" answerConceptIds="154223"
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="159917" answerConceptIds="154223"
 								answerLabels="" style="radio" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -516,24 +659,32 @@
 							APGAR : 1mn-5mn
 						</td>
 						<td colspan="2">
-							<obs conceptId="159603" />
-							,
-							<obs conceptId="159604" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="159603" />
+								,
+								<obs conceptId="159604" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="159603" />
-							,
-							<obs conceptId="159604" />
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="159603" />
+								,
+								<obs conceptId="159604" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="159603" />
-							,
-							<obs conceptId="159604" />
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="159603" />
+								,
+								<obs conceptId="159604" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="159603" />
-							,
-							<obs conceptId="159604" />
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="159603" />
+								,
+								<obs conceptId="159604" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -541,20 +692,28 @@
 							Poids du (ou des) Nnés :
 						</td>
 						<td colspan="2">
-							<obs conceptId="5916" />
-							kg
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="5916" />
+								kg
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="5916" />
-							kg
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="5916" />
+								kg
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="5916" />
-							kg
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="5916" />
+								kg
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="5916" />
-							kg
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="5916" />
+								kg
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -568,20 +727,28 @@
 							Sexe :
 						</td>
 						<td colspan="2">
-							<obs conceptId="1587" answerConceptIds="1534,1535"
-								answerLabels="Masc.,Fém." style="radio" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="1587" answerConceptIds="1534,1535"
+									answerLabels="Masc.,Fém." style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="1587" answerConceptIds="1534,1535"
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="1587" answerConceptIds="1534,1535"
 								answerLabels="Masc.,Fém." style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="1587" answerConceptIds="1534,1535"
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="1587" answerConceptIds="1534,1535"
 								answerLabels="Masc.,Fém." style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="1587" answerConceptIds="1534,1535"
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="1587" answerConceptIds="1534,1535"
 								answerLabels="Masc.,Fém." style="radio" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -600,20 +767,29 @@
 							Malformation congénitale visible :
 						</td>
 						<td colspan="2">
-							<obs conceptId="143849" answerConceptIds="1065,1066"
-								answerLabels="Oui,Non" style="radio" />
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="143849" answerConceptIds="1065,1066"
+									answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="143849" answerConceptIds="1065,1066"
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="143849" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="143849" answerConceptIds="1065,1066"
+							
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="143849" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="143849" answerConceptIds="1065,1066"
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="143849" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 					</tr>
 					<tr>
@@ -621,20 +797,28 @@
 							Allaitement maternel 1ere heure
 						</td>
 						<td colspan="2">
-							<obs conceptId="163459" answerConceptIds="1065,1066"
+							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
+								<obs conceptId="163459" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="3">
-							<obs conceptId="163459" answerConceptIds="1065,1066"
+							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
+								<obs conceptId="163459" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="4">
-							<obs conceptId="163459" answerConceptIds="1065,1066"
+							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
+								<obs conceptId="163459" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 						<td colspan="5">
-							<obs conceptId="163459" answerConceptIds="1065,1066"
+							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
+								<obs conceptId="163459" answerConceptIds="1065,1066"
 								answerLabels="Oui,Non" style="radio" />
+							</obsgroup>
 						</td>
 					</tr>
 				</table>
@@ -699,6 +883,7 @@
 						Globe Sec.
 					</td>
 				</tr>
+			<obsgroup groupingConceptId="3e76627c-22d9-4cd9-8c7f-d029cd25d7c9">
 				<tr>
 					<td colspan="1">
 						<obs conceptId="162869" showTime="true" />
@@ -730,6 +915,8 @@
 							showCommentField="true" commentFieldLabel="" />
 					</td>
 				</tr>
+			</obsgroup>
+			<obsgroup groupingConceptId="bd768366-2a46-4578-96fb-f26a838b3b83">
 				<tr>
 					<td colspan="1">
 						<obs conceptId="162869" showTime="true" />
@@ -761,6 +948,8 @@
 							showCommentField="true" commentFieldLabel="" />
 					</td>
 				</tr>
+			</obsgroup>
+			<obsgroup groupingConceptId="0658be52-5404-4386-8b7c-d6e68dbee9e8">
 				<tr>
 					<td colspan="1">
 						<obs conceptId="162869" showTime="true" />
@@ -792,6 +981,8 @@
 							showCommentField="true" commentFieldLabel="" />
 					</td>
 				</tr>
+			</obsgroup>
+			<obsgroup groupingConceptId="dff9501f-4aa2-4613-b4b2-6a219edbf3e3">
 				<tr>
 					<td colspan="1">
 						<obs conceptId="162869" showTime="true" />
@@ -823,6 +1014,8 @@
 							showCommentField="true" commentFieldLabel="" />
 					</td>
 				</tr>
+			</obsgroup>
+			<obsgroup groupingConceptId="43d440f5-098a-4c8e-9f77-70bb15b51282">
 				<tr>
 					<td colspan="1">
 						<obs conceptId="162869" showTime="true" />
@@ -854,6 +1047,8 @@
 							showCommentField="true" commentFieldLabel="" />
 					</td>
 				</tr>
+			</obsgroup>
+			<obsgroup groupingConceptId="1079b67e-3b53-41aa-a39a-42c1afd7f13f">
 				<tr>
 					<td colspan="1">
 						<obs conceptId="162869" showTime="true" />
@@ -885,6 +1080,7 @@
 							showCommentField="true" commentFieldLabel="" />
 					</td>
 				</tr>
+				</obsgroup>
 			</table>
 		</section>
 	</td>
@@ -926,109 +1122,115 @@
 	</td>
 	<td valign="TOP">
 		<section headerLabel="EVOLUTION NOUVEAU NE 1">
-			<table class="baseline-aligned">
-				<tr>
-					<td>
-						<obs conceptId="161630" answerConceptId="1623"
-							answerLabel="Référée à la pouponnière ou en suites de couche avec sa maman"
-							style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="161630" answerConceptId="160537"
-							answerLabel="Référée en pédiatrie pour: " />
-						<obs conceptId="1887" answerConceptIds="130497,140343,159908,5622"
-							answerLabels="Détresse respiratoire,Suspicion d'infection materno-foetale,Prématurité,Autre"
-							showCommentField="true" commentFieldLabel=",précisez" style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="160433" answerConceptIds="1692,159,5622"
-							answerLabels="Exéaté,Décédé,Autre" showCommentField="true"
-							commentFieldLabel=", précisez :" style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Méthode d'alimentation choisie à la sortie :
-						<obs conceptId="1151" answerConceptIds="5526,5254,6046"
-							answerLabels="Allaitement maternel exclusif,Préparation pour nourrissons,Alimentation mixte"
-							style="radio" />
-					</td>
-				</tr>
-			</table>
+			<obsgroup groupingConceptId="2c5abadc-7b74-4d9c-8e6a-2179062ce4f7">
+				<table class="baseline-aligned">
+					<tr>
+						<td>
+							<obs conceptId="161630" answerConceptId="1623"
+								answerLabel="Référée à la pouponnière ou en suites de couche avec sa maman"
+								style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<obs conceptId="161630" answerConceptId="160537"
+								answerLabel="Référée en pédiatrie pour: " />
+							<obs conceptId="1887" answerConceptIds="130497,140343,159908,5622"
+								answerLabels="Détresse respiratoire,Suspicion d'infection materno-foetale,Prématurité,Autre"
+								showCommentField="true" commentFieldLabel=",précisez" style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<obs conceptId="160433" answerConceptIds="1692,159,5622"
+								answerLabels="Exéaté,Décédé,Autre" showCommentField="true"
+								commentFieldLabel=", précisez :" style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Méthode d'alimentation choisie à la sortie :
+							<obs conceptId="1151" answerConceptIds="5526,5254,6046"
+								answerLabels="Allaitement maternel exclusif,Préparation pour nourrissons,Alimentation mixte"
+								style="radio" />
+						</td>
+					</tr>
+				</table>
+			</obsgroup>
 		</section>
 		<section headerLabel="EVOLUTION NOUVEAU NE 2">
-			<table class="baseline-aligned">
-				<tr>
-					<td>
-						<obs conceptId="161630" answerConceptId="1623"
-							answerLabel="Référée à la pouponnière ou en suites de couche avec sa maman"
-							style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="161630" answerConceptId="160537"
-							answerLabel="Référée en pédiatrie pour: " />
-						<obs conceptId="1887" answerConceptIds="130497,140343,159908,5622"
-							answerLabels="Détresse respiratoire,Suspicion d'infection materno-foetale,Prématurité,Autre"
-							showCommentField="true" commentFieldLabel=",précisez" style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="160433" answerConceptIds="1692,159,5622"
-							answerLabels="Exéaté,Décédé,Autre" showCommentField="true"
-							commentFieldLabel=", précisez :" style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Méthode d'alimentation choisie à la sortie :
-						<obs conceptId="1151" answerConceptIds="5526,5254,6046"
-							answerLabels="Allaitement maternel exclusif,Préparation pour nourrissons,Alimentation mixte"
-							style="radio" />
-					</td>
-				</tr>
-			</table>
+			<obsgroup groupingConceptId="5e0fdc34-9207-4adb-9f1e-dab4ac41b31d">
+				<table class="baseline-aligned">
+					<tr>
+						<td>
+							<obs conceptId="161630" answerConceptId="1623"
+								answerLabel="Référée à la pouponnière ou en suites de couche avec sa maman"
+								style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<obs conceptId="161630" answerConceptId="160537"
+								answerLabel="Référée en pédiatrie pour: " />
+							<obs conceptId="1887" answerConceptIds="130497,140343,159908,5622"
+								answerLabels="Détresse respiratoire,Suspicion d'infection materno-foetale,Prématurité,Autre"
+								showCommentField="true" commentFieldLabel=",précisez" style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<obs conceptId="160433" answerConceptIds="1692,159,5622"
+								answerLabels="Exéaté,Décédé,Autre" showCommentField="true"
+								commentFieldLabel=", précisez :" style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Méthode d'alimentation choisie à la sortie :
+							<obs conceptId="1151" answerConceptIds="5526,5254,6046"
+								answerLabels="Allaitement maternel exclusif,Préparation pour nourrissons,Alimentation mixte"
+								style="radio" />
+						</td>
+					</tr>
+				</table>
+			</obsgroup>
 		</section>
 		<section headerLabel="EVOLUTION NOUVEAU NE 3">
-			<table class="baseline-aligned">
-				<tr>
-					<td>
-						<obs conceptId="161630" answerConceptId="1623"
-							answerLabel="Référée à la pouponnière ou en suites de couche avec sa maman"
-							style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="161630" answerConceptId="160537"
-							answerLabel="Référée en pédiatrie pour: " />
-						<obs conceptId="1887" answerConceptIds="130497,140343,159908,5622"
-							answerLabels="Détresse respiratoire,Suspicion d'infection materno-foetale,Prématurité,Autre"
-							showCommentField="true" commentFieldLabel=",précisez" style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<obs conceptId="160433" answerConceptIds="1692,159,5622"
-							answerLabels="Exéaté,Décédé,Autre" showCommentField="true"
-							commentFieldLabel=", précisez :" style="radio" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Méthode d'alimentation choisie à la sortie :
-						<obs conceptId="1151" answerConceptIds="5526,5254,6046"
-							answerLabels="Allaitement maternel exclusif,Préparation pour nourrissons,Alimentation mixte"
-							style="radio" />
-					</td>
-				</tr>
-			</table>
+			<obsgroup groupingConceptId="6e32f438-a515-42d9-a896-ed2974b099fe">
+				<table class="baseline-aligned">
+					<tr>
+						<td>
+							<obs conceptId="161630" answerConceptId="1623"
+								answerLabel="Référée à la pouponnière ou en suites de couche avec sa maman"
+								style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<obs conceptId="161630" answerConceptId="160537"
+								answerLabel="Référée en pédiatrie pour: " />
+							<obs conceptId="1887" answerConceptIds="130497,140343,159908,5622"
+								answerLabels="Détresse respiratoire,Suspicion d'infection materno-foetale,Prématurité,Autre"
+								showCommentField="true" commentFieldLabel=",précisez" style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<obs conceptId="160433" answerConceptIds="1692,159,5622"
+								answerLabels="Exéaté,Décédé,Autre" showCommentField="true"
+								commentFieldLabel=", précisez :" style="radio" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Méthode d'alimentation choisie à la sortie :
+							<obs conceptId="1151" answerConceptIds="5526,5254,6046"
+								answerLabels="Allaitement maternel exclusif,Préparation pour nourrissons,Alimentation mixte"
+								style="radio" />
+						</td>
+					</tr>
+				</table>
+			</obsgroup>
 		</section>
 	</td>
 	<br />
