@@ -2952,7 +2952,7 @@
 									<tr>
 										<td>1</td>
 										<td>
-											<obsgroup groupingConceptId="2917c4a3-71bc-4c2d-92fc-9911b55d02f3">
+											<obsgroup groupingConceptId="68c79da3-7261-4e32-9a8b-85288fbef43b">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -2962,7 +2962,7 @@
 									<tr>
 										<td>2</td>
 										<td>
-											<obsgroup groupingConceptId="f9c09540-f8c0-4884-96dd-a81b4b2a6e84">
+											<obsgroup groupingConceptId="0092abda-de8d-4564-9d16-7bda84b78bc5">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -2972,7 +2972,7 @@
 									<tr>
 										<td>3</td>
 										<td>
-											<obsgroup groupingConceptId="9da0ca77-d4fa-4689-8f14-e358f4d60f6a">
+											<obsgroup groupingConceptId="d4231f0f-92aa-4f28-9534-0d726d436b98">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -2982,7 +2982,7 @@
 									<tr>
 										<td>4</td>
 										<td>
-											<obsgroup groupingConceptId="df21482f-5823-4383-8008-a45d9557567a">
+											<obsgroup groupingConceptId="99f42a2a-cba7-4baf-822f-1be8ece88705">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
@@ -2992,14 +2992,13 @@
 									<tr>
 										<td>5</td>
 										<td>
-											<obsgroup groupingConceptId="0c94f335-bd60-4ef4-864b-bab27c874841">
+											<obsgroup groupingConceptId="46cd375f-4324-4fde-b01f-1ec2342f29ca">
 												<obs conceptId="CIEL:1282" answerConceptId="CIEL:5622"
 												answerLabel="Autre" showCommentField="true"
 												commentFieldLabel="" />
 											</obsgroup>
 										</td>
 									</tr>
-								
 							</table>
 						</fieldset>
 						<fieldset>
