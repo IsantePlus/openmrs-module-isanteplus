@@ -40,7 +40,7 @@
 	<script type="text/javascript">
 		jQuery(function() {
 		
-			/*End TABLEAU DE NAISSANCE Validation*/
+			/*Start TABLEAU DE NAISSANCE Validation*/
 			
 			jQuery( '#n_vivante_1_1' ).on( 'change', function() {
 			

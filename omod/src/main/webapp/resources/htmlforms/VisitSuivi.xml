@@ -537,6 +537,52 @@
 		return true;
 		});
 	</script>
+	
+	<script type="text/javascript">
+		jQuery(function() {
+		
+			/*Start ÉTAT GENERAL Validation*/
+			
+			jQuery( '#inchange' ).on( 'change', function() {
+			
+				if(getValue('inchange.value') == '162679') {
+					setValue('pameliore.value', '');
+					setValue('agrave.value', '');
+					setValue('nameliore.value', '');
+				}
+			});
+			
+			jQuery( '#pameliore' ).on( 'change', function() {
+			
+				if(getValue('pameliore.value') == '1065') {
+					setValue('inchange.value', '');
+					setValue('agrave.value', '');
+					setValue('nameliore.value', '');
+				}
+			});
+			
+			jQuery( '#agrave' ).on( 'change', function() {
+			
+				if(getValue('agrave.value') == '162678') {
+					setValue('pameliore.value', '');
+					setValue('inchange.value', '');
+					setValue('nameliore.value', '');
+				}
+			});
+			
+			jQuery( '#nameliore' ).on( 'change', function() {
+			
+				if(getValue('nameliore.value') == '162677') {
+					setValue('inchange.value', '');
+					setValue('agrave.value', '');
+					setValue('pameliore.value', '');
+				}
+			});
+			
+			/*End ÉTAT GENERAL Validation*/
+		
+		});
+	</script>
 
 	<div id="dateVisite">
 		<b>FICHE DE SUIVI DES VISITES CLINIQUES : ADULTES VIH+</b>
@@ -689,24 +735,24 @@
 						<tr>
 							<td colspan="2">
 								<obs conceptId="CIEL:162676" answerConceptId="CIEL:162679"
-									answerLabel="Inchangé" />
+									id="inchange" answerLabel="Inchangé" />
 							</td>
 						</tr>
 						<!--<tr><td colspan="2">En déclin</td></tr> -->
 						<tr>
 							<td>
 								<obs conceptId="CIEL:1898" answerConceptId="CIEL:1065"
-									answerLabel="Quelque peu amélioré" />
+									id="pameliore" answerLabel="Quelque peu amélioré" />
 							</td>
 							<td>
 								<obs conceptId="CIEL:162676" answerConceptId="CIEL:162678"
-									answerLabel="Aggravé" />
+									id="agrave" answerLabel="Aggravé" />
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
 								<obs conceptId="CIEL:162676" answerConceptId="CIEL:162677"
-									answerLabel="Nette amélioration" />
+									id="nameliore" answerLabel="Nette amélioration" />
 							</td>
 						</tr>
 						<tr>
