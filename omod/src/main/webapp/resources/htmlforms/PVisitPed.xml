@@ -3513,6 +3513,7 @@
 			<tr>
 				<td>
 					<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
+					<obsgroup groupingConceptId="CIEL:159947">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3527,11 +3528,13 @@
 						answerLabels="Primaire,Secondaire" style="radio" />
 						</span>
 					</obsgroup>
+					</obsgroup>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
+					<obsgroup groupingConceptId="CIEL:159947">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3546,11 +3549,13 @@
 						answerLabels="Primaire,Secondaire" style="radio" />
 						</span>
 					</obsgroup>
+					</obsgroup>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
+					<obsgroup groupingConceptId="CIEL:159947">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3565,11 +3570,13 @@
 						answerLabels="Primaire,Secondaire" style="radio" />
 						</span>
 					</obsgroup>
+					</obsgroup>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
+					<obsgroup groupingConceptId="CIEL:159947">
 						<span class="titre" ch-target="#cacher58">
 						<obs conceptId="CIEL:1284" class="master" id="id58"
 						style="autocomplete" answerClasses="Diagnosis"
@@ -3583,6 +3590,7 @@
 						<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
 						answerLabels="Primaire,Secondaire" style="radio" />
 						</span>
+					</obsgroup>
 					</obsgroup>
 				</td>
 			</tr>

@@ -1166,6 +1166,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="620a08f4-4d04-431e-9762-57730f365bf5">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher1" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id1"
 															answerConceptId="CIEL:111103" answerLabel="Accident cérébro-vasculaire [I63.50]" onchange="verifyImpressionsClinics('id1','reponsea1','reponseb1')" />
@@ -1183,11 +1184,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="d9a7ed8a-678c-4c23-91cf-e8389bdf1f00">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher2" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id2"
 															answerConceptId="CIEL:121629" answerLabel="Anémie, "
@@ -1207,11 +1210,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b880f69b-0860-4aa6-b4c1-81882b892982">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher3" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id3"
 															answerConceptId="CIEL:121375" answerLabel="Asthme [J45]" />
@@ -1229,11 +1234,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="6a54a0b5-7c1b-4079-8072-d9f4985d84e3">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher4" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id4"
 															answerConceptId="CIEL:139071" answerLabel="Cardiopathie [I51.9]" />
@@ -1251,11 +1258,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="776a5e55-dfcc-42a5-bf5d-42bb1de0a8ff">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher5" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id5"
 															answerConceptId="CIEL:142474" answerLabel="Diabète Type 1 [E10.9]" />
@@ -1273,11 +1282,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="baa21585-f808-4d40-96a7-b2c8da1d6616">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher6" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id6"
 															answerConceptId="CIEL:142473" answerLabel="Diabète Type 2 [E11.9]" />
@@ -1295,11 +1306,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="50177762-2cf4-4e05-bbcf-84f450f6f413">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher7" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id7"
 															answerConceptId="CIEL:161887" answerLabel="Diarrhée aigue aqueuse [R19.7]*" />
@@ -1317,11 +1330,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="35f402b6-64e8-4980-8ad4-0eec26142c53">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher8" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id8"
 															answerConceptId="CIEL:138868" answerLabel="Diarrhée aigue sanguinolente [R19.7]*" />
@@ -1339,11 +1354,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="cf78715b-3d84-4eed-ab1c-b44ed7a42131">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher9" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id9"
 															answerConceptId="CIEL:126513" answerLabel="Drépanocytose : SS/SC [D57.1]" />
@@ -1362,11 +1379,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="4885688c-a418-458b-92a2-c825695a8930">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher10" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id10"
 															answerConceptId="CIEL:155" answerLabel="Epilepsie [G40.901]" />
@@ -1384,11 +1403,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="956d3032-dad3-4870-9572-2ef78cd39827">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher11" id="trigger" >
 														<obs conceptId="CIEL:1284" class="master" id="id11"
 															answerConceptId="CIEL:127990" answerLabel="Fièvre, cause indéterminée [R50.9]*" />
@@ -1406,11 +1427,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f7c0d4e9-edf3-4b98-9efe-e1b1a66a802d">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher12" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id12"
 															answerConceptId="CIEL:1434" answerLabel="Grossesse [Z33.1]" />
@@ -1428,11 +1451,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="ef33038a-6e36-48d3-95b5-3a67e6c9edb9">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher13" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id13"
 															answerConceptId="CIEL:117399" answerLabel="Hypertension artérielle [I10]" />
@@ -1450,11 +1475,13 @@
 														</span>												
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="098e24cc-d118-487a-8043-f1300531bc83">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher14" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id14"
 															answerConceptId="CIEL:832" answerLabel="Malnutrition/Perte de poids [E46]" />
@@ -1472,11 +1499,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="04041fe9-8523-4c58-956d-294ded2b8c6f">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher15" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id15"
 															answerConceptId="CIEL:159619" answerLabel="Urgence Chirurgicale" />
@@ -1494,6 +1523,7 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr>
@@ -1502,6 +1532,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="454b9649-e850-46f7-8dc0-c65cb50e4714">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher16" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id16"
 															answerConceptId="CIEL:112" answerLabel="Amygdalite [J03.90]" />
@@ -1519,11 +1550,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="dc9f51ce-f442-4343-a25a-d8836a4c7e84">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher17" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id17"
 															answerConceptId="CIEL:121555" answerLabel="Charbon [A22.9]*, "
@@ -1542,11 +1575,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="527ca5cb-b9ef-445b-8d52-eed48d39ba31">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher18" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id18"
 															answerConceptId="CIEL:122604" answerLabel="Choléra [A00.9]*" />
@@ -1564,11 +1599,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="e29500cf-72b1-4d91-ae13-5e25e2760c86">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher19" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id19"
 															answerConceptId="CIEL:119905" answerLabel="Conjonctivite [H10.9], "
@@ -1587,11 +1624,13 @@
 														</span>													
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="d20261bc-4b88-46c8-ad4e-7761e8c784b3">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher20" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id20"
 															answerConceptId="CIEL:114190" answerLabel="Coqueluche [A37.90]*" />
@@ -1609,6 +1648,7 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 									</table>
@@ -1624,6 +1664,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="19f7428d-b755-4462-ae4e-603d5c5d9820">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher21" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id21"
 															answerConceptId="CIEL:142592" answerLabel="Dengue [A90]*, précisez:&lt;br/&gt;"
@@ -1642,11 +1683,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="da309ab6-7d53-422f-9de1-d0a3ac474e45">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher22" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id22"
 															answerConceptId="CIEL:119399" answerLabel="Diphtérie [A36]*" />
@@ -1664,11 +1707,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="95a2c4a1-7f11-479f-af12-86884d322e38">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher23" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id23"
 															answerConceptId="CIEL:163392" answerLabel="Fièvre hémorragique aiguë [N/A]" />
@@ -1686,11 +1731,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="ee173962-54b0-45c7-9585-660f8a562d76">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher24" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id24"
 															answerConceptId="CIEL:141" answerLabel="Fièvre Typhoïde * [Z22.0]*" />
@@ -1708,6 +1755,7 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr>
@@ -1718,6 +1766,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="a07e66fc-c86d-489f-bdef-2211a011289d">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher25" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id25"
 															answerConceptId="CIEL:119354" answerLabel="Filariose lymphatique [B74.9]" />
@@ -1735,11 +1784,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="4e17281f-c433-4680-9115-a1cb17dea9c5">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher26" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id26"
 															answerConceptId="CIEL:140" answerLabel="Gale [B86]" />
@@ -1757,11 +1808,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="02b1a0a3-262b-4b07-ada1-cec47bc9203b">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher27" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id27"
 															answerConceptId="CIEL:154983" answerLabel="Infection respiratoire aiguë [J06.9]" />
@@ -1779,11 +1832,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="80a8dee4-191a-496a-8842-8bb91706e24b">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher28" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id28"
 															answerConceptId="CIEL:111633" answerLabel="Infection génito-urinaire" />
@@ -1801,11 +1856,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="e34fb886-ba27-4208-a2cb-eaedaac9fb96">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher29" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id29"
 															answerConceptId="CIEL:158842" answerLabel="Infection des tissus mous" />
@@ -1823,11 +1880,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="45a0cf27-6096-4b8d-9870-49c24d7bacc2">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher30" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id30"
 															answerConceptId="CIEL:112992" answerLabel="IST, précisez :&lt;br/&gt;"
@@ -1846,11 +1905,13 @@
 															</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f020c400-976f-451a-9d97-db2faf8f09ce">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher31" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id31"
 															answerConceptId="CIEL:116344" answerLabel="Lèpre [A30]" />
@@ -1868,11 +1929,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="12191641-452e-493f-b9a6-b91a34abfec6">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher32" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id32"
 															answerConceptId="CIEL:116128" answerLabel="Malaria (paludisme) [B52.9]*" />
@@ -1890,11 +1953,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f90a7734-fc12-42d8-87dc-2fac7a2c3ae6">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher33" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id33"
 															answerConceptId="CIEL:115835"
@@ -1914,11 +1979,13 @@
 															</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="5777e77f-5cd1-49b9-877b-817aad011b3b">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher34" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id34"
 															answerConceptId="CIEL:131115" answerLabel="Otite, précisez :&lt;br/&gt;"
@@ -1937,11 +2004,13 @@
 															</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="baf17261-b9dc-4cbc-8576-1fb2f525687d">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher35" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id35"
 															answerConceptId="CIEL:119387" answerLabel="Parasitose [B89]" />
@@ -1959,11 +2028,13 @@
 															</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="d8d9ebd4-7943-4403-a092-1bf47f822974">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher36" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id36"
 															answerConceptId="CIEL:114100" answerLabel="Pneumonie [J18.9]" />
@@ -1981,11 +2052,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b899821f-9b55-4225-bf15-bb3b1aef2ccb">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher37" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id37"
 															answerConceptId="CIEL:5258" answerLabel="Poliomyélite [A80.9]*" />
@@ -2003,11 +2076,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="3207d804-1459-4e7f-b980-294d59869ba4">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher38" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id38"
 															answerConceptId="CIEL:160146" answerLabel="Rage [A82.9]*" />
@@ -2025,11 +2100,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="c2b1f369-42b6-4919-bf68-e8bbf452d996">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher39" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id39"
 															answerConceptId="CIEL:134561" answerLabel="Rougeole [B05.89]*" />
@@ -2046,12 +2123,14 @@
 																answerLabels="Primaire,Secondaire" style="radio" />
 														</span>
 													</span>
-											     </obsgroup>
+											  </obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="ca1ee0b6-c1f9-429e-8003-52935995d673">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher40" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id40"
 															answerConceptId="CIEL:113205" answerLabel="Rubéole [B06.89]" />
@@ -2069,11 +2148,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="94915e7f-d8f7-4f68-a41d-24b86a53540c">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher41" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id41"
 															answerConceptId="CIEL:163402" answerLabel="Syndrome ictérique fébrile [B15.9]*" />
@@ -2091,6 +2172,7 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 									</table>
@@ -2105,6 +2187,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b0f0d140-0a01-4c71-a803-92b7799e61f4">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher42" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id42"
 															answerConceptId="CIEL:119508" answerLabel="Teigne [B35.9]" />
@@ -2123,11 +2206,13 @@
 															</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="4b0e591c-a32a-479f-92b8-5c7828a05e0c">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher43" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id43"
 															answerConceptId="CIEL:124957" answerLabel="Tétanos [A35]*" />
@@ -2145,11 +2230,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="30d2b9eb-0a2f-4b0a-9ae9-31476ec13ed6">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher44" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id44"
 															answerConceptId="CIEL:112141"
@@ -2168,11 +2255,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b148cd09-496d-4a97-8cd5-75500f2d684f">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher45" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id45"
 															answerConceptId="CIEL:159345"
@@ -2191,11 +2280,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f4697ce4-2c77-453d-8750-05fd41ecb41f">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher46" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id46"
 															answerConceptId="CIEL:892" answerLabel="Varicelle [B01.9]" />
@@ -2213,11 +2304,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="f2557bca-6f44-4625-800b-b3e02da52009">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher47" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id47"
 															answerConceptId="CIEL:149197" answerLabel="VIH/SIDA [B20]" />
@@ -2235,6 +2328,7 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr>
@@ -2245,6 +2339,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="2c6c6f77-ca5b-4485-8cf5-493faa696fd7">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher48" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id48"
 															answerConceptId="CIEL:131715"
@@ -2263,11 +2358,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="d81c90e9-e195-45da-8585-84bcd9907100">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher49" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id49"
 															answerConceptId="CIEL:113881" answerLabel="Stress post traumatique [F43.10]" />
@@ -2285,6 +2382,7 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr>
@@ -2295,6 +2393,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="98fc479a-9757-4931-bf54-9d32f395d39d">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher50" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id50"
 															answerConceptId="CIEL:126582" answerLabel="Agression sexuelle [T74.21XA]" />
@@ -2312,11 +2411,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="2b97f41a-587e-4afa-83ba-33fb1094219a">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher51" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id51"
 															answerConceptId="CIEL:146623" answerLabel="Brûlure [T30.0], précisez :&lt;br/&gt;"
@@ -2335,11 +2436,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="26e76c47-24a8-46c9-a0ad-70e72409abd6">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher52" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id52"
 															answerConceptId="CIEL:177"
@@ -2359,11 +2462,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="a5adb862-1ac9-47f5-9ca2-97f9238d6d73">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher53" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id53"
 															answerConceptId="CIEL:159328" answerLabel="Plaie, précisez :&lt;br/&gt;"
@@ -2382,11 +2487,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="6a7bb61a-c06f-4e1c-afd9-d5aac4c89a4e">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher54" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id54"
 															answerConceptId="CIEL:116838" answerLabel="Trauma crânien [S09.90XA]" />
@@ -2404,6 +2511,7 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr>
@@ -2414,6 +2522,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="81707a9a-003b-4f0c-aee4-9b429066d027">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher55" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id55"
 															answerConceptId="CIEL:116023" answerLabel="Cancer du col [C53.9]" />
@@ -2431,11 +2540,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="9b1fa110-2297-4c73-a47b-d28716312ec4">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher56" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id56"
 															answerConceptId="CIEL:146221" answerLabel="Cancer de la prostate [C61]" />
@@ -2453,11 +2564,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="1e684a1a-76fe-47f6-91b4-e5856556f24e">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher57" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id57"
 															answerConceptId="CIEL:113753" answerLabel="Cancer de sein [C50.919]" />
@@ -2475,6 +2588,7 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr>
@@ -2485,6 +2599,7 @@
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher58" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id58"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2503,11 +2618,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher59" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id59"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2526,11 +2643,13 @@
 														</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher60" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id60"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2549,11 +2668,13 @@
 													</span>
 													</span>
 												</obsgroup>
+												</obsgroup>
 											</td>
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
 												<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
+												<obsgroup groupingConceptId="CIEL:159947">
 													<span class="titre" ch-target="#cacher61" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id61"
 															style="autocomplete" answerClasses="Diagnosis"
@@ -2571,6 +2692,7 @@
 														</span>
 														</span>
 													</span>
+												</obsgroup>
 												</obsgroup>
 											</td>
 										</tr>
