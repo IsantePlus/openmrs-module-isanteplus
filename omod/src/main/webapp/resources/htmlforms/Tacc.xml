@@ -47,6 +47,7 @@
 				if(getValue('n_vivante_1_1.value') == '151849') {
 					setValue('maceree_1_1.value', '');
 					setValue('foetale_1_1.value', '');
+					setValue('neonatale_1_1.value', '');
 				}
 			});
 			
@@ -55,6 +56,7 @@
 				if(getValue('maceree_1_1.value') == '135436') {
 					setValue('n_vivante_1_1.value', '');
 					setValue('foetale_1_1.value', '');
+					setValue('neonatale_1_1.value', '');
 				}
 			});
 			
@@ -63,6 +65,7 @@
 				if(getValue('foetale_1_1.value') == '159916') {
 					setValue('n_vivante_1_1.value', '');
 					setValue('maceree_1_1.value', '');
+					setValue('neonatale_1_1.value', '');
 				}
 			});
 			
@@ -71,6 +74,7 @@
 				if(getValue('n_vivante_1_2.value') == '151849') {
 					setValue('maceree_1_2.value', '');
 					setValue('foetale_1_2.value', '');
+					setValue('neonatale_1_2.value', '');
 				}
 			});
 			jQuery( '#maceree_1_2' ).on( 'change', function() {
@@ -78,6 +82,7 @@
 				if(getValue('maceree_1_2.value') == '135436') {
 					setValue('n_vivante_1_2.value', '');
 					setValue('foetale_1_2.value', '');
+					setValue('neonatale_1_2.value', '');
 				}
 			});
 			
@@ -86,6 +91,7 @@
 				if(getValue('foetale_1_2.value') == '159916') {
 					setValue('n_vivante_1_2.value', '');
 					setValue('maceree_1_2.value', '');
+					setValue('neonatale_1_2.value', '');
 				}
 			});
 			
@@ -94,6 +100,7 @@
 				if(getValue('n_vivante_1_3.value') == '151849') {
 					setValue('maceree_1_3.value', '');
 					setValue('foetale_1_3.value', '');
+					setValue('neonatale_1_3.value', '');
 				}
 			});
 			jQuery( '#maceree_1_3' ).on( 'change', function() {
@@ -101,6 +108,7 @@
 				if(getValue('maceree_1_3.value') == '135436') {
 					setValue('n_vivante_1_3.value', '');
 					setValue('foetale_1_3.value', '');
+					setValue('neonatale_1_3.value', '');
 				}
 			});
 			
@@ -109,6 +117,7 @@
 				if(getValue('foetale_1_3.value') == '159916') {
 					setValue('n_vivante_1_3.value', '');
 					setValue('maceree_1_3.value', '');
+					setValue('neonatale_1_3.value', '');
 				}
 			});
 			
@@ -117,6 +126,7 @@
 				if(getValue('n_vivante_1_4.value') == '151849') {
 					setValue('maceree_1_4.value', '');
 					setValue('foetale_1_4.value', '');
+					setValue('neonatale_1_4.value', '');
 				}
 			});
 			jQuery( '#maceree_1_4' ).on( 'change', function() {
@@ -124,6 +134,7 @@
 				if(getValue('maceree_1_4.value') == '135436') {
 					setValue('n_vivante_1_4.value', '');
 					setValue('foetale_1_4.value', '');
+					setValue('neonatale_1_4.value', '');
 				}
 			});
 			
@@ -132,8 +143,48 @@
 				if(getValue('foetale_1_4.value') == '159916') {
 					setValue('n_vivante_1_4.value', '');
 					setValue('maceree_1_4.value', '');
+					setValue('neonatale_1_4.value', '');
 				}
 			});
+			
+			
+			jQuery( '#neonatale_1_1' ).on( 'change', function() {
+			
+				if(getValue('neonatale_1_1.value') == '154223') {
+					setValue('n_vivante_1_1.value', '');
+					setValue('maceree_1_1.value', '');
+					setValue('foetale_1_1.value', '');
+				}
+			});
+			
+			jQuery( '#neonatale_1_2' ).on( 'change', function() {
+			
+				if(getValue('neonatale_1_2.value') == '154223') {
+					setValue('n_vivante_1_2.value', '');
+					setValue('maceree_1_2.value', '');
+					setValue('foetale_1_2.value', '');
+				}
+			});
+			
+			jQuery( '#neonatale_1_3' ).on( 'change', function() {
+			
+				if(getValue('neonatale_1_3.value') == '154223') {
+					setValue('n_vivante_1_3.value', '');
+					setValue('maceree_1_3.value', '');
+					setValue('foetale_1_3.value', '');
+				}
+			});
+			
+			jQuery( '#neonatale_1_4' ).on( 'change', function() {
+			
+				if(getValue('neonatale_1_4.value') == '154223') {
+					setValue('n_vivante_1_4.value', '');
+					setValue('maceree_1_4.value', '');
+					setValue('foetale_1_4.value', '');
+				}
+			});
+			
+			
 			
 			/*End TABLEAU DE NAISSANCE Validation*/
 		
@@ -631,26 +682,26 @@
 						</td>
 						<td colspan="2">
 							<obsgroup groupingConceptId="5a30a073-1102-4450-aa53-56c0ba58d305">
-								<obs conceptId="159917" answerConceptIds="154223"
-								answerLabels="" style="radio" />
+								<obs conceptId="159917" answerConceptId="154223"
+								id="neonatale_1_1" answerLabel="" />
 							</obsgroup>
 						</td>
 						<td colspan="3">
 							<obsgroup groupingConceptId="ea404f7d-0434-4894-82dc-a7df5627ea61">
-								<obs conceptId="159917" answerConceptIds="154223"
-									answerLabels="" style="radio" />
+								<obs conceptId="159917" answerConceptId="154223"
+									id="neonatale_1_2" answerLabel="" />
 							</obsgroup>
 						</td>
 						<td colspan="4">
 							<obsgroup groupingConceptId="3ec025a5-1d98-4761-9ca5-e56bb41b7547">
-								<obs conceptId="159917" answerConceptIds="154223"
-									answerLabels="" style="radio" />
+								<obs conceptId="159917" answerConceptId="154223"
+									id="neonatale_1_3" answerLabel="" />
 							</obsgroup>
 						</td>
 						<td colspan="5">
 							<obsgroup groupingConceptId="955122a5-c40a-4d20-85ef-c87da9c26486">
-								<obs conceptId="159917" answerConceptIds="154223"
-								answerLabels="" style="radio" />
+								<obs conceptId="159917" answerConceptId="154223"
+								id="neonatale_1_4" answerLabel="" />
 							</obsgroup>
 						</td>
 					</tr>

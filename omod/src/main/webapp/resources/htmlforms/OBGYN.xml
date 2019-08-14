@@ -90,6 +90,7 @@
 		input[type="checkbox"], .form input[type="radio"] {
 		float: none;
 		display: inline-block;
+		border:1px solid #000000;
 		}
 
 		form label, .form label {
@@ -275,6 +276,93 @@
 		});
 
 	</script>
+	<script type="text/javascript">
+
+		/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+		var calculateBmi = function(wt, ht) {
+		var bmi = null
+		if (wt &amp;&amp; ht) {
+		bmi = wt / ((ht/100) * (ht/100));
+		}
+		return bmi ;
+		}
+		// functions to handle updating the bmi when in ENTER mode
+		var updateBmi = function() {
+		var wt = htmlForm.getValueIfLegal('weight.value');
+		var ht = htmlForm.getValueIfLegal('height.value');
+
+		var bmi = calculateBmi(wt, ht);
+
+		if (bmi == null || isNaN(bmi)) {
+		jQuery('#calculated-bmi-wrapper').hide();
+		} else {
+		jQuery('#no-calculated-bmi').hide();
+		jQuery('#calculated-bmi-wrapper').show();
+		jQuery('#calculated-bmi').html(bmi.toFixed(1));
+		jQuery('#hidden-calculated-bmi').val(bmi.toFixed(1));
+		}
+		};
+
+		jQuery(function() {
+		jQuery(".hide").hide();
+		jQuery(".lienvisible").click(function() {
+		// on recupere le lien dans le DOM
+		var $link = jQuery(this);
+
+		// on recupere la balise hide suivant le lien dans le DOM
+		var $hide = $link.next('.hide');
+		if(jQuery('.hide').slideUp('slow'))
+		{
+		$hide.stop().slideDown('slow');
+		//$('.hide').css('display', 'none');
+
+		}
+		else
+		{
+		if($hide.stop().slideDown('slow'))
+		{
+		jQuery('.hide').slideUp('slow');
+		//jQuery('.hide').show() ;
+		}
+		}
+
+		// on remonte toutes les balises hide
+		//$j('.hide').slideUp('slow');
+		// on stoppe l'animation (slideUp de la ligne precedente)
+		// on desend notre div
+		//$hide.stop().slideDown('slow');
+		});
+
+		/*)))))))))))))))))))))*/
+		jQuery('htmlform').each(function(index, form) {
+		jQuery(form).find('#calculated-bmi-continue').hide();
+		jQuery(form).find('#no-calculated-bmi').hide();
+
+		var wt = jQuery(form).find('#weight').find('.value').text();
+		var ht = jQuery(form).find('#height').find('.value').text();
+
+		var bmi = calculateBmi(wt, ht);
+
+		if (bmi != null &amp;&amp; !isNaN(bmi)) {
+		jQuery(form).find('#calculated-bmi-wrapper').show();
+		jQuery(form).find('#calculated-bmi').html(bmi.toFixed(1));
+		jQuery(form).find('#calculated-bmi-view').html(bmi.toFixed(1));
+		jQuery(form).find('#hidden-calculated-bmi').val(bmi.toFixed(1));
+		}
+		});
+
+		jQuery('#calculated-bmi-wrapper').each(function(){
+		jQuery('#calculated-bmi-wrapper').hide();
+
+		getField('weight.value').change(updateBmi)
+		getField('height.value').change(updateBmi);
+
+		updateBmi();
+		});
+
+		});
+		</script>
 	
 	<div id="contenerGeneral">
 		<div id="dateVisite">
@@ -363,12 +451,12 @@
 							<tr>
 								<td>
 									Pds
-									<obs conceptId="CIEL:5089" />
+									<obs conceptId="CIEL:5089" id="weight" />
 									kg
 								</td>
 								<td>
 									Taille
-									<obs conceptId="CIEL:5090" />
+									<obs conceptId="CIEL:5090" id="height" />
 									cm
 								</td>
 								<td colspan="3">
@@ -392,8 +480,14 @@
 									FR
 									<obs conceptId="CIEL:5242" />
 								</td>
-								<td>IMC Pds kg/T² m</td>
-								<td>PB cm</td>
+								<td>
+									<span id="calculated-bmi-wrapper">
+										IMC:
+										<span id='calculated-bmi'></span>
+										Pds kg/T² m
+									</span>
+								</td>
+								<td>PB <obs conceptId="CIEL:1343" id="pb" /> cm</td>
 							</tr>
 							<tr>
 								<td colspan="5">

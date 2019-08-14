@@ -1369,7 +1369,7 @@
 										</span>
 									</includeIf>
 								</td>
-								<td>PB cm</td>
+								<td>PB <obs conceptId="CIEL:1343" id="pb" /> cm</td>
 							</tr>
 							<tr>
 								<td colspan="5"><!-- A verifier with James -->
@@ -1560,7 +1560,7 @@
 							</tr>
 							<tr>
 								<td>
-									<obs conceptId="CIEL:159614" answerConceptId="CIEL:120749"
+									<obs conceptId="CIEL:159614" answerConceptId="CIEL:122496"
 										answerLabel="Dyspnée" />
 								</td>
 								<td>
