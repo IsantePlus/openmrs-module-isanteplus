@@ -1556,7 +1556,12 @@
 									<obs conceptId="CIEL:159614" answerConceptId="CIEL:460"
 										answerLabel="Œdème" />
 								</td>
-								<td></td>
+								<td>
+									<b>Autres</b><br/>
+									<obs conceptId="CIEL:159614" answerClasses="Diagnosis,Symptom/Finding"
+													style="autocomplete" showCommentField="true"
+													commentFieldLabel="" />
+								</td>
 							</tr>
 							<tr>
 								<td>
@@ -1578,7 +1583,11 @@
 									<obs conceptId="CIEL:159614" answerConceptId="CIEL:148968"
 										answerLabel="Passage de liquide par le vagin" />
 								</td>
-								<td></td>
+								<td>
+									<obs conceptId="CIEL:159614" answerConceptId="CIEL:5622"
+													answerLabel="Autre," showCommentField="true"
+													commentFieldLabel="précisez" />
+								</td>
 							</tr>
 							<tr>
 								<td>
@@ -1591,7 +1600,8 @@
 								</td>
 								<td></td>
 							</tr>
-						</table>
+						</table><br/>
+						<obs conceptId="CIEL:161011" rows="2" cols="80" />
 					</fieldset>
 				</div>
 			</div>

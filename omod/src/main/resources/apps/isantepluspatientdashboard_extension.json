@@ -107,5 +107,14 @@
         "url": "${project.parent.artifactId}/viralLoadHistory.page?patientId={{patient.uuid}}",
         "icon": "icon-beaker",
         "order": 50
+    },
+    {
+        "id": "isanteplus.diagnosis.label",
+        "extensionPointId": "patientDashboard.overallActions",
+        "type": "link",
+        "label": "${project.parent.artifactId}.diagnosis.label",
+        "url": "${project.parent.artifactId}/getAllDiagnosis.page?patientId={{patient.uuid}}",
+        "icon": "icon-beaker",
+        "order": 60
     }
 ]

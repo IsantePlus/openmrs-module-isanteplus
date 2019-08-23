@@ -20,6 +20,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.Encounter;
 import org.openmrs.Patient;
@@ -84,7 +85,8 @@ public class HibernateIsantePlusDAO implements IsantePlusDAO {
 	public List<FormHistory> getAllFormHistory(Patient patient) {
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(FormHistory.class)
 				.createAlias("patient", "p").add(Restrictions.eq("p.patientId", patient.getPatientId()));
-
+		Criteria crit1 = crit.createCriteria("encounter");
+		   crit1.addOrder(Order.desc("encounterDatetime"));
 		return crit.list();
 	}
 	
@@ -94,7 +96,8 @@ public class HibernateIsantePlusDAO implements IsantePlusDAO {
 	public List<FormHistory> getAllFormHistory(Visit visit) {
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(FormHistory.class)
 				.createAlias("visit", "v").add(Restrictions.eq("v.visitId", visit.getVisitId()));
-
+		Criteria crit1 = crit.createCriteria("encounter");
+		   crit1.addOrder(Order.desc("encounterDatetime"));
 		return crit.list();
 	}
 	
