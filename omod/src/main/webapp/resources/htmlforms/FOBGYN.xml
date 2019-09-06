@@ -1556,7 +1556,12 @@
 									<obs conceptId="CIEL:159614" answerConceptId="CIEL:460"
 										answerLabel="Œdème" />
 								</td>
-								<td></td>
+								<td>
+									<b>Autres</b><br/>
+									<obs conceptId="CIEL:159614" answerClasses="Diagnosis,Symptom/Finding"
+													style="autocomplete" showCommentField="true"
+													commentFieldLabel="" />
+								</td>
 							</tr>
 							<tr>
 								<td>
@@ -1578,7 +1583,11 @@
 									<obs conceptId="CIEL:159614" answerConceptId="CIEL:148968"
 										answerLabel="Passage de liquide par le vagin" />
 								</td>
-								<td></td>
+								<td>
+									<obs conceptId="CIEL:159614" answerConceptId="CIEL:5622"
+													answerLabel="Autre," showCommentField="true"
+													commentFieldLabel="précisez" />
+								</td>
 							</tr>
 							<tr>
 								<td>
@@ -1591,7 +1600,8 @@
 								</td>
 								<td></td>
 							</tr>
-						</table>
+						</table><br/>
+						<obs conceptId="CIEL:161011" rows="2" cols="80" />
 					</fieldset>
 				</div>
 			</div>
@@ -3123,6 +3133,7 @@
 															answerLabels="Primaire,Secondaire" style="radio" />
 													</span>
 													</span>
+													
 												</obsgroup>
 											</td>
 										</tr>
@@ -3476,7 +3487,7 @@
 						<obs conceptId="CIEL:159431" />
 						<br />
 						<obs conceptId="CIEL:159786"
-							answerConceptIds="CIEL:159791,CIEL:160035,CIEL:159874,CIEL:160031,CIEL:160034"
+							answerConceptIds="CIEL:159791,CIEL:160035,CIEL:160031,CIEL:160036,CIEL:160034"
 							answerLabels="Guéri,Traitement Terminé,Abandon,Transféré,Décédé"
 							style="radio" />
 					</fieldset>
@@ -3796,6 +3807,9 @@
 				</a>
 				<div id="div11" class="togglable" style="display:none;">
 					<fieldset>
+						<obs conceptId="CIEL:161011" rows="8" cols="80" />
+						<br />
+						<br />
 						<fieldset>
 							<legend>
 								<b>Plan d'accouchement</b>

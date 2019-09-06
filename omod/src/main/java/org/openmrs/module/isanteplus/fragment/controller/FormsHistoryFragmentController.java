@@ -40,11 +40,14 @@ public class FormsHistoryFragmentController {
 				}
 			}
 
-			if (formHistory != null)
+		/*	if (formHistory != null)
 				Collections.reverse(formHistory);
 			else 
 				formHistory = new ArrayList<FormHistory>();
-			model.addAttribute("allFormHistory", formHistory);
+		*/
+			if (formHistory == null)
+			formHistory = new ArrayList<FormHistory>();	
+			model.addAttribute("allFormHistory", formHistory); 
 		}
 
 		model.addAttribute("appName", WebConstants.WEBAPP_NAME);

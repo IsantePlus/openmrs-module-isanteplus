@@ -152,4 +152,8 @@ public interface IsantePlusService extends OpenmrsService {
 	DataSet getDateStartedArv(Patient patient);
 
 	List<IsantePlusObs> getViralLoadHistory(Patient patient);
+
+	List<IsantePlusObs> getAllDiagnosis(Patient patient);
+
+	Obs getLastViralLoadQualitativeObsForPatient(Patient patient);
 }

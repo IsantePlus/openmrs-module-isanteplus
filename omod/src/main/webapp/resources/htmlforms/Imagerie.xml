@@ -127,27 +127,40 @@
 		<div width="100%" style="border-top:solid 1px">
 			<!--<obs conceptId="CIEL:163752" answerConceptId="CIEL:12" answerLabel="Radiographie 
 				pulmonaire"/><br/> -->
-			Radiographie pulmonaire:
-			<obs conceptId="CIEL:12"
-				answerConceptIds="CIEL:1115,CIEL:1137,CIEL:5158,CIEL:6049,CIEL:6050,CIEL:6052,CIEL:114108,CIEL:5622"
-				answerLabels="Normal,Miliaire,Élargissement cardiaque,Infiltra,Changement Diffus (Pas de Miliaire),Lésion cavitaire,Effusion Pleurale,Autre"
-				showCommentField="true" commentFieldLabel=", Préciser&#160;&#160;"
-				style="radio" />
+			<table>
+				<tr>
+					<td>Radiographie pulmonaire:</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:12" answerLabel="Analyses demandées"/></td>
+				</tr>
+				<tr>
+					<td>Résultats :</td>
+					<td>
+						<obs conceptId="CIEL:12"
+						answerConceptIds="CIEL:1115,CIEL:1137,CIEL:5158,CIEL:6049,CIEL:6050,CIEL:6052,CIEL:114108,CIEL:5622"
+						answerLabels="Normal,Miliaire,Élargissement cardiaque,Infiltra,Changement Diffus (Pas de Miliaire),Lésion cavitaire,Effusion Pleurale,Autre"
+						showDate="true" dateLabel="" showCommentField="true" commentFieldLabel="Préciser"
+						style="radio" />
+					</td>
+				</tr>
+			</table>
 		</div>
 		<br />
 		<br />
 		<div width="100%" style="border-top:solid 1px">
-			Radiographie (Autre):
-			<obs conceptId="CIEL:309" answerConceptIds="CIEL:1115,CIEL:1116"
-				answerLabels="Normal,Anormal" showCommentField="true"
-				commentFieldLabel=", Préciser&#160;&#160;" style="radio" />
+			<table>
+				<tr><td>Radiographie (Autre):</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:309" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="CIEL:309" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="" showCommentField="true"
+				commentFieldLabel="Préciser" style="radio" /></td></tr>
+			</table>
 		</div>
 		<br />
 		<br />
 		<div width="100%" style="border-top:solid 1px">
-			Crachat BARR:
-			<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703"
-				answerLabels="Négatif,Positif" style="radio" />
+			<table>
+				<tr><td>Crachat BARR :</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:307" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703"
+				answerLabels="Négatif,Positif" showDate="true" dateLabel="" showCommentField="true" commentFieldLabel="Commentaire" style="radio"/></td></tr>
+			</table>
 		</div>
 		<br />
 		<br />
@@ -166,12 +179,14 @@
 		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
 			autocompleteProvider="true" default="currentUser" />
 		<br />
-		<br />
+		<br/>
+			SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
+		<br/><br/>
 		Statut de la fiche
 		<br />
 		&#160;
 		<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267"
-			answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète."
+			answerLabels="Incomplète. A mettre à jour ultérieurement, Complète."
 			defaultValue="CIEL:1267" style="radio" />
 		<br />
 		&#160;

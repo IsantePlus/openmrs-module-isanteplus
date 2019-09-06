@@ -1133,5 +1133,49 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return viralLoadHistory;
 	}
 	
+	/*Get all HIV diagnosis AND SSP diagnosis */
+	
+	@Override
+	public List<IsantePlusObs> getAllDiagnosis(Patient patient) {
+		
+		List<IsantePlusObs> hivDiagnosis = new ArrayList<IsantePlusObs>();
+		Integer diagnosisActive = 6042;
+		Integer diagnosisResolve = 6097;
+		
+		Concept diagConceptActive = Context.getConceptService().getConcept(diagnosisActive);
+		Concept diagConceptResolve = Context.getConceptService().getConcept(diagnosisResolve);
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), diagConceptActive)) {
+			if (obs != null) {
+				
+					IsantePlusObs obsres = new IsantePlusObs(obs);
+					hivDiagnosis.add(obsres);
+			}
+		}
+		
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), diagConceptResolve)) {
+			if (obs != null) {
+				
+					IsantePlusObs obsres = new IsantePlusObs(obs);
+					hivDiagnosis.add(obsres);
+			}
+		}
+		
+		return hivDiagnosis;
+	}
+	
+	@Override
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Obs getLastViralLoadQualitativeObsForPatient(Patient patient) {
+		Concept viralLoadConcept = Context.getConceptService().getConcept(1305);
+		
+			List<Obs> viralLoadObs = new ArrayList(
+				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), viralLoadConcept));
+
+		sortObsListByObsDateTime(viralLoadObs);
+
+		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
+	}
+	
+	
 
 }
