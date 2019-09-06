@@ -1163,6 +1163,19 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return hivDiagnosis;
 	}
 	
+	@Override
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Obs getLastViralLoadQualitativeObsForPatient(Patient patient) {
+		Concept viralLoadConcept = Context.getConceptService().getConcept(1305);
+		
+			List<Obs> viralLoadObs = new ArrayList(
+				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), viralLoadConcept));
+
+		sortObsListByObsDateTime(viralLoadObs);
+
+		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
+	}
+	
 	
 
 }

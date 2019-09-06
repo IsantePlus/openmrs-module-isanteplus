@@ -2908,7 +2908,7 @@
 						<obs conceptId="CIEL:159431" />
 						<br />
 						<obs conceptId="CIEL:159786"
-							answerConceptIds="CIEL:159791,CIEL:160035,CIEL:159874,CIEL:160031,CIEL:160034"
+							answerConceptIds="CIEL:159791,CIEL:160035,CIEL:160031,CIEL:160036,CIEL:160034"
 							answerLabels="Guéri,Traitement Terminé,Abandon,Transféré,Décédé"
 							style="radio" />
 					</fieldset>
@@ -3000,6 +3000,15 @@
 										</td>
 									</tr>
 							</table>
+						</fieldset>
+						<fieldset>
+							<legend><b>Intervention</b></legend>
+							Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:163408" answerLabel="Thermocoagulation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:162811" answerLabel="Conisation" />
+							<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
 						</fieldset>
 						<fieldset>
 							<legend>

@@ -2648,7 +2648,7 @@
 						<obs conceptId="CIEL:159431" />
 						<br />
 						<obs conceptId="CIEL:159786"
-							answerConceptIds="CIEL:159791,CIEL:160035,CIEL:159874,CIEL:160031,CIEL:160034"
+							answerConceptIds="CIEL:159791,CIEL:160035,CIEL:160031,CIEL:160036,CIEL:160034"
 							answerLabels="Guéri,Traitement Terminé,Abandon,Transféré,Décédé"
 							style="radio" />
 					</fieldset>
@@ -2955,10 +2955,14 @@
 				</a>
 				<div id="div11" class="togglable" style="display:none">
 					<fieldset>
+						<obs conceptId="CIEL:161011" rows="8" cols="80" />
+						<br />
+						<br />
 						<fieldset>
 							<legend>
 								<b>Plan d'accouchement</b>
 							</legend>
+							
 							Date de prochaine visite :
 							<obs conceptId="CIEL:5096" allowFutureDates="true"/>
 							<table width="100%">
