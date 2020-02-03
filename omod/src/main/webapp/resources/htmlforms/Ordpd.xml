@@ -3710,7 +3710,7 @@
 	<section headerLabel="AUTRES MEDICAMENTS">
 		<obs conceptId="CIEL:163322" rows="5" cols="90"/> 
 	</section>
-	<section headerLabel="Remarques">
+	<section headerLabel="REMARQUES">
 		<obs conceptId="CIEL:161011" rows="5" cols="90" />
 	</section>
 	<section headerLabel="COLLECTE DES MEDICAMENTS/PROCHAINE VISITE">

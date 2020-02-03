@@ -1167,9 +1167,9 @@
 					Date complété
 					<obs conceptId="CIEL:159431" />
 					<br />
-					No. de dossier TB :
+					<!--  No. de dossier TB :
 					<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
-						required="false" />
+						required="false" /> -->
 				</td>
 				<td valign="TOP" style="padding-left:2%">
 					<br />

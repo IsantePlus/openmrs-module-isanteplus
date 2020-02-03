@@ -135,8 +135,48 @@
 					<td>Résultats :</td>
 					<td>
 						<obs conceptId="CIEL:12"
-						answerConceptIds="CIEL:1115,CIEL:1137,CIEL:5158,CIEL:6049,CIEL:6050,CIEL:6052,CIEL:114108,CIEL:5622"
-						answerLabels="Normal,Miliaire,Élargissement cardiaque,Infiltra,Changement Diffus (Pas de Miliaire),Lésion cavitaire,Effusion Pleurale,Autre"
+						answerConceptIds="CIEL:1115,CIEL:1116,CIEL:1137,CIEL:5158,CIEL:6049,CIEL:6050,CIEL:6052,CIEL:114108,CIEL:5622"
+						answerLabels="Normal,Anormal,Miliaire,Élargissement cardiaque,Infiltra,Changement Diffus (Pas de Miliaire),Lésion cavitaire,Effusion Pleurale,Autre"
+						showDate="true" dateLabel="" showCommentField="true" commentFieldLabel="Préciser"
+						style="radio" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<br />
+		<div width="100%" style="border-top:solid 1px">
+			<!--<obs conceptId="CIEL:163752" answerConceptId="CIEL:12" answerLabel="Radiographie 
+				pulmonaire"/><br/> -->
+			<table>
+				<tr>
+					<td>Radiographie abdominale:</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:101" answerLabel="Analyses demandées"/></td>
+				</tr>
+				<tr>
+					<td>Résultats :</td>
+					<td>
+						<obs conceptId="CIEL:101"
+						answerConceptIds="CIEL:1115,CIEL:1116,CIEL:5622"
+						answerLabels="Normal,Anormal,Autre"
+						showDate="true" dateLabel="" showCommentField="true" commentFieldLabel="Préciser"
+						style="radio" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<br />
+		<div width="100%" style="border-top:solid 1px">
+			<!--<obs conceptId="CIEL:163752" answerConceptId="CIEL:12" answerLabel="Radiographie 
+				pulmonaire"/><br/> -->
+			<table>
+				<tr>
+					<td>Radiographie de la tête, crâne:</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:386" answerLabel="Analyses demandées"/></td>
+				</tr>
+				<tr>
+					<td>Résultats :</td>
+					<td>
+						<obs conceptId="CIEL:386"
+						answerConceptIds="CIEL:1115,CIEL:1116,CIEL:5622"
+						answerLabels="Normal,Anormal,Autre"
 						showDate="true" dateLabel="" showCommentField="true" commentFieldLabel="Préciser"
 						style="radio" />
 					</td>
@@ -147,7 +187,12 @@
 		<br />
 		<div width="100%" style="border-top:solid 1px">
 			<table>
-				<tr><td>Radiographie (Autre):</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:309" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Radiographie (Autre):
+				<obs conceptId="CIEL:309" answerConceptIds="CIEL:161348,CIEL:161341,CIEL:161301,CIEL:159600,CIEL:161320"
+				answerLabels="Radiographie colonne lombaire 2 ou 3 vues,Radiographie des sinus,
+				Radiographie colonne cervicale 2 ou 3 vues, Radiographie gastrointestinal,Rachis thoracique 2 vues (radiographie)"/>
+				</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:309" answerLabel="Analyses demandées"/></td></tr>
 				<tr><td>Résultats :</td><td><obs conceptId="CIEL:309" answerConceptIds="CIEL:1115,CIEL:1116"
 				answerLabels="Normal,Anormal" showDate="true" dateLabel="" showCommentField="true"
 				commentFieldLabel="Préciser" style="radio" /></td></tr>

@@ -714,7 +714,8 @@
 							<tr>
 								<td colspan="4">
 									Remarques:
-									<obs conceptId="CIEL:161011" rows="2" cols="80" />
+									<!-- <obs conceptId="CIEL:161011" rows="2" cols="80" /> -->
+									<obs conceptId="CIEL:160632" rows="2" cols="80" />
 								</td>
 							</tr>
 						</table>

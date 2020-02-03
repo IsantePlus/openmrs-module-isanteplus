@@ -1009,7 +1009,8 @@
 							<tr>
 								<td colspan="3">
 									Remarque: &#160;&#160;&#160;&#160;&#160;
-									<obs conceptId="CIEL:161011" rows="1" cols="50" />
+									<!-- <obs conceptId="CIEL:161011" rows="1" cols="50" />-->
+									<obs conceptId="CIEL:160221" rows="1" cols="50" />
 								</td>
 							</tr>
 						</table>
@@ -1601,7 +1602,8 @@
 								<td></td>
 							</tr>
 						</table><br/>
-						<obs conceptId="CIEL:161011" rows="2" cols="80" />
+						<!--  <obs conceptId="CIEL:161011" rows="2" cols="80" /> -->
+						<obs conceptId="CIEL:160632" rows="2" cols="80" />
 					</fieldset>
 				</div>
 			</div>

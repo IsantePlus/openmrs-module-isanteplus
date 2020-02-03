@@ -518,9 +518,9 @@
 		setValue('multivitamine.value',461);
 		}
 		if((getValue('multivitamine_dispensee.value') != null)
-		|| (getValue('mul_post_alt.value.value') != '')
-		|| (getValue('mul_nb_pil.value.value')!='') 
-		|| (getValue('mul_j_alt.value.value')!='')) {
+		|| (getValue('mul_post_alt.value') != '')
+		|| (getValue('mul_nb_pil.value')!='') 
+		|| (getValue('mul_j_alt.value')!='')) {
 		setValue('multivitamine1.value',461);
 		}
 
@@ -3679,6 +3679,9 @@
 	</section>
 	<section headerLabel="AUTRES MEDICAMENTS">
 		<obs conceptId="CIEL:163322" rows="5" cols="90"/> 
+	</section>
+	<section headerLabel="REMARQUES">
+		<obs conceptId="CIEL:161011" rows="5" cols="90"/> 
 	</section>
 	<section headerLabel="COLLECTE DES MEDICAMENTS/PROCHAINE VISITE">
 		Informations sur la personne prenant les médicaments.

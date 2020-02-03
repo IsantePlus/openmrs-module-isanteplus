@@ -36,7 +36,7 @@ import org.openmrs.api.UserService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.ModuleActivator;
 import org.openmrs.module.appframework.service.AppFrameworkService;
-import org.openmrs.module.emrapi.utils.MetadataUtil;
+//import org.openmrs.module.emrapi.utils.MetadataUtil;
 import org.openmrs.module.htmlformentry.HtmlFormEntryService;
 import org.openmrs.module.htmlformentryui.HtmlFormUtil;
 import org.openmrs.module.isanteplus.api.IsantePlusService;
@@ -167,17 +167,17 @@ public class ISantePlusActivator implements ModuleActivator {
 	 * Install the metadata packages using the MetadataSharing Module
 	 * @throws Exception
 	 */
-	private void installMetadataPackages() throws Exception {
+	//private void installMetadataPackages() throws Exception {
 
         //We need to first install the iSantePlus concept source metadata bundle
-		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Concept_Source");
+		//MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Concept_Source");
 		
 		//Then we install the rest of the metadata. We do this because there's an error when mapping concepts to a transient concepts source in the database
-		MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts");
+		//MetadataUtil.setupSpecificMetadata(getClass().getClassLoader(), "iSantePlus_Registration_Concepts");
 
-        Context.flushSession();
+       // Context.flushSession();
 
-    }
+    //}
 
 	/**
 	 * Installs metadataBundles from multiple providers all found in the IsantePlusMetadataBundle.class
