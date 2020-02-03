@@ -511,6 +511,12 @@
 
 		// Fin supplementation en vitamine A
 		
+		jQuery('.field-error').each(function() {
+			if (!jQuery(this).is(':empty')){
+				alert('The form is not valid. Please fix the fields with error');
+				return false
+			}
+		});
 		
 		return true;
 		});

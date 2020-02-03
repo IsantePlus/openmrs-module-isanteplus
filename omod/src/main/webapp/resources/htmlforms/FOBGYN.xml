@@ -262,6 +262,13 @@
 		setValue('autre_vacc.value', '5622');
 		}
 
+		jQuery('.field-error').each(function() {
+			if (!jQuery(this).is(':empty')){
+				alert('The form is not valid. Please fix the fields with error');
+				return false
+			}
+		});
+
 		return true;
 		});
 	</script>
