@@ -310,7 +310,7 @@
 
 		jQuery('.field-error').each(function() {
 			if (!jQuery(this).is(':empty')){
-				alert('The form is not valid. Please fix the fields with error');
+				alert('La sauvegarde a échoué à cause d'une erreur dans la fiche, veuillez corriger les champs avec erreur');
 				return false
 			}
 		});
