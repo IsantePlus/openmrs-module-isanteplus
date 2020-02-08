@@ -105,7 +105,7 @@
 		}
 		
 	</style>
-
+	
 	<script type="text/javascript">
 		jQuery(function() {
 		jQuery( '.toggle-button' ).on( 'click', function() {
@@ -447,12 +447,18 @@
 		}
 		
 		//Fin bacilloscopie
+
+		jQuery('.field-error').each(function() {
+			if (!jQuery(this).is(':empty')){
+				alert('La sauvegarde a échoué à cause d'une erreur dans la fiche, veuillez corriger les champs avec erreur');
+				return false
+			}
+		});
 		
 		
 		return true;
 		});
 	</script>
-	
 	
 	<ifMode mode="ENTER">
 		<lookup complexExpression="
