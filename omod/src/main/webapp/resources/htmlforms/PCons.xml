@@ -448,15 +448,26 @@
 		
 		//Fin bacilloscopie
 
+		var labelsList = "\n";
+		var valid = true;
+
 		jQuery('.field-error').each(function() {
 			if (!jQuery(this).is(':empty')){
-				alert('La sauvegarde a échoué à cause d'une erreur dans la fiche, veuillez corriger les champs avec erreur');
-				return false
+				var parent = jQuery(this).parent();
+				var label = parent[0].firstChild.data;
+
+				if (label !== undefined) {
+					labelsList += label + "\n";
+				}
+				valid = false;
 			}
 		});
+
+		if (!valid) {
+			alert("La sauvegarde a échoué à cause d'une erreur dans la fiche, veuillez corriger les champs avec erreur" + labelsList);
+		}
+		return valid;
 		
-		
-		return true;
 		});
 	</script>
 	
@@ -976,35 +987,29 @@
 						<table width="100%">
 							<tr>
 								<td>
-									Pds
-									<obs conceptId="CIEL:5089" id="weight" />
+									<obs conceptId="CIEL:5089" id="weight" labelText="Pds" />
 									kg
 								</td>
 								<td>
-									Taille
-									<obs conceptId="CIEL:5090" id="height" />
+									<obs conceptId="CIEL:5090" id="height" labelText="Taille" />
 									cm
 								</td>
 								<td colspan="3">
-									TA
-									<obs conceptId="CIEL:5085" />
+									<obs conceptId="CIEL:5085" labelText="TA" />
 									<obs conceptId="CIEL:5086" labelText=" / " />
 									mmHg
 								</td>
 							</tr>
 							<tr>
 								<td>
-									Temp
-									<obs conceptId="CIEL:5088" />
+									<obs conceptId="CIEL:5088" labelText="Temp" />
 									°C
 								</td>
 								<td>
-									Pouls
-									<obs conceptId="CIEL:5087" />
+									<obs conceptId="CIEL:5087" labelText="Pouls" />
 								</td>
 								<td>
-									FR
-									<obs conceptId="CIEL:5242" />
+									<obs conceptId="CIEL:5242" labelText="FR" />
 								</td>
 								<td>
 									<includeIf
