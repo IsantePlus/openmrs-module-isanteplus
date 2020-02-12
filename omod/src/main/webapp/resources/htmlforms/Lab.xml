@@ -3038,12 +3038,11 @@
 								</tr>
 								<tr>
 									<td>
-
 										<span class="titre" ch-target="#pcr"><obs conceptId="CIEL:1271" class="master" id="idpcr32" answerConceptId="844" answerLabel="PCR"/></span><br/>
 										<span id="pcr" class="togglable" style="display: none;">
 										<fieldset>
 											<legend>Résultat et date</legend>
-											<obs conceptId="CIEL:844" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1300,CIEL:1304" answerLabels="Détectable,Indétectable,Equivoque,Echatillon de pauvre qualité" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<obs conceptId="CIEL:844" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1300,CIEL:1304" answerLabels="Détecté,Non-détecté,Equivoque,Echantillon de pauvre qualité" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											<obs id="pcrStage" labelText="LNSP stage" conceptId="4f318d58-7647-47e2-92dd-7b568aa26360" answerConceptIds="69db5c1b-33ba-487c-8613-d09ce2a300a3, 048568cf-f0dc-49f7-89a1-c9768f17afe7,
 												07390957-df63-466b-b053-2faa53bb334f, 8c9c35a7-c276-42db-bae1-fc2d6050c1cd, d1295091-3785-4a4d-8cc8-74b788aee569, d112794e-219c-4299-bd1e-d8bfcedd28e8, 7b7479f0-6592-4652-aadc-b9449fd3d232,
 												b57ebd98-b1f8-4fff-ac5e-80b2f175821b, faf7644f-8f59-4500-9e93-97e0904e1dc4, 9b0cc757-ae30-4927-84fd-b1c291ab3811, e8f87596-8b2d-4dcf-afc1-92deb2e2c428, f8f1fa5d-51b5-4092-9df0-b9438c9c8f6b"

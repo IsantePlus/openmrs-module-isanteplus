@@ -967,7 +967,8 @@
 							<tr>
 								<td colspan="4">
 									Remarques:
-									<obs conceptId="CIEL:161011" rows="2" cols="80" />
+									<!-- <obs conceptId="CIEL:161011" rows="2" cols="80" /> -->
+									<obs conceptId="CIEL:160632" rows="2" cols="80" />
 								</td>
 							</tr>
 						</table>
@@ -3306,8 +3307,9 @@
 							<tr>
 								<td>
 									No. d’enregistrement TB :
-									<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
-										required="false" />
+									<obs conceptId="e5803d79-0f64-4904-a7b3-971003c1ba36" />
+									<!--  <patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
+										required="false" /> -->
 									Date d’enregistrement :
 									<obs conceptId="CIEL:161552" />
 									Etablissement :

@@ -156,4 +156,8 @@ public interface IsantePlusService extends OpenmrsService {
 	List<IsantePlusObs> getAllDiagnosis(Patient patient);
 
 	Obs getLastViralLoadQualitativeObsForPatient(Patient patient);
+	
+	Obs getLatestNextOtherVisitDate(Patient patient);
+	
+	Obs getLatestNextOrdonanceVisitDate(Patient patient);
 }

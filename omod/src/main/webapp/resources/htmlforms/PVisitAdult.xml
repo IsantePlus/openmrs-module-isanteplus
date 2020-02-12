@@ -1259,8 +1259,10 @@
 						<br />
 						<br />
 						No. de dossier TB :
-						<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
-							required="false" />
+						<obs conceptId="e5803d79-0f64-4904-a7b3-971003c1ba36" />
+						<!--  No. de dossier TB :
+						  <patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
+							required="false" /> -->
 					</td>
 					<td valign="TOP" style="padding-left:2%">
 						<br />

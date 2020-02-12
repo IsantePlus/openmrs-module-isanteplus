@@ -98,14 +98,14 @@ public class IsanteplusPatientHeaderFragmentController {
 			config.addAttribute("patientRecordingDate", null);
 		}
         
-        Obs nextVisitDate = Context.getService(IsantePlusService.class).getLatestNextVisitDate(wrapper.getPatient());
+       /* Obs nextVisitDate = Context.getService(IsantePlusService.class).getLatestNextVisitDate(wrapper.getPatient());
 		if(nextVisitDate != null)
 		{
 			config.addAttribute("nextVisitDate", inputFormat.format(nextVisitDate.getValueDatetime()));
 		}
 		else{
 			config.addAttribute("nextVisitDate", null);
-		}
+		}*/
 		
 		Obs artInitiationDate = Context.getService(IsantePlusService.class).getArtInitiationDate(wrapper.getPatient());
 		if(artInitiationDate != null)
@@ -114,6 +114,24 @@ public class IsanteplusPatientHeaderFragmentController {
 		}
 		else{
 			 config.addAttribute("artInitiationDate",null);	
+		}
+		
+		Obs latestNextVisitDate = Context.getService(IsantePlusService.class).getLatestNextOtherVisitDate(wrapper.getPatient());
+		if(latestNextVisitDate != null)
+		{
+			config.addAttribute("latestNextVisitDate", inputFormat.format(latestNextVisitDate.getValueDatetime()));
+		}
+		else{
+			config.addAttribute("latestNextVisitDate",null);
+		}
+		
+		Obs latestNextDispensationDate = Context.getService(IsantePlusService.class).getLatestNextOrdonanceVisitDate(wrapper.getPatient());
+		if(latestNextDispensationDate != null)
+		{
+			config.addAttribute("latestNextDispensationDate", inputFormat.format(latestNextDispensationDate.getValueDatetime()));
+		}
+		else{
+			config.addAttribute("latestNextDispensationDate",null);
 		}
 		
 		DataSet dataset = Context.getService(IsantePlusService.class).getPatientStatusArv(wrapper.getPatient());
