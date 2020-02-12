@@ -533,6 +533,14 @@
 		} else {
 			setValue('autres_traitement_arv.value', '');
 		}
+
+		jQuery('.field-error').each(function() {
+			if (!jQuery(this).is(':empty')){
+				alert("La sauvegarde a échoué à cause d'une erreur dans la fiche, veuillez corriger les champs avec erreur");
+				return false
+			}
+		});
+		
 		/*Fin autres traitements*/
 		return true;
 		});
