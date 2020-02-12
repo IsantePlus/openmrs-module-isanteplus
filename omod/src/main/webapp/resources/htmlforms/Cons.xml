@@ -2606,9 +2606,9 @@
 							</tr>
 							<tr>
 								<td>
-									No. d’enregistrement TB :
-									<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
-										required="false" />
+									No. d’enregistrement TB : <obs conceptId="e5803d79-0f64-4904-a7b3-971003c1ba36" />
+									<!--   <patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
+										required="false" /> -->
 									Date d’enregistrement :
 									<obs conceptId="CIEL:161552" />
 									Etablissement :

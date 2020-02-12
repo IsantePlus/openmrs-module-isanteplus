@@ -980,7 +980,8 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return viralLoadJson;
 	}
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private Obs getLatestNextOtherVisitDate(Patient patient) {
+	@Override
+	public Obs getLatestNextOtherVisitDate(Patient patient) {
 		Concept latestNextVisitConcept = Context.getConceptService().getConcept(5096);
 		List<Obs> latestNextVisitObs = new ArrayList(
 				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), latestNextVisitConcept));
@@ -988,8 +989,9 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 		return latestNextVisitObs != null && latestNextVisitObs.size() > 0 ? latestNextVisitObs.get(latestNextVisitObs.size() - 1) : null;
 	}
+	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private Obs getLatestNextOrdonanceVisitDate(Patient patient) {
+	public Obs getLatestNextOrdonanceVisitDate(Patient patient) {
 		Concept latestNextOrdonanceConcept = Context.getConceptService().getConcept(162549);
 		List<Obs> latestNextOrdonanceObs = new ArrayList(
 				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), latestNextOrdonanceConcept));

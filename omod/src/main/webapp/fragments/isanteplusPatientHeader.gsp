@@ -130,35 +130,54 @@
                 ${ ui.includeFragment("coreapps", "patientdashboard/contactInfoInline", [ patient: config.patient, contextModel: appContextModel ]) }
             </div>
         </h1>
-        <div id="arv">
-          <% if (config.patientRecordingDate != null) { %> <i> ${ ui.message("isanteplus.patientRecordingDate") } : </i> <b>${config.patientRecordingDate}</b> <br/><% } %> 
-		  <% if (config.nextVisitDate != null) { %> <i> ${ ui.message("isanteplus.nextVisitDate") } : </i> <b>${config.nextVisitDate}</b><br/>  <% } %>
-		  <% if (config.artInitiationDate != null) { %> <i> ${ ui.message("isanteplus.artInitiationDate") } : </i> <b>${config.artInitiationDate}</b><br/> <% } %>
-		  <% if (config.artInitiationDate == null) { %>
-		  			<% if (config.columnsArtInitiationDate != null ) { %>
-			      	
-					    	<% config.columnsvaluesart.each { %>
+        <table width="100%" border="0">
+	        <div id="arv">
+	        <tr>	
+	          	<td>
+	          	 	<% if (config.patientRecordingDate != null) { %> <i> ${ ui.message("isanteplus.patientRecordingDate") } : </i> <b>${config.patientRecordingDate}</b> <% } %> 
+			  	</td>
+			  	<td> 
+			  		<% if (config.artInitiationDate != null) { %> <i> ${ ui.message("isanteplus.artInitiationDate") } : </i> <b>${config.artInitiationDate}</b> <% } %>
+			  	
+					  <% if (config.artInitiationDate == null) { %>
+					  			<% if (config.columnsArtInitiationDate != null ) { %>
+						      	
+								    	<% config.columnsvaluesart.each { %>
+								    		
+								    			<% config.columnsArtInitiationDate.each { colNam -> %>
+										    		<i>${ui.format(colNam)} :</i> ${ui.format(it.columnValues[colNam])}
+									    		<% } %>
+									    	
+								    	<% } %>
+							    <% } %>
+					  <% } %>
+				</td>
+			  	
+			 </tr>
+			 <tr>
+			 	<td>
+			  		<% if (config.latestNextVisitDate != null) { %> <i> ${ ui.message("isanteplus.nextVisitDate") } : </i> <b>${config.latestNextVisitDate}</b> <% } %>
+			 	</td>
+			 	<td> 
+			  		<% if (config.latestNextDispensationDate != null) { %> <i> ${ ui.message("isanteplus.nextDispensationDate") } : </i> <b>${config.latestNextDispensationDate}</b>  <% } %>
+				</td>
+			</tr>
+			</div>
+			<div>
+				<tr>
+				      	<% if (config.columns != null ) { %>
+				      	
+					    	<% config.columnsvalues.each { %>
 					    		
-					    			<% config.columnsArtInitiationDate.each { colNam -> %>
-							    		<i>${ui.format(colNam)} :</i> ${ui.format(it.columnValues[colNam])}<br/>
+					    			<% config.columns.each { colName -> %>
+							    	   <td>	<i>${ui.format(colName)} :</i> ${ui.format(it.columnValues[colName])}</td>
 						    		<% } %>
 						    	
 					    	<% } %>
-				    <% } %>
-		  <% } %>
-		</div>
-		<div>
-			      	<% if (config.columns != null ) { %>
-			      	
-				    	<% config.columnsvalues.each { %>
-				    		
-				    			<% config.columns.each { colName -> %>
-						    		<i>${ui.format(colName)} :</i> ${ui.format(it.columnValues[colName])}<br/>
-					    		<% } %>
-					    	
-				    	<% } %>
-				    <% } %>
-		</div>
+					    <% } %>
+				</tr>
+			</div>
+		</table>
     </div>
 
     <div class="identifiers">
