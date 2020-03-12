@@ -36,6 +36,16 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#contener_ordmped
+		{
+			height: 470px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}
 	</style>
 	<script type="text/javascript">
 		jQuery.fn.cleanWhitespace = function() {
@@ -791,7 +801,7 @@
 		});
 	</script>
 
-	<span style="float:right">Paper Form ID: $paperFormId</span>
+	<div id="contener_ordmped">
 	<h2>Ordonnance médicale pédiatrique (v1.0)</h2>
 
 	<section headerLabel="1. Encounter Details">
@@ -3791,4 +3801,5 @@
 		text field) <obs conceptId="id-of-text-concept" labelText="Label before"/> 
 		(as a textarea) <obs conceptId="id-of-text-concept" labelText="Label before" 
 		rows="4" cols="80"/> -->
+	</div>
 </htmlform>

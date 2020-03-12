@@ -36,6 +36,15 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		#contener_ordm
+		{
+			height: 470px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}
 	</style>
 	<script type="text/javascript">
 		jQuery.fn.cleanWhitespace = function() {
@@ -591,7 +600,7 @@
 		});
 	</script>
 
-	<span style="float:right">Paper Form ID: $paperFormId</span>
+	<div id="contener_ordm">
 	<h2>Ordonnance médicale (v1.0)</h2>
 
 	<section headerLabel="1. Encounter Details">
@@ -610,7 +619,7 @@
 			</tr>
 		</table>
 	</section>
-
+   
 	<section headerLabel="VISITE ASSOCIEE">
 
 		<table class="baseline-aligned">
@@ -3742,8 +3751,9 @@
 	</section>
 
 	<br />
+	
 	<submit submitClass="confirm right" submitCode="general.save" />
-
+	</div>
 	<!-- END OF FORM Simple examples to copy-and-paste. Full reference at http://wiki.openmrs.org/x/kg8z 
 		SECTION <section headerLabel="\#. Title"> Content </section> NUMERIC OBSERVATION 
 		<obs conceptId="id-of-numeric-concept" labelText="Label before"/> DATE OBSERVATION 

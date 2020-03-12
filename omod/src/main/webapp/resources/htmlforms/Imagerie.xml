@@ -101,8 +101,19 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
 
 	</style>
+	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
@@ -247,5 +258,6 @@
 			<span align="right" style="float:right">MSPP FICHE D'IMAGERIE ET AUTRES
 				(VERSION FÉVRIER 2014)</span>
 		</div>
+	</div>
 	</div>
 </htmlform>

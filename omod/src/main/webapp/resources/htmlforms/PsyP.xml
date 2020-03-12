@@ -102,6 +102,17 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
+		
 	</style>
 	
 	<script type="text/javascript">
@@ -119,7 +130,7 @@
 		});
 
 	</script>
-
+	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
@@ -143,7 +154,7 @@
 				</tr>
 			</table>
 		</div>
-	</div>
+	
 	<section headerLabel="RELIGION">
 		<obs conceptId="CIEL:162929"
 			answerConceptIds="CIEL:162930,CIEL:162931,CIEL:162932,CIEL:162933,CIEL:162934,CIEL:162935,CIEL:162936,CIEL:163098,CIEL:163125,CIEL:163124, CIEL:5622"
@@ -906,5 +917,7 @@
 			<submit submitClass="confirm right" submitCode="general.save" />
 			<br />
 		</center>
+	</div>
+	</div>
 	</div>
 </htmlform>

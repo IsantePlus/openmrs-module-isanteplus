@@ -26,10 +26,12 @@
 		}
 		#conteneur
 		{
-		font-family:arial, sans-serif;
-		font-size:90%;
-		font-weight: normal;
-		font-size: small;
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
 		}
 		#dateVisite{
 		background:#81BEF7;
@@ -47,6 +49,16 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		/*
+		#contener_overflow
+		{
+			height: 470px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}*/
 	</style>
 	<script type="text/javascript">
 		//ca3aed11-1aa4-42a1-b85c-8332fc8001fc
@@ -606,7 +618,7 @@
 
 </ifMode>
 
-	<div width="100%" id="conteneur">
+	<div width="98%" id="conteneur">
 		<div id="dateVisite">
 			<b>FICHE DE SAISIE POUR LA PREMIERE VISITE ADULTE VIH+</b>
 			<br />
@@ -625,7 +637,7 @@
 				</tr>
 			</table>
 		</div>
-
+       <div id="contener_overflow">
 		<table width="100%">
 			<tr>
 				<td width="50%" height="100%" valign="TOP">
@@ -2905,6 +2917,7 @@
 	Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation de ce système, ou encore des suggestions d'ordre général.<br/>
 	</section>
 	<br/>
+	</div>
 	<submit submitClass="confirm right" submitCode="general.save"/>
 </div>	
 </htmlform>

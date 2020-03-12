@@ -100,6 +100,17 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
+		
 	</style>
 	<script type="text/javascript">
 		jQuery.fn.cleanWhitespace = function() {
@@ -114,6 +125,7 @@
 		jQuery(".section").cleanWhitespace();
 		});
 	</script>
+	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
@@ -291,5 +303,6 @@
 		<br />
 		<span style="margin-right:0px">MSPP RAPPORT D'ARRÊT DU PROGAMME SOINS ET TRAITEMENT
 			VIH/SIDA(VERSION OCTOBRE 2006)</span>
+	</div>
 	</div>
 </htmlform>

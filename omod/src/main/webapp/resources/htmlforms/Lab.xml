@@ -2568,7 +2568,7 @@
 						<td valign="TOP">
 							<table>
 								<tr><td><obs conceptId="CIEL:1271" id="panelppd" answerConceptId="CIEL:163631" answerLabel="P : PPD"/></td></tr>
-								<tr><td>P : Recherche de BARR (Verifier change datatype concept)</td></tr>
+								<tr><td><!-- P : Recherche de BARR (Verifier change datatype concept) --></td></tr>
 								<tr>
 									<td>
 										<span class="titre" ch-target="#culttuber"><obs conceptId="CIEL:1271" class="master" id="idculturetb1" answerConceptId="CIEL:159982" answerLabel="Culture de M. tuberculosis"/></span><br/>
@@ -3013,15 +3013,6 @@
 							<table>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#span400"><obs conceptId="CIEL:1271" class="master" id="idchargvq1" answerConceptId="1305" answerLabel="Charge virale qualitative"/></span><br/>
-										<span id="span400" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:1305" answerConceptIds="CIEL:1301,CIEL:1306" answerLabels="Détectable,Indétectable" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
-									</td>
-								</tr>
-								<tr>
-									<td>
 										<span class="titre" ch-target="#span380"><obs conceptId="CIEL:1271" class="master" id="idchargeviralqua" answerConceptId="856" answerLabel="Charge virale quantitative"/></span><br/>
 										<span id="span380" class="togglable" style="display: none;">
 										<fieldset>
@@ -3034,6 +3025,20 @@
 												VIH-Charge Virale (CVi-1) Plasma, VIH-Charge Virale (CVi-2) Plasma, VIH-Charge Virale (CVi-3) Plasma, VIH-Charge Virale (CVau) Plasma, VIH-Charge Virale (CVce) Plasma, VIH-Charge Virale (CVr) Plasma" />
 										</fieldset>
 										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<!--  <span class="titre" ch-target="#span400"><obs conceptId="CIEL:1271" class="master" id="idchargvq1" answerConceptId="1305" answerLabel="Charge virale qualitative"/></span><br/>
+										<span id="span400" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:1305" answerConceptIds="CIEL:1301,CIEL:1306" answerLabels="Détectable,Indétectable" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>-->
+										<span class="titre" ch-target="#span400"><obs conceptId="CIEL:1271" class="master" id="idchargvq1" answerConceptId="1305" answerLabel="Charge virale (Sans Valeur)"/></span><br/>
+										<span id="span400" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend>
+										<obs conceptId="CIEL:1305" answerConceptId="CIEL:1306" answerLabel="Indétectable" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
 									</td>
 								</tr>
 								<tr>

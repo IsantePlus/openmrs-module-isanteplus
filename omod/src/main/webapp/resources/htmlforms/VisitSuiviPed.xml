@@ -46,6 +46,17 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
+		
 	</style>
 	<script type="text/javascript">
 		if(jQuery){
@@ -811,6 +822,7 @@
 		});
 
 	</script>
+	<div width="98%" id="conteneur">
 	<div id="dateVisite">
 		<b>FICHE DE SUIVI DES VISITES CLINIQUES: PÉDIATRIQUE; ENFANTS EXPOSÉS
 			AU VIH OU INFECTÉS AU VIH</b>
@@ -3428,5 +3440,5 @@
 	<submit submitClass="confirm right" submitCode="general.save" />
 	<br />
 	<br />
-	<br />
+	</div>
 </htmlform>

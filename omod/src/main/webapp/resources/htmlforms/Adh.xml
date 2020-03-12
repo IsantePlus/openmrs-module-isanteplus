@@ -107,6 +107,16 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
 
 	</style>
 	<script type="text/javascript">
@@ -187,6 +197,7 @@
 		return true;
 		});
 	</script>
+	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
@@ -455,5 +466,6 @@
 				OCTOBRE 2006)
 			</span>
 		</div>
+	</div>
 	</div>
 </htmlform>
