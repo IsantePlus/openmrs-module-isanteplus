@@ -250,6 +250,20 @@
 		}
 		}
 		);
+		
+		group.find("#symptomJ").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomj.value') == '141635' ) {
+		group.find("#symptompresentj").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentj").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentj").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentj").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
 		group.find("#symptomK").find("input[type$='checkbox']").click(function(){
 		if (getValue('symptomk.value') == '118789' ) {
 		group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",true);
@@ -311,7 +325,7 @@
 		}
 		);
 
-		group.find("#disabled1").find("input").attr("disabled",true);
+	/*	group.find("#disabled1").find("input").attr("disabled",true);
 		jQuery("#eligibilite_arv").click(function(){
 		if (getValue('eligibilite_ar.value') == '1065' ) {
 		group.find("#disabled1").find("input").attr("disabled",false);
@@ -322,7 +336,7 @@
 		group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
 		group.find("#disabled1").find("input[type$='checkbox']").change();
 		}
-		});
+		}); */
 
 		});
 		});
@@ -1284,7 +1298,8 @@
 						<br />
 						Établissement :
 						<br />
-						<obs conceptId="CIEL:162724" labelText="" />
+						<!-- <obs conceptId="CIEL:162724" labelText="" /> -->
+						<obs conceptId="4a580214-39ae-4986-a25c-fd05e102fb86" labelText="" />
 					</td>
 				</tr>
 			</table>
@@ -2507,7 +2522,7 @@
 	</section>
 	
 	<section headerLabel="REMARQUES">
-		<obs conceptId="CIEL:163322" rows="5" cols="90"/> 
+		<obs conceptId="CIEL:161011" rows="5" cols="90"/> 
 	</section>
 	<section headerLabel="MÉDICAMENTS : ALLERGIES">
 		<table>
@@ -2867,9 +2882,9 @@
 								<obs conceptId="CIEL:162225" answerConceptId="CIEL:1087" answerLabel="ARV trithérapie antérieure" style="checkbox"/><br/>
 								<obs conceptId="CIEL:162225" answerConceptId="CIEL:1691" answerLabel="Prophylaxie post-exposition (PEP)" style="checkbox"/><br/>
 								Date de l'exposition <br/><br/>
-								<obsgroup groupingConceptId="163288">
+								<!--  <obsgroup groupingConceptId="163288"> -->
 								<obs conceptId="CIEL:162601" allowTime="false" id="date_eligibilite_arv"/><br/>
-								</obsgroup>
+								<!-- </obsgroup>-->
 							</span>
 						
 						<obs conceptId="CIEL:162225" answerConceptId="CIEL:163324" answerLabel="Coinfection TB/HIV"/> <!-- New concept added--><br/>

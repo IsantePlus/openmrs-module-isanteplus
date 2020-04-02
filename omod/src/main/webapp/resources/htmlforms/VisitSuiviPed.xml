@@ -1198,7 +1198,8 @@
 					<obs conceptId="CIEL:162724" labelText="" />
 					<br />
 					Établissement :
-					<obs conceptId="CIEL:162724" labelText="" />
+					<!-- <obs conceptId="CIEL:162724" labelText="" />-->
+					<obs conceptId="4a580214-39ae-4986-a25c-fd05e102fb86" labelText="" />
 				</td>
 			</tr>
 		</table>
@@ -2556,7 +2557,7 @@
 		</table>
 	</section>
 	<section headerLabel="COMMENTAIRES">
-		<obs conceptId="CIEL:163322" rows="5" cols="90" />
+		<obs conceptId="CIEL:161011" rows="5" cols="90" />
 	</section>
 	
 	<section headerLabel="MÉDICAMENTS : ALLERGIES">
