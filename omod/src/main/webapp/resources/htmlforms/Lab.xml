@@ -3095,8 +3095,11 @@
 	<br/>
 	<div id="datePr">
 		Date de Prochaine Visite :<obs conceptId="CIEL:5096" allowFutureDates="true"/><br/><br/>
-		Nom d'auteur de la fiche :<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/><br/>
-
+		Nom d'auteur de la fiche :
+		<span style="display: none">
+		<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" autocompleteProvider="true" default="currentUser"/> <br/><br/>
+		</span>
+		<obs conceptId="CIEL:1473"/>
 		<br/><br/>
 	</div>
 	<div id="sauvegarde">

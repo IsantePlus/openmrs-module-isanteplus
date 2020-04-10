@@ -2434,8 +2434,12 @@
 	<!--SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="2" providerRoles="3" autocompleteProvider="true" providerMatchMode="ANYWHERE"/><br/>
 	SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="2" providerRoles="1" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
 	-->
+	<span style="display: none">
 	SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
 	SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>
+	</span>
+	SIGNATURE DE L'INFIRMIÈRE: <obs conceptId="08655ba9-7a6d-4009-82d5-6d7e8470dd62"/>
+	SIGNATURE DU MÉDECIN: <obs conceptId="CIEL:1473"/>
 	<br/>
 	SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
 	<br/><br/>
@@ -2446,6 +2450,7 @@
 	<section>
 	Remarques (Prière d'inscrire les remarques au-dessus de la ligne en pointillés.).<br/>
 	Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation de ce système, ou encore des suggestions d'ordre général.<br/>
+	<obs conceptId="1e1c4061-47b8-4c4a-ba70-a9f56158c649" rows="10" cols="35"/>
 	</section>
 	<br/>
 	<submit submitClass="confirm right" submitCode="general.save"/>

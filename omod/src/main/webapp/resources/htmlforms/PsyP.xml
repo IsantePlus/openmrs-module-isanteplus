@@ -908,8 +908,11 @@
 	<br />
 	<br />
 	Nom d'auteur de la fiche :
-	<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+	<span style="display: none">
+		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
 		autocompleteProvider="true" default="currentUser" />
+	</span>
+		<obs conceptId="CIEL:1473"/>
 	<br />
 	<br />
 	<div id="sauvegarde">
