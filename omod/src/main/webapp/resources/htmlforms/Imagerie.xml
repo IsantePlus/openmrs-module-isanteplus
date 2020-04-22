@@ -102,6 +102,9 @@
 		display: inline-block;
 		}
 
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<div id="contenerGeneral">
 		<div id="dateVisite">

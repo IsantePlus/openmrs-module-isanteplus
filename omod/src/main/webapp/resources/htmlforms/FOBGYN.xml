@@ -97,6 +97,10 @@
 		{
 			border: 0;
 		}
+		
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<script type="text/javascript">
 		jQuery(function() {

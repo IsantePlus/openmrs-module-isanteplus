@@ -36,6 +36,10 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<script type="text/javascript">
 		jQuery.fn.cleanWhitespace = function() {
