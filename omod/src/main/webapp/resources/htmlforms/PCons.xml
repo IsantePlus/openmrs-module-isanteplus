@@ -3675,15 +3675,19 @@
 							<tr>
 								<td>
 									Nom et Prénom 1
-									<encounterProviderAndRole
+									<span style="display: none">
+										<encounterProviderAndRole
 										encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1"
 										autocompleteProvider="true" default="currentUser" />
+									</span><br/>
+										<obs conceptId="08655ba9-7a6d-4009-82d5-6d7e8470dd62"/>
 								</td>
 								<td>
 									Nom et Prénom 2
-									<encounterProviderAndRole
+									<!-- <encounterProviderAndRole
 										encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
-										autocompleteProvider="true" />
+										autocompleteProvider="true" /> -->
+										<obs conceptId="CIEL:1473"/>
 								</td>
 							</tr>
 							<br />
@@ -3691,17 +3695,18 @@
 								<td colspan="2">
 									<br />
 									Nom et Prénom 3
-									<encounterProviderAndRole
+									<!-- <encounterProviderAndRole
 										encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
-										autocompleteProvider="true" />
+										autocompleteProvider="true" /> -->
+										<obs conceptId="f9d7da27-6c7d-4418-a653-fdcf05782f82"/>
 								</td>
 							</tr>
-							<tr>
+							<!--  <tr>
 								<td colspan="2">
 									<br />
 									SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
 								</td>
-							</tr>
+							</tr> -->
 						</table>
 					</fieldset>
 				</div>

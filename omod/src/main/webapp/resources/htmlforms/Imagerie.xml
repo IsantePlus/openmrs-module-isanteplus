@@ -101,11 +101,22 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
 
 		.error {
 		    background-color: lightpink;
 		}
 	</style>
+	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
@@ -224,12 +235,15 @@
 		<br />
 		<br />
 		Nom d'auteur de la fiche:
+		<span style="display: none">
 		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
 			autocompleteProvider="true" default="currentUser" />
+			</span>
+			<obs conceptId="CIEL:1473"/>
 		<br />
 		<br/>
-			SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
-		<br/><br/>
+			<!-- SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE : <obs conceptId="CIEL:1473"/> -->
+		<br/>
 		Statut de la fiche
 		<br />
 		&#160;
@@ -250,5 +264,6 @@
 			<span align="right" style="float:right">MSPP FICHE D'IMAGERIE ET AUTRES
 				(VERSION FÉVRIER 2014)</span>
 		</div>
+	</div>
 	</div>
 </htmlform>

@@ -100,7 +100,15 @@
 		form label, .form label {
 		display: inline-block;
 		}
-		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
 		.error {
 		    background-color: lightpink;
 		}
@@ -118,6 +126,7 @@
 		jQuery(".section").cleanWhitespace();
 		});
 	</script>
+	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
 		<div id="dateVisite">
 			<b>
@@ -264,18 +273,20 @@
 		<br />
 		<br />
 		SIGNATURE DU CONSEILLER:
-		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+		<span style="display: none">
+			<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
 			providerRoles="3" id="infirmiere" autocompleteProvider="true"
 			providerMatchMode="ANYWHERE" default="currentUser" />
+		</span>
+			<obs conceptId="08655ba9-7a6d-4009-82d5-6d7e8470dd62"/>
 		<br />
 		SIGNATURE DU MÉDECIN:
-		<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
+		<!--  <encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
 			providerRoles="1" id="medecin" autocompleteProvider="true"
-			providerMatchMode="ANYWHERE" />
+			providerMatchMode="ANYWHERE" /> -->
+			<obs conceptId="CIEL:1473"/>
 		<br />
-		<br />
-			SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
-		<br/>
+			<!-- SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/> -->
 		<br/>
 		Statut de la fiche
 		<br />
@@ -288,6 +299,11 @@
 		<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065"
 			answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données." />
 		<br />
+		<section>
+			Remarques (Prière d'inscrire les remarques au-dessus de la ligne en pointillés.).<br/>
+			Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation de ce système, ou encore des suggestions d'ordre général.<br/>
+			<obs conceptId="1e1c4061-47b8-4c4a-ba70-a9f56158c649" rows="10" cols="35"/>
+		</section>
 		<br />
 		<br />
 		<submit submitClass="confirm right" submitCode="general.save" />
@@ -295,5 +311,6 @@
 		<br />
 		<span style="margin-right:0px">MSPP RAPPORT D'ARRÊT DU PROGAMME SOINS ET TRAITEMENT
 			VIH/SIDA(VERSION OCTOBRE 2006)</span>
+	</div>
 	</div>
 </htmlform>

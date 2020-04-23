@@ -72,6 +72,14 @@
     })
 </script>
 
+<style type="text/css">
+	#container
+	{
+        font-size: small;
+	}
+</style>
+
+<div id="container">
 <div class="patient-header <% if (patient.patient.dead) { %>dead<% } %>">
 
     <% if (patient.patient.dead) { %>
@@ -265,4 +273,5 @@
         <button id="confirmIdentifierId" class="confirm right">${ui.message("coreapps.confirm")}</button>
         <button class="cancel">${ui.message("coreapps.cancel")}</button>
     </div>
+</div>
 </div>

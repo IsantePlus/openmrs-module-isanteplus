@@ -36,9 +36,20 @@
 		display: inline-block;
 		}
 		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
+		
 		.error {
 		    background-color: lightpink;
 		}
+
 	</style>
 	
 	<script type="text/javascript">
@@ -195,7 +206,7 @@
 		});
 	</script>
 
-	<span style="float:right">Paper Form ID: $paperFormId</span>
+	<div width="98%" id="conteneur">
 	<h2>Fiche de travail et d'accouchement (v1.0)</h2>
 
 	<section headerLabel="1. Encounter Details">
@@ -1294,11 +1305,13 @@
 	<br />
 	<br />
 	Nom d'auteur de la fiche:
-	<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
+	<span style="display: none">
+		<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
 		providerRoles="3" id="prestataire" autocompleteProvider="true"
 		providerMatchMode="ANYWHERE" default="currentUser" />
-	<br />
-	SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
+	</span>
+	<obs conceptId="CIEL:1473"/>
+	<!-- SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/> -->
 	<br/>
 	<br />
 	Statut de la fiche
@@ -1321,7 +1334,7 @@
 		problèmes de saisie ou d'utilisation de ce système, ou encore des
 		suggestions d'ordre général.
 		<br />
-		<obs conceptId="CIEL:161011" rows="5" cols="90" />
+		<obs conceptId="1e1c4061-47b8-4c4a-ba70-a9f56158c649" rows="10" cols="35"/>
 
 	</section>
 	<br />
@@ -1345,4 +1358,5 @@
 		text field) <obs conceptId="id-of-text-concept" labelText="Label before"/> 
 		(as a textarea) <obs conceptId="id-of-text-concept" labelText="Label before" 
 		rows="4" cols="80"/> -->
+		</div>
 </htmlform>

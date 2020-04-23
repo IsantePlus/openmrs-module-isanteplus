@@ -59,10 +59,11 @@ ${ ui.includeFragment("isanteplus", "isantePlusForms") }
 		<h3>${ ui.message("isanteplus.formsHistory") } (${ ui.message("isanteplus.formsHistory.filled") })</h3>
 		<table>
 			<tr>
-				<th>${ ui.message("isanteplus.formsHistory.creationDate") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.visitDate") }</th>
 				<th>${ ui.message("isanteplus.formName") }</th>
 				<th>${ ui.message("isanteplus.formsHistory.formStatus") }</th>
 				<th>${ ui.message("isanteplus.formsHistory.provider") }</th>
+				<th>${ ui.message("isanteplus.formsHistory.creationDate") }</th>
 				<th>${ ui.message("isanteplus.formsHistory.lastModification") }</th>
 				<th>${ ui.message("isanteplus.formsHistory.dataEntry") }</th>
 				<th><i class="viewEncounter view-action icon-file-alt" data-mode="view" title="${ ui.message("isanteplus.encounter.view") }"></i></th>
@@ -76,6 +77,7 @@ ${ ui.includeFragment("isanteplus", "isantePlusForms") }
 					</td>
 					<td>${ ui.format(it.formStatus) }</td>
 					<td>${ ui.format(it.provider) }</td>
+					<td>${ ui.format(it.encounter.dateCreated) }</td>
 					<td>${ ui.format(it.dateChanged) }</td>
 					<td>${ ui.format(it.enteredBy) }</td>
 					<td><a href="/${appName}/htmlformentryui/htmlform/viewEncounterWithHtmlForm.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounter=${ ui.format(it.encounter.uuid) }">

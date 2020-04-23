@@ -26,10 +26,12 @@
 		}
 		#conteneur
 		{
-		font-family:arial, sans-serif;
-		font-size:90%;
-		font-weight: normal;
-		font-size: small;
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
 		}
 		#dateVisite{
 		background:#81BEF7;
@@ -47,6 +49,16 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		/*
+		#contener_overflow
+		{
+			height: 470px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}*/
 		
 		.error {
 		    background-color: lightpink;
@@ -242,6 +254,20 @@
 		}
 		}
 		);
+		
+		group.find("#symptomJ").find("input[type$='checkbox']").click(function(){
+		if (getValue('symptomj.value') == '141635' ) {
+		group.find("#symptompresentj").find("input[type$='checkbox']").attr("checked",true);
+		group.find("#symptompresentj").find("input[type$='checkbox']").change();
+		}
+		else
+		{
+		group.find("#symptompresentj").find("input[type$='checkbox']").attr("checked",false);
+		group.find("#symptompresentj").find("input[type$='checkbox']").change();
+		}
+		}
+		);
+		
 		group.find("#symptomK").find("input[type$='checkbox']").click(function(){
 		if (getValue('symptomk.value') == '118789' ) {
 		group.find("#symptompresentk").find("input[type$='checkbox']").attr("checked",true);
@@ -303,7 +329,7 @@
 		}
 		);
 
-		group.find("#disabled1").find("input").attr("disabled",true);
+	/*	group.find("#disabled1").find("input").attr("disabled",true);
 		jQuery("#eligibilite_arv").click(function(){
 		if (getValue('eligibilite_ar.value') == '1065' ) {
 		group.find("#disabled1").find("input").attr("disabled",false);
@@ -314,7 +340,7 @@
 		group.find("#disabled1").find("input[type$='checkbox']").attr("checked",false);
 		group.find("#disabled1").find("input[type$='checkbox']").change();
 		}
-		});
+		}); */
 
 		});
 		});
@@ -610,7 +636,7 @@
 
 </ifMode>
 
-	<div width="100%" id="conteneur">
+	<div width="98%" id="conteneur">
 		<div id="dateVisite">
 			<b>FICHE DE SAISIE POUR LA PREMIERE VISITE ADULTE VIH+</b>
 			<br />
@@ -629,7 +655,7 @@
 				</tr>
 			</table>
 		</div>
-
+       <div id="contener_overflow">
 		<table width="100%">
 			<tr>
 				<td width="50%" height="100%" valign="TOP">
@@ -925,8 +951,10 @@
 							<table>
 								<tr>
 									<td>
-										<obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
-											answerLabels="Oui, Non" style="radio" />
+										<!-- <obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
+											answerLabels="Oui, Non" style="radio" />-->
+											<obs conceptId="CIEL:965" style="yes_no" noLabel="Non"
+											yesLabel="Oui" /> 
 										<br />
 										<b>Méthode PF</b>
 										<br />
@@ -945,9 +973,12 @@
 											answerLabel="Ligature des trompes" />
 										<br />
 										<br />
-										Autres, préciser :
+										<!-- Autres, préciser :
 										<obs conceptId="CIEL:374" showCommentField="true"
-											commentFieldLabel="" />
+											commentFieldLabel="" />-->
+									<obs conceptId="CIEL:374" answerConceptId="CIEL:5622" answerLabel="Autres"
+									showCommentField="true" commentFieldLabel=", préciser :" />
+											
 									</td>
 								</tr>
 							</table>
@@ -1276,7 +1307,8 @@
 						<br />
 						Établissement :
 						<br />
-						<obs conceptId="CIEL:162724" labelText="" />
+						<!-- <obs conceptId="CIEL:162724" labelText="" /> -->
+						<obs conceptId="4a580214-39ae-4986-a25c-fd05e102fb86" labelText="" />
 					</td>
 				</tr>
 			</table>
@@ -2499,7 +2531,7 @@
 	</section>
 	
 	<section headerLabel="REMARQUES">
-		<obs conceptId="CIEL:163322" rows="5" cols="90"/> 
+		<obs conceptId="CIEL:161011" rows="5" cols="90"/> 
 	</section>
 	<section headerLabel="MÉDICAMENTS : ALLERGIES">
 		<table>
@@ -2777,7 +2809,7 @@
 					<render concept="CIEL:78280" drugname="Isoniazide (INH)" id="isoniazide" conceptgroup="fee8bd39-2a95-47f9-b1f5-3f9e9b3ee959" color="#FFFFFF"/>
 					<render concept="CIEL:82900" drugname="Pyrazinamide" id="pyrazinamide" conceptgroup="ee73ed0f-8fd5-4a3e-be10-c12cef9672e8" color="#D8D8D8"/>
 					<render concept="CIEL:767" drugname="Rifampicine" id="rifampicine" conceptgroup="2b2053bd-37f3-429d-be0b-f1f8952fe55e" color="#FFFFFF"/>
-					<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="	f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
+					<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
 				</repeat>
 				<tr>
 					<td colspan="4"><b>Autres traitements</b>
@@ -2859,9 +2891,9 @@
 								<obs conceptId="CIEL:162225" answerConceptId="CIEL:1087" answerLabel="ARV trithérapie antérieure" style="checkbox"/><br/>
 								<obs conceptId="CIEL:162225" answerConceptId="CIEL:1691" answerLabel="Prophylaxie post-exposition (PEP)" style="checkbox"/><br/>
 								Date de l'exposition <br/><br/>
-								<obsgroup groupingConceptId="163288">
+								<!--  <obsgroup groupingConceptId="163288"> -->
 								<obs conceptId="CIEL:162601" allowTime="false" id="date_eligibilite_arv"/><br/>
-								</obsgroup>
+								<!-- </obsgroup>-->
 							</span>
 						
 						<obs conceptId="CIEL:162225" answerConceptId="CIEL:163324" answerLabel="Coinfection TB/HIV"/> <!-- New concept added--><br/>
@@ -2895,10 +2927,13 @@
 			<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
 		</fieldset>
 	</section>
-	
-	SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
-	SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/><br/>
-	SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
+	<span style="display: none">
+		SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="7571318b-6358-45cb-b5b3-4d914221eaa1" providerRoles="3" id="infirmiere" autocompleteProvider="true" providerMatchMode="ANYWHERE" default="currentUser"/><br/>
+		SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af" providerRoles="1" id="medecin" autocompleteProvider="true" providerMatchMode="ANYWHERE"/><br/>
+	</span>
+	SIGNATURE DE L'INFIRMIÈRE: <obs conceptId="08655ba9-7a6d-4009-82d5-6d7e8470dd62"/>
+	SIGNATURE DU MÉDECIN: <obs conceptId="CIEL:1473"/>
+	<!--  SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/> -->
 	<br/><br/>
 	Statut de la fiche<br/>
 	&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
@@ -2907,8 +2942,10 @@
 	<section>
 	Remarques (Prière d'inscrire les remarques au-dessus de la ligne en pointillés.).<br/>
 	Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation de ce système, ou encore des suggestions d'ordre général.<br/>
+	<obs conceptId="1e1c4061-47b8-4c4a-ba70-a9f56158c649" rows="10" cols="35"/>
 	</section>
 	<br/>
+	</div>
 	<submit submitClass="confirm right" submitCode="general.save"/>
 </div>	
 </htmlform>

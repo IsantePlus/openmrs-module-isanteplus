@@ -36,6 +36,15 @@
 		form label, .form label {
 		display: inline-block;
 		}
+		#contener_ordm
+		{
+			height: 470px;
+			overflow: scroll;
+			border: 1px solid black;
+			text-align: justify;
+			padding: 5px;
+			margin:0px;
+		}
 		
 		.error {
 		    background-color: lightpink;
@@ -595,7 +604,7 @@
 		});
 	</script>
 
-	<span style="float:right">Paper Form ID: $paperFormId</span>
+	<div id="contener_ordm">
 	<h2>Ordonnance médicale (v1.0)</h2>
 
 	<section headerLabel="1. Encounter Details">
@@ -614,7 +623,7 @@
 			</tr>
 		</table>
 	</section>
-
+   
 	<section headerLabel="VISITE ASSOCIEE">
 
 		<table class="baseline-aligned">
@@ -3717,19 +3726,22 @@
 		<br />
 
 		SIGNATURE DU PRESTATAIRE:
-		<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
+		<span style="display: none">
+			<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
 			providerRoles="3" id="prestataire" autocompleteProvider="true"
 			providerMatchMode="ANYWHERE" default="currentUser" />
+		</span>
+		<obs conceptId="CIEL:1473"/>
 		<br />
 		SIGNATURE DU PHARMACIEN/DISPENSATEUR:
-		<encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+		<!--  <encounterProviderAndRole encounterRole="ef0445e7-bfe6-4260-a351-09fc835b6bcd"
 			providerRoles="1" id="pharmacien" autocompleteProvider="true"
-			providerMatchMode="ANYWHERE" />
+			providerMatchMode="ANYWHERE" /> -->
+			<obs conceptId="f9d7da27-6c7d-4418-a653-fdcf05782f82"/>
 
 		<br />
 		
-			SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
-		<br/>
+			<!-- SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>-->
 		<br />
 		Statut de la fiche
 		<br />
@@ -3746,8 +3758,15 @@
 	</section>
 
 	<br />
+	<section>
+	Remarques (Prière d'inscrire les remarques au-dessus de la ligne en pointillés.).<br/>
+	Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation de ce système, ou encore des suggestions d'ordre général.<br/>
+	<obs conceptId="1e1c4061-47b8-4c4a-ba70-a9f56158c649" rows="10" cols="35"/>
+	</section>
+	<br/>
+	
 	<submit submitClass="confirm right" submitCode="general.save" />
-
+	</div>
 	<!-- END OF FORM Simple examples to copy-and-paste. Full reference at http://wiki.openmrs.org/x/kg8z 
 		SECTION <section headerLabel="\#. Title"> Content </section> NUMERIC OBSERVATION 
 		<obs conceptId="id-of-numeric-concept" labelText="Label before"/> DATE OBSERVATION 

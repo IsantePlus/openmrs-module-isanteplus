@@ -46,7 +46,15 @@
 		form label, .form label {
 		display: inline-block;
 		}
-		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
 		.error {
 		    background-color: lightpink;
 		}
@@ -257,7 +265,7 @@
 		});
 	</script>
 	
-	<div width="100%" id="conteneur">
+	<div width="98%" id="conteneur">
 		<div id="dateVisite">
 			<b>FICHE DE VISITE À DOMICILE : ADULTE VIH+</b>
 			<br />
@@ -276,8 +284,6 @@
 				</tr>
 			</table>
 		</div>
-	</div>
-	
 	<section headerLabel="BUT DE LA VISITE">
 		<table>
 			<tr>
@@ -684,5 +690,5 @@
 		<br />
 		<br />
 		<span style="margin-right:0px">MSPP FICHE DE VISITE À DOMICILE : ADULTE VIH+ (VERSION OCTOBRE 2005)</span>
-	
+	</div>
 </htmlform>

@@ -47,6 +47,16 @@
 		display: inline-block;
 		}
 		
+		#conteneur
+		{
+			font-family:arial, sans-serif;
+			font-weight: normal;
+			font-size: medium;
+			height: 470px;
+			padding: 5px;
+			overflow: scroll;
+		}
+		
 		.error {
 		    background-color: lightpink;
 		}
@@ -815,6 +825,7 @@
 		});
 
 	</script>
+	<div width="98%" id="conteneur">
 	<div id="dateVisite">
 		<b>FICHE DE SUIVI DES VISITES CLINIQUES: PÉDIATRIQUE; ENFANTS EXPOSÉS
 			AU VIH OU INFECTÉS AU VIH</b>
@@ -1190,7 +1201,8 @@
 					<obs conceptId="CIEL:162724" labelText="" />
 					<br />
 					Établissement :
-					<obs conceptId="CIEL:162724" labelText="" />
+					<!-- <obs conceptId="CIEL:162724" labelText="" />-->
+					<obs conceptId="4a580214-39ae-4986-a25c-fd05e102fb86" labelText="" />
 				</td>
 			</tr>
 		</table>
@@ -2548,7 +2560,7 @@
 		</table>
 	</section>
 	<section headerLabel="COMMENTAIRES">
-		<obs conceptId="CIEL:163322" rows="5" cols="90" />
+		<obs conceptId="CIEL:161011" rows="5" cols="90" />
 	</section>
 	
 	<section headerLabel="MÉDICAMENTS : ALLERGIES">
@@ -3399,11 +3411,13 @@
 		<obs conceptId="CIEL:159395" rows="5" cols="90" />
 	</section>
 	Nom d'auteur de la fiche :
-	<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
+	<span style="display: none">
+		<encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
 		autocompleteProvider="true" default="currentUser" />
+	</span>
+	<obs conceptId="CIEL:1473"/>
 	<br />
-	SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
-	<br/>
+	<!-- SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>-->
 	<br />
 	Statut de la fiche
 	<br />
@@ -3427,10 +3441,11 @@
 		problèmes de saisie ou d'utilisation de ce système, ou encore des
 		suggestions d'ordre général.
 		<br />
+		<obs conceptId="1e1c4061-47b8-4c4a-ba70-a9f56158c649" rows="10" cols="35"/>
 	</section>
 	<br />
 	<submit submitClass="confirm right" submitCode="general.save" />
 	<br />
 	<br />
-	<br />
+	</div>
 </htmlform>
