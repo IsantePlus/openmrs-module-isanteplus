@@ -868,8 +868,10 @@
 			<table>
 				<tr>
 					<td>
-						<obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
-											answerLabels="Oui, Non" style="radio" />
+						<!--  <obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
+											answerLabels="Oui, Non" style="radio" />-->
+						<obs conceptId="CIEL:965" style="yes_no" noLabel="Non"
+											yesLabel="Oui" /> 
 						<br />
 						<b>Méthode PF</b>
 						<br />
@@ -888,8 +890,10 @@
 							answerLabel="Ligature des trompes" />
 						<br />
 						<br />
-						Autres, préciser :
-						<obs conceptId="CIEL:374" />
+						<!-- Autres, préciser :
+						<obs conceptId="CIEL:374" /> -->
+						<obs conceptId="CIEL:374" answerConceptId="CIEL:5622" answerLabel="Autres"
+									showCommentField="true" commentFieldLabel=", préciser :" />
 					</td>
 				</tr>
 			</table>
