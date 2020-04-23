@@ -45,6 +45,10 @@
 			padding: 5px;
 			margin:0px;
 		}
+		
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<script type="text/javascript">
 		jQuery.fn.cleanWhitespace = function() {

@@ -59,6 +59,10 @@
 			padding: 5px;
 			margin:0px;
 		}*/
+		
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<script type="text/javascript">
 		//ca3aed11-1aa4-42a1-b85c-8332fc8001fc

@@ -46,7 +46,6 @@
 		form label, .form label {
 		display: inline-block;
 		}
-		
 		#conteneur
 		{
 			font-family:arial, sans-serif;
@@ -56,7 +55,9 @@
 			padding: 5px;
 			overflow: scroll;
 		}
-		
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<script type="text/javascript">
 		if(jQuery){

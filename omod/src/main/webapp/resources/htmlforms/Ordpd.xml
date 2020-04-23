@@ -36,7 +36,6 @@
 		form label, .form label {
 		display: inline-block;
 		}
-		
 		#contener_ordmped
 		{
 			height: 470px;
@@ -45,6 +44,9 @@
 			text-align: justify;
 			padding: 5px;
 			margin:0px;
+		}
+		.error {
+		    background-color: lightpink;
 		}
 	</style>
 	<script type="text/javascript">

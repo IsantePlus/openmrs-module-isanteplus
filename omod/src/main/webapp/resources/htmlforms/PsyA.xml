@@ -112,7 +112,9 @@
 			padding: 5px;
 			overflow: scroll;
 		}
-		
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<script type="text/javascript">
 	//Valition des donnees

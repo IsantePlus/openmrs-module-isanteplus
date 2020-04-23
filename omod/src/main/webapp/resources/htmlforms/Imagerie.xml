@@ -112,6 +112,9 @@
 			overflow: scroll;
 		}
 
+		.error {
+		    background-color: lightpink;
+		}
 	</style>
 	<div width="98%" id="conteneur">
 	<div id="contenerGeneral">
