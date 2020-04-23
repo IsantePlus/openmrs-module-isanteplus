@@ -49,7 +49,8 @@
 		}
 		
 		.error {
-		    background-color: lightpink;
+		    color: red;
+		    background-color: white;
 		}
 	</style>
 	<style type="text/css">

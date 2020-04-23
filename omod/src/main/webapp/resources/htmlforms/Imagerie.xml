@@ -113,7 +113,8 @@
 		}
 
 		.error {
-		    background-color: lightpink;
+		    color: red;
+		    background-color: white;
 		}
 	</style>
 	<div width="98%" id="conteneur">
