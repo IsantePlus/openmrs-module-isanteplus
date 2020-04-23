@@ -947,8 +947,10 @@
 							<table>
 								<tr>
 									<td>
-										<obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
-											answerLabels="Oui, Non" style="radio" />
+										<!-- <obs conceptId="CIEL:374" answerConceptIds="CIEL:965, CIEL:160652"
+											answerLabels="Oui, Non" style="radio" />-->
+											<obs conceptId="CIEL:965" style="yes_no" noLabel="Non"
+											yesLabel="Oui" /> 
 										<br />
 										<b>Méthode PF</b>
 										<br />
@@ -967,9 +969,12 @@
 											answerLabel="Ligature des trompes" />
 										<br />
 										<br />
-										Autres, préciser :
+										<!-- Autres, préciser :
 										<obs conceptId="CIEL:374" showCommentField="true"
-											commentFieldLabel="" />
+											commentFieldLabel="" />-->
+									<obs conceptId="CIEL:374" answerConceptId="CIEL:5622" answerLabel="Autres"
+									showCommentField="true" commentFieldLabel=", préciser :" />
+											
 									</td>
 								</tr>
 							</table>
@@ -2800,7 +2805,7 @@
 					<render concept="CIEL:78280" drugname="Isoniazide (INH)" id="isoniazide" conceptgroup="fee8bd39-2a95-47f9-b1f5-3f9e9b3ee959" color="#FFFFFF"/>
 					<render concept="CIEL:82900" drugname="Pyrazinamide" id="pyrazinamide" conceptgroup="ee73ed0f-8fd5-4a3e-be10-c12cef9672e8" color="#D8D8D8"/>
 					<render concept="CIEL:767" drugname="Rifampicine" id="rifampicine" conceptgroup="2b2053bd-37f3-429d-be0b-f1f8952fe55e" color="#FFFFFF"/>
-					<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="	f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
+					<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
 				</repeat>
 				<tr>
 					<td colspan="4"><b>Autres traitements</b>

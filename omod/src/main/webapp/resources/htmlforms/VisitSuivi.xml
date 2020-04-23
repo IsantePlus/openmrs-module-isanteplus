@@ -2441,8 +2441,8 @@
 	SIGNATURE DE L'INFIRMIÈRE: <obs conceptId="08655ba9-7a6d-4009-82d5-6d7e8470dd62"/>
 	SIGNATURE DU MÉDECIN: <obs conceptId="CIEL:1473"/>
 	<br/>
-	SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/>
-	<br/><br/>
+	<!--  SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/> -->
+	<br/>
 	Statut de la fiche<br/>
 	&#160;<obs conceptId="CIEL:163340" answerConceptIds="CIEL:163339,CIEL:1267" answerLabels="Incomplète. A mettre à jour ultérieurement.&lt;br&#47;&gt;, Complète." defaultValue="CIEL:1267" style="radio"/>
 	<br/>
