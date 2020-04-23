@@ -118,7 +118,8 @@
 			overflow: scroll;
 		}
 		.error {
-		    background-color: lightpink;
+		    color: red;
+		    background-color: white;
 		}
 
 	</style>
