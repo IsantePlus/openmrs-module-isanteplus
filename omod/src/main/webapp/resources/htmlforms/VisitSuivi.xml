@@ -434,6 +434,15 @@
 		setValue('nevirapine.value', '80586');
 		setValue('nevirapine_hiv.value', '138405');
 		}
+		if ((getValue('etravirine_start.value') == '') &amp;&amp;
+		(getValue('etravirine_end.value') == '') &amp;&amp;
+		(getValue('etravirine_current.value') != '1065')) {
+		setValue('etravirine.value', '');
+		setValue('etravirine_hiv.value', '');
+		} else {
+		setValue('etravirine.value', '159810');
+		setValue('etravirine_hiv.value', '138405');
+		}
 		if ((getValue('atazanavir_end.value') == '') &amp;&amp;
 		(getValue('atazanavir_current.value') != '1065')) {
 		setValue('atazanavir.value', '');
@@ -2163,6 +2172,7 @@
 </template>
 <render concept="CIEL:75523" drugname="Efavirenz (EFV)" id="efavirenz" conceptgroup="5b14f87d-3b64-418c-bfcf-90a8d0ae0e02" color="#FFFFFF"/>
 <render concept="CIEL:80586" drugname="Nevirapine (NVP)" id="nevirapine" conceptgroup="dbd8e7e9-6b7a-4b70-8c8f-a80f8e64b710" color="#D8D8D8"/>
+<render concept="CIEL:159810" drugname="Etravirine(ETV)" id="etravirine" conceptgroup="7698aa21-85c1-409a-b7d9-21a951986ac2" color="#FFFFFF"/>
 </repeat>
 	<tr bgcolor="#FFFFFF">
 		<td><b>(-) IPs</b></td>
@@ -2436,6 +2446,17 @@
 	<section headerLabel="ÉVALUATION ET PLAN">
 		Utiliser la section Antécédants Médicaux pour indiquer tous les diagnostics. Utiliser cette section pour décrire le plan de traitement et de soin.<br/>
 		<obs conceptId="CIEL:159395" rows="5" cols="90"/>
+	</section>
+	<section headerLabel="INTERVENTION">
+		<fieldset>
+			<legend></legend>
+			Date de Procedure : <obs conceptId="CIEL:160715" allowTime="false" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162812" answerLabel="Cryotherapie" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162810" answerLabel="LEEP" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:163408" answerLabel="Thermocoagulation" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:162811" answerLabel="Conisation" /><br/>
+			<obs conceptId="CIEL:1651" answerConceptId="CIEL:159837" answerLabel="Hystérectomie" />
+		</fieldset>
 	</section>
 	<!--SIGNATURE DE L'INFIRMIÈRE:<encounterProviderAndRole encounterRole="2" providerRoles="3" autocompleteProvider="true" providerMatchMode="ANYWHERE"/><br/>
 	SIGNATURE DU MÉDECIN:<encounterProviderAndRole encounterRole="2" providerRoles="1" autocompleteProvider="true" providerMatchMode="ANYWHERE"/>

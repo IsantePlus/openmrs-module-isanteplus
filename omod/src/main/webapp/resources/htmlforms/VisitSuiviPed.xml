@@ -664,6 +664,15 @@
 		setValue('nevirapine.value', '80586');
 		setValue('nevirapine_hiv.value', '138405');
 		}
+		if ((getValue('etravirine_start.value') == '') &amp;&amp;
+		(getValue('etravirine_end.value') == '') &amp;&amp;
+		(getValue('etravirine_current.value') != '1065')) {
+		setValue('etravirine.value', '');
+		setValue('etravirine_hiv.value', '');
+		} else {
+		setValue('etravirine.value', '159810');
+		setValue('etravirine_hiv.value', '138405');
+		}
 		if ((getValue('atazanavir_end.value') == '') &amp;&amp;
 		(getValue('atazanavir_current.value') != '1065')) {
 		setValue('atazanavir.value', '');
@@ -2912,6 +2921,8 @@
 					conceptgroup="5b14f87d-3b64-418c-bfcf-90a8d0ae0e02" color="#FFFFFF" />
 				<render concept="CIEL:80586" drugname="Nevirapine (NVP)" id="nevirapine"
 					conceptgroup="dbd8e7e9-6b7a-4b70-8c8f-a80f8e64b710" color="#D8D8D8" />
+					<render concept="CIEL:159810" drugname="Etravirine(ETV)" id="etravirine" 
+					conceptgroup="7698aa21-85c1-409a-b7d9-21a951986ac2" color="#FFFFFF"/>
 			</repeat>
 			<tr bgcolor="#FFFFFF">
 				<td>

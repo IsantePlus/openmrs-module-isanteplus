@@ -1825,10 +1825,10 @@
 									</td>
 								</tr>
 								<tr>
-									<td>
-										<span class="titre" ch-target="#choleratestrap"><obs conceptId="CIEL:1271" class="master" id="idchol1" answerConceptId="CIEL:163442" answerLabel="Cholera Test rapide"/></span><br/>
+									<td> <!-- Replace 163442 BY 163654-->
+										<span class="titre" ch-target="#choleratestrap"><obs conceptId="CIEL:1271" class="master" id="idchol1" answerConceptId="CIEL:163654" answerLabel="Cholera Test rapide"/></span><br/>
 										<span id="choleratestrap" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163442" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163654" answerConceptIds="CIEL:1228,CIEL:1229" answerLabels="Réactif,Non Réactif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1995,9 +1995,10 @@
 								</tr>
 								<tr><td>Motilite 3 heures</td></tr>
 								<tr><td>Motilite STAT</td></tr>
-								<tr><td><span class="titre" ch-target="#span130"><obs conceptId="CIEL:1271" class="master" id="spermogrammeph" answerConceptId="CIEL:161455" answerLabel="pH"/></span><br/>
+								<!-- replace 161455 by 163698 -->
+								<tr><td><span class="titre" ch-target="#span130"><obs conceptId="CIEL:1271" class="master" id="spermogrammeph" answerConceptId="CIEL:163698" answerLabel="pH"/></span><br/>
 									<span id="span130" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161455" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163698" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 									</fieldset></span>
 									</td></tr>
 								<tr>
@@ -2086,10 +2087,10 @@
 								
 								</tr>
 								<tr>
-									<td>
-										<span class="titre" ch-target="#colgrame"><obs conceptId="CIEL:1271" class="master" id="antibcolgram" answerConceptId="CIEL:161454" answerLabel="Coloration de Gram"/></span><br/>
+									<td><!-- replace concept 161454 by 0f1b7530-f2c3-4d0d-a675-6cc10ac90f5d -->
+										<span class="titre" ch-target="#colgrame"><obs conceptId="CIEL:1271" class="master" id="antibcolgram" answerConceptId="0f1b7530-f2c3-4d0d-a675-6cc10ac90f5d" answerLabel="Coloration de Gram"/></span><br/>
 										<span id="colgrame" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:161454" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+										<fieldset><legend>Résultat et date</legend><!-- <obsgroup groupingConceptId="CIEL:163679"> --><obs conceptId="0f1b7530-f2c3-4d0d-a675-6cc10ac90f5d" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!-- </obsgroup>--></fieldset></span>
 									</td>
 								</tr>
 								<tr>
