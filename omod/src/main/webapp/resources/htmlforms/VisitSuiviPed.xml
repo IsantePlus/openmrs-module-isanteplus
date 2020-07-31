@@ -673,6 +673,16 @@
 		setValue('etravirine.value', '159810');
 		setValue('etravirine_hiv.value', '138405');
 		}
+		if ((getValue('dolutegravir_start.value') == '') &amp;&amp;
+		(getValue('dolutegravir_end.value') == '') &amp;&amp;
+		(getValue('dolutegravir_current.value') != '1065')) {
+		setValue('dolutegravir.value', '');
+		setValue('dolutegravir_hiv.value', '');
+		} else {
+		setValue('dolutegravir.value', '165085');
+		setValue('dolutegravir_hiv.value', '138405');
+		}
+		
 		if ((getValue('atazanavir_end.value') == '') &amp;&amp;
 		(getValue('atazanavir_current.value') != '1065')) {
 		setValue('atazanavir.value', '');
@@ -3047,6 +3057,8 @@
 					color="#FFFFFF"/> --> <!-- Verification Important -->
 				<render concept="CIEL:794" drugname="Lopinavir+BostRTV (Kaletra)"
 					id="lopinavir_bost" conceptgroup="e017cfcf-a763-4e85-845a-e0aa6573c829" color="#FFFFFF" />
+					<render concept="CIEL:165085" drugname="Dolutegravir(DTG)" id="dolutegravir" 
+					conceptgroup="019b1348-b1cc-4b22-9333-da56d18ba472" color="#D8D8D8"/>
 			</repeat>
 
 			<repeat>

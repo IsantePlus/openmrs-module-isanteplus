@@ -646,7 +646,9 @@
 								id="type_visite" answerLabels="Visite initiale,Visite de suivi" style="radio" showDate="true"/>
 				</td>
 				<td>Date d'initiation ARV <obs conceptId="CIEL:159599"/></td>
-				<td></td>
+				<td><obs conceptId="CIEL:164432"
+				answerConceptIds="dd69cffe-d7b8-4cf1-bc11-3ac302763d48,77488a7b-957f-4ebc-892a-e53e7c910363,99d88c3e-00ad-4122-a300-a88ff5c125c9" 
+				answerLabels="Régime de 1ère ligne,Régime de 2ème ligne,Régime de 3ème ligne" style="radio" /></td>
 			</tr>
 		</table>
 	</section>

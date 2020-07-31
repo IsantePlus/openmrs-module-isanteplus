@@ -113,6 +113,9 @@
 		    color: red;
 		    background-color: white;
 		}
+		#content {
+			margin-left:10px;
+		}
 	</style>
 	<script type="text/javascript">
 		jQuery.fn.cleanWhitespace = function() {
@@ -152,17 +155,25 @@
 				</tr>
 			</table>
 		</div>
+		<section headerLabel="Rapport de discontinuation des soins">
+		
 		<div>
-			Est-ce que le patient a arrêté définitif de la participation au
+			<br/>
+			Quel type de soins VIH/SIDA le patient a-t-il reçu ? <br/>
+			<obs conceptId="CIEL:1192" style="yes_no" noLabel="Le patient a reçu des antirétroviraux"
+				yesLabel="Le patient n'a pas reçu d'antirétroviraux" /><br/>
+		</div>
+		<div>
+		<!--	Est-ce que le patient a arrêté définitif de la participation au
 			programme de soins et traitment VIH/SIDA?
 			<br />
 			&#160;
 			<obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066"
 				answerLabels="Oui- préciser la Raison ci-dessous&lt;br/&gt;,Non, ne pas remplir le Rapport d'Arrêt"
-				style="radio" />
+				style="radio" />-->
 			<table width="80%">
 				<tr>
-					<td>Date d'arrêt du programme des soins et traitement VIH/SIDA </td>
+					<td>Date de discontinuation du programme des soins et traitement VIH/SIDA </td>
 					<td>
 						<obs conceptId="CIEL:164094" allowTime="false" />
 					</td>
@@ -189,14 +200,17 @@
 			<obs conceptId="CIEL:160121" answerConceptIds="CIEL:1065,CIEL:1066"
 				answerLabels="Oui- préciser la Raison ci-dessous&lt;br/&gt;,Non, ne pas remplir le Rapport d'Arrêt"
 				style="radio" />
-			<br />
-			<b>Raison d'arrêt</b>
-			, préciser
-			<br />
+			<br /><br/>
+			<section headerLabel="Raison de discontinuation, préciser">
+			<div id="content">
+			<br/>
 			<obs conceptId="CIEL:161555" answerConceptId="CIEL:5240"
-				answerLabel="Perte de contact avec le patient depuis plus de trois mois " />
+				answerLabel="Perdu de vue de plus de trois ans et ayant bénéficié de quatre visites à domicile infructueuses" />
 			<br />
-			&#160;&#160;&#160;&#160;&#160;Si arrêt dû à la perte de contact avec
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:160415"
+				answerLabel="Émigration" showCommentField="true" commentFieldLabel=", précisez :" />
+			<br/>      
+		<!--	&#160;&#160;&#160;&#160;&#160;Si arrêt dû à la perte de contact avec
 			le patient, y a-t-il eu un minimum de 3 visites à domicile afin
 			d'assurer la continuité des services?
 			<br />
@@ -206,19 +220,19 @@
 			<br />
 			&#160;&#160;&#160;&#160;&#160;Si non, expliquer
 			<obs conceptId="CIEL:164091" rows="1" cols="50" />
-			<br />
+			<br />-->
 			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159492"
 				answerLabel="Transfert vers un autre établissement" />
 			<br />
 			&#160;&#160;&#160;
 			<obs conceptId="CIEL:164089" answerConceptIds="CIEL:162571,CIEL:162591"
-				answerLabels="Préférence du patient&lt;br/&gt;&#160;&#160;,Référence du médecin"
+				answerLabels="Préférence du patient,Référence du médecin"
 				style="radio" />
 			<br />
 			&#160;&#160;&#160;&#160;&#160;Nom de l'établissement:
 			<obs conceptId="CIEL:162724" />
 			<br />
-			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159"
+			<!-- <obs conceptId="CIEL:161555" answerConceptId="CIEL:159"
 				answerLabel="Décès" />
 			<br />
 			&#160;&#160;&#160;&#160;&#160;Cause présumée du décès:
@@ -232,11 +246,34 @@
 			<br />
 			&#160;&#160;&#160;&#160;&#160;Préciser:
 			<obs conceptId="CIEL:161602" rows="1" cols="50" />
-			<br />
+			<br />-->
 			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1667"
-				answerLabel="Discontinuations, préciser" />
+				answerLabel="Arrêt, préciser" />
 			<br />
 			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:159737"
+				answerLabel="Préférence du patient ou de la personne responsable" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;
+			<obs conceptId="CIEL:1667" answerConceptId="CIEL:162591"
+				answerLabel="Décision du prestataire" />
+			<br />
+			&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:115198" answerLabel="Adhérence inadéquate" />
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:155891" answerLabel="Déni"/>
+			<br />
+			&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:134337" answerLabel="Troubles psychiatriques et/ou psychologiques "/>
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622" answerLabel="Autres raisons" showCommentField="true" commentFieldLabel=", précisez :"/>
+			<br/>
+			<includeIf velocityTest="$patient.age &lt; 15" >
+			&#160;&#160;&#160;&#160;&#160;
+				<obs conceptId="CIEL:1667" answerConceptId="CIEL:165439"
+					answerLabel="Séroréversion" />
+				<br />
+			</includeIf>
+			<!--
+			<br/>&#160;&#160;&#160;&#160;&#160;
 			<obs conceptId="CIEL:1667" answerConceptId="CIEL:1754"
 				answerLabel="ARVs non-disponibles" />
 			<br />
@@ -249,24 +286,41 @@
 				answerLabel="Adhérence inadéquate" />
 			<br />
 			&#160;&#160;&#160;&#160;&#160;
-			<obs conceptId="CIEL:1667" answerConceptId="CIEL:159737"
-				answerLabel="Préférence du patient" />
-			<br /> 
-			<includeIf velocityTest="$patient.age &lt; 15" >
-			&#160;&#160;&#160;&#160;&#160;
-				<obs conceptId="CIEL:1667" answerConceptId="CIEL:165439"
-					answerLabel="Séroréversion" />
-				<br />
-			</includeIf>
-			&#160;&#160;&#160;&#160;&#160;
 			<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622"
 				answerLabel="Autre raison, préciser" showCommentField="true"
 				commentFieldLabel="" />
 			<br />
 			<obs conceptId="CIEL:161555" answerConceptId="CIEL:1067"
 				answerLabel="Raison d'arrêt inconnue" />
-			<br />
+			<br />-->
+			<obs conceptId="CIEL:161555" answerConceptId="CIEL:159"
+				answerLabel="Décès, préciser la cause ci-dessous" />
+			&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Date du décès
+			<obs conceptId="CIEL:1543" />
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="CIEL:112141"
+				answerLabel="Tuberculose"/>
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="CIEL:160159"
+				answerLabel="Maladies infectieuses et/ou parasitaires liées au VIH"/>
+			<br/>
+		 	&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="8efa7daf-0fb1-49bd-8e1e-1702334246ba"
+				answerLabel="Cancer lié au VIH"/>
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="CIEL:5622"
+				answerLabel="Autres maladies ou conditions liées au VIH"/>
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="CIEL:133481"
+				answerLabel="Causes naturelles (cancer et infections, etc ) non liées au VIH "/>
+			<br/>
+		 	&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="768778dc-ce6a-47a0-8f78-b0777c8cf081"
+				answerLabel="Causes non naturelles (traumatisme, accident, suicide, homicide, guerre, etc)"/>
+			<br/>
+			&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1748" answerConceptId="CIEL:1067"
+				answerLabel="Inconnue"/>
+		
 		</div>
+		</section>
 		<br />
 		<section headerLabel="REMARQUES">
 			<obs conceptId="CIEL:161011" rows="5" cols="50" />
@@ -282,12 +336,8 @@
 			<obs conceptId="08655ba9-7a6d-4009-82d5-6d7e8470dd62"/>
 		<br />
 		SIGNATURE DU MÉDECIN:
-		<!--  <encounterProviderAndRole encounterRole="322fc5ba-2ed6-44cf-8ebc-963dc40322af"
-			providerRoles="1" id="medecin" autocompleteProvider="true"
-			providerMatchMode="ANYWHERE" /> -->
 			<obs conceptId="CIEL:1473"/>
 		<br />
-			<!-- SIGNATURE (MANUELLE) MÉDECIN/INFIRMIÈRE/AUTRE :<obs conceptId="CIEL:1473"/> -->
 		<br/>
 		Statut de la fiche
 		<br />
@@ -299,7 +349,9 @@
 		&#160;
 		<obs conceptId="CIEL:163341" answerConceptId="CIEL:1065"
 			answerLabel="La fiche doit être passée en revue par la personne responsable de la qualité des données." />
-		<br />
+		<br /><br />
+		</div>
+		</section>
 		<section>
 			Remarques (Prière d'inscrire les remarques au-dessus de la ligne en pointillés.).<br/>
 			Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation de ce système, ou encore des suggestions d'ordre général.<br/>
