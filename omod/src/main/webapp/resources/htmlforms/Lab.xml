@@ -1825,10 +1825,10 @@
 									</td>
 								</tr>
 								<tr>
-									<td>
-										<span class="titre" ch-target="#choleratestrap"><obs conceptId="CIEL:1271" class="master" id="idchol1" answerConceptId="CIEL:163442" answerLabel="Cholera Test rapide"/></span><br/>
+									<td> <!-- Replace 163442 BY 163654-->
+										<span class="titre" ch-target="#choleratestrap"><obs conceptId="CIEL:1271" class="master" id="idchol1" answerConceptId="CIEL:163654" answerLabel="Cholera Test rapide"/></span><br/>
 										<span id="choleratestrap" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163442" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163654" answerConceptIds="CIEL:1228,CIEL:1229" answerLabels="Réactif,Non Réactif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1995,9 +1995,10 @@
 								</tr>
 								<tr><td>Motilite 3 heures</td></tr>
 								<tr><td>Motilite STAT</td></tr>
-								<tr><td><span class="titre" ch-target="#span130"><obs conceptId="CIEL:1271" class="master" id="spermogrammeph" answerConceptId="CIEL:161455" answerLabel="pH"/></span><br/>
+								<!-- replace 161455 by 163698 -->
+								<tr><td><span class="titre" ch-target="#span130"><obs conceptId="CIEL:1271" class="master" id="spermogrammeph" answerConceptId="CIEL:163698" answerLabel="pH"/></span><br/>
 									<span id="span130" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161455" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163698" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 									</fieldset></span>
 									</td></tr>
 								<tr>
@@ -2086,10 +2087,10 @@
 								
 								</tr>
 								<tr>
-									<td>
-										<span class="titre" ch-target="#colgrame"><obs conceptId="CIEL:1271" class="master" id="antibcolgram" answerConceptId="CIEL:161454" answerLabel="Coloration de Gram"/></span><br/>
+									<td><!-- replace concept 161454 by 0f1b7530-f2c3-4d0d-a675-6cc10ac90f5d -->
+										<span class="titre" ch-target="#colgrame"><obs conceptId="CIEL:1271" class="master" id="antibcolgram" answerConceptId="0f1b7530-f2c3-4d0d-a675-6cc10ac90f5d" answerLabel="Coloration de Gram"/></span><br/>
 										<span id="colgrame" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163679"><obs conceptId="CIEL:161454" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+										<fieldset><legend>Résultat et date</legend><!-- <obsgroup groupingConceptId="CIEL:163679"> --><obs conceptId="0f1b7530-f2c3-4d0d-a675-6cc10ac90f5d" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!-- </obsgroup>--></fieldset></span>
 									</td>
 								</tr>
 								<tr>
@@ -2255,7 +2256,7 @@
 								</tr>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#aspectmacro"><obs conceptId="CIEL:1271" class="master" id="macroaspect" answerConceptId="CIEL:162101" answerLabel="Aspect"/></span><br/>
+										<span class="titre" ch-target="#aspectmacro"><!--  <obsgroup groupingConceptId="41bd1e8c-298f-4878-a094-369a298d64ab">--><obs conceptId="CIEL:1271" class="master" id="macroaspect" answerConceptId="CIEL:162101" answerLabel="Aspect"/><!--  </obsgroup> --></span><br/>
 										<span id="aspectmacro" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:162101" answerConceptIds="CIEL:162102,CIEL:162103,CIEL:162104" answerLabels="Urine clair,Urine trouble,Urine turbine" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
@@ -2444,10 +2445,12 @@
 							<table>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#aspect"><obs conceptId="CIEL:1271" class="master" id="idaspect1" answerConceptId="CIEL:162101" answerLabel="Aspect"/></span><br/>
-										<span id="aspect" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:162101" answerConceptIds="CIEL:162102,CIEL:162103" answerLabels="Urine Clair,Urine Pas clair" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="afa598b9-ce2c-4d8a-a4a3-f65212391b71">
+											<span class="titre" ch-target="#aspect"><obs conceptId="CIEL:1271" class="master" id="idaspect1" answerConceptId="CIEL:162101" answerLabel="Aspect"/></span><br/>
+											<span id="aspect" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:162101" answerConceptIds="CIEL:162102,CIEL:162103" answerLabels="Urine Clair,Urine Pas clair" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 								<tr>
@@ -2600,53 +2603,63 @@
 							<table>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#barr1"><obs conceptId="CIEL:1271" class="master" id="barra" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 1"/></span><br/>
-										<span id="barr1" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="deae71f5-3b96-4021-bb1b-fd8e142de506">
+											<span class="titre" ch-target="#barr1"><obs conceptId="CIEL:1271" class="master" id="barra" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 1"/></span><br/>
+											<span id="barr1" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#barr2"><obs conceptId="CIEL:1271" class="master" id="barrb" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 2"/></span><br/>
-										<span id="barr2" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="be98209e-a66c-448b-8ad1-69577bdc8b20">
+											<span class="titre" ch-target="#barr2"><obs conceptId="CIEL:1271" class="master" id="barrb" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 2"/></span><br/>
+											<span id="barr2" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span class="titre" ch-target="#barr3"><obs conceptId="CIEL:1271" class="master" id="barrc" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 3"/></span><br/>
-										<span id="barr3" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="7617214e-735b-4066-a4e8-4bdf164c3d2d">
+											<span class="titre" ch-target="#barr3"><obs conceptId="CIEL:1271" class="master" id="barrc" answerConceptId="CIEL:163677" answerLabel="Recherche de BARR par Fluorochrome Specimen 3"/></span><br/>
+											<span id="barr3" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163677" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										
-										<span class="titre" ch-target="#barr4"><obs conceptId="CIEL:1271" class="master" id="barrd" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 1"/></span><br/>
-										<span id="barr4" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="5cd064ad-6592-4a66-8f18-674ab588f1ac">
+											<span class="titre" ch-target="#barr4"><obs conceptId="CIEL:1271" class="master" id="barrd" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 1"/></span><br/>
+											<span id="barr4" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										
-										<span class="titre" ch-target="#barr5"><obs conceptId="CIEL:1271" class="master" id="barre" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 2"/></span><br/>
-										<span id="barr5" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="c90f3f81-1631-464b-a4a8-f1c842482326">
+											<span class="titre" ch-target="#barr5"><obs conceptId="CIEL:1271" class="master" id="barre" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 2"/></span><br/>
+											<span id="barr5" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 	
 								<tr>
 									<td>
-										<span class="titre" ch-target="#barr6"><obs conceptId="CIEL:1271" class="master" id="barrf" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 3"/><!-- A verifier --></span><br/>
-										<span id="barr6" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-										</fieldset></span>
+										<obsgroup groupingConceptId="f9e8eb3e-b391-41e8-a554-92fc78fe010e">
+											<span class="titre" ch-target="#barr6"><obs conceptId="CIEL:1271" class="master" id="barrf" answerConceptId="CIEL:307" answerLabel="Recherche de BARR par Ziehl Neelsen Specimen 3"/><!-- A verifier --></span><br/>
+											<span id="barr6" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:159985,CIEL:160008" answerLabels="Négatif,Positif,1+,2+,3+,4+,Maigre,spécimen contaminés" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
 									</td>
 								</tr>
 							</table>
@@ -2826,11 +2839,16 @@
 										</fieldset></span>
 									</td>
 								</tr>
-								<tr><td><span class="titre" ch-target="#span320"><obs conceptId="CIEL:1271" class="master" id="idcpr21" answerConceptId="161500" answerLabel="CRP"/></span><br/>
-								<span id="span320" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161500" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
-								</fieldset></span>
-								</td></tr>
+								<tr>
+									<td>
+										<obsgroup groupingConceptId="b5bd922c-a05e-4b2b-b218-47b4a66c83dd">
+											<span class="titre" ch-target="#span320"><obs conceptId="CIEL:1271" class="master" id="idcpr21" answerConceptId="161500" answerLabel="CRP"/></span><br/>
+											<span id="span320" class="togglable" style="display: none;">
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161500" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											</fieldset></span>
+										</obsgroup>
+									</td>
+								</tr>
 								<tr>
 									<td>
 										<span class="titre" ch-target="#cryptoant"><obs conceptId="CIEL:1271" class="master" id="idcadips21" answerConceptId="163613" answerLabel="Cryptococcus Antigene dipstick"/></span><br/>
@@ -2966,7 +2984,7 @@
 					<tr>
 						<td>
 							
-							<span class="titre" ch-target="#determinevih"><obs conceptId="CIEL:1271" class="master" id="cdvdeterminevih" answerConceptId="1040" answerLabel="Determine VIH"/></span><br/>
+							<span class="titre" ch-target="#determinevih"><obsgroup groupingConceptId="c09e78cd-9447-4013-95a7-a8b3f4300b87"><obs conceptId="CIEL:1271" class="master" id="cdvdeterminevih" answerConceptId="1040" answerLabel="Determine VIH"/></obsgroup></span><br/>
 							<span id="determinevih" class="togglable" style="display: none;">
 							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163628"><obs conceptId="CIEL:1040" id="firsttestvih" answerConceptIds="CIEL:703,CIEL:664" answerLabels="Positif,Négatif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 							</fieldset></span>
