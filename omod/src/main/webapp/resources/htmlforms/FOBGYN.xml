@@ -1115,53 +1115,59 @@
 							</tr>
 							<tr>
 								<td colspan="3">
-									Grossesse 1 &#160;&#160;&#160;&#160;&#160;Date
-									<obs conceptId="CIEL:160602" />
-									&#160;&#160;&#160;&#160;&#160;Suivi :
-									<obs conceptId="1622" style="yes_no" yesLabel="Oui"
-										noLabel="Non" />
-									&#160;&#160;&#160;&#160;&#160;
-									Accouchement:
-									<obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589"
-										answerLabels="Domicile, Institution" style="radio" />
-									&#160;&#160;&#160;&#160;&#160;
-									Naissance vivante :
-									<obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872"
-										answerLabels="Oui,Non" style="radio" />
+									<obsgroup groupingConceptId="c9b13159-8eac-4a54-9c1c-3507cc6d9f0f">
+										Grossesse 1 &#160;&#160;&#160;&#160;&#160;Date
+										<obs conceptId="CIEL:160602" />
+										&#160;&#160;&#160;&#160;&#160;Suivi :
+										<obs conceptId="1622" style="yes_no" yesLabel="Oui"
+											noLabel="Non" />
+										&#160;&#160;&#160;&#160;&#160;
+										Accouchement:
+										<obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589"
+											answerLabels="Domicile, Institution" style="radio" />
+										&#160;&#160;&#160;&#160;&#160;
+										Naissance vivante :
+										<obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872"
+											answerLabels="Oui,Non" style="radio" />
+									</obsgroup>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="3">
-									Grossesse 2 &#160;&#160;&#160;&#160;&#160;Date
-									<obs conceptId="CIEL:160602" />
-									&#160;&#160;&#160;&#160;&#160;Suivi :
-									<obs conceptId="1622" style="yes_no" yesLabel="Oui"
-										noLabel="Non" />
-									&#160;&#160;&#160;&#160;&#160;
-									Accouchement:
-									<obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589"
-										answerLabels="Domicile, Institution" style="radio" />
-									&#160;&#160;&#160;&#160;&#160;
-									Naissance vivante :
-									<obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872"
-										answerLabels="Oui,Non" style="radio" />
+									<obsgroup groupingConceptId="035bff27-55a0-4f5b-a477-dc65876c5c30">
+										Grossesse 2 &#160;&#160;&#160;&#160;&#160;Date
+										<obs conceptId="CIEL:160602" />
+										&#160;&#160;&#160;&#160;&#160;Suivi :
+										<obs conceptId="1622" style="yes_no" yesLabel="Oui"
+											noLabel="Non" />
+										&#160;&#160;&#160;&#160;&#160;
+										Accouchement:
+										<obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589"
+											answerLabels="Domicile, Institution" style="radio" />
+										&#160;&#160;&#160;&#160;&#160;
+										Naissance vivante :
+										<obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872"
+											answerLabels="Oui,Non" style="radio" />
+									</obsgroup>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="3">
-									Grossesse 3 &#160;&#160;&#160;&#160;&#160;Date
-									<obs conceptId="CIEL:160602" />
-									&#160;&#160;&#160;&#160;&#160;Suivi :
-									<obs conceptId="1622" style="yes_no" yesLabel="Oui"
-										noLabel="Non" />
-									&#160;&#160;&#160;&#160;&#160;
-									Accouchement:
-									<obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589"
-										answerLabels="Domicile, Institution" style="radio" />
-									&#160;&#160;&#160;&#160;&#160;
-									Naissance vivante :
-									<obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872"
-										answerLabels="Oui,Non" style="radio" />
+									<obsgroup groupingConceptId="9f3c9fc6-4df6-47d1-b695-d146266735b6">
+										Grossesse 3 &#160;&#160;&#160;&#160;&#160;Date
+										<obs conceptId="CIEL:160602" />
+										&#160;&#160;&#160;&#160;&#160;Suivi :
+										<obs conceptId="1622" style="yes_no" yesLabel="Oui"
+											noLabel="Non" />
+										&#160;&#160;&#160;&#160;&#160;
+										Accouchement:
+										<obs conceptId="CIEL:1572" answerConceptIds="CIEL:1536,CIEL:1589"
+											answerLabels="Domicile, Institution" style="radio" />
+										&#160;&#160;&#160;&#160;&#160;
+										Naissance vivante :
+										<obs conceptId="CIEL:161033" answerConceptIds="CIEL:151849,CIEL:125872"
+											answerLabels="Oui,Non" style="radio" />
+									</obsgroup>
 								</td>
 							</tr>
 							<tr>
