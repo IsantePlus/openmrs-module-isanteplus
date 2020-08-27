@@ -2924,6 +2924,49 @@
 	</tr>
 	</table>
 	</section>
+	<section headerLabel="SURVEILLANCE DU TRAITEMENT(TB)">
+		<table width="90%">
+			<tr>
+				<th rowspan="3">Mois</th>
+				<th colspan="6">Résultats de l’examen d’expectoration</th>
+				<th rowspan="3">Poids</th>
+			</tr>
+			<tr>
+				<th rowspan="2">Date</th>
+				<th rowspan="2">Bacilloscopie</th>
+				<th colspan="2">GeneXpert</th>
+				<th rowspan="2">Culture</th>
+				<th rowspan="2">DST</th>
+			</tr>
+			<tr>
+				<th>BK</th>
+				<th>RIF</th>
+			</tr>
+				<tr>
+					<obsgroup groupingConceptId="c2c7db51-d427-4c21-9655-ae9ee604c81c">
+						<td>0</td>
+						<td><obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" /></td>
+						<td>
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie1" answerLabels="Négatif, Positif+, Positif++, Positif+++" style="radio" />
+						</td>
+						<td><obs conceptId="CIEL:162202" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="culture1" answerLabels="Positif,Négatif,Indéterminé" /></td>
+						<td><obs conceptId="CIEL:162202" answerConceptIds="CIEL:159958,CIEL:159956"
+							id="culture1" answerLabels="Sensible, Résistant" style="radio" /></td>
+						<td>
+							<obs conceptId="CIEL:159982" answerConceptIds="CIEL:1362,CIEL:664,CIEL:160008"
+							id="culture1" answerLabels="Positif pour MTB, Négatif, Contaminé" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							id="culture1" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" style="radio" />
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids1" /></td>
+					</obsgroup>
+				</tr>			
+		</table>
+	</section>
 	<section headerLabel="ÉLIGIBILITÉ MÉDICALE AUX ARV">
 		
 			<table>
