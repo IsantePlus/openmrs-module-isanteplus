@@ -2965,7 +2965,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert02" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -2975,7 +2975,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst0" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
@@ -3000,7 +3000,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert2" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -3010,7 +3010,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst1" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
@@ -3035,7 +3035,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert2" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -3045,7 +3045,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst2" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
@@ -3070,7 +3070,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert32" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -3080,7 +3080,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst3" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
@@ -3105,7 +3105,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert42" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -3115,7 +3115,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst4" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
@@ -3140,7 +3140,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert52" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -3150,7 +3150,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst5" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
@@ -3175,7 +3175,7 @@
 							<!-- GeneXpert BK -->
 						</td>
 						<td>
-							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:159958,CIEL:159956"
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
 							id="genexpert62" answerLabels="Sensible, Résistant" style="radio" />
 							<!-- GeneXpert RIF -->
 						</td>
@@ -3185,7 +3185,7 @@
 							<!-- Culture -->
 						</td>
 						<td width="10px">
-							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:159958,CIEL:159956, CIEL:1138"
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
 							id="dst6" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
 							<!-- DST -->
 						</td>
