@@ -3033,6 +3033,7 @@
 					<tr>
 						<td valign="TOP">
 							<table>
+								<tr><td>Type de charge virale : <obs conceptId="6b41328f-48bc-497c-8977-283feaa9cea6" answerConceptIds="71e6fd5c-1544-4c9d-a452-32fdba8efc82,5c4fb18a-70f1-4a0b-924c-0b595d7dbb90" answerLabel="Charge Virale de Routine,Charge Virale ciblée" style="radio" /></td></tr>
 								<tr>
 									<td>
 										<span class="titre" ch-target="#span380"><obs conceptId="CIEL:1271" class="master" id="idchargeviralqua" answerConceptId="856" answerLabel="Charge virale quantitative"/></span><br/>

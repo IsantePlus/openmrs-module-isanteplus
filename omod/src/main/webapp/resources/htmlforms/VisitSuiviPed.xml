@@ -972,6 +972,15 @@
 												answerLabels="Oui,Non" style="radio" />
 				</td>
 			</tr>
+			<tr>
+					<td colspan="2">Populations Clés :
+						<obs conceptId="b2726cc7-df4b-463c-919d-1c7a600fef87" answerConceptId="CIEL:160578" answerLabel="HARSAH" />
+						<obs conceptId="b2726cc7-df4b-463c-919d-1c7a600fef87" answerConceptId="CIEL:160579" answerLabel="Professionnels de Sexe" />
+						<obs conceptId="b2726cc7-df4b-463c-919d-1c7a600fef87" answerConceptId="CIEL:162277" answerLabel="Prisonniers" />
+						<obs conceptId="b2726cc7-df4b-463c-919d-1c7a600fef87" answerConceptId="CIEL:124275" answerLabel="Transgenre" />
+						<obs conceptId="b2726cc7-df4b-463c-919d-1c7a600fef87" answerConceptId="CIEL:105" answerLabel="Utilisateur de drogues injectables " />
+					</td>
+				</tr>
 		</table>
 	</section>
 	<section headerLabel="ÉVALUATION GYNÉCOLOGIQUE (ADOLESCENTE EN ÂGE DE PROCRÉER)">
@@ -1206,6 +1215,9 @@
 				</td>
 				<td valign="TOP" style="padding-left:2%">
 					<br />
+					Date début
+						<obs conceptId="CIEL:1113" />
+						<br />
 					Date complété
 					<obs conceptId="CIEL:159431" />
 					<br />
@@ -2634,7 +2646,24 @@
 			</tr>
 		</table>
 	</section>
-
+	<section headerLabel="Grossesse et Allaitement">
+		<table>
+			<tr>
+				<td>Grossesse</td>
+				<td><obs conceptId="CIEL:1434" style="yes_no" yesLabel="Oui" noLabel="Non" /></td>
+				<td><obs conceptId="ef1d8d6f-3083-4479-900d-274285326424" labelText="Date début" /></td>
+				<td><obs conceptId="33940458-bb56-4743-b791-acdbe4c5f75c" labelText="Date fin" /></td>
+			</tr>
+			<tr>
+				<td>Allaitement</td>
+				<td><obs conceptId="CIEL:5632" answerConceptIds="CIEL:1065,CIEL:1066"
+						answerLabels="Oui,Non" style="radio" />
+				</td>
+				<td><obs conceptId="7e0f24aa-4f8e-42d0-8649-282bc3c867e3" labelText="Date début" /></td>
+				<td><obs conceptId="b128ef02-7d8f-43f3-8ee5-592925627813" labelText="Date fin" /></td>
+			</tr>
+		</table>
+	</section>
 	<section headerLabel="TRAITEMENT ARV EN COURS"> <!-- A verifier sur utilisation du concept -->
 		<table>
 			<tr>
@@ -3340,6 +3369,271 @@
 			</tr>
 		</table>
 	</section>
+	<section headerLabel="SURVEILLANCE DU TRAITEMENT(TB)">
+		<table id="surveillance" width="90%">
+			<tr>
+				<th rowspan="3">Mois</th>
+				<th colspan="6">Résultats de l’examen d’expectoration</th>
+				<th rowspan="3">Poids</th>
+			</tr>
+			<tr>
+				<th rowspan="2">Date</th>
+				<th rowspan="2">Bacilloscopie</th>
+				<th colspan="2">GeneXpert</th>
+				<th rowspan="2">Culture</th>
+				<th rowspan="2">DST</th>
+			</tr>
+			<tr>
+				<th>BK</th>
+				<th>RIF</th>
+			</tr>
+				<tr>
+					<obsgroup groupingConceptId="c2c7db51-d427-4c21-9655-ae9ee604c81c">
+						<td width="10px">0</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate0" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie0" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert0" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert02" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture0" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst0" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids0" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>
+				<tr>
+					<obsgroup groupingConceptId="b05762eb-b8f5-4af2-8105-cc68a6dc9d3b">
+						<td width="10px">1</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate1" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie1" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert1" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert2" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture1" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst1" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids1" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>
+				<tr>
+					<obsgroup groupingConceptId="be7a27bb-2dcd-4bff-b696-ccdbbd2d3192">
+						<td width="10px">2</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate2" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie2" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert2" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert2" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture22" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst2" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids2" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>
+				<tr>
+					<obsgroup groupingConceptId="fdd9d953-004a-4e9a-ab93-9afaa0e090fa">
+						<td width="10px">3</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate3" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie3" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert3" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert32" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture3" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst3" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids3" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>
+				<tr>
+					<obsgroup groupingConceptId="dc12da69-937e-4cfc-afed-a2f07b44eff4">
+						<td width="10px">4</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate4" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie4" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert4" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert42" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture4" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst4" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids4" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>
+				<tr>
+					<obsgroup groupingConceptId="224546bb-03da-4793-9ef6-3d42adc5b353">
+						<td width="10px">5</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate5" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie5" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert5" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert52" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture5" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst5" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids5" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>
+				<tr>
+					<obsgroup groupingConceptId="67f6a83d-5aa2-4da5-950c-833dadfa8916">
+						<td width="10px">6</td>
+						<td>
+							<obs conceptId="CIEL:159964" id="bacidate6" allowTime="false" />
+							<!-- Date -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364"
+							id="bacilloscopie6" answerLabels="Négatif, Positif+, Positif++, Positif+++" size="5" />
+							<!-- Bacilloscopie -->
+						</td>
+						<td width="10px">
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:1301,CIEL:1302,CIEL:1138"
+							id="genexpert6" answerLabels="Positif,Négatif,Indéterminé" style="radio" />
+							<!-- GeneXpert BK -->
+						</td>
+						<td>
+							<obs conceptId="4cbdc90a-e007-4a48-af54-5dd204edadd9" answerConceptIds="CIEL:162204,CIEL:162203"
+							id="genexpert62" answerLabels="Sensible, Résistant" style="radio" />
+							<!-- GeneXpert RIF -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159982" answerConceptIds="36d6616b-8c7c-4768-9f38-2be4b704fccd,f4ee3bcc-947c-4390-9190-a335c2cd5868,CIEL:664,CIEL:160008"
+							id="culture6" answerLabels="Positif pour MTB, Positif pour non MTB, Négatif, Contaminé" size="5" />
+							<!-- Culture -->
+						</td>
+						<td width="10px">
+							<obs conceptId="CIEL:159984" answerConceptIds="CIEL:162204,CIEL:162203,CIEL:1138"
+							id="dst6" answerLabels="Sensible à la Rifampicine, Résistant à la rifampicine, Indéterminé" size="5" />
+							<!-- DST -->
+						</td>
+						<td><obs conceptId="CIEL:5089" id="bacipoids6" /> <!-- Poids --></td>
+					</obsgroup>
+				</tr>																	
+		</table>
+	</section>
 	<section headerLabel="ÉLIGIBILITÉ MÉDICALE AUX ARV">
 		<table width="100%">
 			<tr class="checkboxGroup">
@@ -3421,6 +3715,15 @@
 				</td>
 			</tr>
 		</table>
+	</section>
+	<section headerLabel="NON ÉLIGIBILITÉ AUX ARV">
+		<obs conceptId="CIEL:1667" answerConceptId="CIEL:127750" answerLabel="Refus volontaire de prendre les ARV"/> <br/>
+		<obs conceptId="CIEL:1667" answerConceptId="CIEL:162591" answerLabel="Décision médicale "/> <br/>
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:131768" answerLabel="Infection opportunistes (IO)"/> <br/>
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:134337" answerLabel="Troubles psychiatriques "/> <br/>
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:155891" answerLabel="Déni"/> <br/>
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<obs conceptId="CIEL:1667" answerConceptId="CIEL:136766" answerLabel="Maladies intercurrentes non IO "/> <br/>
+		<obs conceptId="CIEL:1667" answerConceptId="CIEL:5622" answerLabel="Autres" showCommentField="true" commentFieldLabel=", précisez"/>	
 	</section>
 	<section headerLabel="&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;"><!--headerLabel="&#32;&#32;" -->
 		Date de prochaine visite &#32;&#32;&#32;&#32;&#32;
