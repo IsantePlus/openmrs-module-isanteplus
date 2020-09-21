@@ -530,7 +530,8 @@
 							<tr>
 								<td width="30%">
 									<obs conceptId="CIEL:159614" answerConceptId="CIEL:148989"
-										answerLabel="Aménorrhée, précisez" />
+										answerLabel="Aménorrhée" showCommentField="true"
+													commentFieldLabel=", précisez" />
 								</td>
 								<td width="30%">
 									<obs conceptId="CIEL:159614" answerConceptId="CIEL:163740"

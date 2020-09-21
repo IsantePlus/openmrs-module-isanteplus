@@ -160,4 +160,6 @@ public interface IsantePlusService extends OpenmrsService {
 	Obs getLatestNextOtherVisitDate(Patient patient);
 	
 	Obs getLatestNextOrdonanceVisitDate(Patient patient);
+
+	List<Obs> getAllergiesForPatient(Patient patient);
 }
