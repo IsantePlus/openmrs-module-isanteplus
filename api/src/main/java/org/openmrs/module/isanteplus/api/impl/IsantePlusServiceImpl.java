@@ -1068,7 +1068,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		StringBuilder sqlQuery = new StringBuilder(
 		        "select distinct"
 		                + " s_arv.patient_id, s_arv.arv_status, s_arv.arv_regimen");
-		sqlQuery.append(" FROM openmrs.isanteplus_patient_arv s_arv");
+		sqlQuery.append(" FROM isanteplus_patient_arv s_arv");
 		sqlQuery.append(" WHERE (s_arv.arv_status is not null OR s_arv.arv_regimen is not null)");
 		sqlQuery.append(" AND s_arv.patient_id = '" + patient.getPatientId() + "'");
 		SQLQuery query = dao.getSessionFactoryResult().getCurrentSession().createSQLQuery(sqlQuery.toString());
@@ -1092,7 +1092,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		StringBuilder sqlQuery = new StringBuilder(
 		        "select distinct"
 		                + " s_arv.patient_id, s_arv.date_started_arv");
-		sqlQuery.append(" FROM openmrs.isanteplus_patient_arv s_arv");
+		sqlQuery.append(" FROM isanteplus_patient_arv s_arv");
 		sqlQuery.append(" WHERE (s_arv.date_started_arv is not null AND s_arv.date_started_arv <> '')");
 		sqlQuery.append(" AND s_arv.patient_id = '" + patient.getPatientId() + "'");
 		SQLQuery query = dao.getSessionFactoryResult().getCurrentSession().createSQLQuery(sqlQuery.toString());
@@ -1176,6 +1176,22 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		sortObsListByObsDateTime(viralLoadObs);
 
 		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
+	}
+	
+	@Override
+	public List<Obs> getAllergiesForPatient(Patient patient) {
+		
+		List<Obs> listAllergy = new ArrayList<Obs>();
+		Integer allergyConceptId = 160632;
+		Concept allergy = Context.getConceptService().getConcept(allergyConceptId);
+
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), allergy)) {
+			if (obs != null) {
+				listAllergy.add(obs);
+			}
+		}
+		return listAllergy;
+	
 	}
 	
 	
