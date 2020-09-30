@@ -116,14 +116,5 @@
         "url": "${project.parent.artifactId}/getAllDiagnosis.page?patientId={{patient.uuid}}",
         "icon": "icon-beaker",
         "order": 60
-    },
-    {
-        "id": "isanteplus.patientDashboard.firstColumnFragments.allergy",
-        "extensionPointId": "patientDashboard.firstColumnFragments",
-        "icon": "icon-list-alt",
-        "extensionParams": {
-            "provider": "${project.parent.artifactId}",
-            "fragment": "listAllergy"
-        }
     }
 ]

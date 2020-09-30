@@ -68,7 +68,9 @@
 		<serializationxstreamVersion>0.2.12</serializationxstreamVersion>
 		<providermanagementVersion>2.5.0</providermanagementVersion>
 		<idgenVersion>4.4.1</idgenVersion>
-		
+		<!--  <allergyapiVersion>1.4</allergyapiVersion> -->
+		<allergyuiVersion>1.7.0</allergyuiVersion>
+
 	</properties>
 
 	<dependencyManagement>
@@ -241,6 +243,22 @@
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>reporting-omod</artifactId>
 			<version>${reportingVersion}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>allergyui-api</artifactId>
+			<version>${allergyuiVersion}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>allergyui-omod</artifactId>
+			<version>${allergyuiVersion}</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>

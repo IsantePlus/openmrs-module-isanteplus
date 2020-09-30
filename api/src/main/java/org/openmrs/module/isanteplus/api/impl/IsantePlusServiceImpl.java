@@ -1187,13 +1187,18 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), allergy)) {
 			if (obs != null) {
-				listAllergy.add(obs);
+				if(obs.getObsGroup() != null)
+				{
+					if (obs.getObsGroup().getConcept().getUuid().contentEquals("c5e4b458-41cf-4d17-aa7a-6dfc00482198") ||
+					obs.getObsGroup().getConcept().getUuid().contentEquals("09f30ecb-b6e8-4e44-9adc-e27bdf07b081") ||
+					obs.getObsGroup().getConcept().getUuid().contentEquals("6639a971-43ca-4baf-89b6-194ab3597ebd"))
+					{
+						listAllergy.add(obs);
+					}
+				}
 			}
 		}
 		return listAllergy;
-	
+		
 	}
-	
-	
-
 }

@@ -37,6 +37,9 @@
         <require_module version="${idgenVersion}">
             org.openmrs.module.idgen
         </require_module>
+        <require_module version="${allergyuiVersion}">
+            org.openmrs.module.allergyui
+        </require_module>
 	</require_modules>
 	<!-- / Required Modules -->
 

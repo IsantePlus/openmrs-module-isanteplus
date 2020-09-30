@@ -806,6 +806,7 @@
 										answerLabel="Transfert d'un autre établissement de santé"
 										style="checkbox" showCommentField="true"
 										commentFieldLabel="&lt;br&gt;Nom de l'établissement" />
+										<!-- <patient field="identifierLocation" /> -->
 								</td>
 							</tr>
 							<tr>
@@ -1328,7 +1329,7 @@
 							answerLabels="Pas de signes ou symptômes suggestifs de la TB&lt;br&#47;&gt;,Traitement contre la TB complété&lt;br&#47;&gt;,Actuellement sous traitement TB"
 							style="radio" />
 					</td>
-					<td valign="TOP" style="padding-left:2%">
+					<td valign="TOP">
 						<br />
 						Date début
 						<obs conceptId="CIEL:1113" />
@@ -1342,7 +1343,7 @@
 						  <patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
 							required="false" /> -->
 					</td>
-					<td valign="TOP" style="padding-left:2%">
+					<td valign="TOP">
 						<br />
 						Établissement :
 						<br />
