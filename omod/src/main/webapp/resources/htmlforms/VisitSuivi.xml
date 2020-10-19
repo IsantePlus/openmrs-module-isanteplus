@@ -782,6 +782,37 @@
 									En cas de statut Inconnu, procéder à un test de grossesse
 									(documenter sur la Fiche d'analyses de laboratoire).</td>
 							</tr>
+							<tr><td></td><td></td></tr>
+							<tr>
+									<td colspan="2">
+										<obsgroup groupingConceptId="CIEL:160714">
+											Dépistage du cancer du Col: 
+											<span style="display: none">
+												<obs conceptId="CIEL:1651" answerConceptId="CIEL:151185"
+												id="cancer_col" answerLabel="Dépistage du cancer du Col"/>
+											</span>
+											<obs conceptId="CIEL:160721" answerConceptIds="CIEL:1065,CIEL:1066"
+											id="cancer_col_answer" answerLabels="Oui,Non" style="radio" />
+										</obsgroup>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">Date du dernier dépistage du cancer du Col <br/> <obs conceptId="CIEL:165429"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										Méthode utilisée
+										<obs conceptId="CIEL:163589" answerConceptIds="CIEL:885,CIEL:162816"
+											answerLabels="Pap test,VIA" style="radio" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										Résultat :
+										<obs conceptId="CIEL:160704" answerConceptIds="CIEL:1115,CIEL:1116,CIEL:1067"
+											answerLabels="Normal,Anormale,Inconnu" style="radio" />
+									</td>
+								</tr>
 						</table>
 					</section>
 				</includeIf>
@@ -850,7 +881,7 @@
 						style="radio" />
 					<br />
 				</td>
-				<td valign="TOP" style="padding-left:2%">
+				<td valign="TOP">
 					<br />
 					Date début
 					<obs conceptId="CIEL:1113" />
@@ -864,7 +895,7 @@
 					<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
 						required="false" /> -->
 				</td>
-				<td valign="TOP" style="padding-left:2%">
+				<td valign="TOP">
 						<br />
 						Établissement :
 						<br />
