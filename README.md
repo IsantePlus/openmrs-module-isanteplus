@@ -1,5 +1,6 @@
 iSantePlus OpenMRS Module
 =====================================
+![CI](https://github.com/IsantePlus/openmrs-module-isanteplus/workflows/CI/badge.svg)
 
 Overview
 -------------------------------------
