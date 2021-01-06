@@ -49,8 +49,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<emrapiVersion>1.21.0</emrapiVersion>
-		<coreappsVersion>1.14.0</coreappsVersion>
-		<registrationAppVersion>1.9.0</registrationAppVersion>
+		<coreappsVersion>1.19.1</coreappsVersion>
+		<registrationAppVersion>2.0.0-SNAPSHOT</registrationAppVersion>
 		<appuiVersion>1.8.0</appuiVersion>
 		<appframeworkVersion>2.10.0</appframeworkVersion>
 		<metadatadeployVersion>1.8.1</metadatadeployVersion>
@@ -61,7 +61,7 @@
 		<htmlformentryuiVersion>1.6.3</htmlformentryuiVersion>
 		<referenceapplicationVersion>2.6.0</referenceapplicationVersion>
 		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
-		<xds-senderVersion>1.0.1</xds-senderVersion>
+		<xds-senderVersion>2.0.0</xds-senderVersion>
 		<!-- Required to pass tests -->
 		<reportingVersion>1.12.0</reportingVersion>
 		<calculationVersion>1.2</calculationVersion>

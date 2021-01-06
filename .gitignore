@@ -9,3 +9,6 @@ target/
 api/target/
 omod/target/
 api/bin/pom.xml
+
+# Mac OsX
+.DS_Store
