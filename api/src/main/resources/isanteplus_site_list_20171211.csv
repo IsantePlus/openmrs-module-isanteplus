@@ -690,7 +690,7 @@ Ouest,Petion-Ville,1ère Montagne Noire^114-01,Clinique santé pour tous,CSL,Pri
 Ouest,Petion-Ville,3ème Etang du Jong^114-03,CS Francisca Cabrini (NF),CSL,Privé à but lucratif,114306,11406,,,
 Ouest,Petion-Ville,4ème Bellevue la Montagne^114-04,Centre de Santé Calebasse,CSL,Mixte,114401,11401,,18.4632,-72.2633
 Ouest,Petion-Ville,4ème Bellevue la Montagne^114-04,Hôp. Nos Petits Frères et Soeurs,HCR,Privé à but lucratif,114412,11412,ITECH,18.57,-72.25
-Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Hôp. de la Communauté Haïtienne,HCR,Privé à but lucratif,114704,11404,GHESKIO,18.524,-72.2723
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,H�pital Notre Dame S.A.,HCR,Privé à but lucratif,114704,11404,GHESKIO,18.524,-72.2723
 Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Hôpital CensHôpital,Hôpital,Privé à but lucratif,114707,11407,,18.5186,-72.237
 Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,CS de Pernier,CSL,Public,114715,11415,,18.5235,-72.2266
 Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,CS Concardia (NF),CSL,Mixte,114719,11419,,18.5269,-72.2851
@@ -1068,3 +1068,13 @@ Sud Est,Thiotte,3ème Thiotte^233-01,Point fixe Mare Mirande,Point Fixe,Mixte,ND
 Sud Est,Anse à Pitre,1ère Boucan Guillaume^234-01,Disp. Bony,Point Fixe,Privé à but non lucratif,234103,,,,
 Sud Est,Anse à Pitre,1ère Boucan Guillaume^234-01,Disp. Ka Toussaint,Point Fixe,Privé à but non lucratif,234104,,,,
 Ouest,Arcahaie,8ème Montrouis^141-04,FOSREF Montrouis,CSL,Privé à but non lucratif,ND99936,,FOSREF,,
+Ouest,Delmas,1ère Saint Martin^112-01,OFATMA-SONAPI,CS,Public,11241,11241,ICAP,,
+Ouest,Cabaret,1ère Lacoma^934-01,Prison Civile des femmes de Cabaret,CS,Public,11450,11450,HTW,18.51,-72.29
+Ouest,Delmas,1ère Saint Martin^112-01,Centre Lakay de Delmas 19,CSL,Privé,11234,11234,LINKAGES,18.57,-72.29
+Ouest,Petion-Ville,7ème Bellevue Chardonnière^114-05,Centre Lakay de Pétion ville,CSL,Privé,11423,11423,FOSREF,18.51,-72.27
+Ouest,Port-au-Prince,6ème Turgeau^111-01,CEPOZ Centre Espoir,CSL,Privé,95698,95698,FOSREF,18.54,-72.33
+Ouest,Croix-des-Bouquets,2ème Varreux^131-02,Clinique mennonite de Croix des Bouquets,CSL,Privé,13119,13119,CMMB,18.62,-72.25
+Nord,Cap Haitien,3ème Petite Anse^311-03,Hôpital de l'OFATMA du Cap Haitien,Hôpital,Mixte,31120,31120,ICAP,19.76,-72.2
+Centre,Hinche,1ère Juanaria^611-01,Prison Civile de Hinche,CS,Public,61120,61120,HTW,19.14,-72.01
+Ouest,Port-au-Prince,6ème Turgeau^111-01,Prison Civile de Port Au Prince,CS,Public,11170,11170,HTW,18.54,-72.32
+Artibonite,Gros Morne,5ème Pendu^521-05,Centre de sant� Esp�rance de Terre Blanche,CSL,Mixte,52108,52108,CDS,,

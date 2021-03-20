@@ -1,7 +1,6 @@
 package org.openmrs.module.isanteplus.fragment.controller;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
