@@ -5,7 +5,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>isanteplus</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.3.0</version>
 	<packaging>pom</packaging>
 	<name>iSantePlus Module</name>
 	<description>iSantePlus's customization of the reference app's patient dashboard, adds growth charts, treatment history etc</description>
@@ -49,8 +49,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<emrapiVersion>1.21.0</emrapiVersion>
-		<coreappsVersion>1.14.0</coreappsVersion>
-		<registrationAppVersion>1.9.0</registrationAppVersion>
+		<coreappsVersion>1.19.3</coreappsVersion>
+		<registrationAppVersion>2.0.0</registrationAppVersion>
 		<appuiVersion>1.8.0</appuiVersion>
 		<appframeworkVersion>2.10.0</appframeworkVersion>
 		<metadatadeployVersion>1.8.1</metadatadeployVersion>
@@ -61,7 +61,7 @@
 		<htmlformentryuiVersion>1.6.3</htmlformentryuiVersion>
 		<referenceapplicationVersion>2.6.0</referenceapplicationVersion>
 		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
-		<xds-senderVersion>1.0.0</xds-senderVersion>
+		<xds-senderVersion>2.0.2</xds-senderVersion>
 		<!-- Required to pass tests -->
 		<reportingVersion>1.12.0</reportingVersion>
 		<calculationVersion>1.2</calculationVersion>
@@ -393,5 +393,58 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+<profiles>
+	<profile>
+	    <!-- Github Packages Integration -->
+	    <id>github-packages</id>
+	    <distributionManagement>
+		<!-- Deploy to Github Packages -->
+		<repository>
+		    <id>github-packages</id>
+		    <name>Github iSantePlus Packages</name>
+		    <url>https://maven.pkg.github.com/isanteplus/isanteplus-packages</url>
+		    <uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+		    <id>github-packages</id>
+		    <name>Github iSantePlus Packages</name>
+		    <url>https://maven.pkg.github.com/isanteplus/isanteplus-packages</url>
+		    <uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+	    </distributionManagement>
+	    <repositories>
+		<!-- Use the Github Packages Repo first when looking up dependencies -->
+		<repository>
+		    <id>github-packages</id>
+		    <name>Github iSantePlus Packages</name>
+		    <url>https://maven.pkg.github.com/isanteplus/isanteplus-packages</url>
+		</repository>
+	    </repositories>
+	    <build>
+		<plugins>
+		    <!-- Disable possible test jar generation -->
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<executions>
+			    <execution>
+				<phase>none</phase>
+			    </execution>
+			</executions>
+		    </plugin>
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<executions>
+			    <execution>
+				<id>validate</id>
+				<phase>none</phase>
+			    </execution>
+			</executions>
+		    </plugin>
+		</plugins>
+	    </build>
+	</profile>
+</profiles>
 
 </project>
