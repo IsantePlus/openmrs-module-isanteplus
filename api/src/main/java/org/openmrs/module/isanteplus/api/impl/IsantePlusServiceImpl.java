@@ -1201,4 +1201,19 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return listAllergy;
 		
 	}
+
+	@Override
+	public String getEncounterImmunizationUuidByPatient(Patient patient) {
+		String encounterUuid = null;
+		List<Encounter> encounter = Context.getEncounterService().getEncountersByPatient(patient);
+		if(encounter != null){
+			for(Encounter e : encounter){
+				if(e.getEncounterType().getEncounterTypeId().equals(Context.getEncounterService().getEncounterTypeByUuid("a86ad9bb-d596-413c-bd4e-30f6fea5057d").getEncounterTypeId())){
+					encounterUuid = e.getUuid();
+				}
+				
+			}
+		}
+		return encounterUuid;
+	}
 }
