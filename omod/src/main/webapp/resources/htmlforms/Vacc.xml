@@ -7,8 +7,7 @@
 			<script type="text/javascript">
 				jQuery(function() {
 				window.onload = function() {
-				window.alert("Vérifier que le sexe et la date de naissance du patient sont enregistrés sur
-				le système !")
+				window.alert("Vérifier que le sexe et la date de naissance du patient sont enregistrés surle système !")
 				window.history.back()
 				}
 				});
@@ -140,6 +139,24 @@
 					<th class="tg-5bx4">Rappel (Dose 4)</th>
 					<th class="tg-5bx4">Rappel (Dose 5)</th> <!-- <encounterLocation id="encounterLocation" default="SessionAttribute:emrContext.sessionLocationId" 
 						order="1,2,302"/> -->
+				</tr>
+				<tr>
+					<td class="tg-bcg">Moderna COVID-19</td>
+					<td class="tg-ng6d"></td>
+					<repeat>
+						<template>
+							<td class="tg-g902">
+								<div id="moderna{dose}">
+									<immunization showDate="true" id="moderna{dose}"
+										vaccineConceptId="CIEL:166154" sequenceNumber="{dose}" label="" />
+								</div>
+							</td>
+						</template>
+						<render dose="1" />
+						<render dose="2" />
+					</repeat>
+					<td class="tg-ng6d"></td>
+					<td class="tg-ng6d"></td>
 				</tr>
 				<!-- Hepatite B -->
 				<tr>
