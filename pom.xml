@@ -5,7 +5,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>isanteplus</artifactId>
-	<version>1.4.0-SNAPSHOT</version>
+	<version>1.5.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>iSantePlus Module</name>
 	<description>iSantePlus's customization of the reference app's patient dashboard, adds growth charts, treatment history etc</description>
@@ -49,7 +49,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<emrapiVersion>1.21.0</emrapiVersion>
-		<coreappsVersion>1.20.0-SNAPSHOT</coreappsVersion>
+		<coreappsVersion>1.21.0-SNAPSHOT</coreappsVersion>
 		<registrationAppVersion>2.2.0-SNAPSHOT</registrationAppVersion>
 		<appuiVersion>1.8.0</appuiVersion>
 		<appframeworkVersion>2.10.0</appframeworkVersion>
@@ -61,7 +61,7 @@
 		<htmlformentryuiVersion>1.6.3</htmlformentryuiVersion>
 		<referenceapplicationVersion>2.6.0</referenceapplicationVersion>
 		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
-		<xds-senderVersion>2.0.2</xds-senderVersion>
+		<xds-senderVersion>2.2.0-SNAPSHOT</xds-senderVersion>
 		<!-- Required to pass tests -->
 		<reportingVersion>1.12.0</reportingVersion>
 		<calculationVersion>1.2</calculationVersion>
