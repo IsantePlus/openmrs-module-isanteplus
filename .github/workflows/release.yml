@@ -30,8 +30,6 @@ jobs:
                 "password": "${{ secrets.RELEASE_TOKEN }}"
             }]
           githubServer: false
-      - name: Build
-        run: mvn -P github-packages -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dcpd.skip=true -B package
       - name: Publish package
         run: mvn -P github-packages -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dcpd.skip=true -B deploy
         env:
