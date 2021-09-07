@@ -116,14 +116,5 @@
         "url": "${project.parent.artifactId}/getAllDiagnosis.page?patientId={{patient.uuid}}",
         "icon": "icon-beaker",
         "order": 60
-    },
-    {
-        "id": "isanteplus.vaccination.label",
-        "extensionPointId": "patientDashboard.overallActions",
-        "type": "link",
-        "label": "${project.parent.artifactId}.vaccination",
-        "url": "${project.parent.artifactId}/immunizationHistory.page?patientId={{patient.uuid}}",
-        "icon": "icon-beaker",
-        "order": 9
     }
 ]

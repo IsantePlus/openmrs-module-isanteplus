@@ -629,7 +629,6 @@
 
 		<table class="baseline-aligned">
 			<tr>
-				<td></td>
 				<td>
 					 	Patient inscrit dans programme ARV <obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066"
 								id="patient_i_arv" answerLabels="Oui,Non" style="radio"/>
@@ -637,6 +636,10 @@
 				<td>
 					<obs conceptId="CIEL:1755" id="dispensation_com"
 						answerConceptId="CIEL:1065" answerLabel="Dispensation communautaire" />
+				</td>
+				<td>
+					 <obs conceptId="c2aacdc8-156e-4527-8934-a8fb94162419" id="dispensation_ddp"
+						answerConceptId="CIEL:1065" answerLabel="Dispensation DDP" />
 				</td>
 			
 			</tr>
@@ -709,8 +712,8 @@
 									id="presentation" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="300mg BID"
-									id="abac_dosage" style="radio" />
+								<obs conceptId="CIEL:1444" answers="600mg,300mg BID,120mg,60mg,20mg"
+									id="abac_dosage" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="abac_dosage_alt" />
@@ -898,7 +901,7 @@
 								id="presentation4" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="150mg BID" id="lamivudine_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg,150mg BID,30mg,10mg" id="lamivudine_dosage" />
 						</td>
 						<td>
 							<!--  <obs conceptId="CIEL:1444" id="lamivudine_dosage_alt" /> -->
@@ -980,7 +983,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Tenofovir(TNF):
+							Tenofovir(TDF):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:84795" id="tenofovir"
 									answerLabel="Tenofovir(TNF)" />
@@ -1073,7 +1076,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Zidovudine(AZT):
+							Zidovudine(AZT/ZDV):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:86663" id="zidovudine"
 									answerLabel="Zidovudine(AZT)" />
@@ -1084,7 +1087,7 @@
 								id="presentation8" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg BID" id="zidovudine_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg BID,150mg,60mg,10mg" id="zidovudine_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="zidovudine_dosage_alt" />
@@ -1136,7 +1139,7 @@
 									id="presentation9" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="600mg qd" id="efavirenz_dosage" style="radio" />
+								<obs conceptId="CIEL:1444" answers="600mg qd,400mg,200mg" id="efavirenz_dosage" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="efavirenz_dosage_alt" />
@@ -1183,7 +1186,7 @@
 								id="presentation10" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="200mg BID" id="nevirapine_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="200mg BID,50mg,10mg" id="nevirapine_dosage" style="radio" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="nevirapine_dosage_alt" />
@@ -1218,7 +1221,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Etravirine(ETV):
+							Etravirine(ETR):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:159810" id="etravirine"
 									answerLabel="Etravirine(ETV)" />
@@ -1270,10 +1273,10 @@
 					<td>
 						<obsgroup groupingConceptId="CIEL:1442">
 							<td>
-								Atazanavir(ATZN):
+								Atazanavir(ATV):
 								<span style="display:none">
 									<obs conceptId="CIEL:1282" answerConceptId="CIEL:71647" id="atazanavir"
-										answerLabel="Atazanavir(ATZN)" />
+										answerLabel="Atazanavir(ATV)" />
 								</span>
 							</td>
 							<td>
@@ -1281,7 +1284,7 @@
 									id="presentation11" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="400mg qd" id="atazanavir_dosage" style="radio" />
+								<obs conceptId="CIEL:1444" answers="400mg qd,300mg,100mg" id="atazanavir_dosage" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="atazanavir_dosage_alt" />
@@ -1420,7 +1423,7 @@
 								id="presentation14" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="400mg/ 100mg BID" id="lopinavir_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="400mg/ 100mg BID,200mg/50mg,100mg/25mg,80mg/20mg,40mg/10mg,80mg/ml" id="lopinavir_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="lopinavir_dosage_alt" />
@@ -1466,7 +1469,7 @@
 								id="presentation15" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg 2co BID" id="darunavir_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg 2co BID,800mg/100mg,600mg/100mg,600mg,150mg,75mg,100mg/ml" id="darunavir_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="darunavir_dosage_alt" />
@@ -1518,7 +1521,7 @@
 									id="presentation16" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="400mg 1co BID" id="raltegravir_dosage" style="radio" />
+								<obs conceptId="CIEL:1444" answers="400mg 1co BID,100mg,25mg" id="raltegravir_dosage" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="raltegravir_dosage_alt" />
@@ -1566,7 +1569,7 @@
 								id="presentation17" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="50mg qd" id="dolutegravir_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="50mg qd,25mg,10mg,5mg" id="dolutegravir_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="dolutegravir_dosage_alt" />
@@ -2847,7 +2850,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Isoniazide:
+							Isoniazide (INH):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:78280" id="isoniazide"
 									answerLabel="Isoniazide" />

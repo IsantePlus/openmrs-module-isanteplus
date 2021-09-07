@@ -1,0 +1,29 @@
+[
+    {
+        "id": "isanteplus.registration.mostRecentBirthplace",
+        "description": "isanteplus.registration.patient.birthplace.label",
+        "label": "isanteplus.registration.patient.birthplace.label",
+        "icon": "icon-user",
+        "order": 1,
+        "config": {
+            "encounterTypeUuid": "873f968a-73a8-4f9c-ac78-9f4778b751b6",
+            "encounterDateLabel": "isanteplus.registration.mostRecentBirthplace.encounterDateLabel",
+            "definitionUiResource": "isanteplus:htmlforms/RegistrationPlaceOfBirth.xml",
+            "editable": true,
+            "editIcon": "icon-pencil",
+            "edit-provider": "htmlformentryui",
+            "edit-fragment": "htmlform/editHtmlFormWithStandardUi"
+        },
+        "extensions": [
+          {
+            "id": "isanteplus.registration.mostRecentBirthplaceFirstColumn",
+            "appId": "isanteplus.registration.mostRecentBirthplace",
+            "extensionPointId": "registrationSummary.contentFragments",
+            "extensionParams": {
+              "provider": "coreapps",
+              "fragment": "encounter/mostRecentEncounter"
+            }
+          }
+        ]
+    }
+]

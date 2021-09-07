@@ -972,7 +972,7 @@
 										<span class="titre" ch-target="#antithroma" id="id1anti"><obs conceptId="CIEL:1271" id="id1" class="master" answerConceptId="CIEL:163432" answerLabel="Anti-Thrombine III (Activite)" style="checkbox"/></span><br/>
 										<span id="antithroma" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:163432" id="antitronbineact" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+										<obs conceptId="CIEL:163432" id="antitronbineact" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 									</td>
 								</tr>
 								<tr>
@@ -981,7 +981,7 @@
 										<span class="titre" ch-target="#antithromb" id="id2anti"><obs conceptId="CIEL:1271" class="master" id="id2" answerConceptId="CIEL:163431" answerLabel="Anti-Thrombine III (Dosage)" style="checkbox"/></span><br/>
 										<span id="antithromb" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:163431" id="antitronbinedos" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+										<obs conceptId="CIEL:163431" id="antitronbinedos" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 								</td>
 								</tr>
 										
@@ -990,14 +990,14 @@
 										<span class="titre" ch-target="#span3" id="id3baso"><obs conceptId="CIEL:1271" class="master" answerConceptId="CIEL:1341" id="id3" answerLabel="Basophiles" style="checkbox"/></span><br/>
 										<span id="span3" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:1341" id="basophresult" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+										<obs conceptId="CIEL:1341" id="basophresult" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 									</td>
 								</tr>
 								<tr>
 									<td>
 										<span class="titre" ch-target="#span4" id="id4hemo"><obs conceptId="CIEL:1271" class="master" id="hemogrammeccmh" answerConceptId="CIEL:1017" answerLabel="CCMH"/></span><br/>
 										<span id="span4" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1017" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1017" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 									</td>
 								</tr>
 							</table>
@@ -1009,7 +1009,7 @@
 										<span class="titre" ch-target="#span5" id="id5cocd4"><obs conceptId="CIEL:1271" class="master" id="cd41" name="cd41" answerConceptId="CIEL:5497" answerLabel="CD4 Compte Absolu"/></span><br/>
 										<span id="span5" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="657"><obs conceptId="CIEL:5497" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<obsgroup groupingConceptId="657"><obs conceptId="CIEL:5497" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>	
@@ -1018,7 +1018,7 @@
 										<span class="titre" ch-target="#span6" id="id6comcd4p"><obs conceptId="CIEL:1271" class="master" id="cd42" name="mastercd41" answerConceptId="CIEL:730" answerLabel="CD4 Compte en %"/></span><br/>
 										<span id="span6" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="657"><obs conceptId="CIEL:730" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<obsgroup groupingConceptId="657"><obs conceptId="CIEL:730" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1142,7 +1142,7 @@
 									<td>
 										<span class="titre" ch-target="#span16"><obs conceptId="CIEL:1271" class="master" id="hemogrammehemoglobine" answerConceptId="CIEL:21" answerLabel="Hemoglobine"/></span><br/>
 										<span id="span16" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:21" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:21" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 										</span>
 									</td>
 								</tr>
@@ -1150,7 +1150,7 @@
 									<td>
 										<span class="titre" ch-target="#heparinemie"><obs conceptId="CIEL:1271" class="master" id="idh14" answerConceptId="CIEL:163430" answerLabel="Heparinemie"/></span><br/>
 										<span id="heparinemie" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163430" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163430" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
 										</span>
 									</td>
 								</tr>
@@ -1159,7 +1159,7 @@
 										<span class="titre" ch-target="#span17"><obs conceptId="CIEL:1271" class="master" id="coagulationinr" answerConceptId="CIEL:161482" answerLabel="INR"/></span><br/>
 										<span id="span17" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="CIEL:163436"><obs conceptId="CIEL:161482" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+										<obsgroup groupingConceptId="CIEL:163436"><obs conceptId="CIEL:161482" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 										</span>
 									</td>
 								</tr>
@@ -1168,7 +1168,7 @@
 										<span class="titre" ch-target="#span18"><obs conceptId="CIEL:1271" class="master" id="hemogrammelymphocite" answerConceptId="CIEL:1338" answerLabel="Lymphocytes"/></span><br/>
 										<span id="span18" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1338" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1338" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset>
 										</span>
 									</td>
@@ -1178,7 +1178,7 @@
 										<span class="titre" ch-target="#mixtes"><obs conceptId="CIEL:1271" class="master" id="hemogrammemixte" answerConceptId="CIEL:163426" answerLabel="Mixtes"/></span><br/>
 										<span id="mixtes" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:163426" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:163426" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset>
 										</span>
 									</td>
@@ -1188,7 +1188,7 @@
 										<span class="titre" ch-target="#span19"><obs conceptId="CIEL:1271" class="master" id="idm16" answerConceptId="CIEL:1339" answerLabel="Monocytes"/></span><br/>
 										<span id="span19" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:1339" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<obs conceptId="CIEL:1339" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset>
 										</span>
 									</td>
@@ -1198,7 +1198,7 @@
 										<span class="titre" ch-target="#span20"><obs conceptId="CIEL:1271" class="master" id="hemogrammeneutrophyle" answerConceptId="CIEL:1336" answerLabel="Neutrophiles"/></span><br/>
 										<span id="span20" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1336" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1336" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset>
 										</span>
 									</td>
@@ -1208,7 +1208,7 @@
 										<span class="titre" ch-target="#span21"><obs conceptId="CIEL:1271" class="master" id="hemogrammeplaquette" answerConceptId="CIEL:729" answerLabel="Plaquettes"/></span><br/>
 										<span id="span21" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:729" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:729" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset>
 										</span>
 									</td>
@@ -1226,7 +1226,7 @@
 									<td>
 										<span class="titre" ch-target="#span23"><obs conceptId="CIEL:1271" class="master" id="idt18" answerConceptId="CIEL:1327" answerLabel="Taux reticulocytes - Auto"/></span><br/>
 										<span id="span23" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1327" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1327" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset>
 										</span>
 									</td>
@@ -1241,7 +1241,7 @@
 										<td>
 											<span class="titre" ch-target="#span24"><obs conceptId="CIEL:1271" class="master" id="hemogrammetcmh" answerConceptId="CIEL:1018" answerLabel="TCMH"/></span><br/>
 											<span id="span24" class="togglable" style="display: none;">
-											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1018" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+											<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:1018" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 											</fieldset>
 											</span>
 										</td>
@@ -1251,7 +1251,7 @@
 											<span class="titre" ch-target="#span25"><obs conceptId="CIEL:1271" class="master" id="coagulationcephaline" answerConceptId="CIEL:161153" answerLabel="Temps de cephaline Activé(TCA)"/></span><br/>
 											<span id="span25" class="togglable" style="display: none;">
 											<fieldset><legend>Résultat et date</legend>
-											<obsgroup groupingConceptId="CIEL:163436"><obs conceptId="CIEL:161153" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+											<obsgroup groupingConceptId="CIEL:163436"><obs conceptId="CIEL:161153" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 											</span>
 										</td>
 									</tr>
@@ -1260,7 +1260,7 @@
 											<span class="titre" ch-target="#coagulationtime"><obs conceptId="CIEL:1271" class="master" id="tstcoagulation" answerConceptId="CIEL:161435" answerLabel="Temps de Coagulation"/></span><br/>
 											<span id="coagulationtime" class="togglable" style="display: none;">
 											<fieldset><legend>Résultat et date</legend>
-											<obsgroup groupingConceptId="CIEL:163702"><obs conceptId="CIEL:161435" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+											<obsgroup groupingConceptId="CIEL:163702"><obs conceptId="CIEL:161435" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 											</span>
 										</td>
 									</tr>
@@ -1268,7 +1268,7 @@
 										<td>
 											<span class="titre" ch-target="#coagulationtimetube"><obs conceptId="CIEL:1271" class="master" id="idte19" answerConceptId="CIEL:163427" answerLabel="Temps de Coagulation en tube"/></span><br/>
 											<span id="coagulationtimetube" class="togglable" style="display: none;">
-												<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163427" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+												<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163427" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
 											</span>
 										</td>
 									</tr>
@@ -1277,7 +1277,7 @@
 										<span class="titre" ch-target="#span26"><obs conceptId="CIEL:1271" class="master" id="idte20" answerConceptId="CIEL:161481" answerLabel="Temps de Prothrombine"/></span><br/>
 										<span id="span26" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-											<obs conceptId="CIEL:161481" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<obs conceptId="CIEL:161481" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											</fieldset>
 										</span>
 										</td>
@@ -1285,7 +1285,7 @@
 									<tr>
 										<td><span class="titre" ch-target="#span27"><obs conceptId="CIEL:1271" class="master" id="tstsaignement" answerConceptId="CIEL:161433" answerLabel="Temps de saignement"/></span><br/>
 										<span id="span27" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163702"><obs conceptId="CIEL:161433" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163702"><obs conceptId="CIEL:161433" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset>
 										</span>
 										</td>
@@ -1299,7 +1299,7 @@
 									</td></tr>
 									<tr><td><span class="titre" ch-target="#span28"><obs conceptId="CIEL:1271" class="master" id="hemogrammevgm" answerConceptId="CIEL:851" answerLabel="VGM"/></span><br/>
 										<span id="span28" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:851" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163700"><obs conceptId="CIEL:851" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset>
 										</span>
 									</td></tr>
@@ -1307,14 +1307,14 @@
 										<td>
 											<span class="titre" ch-target="#vitamineb12"><obs conceptId="CIEL:1271" class="master" id="idvi1" answerConceptId="CIEL:163435" answerLabel="Vitamine B12"/></span><br/>
 											<span id="vitamineb12" class="togglable" style="display: none;">
-											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163435" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163435" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											</fieldset>
 											</span>
 										</td>
 									</tr>
 									<tr><td><span class="titre" ch-target="#span29"><obs conceptId="CIEL:1271" class="master" id="idvi2" answerConceptId="CIEL:855" answerLabel="Vitesse de Sedimentation"/></span><br/>
 									<span id="span29" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:855" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:855" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
 								</tr>
 							</table>
 						</td>
@@ -1338,10 +1338,10 @@
 						</tr>
 						<tr><td><span class="titre" ch-target="#span30"><obs conceptId="CIEL:1271" class="master" id="idac1" answerConceptId="CIEL:159825" answerLabel="Acide urique"/></span><br/>
 						<span id="span30" class="togglable" style="display: none;">
-						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159825" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159825" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
 						<tr><td><span class="titre" ch-target="#span31"><obs conceptId="CIEL:1271" class="master" id="idal1" answerConceptId="CIEL:848" answerLabel="Albumine"/></span>
 						<span id="span31" class="togglable" style="display: none;">
-						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:848" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+						<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:848" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 						</fieldset></span>
 						</td></tr>
 					</table>
@@ -1352,7 +1352,7 @@
 							<td>
 								<span class="titre" ch-target="#span32"><obs conceptId="CIEL:1271" class="master" id="idam1" answerConceptId="CIEL:1299" answerLabel="Amylase"/></span><br/>
 								<span id="span32" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1299" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1299" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1361,7 +1361,7 @@
 								<span class="titre" ch-target="#span33"><obs conceptId="CIEL:1271" class="master" id="chazote" answerConceptId="CIEL:857" answerLabel="Azote de l’Uree"/></span><br/>
 								<span id="span33" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:857" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:857" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1371,7 +1371,7 @@
 								<span class="titre" ch-target="#be"><obs conceptId="CIEL:1271" class="master" id="gazbe" answerConceptId="CIEL:163599" answerLabel="BE"/></span><br/>
 								<span id="be" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163599" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163599" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1380,7 +1380,7 @@
 								<span class="titre" ch-target="#bicarbonates"><obs conceptId="CIEL:1271" class="master" id="ionogrammebi" answerConceptId="CIEL:1135" answerLabel="Bicarbonates"/></span><br/>
 								<span id="bicarbonates" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1135" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1135" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1388,20 +1388,20 @@
 							<td><!-- nest pas dans le group 953 -->
 								<span class="titre" ch-target="#span34"><obs conceptId="CIEL:1271" class="master" id="bibilirubinedirect" answerConceptId="CIEL:1297" answerLabel="Bilirubine direct"/></span><br/>
 								<span id="span34" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1297" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1297" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr><!-- nest pas dans le group 953 -->
 							<td><span class="titre" ch-target="#span35"><obs conceptId="CIEL:1271" class="master" id="bilbiliindirect" answerConceptId="CIEL:163001" answerLabel="Bilirubine indirect"/></span><br/>
 								<span id="span35" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163001" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163001" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#span36"><obs conceptId="CIEL:1271" class="master" id="bebilirubine" answerConceptId="CIEL:655" answerLabel="Bilirubine totale"/></span><br/>
 								<span id="span36" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:655" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:655" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1409,7 +1409,7 @@
 							<td>
 								<span class="titre" ch-target="#c3complement"><obs conceptId="CIEL:1271" class="master" id="idc3c1" answerConceptId="CIEL:163600" answerLabel="C3 complement"/></span><br/>
 								<span id="c3complement" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163600" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163600" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1417,7 +1417,7 @@
 							<td>
 								<span class="titre" ch-target="#c4complement"><obs conceptId="CIEL:1271" class="master" id="idc4c2" answerConceptId="CIEL:163601" answerLabel="C4 complement"/></span><br/>
 								<span id="c4complement" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163601" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163601" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1425,7 +1425,7 @@
 							<td>
 								<span class="titre" ch-target="#span37"><obs conceptId="CIEL:1271" class="master" id="ionogrammecalcium" answerConceptId="CIEL:159497" answerLabel="Calcium"/></span><br/>
 								<span id="span37" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:159497" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:159497" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 							</td>
 						</tr>
 					</table>
@@ -1435,29 +1435,29 @@
 						<tr><td> 
 							<span class="titre" ch-target="#chlore"><obs conceptId="CIEL:1271" class="master" id="lcrchlore" answerConceptId="CIEL:1134" answerLabel="Chlore"/></span><br/>
 								<span id="chlore" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:159645"><obs conceptId="CIEL:1134" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:159645"><obs conceptId="CIEL:1134" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 						</td></tr>
 						<tr><td>
 							<span class="titre" ch-target="#cholesterol"><obs conceptId="CIEL:1271" class="master" id="profillipchol" answerConceptId="CIEL:1006" answerLabel="Cholestérol total"/></span><br/>
 								<span id="cholesterol" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1006" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1006" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#span60"><obs conceptId="CIEL:1271" class="master" id="idcpk1" answerConceptId="CIEL:1011" answerLabel="CPK MB"/></span><br/>
 								<span id="span60" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1011" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1011" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span61"><obs conceptId="CIEL:1271" class="master" id="chscreat" answerConceptId="CIEL:790" answerLabel="Créatinine"/></span><br/>
 						<span id="span61" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:790" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:790" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span62"><obs conceptId="CIEL:1271" class="master" id="idcrp1" answerConceptId="CIEL:161500" answerLabel="CRP Quantitatif"/></span><br/>
 							<span id="span62" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="161501"><obs conceptId="CIEL:161500" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="161501"><obs conceptId="CIEL:161500" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>	
 						</td></tr>
 						<tr><td>
@@ -1472,7 +1472,7 @@
 							<td><span class="titre" ch-target="#span64"><obs conceptId="CIEL:1271" class="master" id="idfesr1" answerConceptId="CIEL:159828" answerLabel="Fer Serique"/></span><br/>
 							<span id="span64" class="togglable" style="display: none;">
 							<fieldset><legend>Résultat et date</legend>
-							<obs conceptId="CIEL:159828" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<obs conceptId="CIEL:159828" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 							</td>
 						</tr>
@@ -1480,13 +1480,13 @@
 							<td><span class="titre" ch-target="#span65"><obs conceptId="CIEL:1271" class="master" id="idglyc1" answerConceptId="CIEL:887" answerLabel="Glycemie"/></span><br/>
 							<span id="span65" class="togglable" style="display: none;">
 							<fieldset><legend>Résultat et date</legend>
-							<obs conceptId="CIEL:887" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<obs conceptId="CIEL:887" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span66"><obs conceptId="CIEL:1271" class="master" id="idglycem1" answerConceptId="CIEL:160914" answerLabel="Glycemie Postprandiale"/></span><br/>
 						<span id="span66" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160914" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160914" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span></td></tr>
 					</table>
 					</td>
 					<td valign="TOP">
@@ -1496,7 +1496,7 @@
 								<span class="titre" ch-target="#glypro"><obs conceptId="CIEL:1271" class="master" id="idglycpr1" answerConceptId="CIEL:163594" answerLabel="Glycémie provoquée"/></span><br/>
 								<span id="glypro" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:163594" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:163594" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1506,7 +1506,7 @@
 								<span class="titre" ch-target="#glypro12"><obs conceptId="CIEL:1271" class="master" id="idglyprovo11" answerConceptId="CIEL:163703" answerLabel="Glycémie provoquée 1/2 hre"/></span><br/>
 								<span id="glypro12" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:163703" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:163703" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1515,7 +1515,7 @@
 									<span class="titre" ch-target="#glypro1"><obs conceptId="CIEL:1271" class="master" id="idglycemprovo22" answerConceptId="CIEL:163704" answerLabel="Glycémie provoquée 1hre"/></span><br/>
 								<span id="glypro1" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:163704" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:163704" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1524,7 +1524,7 @@
 								<span class="titre" ch-target="#glypro2"><obs conceptId="CIEL:1271" class="master" id="idglypro2h" answerConceptId="CIEL:163705" answerLabel="Glycémie provoquée 2hres"/></span><br/>
 								<span id="glypro2" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:163705" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:163705" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1533,7 +1533,7 @@
 								<span class="titre" ch-target="#glypro3"><obs conceptId="CIEL:1271" class="master" id="idglypro3h" answerConceptId="CIEL:163706" answerLabel="Glycémie provoquée 3hres"/></span><br/>
 								<span id="glypro3" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:163706" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:163706" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1542,7 +1542,7 @@
 								<span class="titre" ch-target="#glypro4"><obs conceptId="CIEL:1271" class="master" id="idglypro4h" answerConceptId="CIEL:163707" answerLabel="Glycémie provoquée 4hres"/></span><br/>
 								<span id="glypro4" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:163707" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:163707" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							
 							</td>
@@ -1552,20 +1552,20 @@
 								<span class="titre" ch-target="#glyprofasting"><obs conceptId="CIEL:1271" class="master" id="lcrglycemie" answerConceptId="CIEL:160912" answerLabel="Glycemie Provoquée Fasting"/></span><br/>
 								<span id="glyprofasting" class="togglable" style="display: none;">
 								<fieldset><legend>Résultat et date</legend>
-								<obs conceptId="CIEL:160912" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<obs conceptId="CIEL:160912" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
 						<tr><td>
 							<span class="titre" ch-target="#hco3"><obs conceptId="CIEL:1271" class="master" id="gazhco3" answerConceptId="CIEL:163596" answerLabel="HCO3"/></span><br/>
 							<span id="hco3" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163596" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163596" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>
 						</td></tr>
 						<tr><td><span class="titre" ch-target="#span75"><obs conceptId="CIEL:1271" class="master" id="profillhdl" answerConceptId="CIEL:1007" answerLabel="HDL"/></span><br/>
 						<span id="span75" class="togglable" style="display: none;">
 							<fieldset><legend>Résultat et date</legend>
-						<obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1007" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+						<obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1007" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 						</fieldset></span></td></tr>
 						<!--<tr>
 							<td>
@@ -1578,7 +1578,7 @@
 						<tr>
 							<td><span class="titre" ch-target="#span77"><obs conceptId="CIEL:1271" class="master" id="idhemogl1" answerConceptId="CIEL:159644" answerLabel="Hémoglobine glycolisee"/></span><br/>
 							<span id="span77" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159644" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159644" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 								</fieldset></span>
 							</td>
 						</tr>
@@ -1594,19 +1594,19 @@
 							<td>
 								<span class="titre" ch-target="#ldh"><obs conceptId="CIEL:1271" class="master" id="idldh1" answerConceptId="CIEL:1014" answerLabel="LDH"/></span><br/>
 								<span id="ldh" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1014" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1014" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
 								</span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span79"><obs conceptId="CIEL:1271" class="master" id="profillldl" answerConceptId="CIEL:1008" answerLabel="LDL"/></span><br/>
 							<span id="span79" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="1010"><obs conceptId="CIEL:1008" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="1010"><obs conceptId="CIEL:1008" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 							</span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span80"><obs conceptId="CIEL:1271" class="master" id="idlipase1" answerConceptId="CIEL:1013" answerLabel="Lipase"/></span><br/>
 							<span id="span80" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1013" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1013" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 							</td>
 						</tr>
@@ -1614,27 +1614,27 @@
 							<td><!-- n'est pas dans le groupe 5473 -->
 								<span class="titre" ch-target="#lithium"><obs conceptId="CIEL:1271" class="master" id="ionogrammelit" answerConceptId="CIEL:163592" answerLabel="Lithium"/></span><br/>
 								<span id="lithium" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163592" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163592" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
 								</span>
 							</td>
 						</tr>
 							<!-- n'est pas dans le groupe 5473 -->
 						<tr><td><span class="titre" ch-target="#span81"><obs conceptId="CIEL:1271" class="master" id="ionogrammemagnes" answerConceptId="CIEL:159643" answerLabel="magnésium"/></span><br/>
 							<span id="span81" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159643" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159643" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 						</td></tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#mbg"><obs conceptId="CIEL:1271" class="master" id="idmbg1" answerConceptId="CIEL:163593" answerLabel="MBG"/></span><br/>
 								<span id="mbg" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163593" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163593" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
 								</span>
 							</td>
 						</tr>
 						<tr><td>
 							<span class="titre" ch-target="#o2saturation"><obs conceptId="CIEL:1271" class="master" id="gazo2s" answerConceptId="CIEL:163597" answerLabel="O2 Saturation"/></span><br/>
 								<span id="o2saturation" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163597" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163597" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 								</span>
 						</td>
 						</tr>
@@ -1642,7 +1642,7 @@
 							<td>
 								<span class="titre" ch-target="#paco2"><obs conceptId="CIEL:1271" class="master" id="gazpaco2" answerConceptId="CIEL:163595" answerLabel="PaCO2"/></span><br/>
 								<span id="paco2" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163595" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163595" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 								</span>
 							</td>
 						</tr>
@@ -1650,7 +1650,7 @@
 							<td>
 								<span class="titre" ch-target="#pao2"><obs conceptId="CIEL:1271" class="master" id="gazpao2" answerConceptId="CIEL:163598" answerLabel="PaO2"/></span><br/>
 								<span id="pao2" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163598" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163602"><obs conceptId="CIEL:163598" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset>
 								</span>
 							</td>
 						</tr>
@@ -1658,7 +1658,7 @@
 							<td>
 								<span class="titre" ch-target="#ph"><obs conceptId="CIEL:1271" class="master" id="idph1" answerConceptId="CIEL:161455" answerLabel="Ph"/></span><br/>
 								<span id="ph" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161455" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161455" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset>
 								</span>
 							</td>
 						</tr>
@@ -1671,47 +1671,47 @@
 							<td>
 								<span class="titre" ch-target="#phosphatageacide"><obs conceptId="CIEL:1271" class="master" id="idphosphat1" answerConceptId="CIEL:163443" answerLabel="Phosphatase Acide"/></span><br/>
 							<span id="phosphatageacide" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163443" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!--A discuter for Panel --></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163443" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!--A discuter for Panel --></fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span82"><obs conceptId="CIEL:1271" class="master" id="idphosphat2" answerConceptId="CIEL:785" answerLabel="Phosphatase Alcaline"/></span><br/>
 							<span id="span82" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:785" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!--A discuter for Panel --></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:785" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/><!--A discuter for Panel --></fieldset></span>
 							</td></tr>
 						<tr>
 							<td> <!-- n'est pas dans le groupe 5473 -->
 								<span class="titre" ch-target="#phosphore"><obs conceptId="CIEL:1271" class="master" id="ionogrammePhosp" answerConceptId="CIEL:161154" answerLabel="Phosphore"/></span><br/>
 							<span id="phosphore" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161154" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161154" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span83"><obs conceptId="CIEL:1271" class="master" id="ionogrammePota" answerConceptId="CIEL:1133" answerLabel="Potassium"/></span><br/>
 						<span id="span83" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1133" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1133" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 							</td></tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#proteines"><obs conceptId="CIEL:1271" class="master" id="lcrproteines" answerConceptId="CIEL:159646" answerLabel="Proteines"/></span><br/>
 								<span id="proteines" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:159645"><obs conceptId="CIEL:159646" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:159645"><obs conceptId="CIEL:159646" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#span84"><obs conceptId="CIEL:1271" class="master" id="idprotot1" answerConceptId="CIEL:717" answerLabel="Protéines totales"/></span><br/>
 								<span id="span84" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:717" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+								<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:717" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span85"><obs conceptId="CIEL:1271" class="master" id="bilsgot" answerConceptId="CIEL:653" answerLabel="SGOT (AST)"/></span><br/>
 							<span id="span85" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:653" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:653" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 							</fieldset></span>
 						</td></tr>
 						<tr><td><span class="titre" ch-target="#span88"><obs conceptId="CIEL:1271" class="master" id="bilsgpt" answerConceptId="CIEL:654" answerLabel="SGPT (ALT)"/></span><br/>
 						<span id="span88" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:654" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup><!--A discuter for Panel -->
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:654" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup><!--A discuter for Panel -->
 							</fieldset></span>
 						</td></tr>
 						
@@ -1721,7 +1721,7 @@
 					<table>	
 						<tr><td><span class="titre" ch-target="#span91"><obs conceptId="CIEL:1271" class="master" id="ionogrammesodium" answerConceptId="CIEL:1132" answerLabel="Sodium"/></span><br/>
 						<span id="span91" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1132" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:5473"><obs conceptId="CIEL:1132" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 							</fieldset></span>
 							</td></tr>
 						<tr>
@@ -1730,31 +1730,31 @@
 						</tr>
 						<tr><td><span class="titre" ch-target="#span93"><obs conceptId="CIEL:1271" class="master" id="profilltrig" answerConceptId="CIEL:1009" answerLabel="Triglycéride"/></span><br/>
 						<span id="span93" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1009" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1009" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 							</fieldset></span></td></tr>
 						<tr>
 							<td><span class="titre" ch-target="#span94"><obs conceptId="CIEL:1271" class="master" id="idtripo1" answerConceptId="CIEL:159654" answerLabel="Triponine I"/></span><br/>
 							<span id="span94" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159654" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159654" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#ureecalcul"><obs conceptId="CIEL:1271" class="master" id="chsanguine" answerConceptId="CIEL:163699" answerLabel="Urée (calculée)"/></span><br/>
 							<span id="ureecalcul" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:163699" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161488"><obs conceptId="CIEL:163699" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup></fieldset></span>
 							</td>
 						</tr>
 						<tr><td><span class="titre" ch-target="#span97"><obs conceptId="CIEL:1271" class="master" id="profillvldl" answerConceptId="CIEL:1298" answerLabel="VLDL"/></span><br/>
 							<span id="span97" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1298" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+							<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:1010"><obs conceptId="CIEL:1298" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 							</fieldset></span>
 							</td></tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#a1grobuline"><obs conceptId="CIEL:1271" class="master" id="idglobuline1" answerConceptId="CIEL:163437" answerLabel="α1 globuline"/></span><br/>
 							<span id="a1grobuline" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163437" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163437" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							
 							</td>
 						</tr>
@@ -1762,21 +1762,21 @@
 							<td>
 								<span class="titre" ch-target="#a2grobuline"><obs conceptId="CIEL:1271" class="master" id="idglobuline2" answerConceptId="CIEL:163438" answerLabel="α2 globuline"/></span><br/>
 							<span id="a2grobuline" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163438" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163438" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<span class="titre" ch-target="#bgrobuline"><obs conceptId="CIEL:1271" class="master" id="idglobuline3" answerConceptId="CIEL:163439" answerLabel="β globuline"/></span><br/>
 							<span id="bgrobuline" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163439" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163439" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 						<tr>
 							<td>
 							<span class="titre" ch-target="#ygrobuline"><obs conceptId="CIEL:1271" class="master" id="idglobuline4" answerConceptId="CIEL:163442" answerLabel="ϒ globuline"/></span><br/>
 							<span id="ygrobuline" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163442" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163442" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></fieldset></span>
 							</td>
 						</tr>
 					</table>
@@ -1841,7 +1841,7 @@
 									<td>
 										<span class="titre" ch-target="#comptesperme"><obs conceptId="CIEL:1271" class="master" id="spermogrammecomptesperme" answerConceptId="CIEL:163661" answerLabel="Compte de spermes"/></span><br/>
 									<span id="comptesperme" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163661" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163661" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 									</fieldset></span>
 									</td>
 								</tr>
@@ -1869,7 +1869,7 @@
 									<td>
 										<span class="titre" ch-target="#formesanormales"><obs conceptId="CIEL:1271" class="master" id="spermogrammefnormales" answerConceptId="CIEL:163662" answerLabel="Formes normales"/></span><br/>
 										<span id="formesanormales" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163662" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163662" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1897,7 +1897,7 @@
 									<td>
 										<span class="titre" ch-target="#fructose"><obs conceptId="CIEL:1271" class="master" id="spermogrammefructose" answerConceptId="CIEL:163659" answerLabel="Fructose"/></span><br/>
 										<span id="fructose" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163659" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163659" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1981,7 +1981,7 @@
 									<td>
 										<span class="titre" ch-target="#liquefaction"><obs conceptId="CIEL:1271" class="master" id="spermogrammeliquef" answerConceptId="CIEL:163658" answerLabel="Liquefaction"/></span><br/>
 										<span id="liquefaction" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163658" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163658" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1989,7 +1989,7 @@
 									<td>
 										<span class="titre" ch-target="#motilite1heure"><obs conceptId="CIEL:1271" class="master" id="idmotilite1" answerConceptId="CIEL:163663" answerLabel="Motilite 1 heure"/></span><br/>
 										<span id="motilite1heure" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163663" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163663" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -1998,7 +1998,7 @@
 								<!-- replace 161455 by 163698 -->
 								<tr><td><span class="titre" ch-target="#span130"><obs conceptId="CIEL:1271" class="master" id="spermogrammeph" answerConceptId="CIEL:163698" answerLabel="pH"/></span><br/>
 									<span id="span130" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163698" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163698" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 									</fieldset></span>
 									</td></tr>
 								<tr>
@@ -2033,7 +2033,7 @@
 									<td>
 										<span class="titre" ch-target="#volume"><obs conceptId="CIEL:1271" class="master" id="spermogrammevolume" answerConceptId="CIEL:163660" answerLabel="Volume"/></span><br/>
 									<span id="volume" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163660" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161468"><obs conceptId="CIEL:163660" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 									</fieldset></span>
 									</td>
 								</tr>
@@ -2312,7 +2312,7 @@
 									<td>
 										<span class="titre" ch-target="#span210"><obs conceptId="CIEL:1271" class="master" id="macrodensite" answerConceptId="CIEL:161439" answerLabel="Densité"/></span><br/>
 										<span id="span210" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161439" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161439" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2332,7 +2332,7 @@
 									<td>
 										<span class="titre" ch-target="#span215"><obs conceptId="CIEL:1271" class="master" id="macroglucose" answerConceptId="CIEL:159733" answerLabel="Glucose"/></span><br/>
 										<span id="span215" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:159733" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:159733" showUnits="true" showDate="true" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2372,7 +2372,7 @@
 									<td>
 										<span class="titre" ch-target="#phmacros"><obs conceptId="CIEL:1271" class="master" id="macroph" answerConceptId="CIEL:161438" answerLabel="pH"/></span><br/>
 										<span id="phmacros" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161438" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161438" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2567,6 +2567,17 @@
 							</fieldset></span>
 						</td>
 					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#covidantigen"><obs conceptId="CIEL:1271" class="master" id="covidantigen34" answerConceptId="165852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerLabel="COVID-19 Test rapide / Antigen"/></span><br/>
+							<span id="covidantigen" class="togglable" style="display: none;">
+								<fieldset>
+									<legend>Résultat et date</legend>
+									<obs conceptId="165852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerConceptIds="CIEL:1301,CIEL:1302" answerLabels="Détecté,Non-détecté" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+								</fieldset>
+							</span>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div class="item">
@@ -2594,7 +2605,7 @@
 								</tr>
 								<tr><td><span class="titre" ch-target="#span270"><obs conceptId="CIEL:1271" class="master" id="ppdquantitatif" answerConceptId="CIEL:5475" answerLabel="PPD Quantitatif"/></span><br/>
 								<span id="span270" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163631"><obs conceptId="CIEL:5475" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163631"><obs conceptId="CIEL:5475" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 								</fieldset></span>
 								</td></tr>
 							</table>
@@ -2684,14 +2695,14 @@
 									<td>
 										<span class="titre" ch-target="#fsh"><obs conceptId="CIEL:1271" class="master" id="idfsh1" answerConceptId="CIEL:161489" answerLabel="FSH"/></span><br/>
 										<span id="fsh" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161489" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161489" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
 								<tr>
 									<td><span class="titre" ch-target="#span283"><obs conceptId="CIEL:1271" class="master" id="idlh1" answerConceptId="CIEL:161490" answerLabel="LH"/></span><br/>
 									<span id="span283" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161490" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161490" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 									</fieldset></span>
 									</td>
 								</tr>
@@ -2699,7 +2710,7 @@
 									<td>
 										<span class="titre" ch-target="#oestrogene"><obs conceptId="CIEL:1271" class="master" id="idoestro1" answerConceptId="CIEL:163629" answerLabel="Oestrogene"/></span><br/>
 										<span id="oestrogene" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163629" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163629" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2707,7 +2718,7 @@
 									<td>
 										<span class="titre" ch-target="#progesterone"><obs conceptId="CIEL:1271" class="master" id="idprogest1" answerConceptId="CIEL:161159" answerLabel="Progesterone"/></span><br/>
 										<span id="progesterone" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161159" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161159" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2716,7 +2727,7 @@
 										<span class="titre" ch-target="#span286"><obs conceptId="CIEL:1271" class="master" id="idprolactine1" answerConceptId="CIEL:161516" answerLabel="Prolactine"/></span><br/>
 										<span id="span286" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:161516" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<obs conceptId="CIEL:161516" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2725,7 +2736,7 @@
 										<span class="titre" ch-target="#t3"><obs conceptId="CIEL:1271" class="master" id="idt31" answerConceptId="CIEL:161503" answerLabel="T3"/></span><br/>
 										<span id="t3" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:161503" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<obs conceptId="CIEL:161503" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2734,7 +2745,7 @@
 										<span class="titre" ch-target="#t4"><obs conceptId="CIEL:1271" class="master" id="idt41" answerConceptId="CIEL:161504" answerLabel="T4"/></span><br/>
 										<span id="t4" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:161504" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<obs conceptId="CIEL:161504" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2751,7 +2762,7 @@
 										<span class="titre" ch-target="#tsh"><obs conceptId="CIEL:1271" class="master" id="idtsh2" answerConceptId="CIEL:161505" answerLabel="TSH"/></span><br/>
 										<span id="tsh" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend>
-										<obs conceptId="CIEL:161505" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<obs conceptId="CIEL:161505" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2790,7 +2801,7 @@
 								<td>
 									<span class="titre" ch-target="#aso"><obs conceptId="CIEL:1271" class="master" id="idso1" answerConceptId="161469" answerLabel="ASO"/></span><br/>
 									<span id="aso" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161478"><obs conceptId="CIEL:161469" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161478"><obs conceptId="CIEL:161469" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 									</fieldset></span>
 								</td>
 								</tr>
@@ -2844,7 +2855,7 @@
 										<obsgroup groupingConceptId="b5bd922c-a05e-4b2b-b218-47b4a66c83dd">
 											<span class="titre" ch-target="#span320"><obs conceptId="CIEL:1271" class="master" id="idcpr21" answerConceptId="161500" answerLabel="CRP"/></span><br/>
 											<span id="span320" class="togglable" style="display: none;">
-											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161500" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:161500" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											</fieldset></span>
 										</obsgroup>
 									</td>
@@ -3014,7 +3025,7 @@
 						<td>
 							<span class="titre" ch-target="#span350"><obs conceptId="CIEL:1271" class="master" id="idpsa21" answerConceptId="160913" answerLabel="PSA"/></span><br/>
 							<span id="span350" class="togglable" style="display: none;">
-							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160913" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:160913" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 						</td>
 					</tr>
@@ -3040,7 +3051,7 @@
 										<span id="span380" class="togglable" style="display: none;">
 										<fieldset>
 											<legend>Résultat et date</legend>
-											<obs conceptId="CIEL:856" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<obs conceptId="CIEL:856" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											<obs id="viralLoadStage" labelText="LNSP stage" conceptId="63cbd0ac-7b4d-477a-910d-8e75168275bf" answerConceptIds="372cba89-1924-451c-9da4-8a9ac1e5a681, 2123b704-4ae8-4f3e-b5e9-0ebb9343256b,
 												0f4a98cd-99e7-4a49-87e7-ef1786e67941, a9056b55-299c-4cd3-bb30-5dfa3f6126ef, c2f00d7b-d675-4805-8f1a-a6f090c0dd58, 876902e2-34e7-4769-9a4c-6cb4551b60a1, 9ebacdd9-2acb-4b59-9dcb-5a251803ebc6,
 												8c71bdd3-e67c-4667-9375-c657a9dd2e36, 69326ac4-2df6-4db8-b18d-5c2bf7cc05c8, cbf0fa45-cfb3-4777-ab14-7eb187df7c1b, ba65bd79-a9e2-4372-9515-ee88039850d9, 169f77a2-7f3c-480c-8c65-0ed14838b6a4"
@@ -3102,6 +3113,17 @@
 										<fieldset><legend>Résultat et date</legend>
 										<obs conceptId="CIEL:163610" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#covidpcr"><obs conceptId="CIEL:1271" class="master" id="covidpcr33" answerConceptId="165840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerLabel="PCR/COVID-19"/></span><br/>
+										<span id="covidpcr" class="togglable" style="display: none;">
+										<fieldset>
+											<legend>Résultat et date</legend>
+											<obs conceptId="165840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerConceptIds="CIEL:1301,CIEL:1302" answerLabels="Détecté,Non-détecté" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset>
+										</span>
 									</td>
 								</tr>
 							</table>

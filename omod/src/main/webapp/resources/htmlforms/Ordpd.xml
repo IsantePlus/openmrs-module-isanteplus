@@ -220,6 +220,26 @@
 			|| (getValue('etravirine_j_alt.value') != '') || (getValue('etravirine_nb_pil.value') != '')) {
 		setValue('etravirine1.value',159810);}
 		
+		if((getValue('presentation111.value') == '138405') ||
+		(getValue('presentation111.value') == '163768')
+		|| (getValue('atazanavir_dosage.value') != '') || (getValue('atazanavir_dosage_alt.value') != '')
+			|| (getValue('atazanavir_nbj_prescrit.value') != '')) {
+		setValue('atazanavir.value',71647);}
+		
+		if((getValue('atazanavir_dispensee.value') != null) || (getValue('atazanavir_post_alt.value') != '')
+			|| (getValue('atazanavir_j_alt.value') != '') || (getValue('atazanavir_nb_pil.value') != '')) {
+		setValue('atazanavir1.value',71647);}
+
+		if((getValue('presentation112.value') == '138405') ||
+		(getValue('presentation112.value') == '163768')
+		|| (getValue('atazanavirRtv_dosage.value') != '') || (getValue('atazanavirRtv_dosage_alt.value') != '')
+			|| (getValue('atazanavirRtv_nbj_prescrit.value') != '')) {
+		setValue('atazanavirRtv.value',159809);}
+		
+		if((getValue('atazanavirRtv_dispensee.value') != null) || (getValue('atazanavirRtv_post_alt.value') != '')
+			|| (getValue('atazanavirRtv_j_alt.value') != '') || (getValue('atazanavirRtv_nb_pil.value') != '')) {
+		setValue('atazanavirRtv1.value',159809);}
+		
 		<!-- if((getValue('presentation11.value') == '138405') || (getValue('presentation11.value') == '163768')
 			|| (getValue('ata_dosage.value') !='') || (getValue('ata_dosage_alt.value') !='')
 			|| (getValue('ata_nbj_prescrit.value') !='')) 
@@ -271,6 +291,16 @@
 		{
 		setValue('lopinavir1.value',794);
 		}
+		
+		if((getValue('presentation115.value') == '138405') ||
+		(getValue('presentation115.value') == '163768')
+		|| (getValue('darunavir_dosage.value') != '') || (getValue('darunavir_dosage_alt.value') != '')
+			|| (getValue('darunavir_nbj_prescrit.value') != '')) {
+		setValue('darunavir.value',74258);}
+		
+		if((getValue('darunavir_dispensee.value') != null) || (getValue('darunavir_post_alt.value') != '')
+			|| (getValue('darunavir_j_alt.value') != '') || (getValue('darunavir_nb_pil.value') != '')) {
+		setValue('darunavir1.value',74258);}
 
 		if((getValue('presentation15.value') == '138405') || (getValue('presentation15.value') == '163768')
 			|| (getValue('rit_dosage.value') !='') || (getValue('rit_dosage_alt.value') !='')
@@ -829,7 +859,6 @@
 
 		<table class="baseline-aligned">
 			<tr>
-				<td></td>
 				<td>
 					 	Patient inscrit dans programme ARV <obs conceptId="CIEL:159811" answerConceptIds="CIEL:1065,CIEL:1066"
 								id="patient_i_arv" answerLabels="Oui,Non" style="radio"/>
@@ -838,7 +867,9 @@
 					<obs conceptId="CIEL:1755" id="dispensation_com"
 						answerConceptId="CIEL:1065" answerLabel="Dispensation communautaire" />
 				</td>
-			
+				<td><obs conceptId="c2aacdc8-156e-4527-8934-a8fb94162419" id="dispensation_ddp"
+						answerConceptId="CIEL:1065" answerLabel="Dispensation DDP" />
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -910,8 +941,7 @@
 									id="presentation" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="300mg comprimé &lt;br/&gt;,20mg/ml sirop" id="abac_dosage"
-									style="radio" />
+								<obs conceptId="CIEL:1444" answers="600mg,300mg comprimé,120mg,60mg,20mg/ml sirop" id="abac_dosage" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="abac_dosage_alt" />
@@ -1096,8 +1126,7 @@
 								id="presentation4" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="150mg comprimé&lt;br/&gt;,10mg/ml sirop" id="lam_dosage"
-								style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg,150mg comprimé,30mg,10mg/ml sirop" id="lam_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="lam_dosage_alt" />
@@ -1237,8 +1266,7 @@
 								id="presentation8" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="300mg capsule&lt;br/&gt;,10mg/ml sirop" id="zid_dosage"
-								style="radio" />
+							<obs conceptId="CIEL:1444" answers="300mg capsule,150mg,60mg,10mg/ml sirop" id="zid_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="zid_dosage_alt" />
@@ -1273,7 +1301,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Tenofovir(TNF):
+							Tenofovir(TDF):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:84795" id="tenofovir"
 									answerLabel="Tenofovir(TNF)" />
@@ -1298,7 +1326,7 @@
 						<td>
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" id="tenofovir1" answerConceptId="CIEL:84795"
-									answerLabel="Tenofovir(TNF)" />
+									answerLabel="Tenofovir(TDF)" />
 							</span>
 							<obs conceptId="CIEL:1276" style="checkbox" value="true"
 								showDate="true" id="ten_dispensee" labelText="Oui" />
@@ -1336,8 +1364,7 @@
 									id="presentation9" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="600mg comprimé&lt;br/&gt;,30mg/ml sirop" id="efa_dosage"
-									style="radio" />
+								<obs conceptId="CIEL:1444" answers="600mg comprimé,400mg,200mg,30mg/ml sirop" id="efa_dosage" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="efa_dosage_alt" />
@@ -1384,8 +1411,7 @@
 								id="presentation10" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="200mg comprimé&lt;br/&gt;,10mg/ml" id="nev_dosage"
-								style="radio" />
+							<obs conceptId="CIEL:1444" answers="200mg comprimé,50mg,10mg/ml" id="nev_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="nev_dosage_alt" />
@@ -1420,7 +1446,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Etravirine(ETV):
+							Etravirine(ETR):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:159810" id="etravirine"
 									answerLabel="Etravirine(ETV)" />
@@ -1465,10 +1491,103 @@
 			<tr>
 				<tr>
 					<td width="100%" colspan="10">
-						<b>(-) PIs</b>
+						<b>(-) IPs</b>
 					</td>
 				</tr>
 				<tr bgcolor="silver">
+					<td>
+						<obsgroup groupingConceptId="CIEL:1442">
+							<td>
+								Atazanavir(ATV):
+								<span style="display:none">
+									<obs conceptId="CIEL:1282" answerConceptId="CIEL:71647" id="atazanavir"
+										answerLabel="Atazanavir(ATV)" />
+								</span>
+							</td>
+							<td>
+								<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+									id="presentation111" answerLabels="Rx,Prophy" style="radio" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:1444" answers="400mg qd,300mg,100mg" id="atazanavir_dosage" />
+							</td>
+							<td>
+								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="atazanavir_dosage_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="atazanavir_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							</td>
+						</obsgroup>
+						<obsgroup groupingConceptId="163711">
+
+							<td>
+								<span style="display:none">
+									<obs conceptId="CIEL:1282" answerConceptId="CIEL:71647" id="atazanavir1"
+										answerLabel="Atazanavir(ATV)" />
+								</span>
+								<obs conceptId="CIEL:1276" style="checkbox" value="true"
+									showDate="true" id="atazanavir_dispensee" labelText="Oui" />
+								<td>
+									<obs conceptId="CIEL:1444" id="atazanavir_post_alt" />
+								</td>
+								<td>
+									<obs conceptId="CIEL:159368" id="atazanavir_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+								</td>
+								<td>
+									<obs conceptId="CIEL:1443" id="atazanavir_nb_pil" />
+								</td>
+							</td>
+						</obsgroup>
+					</td>
+				</tr>
+			</tr>
+			<tr>
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							Atazanavir+BostRTV:
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:159809" id="atazanavirRtv"
+									answerLabel="Atazanavir+BostRTV" />
+							</span>
+						</td>
+						<td>
+							<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+								id="presentation112" answerLabels="Rx,Prophy" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" answers="300mg/ 100mg qd" id="atazanavirRtv_dosage" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="atazanavirRtv_dosage_alt" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" id="atazanavirRtv_nbj_prescrit"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:159809" id="atazanavirRtv1"
+									answerLabel="Atazanavir+BostRTV" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" id="atazanavirRtv_dispensee" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" id="atazanavirRtv_post_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="atazanavirRtv_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							</td>
+							<td>
+								<obs conceptId="CIEL:1443" id="atazanavirRtv_nb_pil" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<tr bgcolor="silver">
 					<td>
 						<obsgroup groupingConceptId="CIEL:1442">
 							<td>
@@ -1516,8 +1635,52 @@
 						</obsgroup>
 					</td>
 				</tr>
-			</tr>
+			<tr bgcolor="silver">
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							Darunavir:
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:74258" id="darunavir"
+									answerLabel="Darunavir" />
+							</span>
+						</td>
+						<td>
+							<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+								id="presentation115" answerLabels="Rx,Prophy" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" answers="75mg,100mg/ml" id="darunavir_dosage" />
+						</td>
+						<td>
+							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="darunavir_dosage_alt" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" id="darunavir_nbj_prescrit"/> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
 
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:74258" id="darunavir1"
+									answerLabel="Darunavir" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" id="darunavir_dispensee" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" id="darunavir_post_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="darunavir_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							</td>
+							<td>
+								<obs conceptId="CIEL:1443" id="darunavir_nb_pil" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
 			<tr>
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
@@ -1681,7 +1844,7 @@
 									id="presentation116" answerLabels="Rx,Prophy" style="radio" />
 							</td>
 							<td>
-								<obs conceptId="CIEL:1444" answers="400mg 1co BID" id="raltegravir_dosage" style="radio" />
+								<obs conceptId="CIEL:1444" answers="400mg 1co BID,100mg" id="raltegravir_dosage" style="radio" />
 							</td>
 							<td>
 								<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="raltegravir_dosage_alt" />
@@ -1729,7 +1892,7 @@
 								id="presentation117" answerLabels="Rx,Prophy" style="radio" />
 						</td>
 						<td>
-							<obs conceptId="CIEL:1444" answers="50mg qd" id="dolutegravir_dosage" style="radio" />
+							<obs conceptId="CIEL:1444" answers="50mg qd,25mg,10mg,5mg" id="dolutegravir_dosage" />
 						</td>
 						<td>
 							<obs conceptId="ca8bc9c3-7f97-450a-8f33-e98f776b90e1" id="dolutegravir_dosage_alt" />
@@ -3019,7 +3182,7 @@
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">
 						<td>
-							Isoniazide:
+							Isoniazide (INH):
 							<span style="display:none">
 								<obs conceptId="CIEL:1282" answerConceptId="CIEL:78280" id="isoniazide"
 									answerLabel="Isoniazide" />

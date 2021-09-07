@@ -91,6 +91,110 @@
 		}
 
 	</style>
+	
+	<script type="text/javascript">
+		beforeSubmit.push(function() {
+			
+			/*Validation for covid vaccine*/
+		
+		/*AstraZeneca*/
+		if (getValue('astrazeneca_lotnum1.value') == '') {
+		setValue('astrazeneca1.value', false);
+		} else {
+			setValue('astrazeneca1.value', true);
+		}
+		if(getValue('astrazeneca_lotnum2.value') == '') {
+		setValue('astrazeneca2.value', false);
+		} else {
+			setValue('astrazeneca2.value', true);
+		}
+		
+		/*Moderna*/
+		
+		if(getValue('moderna_lotnum1.value') == '') {
+		setValue('moderna1.value', false);
+		} else {
+			setValue('moderna1.value', true);
+		}
+		if(getValue('moderna_lotnum2.value') == '') {
+		setValue('moderna2.value', false);
+		} else {
+			setValue('moderna2.value', true);
+		}
+		
+		/*Pfizer-BioNTech*/
+		
+		if(getValue('fizer_lotnum1.value') == '') {
+		setValue('fizer1.value', false);
+		} else {
+			setValue('fizer1.value', true);
+		}
+		if(getValue('fizer_lotnum2.value') == '') {
+		setValue('fizer2.value', false);
+		} else {
+			setValue('fizer2.value', true);
+		}
+		
+		/*Gamaleya-Sputnick V (Russia)*/
+		
+		if(getValue('gamaleya_lotnum1.value') == '') {
+		setValue('gamaleya1.value', false);
+		} else {
+			setValue('gamaleya1.value', true);
+		}
+		if(getValue('gamaleya_lotnum2.value') == '') {
+		setValue('gamaleya2.value', false);
+		} else {
+			setValue('gamaleya2.value', true);
+		}
+		
+		/*Sinovac(China)Sinopharm(China)*/
+		if(getValue('sinovac_lotnum1.value') == '') {
+		setValue('sinovac1.value', false);
+		} else {
+			setValue('sinovac1.value', true);
+		}
+		if(getValue('sinovac_lotnum2.value') == '') {
+		setValue('sinovac2.value', false);
+		} else {
+			setValue('sinovac2.value', true);
+		}
+		
+		/*Johnson And Johnson (Janssen)*/
+		if(getValue('janssen_lotnum1.value') == '') {
+		setValue('janssen1.value', false);
+		} else {
+			setValue('janssen1.value', true);
+		}
+		if(getValue('janssen_lotnum2.value') == '') {
+		setValue('janssen2.value', false);
+		} else {
+			setValue('janssen2.value', true);
+		}
+		
+		/*End validation for covid vaccine*/
+			
+			var labelsList = "\n";
+			var valid = true;
+
+			jQuery('.field-error').each(function() {
+				if (!jQuery(this).is(':empty')){
+					var parent = jQuery(this).parent();
+					var label = parent[0].firstChild.data;
+
+					if (label !== undefined) {
+						labelsList += label + "\n";
+					}
+					valid = false;
+				}
+			});
+
+			if (!valid) {
+				alert("La sauvegarde a échoué à cause d'une erreur dans la fiche, veuillez corriger les champs avec erreur" + labelsList);
+			}
+			return valid;
+		});
+	</script>
 
 	<lookup
 		complexExpression="
@@ -501,6 +605,193 @@
 					<td class="tg-ng6d"></td>
 				</tr>
 			</table>
+			<br/>
+						Vaccin Covid19<br/>
+						<!--<fieldset>
+							<legend>Vaccin Covid19</legend>-->
+							<table class="tg">
+								<tr>
+									<th class="tg-5bx4">Vaccin</th>
+									<th class="tg-5bx4">Dose 0</th>
+									<th class="tg-5bx4">Dose 1 / Lot</th>
+									<th class="tg-5bx4">Dose 2 / Lot</th>
+									<th class="tg-5bx4">Dose 3 / Lot</th>
+									<th class="tg-5bx4">Rappel (Dose 4)</th>
+									<th class="tg-5bx4">Rappel (Dose 5)</th> 
+								</tr>
+								<tr>
+									<td class="tg-penta">Oxford AstraZeneca</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="astrafield{dose}">
+												<immunization showDate="true" id="astra{dose}"
+													vaccineConceptId="166156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+															<obs conceptId="CIEL:984" answerConceptId="166156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+																id="astrazeneca{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="astrazeneca_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template> 
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-pneu">Moderna</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="moderfield{dose}">
+													<immunization showDate="true" id="moder{dose}"
+													vaccineConceptId="166154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="moderna{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="moderna_lotnum{dose}" />
+														
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-rota">Pfizer-BioNTech</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="pfizerfield{dose}">
+													<immunization showDate="true" id="pfizer{dose}"
+													vaccineConceptId="166155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="fizer{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="fizer_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-penta">Gamaleya-Sputnick V (Russia)</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="gamafield{dose}">
+												<immunization showDate="true" id="gama{dose}"
+													vaccineConceptId="166157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="gamaleya{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="gamaleya_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-pneu">Sinovac(China)<br/>Sinopharm(China)</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="sinovfield{dose}">
+												<immunization showDate="true" id="sinov{dose}"
+													vaccineConceptId="166249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="sinovac{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="sinovac_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+								</tr>
+								
+								<tr>
+									<td class="tg-rota">Johnson and Johnson (Janssen)</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="janssfield{dose}">
+												<immunization showDate="true" id="janss{dose}"
+													vaccineConceptId="166355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="janssen{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="janssen_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									
+								</tr>
+								
+							</table>
 		</section>
 
 		<submit submitClass="confirm right" submitCode="general.save" />

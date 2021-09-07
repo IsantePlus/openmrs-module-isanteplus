@@ -51,7 +51,7 @@
                 {
                     "id": "demographics",
                     "questions": [
-                        {
+                   	{
                         "legend": "isanteplus.registration.patient.mothersName.label",
                         "fields": [
                             {
@@ -67,8 +67,40 @@
                         ]
                         }
                     ]
-                }, 
+                },
                 {
+                   "id": "birthPlace",
+                   "label": "",
+                   "questions": [
+                 		{
+                     "legend": "isanteplus.registration.patient.birthplace.label",
+                      "id":"placeOfBirth-container",
+                       "fields": [
+                                {
+                                    "type": "personAddress",
+                                    "label": "isanteplus.registration.patient.birthplace.address.question",
+                                    "widget": {
+                                       "providerName": "registrationapp",
+                                       "fragmentId": "field/personAddressWithHierarchy",
+                                       "config" : {
+                                            "shortcutFor": "address1",
+                                            "manualFields": ["address2"],
+                                            "fieldMappings": {
+                                                "country": "obsgroup.CIEL:165194.obs.CIEL:165198",
+                                                "stateProvince": "obsgroup.CIEL:165194.obs.CIEL:165197",
+                                                "cityVillage": "obsgroup.CIEL:165194.obs.CIEL:1354",
+                                                "address3": "obsgroup.CIEL:165194.obs.CIEL:165196",
+                                                "address1": "obsgroup.CIEL:165194.obs.CIEL:165195",
+                                                "address2": "obsgroup.CIEL:165194.obs.CIEL:162725"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                    	}
+                    	]
+                    }, 
+                	{
                     "id": "patientIds",
                     "label": "isanteplus.registration.patient.patientIds.label",
                     "questions": [
@@ -167,33 +199,7 @@
                     "id": "social",
                     "label": "isanteplus.registration.patient.social.label",
                     "questions": [
-                        {
-                            "legend": "isanteplus.registration.patient.birthplace.label",
-                            "id":"placeOfBirth-container",
-                            "fields": [
-                                {
-                                    "type": "personAddress",
-                                    "label": "isanteplus.registration.patient.birthplace.address.question",
-                                    "widget": {
-                                       "providerName": "registrationapp",
-                                       "fragmentId": "field/personAddressWithHierarchy",
-                                       "config" : {
-                                            "shortcutFor": "address1",
-                                            "manualFields": ["address2"],
-                                            "fieldMappings": {
-                                                "country": "obsgroup.CIEL:165194.obs.CIEL:165198",
-                                                "stateProvince": "obsgroup.CIEL:165194.obs.CIEL:165197",
-                                                "cityVillage": "obsgroup.CIEL:165194.obs.CIEL:1354",
-                                                "address3": "obsgroup.CIEL:165194.obs.CIEL:165196",
-                                                "address1": "obsgroup.CIEL:165194.obs.CIEL:165195",
-                                                "address2": "obsgroup.CIEL:165194.obs.CIEL:162725"
-                                            }
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
+                     {
                         "legend": "isanteplus.registration.patient.civilStatus.label",
                         "id": "civilStatus",
                         "fields": [
