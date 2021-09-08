@@ -67,7 +67,7 @@
 		<htmlformentryuiVersion>1.6.3</htmlformentryuiVersion>
 		<referenceapplicationVersion>2.6.0</referenceapplicationVersion>
 		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
-		<xds-senderVersion>2.0.2</xds-senderVersion>
+		<xds-senderVersion>2.2.0-SNAPSHOT</xds-senderVersion>
 		<!--  <xds-senderVersion>1.0.0</xds-senderVersion> -->
 		<!-- Required to pass tests -->
 		<reportingVersion>1.12.0</reportingVersion>
