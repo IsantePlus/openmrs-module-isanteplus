@@ -3,7 +3,9 @@ on:
   release:
     types: [created]
   push:
-    branches: [master]
+    branches: [main]
+  pull-request:
+    branches: [main]
 jobs:
   publish:
     runs-on: ubuntu-latest
