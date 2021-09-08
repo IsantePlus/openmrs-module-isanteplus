@@ -4,7 +4,7 @@ on:
     types: [created]
   push:
     branches: [main]
-  pull-request:
+  pull_request:
     branches: [main]
 jobs:
   publish:
