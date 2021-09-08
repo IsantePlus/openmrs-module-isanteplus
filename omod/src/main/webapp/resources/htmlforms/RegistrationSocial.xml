@@ -53,8 +53,8 @@
 
 		<fieldset>
 			<!-- edit mode of placeOfBirth -->
-
-			<ifMode mode="VIEW" include="false">
+            <!--  
+			  <ifMode mode="VIEW" include="false">
 				<div id="placeOfBirth-container">
 					<h3>
 						<uimessage code="isanteplus.registration.patient.birthplace.label" />
@@ -111,10 +111,10 @@
 						</div>
 					</obsgroup>
 				</div>
-			</ifMode>
+			</ifMode>-->
 
 			<!-- view mode of placeOfBirth address -->
-			<ifMode mode="VIEW" include="true">
+		  <!--  	<ifMode mode="VIEW" include="true">
 				<div>
 					<h3>
 						<uimessage code="isanteplus.registration.patient.birthplace.label" />
@@ -142,7 +142,7 @@
 					</obsgroup>
 				</div>
 			</ifMode>
-
+          -->
 
 			<!-- edit mode of civil status, occupation, religion -->
 			<ifMode mode="VIEW" include="false">
@@ -190,8 +190,12 @@
 						<uimessage code="isanteplus.registration.patient.civilStatus.label" />
 					</h3>
 					<p class="left">
-						<obs conceptId="CIEL:1054" id="civilStatus" showUnits="false"
-							unitsCssClass="append-to-value" />
+						<!--  <obs conceptId="CIEL:1054" id="civilStatus" showUnits="false"
+							unitsCssClass="append-to-value" /> -->
+						<obs conceptId="CIEL:1054" id="civilStatus"
+							answerConceptIds="CIEL:5555,CIEL:1060,CIEL:1059,CIEL:1056,CIEL:1058,CIEL:1057,CIEL:1067"
+							answerCodes="isanteplus.registration.patient.civilStatus.married.label,isanteplus.registration.patient.civilStatus.livingWithPartner.label,isanteplus.registration.patient.civilStatus.widowed.label,isanteplus.registration.patient.civilStatus.separated.label,isanteplus.registration.patient.civilStatus.divorced.label,isanteplus.registration.patient.civilStatus.neverMarried.label,isanteplus.registration.patient.civilStatus.unknown.label"
+							showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 					</p>
 				</div>
 
@@ -214,8 +218,13 @@
 						<uimessage code="isanteplus.registration.patient.religion.label" />
 					</h3>
 					<p class="left">
-						<obs conceptId="CIEL:162929" id="religion" showUnits="false"
-							unitsCssClass="append-to-value" />
+						<!-- <obs conceptId="CIEL:162929" id="religion" showUnits="false"
+							unitsCssClass="append-to-value" />-->
+							
+						<obs conceptId="CIEL:162929" id="religion"
+							answerConceptIds="CIEL:162930,CIEL:162931,CIEL:162932,CIEL:162933,CIEL:162934,CIEL:162935,CIEL:162936,CIEL:5622,CIEL:1067"
+							answerCodes="isanteplus.registration.patient.religion.vodoo.label,isanteplus.registration.patient.religion.catholic.label,isanteplus.registration.patient.religion.baptist.label,isanteplus.registration.patient.religion.islam.label,isanteplus.registration.patient.religion.pentecostal.label,isanteplus.registration.patient.religion.adventist.label,isanteplus.registration.patient.religion.jehovasWitness.label,isanteplus.registration.patient.religion.other.label,isanteplus.registration.patient.religion.unknown.label"
+							showUnits="false" unitsCssClass="append-to-value" style="dropdown" />
 					</p>
 				</div>
 			</ifMode>

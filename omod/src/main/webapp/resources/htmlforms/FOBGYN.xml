@@ -1398,7 +1398,7 @@
 							<tr>
 								<td colspan="5"><!-- A verifier with James -->
 									Nom et Prénom du Prestataire :
-									<obs conceptId="CIEL:1473" />
+									<obs conceptId="157d5d16-b207-40c3-9447-9819c2863df5" />
 								</td>
 							</tr>
 						</table>
@@ -3116,6 +3116,7 @@
 										<tr><td><b>Autres</b></td></tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 1</b><br/>
 												<obsgroup groupingConceptId="619f7b60-5262-4b32-ae55-155276817987">
 													<span class="titre" ch-target="#cacher44" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id43"
@@ -3140,6 +3141,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 2</b><br/>
 												<obsgroup groupingConceptId="c3a487ce-80d1-4939-bce1-49bb32a55332">
 													<span class="titre" ch-target="#cacher45" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id44"
@@ -3165,6 +3167,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 3</b><br/>
 												<obsgroup groupingConceptId="560f7cd7-0e07-4bd7-b268-de0db9e249b8">
 													<span class="titre" ch-target="#cacher46" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id45"
@@ -3189,6 +3192,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 4</b><br/>
 												<obsgroup groupingConceptId="54179a82-5497-425d-b93d-3279bdbe332f">
 													<span class="titre" ch-target="#cacher47" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id46"

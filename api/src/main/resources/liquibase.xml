@@ -1603,5 +1603,22 @@
 			<column name="uuid" value="1dd1e63a-1543-4885-b807-e49c6d18cffd" />
 		</insert>
 	</changeSet>
+	<changeSet id="2021juillet30-1420" author="jamesfeshner">
+		<preConditions onFail="MARK_RAN">
+			<sqlCheck expectedResult="0">
+				SELECT COUNT(uuid) FROM
+				encounter_type WHERE uuid = 
+				'09d3f0aa-bf4b-42b9-a750-138178bda202';
+			</sqlCheck>
+		</preConditions>
+		<comment></comment>
+		<insert tableName="encounter_type">
+			<column name="name" value="Évaluation sociale Pédiatrique" />
+			<column name="description" value="Fiche évaluation sociale Pédiatrique" />
+			<column name="creator" value="1" />
+			<column name="date_created" value="2016-11-09 09:00:00" />
+			<column name="uuid" value="09d3f0aa-bf4b-42b9-a750-138178bda202" />
+		</insert>
+	</changeSet>
 	
 </databaseChangeLog>

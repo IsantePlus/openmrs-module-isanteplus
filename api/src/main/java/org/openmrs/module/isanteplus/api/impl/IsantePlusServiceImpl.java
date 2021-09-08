@@ -20,13 +20,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -1201,4 +1205,20 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return listAllergy;
 		
 	}
+
+	@Override
+	public String getEncounterImmunizationUuidByPatient(Patient patient) {
+		String encounterUuid = null;
+		List<Encounter> encounter = Context.getEncounterService().getEncountersByPatient(patient);
+		if(encounter != null){
+			for(Encounter e : encounter){
+				if(e.getEncounterType().getEncounterTypeId().equals(Context.getEncounterService().getEncounterTypeByUuid(IsantePlusConstants.IMMUNIZATION_FORM_ENCOUNTERTYPE_UUID).getEncounterTypeId())){
+					encounterUuid = e.getUuid();
+				}
+				
+			}
+		}
+		return encounterUuid;
+	}
+	
 }

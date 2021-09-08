@@ -64,6 +64,10 @@ public class IsantePlusFormsFragmentController {
 			IsantePlusHtmlForm fichePsychosocialePediatrique = new IsantePlusHtmlForm(
 					"PsyP.xml", resourceFactory, formService, htmlFormEntryService, patient,
 					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
+			
+			IsantePlusHtmlForm ficheEvalsocialePediatrique = new IsantePlusHtmlForm(
+					"EvSocialPed.xml", resourceFactory, formService, htmlFormEntryService, patient,
+					visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ordonnanceMedicale = new IsantePlusHtmlForm("OrdM.xml", resourceFactory,
 					formService, htmlFormEntryService, patient, visit != null ? visit : activeVisit != null ? activeVisit.getVisit() : null);
 			IsantePlusHtmlForm ordonnancepediatrique = new IsantePlusHtmlForm("Ordpd.xml",
@@ -144,8 +148,11 @@ public class IsantePlusFormsFragmentController {
 
 			if (patientAge != null && patientAge > adultStartingAge)
 				psychoSocialForms.add(fichePsychosocialeAdulte);
-			if (patientAge != null && patientAge <= adultStartingAge)
+			if (patientAge != null && patientAge <= adultStartingAge){
 				psychoSocialForms.add(fichePsychosocialePediatrique);
+				psychoSocialForms.add(ficheEvalsocialePediatrique);
+				
+			}
 
 			otherForms.add(vaccination);
 			otherForms.add(rapportDarretDuProgrammeSoinsEtTraitementVIHOrSIDA);

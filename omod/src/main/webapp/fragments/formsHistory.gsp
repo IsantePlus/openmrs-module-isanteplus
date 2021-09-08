@@ -73,7 +73,7 @@ ${ ui.includeFragment("isanteplus", "isantePlusForms") }
 				<tr> <!-- class="icon-file-alt" to view encounter-->
 					<td>${ ui.format(it.encounter.visit.startDatetime) }</td>
 					<td>
-					<a href="/${appName}/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounterId=${ ui.format(it.encounter.uuid) }" target="_blank">${ ui.format(it.encounter.form.name) }</a>
+					<a href="/${appName}/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounterId=${ ui.format(it.encounter.uuid) }">${ ui.format(it.encounter.form.name) }</a>
 					</td>
 					<td>${ ui.format(it.formStatus) }</td>
 					<td>${ ui.format(it.provider) }</td>

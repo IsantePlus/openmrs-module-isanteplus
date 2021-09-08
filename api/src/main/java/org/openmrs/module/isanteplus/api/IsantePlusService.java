@@ -14,7 +14,9 @@
 package org.openmrs.module.isanteplus.api;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -162,4 +164,6 @@ public interface IsantePlusService extends OpenmrsService {
 	Obs getLatestNextOrdonanceVisitDate(Patient patient);
 
 	List<Obs> getAllergiesForPatient(Patient patient);
+	
+	String getEncounterImmunizationUuidByPatient(Patient patient);
 }

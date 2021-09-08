@@ -2,6 +2,10 @@
 	formName="SSP - Consultation" formVersion="1.0"
 	formEncounterType="a5600919-4dde-4eb8-a45b-05c204af8284"
 	formDescription="Soins de santé primaire--consultation;Consultation de suivie adulte SSP">
+	<macros>
+		headerColor =#00463F
+		fontOnHeaderColor = white
+	</macros>
 	<style>
 		.section {
 		border: 1px solid $headerColor;
@@ -102,6 +106,44 @@
 		    background-color: white;
 		}
 		
+	</style>
+	<style type="text/css">
+		.tg {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+		.tg td{font-size:14px;padding:10px
+		5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+		.tg th{font-size:14px;font-weight:normal;padding:10px
+		5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+		.tg .tg-ng6d{background-color:$headerColor;color:#333333;}
+		.tg .tg-g901{color:#333333;text-align:center;font-weight:bold;}
+		.tg .tg-bcg{background-color:#FBBE8F;text-align:center;font-weight:bold;}
+		.tg
+		.tg-polio{background-color:#FFFF01;text-align:center;font-weight:bold;}
+		.tg
+		.tg-penta{background-color:#C3D79A;text-align:center;font-weight:bold;}
+		.tg
+		.tg-diteper{background-color:#C3D79A;text-align:center;font-weight:bold;}
+		.tg
+		.tg-hib{background-color:#C3D79A;text-align:center;font-weight:bold;}
+		.tg
+		.tg-ror{background-color:#B2A6CA;text-align:center;font-weight:bold;}
+		.tg
+		.tg-rr{background-color:#B2A6CA;text-align:center;font-weight:bold;}
+		.tg
+		.tg-varicelle{background-color:#FBBE8F;text-align:center;font-weight:bold;}
+		.tg
+		.tg-pneu{background-color:#E5B7B7;text-align:center;font-weight:bold;}
+		.tg
+		.tg-rota{background-color:#78923B;text-align:center;font-weight:bold;}
+		.tg
+		.tg-hpv{background-color:#FBBE8F;text-align:center;font-weight:bold;}
+		.tg .tg-g902{color:#333333;text-align:center;}
+		.tg .tg-g903{color:#333333;text-align:center;vertical-align:top;}
+		.tg
+		.tg-5bx4{font-weight:bold;background-color:$headerColor;color:#ffffff;text-align:center;vertical-align:top;}
+		hide.hidden {
+		display: none;
+		}
+
 	</style>
 
 	<script type="text/javascript">
@@ -272,6 +314,17 @@
 		group.find("input[type$='checkbox']").attr("checked",false);
 		group.find("input[type$='checkbox']").change();
 		}
+		
+		jQuery("#cocher_normal").change(function () {
+		    if (jQuery(this).is(':checked')) {
+		        group.find("#normal1").find("input[type$='checkbox']").attr("checked",true);
+				group.find("#normal1").find("input[type$='checkbox']").change();
+		    }
+		    else{
+		       	group.find("#normal1").find("input[type$='checkbox']").attr("checked",false);
+				group.find("#normal1").find("input[type$='checkbox']").change();
+		    }
+		});
 
 		//Debut checkbox examen Clinique
 		group.find("#normal1").find("input[type$='checkbox']").click(function(){
@@ -338,6 +391,86 @@
 
 	<script type="text/javascript">
 		beforeSubmit.push(function() {
+			
+			/*Validation for covid vaccine*/
+		
+		/*AstraZeneca*/
+		if (getValue('astrazeneca_lotnum1.value') == '') {
+		setValue('astrazeneca1.value', false);
+		} else {
+			setValue('astrazeneca1.value', true);
+		}
+		if(getValue('astrazeneca_lotnum2.value') == '') {
+		setValue('astrazeneca2.value', false);
+		} else {
+			setValue('astrazeneca2.value', true);
+		}
+		
+		/*Moderna*/
+		
+		if(getValue('moderna_lotnum1.value') == '') {
+		setValue('moderna1.value', false);
+		} else {
+			setValue('moderna1.value', true);
+		}
+		if(getValue('moderna_lotnum2.value') == '') {
+		setValue('moderna2.value', false);
+		} else {
+			setValue('moderna2.value', true);
+		}
+		
+		/*Pfizer-BioNTech*/
+		
+		if(getValue('fizer_lotnum1.value') == '') {
+		setValue('fizer1.value', false);
+		} else {
+			setValue('fizer1.value', true);
+		}
+		if(getValue('fizer_lotnum2.value') == '') {
+		setValue('fizer2.value', false);
+		} else {
+			setValue('fizer2.value', true);
+		}
+		
+		/*Gamaleya-Sputnick V (Russia)*/
+		
+		if(getValue('gamaleya_lotnum1.value') == '') {
+		setValue('gamaleya1.value', false);
+		} else {
+			setValue('gamaleya1.value', true);
+		}
+		if(getValue('gamaleya_lotnum2.value') == '') {
+		setValue('gamaleya2.value', false);
+		} else {
+			setValue('gamaleya2.value', true);
+		}
+		
+		/*Sinovac(China)Sinopharm(China)*/
+		if(getValue('sinovac_lotnum1.value') == '') {
+		setValue('sinovac1.value', false);
+		} else {
+			setValue('sinovac1.value', true);
+		}
+		if(getValue('sinovac_lotnum2.value') == '') {
+		setValue('sinovac2.value', false);
+		} else {
+			setValue('sinovac2.value', true);
+		}
+		
+		/*Johnson And Johnson (Janssen)*/
+		if(getValue('janssen_lotnum1.value') == '') {
+		setValue('janssen1.value', false);
+		} else {
+			setValue('janssen1.value', true);
+		}
+		if(getValue('janssen_lotnum2.value') == '') {
+		setValue('janssen2.value', false);
+		} else {
+			setValue('janssen2.value', true);
+		}
+		
+		/*End validation for covid vaccine*/
+			
 			var labelsList = "\n";
 			var valid = true;
 
@@ -455,7 +588,7 @@
 							<tr>
 								<td colspan="5">
 									Nom et Prénom du Prestataire :
-									<obs conceptId="CIEL:1473" />
+									<obs conceptId="157d5d16-b207-40c3-9447-9819c2863df5" />
 								</td>
 							</tr>
 						</table>
@@ -747,11 +880,569 @@
 				</div>
 			</div>
 			<div>
+				<a href="#read" class="lien">
+					<div class="toggle-button" data-target="#div16">VACCINATION</div>
+				</a>
+				<div id="div16" class="togglable" style="display: none;">
+					<section headerLabel="Vaccinations">
+						<table class="tg">
+							<tr>
+								<th class="tg-5bx4">Vaccin</th>
+								<th class="tg-5bx4">Dose 0</th>
+								<th class="tg-5bx4">Dose 1</th>
+								<th class="tg-5bx4">Dose 2</th>
+								<th class="tg-5bx4">Dose 3</th>
+								<th class="tg-5bx4">Rappel (Dose 4)</th>
+								<th class="tg-5bx4">Rappel (Dose 5)</th> <!-- <encounterLocation id="encounterLocation" default="SessionAttribute:emrContext.sessionLocationId" 
+									order="1,2,302"/> -->
+							</tr>
+							<!-- Hepatite B -->
+							<tr>
+								<td class="tg-bcg">Hépatite B</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="hepatitebfield{dose}">
+												<immunization showDate="true" id="hepatiteb{dose}"
+													vaccineConceptId="CIEL:782" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<tr>
+								<td class="tg-polio">Polio (OPV/IPV)</td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="poliofield{dose}">
+												<immunization showDate="true" id="polio{dose}"
+													vaccineConceptId="CIEL:783" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="0" />
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-diteper">DiTePer</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="diteperfield{dose}">
+												<immunization showDate="true" id="diteper{dose}"
+													vaccineConceptId="CIEL:781" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+			
+								</repeat>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-hib">HIB</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="hibfield{dose}">
+												<immunization showDate="true" id="hib{dose}"
+													vaccineConceptId="CIEL:5261" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-penta">Pentavalent</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="pentafield{dose}">
+												<!--<immunization showDate="true" id="penta{dose}" vaccineConceptId="CIEL:162339" 
+													sequenceNumber="{dose}" label="" /> -->
+												<immunization showDate="true" id="penta{dose}"
+													vaccineConceptId="CIEL:1423" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<tr>
+								<td class="tg-pneu">Pneumocoque</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="pneufield{dose}">
+												<immunization showDate="true" id="pneu{dose}"
+													vaccineConceptId="CIEL:82215" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<tr>
+								<td class="tg-rota">Rotavirus</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="rotafield{dose}">
+												<!--<immunization showDate="true" id="rota{dose}" vaccineConceptId="CIEL:159698" 
+													sequenceNumber="{dose}" label="" /> -->
+												<immunization showDate="true" id="rota{dose}"
+													vaccineConceptId="CIEL:83531" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-ror">ROR</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="rorfield{dose}">
+												<immunization showDate="true" id="ror{dose}"
+													vaccineConceptId="CIEL:159701" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-rr">RR</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="rrfield{dose}">
+												<immunization showDate="true" id="rr{dose}"
+													vaccineConceptId="CIEL:162586" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<tr>
+								<td class="tg-rota">DT</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="dtfield{dose}">
+												<immunization showDate="true" id="dt{dose}"
+													vaccineConceptId="CIEL:17" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<tr>
+								<td class="tg-varicelle">Varicelle</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="varicellefield{dose}">
+												<immunization showDate="true" id="varicelle{dose}"
+													vaccineConceptId="CIEL:73193" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-bcg">Typhimvi</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="typhimvifield{dose}">
+												<immunization showDate="true" id="typhimvi{dose}"
+													vaccineConceptId="CIEL:86208" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<tr>
+								<td class="tg-bcg">Meningo AC</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="meningofield{dose}">
+												<immunization showDate="true" id="meningo{dose}"
+													vaccineConceptId="CIEL:105030" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-bcg">Hépatite A</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="hepatiteafield{dose}">
+												<immunization showDate="true" id="hepatitea{dose}"
+													vaccineConceptId="CIEL:77424" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-bcg">Cholera</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="cholerafield{dose}">
+												<immunization showDate="true" id="cholera{dose}"
+													vaccineConceptId="CIEL:73354" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+			
+							<tr>
+								<td class="tg-bcg">BCG</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="bcgfield{dose}">
+												<immunization showDate="true" id="bcg{dose}"
+													vaccineConceptId="CIEL:886" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+							<includeIf velocityTest="($patient.gender == 'F')">
+								<tr>
+									<td class="tg-hpv">HPV</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="hpvfield{dose}">
+													<immunization showDate="true" id="hpv{dose}"
+														vaccineConceptId="CIEL:159708" sequenceNumber="{dose}" label="" />
+												</div>
+											</td>
+										</template>
+										<render dose="1" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+									<td class="tg-ng6d"></td>
+								</tr>
+							</includeIf>
+							<tr>
+								<td class="tg-g901">Diphtérie/Tétanos</td>
+								<td class="tg-ng6d"></td>
+								<repeat>
+									<template>
+										<td class="tg-g902">
+											<div id="diphtetanosfield{dose}">
+												<immunization showDate="true" id="diphtetanos{dose}"
+													vaccineConceptId="CIEL:104528" sequenceNumber="{dose}" label="" />
+											</div>
+										</td>
+									</template>
+									<render dose="1" />
+									<render dose="2" />
+								</repeat>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+								<td class="tg-ng6d"></td>
+							</tr>
+						</table>
+						<br/>
+						Vaccin Covid19<br/>
+						<!--<fieldset>
+							<legend>Vaccin Covid19</legend>-->
+							<table class="tg">
+								<tr>
+									<th class="tg-5bx4">Vaccin</th>
+									<th class="tg-5bx4">Dose 0</th>
+									<th class="tg-5bx4">Dose 1 / Lot</th>
+									<th class="tg-5bx4">Dose 2 / Lot</th>
+									<th class="tg-5bx4">Dose 3 / Lot</th>
+									<th class="tg-5bx4">Rappel (Dose 4)</th>
+									<th class="tg-5bx4">Rappel (Dose 5)</th> 
+								</tr>
+								<tr>
+									<td class="tg-penta">Oxford AstraZeneca</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="astrafield{dose}">
+												<immunization showDate="true" id="astra{dose}"
+													vaccineConceptId="166156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+															<obs conceptId="CIEL:984" answerConceptId="166156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+																id="astrazeneca{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="astrazeneca_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template> 
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-pneu">Moderna</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="moderfield{dose}">
+													<immunization showDate="true" id="moder{dose}"
+													vaccineConceptId="166154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="moderna{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="moderna_lotnum{dose}" />
+														
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-rota">Pfizer-BioNTech</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="pfizerfield{dose}">
+													<immunization showDate="true" id="pfizer{dose}"
+													vaccineConceptId="166155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="fizer{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="fizer_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-penta">Gamaleya-Sputnick V (Russia)</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="gamafield{dose}">
+												<immunization showDate="true" id="gama{dose}"
+													vaccineConceptId="166157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="gamaleya{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="gamaleya_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+								</tr>
+								<tr>
+									<td class="tg-pneu">Sinovac(China)<br/>Sinopharm(China)</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="sinovfield{dose}">
+												<immunization showDate="true" id="sinov{dose}"
+													vaccineConceptId="166249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="sinovac{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="sinovac_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+								</tr>
+								
+								<tr>
+									<td class="tg-rota">Johnson and Johnson (Janssen)</td>
+									<td class="tg-ng6d"></td>
+									<repeat>
+										<template>
+											<td class="tg-g902">
+												<div id="janssfield{dose}">
+												<immunization showDate="true" id="janss{dose}"
+													vaccineConceptId="166355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sequenceNumber="{dose}" label="" />
+													<obsgroup groupingConceptId="{concept_group}">
+														<span class="vaccine_span" style="display: none">
+														<obs conceptId="CIEL:984" answerConceptId="166355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+															id="janssen{dose}" answerLabel="" />
+														</span>
+														<obs conceptId="CIEL:1420" id="janssen_lotnum{dose}" />
+													</obsgroup>
+												</div>
+											</td>
+										</template>
+										<render dose="1" concept_group="7f36d8b8-1e87-4f3e-af49-6d4bb584d2f1" />
+										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
+										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
+										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+									</repeat>
+									<td class="tg-ng6d"></td>
+									
+								</tr>
+								
+							</table>
+					</section>
+					
+				</div>
+			</div>
+			
+			<div>
 				<a href="#read">
 					<div href="#read" class="toggle-button" data-target="#div6">EXAMEN
 						PHYSIQUE</div>
 				</a>
 				<div id="div6" class="togglable" style="display: none;">
+				<input type="checkbox" id="cocher_normal" name="scales" />Sélectionner tout <br/>
 					<fieldset>
 						<table>
 							<tr>
@@ -1521,6 +2212,94 @@
 												</obsgroup>
 											</td>
 										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="7aef3e60-1360-433f-87c5-f0d4ef750dd9">
+													<span class="titre" ch-target="#cacher93" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id93"
+															answerConceptId="1b4d09df-4f9f-44ff-9e7b-c1eba6514289" answerLabel="ESAVI" />
+													</span>
+													<br />
+													<span id="cacher93" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="5be79a57-0fff-41dd-96bf-6e25d999f92a">
+													<span class="titre" ch-target="#cacher94" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id94"
+															answerConceptId="87275706-5e87-4562-8cdc-b9d1e1649f83" answerLabel="Microcéphalie congénitale" />
+													</span>
+													<br />
+													<span id="cacher94" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="03bd2468-3496-4c11-8453-68b5b97f5b13">
+													<span class="titre" ch-target="#cacher96" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id96"
+															answerConceptId="CIEL:139233" answerLabel="Syndrome de Guillain barre" />
+													</span>
+													<br />
+													<span id="cacher96" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="416c0cc1-b11a-40a1-902f-7aa125a9beae">
+													<span class="titre" ch-target="#cacher95" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id95"
+															answerConceptId="CIEL:134612" answerLabel="Décès maternel" showCommentField="true" commentFieldLabel=", Précisez" />
+													</span>
+													<br />
+													<span id="cacher95" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
 										<tr>
 											<b>Maladies infectieuses</b>
 										</tr>
@@ -2262,6 +3041,139 @@
 												</obsgroup>
 											</td>
 										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="b4bc3cee-4c2e-4456-8983-e68f1e191bf6">
+													<span class="titre" ch-target="#cacher90" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id90"
+															answerConceptId="CIEL:155762" answerLabel="Covid-19" />
+													</span>
+													<br />
+													<span id="cacher90" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="72084b1b-a66f-4474-85a5-c2cf7307e66d">
+													<span class="titre" ch-target="#cacher100" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id100"
+															answerConceptId="CIEL:155762" answerLabel="Paralysie flasque aiguë(PFA)" />
+													</span>
+													<br />
+													<span id="cacher100" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="0002910d-5f7e-4512-9e12-ddba64e660e4">
+													<span class="titre" ch-target="#cacher101" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id101"
+															answerConceptId="CIEL:114120" answerLabel="Peste" />
+													</span>
+													<br />
+													<span id="cacher101" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="736a5097-6947-41c8-adf4-4645f456f85d">
+													<span class="titre" ch-target="#cacher102" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id102"
+															answerConceptId="CIEL:124954" answerLabel="Tétanos néonatal(TNN)" />
+													</span>
+													<br />
+													<span id="cacher102" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="de3707bd-b503-411a-b94f-5a9d1803953e">
+													<span class="titre" ch-target="#cacher110" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id110"
+															answerConceptId="50d568a4-2e65-420c-8d9c-8b63f146e2c5" answerLabel="Toxi-infection alimentaire collective(TIAC)" />
+													</span>
+													<br />
+													<span id="cacher110" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="a557220d-7205-470d-92df-7461cbbf96c5">
+													<span class="titre" ch-target="#cacher103" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id103"
+															answerConceptId="CIEL:143672" answerLabel="Syphilis congénitale, précisez:"
+															showCommentField="true" commentFieldLabel="" />
+													</span>
+													<br />
+													<span id="cacher103" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+													<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+													</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
 										<tr>
 											<td>
 												<b>Psychiatrie</b>
@@ -2509,6 +3421,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 1</b><br/>
 												<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
 													<span class="titre" ch-target="#cacher58" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id58"
@@ -2532,6 +3445,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 2</b><br/>
 												<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
 													<span class="titre" ch-target="#cacher59" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id59"
@@ -2555,6 +3469,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 3</b><br/>
 												<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
 													<span class="titre" ch-target="#cacher60" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id60"
@@ -2578,6 +3493,7 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<b>Autre diagnostic 4</b><br/>
 												<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
 													<span class="titre" ch-target="#cacher61" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id61"
@@ -2598,8 +3514,22 @@
 													</span>
 												</obsgroup>
 											</td>
-										</tr>
+										</tr> 
 									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<section>
+							    		<div id="data-collection">
+									        <encounterDiagnoses required="false" selectedDiagnosesTarget="#encounter-diagnoses-target"/>
+								
+									    </div>
+									
+									    <div id="encounter-diagnoses-target">
+									    </div>
+							    		
+							    	</section>
 								</td>
 							</tr>
 							<tr>

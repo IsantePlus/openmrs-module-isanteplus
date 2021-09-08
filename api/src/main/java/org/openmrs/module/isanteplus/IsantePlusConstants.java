@@ -32,7 +32,7 @@ public class IsantePlusConstants {
 	 * Add a name whenever a new iSante form file is added or one existing is
 	 * renamed
 	 */
-	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdM.xml,Ordpd.xml,ArretVIH.xml,PVisitAdult.xml,PVisitPed.xml,ConsPed.xml,PCons.xml,PConsPed.xml,Cons.xml,Vacc.xml,VisitSuivi.xml,VisitSuiviPed.xml,Imagerie.xml,RegistrationSocial.xml,RegistrationPoa.xml,RegistrationEmerContact.xml,RegistrationDiscContact.xml,HomeVisit.xml";
+	private static String ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS = "Adh.xml,Lab.xml,OBGYN.xml,FOBGYN.xml,Tacc.xml,PsyA.xml,PsyP.xml,OrdM.xml,Ordpd.xml,ArretVIH.xml,PVisitAdult.xml,PVisitPed.xml,ConsPed.xml,PCons.xml,PConsPed.xml,Cons.xml,Vacc.xml,VisitSuivi.xml,VisitSuiviPed.xml,Imagerie.xml,RegistrationSocial.xml,RegistrationPoa.xml,RegistrationEmerContact.xml,RegistrationDiscContact.xml,HomeVisit.xml,RegistrationPlaceOfBirth.xml,EvSocialPed.xml";
 
 	public static String[] ISANTEPLUS_FORMFILE_NAMES = ISANTEPLUS_FORMFILE_NAMES_SEPARATEDBYCOMMAS.split(",");
 
@@ -74,4 +74,13 @@ public class IsantePlusConstants {
 	
 	public static final String PATIENT_IDENTIFIER_TYPE_UUID_CODE_PC = "b7a154fd-0097-4071-ac09-af11ee7e0310";
 
+	public static final String IMMUNIZATION_FORM_ENCOUNTERTYPE_UUID = "a86ad9bb-d596-413c-bd4e-30f6fea5057d";
+	
+	public static final Integer IMMUNIZATION_GROUP_QUESTION_CONCEPT = 1421;
+	
+	public static final Integer IMMUNIZATION_QUESTION_CONCEPT = 984;
+	
+	public static final Integer IMMUNIZATION_NUMBER_QUESTION_CONCEPT = 1418;
+	
+	public static final Integer IMMUNIZATION_DATE_QUESTION_CONCEPT = 1410;
 }
