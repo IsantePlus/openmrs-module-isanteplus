@@ -49,13 +49,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<emrapiVersion>1.21.0</emrapiVersion>
-
-		<!-- <coreappsVersion>1.19.3</coreappsVersion>
-		  <coreappsVersion>1.19.0-SNAPSHOT</coreappsVersion>
-		  <registrationAppVersion>2.0.0</registrationAppVersion> 
-		<registrationAppVersion>1.10.0-SNAPSHOT</registrationAppVersion>-->
-
-		<coreappsVersion>1.20.0-SNAPSHOT</coreappsVersion>
+		<coreappsVersion>1.20.1-SNAPSHOT</coreappsVersion>
 		<registrationAppVersion>2.2.0-SNAPSHOT</registrationAppVersion>
 		<appuiVersion>1.8.0</appuiVersion>
 		<appframeworkVersion>2.10.0</appframeworkVersion>
@@ -68,14 +62,12 @@
 		<referenceapplicationVersion>2.6.0</referenceapplicationVersion>
 		<haiticoreVersion>1.0.0-SNAPSHOT</haiticoreVersion>
 		<xds-senderVersion>2.2.0-SNAPSHOT</xds-senderVersion>
-		<!--  <xds-senderVersion>1.0.0</xds-senderVersion> -->
 		<!-- Required to pass tests -->
 		<reportingVersion>1.12.0</reportingVersion>
 		<calculationVersion>1.2</calculationVersion>
 		<serializationxstreamVersion>0.2.12</serializationxstreamVersion>
 		<providermanagementVersion>2.5.0</providermanagementVersion>
 		<idgenVersion>4.4.1</idgenVersion>
-		<!--  <allergyapiVersion>1.4</allergyapiVersion> -->
 		<allergyuiVersion>1.7.0</allergyuiVersion>
 
 	</properties>
