@@ -9,7 +9,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+  release:
+    types: [ created ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -47,6 +48,17 @@ jobs:
                 "username": "${{ secrets.RELEASE_USERNAME }}",
                 "password": "${{ secrets.RELEASE_TOKEN }}"
             }]
+          properties: |
+            [
+              { "maven.wagon.http.ssl.insecure": "true" },
+              { "maven.wagon.http.ssl.allowall": "true" },
+              { "maven.wagon.http.ssl.ignore.validity.dates": "true"}
+            ]
           githubServer: false
       - name: Build with Maven
-        run: mvn -P 'github-packages' -B install
+        run: mvn -P 'github-packages' install
+      - name: Publish package
+        run: mvn -P github-packages -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dcpd.skip=true -B deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        if: github.event_name == 'release' && github.event.action == 'created'
