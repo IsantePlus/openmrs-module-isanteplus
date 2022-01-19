@@ -12,3 +12,5 @@ api/bin/pom.xml
 
 # Mac OSX
 .DS_Store
+
+.flattened-pom.xml
