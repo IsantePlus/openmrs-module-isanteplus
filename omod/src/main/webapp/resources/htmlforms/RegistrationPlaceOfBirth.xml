@@ -87,7 +87,7 @@
 							<obs class="level" conceptId="CIEL:1354" id="placeOfBirth-cityVillage"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 						</div>
-						<div>
+						<!--  <div>
 							<h3>
 								<uimessage code="haiticore.address.neighborhoodCell" />
 							</h3>
@@ -100,7 +100,7 @@
 							</h3>
 							<obs class="level" conceptId="CIEL:165195" id="placeOfBirth-address1"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
-						</div>
+						</div>-->
 						<div>
 							<h3>
 								<uimessage code="haiticore.address.address2" />
@@ -123,12 +123,12 @@
 							<obs class="level" conceptId="CIEL:162725" id="placeOfBirth-address2"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							<br />
-							<obs class="level" conceptId="CIEL:165195" id="placeOfBirth-address1"
+							<!-- <obs class="level" conceptId="CIEL:165195" id="placeOfBirth-address1"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							<br />
 							<obs class="level" conceptId="CIEL:165196" id="placeOfBirth-address3"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
-							,
+							,-->
 							<obs class="level" conceptId="CIEL:1354" id="placeOfBirth-cityVillage"
 								showUnits="false" unitsCssClass="append-to-value" size="20" />
 							<br />

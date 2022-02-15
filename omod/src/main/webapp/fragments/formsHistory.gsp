@@ -76,7 +76,7 @@ ${ ui.includeFragment("isanteplus", "isantePlusForms") }
 					<a href="/${appName}/htmlformentryui/htmlform/editHtmlFormWithStandardUi.page?patientId=${ ui.format(it.encounter.patient.uuid) }&encounterId=${ ui.format(it.encounter.uuid) }">${ ui.format(it.encounter.form.name) }</a>
 					</td>
 					<td>${ ui.format(it.formStatus) }</td>
-					<td>${ ui.format(it.provider) }</td>
+					<td>${ ui.format(it.enteredBy) }</td>
 					<td>${ ui.format(it.encounter.dateCreated) }</td>
 					<td>${ ui.format(it.dateChanged) }</td>
 					<td>${ ui.format(it.enteredBy) }</td>

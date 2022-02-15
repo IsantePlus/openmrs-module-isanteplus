@@ -627,16 +627,16 @@
 	<section headerLabel="PLAN DE SUIVI">
 		<table>
 			<tr><td>Prochaine visite médicale à la établissement recommandée dans</td>
-			<td><obs conceptId="7f142c0a-5f24-472b-955d-f839e36f5e24" /></td></tr>
+			<td><obs conceptId="7f142c0a-5f24-472b-955d-f839e36f5e24" allowFutureDates="true" /></td></tr>
 			
 			<tr><td>Date de la prochaine visite à la établissement</td>
-			<td><obs conceptId="CIEL:5096" /></td></tr>		
+			<td><obs conceptId="CIEL:5096" allowFutureDates="true" /></td></tr>		
 			
 			<tr><td>Prochaine visite à domicile recommandée dans</td>
 			<td><obs conceptId="4abbc619-d0ba-4233-89aa-d94647327b4c" /></td></tr>		
 			
 			<tr><td>Date de la prochaine visite à domicile</td>
-			<td><obs conceptId="545a2c88-2f37-4228-97ef-3895b480062d" /></td></tr>	
+			<td><obs conceptId="545a2c88-2f37-4228-97ef-3895b480062d" allowFutureDates="true" /></td></tr>	
 			
 		</table>
 	</section>

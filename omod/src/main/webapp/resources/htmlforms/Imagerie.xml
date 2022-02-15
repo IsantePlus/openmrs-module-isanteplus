@@ -215,15 +215,229 @@
 		</div>
 		<br />
 		<br />
-		<div width="100%" style="border-top:solid 1px">
+			<div width="100%" style="border-top:solid 1px">
 			<table>
-				<tr><td>Crachat BARR :</td><td><obs conceptId="CIEL:1271" answerConceptId="CIEL:307" answerLabel="Analyses demandées"/></td></tr>
-				<tr><td>Résultats :</td><td><obs conceptId="CIEL:307" answerConceptIds="CIEL:664,CIEL:703"
-				answerLabels="Négatif,Positif" showDate="true" dateLabel="" showCommentField="true" commentFieldLabel="Commentaire" style="radio"/></td></tr>
+				<tr><td>Échocardiographie :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:159567" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="CIEL:159567" answerConceptIds="CIEL:1115,CIEL:1116,CIEL:115735,CIEL:124124,CIEL:159569,CIEL:134082,CIEL:121532,CIEL:148546,CIEL:159568,CIEL:159570,CIEL:127426,CIEL:113483,CIEL:159572,CIEL:124125,CIEL:163141,CIEL:5622"
+				answerLabels="Normal,Anormal,Insuffisance de la valvule mitrale,Tricuspid Valve Stenosis,Fonction du ventricule gauche un peu faible,
+				Sténose Mitrale,Sténose de la valvule aortique,Insuffisance de la valvule aortique,Fonction du ventricule gauche normale,Fonction du ventricule gauche très faible,Rheumatic Pulmonary Valve Stenosis,Pulmonary Valve Insufficiency,Pas de sténose mitrale,Insuffisance de la valvule tricuspide,Rythme sinusal normal,Autre" showDate="true" dateLabel="" showCommentField="true"
+				commentFieldLabel=", Préciser" /></td></tr>
 			</table>
 		</div>
-		<br />
-		<br />
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Échographie abdominale :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:845" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="CIEL:845" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Échographie pelvienne :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="77b34bde-af45-498b-bb8a-0699de06854a" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="77b34bde-af45-498b-bb8a-0699de06854a" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Échographie pelvienne, transvaginale :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="1d4fbce8-63eb-44f6-b2f4-d938bf8ddd84" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="1d4fbce8-63eb-44f6-b2f4-d938bf8ddd84" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Échographie de la tête et du cou :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="986c2d80-1673-4c4e-b7d3-b884bc25273f" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="986c2d80-1673-4c4e-b7d3-b884bc25273f" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Échographie du scrotum et des testicules  :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="d1102ddc-b4de-43e7-903f-e65839113720" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="d1102ddc-b4de-43e7-903f-e65839113720" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Échographie transrectale :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="cedbe0a5-bd20-4a0c-980c-14561d798e83" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="cedbe0a5-bd20-4a0c-980c-14561d798e83" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Autre Échocardiographie :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="ea4e8843-d835-41b4-a545-633a6240134f" answerLabel="Analyses demandées" showCommentField="true" commentFieldLabel=", présisez" /></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="ea4e8843-d835-41b4-a545-633a6240134f" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<h3><b>Scanner (CT scan)</b></h3><br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Scanner thoracique :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="06160098-ee61-4a4b-b31d-8e09e4eb4075" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="06160098-ee61-4a4b-b31d-8e09e4eb4075" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Scanner pelvien :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="b2522714-b332-41d2-a3d3-29c6a738506b" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="b2522714-b332-41d2-a3d3-29c6a738506b" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Scanner Abdominal sans contraste :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="cafd1027-8794-4781-abca-46e6f30a2671" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="cafd1027-8794-4781-abca-46e6f30a2671" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Scanner Abdominal avec contraste  :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="35536668-1c65-46d7-abd5-8bbd5a6e38d0" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="35536668-1c65-46d7-abd5-8bbd5a6e38d0" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Scanner de la tête  :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:846" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="CIEL:846" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Autre scanner :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="5bf661fc-62b5-4d02-93b4-1a48daecc82b" answerLabel="Analyses demandées" showCommentField="true" commentFieldLabel=", présisez" /></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="5bf661fc-62b5-4d02-93b4-1a48daecc82b" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Mammographie :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:163591" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="CIEL:163591" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<h3><b>IRM (Imagerie par résonnance magnétique nucléaire)</b></h3><br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>IRM cérébrale, fonctionnelle  :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="251dbbcb-1d10-4b63-ba25-d503ce221ac8" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="251dbbcb-1d10-4b63-ba25-d503ce221ac8" answerConceptIds="CIEL:161420,CIEL:157573"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>IRM abdominale avec contraste :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="c49f8892-101e-4f72-a568-a5deec3bcf94" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="c49f8892-101e-4f72-a568-a5deec3bcf94" answerConceptIds="CIEL:161420,CIEL:157573"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>IRM abdominale sans contraste  :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="b066b1c6-0479-4f5b-817b-d6f89dbbea3a" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="b066b1c6-0479-4f5b-817b-d6f89dbbea3a" answerConceptIds="CIEL:161420,CIEL:157573"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Autre IRM :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="8c80ecb4-4315-4194-8cb3-450616410835" answerLabel="Analyses demandées" showCommentField="true" commentFieldLabel=", présisez" /></td></tr>
+				<tr><td>Résultats :</td><td><obs conceptId="8c80ecb4-4315-4194-8cb3-450616410835" answerConceptIds="CIEL:1115,CIEL:1116"
+				answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" /></td></tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Electroencéphalogramme (EEG) :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:160302" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td>
+					<td><obs conceptId="CIEL:160302" answerConceptIds="CIEL:161405,CIEL:141461,CIEL:161406,CIEL:161407,CIEL:161408,CIEL:161409,CIEL:161410,CIEL:161411,CIEL:161412,CIEL:161413,CIEL:161414,CIEL:161415,CIEL:5622"
+						answerLabels="EEG normal,EEG anormal,Paroxysme focal gauche,Paroxysme focal droit,Paroxysme focal bilatéral,Paroxysme généralisé,Onde de pointe 3 Hz EEG,Ondes pointues EEG,Paroxysme temporal,Paroxysme frontal,Paroxysme occipital,Paroxysme pariétal,Autre" showDate="true" dateLabel="Date" showCommentField="true"
+				commentFieldLabel=", Préciser" /><br/>
+						Electroencéphalogramme trouvailles : <obs conceptId="CIEL:160303" rows="3" cols="50" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
+		<div width="100%" style="border-top:solid 1px">
+			<table>
+				<tr><td>Electrocardiogramme (12 dérivations) :</td>
+				<td><obs conceptId="CIEL:1271" answerConceptId="CIEL:159565" answerLabel="Analyses demandées"/></td></tr>
+				<tr><td>Résultats :</td>
+					<td><obs conceptId="CIEL:159565" answerConceptIds="CIEL:1115,CIEL:1116"
+						answerLabels="Normal,Anormal" showDate="true" dateLabel="Date" showCommentField="true"
+				commentFieldLabel=", Préciser" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<br/>
+		<br/>
 		<div>
 			Description:
 			<br />

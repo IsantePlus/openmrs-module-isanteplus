@@ -141,5 +141,4 @@ public class ConfigurableGlobalProperties {
 	public static final String XDSSENDER_REPOSITORY_PASSWORD = "xdssender.xdsrepository.password";
 
 	public static final String XDSSENDER_REPOSITORY_PASSWORD_VALUE = "1234";
-
 }

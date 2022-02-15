@@ -164,7 +164,7 @@
 									id="powerOfAttorneyContactAddress-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" required="true" />
 							</div>
-							<div>
+							<!--  <div>
 								<h3>
 									<uimessage code="haiticore.address.neighborhoodCell" />
 								</h3>
@@ -180,7 +180,7 @@
 								<obs class="level" conceptId="CIEL:165195"
 									id="powerOfAttorneyContactAddress-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-							</div>
+							</div>-->
 							<div>
 								<h3>
 									<uimessage code="haiticore.address.address2" />
@@ -205,14 +205,14 @@
 									id="powerOfAttorneyContactAddress-address2" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="CIEL:165195"
+								<!-- <obs class="level" conceptId="CIEL:165195"
 									id="powerOfAttorneyContactAddress-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
 								<obs class="level" conceptId="CIEL:165196"
 									id="powerOfAttorneyContactAddress-address3" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-								,
+								,-->
 								<obs class="level" conceptId="CIEL:1354"
 									id="powerOfAttorneyContactAddress-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />

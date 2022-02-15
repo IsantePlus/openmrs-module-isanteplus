@@ -39,4 +39,5 @@ public class IsantePlusGlobalProps {
 
 	public boolean ENABLE_ISANTEPLUS_UI = "true".equals(
 			Context.getAdministrationService().getGlobalProperty(ConfigurableGlobalProperties.ENABLE_ISANTEPLUS_UI));
+	
 }

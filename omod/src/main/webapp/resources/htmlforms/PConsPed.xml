@@ -1296,9 +1296,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-polio">Polio (OPV/IPV)</td>
@@ -1316,8 +1316,8 @@
 									<render dose="2" />
 									<render dose="3" />
 									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1336,9 +1336,9 @@
 									<render dose="2" />
 									<render dose="3" />
 									<render dose="4" />
+									<render dose="5" />
 			
 								</repeat>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1357,8 +1357,8 @@
 									<render dose="2" />
 									<render dose="3" />
 									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1378,9 +1378,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-pneu">Pneumocoque</td>
@@ -1397,9 +1397,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-rota">Rotavirus</td>
@@ -1417,10 +1417,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1437,10 +1437,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1456,11 +1456,11 @@
 										</td>
 									</template>
 									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-rota">DT</td>
@@ -1476,10 +1476,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-varicelle">Varicelle</td>
@@ -1494,11 +1494,11 @@
 										</td>
 									</template>
 									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1515,13 +1515,13 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
-								<td class="tg-bcg">Meningo AC</td>
+								<td class="tg-bcg">Meningo ACY</td>
 								<td class="tg-ng6d"></td>
 								<repeat>
 									<template>
@@ -1534,10 +1534,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1554,10 +1554,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1575,9 +1575,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -1613,32 +1613,14 @@
 											</td>
 										</template>
 										<render dose="1" />
+										<render dose="2" />
+										<render dose="3" />
+										<render dose="4" />
+										<render dose="5" />
 									</repeat>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
 								</tr>
 							</includeIf>
-							<tr>
-								<td class="tg-g901">Diphtérie/Tétanos</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="diphtetanosfield{dose}">
-												<immunization showDate="true" id="diphtetanos{dose}"
-													vaccineConceptId="CIEL:104528" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
+							
 						</table>
 						<br/>
 						Vaccin Covid19<br/>
@@ -1677,8 +1659,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-pneu">Moderna</td>
@@ -1704,8 +1686,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-rota">Pfizer-BioNTech</td>
@@ -1730,8 +1712,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-penta">Gamaleya-Sputnick V (Russia)</td>
@@ -1756,8 +1738,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-pneu">Sinovac(China)<br/>Sinopharm(China)</td>
@@ -1782,8 +1764,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								
 								<tr>
@@ -1809,8 +1791,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 									
 								</tr>
 								
@@ -2255,8 +2237,8 @@
 					<div class="toggle-button" data-target="#div8">EXAMEN PHYSIQUE</div>
 				</a>
 				<div id="div8" class="togglable" style="display: none;">
-				<input type="checkbox" id="cocher_normal" class="checkAll" name="scales" />Sélectionner tout <br/>
-				
+				<input type="checkbox" id="cocher_normal" class="checkAll" name="scales" />Sélectionner tout &#160;&#160;&#160;
+				<obs conceptId="CIEL:162737" answerConceptId="CIEL:1118" answerLabel="Non Effectué" /><br/>
 					<fieldset>
 						<table>
 							<tr>
