@@ -6,10 +6,11 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
-
+    branches: [ main ]
+  release:
+    types: [ created ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -29,6 +30,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8.0.232
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4
+        with:
+          maven-version: 3.6.3
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
@@ -43,6 +48,17 @@ jobs:
                 "username": "${{ secrets.RELEASE_USERNAME }}",
                 "password": "${{ secrets.RELEASE_TOKEN }}"
             }]
+          properties: |
+            [
+              { "maven.wagon.http.ssl.insecure": "true" },
+              { "maven.wagon.http.ssl.allowall": "true" },
+              { "maven.wagon.http.ssl.ignore.validity.dates": "true"}
+            ]
           githubServer: false
       - name: Build with Maven
-        run: mvn -P 'github-packages' -B install
+        run: mvn -P 'github-packages' install
+      - name: Publish package
+        run: mvn -P github-packages -DskipTests -Dfindbugs.skip=true -Dpmd.skip=true -Dcpd.skip=true -B deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        if: github.event_name == 'release' && github.event.action == 'created'

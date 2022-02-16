@@ -927,7 +927,6 @@
 											<render dose="5" />
 										</repeat>
 									</tr>
-					
 									<tr>
 										<td class="tg-bcg">Typhimvi</td>
 										<td class="tg-ng6d"></td>
@@ -1047,7 +1046,6 @@
 											</repeat>
 										</tr>
 									</includeIf>
-									
 								</table>
 								<br/>
 						Vaccin Covid19<br/>
@@ -1655,6 +1653,7 @@
 				<div id="div5" class="togglable" style="display: none;">
 					<input type="checkbox" id="cocher_normal" name="scales" />Sélectionner tout &#160;&#160;&#160;
 				<obs conceptId="CIEL:162737" answerConceptId="CIEL:1118" answerLabel="Non Effectué" /><br/>
+
 					<fieldset>
 						<table>
 							<tr>

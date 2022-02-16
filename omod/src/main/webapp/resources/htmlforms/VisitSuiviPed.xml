@@ -1483,7 +1483,6 @@
 									<render dose="3" />
 									<render dose="4" />
 									<render dose="5" />
-			
 								</repeat>
 							</tr>
 			
@@ -1546,7 +1545,6 @@
 									<render dose="4" />
 									<render dose="5" />
 								</repeat>
-								
 							</tr>
 							<tr>
 								<td class="tg-rota">Rotavirus</td>
@@ -1646,7 +1644,6 @@
 									<render dose="4" />
 									<render dose="5" />
 								</repeat>
-							
 							</tr>
 			
 							<tr>
@@ -1940,7 +1937,6 @@
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
 										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									
 								</tr>
 								
 							</table>

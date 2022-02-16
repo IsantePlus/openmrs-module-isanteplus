@@ -1168,7 +1168,6 @@
 									<render dose="3" />
 									<render dose="4" />
 									<render dose="5" />
-			
 								</repeat>
 							</tr>
 			
@@ -1628,8 +1627,6 @@
 								
 							</table>
 					</section>
-				
-				
 					<section headerLabel="VACCINS"> <!-- A verifier -->
 						<table>
 							<tr>
@@ -2515,6 +2512,7 @@
 												<b>Autre</b><br/>
 												<obs conceptId="CIEL:159614" answerClasses="Diagnosis,Symptom/Finding"
 													style="autocomplete" />
+
 											</td>
 										</tr>
 									</table>
@@ -3311,6 +3309,70 @@
 										<td>Malaria, confirmé</td>
 									</tr>
 								</table>
+								</td>
+								<td width="45%" height="100%" style="padding-top:0px;">
+									<table width="100%" height="100%" class="tg">
+										<tr>
+											<th width="35%" class="tg-5cem">Actif (Date de début de la condition)</th>
+											<th width="35%" class="tg-5cem">Guéri (Date de début de la condition)</th>
+											<th width="30%" class="tg-5cem">Diagnostic</th>
+										</tr>
+										<tr bgcolor="#D8D8D8" class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:160155" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:160155" showDate="true" answerLabel=""/></span></td>
+											<td>Malaria, grave</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:118983" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:118983" showDate="true" answerLabel=""/></span></td>
+											<td>Neuropathie périphérique</td>
+										</tr>
+										<tr bgcolor="#D8D8D8" class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:112493" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:112493" showDate="true" answerLabel=""/></span></td>
+											<td>Syphilis</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:117295" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:117295" showDate="true" answerLabel=""/></span></td>
+											<td>Thrombopénie idiopathique</td>
+										</tr>
+										<tr bgcolor="#D8D8D8">
+										<td></td>
+										<td></td>
+										<td><b>Antécédents Psychiatriques</b></td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:119537" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:119537" showDate="true" answerLabel=""/></span></td>
+											<td>Anxiété/Dépression</td>
+										</tr>
+										<tr bgcolor="#D8D8D8" class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:113517" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:113517" showDate="true" answerLabel=""/></span></td>
+											<td>Psychoses</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:121131" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:121131" showDate="true" answerLabel=""/></span></td>
+											<td>Trouble affectif bipolaire</td>
+										</tr>
+										<tr bgcolor="#D8D8D8">
+										<td></td>
+										<td></td>
+										<td><b>Usage de substances toxiques</b></td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:159449" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:159449" showDate="true" answerLabel=""/></span></td>
+											<td>Alcool</td>
+										</tr>
+										<tr bgcolor="#D8D8D8" class="checkboxGroup">
+											<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:73650" showDate="true" answerLabel=""/></span></td>
+											<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:73650" showDate="true" answerLabel=""/></span></td>
+											<td>Cocaïne</td>
+										</tr>
+									</table>
 								</td>
 								<td width="45%" height="100%" style="padding-top:0px;">
 									<table width="100%" height="100%" class="tg">

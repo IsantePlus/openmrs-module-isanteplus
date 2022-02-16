@@ -1620,7 +1620,6 @@
 									</repeat>
 								</tr>
 							</includeIf>
-							
 						</table>
 						<br/>
 						Vaccin Covid19<br/>
@@ -1793,9 +1792,7 @@
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
 										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									
 								</tr>
-								
 							</table>
 					</section>
 					
