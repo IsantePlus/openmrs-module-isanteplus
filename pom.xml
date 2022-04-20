@@ -43,7 +43,7 @@
 	</modules>
 
 	<properties>
-		<revision>1.4.2</revision>
+		<revision>1.4.3-SNAPSHOT</revision>
 		<openMRSVersion>2.0.5</openMRSVersion>
 		<uiframeworkVersion>3.11.0</uiframeworkVersion>
 		<jsonVersion>20160212</jsonVersion>
