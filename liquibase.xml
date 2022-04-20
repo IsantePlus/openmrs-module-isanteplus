@@ -846,10 +846,10 @@
 		<comment>Add a new concept_reference_source, which is used by LNSP codes</comment>
 		<sql>
 			INSERT INTO concept_reference_source(name, description, hl7_code, creator, date_created, uuid)
-			VALUES ('LNSP Code', 'LNSP test code', 'LNSP Code', 1, CURRENT_TIMESTAMP, 'f124da75-9f50-4b25-be97-13c029e3a65b');
+			VALUES ('LNSP Code', 'LNSP test code', null, 1, CURRENT_TIMESTAMP, 'f124da75-9f50-4b25-be97-13c029e3a65b');
 
 			INSERT INTO concept_reference_source(name, description, hl7_code, creator, date_created, uuid)
-			VALUES ('LNSP Result Code', 'LNSP test code', 'LNSP Result Code', 1, CURRENT_TIMESTAMP, 'c19e926e-fc28-4d78-9b99-eb42032abf3c');
+			VALUES ('LNSP Result Code', 'LNSP test code', null, 1, CURRENT_TIMESTAMP, 'c19e926e-fc28-4d78-9b99-eb42032abf3c');
 		</sql>
 	</changeSet>
 
