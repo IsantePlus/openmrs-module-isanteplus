@@ -1139,7 +1139,7 @@
 			WHERE uuid = '69326ac4-2df6-4db8-b18d-5c2bf7cc05c8';
 
 			INSERT INTO concept_reference_term(concept_source_id, `code`, creator, date_created, retired, uuid)
-			SELECT c_source.concept_source_id, 'VLC3P', 1, CURRENT_TIMESTAMP, '0', '8a3aa9c9-e004-444e-b606-86eaa129a36d'
+			SELECT c_source.concept_source_id, 'VLV3P', 1, CURRENT_TIMESTAMP, '0', '8a3aa9c9-e004-444e-b606-86eaa129a36d'
 			FROM concept_reference_source c_source
 			WHERE c_source.uuid = 'f124da75-9f50-4b25-be97-13c029e3a65b';
 
@@ -1602,6 +1602,88 @@
 			<column name="date_created" value="2019-07-05 09:30:00" />
 			<column name="uuid" value="1dd1e63a-1543-4885-b807-e49c6d18cffd" />
 		</insert>
+	</changeSet>
+
+		<changeSet dbms="mysql" id="2022May03" author="Jean Daboul  Maxy"
+			   runInTransaction="true">
+		<preConditions onError="HALT" onFail="MARK_RAN">
+			<and>
+				<tableExists tableName="concept" />
+				<sqlCheck expectedResult="0">
+					select count(*) from concept where uuid='25e0fd77-8c96-4e1b-aef3-871e1d98e864'
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<comment>
+			Add a new concept, which represents a new question about additional LNSP Viral LOAD tests.
+			Additional add concepts which represent possible answers.
+		</comment>
+		<sql>
+
+
+			-- VIH-1 Charge Virale RNA PCR (CV-e) DBS
+			INSERT INTO concept (uuid, retired, datatype_id, class_id, creator, date_created)
+			SELECT '25e0fd77-8c96-4e1b-aef3-871e1d98e864', '0', c_datatype.concept_datatype_id, c_class.concept_class_id, '1', CURRENT_TIMESTAMP
+			FROM concept_datatype c_datatype INNER JOIN  concept_class c_class
+			WHERE c_datatype.hl7_abbreviation = 'CWE' AND c_class.uuid = '8d4907b2-c2cc-11de-8d13-0010c6dffd0f';
+
+			INSERT INTO concept_name (concept_id, name, locale, creator, date_created, voided, locale_preferred, uuid)
+			SELECT concept_id, 'VIH-1 Charge Virale RNA PCR (CV-e) DBS', 'en-GB', '1', CURRENT_TIMESTAMP, '0', '1', '746ba2aa-a39b-4e7c-89fa-442c39b9aaf4'
+			FROM concept
+			WHERE uuid = '25e0fd77-8c96-4e1b-aef3-871e1d98e864';
+
+			INSERT INTO concept_reference_term(concept_source_id, `code`, creator, date_created, retired, uuid)
+			SELECT c_source.concept_source_id, 'VLCVE', 1, CURRENT_TIMESTAMP, '0', '10666fff-7f9a-4fd7-a654-1354ca59f491'
+			FROM concept_reference_source c_source
+			WHERE c_source.uuid = 'f124da75-9f50-4b25-be97-13c029e3a65b';
+
+			INSERT INTO concept_reference_map (concept_id, concept_reference_term_id, concept_map_type_id, date_created, creator, uuid)
+			SELECT c.concept_id, LAST_INSERT_ID(), '2', NOW(), 1, 'b1c563d3-7574-4a0c-9972-317acb7a7264'
+			FROM concept c
+			WHERE c.uuid = '25e0fd77-8c96-4e1b-aef3-871e1d98e864';
+
+			INSERT INTO concept_reference_term(concept_source_id, `code`, creator, date_created, retired, uuid)
+			SELECT c_source.concept_source_id, 'LBCVE', 1, CURRENT_TIMESTAMP, '0', '472df6fe-5092-40ae-bedf-efa274fa075f'
+			FROM concept_reference_source c_source
+			WHERE c_source.uuid = 'c19e926e-fc28-4d78-9b99-eb42032abf3c';
+
+			INSERT INTO concept_reference_map (concept_id, concept_reference_term_id, concept_map_type_id, date_created, creator, uuid)
+			SELECT c.concept_id, LAST_INSERT_ID(), '2', NOW(), 1, 'adb92b03-d9df-4bf6-b9f2-04775cd44740'
+			FROM concept c
+			WHERE c.uuid = '25e0fd77-8c96-4e1b-aef3-871e1d98e864';
+
+            -- VIH-1 Charge Virale RNA PCR (CV-e) Plasma
+			INSERT INTO concept (uuid, retired, datatype_id, class_id, creator, date_created)
+			SELECT '5a44a731-9903-47f5-8220-dd6f23ff163b', '0', c_datatype.concept_datatype_id, c_class.concept_class_id, '1', CURRENT_TIMESTAMP
+			FROM concept_datatype c_datatype INNER JOIN  concept_class c_class
+			WHERE c_datatype.hl7_abbreviation = 'CWE' AND c_class.uuid = '8d4907b2-c2cc-11de-8d13-0010c6dffd0f';
+
+			INSERT INTO concept_name (concept_id, name, locale, creator, date_created, voided, locale_preferred, uuid)
+			SELECT concept_id, 'VIH-1 Charge Virale RNA PCR (CV-e) Plasma', 'en-GB', '1', CURRENT_TIMESTAMP, '0', '1', '6ed22512-3c2e-4819-aa1a-05ecb3f13765'
+			FROM concept
+			WHERE uuid = '5a44a731-9903-47f5-8220-dd6f23ff163b';
+
+			INSERT INTO concept_reference_term(concept_source_id, `code`, creator, date_created, retired, uuid)
+			SELECT c_source.concept_source_id, 'VLVEP', 1, CURRENT_TIMESTAMP, '0', '47464bf6-11ac-4eb7-9a72-9f2aa16a8f45'
+			FROM concept_reference_source c_source
+			WHERE c_source.uuid = 'f124da75-9f50-4b25-be97-13c029e3a65b';
+
+			INSERT INTO concept_reference_map (concept_id, concept_reference_term_id, concept_map_type_id, date_created, creator, uuid)
+			SELECT c.concept_id, LAST_INSERT_ID(), '2', NOW(), 1, '29e465c9-73e4-4225-b8c5-95ada96ef474'
+			FROM concept c
+			WHERE c.uuid = '5a44a731-9903-47f5-8220-dd6f23ff163b';
+
+			INSERT INTO concept_reference_term(concept_source_id, `code`, creator, date_created, retired, uuid)
+			SELECT c_source.concept_source_id, 'LCVEP', 1, CURRENT_TIMESTAMP, '0', '07268e51-9c5b-43d3-9bdc-b00c6e1043e9'
+			FROM concept_reference_source c_source
+			WHERE c_source.uuid = 'c19e926e-fc28-4d78-9b99-eb42032abf3c';
+
+			INSERT INTO concept_reference_map (concept_id, concept_reference_term_id, concept_map_type_id, date_created, creator, uuid)
+			SELECT c.concept_id, LAST_INSERT_ID(), '2', NOW(), 1, '16cdd606-dcc2-4765-be6c-62c7e40ae539'
+			FROM concept c
+			WHERE c.uuid = '5a44a731-9903-47f5-8220-dd6f23ff163b';
+
+		</sql>
 	</changeSet>
 	
 </databaseChangeLog>
