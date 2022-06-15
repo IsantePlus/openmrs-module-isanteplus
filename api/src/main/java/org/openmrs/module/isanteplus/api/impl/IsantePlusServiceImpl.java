@@ -1221,4 +1221,21 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 		return encounterUuid;
 	}
 	
+	@Override
+	public List<Obs> getAllDiagnosisByPatient(Patient patient) {
+		
+		List<Obs> listDiagnosis = new ArrayList<Obs>();
+		Integer diagnosisConceptId = IsantePlusConstants.DIAGNOSIS_CONCEPT_ID;
+		Concept diagnosis = Context.getConceptService().getConcept(diagnosisConceptId);
+
+		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), diagnosis)) {
+			if (obs != null) {
+				if(!obs.getValueCoded().getConceptId().equals(IsantePlusConstants.NO_DIAGNOSIS_CONCEPT_ID))
+				listDiagnosis.add(obs);	
+			}
+		}
+		return listDiagnosis;
+		
+	}
+	
 }
