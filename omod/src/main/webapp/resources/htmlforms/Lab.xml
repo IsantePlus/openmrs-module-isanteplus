@@ -3148,7 +3148,6 @@
 		<br/><br/>
 	</div>
 	<div id="sauvegarde">
-	    <postSubmissionAction class="org.openmrs.module.isanteplusfhir.api.action.LaboratoryFormAction"/> 
 		<center><submit submitClass="confirm right" submitCode="general.save"/><br/>
 		</center>
 	</div>
