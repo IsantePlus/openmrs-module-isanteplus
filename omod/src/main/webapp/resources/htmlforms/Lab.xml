@@ -908,10 +908,10 @@
 			<table>
 				<tr>
 					<td colspan="3">
-						<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+						<includeIf velocityTest="$fn.globalProperty('labonfhir.openElisUrl') != ''">
 							<obs id="destinationOfTestOrder" labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC,OpenELIS" style="dropdown" />
 						</includeIf>
-						<excludeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+						<excludeIf velocityTest="$fn.globalProperty('labonfhir.openElisUrl') != ''">
 							<obs id="destinationOfTestOrder" labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC" style="dropdown" />
 						</excludeIf>
 					</td>
