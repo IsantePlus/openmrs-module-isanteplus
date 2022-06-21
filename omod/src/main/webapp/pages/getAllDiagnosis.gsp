@@ -45,4 +45,15 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
     		</tr>
     	<% } %>
     </div>
+    </table>
+    <br/>
+    <table>
+    	<tr><th>${ ui.message("isanteplus.diagnoses.label") }</th><th>${ ui.message("isanteplus.allergy.date") }</th></tr>
+    	<% diagnosisByPatient.each { %>
+    		<tr>
+    			<td>${ui.format(it.valueCoded)}</td>
+	    		<td>${ui.format(it.obsDatetime)}</td>
+    		</tr>
+    	<% } %>
+    </table>
 </div>

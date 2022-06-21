@@ -83,4 +83,8 @@ public class IsantePlusConstants {
 	public static final Integer IMMUNIZATION_NUMBER_QUESTION_CONCEPT = 1418;
 	
 	public static final Integer IMMUNIZATION_DATE_QUESTION_CONCEPT = 1410;
+	
+	public static final Integer DIAGNOSIS_CONCEPT_ID = 1284;
+	
+	public static final Integer NO_DIAGNOSIS_CONCEPT_ID = 133010;
 }

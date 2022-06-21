@@ -4329,7 +4329,8 @@
 				</a>
 				<div id="div9" class="togglable" style="display: none;">
 					<section headerLabel="EXAMEN CLINIQUE">
-						<input type="checkbox" id="cocher_normal" name="scales" />Sélectionner tout <br/>
+						<input type="checkbox" id="cocher_normal" name="scales" />Sélectionner tout &#160;&#160;&#160;
+				<obs conceptId="CIEL:162737" answerConceptId="CIEL:1118" answerLabel="Non Effectué" /><br/>
 						<table>
 							<tr>
 								<td valign="TOP">
@@ -5106,6 +5107,10 @@
 														<obs conceptId="CIEL:1729" answerConceptId="CIEL:1065" />
 													</span>
 												</obsgroup>
+												<br/>
+												<b>Autre</b><br/>
+												<obs conceptId="CIEL:159614" answerClasses="Diagnosis,Symptom/Finding"
+													style="autocomplete" />
 											</td>
 										</tr>
 									</table>

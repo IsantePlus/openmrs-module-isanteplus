@@ -1399,10 +1399,12 @@
 						</tr>
 						<tr>
 							<td>
-								<span class="titre" ch-target="#span36"><obs conceptId="CIEL:1271" class="master" id="bebilirubine" answerConceptId="CIEL:655" answerLabel="Bilirubine totale"/></span><br/>
-								<span id="span36" class="togglable" style="display: none;">
-								<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:953"><obs conceptId="CIEL:655" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
-								</fieldset></span>
+								<obsgroup groupingConceptId="CIEL:953">
+									<span class="titre" ch-target="#span36"><obs conceptId="CIEL:1271" class="master" id="bebilirubine" answerConceptId="CIEL:655" answerLabel="Bilirubine totale"/></span><br/>
+									<span id="span36" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:655" showUnits="true" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									</fieldset></span>
+								</obsgroup>
 							</td>
 						</tr>
 						<tr>
@@ -2262,17 +2264,17 @@
 										</fieldset></span>
 									</td>
 								</tr>
-								
+								<!-- Adding other answers to this concept february first 2022 -->
 								<tr><td><span class="titre" ch-target="#bacteriesmm"><obs conceptId="CIEL:1271" class="master" id="microbacteries" answerConceptId="CIEL:160735" answerLabel="Bacteries"/><!-- A verifier --></span><br/>
 								<span id="bacteriesmm" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:160735" answerConceptIds="CIEL:703,CIEL:664" answerLabels="Positif,Négatif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+									<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:160735" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418" answerLabels="Négatif,1+,2+,3+,4+,5+,&gt;5+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 									</fieldset></span>
 									</td></tr>
 								<tr>
 									<td>
 										<span class="titre" ch-target="#cellulesepiturine"><obs conceptId="CIEL:1271" class="master" id="microcelepitheriale" answerConceptId="CIEL:163685" answerLabel="cellules epitheliales"/></span><br/>
 										<span id="cellulesepiturine" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163685" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:159416" answerLabels="Négatif,1+,2+,3+,Rarement" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163685" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418,CIEL:159416" answerLabels="Négatif,1+,2+,3+,4+,5+,&gt;5+,Rarement" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2280,7 +2282,7 @@
 									<td>
 										<span class="titre" ch-target="#span203"><obs conceptId="CIEL:1271" class="master" id="macrocetones" answerConceptId="CIEL:161442" answerLabel="Cetones"/></span><br/>
 										<span id="span203" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161442" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365" answerLabels="Négatif,1+,2+,3+,4+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:161446"><obs conceptId="CIEL:161442" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418" answerLabels="Négatif,1+,2+,3+,4+,5+,&gt;5+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2320,7 +2322,7 @@
 									<td>
 										<span class="titre" ch-target="#filamentsmyceliensmm"><obs conceptId="CIEL:1271" class="master" id="microfilamentsmyceliens" answerConceptId="CIEL:163687" answerLabel="Filaments myceliens"/></span><br/>
 										<span id="filamentsmyceliensmm" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163687" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364" answerLabels="Négatif,Positif,1+,2+,3+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163687" answerConceptIds="CIEL:664,CIEL:703,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418" answerLabels="Négatif,Positif,1+,2+,3+,4+,5+,&gt;5+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2340,7 +2342,7 @@
 									<td>
 										<span class="titre" ch-target="#span217"><obs conceptId="CIEL:1271" class="master" id="microhematies" answerConceptId="CIEL:163683" answerLabel="Hematies"/></span><br/>
 										<span id="span217" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163683" answerConceptIds="CIEL:1499,CIEL:1408,CIEL:1107" answerLabels="Modéré,Élevé,Aucun" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163683" answerConceptIds="CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418" answerLabels="1+,2+,3+,4+,5+,&gt;5+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2413,7 +2415,7 @@
 									<td>
 										<span class="titre" ch-target="#trichomonas"><obs conceptId="CIEL:1271" class="master" id="microtrichomonas" answerConceptId="CIEL:163689" answerLabel="Trichomonas"/></span><br/>
 										<span id="trichomonas" class="togglable" style="display: none;">
-										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163689" answerConceptIds="CIEL:1160,CIEL:1499,CIEL:1408,CIEL:1107" answerLabels="Peu,Modéré,Élevé,Aucun" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
+										<fieldset><legend>Résultat et date</legend><obsgroup groupingConceptId="CIEL:163697"><obs conceptId="CIEL:163689" answerConceptIds="CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418" answerLabels="1+,2+,3+,4+,5+,&gt;5+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/></obsgroup>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2426,10 +2428,16 @@
 									</td>
 								</tr>
 								<tr>
-									<td>
-										<span class="titre" ch-target="#bilirubinetes"><obs conceptId="CIEL:1271" class="master" id="bilirubintest" answerConceptId="CIEL:163680" answerLabel="Bilirubine"/></span><br/>
+									<td><!-- Concept Bilirubine change on february first 2022, 
+									the result should be a numeric value according to the mentors, we replace 163680 by 655 -->
+										<!--  <span class="titre" ch-target="#bilirubinetes"><obs conceptId="CIEL:1271" class="master" id="bilirubintest" answerConceptId="CIEL:163680" answerLabel="Bilirubine"/></span><br/>
 										<span id="bilirubinetes" class="togglable" style="display: none;">
 										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163680" answerConceptIds="CIEL:664,CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1874" answerLabels="Négatif,1+,2+,3+,Trace" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span> -->
+										
+										<span class="titre" ch-target="#bilirubinetes"><obs conceptId="CIEL:1271" class="master" id="bilirubintest" answerConceptId="CIEL:655" answerLabel="Bilirubine"/></span><br/>
+										<span id="bilirubinetes" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:655" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 										</fieldset></span>
 									</td>
 								</tr>
@@ -2445,10 +2453,10 @@
 							<table>
 								<tr>
 									<td>
-										<obsgroup groupingConceptId="afa598b9-ce2c-4d8a-a4a3-f65212391b71">
-											<span class="titre" ch-target="#aspect"><obs conceptId="CIEL:1271" class="master" id="idaspect1" answerConceptId="CIEL:162101" answerLabel="Aspect"/></span><br/>
+										<obsgroup groupingConceptId="afa598b9-ce2c-4d8a-a4a3-f65212391b71"> <!-- february 1st 2022, concept change replace 162101 by 163640, this concept should be for stool -->
+											<span class="titre" ch-target="#aspect"><obs conceptId="CIEL:1271" class="master" id="idaspect1" answerConceptId="CIEL:163640" answerLabel="Aspect"/></span><br/>
 											<span id="aspect" class="togglable" style="display: none;">
-											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:162101" answerConceptIds="CIEL:162102,CIEL:162103" answerLabels="Urine Clair,Urine Pas clair" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+											<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163640" answerConceptIds="CIEL:162657,CIEL:163638,CIEL:163636" answerLabels="Liquide,Solide,Pâteuse" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 											</fieldset></span>
 										</obsgroup>
 									</td>
@@ -2479,7 +2487,7 @@
 								</tr>
 								<tr><td><span class="titre" ch-target="#span251"><obs conceptId="CIEL:1271" class="master" id="idexammicr1" answerConceptId="CIEL:304" answerLabel="Examen Microscopique direct"/><!-- A verifier --></span><br/>
 									<span id="span251" class="togglable" style="display: none;">
-									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:304" answerConceptIds="CIEL:120759,CIEL:137504" answerLabels="Cestode infection,Infection par larves d'ascarides" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:304" answerConceptIds="CIEL:120759,CIEL:137504,CIEL:5622" answerLabels="Cestode infection,Infection par larves d'ascarides,Autre" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 									</fieldset></span>
 								</td></tr>
 							</table>
@@ -2520,6 +2528,14 @@
 										</fieldset></span>
 									</td>
 								</tr>
+								<tr>
+									<td>
+										<span class="titre" ch-target="#spanhp255"><obs conceptId="CIEL:1271" class="master" id="idhpylori1" answerConceptId="CIEL:163348" answerLabel="Helicobacter pylori"/></span><br/><!-- A verifier -->
+										<span id="spanhp255" class="togglable" style="display: none;">
+										<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163348" answerConceptIds="CIEL:1362,CIEL:1363,CIEL:1364,CIEL:1365,CIEL:163417,CIEL:163418" answerLabels="1+,2+,3+,4+,5+,&gt;5+" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+										</fieldset></span>
+									</td>
+								</tr>
 							</table>
 						</td>
 					</tr>
@@ -2540,6 +2556,22 @@
 							<span class="titre" ch-target="#hepatitebag"><obs conceptId="CIEL:1271" class="master" id="idhepatb1" answerConceptId="CIEL:1322" answerLabel="Hépatite B Ag"/></span><br/>
 								<span id="hepatitebag" class="togglable" style="display: none;">
 									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:1322" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138,CIEL:1304" answerLabels="Négatif,Positif,Indéterminé,Echatillon de pauvre qualité" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#hepatitebag11"><obs conceptId="CIEL:1271" class="master" id="idhepatb11" answerConceptId="CIEL:159430" answerLabel="Hépatite B Surface Antigen Test"/></span><br/>
+								<span id="hepatitebag11" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:159430" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
+							</fieldset></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="titre" ch-target="#hepatitebag12"><obs conceptId="CIEL:1271" class="master" id="idhepatb12" answerConceptId="CIEL:165301" answerLabel="Test de diagnostic rapide HBsAg (TDR-HBsAg)"/></span><br/>
+								<span id="hepatitebag12" class="togglable" style="display: none;">
+									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:165301" answerConceptIds="CIEL:664,CIEL:703,CIEL:1138" answerLabels="Négatif,Positif,Indéterminé" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>
 							</fieldset></span>
 						</td>
 					</tr>
@@ -2884,7 +2916,7 @@
 										</fieldset></span>
 									</td>
 								</tr>
-								<tr><td><span class="titre" ch-target="#span330"><obs conceptId="CIEL:1271" class="master" id="idhelicobac12" answerConceptId="CIEL:163620" answerLabel="Helicobacter Pilori"/></span><br/>
+								<tr><td><span class="titre" ch-target="#span330"><obs conceptId="CIEL:1271" class="master" id="idhelicobac12" answerConceptId="CIEL:163620" answerLabel="Helicobacter Pylori"/></span><br/>
 								
 									<span id="span330" class="togglable" style="display: none;">
 									<fieldset><legend>Résultat et date</legend><obs conceptId="CIEL:163620" answerConceptIds="CIEL:664,CIEL:703" answerLabels="Négatif,Positif" showDate="true" dateLabel="&lt;br/&gt;Date&lt;br/&gt;" showCommentField="true" commentFieldLabel="&lt;br/&gt;Commentaire&lt;br/&gt;"/>

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "isanteplus.registration.fingerprint.enrollupdate",
+        "description": "isanteplus.registration.fingerprint.description",
+        "label": "isanteplus.registration.fingerprint.label",
+        "icon": "icon-user",
+        "order": 1,
+        "extensions": [
+          {
+            "id": "isanteplus.registration.fingerprintSecondColumn",
+            "appId": "isanteplus.registration.fingerprint",
+            "extensionPointId": "patientDashboard.firstColumnFragments",
+            "extensionParams": {
+              "provider": "registrationapp",
+              "fragment": "field/m2sysEnrollOrUpdate"
+			  
+            },
+			 "order": 3
+          }
+        ]
+    }
+]

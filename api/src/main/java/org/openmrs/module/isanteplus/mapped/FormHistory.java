@@ -88,7 +88,6 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 		return encounter.getProvidersByRole(role)!= null
 				? encounter.getProvidersByRole(role).iterator().next().getPerson().getGivenName() + " " + encounter.getProvidersByRole(role).iterator().next().getPerson().getFamilyName() : "";
 	}
-
 	
 	public Date getDate() {
 		return encounter.getDateCreated();
@@ -198,4 +197,5 @@ public class FormHistory extends BaseOpenmrsDataObject implements Serializable {
 	public void setEncounter(Encounter encounter) {
 		this.encounter = encounter;
 	}
+
 }

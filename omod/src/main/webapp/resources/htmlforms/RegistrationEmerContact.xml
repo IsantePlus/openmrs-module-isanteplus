@@ -160,7 +160,7 @@
 									id="emergencyContactAddress-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
-							<div>
+							<!--  <div>
 								<h3>
 									<uimessage code="haiticore.address.neighborhoodCell" />
 								</h3>
@@ -176,7 +176,7 @@
 								<obs class="level" conceptId="CIEL:165195"
 									id="emergencyContactAddress-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-							</div>
+							</div>-->
 							<div>
 								<h3>
 									<uimessage code="haiticore.address.address2" />
@@ -201,14 +201,14 @@
 									id="emergencyContactAddress-address2" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="CIEL:165195"
+								<!--  <obs class="level" conceptId="CIEL:165195"
 									id="emergencyContactAddress-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
 								<obs class="level" conceptId="CIEL:165196"
 									id="emergencyContactAddress-address3" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-								,
+								,-->
 								<obs class="level" conceptId="CIEL:1354"
 									id="emergencyContactAddress-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />

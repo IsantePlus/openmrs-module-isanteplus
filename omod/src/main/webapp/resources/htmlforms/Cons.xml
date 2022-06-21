@@ -885,378 +885,359 @@
 				</a>
 				<div id="div16" class="togglable" style="display: none;">
 					<section headerLabel="Vaccinations">
-						<table class="tg">
-							<tr>
-								<th class="tg-5bx4">Vaccin</th>
-								<th class="tg-5bx4">Dose 0</th>
-								<th class="tg-5bx4">Dose 1</th>
-								<th class="tg-5bx4">Dose 2</th>
-								<th class="tg-5bx4">Dose 3</th>
-								<th class="tg-5bx4">Rappel (Dose 4)</th>
-								<th class="tg-5bx4">Rappel (Dose 5)</th> <!-- <encounterLocation id="encounterLocation" default="SessionAttribute:emrContext.sessionLocationId" 
-									order="1,2,302"/> -->
-							</tr>
-							<!-- Hepatite B -->
-							<tr>
-								<td class="tg-bcg">Hépatite B</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="hepatitebfield{dose}">
-												<immunization showDate="true" id="hepatiteb{dose}"
-													vaccineConceptId="CIEL:782" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<tr>
-								<td class="tg-polio">Polio (OPV/IPV)</td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="poliofield{dose}">
-												<immunization showDate="true" id="polio{dose}"
-													vaccineConceptId="CIEL:783" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="0" />
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-									<render dose="4" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-diteper">DiTePer</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="diteperfield{dose}">
-												<immunization showDate="true" id="diteper{dose}"
-													vaccineConceptId="CIEL:781" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-									<render dose="4" />
-			
-								</repeat>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-hib">HIB</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="hibfield{dose}">
-												<immunization showDate="true" id="hib{dose}"
-													vaccineConceptId="CIEL:5261" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-									<render dose="4" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-penta">Pentavalent</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="pentafield{dose}">
-												<!--<immunization showDate="true" id="penta{dose}" vaccineConceptId="CIEL:162339" 
-													sequenceNumber="{dose}" label="" /> -->
-												<immunization showDate="true" id="penta{dose}"
-													vaccineConceptId="CIEL:1423" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<tr>
-								<td class="tg-pneu">Pneumocoque</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="pneufield{dose}">
-												<immunization showDate="true" id="pneu{dose}"
-													vaccineConceptId="CIEL:82215" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<tr>
-								<td class="tg-rota">Rotavirus</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="rotafield{dose}">
-												<!--<immunization showDate="true" id="rota{dose}" vaccineConceptId="CIEL:159698" 
-													sequenceNumber="{dose}" label="" /> -->
-												<immunization showDate="true" id="rota{dose}"
-													vaccineConceptId="CIEL:83531" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-ror">ROR</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="rorfield{dose}">
-												<immunization showDate="true" id="ror{dose}"
-													vaccineConceptId="CIEL:159701" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-rr">RR</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="rrfield{dose}">
-												<immunization showDate="true" id="rr{dose}"
-													vaccineConceptId="CIEL:162586" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<tr>
-								<td class="tg-rota">DT</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="dtfield{dose}">
-												<immunization showDate="true" id="dt{dose}"
-													vaccineConceptId="CIEL:17" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<tr>
-								<td class="tg-varicelle">Varicelle</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="varicellefield{dose}">
-												<immunization showDate="true" id="varicelle{dose}"
-													vaccineConceptId="CIEL:73193" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-bcg">Typhimvi</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="typhimvifield{dose}">
-												<immunization showDate="true" id="typhimvi{dose}"
-													vaccineConceptId="CIEL:86208" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<tr>
-								<td class="tg-bcg">Meningo AC</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="meningofield{dose}">
-												<immunization showDate="true" id="meningo{dose}"
-													vaccineConceptId="CIEL:105030" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-bcg">Hépatite A</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="hepatiteafield{dose}">
-												<immunization showDate="true" id="hepatitea{dose}"
-													vaccineConceptId="CIEL:77424" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-bcg">Cholera</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="cholerafield{dose}">
-												<immunization showDate="true" id="cholera{dose}"
-													vaccineConceptId="CIEL:73354" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-									<render dose="3" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-			
-							<tr>
-								<td class="tg-bcg">BCG</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="bcgfield{dose}">
-												<immunization showDate="true" id="bcg{dose}"
-													vaccineConceptId="CIEL:886" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-							<includeIf velocityTest="($patient.gender == 'F')">
-								<tr>
-									<td class="tg-hpv">HPV</td>
-									<td class="tg-ng6d"></td>
-									<repeat>
-										<template>
-											<td class="tg-g902">
-												<div id="hpvfield{dose}">
-													<immunization showDate="true" id="hpv{dose}"
-														vaccineConceptId="CIEL:159708" sequenceNumber="{dose}" label="" />
-												</div>
-											</td>
-										</template>
-										<render dose="1" />
-									</repeat>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-								</tr>
-							</includeIf>
-							<tr>
-								<td class="tg-g901">Diphtérie/Tétanos</td>
-								<td class="tg-ng6d"></td>
-								<repeat>
-									<template>
-										<td class="tg-g902">
-											<div id="diphtetanosfield{dose}">
-												<immunization showDate="true" id="diphtetanos{dose}"
-													vaccineConceptId="CIEL:104528" sequenceNumber="{dose}" label="" />
-											</div>
-										</td>
-									</template>
-									<render dose="1" />
-									<render dose="2" />
-								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-							</tr>
-						</table>
-						<br/>
+								<table class="tg">
+									<tr>
+										<th class="tg-5bx4">Vaccin</th>
+										<th class="tg-5bx4">Dose 0</th>
+										<th class="tg-5bx4">Dose 1</th>
+										<th class="tg-5bx4">Dose 2</th>
+										<th class="tg-5bx4">Dose 3</th>
+										<th class="tg-5bx4">Rappel (Dose 4)</th>
+										<th class="tg-5bx4">Rappel (Dose 5)</th> <!-- <encounterLocation id="encounterLocation" default="SessionAttribute:emrContext.sessionLocationId" 
+											order="1,2,302"/> -->
+									</tr>
+									<!-- Hepatite B -->
+									<tr>
+										<td class="tg-bcg">Hépatite B</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="hepatitebfield{dose}">
+														<immunization showDate="true" id="hepatiteb{dose}"
+															vaccineConceptId="CIEL:782" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+									<tr>
+										<td class="tg-polio">Polio (OPV/IPV)</td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="poliofield{dose}">
+														<immunization showDate="true" id="polio{dose}"
+															vaccineConceptId="CIEL:783" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="0" />
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-diteper">DiTePer</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="diteperfield{dose}">
+														<immunization showDate="true" id="diteper{dose}"
+															vaccineConceptId="CIEL:781" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-hib">HIB</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="hibfield{dose}">
+														<immunization showDate="true" id="hib{dose}"
+															vaccineConceptId="CIEL:5261" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-penta">Pentavalent</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="pentafield{dose}">
+														<!--<immunization showDate="true" id="penta{dose}" vaccineConceptId="CIEL:162339" 
+															sequenceNumber="{dose}" label="" /> -->
+														<immunization showDate="true" id="penta{dose}"
+															vaccineConceptId="CIEL:1423" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+									<tr>
+										<td class="tg-pneu">Pneumocoque</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="pneufield{dose}">
+														<immunization showDate="true" id="pneu{dose}"
+															vaccineConceptId="CIEL:82215" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+									<tr>
+										<td class="tg-rota">Rotavirus</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="rotafield{dose}">
+														<!--<immunization showDate="true" id="rota{dose}" vaccineConceptId="CIEL:159698" 
+															sequenceNumber="{dose}" label="" /> -->
+														<immunization showDate="true" id="rota{dose}"
+															vaccineConceptId="CIEL:83531" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-ror">ROR</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="rorfield{dose}">
+														<immunization showDate="true" id="ror{dose}"
+															vaccineConceptId="CIEL:159701" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-rr">RR</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="rrfield{dose}">
+														<immunization showDate="true" id="rr{dose}"
+															vaccineConceptId="CIEL:162586" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+									<tr>
+										<td class="tg-rota">DT</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="dtfield{dose}">
+														<immunization showDate="true" id="dt{dose}"
+															vaccineConceptId="CIEL:17" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+									<tr>
+										<td class="tg-varicelle">Varicelle</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="varicellefield{dose}">
+														<immunization showDate="true" id="varicelle{dose}"
+															vaccineConceptId="CIEL:73193" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-bcg">Typhimvi</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="typhimvifield{dose}">
+														<immunization showDate="true" id="typhimvi{dose}"
+															vaccineConceptId="CIEL:86208" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+									<tr>
+										<td class="tg-bcg">Meningo ACY</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="meningofield{dose}">
+														<immunization showDate="true" id="meningo{dose}"
+															vaccineConceptId="CIEL:105030" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-bcg">Hépatite A</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="hepatiteafield{dose}">
+														<immunization showDate="true" id="hepatitea{dose}"
+															vaccineConceptId="CIEL:77424" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-bcg">Cholera</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="cholerafield{dose}">
+														<immunization showDate="true" id="cholera{dose}"
+															vaccineConceptId="CIEL:73354" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+											<render dose="2" />
+											<render dose="3" />
+											<render dose="4" />
+											<render dose="5" />
+										</repeat>
+									</tr>
+					
+									<tr>
+										<td class="tg-bcg">BCG</td>
+										<td class="tg-ng6d"></td>
+										<repeat>
+											<template>
+												<td class="tg-g902">
+													<div id="bcgfield{dose}">
+														<immunization showDate="true" id="bcg{dose}"
+															vaccineConceptId="CIEL:886" sequenceNumber="{dose}" label="" />
+													</div>
+												</td>
+											</template>
+											<render dose="1" />
+										</repeat>
+										<td class="tg-ng6d"></td>
+										<td class="tg-ng6d"></td>
+										<td class="tg-ng6d"></td>
+										<td class="tg-ng6d"></td>
+									</tr>
+									<includeIf velocityTest="($patient.gender == 'F')">
+										<tr>
+											<td class="tg-hpv">HPV</td>
+											<td class="tg-ng6d"></td>
+											<repeat>
+												<template>
+													<td class="tg-g902">
+														<div id="hpvfield{dose}">
+															<immunization showDate="true" id="hpv{dose}"
+																vaccineConceptId="CIEL:159708" sequenceNumber="{dose}" label="" />
+														</div>
+													</td>
+												</template>
+												<render dose="1" />
+												<render dose="2" />
+												<render dose="3" />
+												<render dose="4" />
+												<render dose="5" />
+											</repeat>
+										</tr>
+									</includeIf>
+									
+								</table>
+								<br/>
 						Vaccin Covid19<br/>
 						<!--<fieldset>
 							<legend>Vaccin Covid19</legend>-->
@@ -1293,8 +1274,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-pneu">Moderna</td>
@@ -1320,8 +1301,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-rota">Pfizer-BioNTech</td>
@@ -1346,8 +1327,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-penta">Gamaleya-Sputnick V (Russia)</td>
@@ -1372,8 +1353,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-pneu">Sinovac(China)<br/>Sinopharm(China)</td>
@@ -1398,8 +1379,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								
 								<tr>
@@ -1425,13 +1406,13 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 									
 								</tr>
 								
 							</table>
-					</section>
+						</section>
 					
 				</div>
 			</div>
@@ -1442,7 +1423,9 @@
 						PHYSIQUE</div>
 				</a>
 				<div id="div6" class="togglable" style="display: none;">
-				<input type="checkbox" id="cocher_normal" name="scales" />Sélectionner tout <br/>
+				<input type="checkbox" id="cocher_normal" name="scales" />Sélectionner tout &#160;&#160;&#160;
+				<obs conceptId="CIEL:162737" answerConceptId="CIEL:1118" answerLabel="Non Effectué" /><br/>
+
 					<fieldset>
 						<table>
 							<tr>

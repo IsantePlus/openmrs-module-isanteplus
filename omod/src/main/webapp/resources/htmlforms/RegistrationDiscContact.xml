@@ -182,7 +182,7 @@
 									id="medicalDisclosure1Address-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
-							<div>
+						<!--	<div>
 								<h3>
 									<uimessage code="haiticore.address.neighborhoodCell" />
 								</h3>
@@ -198,7 +198,7 @@
 								<obs class="level" conceptId="CIEL:165195"
 									id="medicalDisclosure1Address-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-							</div>
+							</div>-->
 							<div>
 								<h3>
 									<uimessage code="haiticore.address.address2" />
@@ -223,14 +223,14 @@
 									id="medicalDisclosure1Address-address2" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="CIEL:165195"
+								<!--  <obs class="level" conceptId="CIEL:165195"
 									id="medicalDisclosure1Address-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
 								<obs class="level" conceptId="CIEL:165196"
 									id="medicalDisclosure1Address-address3" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-								,
+								,-->
 								<obs class="level" conceptId="CIEL:1354"
 									id="medicalDisclosure1Address-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
@@ -382,7 +382,7 @@
 									id="medicalDisclosure2Address-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 							</div>
-							<div>
+							<!-- <div>
 								<h3>
 									<uimessage code="haiticore.address.neighborhoodCell" />
 								</h3>
@@ -398,7 +398,7 @@
 								<obs class="level" conceptId="CIEL:165195"
 									id="medicalDisclosure2Address-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-							</div>
+							</div>-->
 							<div>
 								<h3>
 									<uimessage code="haiticore.address.address2" />
@@ -423,14 +423,14 @@
 									id="medicalDisclosure2Address-address2" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
-								<obs class="level" conceptId="CIEL:165195"
+							<!--	<obs class="level" conceptId="CIEL:165195"
 									id="medicalDisclosure2Address-address1" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
 								<br />
 								<obs class="level" conceptId="CIEL:165196"
 									id="medicalDisclosure2Address-address3" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
-								,
+								,-->
 								<obs class="level" conceptId="CIEL:1354"
 									id="medicalDisclosure2Address-cityVillage" showUnits="false"
 									unitsCssClass="append-to-value" size="20" />
