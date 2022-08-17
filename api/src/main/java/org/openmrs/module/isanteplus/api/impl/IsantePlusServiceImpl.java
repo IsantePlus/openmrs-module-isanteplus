@@ -783,10 +783,9 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 				Concept resultTest = Context.getConceptService().getConcept(result);
 
 				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), resultTest)) {
-					if (obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId()) {
+					if (obs.getEncounter().getEncounterType().equals(obs1.getEncounter().getEncounterType())) {
 						IsantePlusObs obsres = new IsantePlusObs(obs1);
 						labHistory.add(obsres);
-
 					}
 				}
 			}

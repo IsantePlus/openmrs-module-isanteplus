@@ -830,7 +830,7 @@
 		</sql>
 	</changeSet>
 
-	<changeSet dbms="mysql" id="2018August27-18:00" author="Arkadiusz Lalo"
+	<changeSet dbms="mysql" id="2022April20-18:00" author="Arkadiusz Lalo"
 			   runInTransaction="true">
 		<preConditions onError="HALT" onFail="MARK_RAN">
 			<and>
@@ -845,11 +845,11 @@
 		</preConditions>
 		<comment>Add a new concept_reference_source, which is used by LNSP codes</comment>
 		<sql>
-			INSERT INTO concept_reference_source(name, description, creator, date_created, uuid)
-			VALUES ('LNSP Code', 'LNSP test code', 1, CURRENT_TIMESTAMP, 'f124da75-9f50-4b25-be97-13c029e3a65b');
+			INSERT INTO concept_reference_source(name, description, hl7_code, creator, date_created, uuid)
+			VALUES ('LNSP Code', 'LNSP test code', null, 1, CURRENT_TIMESTAMP, 'f124da75-9f50-4b25-be97-13c029e3a65b');
 
-			INSERT INTO concept_reference_source(name, description, creator, date_created, uuid)
-			VALUES ('LNSP Result Code', 'LNSP test code', 1, CURRENT_TIMESTAMP, 'c19e926e-fc28-4d78-9b99-eb42032abf3c');
+			INSERT INTO concept_reference_source(name, description, hl7_code, creator, date_created, uuid)
+			VALUES ('LNSP Result Code', 'LNSP test code', null, 1, CURRENT_TIMESTAMP, 'c19e926e-fc28-4d78-9b99-eb42032abf3c');
 		</sql>
 	</changeSet>
 
