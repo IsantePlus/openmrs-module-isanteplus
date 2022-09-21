@@ -1,7 +1,7 @@
 <htmlform formUuid="56cf5b28-c0b5-4d57-8dde-a43e93e269d2"
 	formName="Analyse de Laboratoire" formVersion="1.0"
 	formEncounterType="f037e97b-471e-4898-a07c-b8e169e0ddc4"
-	formDescription="Analyse de laboratoire;Analyse de laboratoire">
+	formDescription="Analyse de laboratoire;">
 		<macros>
 		paperFormId = (Fill this in)
 		<!--headerColor =#009d8e-->
@@ -908,10 +908,10 @@
 			<table>
 				<tr>
 					<td colspan="3">
-						<includeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+						<includeIf velocityTest="$fn.globalProperty('labonfhir.openElisUrl') != ''">
 							<obs id="destinationOfTestOrder" labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC,OpenELIS" style="dropdown" />
 						</includeIf>
-						<excludeIf velocityTest="$fn.globalProperty('labintegration.openElis.url') != ''">
+						<excludeIf velocityTest="$fn.globalProperty('labonfhir.openElisUrl') != ''">
 							<obs id="destinationOfTestOrder" labelText="Envoyez le résultat de laboratoire à:" conceptId="CIEL:160632" answers="SCC" style="dropdown" />
 						</excludeIf>
 					</td>
