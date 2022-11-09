@@ -602,6 +602,15 @@
 		
 			setValue('isoniazide.value', '');
 		}
+		
+		if ((getValue('rifapentine_end.value') != '') ||
+		(getValue('rifapentine_current.value') == '1065')) {
+			setValue('rifapentine.value', '83360');
+		} else {
+		
+			setValue('rifapentine.value', '');
+		}
+		
 		if ((getValue('pyrazinamide_end.value') != '') ||
 		(getValue('pyrazinamide_current.value') == '1065')) {
 			setValue('pyrazinamide.value', '82900');
@@ -1974,12 +1983,40 @@
 												</tr>
 												<tr><td><obs conceptId="CIEL:163283" answerConceptId="CIEL:1067" answerLabel="Statut PPD inconnu"/></td>
 												<td>&#32;&#32;</td></tr>
-												<tr><td><obs conceptId="CIEL:1110" answerConceptId="CIEL:1679" answerLabel="Prophylaxie à I'INH"/></td>
+												<tr><td colspan="5"> <b>Prophylaxie Primaire contre la TB </b></td></tr>
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="CIEL:1679" answerLabel="Prophylaxie à I'INH"/></td>
 												<td>&#32;&#32;</td>
 												<td>Date de début de I'INH <obs conceptId="CIEL:162320"/></td>
 												<td>&#32;&#32;</td>
 												<td>Date d'arrêt de I'INH <obs conceptId="CIEL:163284"/></td>
-												</tr>
+											</tr>
+							
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="aa86e30b-8e84-4082-93bf-a4b4aa78e58b" answerLabel="INH+Rifapentine"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de Début INH+Rifapentine <obs conceptId="c0d7ad44-27c9-4556-a31c-196ed868f611"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt d'INH+Rifapentine <obs conceptId="9a61d3e5-6faf-4453-83d2-3e7ebc8d61f1"/></td>
+											</tr>
+											
+											<tr><td colspan="5"> <b> Prophylaxie secondaire contre la TB  </b></td></tr>
+											
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="CIEL:163581" answerLabel="Prophylaxie à I'INH"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de début de I'INH <obs conceptId="489e43b2-e249-4ddf-8989-7d59afb5106b"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt de I'INH <obs conceptId="0289b59f-a929-4a16-a926-1f4444600482"/></td>
+											</tr>
+							
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="98e03069-9593-4585-846b-6bed07745e73" answerLabel="INH+Rifapentine"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de Début INH+Rifapentine <obs conceptId="00dbc67d-d833-48c3-8f12-9ce3957c1456"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt d'INH+Rifapentine <obs conceptId="b56a68df-e77e-4e84-aad9-957717af2c9f"/></td>
+											</tr>
 											</td>
 										</tr>	
 									</table>
@@ -1987,6 +2024,7 @@
 							</tr>
 						</table>
 					</section>
+					<!--  
 					<section headerLabel="STATUT TB">
 						<table width="100%">
 							<tr>
@@ -2007,9 +2045,7 @@
 									<br />
 									No. de dossier TB :
 										<obs conceptId="e5803d79-0f64-4904-a7b3-971003c1ba36" />
-									<!--  No. de dossier TB :
-									<patient field="identifier" identifierTypeId="4814250c-bbba-4380-a843-206d5307808a"
-										required="false" /> -->
+									
 								</td>
 								<td valign="TOP">
 										<br />
@@ -2019,19 +2055,12 @@
 										<br />
 										Établissement :
 										<br />
-										<!--  <obs conceptId="CIEL:162724" labelText="" /> -->
 										<obs conceptId="4a580214-39ae-4986-a25c-fd05e102fb86" labelText="" />
-								<!--  
-									<br />
-									Établissement :
-									<patient field="identifierLocation" />
-									<br />
-									Établissement :
-									<patient field="identifierLocation" /> -->
+							
 								</td>
 							</tr>
 						</table>
-					</section>
+					</section> -->
 					<section headerLabel="SURVEILLANCE DU TRAITEMENT(TB)">
 						<table id="surveillance" width="90%">
 							<tr>
@@ -3289,8 +3318,8 @@
 										<td>Hyperlipidémie</td>
 									</tr>
 									<tr bgcolor="#D8D8D8" class="checkboxGroup">
-										<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:117339" showDate="true" answerLabel=""/></span></td>
-										<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:117339" showDate="true" answerLabel=""/></span></td>
+										<td><span id="actif"><obs conceptId="CIEL:6042" answerConceptId="CIEL:117401" showDate="true" answerLabel=""/></span></td>
+										<td><span id="gueri"><obs conceptId="CIEL:6097" answerConceptId="CIEL:117401" showDate="true" answerLabel=""/></span></td>
 										<td>Hypertension</td>
 									</tr>
 									<tr class="checkboxGroup">
@@ -3822,6 +3851,7 @@
 									</template>
 									<render concept="CIEL:75948" drugname="Ethambutol" id="ethambutol" conceptgroup="439f0405-b70b-49a9-8c32-66b39b3186bd" color="#D8D8D8"/>
 									<render concept="CIEL:78280" drugname="Isoniazide (INH)" id="isoniazide" conceptgroup="fee8bd39-2a95-47f9-b1f5-3f9e9b3ee959" color="#FFFFFF"/>
+									<render concept="CIEL:83360" drugname="Rifapentine" id="rifapentine" conceptgroup="7166048e-fe6d-4195-89b2-cb023905426d" color="#FFFFFF"/>
 									<render concept="CIEL:82900" drugname="Pyrazinamide" id="pyrazinamide" conceptgroup="ee73ed0f-8fd5-4a3e-be10-c12cef9672e8" color="#D8D8D8"/>
 									<render concept="CIEL:767" drugname="Rifampicine" id="rifampicine" conceptgroup="2b2053bd-37f3-429d-be0b-f1f8952fe55e" color="#FFFFFF"/>
 									<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
