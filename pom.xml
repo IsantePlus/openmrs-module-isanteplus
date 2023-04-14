@@ -46,7 +46,7 @@
 		<revision>1.4.4</revision>
 		<openMRSVersion>2.0.5</openMRSVersion>
 		<uiframeworkVersion>3.11.0</uiframeworkVersion>
-		<jsonVersion>20160212</jsonVersion>
+		<jsonVersion>20230227</jsonVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<emrapiVersion>1.21.0</emrapiVersion>
