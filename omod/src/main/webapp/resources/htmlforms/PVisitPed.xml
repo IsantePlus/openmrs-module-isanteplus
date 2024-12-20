@@ -858,6 +858,15 @@
 		} else {
 		setValue('isoniazide.value', '78280');
 		}
+		
+		if ((getValue('rifapentine_start.value') == '') &amp;&amp;
+		(getValue('rifapentine_end.value') == '') &amp;&amp;
+		(getValue('rifapentine_current.value') != '1065')) {
+		setValue('rifapentine.value', '');
+		} else {
+		setValue('rifapentine.value', '83360');
+		}
+		
 		if ((getValue('pyrazinamide_start.value') == '') &amp;&amp;
 		(getValue('pyrazinamide_end.value') == '') &amp;&amp;
 		(getValue('pyrazinamide_current.value') != '1065')) {
@@ -2762,6 +2771,7 @@
 								</template>
 								<render concept="CIEL:75948" drugname="Ethambutol" id="ethambutol" conceptgroup="439f0405-b70b-49a9-8c32-66b39b3186bd" color="#D8D8D8"/>
 								<render concept="CIEL:78280" drugname="Isoniazide (INH)" id="isoniazide" conceptgroup="fee8bd39-2a95-47f9-b1f5-3f9e9b3ee959" color="#FFFFFF"/>
+								<render concept="CIEL:83360" drugname="Rifapentine" id="rifapentine" conceptgroup="7166048e-fe6d-4195-89b2-cb023905426d" color="#FFFFFF"/>
 								<render concept="CIEL:82900" drugname="Pyrazinamide" id="pyrazinamide" conceptgroup="ee73ed0f-8fd5-4a3e-be10-c12cef9672e8" color="#D8D8D8"/>
 								<render concept="CIEL:767" drugname="Rifampicine" id="rifampicine" conceptgroup="2b2053bd-37f3-429d-be0b-f1f8952fe55e" color="#FFFFFF"/>
 								<render concept="CIEL:84360" drugname="Streptomycine" id="streptomycine" conceptgroup="f88d01b3-74de-435c-a700-dcc6db94ba30" color="#D8D8D8"/>
@@ -3113,114 +3123,7 @@
 					
 				</div>
 			</div>
-			<div>
-				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div4">IMPRESSIONS
-						CLINIQUES ET DIAGNOSTIQUES
-					</div>
-				</a>
-				<div id="div4" class="togglable" style="display: none;">
-					<section>
-						<table>
-							<tr>
-								<td>
-						    		<div id="data-collection">
-								        <encounterDiagnoses required="false" selectedDiagnosesTarget="#encounter-diagnoses-target"/>
-								
-								    </div>
-								
-								    <div id="encounter-diagnoses-target">
-								    </div>
-							    </td>
-				    		</tr>
-				    	</table>	
-					</section>
-					<section headerLabel="AUTRES DIAGNOSTIQUES">
-						<table>
-							<tr>
-								<td>
-									<b>Autre diagnostic 1</b><br/>
-									<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
-										<span class="titre" ch-target="#cacher58">
-										<obs conceptId="CIEL:1284" class="master" id="id58"
-										style="autocomplete" answerClasses="Diagnosis"
-										showCommentField="true" commentFieldLabel=" Commentaire" />
-										</span>
-										<br />
-										<span id="dispnone1" class="cacher">
-										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
-										answerLabels="Confirmé,Suspecté" style="radio" />
-										<br />
-										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
-										answerLabels="Primaire,Secondaire" style="radio" />
-										</span>
-									</obsgroup>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Autre diagnostic 2</b><br/>
-									<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
-										<span class="titre" ch-target="#cacher58">
-										<obs conceptId="CIEL:1284" class="master" id="id58"
-										style="autocomplete" answerClasses="Diagnosis"
-										showCommentField="true" commentFieldLabel=" Commentaire" />
-										</span>
-										<br />
-										<span id="dispnone2" class="cacher">
-										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
-										answerLabels="Confirmé,Suspecté" style="radio" />
-										<br />
-										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
-										answerLabels="Primaire,Secondaire" style="radio" />
-										</span>
-									</obsgroup>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Autre diagnostic 3</b><br/>
-									<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
-										<span class="titre" ch-target="#cacher58">
-										<obs conceptId="CIEL:1284" class="master" id="id58"
-										style="autocomplete" answerClasses="Diagnosis"
-										showCommentField="true" commentFieldLabel=" Commentaire" />
-										</span>
-										<br />
-										<span id="dispnone3" class="cacher">
-										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
-										answerLabels="Confirmé,Suspecté" style="radio" />
-										<br />
-										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
-										answerLabels="Primaire,Secondaire" style="radio" />
-										</span>
-									</obsgroup>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<b>Autre diagnostic 4</b><br/>
-									<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
-										<span class="titre" ch-target="#cacher58">
-										<obs conceptId="CIEL:1284" class="master" id="id58"
-										style="autocomplete" answerClasses="Diagnosis"
-										showCommentField="true" commentFieldLabel=" Commentaire" />
-										</span>
-										<br />
-										<span id="dispnone4" class="cacher">
-										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
-										answerLabels="Confirmé,Suspecté" style="radio" />
-										<br />
-										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
-										answerLabels="Primaire,Secondaire" style="radio" />
-										</span>
-									</obsgroup>
-								</td>
-							</tr>
-						</table>
-					</section>
-				</div>
-			</div>
+			
 			<div>
 				<a href="#read">
 					<div href="#read" class="toggle-button" data-target="#div5">ALIMENTATION
@@ -3332,9 +3235,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-polio">Polio (OPV/IPV)</td>
@@ -3352,8 +3255,8 @@
 									<render dose="2" />
 									<render dose="3" />
 									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3372,9 +3275,8 @@
 									<render dose="2" />
 									<render dose="3" />
 									<render dose="4" />
-			
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3393,8 +3295,8 @@
 									<render dose="2" />
 									<render dose="3" />
 									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3414,9 +3316,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-pneu">Pneumocoque</td>
@@ -3433,9 +3335,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-rota">Rotavirus</td>
@@ -3453,10 +3355,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3473,10 +3375,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3492,11 +3394,11 @@
 										</td>
 									</template>
 									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-rota">DT</td>
@@ -3512,10 +3414,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-varicelle">Varicelle</td>
@@ -3530,11 +3432,11 @@
 										</td>
 									</template>
 									<render dose="1" />
+									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3551,10 +3453,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 							<tr>
 								<td class="tg-bcg">Meningo AC</td>
@@ -3570,10 +3472,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3590,10 +3492,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3611,9 +3513,9 @@
 									<render dose="1" />
 									<render dose="2" />
 									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 			
 							<tr>
@@ -3649,11 +3551,11 @@
 											</td>
 										</template>
 										<render dose="1" />
+										<render dose="2" />
+										<render dose="3" />
+										<render dose="4" />
+										<render dose="5" />
 									</repeat>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
-									<td class="tg-ng6d"></td>
 								</tr>
 							</includeIf>
 							<tr>
@@ -3670,10 +3572,10 @@
 									</template>
 									<render dose="1" />
 									<render dose="2" />
+									<render dose="3" />
+									<render dose="4" />
+									<render dose="5" />
 								</repeat>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
-								<td class="tg-ng6d"></td>
 							</tr>
 						</table>
 						<br/>
@@ -3713,8 +3615,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />									
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-pneu">Moderna</td>
@@ -3740,8 +3642,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-rota">Pfizer-BioNTech</td>
@@ -3766,8 +3668,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-penta">Gamaleya-Sputnick V (Russia)</td>
@@ -3792,8 +3694,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								<tr>
 									<td class="tg-pneu">Sinovac(China)<br/>Sinopharm(China)</td>
@@ -3818,8 +3720,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 								</tr>
 								
 								<tr>
@@ -3837,7 +3739,7 @@
 															id="janssen{dose}" answerLabel="" />
 														</span>
 														<obs conceptId="CIEL:1420" id="janssen_lotnum{dose}" />
-													</obsgroup>
+									 				</obsgroup>
 												</div>
 											</td>
 										</template>
@@ -3845,8 +3747,8 @@
 										<render dose="2" concept_group="11d40a9c-4a38-4daf-b7ac-cfc174da3b09" />
 										<render dose="3" concept_group="ba67aee0-02a1-4b26-ba48-903042cf062c" />
 										<render dose="4" concept_group="f83adb7b-fb5c-4f9c-9592-fd7206682c67" />
+										<render dose="5" concept_group="ad04af0f-0a90-4766-97a5-ea8d7761637c" />
 									</repeat>
-									<td class="tg-ng6d"></td>
 									
 								</tr>
 								
@@ -3955,11 +3857,52 @@
 							Pas d'antécédent de TB
 						</obsgroup>
 						<br />
+						Traitement TB en cours
+							<obs conceptId="CIEL:159798" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
+									answerLabels="Oui,Non,Inconnu" style="radio" />
+						<br/>
+							<table width="100%">
+							<tr><td colspan="5"> <b>Prophylaxie Primaire contre la TB </b></td></tr>
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="CIEL:1679" answerLabel="Prophylaxie à I'INH"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de début de I'INH <obs conceptId="CIEL:162320"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt de I'INH <obs conceptId="CIEL:163284"/></td>
+											</tr>
+							
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="aa86e30b-8e84-4082-93bf-a4b4aa78e58b" answerLabel="INH+Rifapentine"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de Début INH+Rifapentine <obs conceptId="c0d7ad44-27c9-4556-a31c-196ed868f611"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt d'INH+Rifapentine <obs conceptId="9a61d3e5-6faf-4453-83d2-3e7ebc8d61f1"/></td>
+											</tr>
+											
+											<tr><td colspan="5"> <b> Prophylaxie secondaire contre la TB  </b></td></tr>
+											
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="CIEL:163581" answerLabel="Prophylaxie à I'INH"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de début de I'INH <obs conceptId="489e43b2-e249-4ddf-8989-7d59afb5106b"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt de I'INH <obs conceptId="0289b59f-a929-4a16-a926-1f4444600482"/></td>
+											</tr>
+							
+											<tr>
+												<td><obs conceptId="CIEL:1110" answerConceptId="98e03069-9593-4585-846b-6bed07745e73" answerLabel="INH+Rifapentine"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date de Début INH+Rifapentine <obs conceptId="00dbc67d-d833-48c3-8f12-9ce3957c1456"/></td>
+												<td>&#32;&#32;</td>
+												<td>Date d'arrêt d'INH+Rifapentine <obs conceptId="b56a68df-e77e-4e84-aad9-957717af2c9f"/></td>
+											</tr>
+						</table>
+						<br/>
 						<table width="100%">
 							<tr>
 								<td valign="TOP">
 									<table width="100%" height="100%">
-										<tr>
+										<!-- <tr>
 											<td colspan="2">
 												Traitement TB
 												<obs conceptId="CIEL:159398" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067"
@@ -3986,8 +3929,7 @@
 												<obs conceptId="CIEL:1110" answerConceptId="CIEL:1679"
 													answerLabel="Prophylaxie TB à I'INH" />
 											</td>
-											<td><!--<obs conceptId="CIEL:1110" answerConceptId="CIEL:1679" answerLabel="Prophylaxie 
-													à l'INH en cours"/> -->
+											<td>
 												Prophylaxie à l'INH en cours
 											</td>
 										</tr>
@@ -4000,7 +3942,7 @@
 												Date d'arrêt
 												<obs conceptId="CIEL:163284" />
 											</td>
-										</tr>
+										</tr>-->
 										<b>Statut TB actuel</b>
 										<tr>
 											<td colspan="2">
@@ -5122,10 +5064,118 @@
 		</div>
 		<div>
 				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div11">ÉLIGIBILITÉ AUX ARV
+					<div href="#read" class="toggle-button" data-target="#div11">IMPRESSIONS
+						CLINIQUES ET DIAGNOSTIQUES
 					</div>
 				</a>
 				<div id="div11" class="togglable" style="display: none;">
+					<section>
+						<table>
+							<tr>
+								<td>
+						    		<div id="data-collection">
+								        <encounterDiagnoses required="false" selectedDiagnosesTarget="#encounter-diagnoses-target"/>
+								
+								    </div>
+								
+								    <div id="encounter-diagnoses-target">
+								    </div>
+							    </td>
+				    		</tr>
+				    	</table>	
+					</section>
+					<section headerLabel="AUTRES DIAGNOSTIQUES">
+						<table>
+							<tr>
+								<td>
+									<b>Autre diagnostic 1</b><br/>
+									<obsgroup groupingConceptId="20673e3f-4aae-463e-9fe4-9995058a9776">
+										<span class="titre" ch-target="#cacher58">
+										<obs conceptId="CIEL:1284" class="master" id="id58"
+										style="autocomplete" answerClasses="Diagnosis"
+										showCommentField="true" commentFieldLabel=" Commentaire" />
+										</span>
+										<br />
+										<span id="dispnone1" class="cacher">
+										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+										answerLabels="Confirmé,Suspecté" style="radio" />
+										<br />
+										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+										answerLabels="Primaire,Secondaire" style="radio" />
+										</span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<b>Autre diagnostic 2</b><br/>
+									<obsgroup groupingConceptId="3a80c2bd-43cc-4697-b194-3c687d1fc49e">
+										<span class="titre" ch-target="#cacher58">
+										<obs conceptId="CIEL:1284" class="master" id="id58"
+										style="autocomplete" answerClasses="Diagnosis"
+										showCommentField="true" commentFieldLabel=" Commentaire" />
+										</span>
+										<br />
+										<span id="dispnone2" class="cacher">
+										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+										answerLabels="Confirmé,Suspecté" style="radio" />
+										<br />
+										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+										answerLabels="Primaire,Secondaire" style="radio" />
+										</span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<b>Autre diagnostic 3</b><br/>
+									<obsgroup groupingConceptId="b93db0f4-c573-4ef4-acd7-c6ca182f4f06">
+										<span class="titre" ch-target="#cacher58">
+										<obs conceptId="CIEL:1284" class="master" id="id58"
+										style="autocomplete" answerClasses="Diagnosis"
+										showCommentField="true" commentFieldLabel=" Commentaire" />
+										</span>
+										<br />
+										<span id="dispnone3" class="cacher">
+										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+										answerLabels="Confirmé,Suspecté" style="radio" />
+										<br />
+										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+										answerLabels="Primaire,Secondaire" style="radio" />
+										</span>
+									</obsgroup>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<b>Autre diagnostic 4</b><br/>
+									<obsgroup groupingConceptId="830832d0-047e-4a59-a338-ab9d868c29ea">
+										<span class="titre" ch-target="#cacher58">
+										<obs conceptId="CIEL:1284" class="master" id="id58"
+										style="autocomplete" answerClasses="Diagnosis"
+										showCommentField="true" commentFieldLabel=" Commentaire" />
+										</span>
+										<br />
+										<span id="dispnone4" class="cacher">
+										<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+										answerLabels="Confirmé,Suspecté" style="radio" />
+										<br />
+										<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+										answerLabels="Primaire,Secondaire" style="radio" />
+										</span>
+									</obsgroup>
+								</td>
+							</tr>
+						</table>
+					</section>
+				</div>
+			</div>
+		<div>
+				<a href="#read">
+					<div href="#read" class="toggle-button" data-target="#div12">ÉLIGIBILITÉ AUX ARV
+					</div>
+				</a>
+				<div id="div12" class="togglable" style="display: none;">
 					<section headerLabel="ÉLIGIBILITÉ MÉDICALE AUX ARV">
 						<table width="100%">
 								<tr class="checkboxGroup">
@@ -5177,10 +5227,10 @@
 		</div>
 		<div>
 				<a href="#read">
-					<div href="#read" class="toggle-button" data-target="#div12">ÉVALUATION ET PLAN
+					<div href="#read" class="toggle-button" data-target="#div13">ÉVALUATION ET PLAN
 					</div>
 				</a>
-				<div id="div12" class="togglable" style="display: none;">
+				<div id="div13" class="togglable" style="display: none;">
 					<section headerLabel="ÉVALUATION ET PLAN">
 						Utiliser la section Antécédents Médicaux pour indiquer tous les diagnostics. Utiliser la fiche Ordonnance Médicale pour prescrire les médicaments, et la fiche d'Analyses de Laboratoire pour prescrire les analyses de laboratoire.<br/>
 						<obs conceptId="CIEL:159395" rows="10" cols="80"/>
