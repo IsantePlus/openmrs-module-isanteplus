@@ -46,6 +46,8 @@ import org.openmrs.Encounter;
 import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.Visit;
+import org.openmrs.api.ConceptService;
+import org.openmrs.api.ObsService;
 import org.openmrs.api.context.Context;
 import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.appframework.domain.ComponentState;
@@ -95,21 +97,6 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	 */
 	public IsantePlusDAO getDao() {
 		return dao;
-	}
-
-	@Override
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public Obs getLastViralLoadTestResultObsForPatient(Patient patient) {
-		IsantePlusGlobalProps isantePlusConstants = new IsantePlusGlobalProps();
-		Concept viralLoadConcept = isantePlusConstants.VIRAL_LOAD_CONCEPT == null
-				? Context.getConceptService().getConceptByName("HIV VIRAL LOAD")
-				: isantePlusConstants.VIRAL_LOAD_CONCEPT;
-		List<Obs> viralLoadObs = new ArrayList(
-				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), viralLoadConcept));
-
-		sortObsListByObsDateTime(viralLoadObs);
-
-		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
 	}
 
 	@Override
@@ -349,11 +336,7 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	}
 
 	private void sortObsListByObsDateTime(List<Obs> obsList) {
-		Collections.sort(obsList, new Comparator<Obs>() {
-			public int compare(Obs o1, Obs o2) {
-				return o1.getObsDatetime().compareTo(o2.getObsDatetime());
-			}
-		});
+		obsList.sort(Comparator.comparing(Obs::getObsDatetime));
 	}
 
 	private JSONArray getConceptObsValuesAtAGivenAgesOfPatient(List<Obs> conceptObsList, ChartJSAgeAxis ageAxis) {
@@ -770,27 +753,47 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 
 	@Override
 	public List<IsantePlusObs> getLabsHistory(Patient patient) {
+		if (patient == null || patient.getPerson() == null) {
+			return Collections.emptyList();
+		}
+
 		// TESTS ORDERED = 1271
-		List<IsantePlusObs> labHistory = new ArrayList<IsantePlusObs>();
 		Integer labConceptId = 1271;
 		Concept testsOrdered = Context.getConceptService().getConcept(labConceptId);
 
-		for (Obs obs : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), testsOrdered)) {
+		List<Concept> orderedConcepts = new ArrayList<>();
+		List<Encounter> orderEncounters = new ArrayList<>();
+		ObsService obsService = Context.getObsService();
+
+		for (Obs obs : obsService.getObservationsByPersonAndConcept(patient.getPerson(), testsOrdered)) {
 			if (obs != null) {
-
-				//Integer result = Integer.parseInt(obs.getValueCoded().toString());
-				Integer result = obs.getValueCoded().getConceptId();
-				Concept resultTest = Context.getConceptService().getConcept(result);
-
-				for (Obs obs1 : Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), resultTest)) {
-					if (obs.getEncounter().getEncounterId() == obs1.getEncounter().getEncounterId()) {
-						IsantePlusObs obsres = new IsantePlusObs(obs1);
-						labHistory.add(obsres);
-
-					}
+				Concept resultTest = Context.getConceptService().getConcept(obs.getValueCoded().getConceptId());
+				if (resultTest != null) {
+					orderedConcepts.add(resultTest);
 				}
+				orderEncounters.add(obs.getEncounter());
 			}
 		}
+
+		List<IsantePlusObs> labHistory = new ArrayList<>();
+
+		for (Obs obs : obsService.getObservations(
+				Collections.singletonList(patient.getPerson()),
+				orderEncounters,
+				orderedConcepts,
+				null,
+				null,
+				null,
+				 Arrays.asList("obsDatetime desc", "obsId asc"),
+				null,
+				null,
+				null,
+				null,
+				false
+		)) {
+			labHistory.add(new IsantePlusObs(obs));
+		}
+
 		return labHistory;
 	}
 
@@ -1170,16 +1173,37 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 	}
 	
 	@Override
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public Obs getLastViralLoadQualitativeObsForPatient(Patient patient) {
-		Concept viralLoadConcept = Context.getConceptService().getConcept(1305);
-		
-			List<Obs> viralLoadObs = new ArrayList(
-				Context.getObsService().getObservationsByPersonAndConcept(patient.getPerson(), viralLoadConcept));
+	public Obs getMostRecentViralLoad(Patient patient) {
+		ConceptService conceptService = Context.getConceptService();
+		List<Concept> concepts = new ArrayList<>();
+		// qualitative
+		concepts.add(conceptService.getConcept(1305));
+		// quantitative
+		concepts.add(conceptService.getConcept(856));
+		// EID
+		concepts.add(conceptService.getConcept(844));
 
-		sortObsListByObsDateTime(viralLoadObs);
+		List<Obs> viralLoadObs = Context.getObsService().getObservations(
+				Collections.singletonList(patient.getPerson()),
+				null,
+				concepts,
+				null,
+				null,
+				null,
+				Collections.singletonList("obsDatetime desc"),
+				1,
+				null,
+				null,
+				null,
+				false
+		);
 
-		return viralLoadObs != null && viralLoadObs.size() > 0 ? viralLoadObs.get(viralLoadObs.size() - 1) : null;
+		if (viralLoadObs == null || viralLoadObs.isEmpty()) {
+			return null;
+		}
+
+
+		return viralLoadObs.get(0);
 	}
 	
 	@Override

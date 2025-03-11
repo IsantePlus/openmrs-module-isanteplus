@@ -14,9 +14,7 @@
 package org.openmrs.module.isanteplus.api;
 
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -49,8 +47,6 @@ import liquibase.exception.DatabaseException;
  */
 @Transactional
 public interface IsantePlusService extends OpenmrsService {
-
-	Obs getLastViralLoadTestResultObsForPatient(Patient patient);
 
 	JSONArray getPatientWeights(Patient patient);
 
@@ -157,7 +153,7 @@ public interface IsantePlusService extends OpenmrsService {
 
 	List<IsantePlusObs> getAllDiagnosis(Patient patient);
 
-	Obs getLastViralLoadQualitativeObsForPatient(Patient patient);
+	Obs getMostRecentViralLoad(Patient patient);
 	
 	Obs getLatestNextOtherVisitDate(Patient patient);
 	
