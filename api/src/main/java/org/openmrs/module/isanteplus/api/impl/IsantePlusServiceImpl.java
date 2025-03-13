@@ -78,6 +78,8 @@ import liquibase.exception.DatabaseException;
  */
 public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsantePlusService {
 
+	private static final int TEST_RESULT_FREE_TEXT = 165399;
+
 	protected final Log log = LogFactory.getLog(this.getClass());
 
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -773,6 +775,13 @@ public class IsantePlusServiceImpl extends BaseOpenmrsService implements IsanteP
 				}
 				orderEncounters.add(obs.getEncounter());
 			}
+		}
+
+		// freeTextResults are used to capture results with errors or other issues, so may not correspond
+		// directly to an ordered test
+		Concept freeTextResults = Context.getConceptService().getConcept(TEST_RESULT_FREE_TEXT);
+		if (freeTextResults != null) {
+			orderedConcepts.add(freeTextResults);
 		}
 
 		List<IsantePlusObs> labHistory = new ArrayList<>();
