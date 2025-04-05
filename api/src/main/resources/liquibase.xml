@@ -1139,7 +1139,7 @@
 			WHERE uuid = '69326ac4-2df6-4db8-b18d-5c2bf7cc05c8';
 
 			INSERT INTO concept_reference_term(concept_source_id, `code`, creator, date_created, retired, uuid)
-			SELECT c_source.concept_source_id, 'VLC3P', 1, CURRENT_TIMESTAMP, '0', '8a3aa9c9-e004-444e-b606-86eaa129a36d'
+			SELECT c_source.concept_source_id, 'VLV3P', 1, CURRENT_TIMESTAMP, '0', '8a3aa9c9-e004-444e-b606-86eaa129a36d'
 			FROM concept_reference_source c_source
 			WHERE c_source.uuid = 'f124da75-9f50-4b25-be97-13c029e3a65b';
 
