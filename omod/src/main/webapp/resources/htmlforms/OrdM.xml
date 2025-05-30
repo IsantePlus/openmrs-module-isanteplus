@@ -485,6 +485,17 @@
 		if((getValue('isoniazide_dispensee.value') != null) || (getValue('isoniazide_post_alt.value') != '')
 			|| (getValue('isoniazide_j_alt.value') != '') || (getValue('isoniazide_nb_pil.value') != '')) {
 		setValue('isoniazide1.value',78280);}
+		
+		if((getValue('presentationRifapentine.value') == '138405') ||
+		(getValue('presentationRifapentine.value') == '163768')
+		|| (getValue('rifapentine_dosage_alt.value') != '')
+		|| (getValue('rifapentine_nbj_prescrit.value')!='')) {
+		setValue('rifapentine.value',83360);}
+		
+		if((getValue('rifapentine_dispensee.value') != null) || (getValue('rifapentine_post_alt.value') != '')
+			|| (getValue('rifapentine_j_alt.value') != '') || (getValue('rifapentine_nb_pil.value') != '')) {
+		setValue('rifapentine1.value',83360);}
+		
 
 		if((getValue('posologie28.value') !='') || (getValue('pyrazinamide_nbj_prescrit.value')!='')) { 
 		setValue('pyrazinamide.value',82900);}
@@ -2889,6 +2900,51 @@
 					</obsgroup>
 				</td>
 			</tr>
+			<!-- Rifapentine added -->
+			<tr bgcolor="silver">
+				<td>
+					<obsgroup groupingConceptId="CIEL:1442">
+						<td>
+							Rifapentine:
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:83360" id="rifapentine"
+									answerLabel="Rifapentine" />
+							</span>
+						</td>
+						<td>
+							<obs conceptId="CIEL:160742" answerConceptIds="CIEL:138405,CIEL:163768"
+								id="presentationRifapentine" answerLabels="Rx,Prophy" style="radio" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:1444" id="rifapentine_dosage_alt" />
+						</td>
+						<td>
+							<obs conceptId="CIEL:159368" id="rifapentine_nbj_prescrit" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+						</td>
+					</obsgroup>
+					<obsgroup groupingConceptId="163711">
+
+						<td>
+							<span style="display:none">
+								<obs conceptId="CIEL:1282" answerConceptId="CIEL:83360" id="rifapentine1"
+									answerLabel="Rifapentine" />
+							</span>
+							<obs conceptId="CIEL:1276" style="checkbox" value="true"
+								showDate="true" id="rifapentine_dispensee" labelText="Oui" />
+							<td>
+								<obs conceptId="CIEL:1444" id="rifapentine_post_alt" />
+							</td>
+							<td>
+								<obs conceptId="CIEL:159368" id="rifapentine_j_alt" /> <!--<span style="display:none"> <obs conceptId="CIEL:1732" answerConceptId="CIEL:1072"/></span> -->
+							</td>
+							<td>
+								<obs conceptId="CIEL:1443" id="rifapentine_nb_pil" />
+							</td>
+						</td>
+					</obsgroup>
+				</td>
+			</tr>
+			<!-- Rifapentine Ended -->
 			<tr>
 				<td>
 					<obsgroup groupingConceptId="CIEL:1442">

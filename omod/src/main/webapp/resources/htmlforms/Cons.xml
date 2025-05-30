@@ -2333,6 +2333,28 @@
 										</tr>
 										<tr class="checkboxGroup">
 											<td>
+												<obsgroup groupingConceptId="7bd72b42-f874-489a-a795-d729d73ce029">
+													<span class="titre" ch-target="#cacher1001" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id1001"
+															answerConceptId="CIEL:143086" answerLabel="Charbon cutané" />
+													</span>
+													<br />
+													<span id="cacher1001" class="cacher" style="display:none">
+														<span id="confirmation">
+															<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+														</span>
+														<br />
+														<span id="primary">
+															<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
 												<obsgroup groupingConceptId="527ca5cb-b9ef-445b-8d52-eed48d39ba31">
 													<span class="titre" ch-target="#cacher18" id="trigger">
 														<obs conceptId="CIEL:1284" class="master" id="id18"
@@ -2867,6 +2889,28 @@
 													</span>
 													<br />
 													<span id="cacher41" class="cacher" style="display:none">
+													<span id="confirmation">
+														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
+															answerLabels="Confirmé,Suspecté" style="radio" />
+													</span>
+														<br />
+														<span id="primary">
+														<obs conceptId="CIEL:159946" answerConceptIds="CIEL:159943,CIEL:159944"
+															answerLabels="Primaire,Secondaire" style="radio" />
+														</span>
+													</span>
+												</obsgroup>
+											</td>
+										</tr>
+										<tr class="checkboxGroup">
+											<td>
+												<obsgroup groupingConceptId="74e7fde3-a98a-4419-9150-8e24f25bf425">
+													<span class="titre" ch-target="#cacher1000" id="trigger">
+														<obs conceptId="CIEL:1284" class="master" id="id1000"
+															answerConceptId="f2b6842a-b22e-4a69-8401-bcef7a424470" answerLabel="Syndrome de rubéole congénitale" />
+													</span>
+													<br />
+													<span id="cacher1000" class="cacher" style="display:none">
 													<span id="confirmation">
 														<obs conceptId="CIEL:159394" answerConceptIds="CIEL:159392,CIEL:159393"
 															answerLabels="Confirmé,Suspecté" style="radio" />
